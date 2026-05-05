@@ -1,0 +1,27 @@
+{
+  "_comment": "Map location names → booth_id. Add entries as you scrape booth_master.",
+  "_format": "{ 'locality_name': { 'id': 'booth_id_or_ac_id', 'type': 'booth|ac' } }",
+
+  "Gorakhpur Urban": { "id": "GKP_URBAN", "type": "ac" },
+  "गोरखपुर": { "id": "GKP_URBAN", "type": "ac" },
+
+  "Civil Lines": { "id": "GKP_U_001", "type": "booth" },
+  "Deoria Naka": { "id": "GKP_U_045", "type": "booth" },
+  "Rustampur": { "id": "GKP_U_067", "type": "booth" },
+  "Basharatpur": { "id": "GKP_U_089", "type": "booth" },
+  "Shahpur": { "id": "GKP_U_112", "type": "booth" },
+  "Mohaddipur": { "id": "GKP_U_134", "type": "booth" },
+  "Shivpuri": { "id": "GKP_U_156", "type": "booth" },
+  "Bargadwa": { "id": "GKP_U_178", "type": "booth" },
+  "Taramandal": { "id": "GKP_U_200", "type": "booth" },
+  "Bank Road": { "id": "GKP_U_223", "type": "booth" },
+  "Ramgarh Tal": { "id": "GKP_U_245", "type": "booth" },
+  "Padri Bazar": { "id": "GKP_U_267", "type": "booth" },
+
+  "देवरिया नाका": { "id": "GKP_U_045", "type": "booth" },
+  "रुस्तमपुर": { "id": "GKP_U_067", "type": "booth" },
+  "बशारतपुर": { "id": "GKP_U_089", "type": "booth" },
+  "सिविल लाइन्स": { "id": "GKP_U_001", "type": "booth" },
+
+  "_note": "Replace GKP_U_XXX IDs with actual booth_ids from booth_master after scraping ECI."
+}

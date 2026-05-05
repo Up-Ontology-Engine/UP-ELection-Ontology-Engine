@@ -1,0 +1,94 @@
+{
+  "party_aliases": {
+    "BJP": [
+      "bjp", "भाजपा", "भारतीय जनता पार्टी", "कमल", "lotus",
+      "sarkar", "सरकार", "double engine", "डबल इंजन",
+      "yogi", "योगी", "modi", "मोदी", "maharaj ji", "महाराज जी"
+    ],
+    "SP": [
+      "sp", "समाजवादी", "समाजवादी पार्टी", "सपा", "cycle", "साइकिल",
+      "akhilesh", "अखिलेश", "netaji", "नेताजी",
+      "mulayam", "मुलायम", "uncle ji"
+    ],
+    "BSP": [
+      "bsp", "बसपा", "बहुजन समाज पार्टी", "elephant", "हाथी",
+      "mayawati", "मायावती", "behan ji", "बहन जी"
+    ],
+    "Congress": [
+      "congress", "कांग्रेस", "inc", "भारतीय राष्ट्रीय कांग्रेस",
+      "rahul", "राहुल", "priyanka", "प्रियंका", "gandhi"
+    ]
+  },
+  "issue_terms": {
+    "water": [
+      "पानी", "water", "नल", "handpump", "हैंडपंप", "पेयजल",
+      "drinking water", "jal", "जल", "paani", "tank", "टंकी"
+    ],
+    "roads": [
+      "सड़क", "road", "गड्ढे", "pothole", "खराब सड़क", "पक्की सड़क",
+      "sadak", "rasta", "रास्ता", "broken road"
+    ],
+    "electricity": [
+      "बिजली", "bijli", "light", "load shedding", "लोड शेडिंग",
+      "कटौती", "power cut", "transformer", "ट्रांसफार्मर"
+    ],
+    "jobs": [
+      "बेरोजगारी", "नौकरी", "रोजगार", "job", "unemployment", "rojgar",
+      "employment", "काम नहीं", "kaam nahi", "youth"
+    ],
+    "price_rise": [
+      "महंगाई", "inflation", "महंगा", "gas", "petrol", "दाम बढ़े",
+      "price hike", "mahenga", "rasoi gas", "LPG"
+    ],
+    "farmer": [
+      "किसान", "kisan", "farmer", "खेती", "फसल", "crop",
+      "agriculture", "fasal", "खाद", "fertilizer"
+    ],
+    "sugarcane": [
+      "गन्ना", "sugarcane", "ganna", "चीनी मिल", "sugar mill",
+      "भुगतान", "payment", "mill arrears", "बकाया"
+    ],
+    "women_safety": [
+      "महिला", "woman", "rape", "safety", "बेटी", "सुरक्षा",
+      "darinda", "crime against women", "assault"
+    ],
+    "health": [
+      "hospital", "अस्पताल", "doctor", "डॉक्टर", "स्वास्थ्य",
+      "health", "medicine", "दवाई", "medical", "nurse"
+    ],
+    "education": [
+      "school", "स्कूल", "college", "शिक्षा", "teacher", "शिक्षक",
+      "education", "padhna", "पढ़ना", "student"
+    ],
+    "corruption": [
+      "भ्रष्टाचार", "corruption", "घोटाला", "scam", "रिश्वत",
+      "bribe", "bhrashtachar", "ghotala", "chor"
+    ],
+    "law_order": [
+      "कानून व्यवस्था", "crime", "अपराध", "police", "gangster",
+      "dabangg", "murder", "theft", "robbery", "security"
+    ]
+  },
+  "positive_terms": [
+    "अच्छा", "बढ़िया", "शानदार", "विकास", "तरक्की", "खुश",
+    "धन्यवाद", "कमाल", "great", "best", "achha", "badiya",
+    "shukriya", "thank", "improve", "development", "prayas",
+    "प्रयास", "उत्तम", "बेहतर", "सुधार", "positive"
+  ],
+  "negative_terms": [
+    "बुरा", "खराब", "बेकार", "झूठ", "धोखा", "नाराज", "परेशान",
+    "fraud", "liar", "jhuth", "dhoka", "fail", "nahi", "नहीं",
+    "कुछ नहीं", "भ्रष्ट", "गुंडा", "निराश", "बर्बाद",
+    "failed", "worst", "useless", "shame", "disappointed"
+  ],
+  "gorakhpur_specific": {
+    "context_notes": "Gorakhpur is CM Yogi's home district — very high expectations",
+    "local_landmarks": [
+      "Gorakhnath temple", "Ramgarhtal lake", "Gorakhpur railway station",
+      "BRD Medical College", "Deoria road", "Kushmi forest"
+    ],
+    "sugarcane_mills": [
+      "Ramkola Sugar Mill", "Sakhri Sugar Mill", "Captainganj Mill"
+    ]
+  }
+}
