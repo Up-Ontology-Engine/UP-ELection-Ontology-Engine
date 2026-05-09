@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-05-09T10:53:57.311703+00:00",
+  "youtube_videos": {
+    "total": 1,
+    "pro_bjp_count": 0,
+    "anti_bjp_count": 0,
+    "neutral_count": 0,
+    "pro_bjp_pct": 0.0,
+    "anti_bjp_pct": 0.0,
+    "neutral_pct": 0.0,
+    "by_month": {}
+  },
+  "news_articles": {
+    "total": 1,
+    "pro_bjp_count": 0,
+    "anti_bjp_count": 0,
+    "neutral_count": 0,
+    "pro_bjp_pct": 0.0,
+    "anti_bjp_pct": 0.0,
+    "neutral_pct": 0.0,
+    "by_month": {}
+  }
+}

@@ -1,0 +1,21 @@
+Jagran Gorakhpur City — Selector Notes
+Source: https://www.jagran.com/uttar-pradesh/gorakhpur-city.html
+
+Current selectors (as of 2026-05-07):
+  article_selector : div.jagran-story-card
+  title_selector   : h2
+  link_selector    : a
+  date_selector    : span.date
+
+If the listing page stops yielding cards, check for these alternative selectors
+that Jagran has used in past redesigns:
+  article_selector : div.cat-sec-cont ul li
+  title_selector   : h3.heading-block
+  date_selector    : span.time-elapsed
+
+Body extraction preference: newspaper3k (language=hi), fallback to <p> tags
+after stripping script/style/nav/footer/aside.
+
+Relative links are resolved by prepending https://www.jagran.com
+
+Last verified: 2026-05-07

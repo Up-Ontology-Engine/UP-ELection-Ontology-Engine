@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import yt_dlp; print\\('yt-dlp OK:', yt_dlp.version.__version__\\)\")",
+      "Bash(pip install:*)",
+      "Bash(python -m ingestion.youtube_videos --years 10 --max 50)",
+      "Bash(python:*)"
+    ]
+  }
+}

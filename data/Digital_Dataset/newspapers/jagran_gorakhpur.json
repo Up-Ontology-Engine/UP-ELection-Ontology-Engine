@@ -1,0 +1,320 @@
+{
+  "_meta": {
+    "file": "jagran_gorakhpur.json",
+    "description": "Jagran newspaper source definition for the entire Gorakhpur district — all Assembly Constituencies, scraper config, credibility metadata, and coverage mapping.",
+    "district": "Gorakhpur",
+    "district_id": "GKP",
+    "state": "Uttar Pradesh",
+    "created_at": "2026-05-07",
+    "schema_version": "1.0"
+  },
+
+  "source": {
+    "name": "jagran",
+    "display_name": "Dainik Jagran — Gorakhpur Edition",
+    "language": ["hi"],
+    "script": "Devanagari",
+    "base_url": "https://www.jagran.com",
+    "edition": "Gorakhpur",
+    "publication_type": "daily_newspaper",
+    "print_circulation_est": 450000,
+    "digital_readership_est": "high",
+    "source_weight": 0.8,
+    "credibility_score": 0.75,
+    "bias_score": 0.15,
+    "notes": "Largest Hindi daily in Gorakhpur. Strong local reporter network across all tehsils. Slight pro-establishment lean typical of mainstream Hindi press. Credible for civic/governance news; verify political framing independently."
+  },
+
+  "coverage_sections": [
+    {
+      "section_id": "jagran_gkp_city",
+      "label": "Gorakhpur City",
+      "url": "https://www.jagran.com/uttar-pradesh/gorakhpur-city.html",
+      "district_hint": "Gorakhpur",
+      "ac_coverage": [
+        {
+          "ac_id": "GKP_URBAN",
+          "ac_name": "Gorakhpur Urban",
+          "ac_number": 332,
+          "priority": "P0",
+          "phase": 1
+        }
+      ],
+      "topics_covered": [
+        "municipal_governance", "law_order", "civic_infrastructure",
+        "political_rallies", "crime", "development_works"
+      ],
+      "scraper_config": {
+        "article_selector": "div.jagran-story-card",
+        "title_selector": "h2",
+        "link_selector": "a",
+        "date_selector": "span.date",
+        "max_articles": 30,
+        "request_delay_sec": [2, 4],
+        "retry_attempts": 3,
+        "retry_backoff_sec": [2, 10]
+      }
+    },
+    {
+      "section_id": "jagran_gkp_general",
+      "label": "Gorakhpur District (General)",
+      "url": "https://www.jagran.com/uttar-pradesh/gorakhpur.html",
+      "district_hint": "Gorakhpur",
+      "ac_coverage": [
+        {
+          "ac_id": "GKP_URBAN",
+          "ac_name": "Gorakhpur Urban",
+          "ac_number": 332,
+          "priority": "P0",
+          "phase": 1
+        },
+        {
+          "ac_id": "GKP_RURAL",
+          "ac_name": "Gorakhpur Rural",
+          "ac_number": 333,
+          "priority": "P1",
+          "phase": 2
+        },
+        {
+          "ac_id": "GKP_CAMPIERGANJ",
+          "ac_name": "Campierganj",
+          "ac_number": 330,
+          "priority": "P1",
+          "phase": 2
+        },
+        {
+          "ac_id": "GKP_SAHJANWA",
+          "ac_name": "Sahjanwa",
+          "ac_number": 334,
+          "priority": "P2",
+          "phase": 3
+        },
+        {
+          "ac_id": "GKP_PIPRAICH",
+          "ac_name": "Pipraich",
+          "ac_number": 331,
+          "priority": "P2",
+          "phase": 3
+        },
+        {
+          "ac_id": "GKP_KHAJNI",
+          "ac_name": "Khajni",
+          "ac_number": 335,
+          "priority": "P2",
+          "phase": 3
+        },
+        {
+          "ac_id": "GKP_CHILLUPAR",
+          "ac_name": "Chillupar",
+          "ac_number": 329,
+          "priority": "P2",
+          "phase": 3
+        },
+        {
+          "ac_id": "GKP_BANSGAON",
+          "ac_name": "Bansgaon",
+          "ac_number": 328,
+          "priority": "P3",
+          "phase": 3
+        }
+      ],
+      "topics_covered": [
+        "district_administration", "agricultural_news", "panchayat_governance",
+        "scheme_delivery", "sugarcane_mills", "block_level_news",
+        "police_crime", "development_projects"
+      ],
+      "scraper_config": {
+        "article_selector": "div.jagran-story-card",
+        "title_selector": "h2",
+        "link_selector": "a",
+        "date_selector": "span.date",
+        "max_articles": 30,
+        "request_delay_sec": [2, 4],
+        "retry_attempts": 3,
+        "retry_backoff_sec": [2, 10]
+      }
+    }
+  ],
+
+  "assembly_constituencies": [
+    {
+      "ac_id": "GKP_URBAN",
+      "ac_name": "Gorakhpur Urban",
+      "ac_name_hi": "गोरखपुर शहर",
+      "ac_number": 332,
+      "ac_type": "urban",
+      "tehsil": "Gorakhpur Sadar",
+      "parliament_constituency": "Gorakhpur",
+      "parliament_constituency_number": 71,
+      "approx_booths": 300,
+      "scrape_priority": "P0",
+      "phase": 1,
+      "jagran_sections": ["jagran_gkp_city", "jagran_gkp_general"],
+      "key_localities": [
+        "Civil Lines", "Deoria Naka", "Rustampur", "Basharatpur",
+        "Shahpur", "Mohaddipur", "Shivpuri", "Bargadwa",
+        "Taramandal", "Bank Road", "Ramgarh Tal", "Padri Bazar"
+      ],
+      "key_issues": ["law_order", "roads", "electricity", "jobs", "health"]
+    },
+    {
+      "ac_id": "GKP_RURAL",
+      "ac_name": "Gorakhpur Rural",
+      "ac_name_hi": "गोरखपुर ग्रामीण",
+      "ac_number": 333,
+      "ac_type": "rural",
+      "tehsil": "Gorakhpur Sadar",
+      "parliament_constituency": "Gorakhpur",
+      "parliament_constituency_number": 71,
+      "approx_booths": 280,
+      "scrape_priority": "P1",
+      "phase": 2,
+      "jagran_sections": ["jagran_gkp_general"],
+      "key_localities": [
+        "Jangal Kauria", "Bhathat", "Sahara", "Jungle Dhusad"
+      ],
+      "key_issues": ["roads", "water", "electricity", "farmer", "sugarcane"]
+    },
+    {
+      "ac_id": "GKP_CAMPIERGANJ",
+      "ac_name": "Campierganj",
+      "ac_name_hi": "कैम्पियरगंज",
+      "ac_number": 330,
+      "ac_type": "semi_urban",
+      "tehsil": "Campierganj",
+      "parliament_constituency": "Gorakhpur",
+      "parliament_constituency_number": 71,
+      "approx_booths": 260,
+      "scrape_priority": "P1",
+      "phase": 2,
+      "jagran_sections": ["jagran_gkp_general"],
+      "key_localities": [
+        "Campierganj", "Bhatpar Rani", "Banswar", "Pharenda vicinity"
+      ],
+      "key_issues": ["sugarcane", "farmer", "roads", "water", "employment"]
+    },
+    {
+      "ac_id": "GKP_SAHJANWA",
+      "ac_name": "Sahjanwa",
+      "ac_name_hi": "सहजनवा",
+      "ac_number": 334,
+      "ac_type": "semi_urban",
+      "tehsil": "Sahjanwa",
+      "parliament_constituency": "Gorakhpur",
+      "parliament_constituency_number": 71,
+      "approx_booths": 270,
+      "scrape_priority": "P2",
+      "phase": 3,
+      "jagran_sections": ["jagran_gkp_general"],
+      "key_localities": [
+        "Sahjanwa", "Gola", "Belghat", "Kauriram"
+      ],
+      "key_issues": ["roads", "water", "farmer", "electricity", "health"]
+    },
+    {
+      "ac_id": "GKP_PIPRAICH",
+      "ac_name": "Pipraich",
+      "ac_name_hi": "पिपराइच",
+      "ac_number": 331,
+      "ac_type": "rural",
+      "tehsil": "Haveli",
+      "parliament_constituency": "Gorakhpur",
+      "parliament_constituency_number": 71,
+      "approx_booths": 250,
+      "scrape_priority": "P2",
+      "phase": 3,
+      "jagran_sections": ["jagran_gkp_general"],
+      "key_localities": [
+        "Pipraich", "Ramkola", "Basantpur", "Belwa"
+      ],
+      "key_issues": ["sugarcane", "farmer", "roads", "water", "employment"]
+    },
+    {
+      "ac_id": "GKP_KHAJNI",
+      "ac_name": "Khajni",
+      "ac_name_hi": "खजनी",
+      "ac_number": 335,
+      "ac_type": "rural",
+      "tehsil": "Sahjanwa",
+      "parliament_constituency": "Banthi",
+      "parliament_constituency_number": 72,
+      "approx_booths": 240,
+      "scrape_priority": "P2",
+      "phase": 3,
+      "jagran_sections": ["jagran_gkp_general"],
+      "key_localities": [
+        "Khajni", "Chargawan", "Dhuri", "Gagaha"
+      ],
+      "key_issues": ["farmer", "roads", "water", "sugarcane", "health"]
+    },
+    {
+      "ac_id": "GKP_CHILLUPAR",
+      "ac_name": "Chillupar",
+      "ac_name_hi": "चिल्लूपार",
+      "ac_number": 329,
+      "ac_type": "rural",
+      "tehsil": "Campierganj",
+      "parliament_constituency": "Gorakhpur",
+      "parliament_constituency_number": 71,
+      "approx_booths": 230,
+      "scrape_priority": "P2",
+      "phase": 3,
+      "jagran_sections": ["jagran_gkp_general"],
+      "key_localities": [
+        "Chillupar", "Madhuvan", "Fatehpur", "Ghoraha"
+      ],
+      "key_issues": ["roads", "water", "farmer", "electricity", "education"]
+    },
+    {
+      "ac_id": "GKP_BANSGAON",
+      "ac_name": "Bansgaon",
+      "ac_name_hi": "बांसगांव",
+      "ac_number": 328,
+      "ac_type": "rural",
+      "tehsil": "Bansgaon",
+      "parliament_constituency": "Banthi",
+      "parliament_constituency_number": 72,
+      "approx_booths": 220,
+      "scrape_priority": "P3",
+      "phase": 3,
+      "jagran_sections": ["jagran_gkp_general"],
+      "key_localities": [
+        "Bansgaon", "Bhatni", "Nichlaul", "Siswa"
+      ],
+      "key_issues": ["farmer", "roads", "water", "sugarcane", "employment"]
+    }
+  ],
+
+  "ingestion": {
+    "output_table": "news_articles",
+    "conflict_key": "url",
+    "body_extractor_preference": ["newspaper3k", "beautifulsoup_fallback"],
+    "body_extractor_language": "hi",
+    "strip_tags": ["script", "style", "nav", "footer", "aside"],
+    "max_body_chars": 5000,
+    "content_hash_fields": ["headline", "body_raw"],
+    "fixed_fields": {
+      "district_hint": "Gorakhpur",
+      "district_id": "GKP"
+    }
+  },
+
+  "validation": {
+    "checks": [
+      "total_rows_gt_0",
+      "no_empty_headline_or_body",
+      "no_duplicate_urls",
+      "date_coverage_pct_gte_50"
+    ],
+    "run_after_ingest": true
+  },
+
+  "operational": {
+    "suggested_schedule": "0 7,19 * * *",
+    "schedule_description": "Twice daily at 07:00 and 19:00 IST",
+    "dry_run_flag": "--dry-run",
+    "validate_flag": "--validate",
+    "selector_notes_file": "jagran_gorakhpur_selector_notes.txt",
+    "implementation_plan_file": "jagran_gorakhpur_implementation_plan.txt"
+  }
+}

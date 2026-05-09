@@ -1,0 +1,60 @@
+Jagran Gorakhpur News Ingestion Implementation Plan
+
+Source URL:
+https://www.jagran.com/uttar-pradesh/gorakhpur-city?utm_source=chatgpt.com
+
+Goal:
+Collect Gorakhpur local news articles from Jagran and store them under Digital_Dataset/newspapers as part of the newspaper ingestion workflow.
+
+1. Confirm source scope
+- Treat this URL as a Gorakhpur city newspaper source.
+- Verify that the page contains article cards, headlines, article links, and publish dates.
+- Restrict collection to articles relevant to Gorakhpur and nearby local political or civic topics.
+
+2. Define output structure
+- Save raw scrape notes and sample URLs in data/Digital_Dataset/newspapers.
+- Normalize each article into a consistent record with:
+  - source = jagran
+  - headline
+  - url
+  - published_at
+  - body_raw
+  - district_hint = Gorakhpur
+  - ac_hint = Gorakhpur Urban
+
+3. Use the existing ingestion path
+- Reuse ingestion/news_scraper.py as the starting point.
+- Add or verify the Jagran source entry for the Gorakhpur page.
+- Keep the scraper polite with request delays, retry handling, and a browser-like user agent.
+
+4. Extract article content
+- Pull the article list page.
+- Collect article links from the listing cards.
+- For each article, fetch the full page and extract body text.
+- Prefer newspaper3k for body extraction.
+- Fall back to BeautifulSoup paragraph extraction if the article parser fails.
+
+5. Clean and normalize data
+- Remove script, style, nav, footer, and aside elements before fallback extraction.
+- Trim whitespace from all text fields.
+- Convert relative links to absolute URLs.
+- Create a content hash from headline plus body to prevent duplicate inserts.
+
+6. Load into storage
+- Insert records into the news_articles table.
+- Use url as the conflict key to avoid duplicates.
+- Keep source metadata so Jagran rows remain searchable and separable from other newspapers.
+
+7. Validate the scrape
+- Check that the page still returns article cards after the scrape runs.
+- Confirm a small sample of articles has non-empty headline and body text.
+- Verify duplicate runs do not create duplicate rows.
+- Review date parsing for consistency across multiple articles.
+
+8. Operational follow-up
+- Run the scraper on a schedule if the source proves stable.
+- Add a source-specific test fixture if the Jagran HTML structure changes often.
+- Record any selector updates in the same newspapers folder so the source history stays easy to track.
+
+Expected result:
+A reusable Jagran Gorakhpur ingestion path that feeds newspaper articles into the Digital_Dataset pipeline with clean metadata and deduplicated records.

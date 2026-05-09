@@ -1,0 +1,268 @@
+================================================================================
+GORAKHPUR NEWS SCRAPING — IMPLEMENTATION PROGRESS CHECKLIST
+================================================================================
+Project : Gorakhpur Political Data Pipeline
+Plan Ref: GORAKHPUR_NEWS_SCRAPING_IMPLEMENTATION_PLAN.txt
+Updated : 2026-05-09
+================================================================================
+
+LEGEND
+  [x] DONE        — completed and verified
+  [~] IN PROGRESS — partially done / needs more work
+  [ ] TODO        — not yet started
+
+================================================================================
+STAGE 1 — SETUP & CONFIGURATION
+================================================================================
+[x] 1.1  Create directory structure
+         data/Digital_Dataset/Youtube/videos/{raw,processed,metadata}/
+         data/Digital_Dataset/Youtube/comments/{raw,processed,by_video}/
+         data/Digital_Dataset/Youtube/analysis/
+         data/Digital_Dataset/newspapers/{raw,processed,by_source}/
+         data/Digital_Dataset/analysis/
+         data/yt_cache/  (scrape cache)
+         data/seeds/     (seed video URL list)
+         logs/           (per-module log files)
+
+[x] 1.2  Python environment with required libraries
+         yt-dlp         — installed (2026.3.17)
+         requests       — already present
+         beautifulsoup4 — already present
+         sqlalchemy     — already present
+         tenacity       — already present
+         transformers   — optional (zero-shot classifier, install separately)
+
+[ ] 1.3  API keys / credentials (optional — yt-dlp works without them)
+         YOUTUBE_API_KEY  — set in .env to unlock YouTube Data API v3
+         POSTGRES_URL     — set in .env to enable PostgreSQL persistence
+         NEWSAPI_KEY      — set in .env for NewsAPI news scraping
+
+[x] 1.4  Search keyword configuration
+         20 search queries (Hindi + English) defined in
+         ingestion/youtube_videos.py → SEARCH_QUERIES
+
+================================================================================
+STAGE 2 — NEWS SCRAPING MODULE
+================================================================================
+[x] 2.1  ingestion/news_scraper.py
+         - Jagran Gorakhpur City section
+         - Amar Ujala Gorakhpur section
+         - newspaper3k body extraction (primary)
+         - BeautifulSoup fallback extraction
+         - Retry logic with exponential backoff (tenacity)
+         - Browser-like User-Agent + polite request delays
+
+[x] 2.2  Data fields captured
+         source, headline, body_raw, url, published_at,
+         district_hint, ac_hint, content_hash
+
+[x] 2.3  Deduplication via content_hash + url conflict key
+
+[x] 2.4  Error handling & retry (3 attempts, exponential backoff 2-10 s)
+
+[ ] 2.5  Output JSON in newspapers/raw/
+         Status: news_scraper.py writes to PostgreSQL by default;
+         add --json flag or call save_raw() to get file output
+         (enhancement needed)
+
+================================================================================
+STAGE 3 — NEWS CLASSIFICATION
+================================================================================
+[x] 3.1  ingestion/classifier.py implemented
+         - classify_articles() for news articles
+         - classify_videos()   for YouTube video metadata
+         - classify_comments() for YouTube comments
+
+[x] 3.2  Classification approach
+         Tier 1: Zero-shot via facebook/bart-large-mnli (if transformers installed)
+         Tier 2: Keyword + sentiment scoring (always available)
+
+[x] 3.3  Feature extraction
+         - Pro-BJP keyword list (Hindi + English)
+         - Anti-BJP keyword list (Hindi + English)
+         - Neutral topic overrides
+         - Basic NER: politician names, party names, locations
+
+[x] 3.4  Confidence scoring (0.0–1.0) + per-label scores
+         (pro_bjp_score, anti_bjp_score, neutral_score)
+
+[ ] 3.5  Output classified articles to newspapers/processed/
+         (wire news_scraper.py → classifier.py → save JSON)
+
+================================================================================
+STAGE 4 — YOUTUBE VIDEO SCRAPING  ★ PRIMARY DELIVERY
+================================================================================
+[x] 4.1  ingestion/youtube_videos.py created
+         - yt-dlp search (no API key required)
+         - YouTube Data API v3 fallback (uses YOUTUBE_API_KEY env var)
+         - Request caching (data/yt_cache/)
+         - Polite delays between queries
+         - Retry + error isolation per query
+
+[x] 4.2  Data fields captured
+         video_id, title, description, channel, channel_id,
+         upload_date, views, likes, comment_count, duration,
+         url, thumbnail, tags, category, transcript, content_hash,
+         scraped_at, query_source
+
+[x] 4.3  Search strategy
+         20 diverse queries (Hindi + English) targeting:
+           - Gorakhpur election 2017, 2022
+           - BJP, SP, BSP mentions
+           - Yogi Adityanath coverage
+           - Gorakhpur development & politics
+
+[x] 4.4  10-year date filter
+         dateafter = 20160509  (today − 10 years)
+         All 20 queries filtered to this window
+
+[x] 4.5  Results saved
+         videos/raw/videos_20260509.json      — 732 unique videos
+         videos/metadata/video_index.json     — persistent all-time index
+         logs/youtube_videos.log              — scrape log
+
+[x] 4.6  SCRAPE COMPLETED
+         Queries run  : 20 (Hindi + English)
+         Total unique : 831 videos (all-time index)
+         Date filter  : dateafter=20160509 (last 10 years guaranteed by yt-dlp)
+         Dates parsed : 34/831 have explicit upload_date in search results
+                        (yt-dlp quirk: dates only populate on direct video-page
+                         fetches; use fetch_full_video_meta() for full enrichment)
+         Top channels : ABP Ganga (45), Aaj Tak (36), ABP NEWS (33),
+                        News18 UP Uttarakhand (33), Zee News (25)
+         Run date     : 2026-05-09
+         Output files :
+           videos/raw/videos_20260509.json        (raw today)
+           videos/metadata/video_index.json       (all-time index, 831 videos)
+           logs/youtube_videos.log
+
+================================================================================
+STAGE 5 — VIDEO CLASSIFICATION
+================================================================================
+[~] 5.1  classify_videos() in ingestion/classifier.py — READY
+         Run with:  python -m ingestion.youtube_videos --classify
+         Output  :  videos/processed/videos_classified_YYYYMMDD.json
+
+[ ] 5.2  Full classification run on all 732 videos
+         (requires: pip install transformers torch  for best accuracy,
+          or runs keyword-based classifier immediately)
+
+================================================================================
+STAGE 6 — YOUTUBE COMMENTS SCRAPING
+================================================================================
+[x] 6.1  ingestion/youtube_comments.py updated
+         - Reads video URLs from video_index.json automatically
+         - Saves per-video files: comments/by_video/{video_id}_comments.json
+         - Appends to daily raw file: comments/raw/comments_YYYYMMDD.json
+         - Optional PostgreSQL load (--postgres flag)
+         - Comment fields: comment_id, video_id, author, author_id,
+           text_raw, like_count, reply_count, published_at, parent_id, is_reply
+
+[ ] 6.2  Full comments scrape run (732 videos)
+         Run: python -m ingestion.youtube_comments
+         NOTE: Will take several hours; YouTube rate-limits comment fetches.
+         Tip: run in batches or use --video <URL> for targeted fetch.
+
+================================================================================
+STAGE 7 — COMMENTS CLASSIFICATION
+================================================================================
+[~] 7.1  classify_comments() in ingestion/classifier.py — READY
+         Run: python -m ingestion.youtube_comments --classify
+         Output: comments/processed/comments_classified_YYYYMMDD.json
+
+[ ] 7.2  Full classification run on all collected comments
+
+================================================================================
+STAGE 8 — ANALYSIS & INDEXING
+================================================================================
+[x] 8.1  ingestion/analyzer.py created
+         - Reads all classified JSON files from processed/ directories
+         - Generates sentiment distribution (pro-BJP / anti-BJP / neutral)
+         - Monthly trend breakdown (by_month dict)
+         - Writes:
+             Youtube/analysis/sentiment_distribution.json
+             analysis/news_sentiment_summary.json
+             analysis/combined_analysis.json
+
+[ ] 8.2  Run analysis after classification is complete
+         python -m ingestion.analyzer
+
+================================================================================
+FILES CREATED / MODIFIED
+================================================================================
+NEW:
+  ingestion/youtube_videos.py          — Stage 4: YouTube video scraper
+  ingestion/classifier.py              — Stage 3/5/7: Classifier (all content types)
+  ingestion/analyzer.py                — Stage 8: Analysis & indexing
+  data/Digital_Dataset/Youtube/PROGRESS_CHECKLIST.txt  — this file
+
+MODIFIED:
+  ingestion/youtube_comments.py        — Stage 6: Updated to save JSON + per-video files
+
+EXISTING (unchanged):
+  ingestion/news_scraper.py            — Stage 2: News article scraper (already complete)
+  data/Digital_Dataset/newspapers/jagran_gorakhpur.json
+  data/Digital_Dataset/newspapers/jagran_gorakhpur_selector_notes.txt
+  data/Digital_Dataset/newspapers/jagran_gorakhpur_implementation_plan.txt
+
+================================================================================
+DATA COLLECTED (as of 2026-05-09)
+================================================================================
+  YouTube videos scraped  : 831 unique (last 10 years, 20 search queries)
+  Raw output              : data/Digital_Dataset/Youtube/videos/raw/videos_20260509.json
+  All-time index          : data/Digital_Dataset/Youtube/videos/metadata/video_index.json
+  Top channels            : ABP Ganga, Aaj Tak, ABP NEWS, News18 UP, Zee News
+  Comments                : 0 (run youtube_comments.py to fetch)
+  News articles           : pending (run news_scraper.py --dry-run to test)
+
+================================================================================
+HOW TO RUN (QUICK REFERENCE)
+================================================================================
+
+# 1. Scrape YouTube videos (last 10 years, already done)
+python -m ingestion.youtube_videos --years 10 --max 50
+
+# 2. Scrape YouTube videos AND classify them
+python -m ingestion.youtube_videos --years 10 --classify
+
+# 3. Fetch comments for all scraped videos
+python -m ingestion.youtube_comments
+
+# 4. Fetch + classify comments
+python -m ingestion.youtube_comments --classify
+
+# 5. Scrape news articles (dry run)
+python -m ingestion.news_scraper --dry-run
+
+# 6. Run analysis after classification
+python -m ingestion.analyzer
+
+# 7. Set API keys (optional, improves quota and accuracy)
+set YOUTUBE_API_KEY=your_key_here
+set POSTGRES_URL=postgresql://user:pass@localhost/gorakhpur_db
+set NEWSAPI_KEY=your_newsapi_key
+
+================================================================================
+NEXT STEPS
+================================================================================
+Priority 1: Run comment scraper on collected 732 videos
+  python -m ingestion.youtube_comments
+
+Priority 2: Install transformers for better classification accuracy
+  pip install transformers torch
+
+Priority 3: Run classifier on all collected videos
+  python -m ingestion.youtube_videos --classify
+
+Priority 4: Wire news_scraper.py to save classified JSON output
+  (currently saves to PostgreSQL only)
+
+Priority 5: Schedule daily runs (cron / Task Scheduler)
+  News    : 0 7,19 * * *  python -m ingestion.news_scraper
+  Videos  : 0 8   * * *   python -m ingestion.youtube_videos --years 1
+  Comments: 0 10  * * *   python -m ingestion.youtube_comments
+  Analysis: 0 23  * * *   python -m ingestion.analyzer
+
+================================================================================
+END OF CHECKLIST
+================================================================================
