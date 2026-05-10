@@ -7,6 +7,7 @@ Usage:
 """
 from __future__ import annotations
 import argparse, logging, os, json as _json
+from typing import Any
 import sqlalchemy as sa
 from sqlalchemy import text
 from dotenv import load_dotenv
@@ -15,6 +16,12 @@ load_dotenv()
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
 
+
+def _to_dict(obj: Any) -> Any:
+    """Convert Pydantic models to dicts; pass through dicts unchanged."""
+    if callable(getattr(obj, "model_dump", None)):
+        return obj.model_dump()
+    return obj
 
 def fetch_unprocessed(engine: sa.Engine, limit: int) -> list[dict]:
     with engine.connect() as conn:
@@ -37,15 +44,12 @@ def write_pulse_events(results: list, engine: sa.Engine) -> int:
     processed_ids: list[str] = []
 
     for r in results:
-        if hasattr(r, "model_dump"):
-            r = r.model_dump()
-        extraction = r.get("extraction", {})
-        if hasattr(extraction, "model_dump"):
-            extraction = extraction.model_dump()
+        # Convert Pydantic models to dicts if needed
+        r = _to_dict(r)
+        
+        extraction = _to_dict(r.get("extraction", {}))
         stmts = extraction.get("statements", [])
-        geo   = r.get("geo_resolution") or {}
-        if hasattr(geo, "model_dump"):
-            geo = geo.model_dump()
+        geo   = _to_dict(r.get("geo_resolution") or {})
         source_id = r.get("source_id") or r.get("id")
         try:
             with engine.begin() as conn:
