@@ -1,0 +1,2736 @@
+{
+  "label": "ANTI-BJP",
+  "total": 110,
+  "articles": [
+    {
+      "title": "UP: अवैध संबंध और सुनियोजित साजिश का नतीजा था प्रिया शेट्टी हत्याकांड, प्रेमी, उसकी पत्नी और ससुर ने की हत्या",
+      "summary": "गोरखपुर के पीपीगंज थाना क्षेत्र में 30 जनवरी 2026 को बैरघट्टा पुल के पास मुंबई के वसई ईस्ट निवासी प्रिया शेट्टी की हत्या के मामले में पुलिस ने आठ मई 2026 को 778 पन्नों की विस्तृत चार्जशीट अदालत में दाखिल कर दी है।",
+      "url": "https://www.amarujala.com/gorakhpur/priya-shetty-murder-was-result-of-illicit-affair-and-planned-conspiracy-lover-family-named-in-chargesheet-2026-05-09",
+      "source": "Amar Ujala UP",
+      "language": "hi",
+      "published": "2026-05-09T03:27:50",
+      "topics": [
+        "Law and Order"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:00.405531",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -3.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": [
+          "हत्या"
+        ]
+      }
+    },
+    {
+      "title": "Dubai Job Scam: Gorakhpur Youth Duped of ₹30.45 Lakh, Wanted Accused Arrested - The420.in",
+      "summary": "Dubai Job Scam: Gorakhpur Youth Duped of ₹30.45 Lakh, Wanted Accused Arrested The420.in",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9wQjczVHVpOVNZME0waG9SeGhPZG93aWF5bkJONXhrbGVibFU0eDVqRVJWbFgteGxpNjBMaEIyRFFTN2psVExSZENHb2F0OHpBekVMeDhCUkxweXlHQ2hCZksxTmhUbVFDYU1hUUl6UDZtZ0VGOFQ2NE1lTVA?oc=5",
+      "source": "GNews:gorakhpur unemployment jobs yo",
+      "language": "en",
+      "published": "2026-02-05T08:00:00",
+      "topics": [
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:07.677590",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -5.0,
+        "confidence": 1.0,
+        "topic_bias": -2,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": [
+          "scam"
+        ]
+      }
+    },
+    {
+      "title": "Mega Rozgar Mela In Gorakhpur | Youth should be guaranteed jobs and security: Adityanath - The Indian Express",
+      "summary": "Mega Rozgar Mela In Gorakhpur | Youth should be guaranteed jobs and security: Adityanath The Indian Express",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNV241MEtHRjZrd2JHZlZqdEhTTFhfZUxydXE4Vmt0QjM2Z0owZFJsSi1KMm84emZRVFozLUcxRy0wZFRnalQ5aGRDQnhBWVN0d3B4QzNNZUQ4X1NYZkdZV2QzY0F0NVIxSFFJWWF5cEluSHd5a1paZUR3aGhjS1pNdW9rVGlHNUlZMkdjdVJYVVg3eURNY25PV0UyR3piUU1RQWhHeDcwMnlvSC1QUDdKd0RUaVd3dDFQbVZHc1hPYnVYNkJjdS0yY1RzZk1wRjB6R2NLRVNOdU1RUmPSAeIBQVVfeXFMTXNZZXNaaC0tSHdhUGNHOEYyNFdEcXhCbHU4aWFMcm5zRzlKRngyRmU2M3hJTk9rZDc1LTEzeFMyUkZKOWpLWklWbTJocXdoTGhhejZ2LXNXcjdxR0N6cW4weVRhVTEtTTlrNHVGM19zZUhTNTFnM2xHcVlGSXNHUzlLM2oxYU14ZllKQTNiNjFPNHpaNTdsSW16cXQtcG1QVjBENUxhZ2VKWWpQQVl5eFJyNFhjcXJSVzhjd3B1TGZPVGVmQ19WbldoTjdMdFJzWTVITFhOWVdOaGR1dGVEWVFmUQ?oc=5",
+      "source": "GNews:gorakhpur unemployment jobs yo",
+      "language": "en",
+      "published": "2024-02-05T08:00:00",
+      "topics": [
+        "Unemployment"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:07.683999",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Gorakhpur NEET aspirant's murder: Police arrest one of the accused after encounter - The Hindu",
+      "summary": "Gorakhpur NEET aspirant's murder: Police arrest one of the accused after encounter The Hindu",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxObXhMaHBoNGhLZ3pldmFpbWNsdks0UFhNaVBYTEloMjFPU01VZ1Rta1lPMFlUdHFMSjlXT1U4TndVdVE3RFYxODNyajBGc2d1cTVveUlacGZCdGUwcnMzbzJCeGJqOF96YTdVMjVFc2pGZ2o0bkQ5QTBON3I2UnpQQ0ZyYzJnZm5tbUZhYkk5RE5nakxkNjVuenlscFBabGxDQldad3BydDJvVXhTOVh2WUEtX19IcU1vNEo1MC0xdDdrQXhXLWF5NG9RcUhTUVA2TlpKdnNROHRIN05ES3lQRUk5cHpBcU540gHvAUFVX3lxTE1aY0ZMWVVhSDJ1ekQ3T29NRzJLRkM5bVgxNFJZZlhjMkdoSDJ2azAxTncxM3NYNE1vMmIwV2dFVC1CN1FtVGZxX0VOZkpSRDdWU0ZDTGEwVTZLOXlMWDBQRTB4UkJnZ004V2xDUXlIdWtvZGl6MTdrVW1yQ0xOTmxTdlVEbEJmaUh5RS1GeHQ1OUZ3WlFmeVV6Q09JLUpBSVgtYVpZcEhRZWFjc3FEdUZKSEVCMDE5SUNuNGdiclhOdzUtRjg4d3hLWmRqNjk5em5YUzViRkNDZEZqUnhiX215LVFNTlRZUXlwaE1WcDEw?oc=5",
+      "source": "GNews:gorakhpur crime law order poli",
+      "language": "en",
+      "published": "2025-09-17T07:00:00",
+      "topics": [
+        "Law and Order",
+        "Communal"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:08.919789",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 1,
+        "anti": 1,
+        "net": -3.0,
+        "confidence": 0.429,
+        "topic_bias": -2,
+        "source_bias": -2,
+        "pro_matched": [
+          "encounter"
+        ],
+        "anti_matched": [
+          "murder"
+        ]
+      }
+    },
+    {
+      "title": "Gorakhpur NEET student murder case: Prime accused arrested after encounter - The Times of India",
+      "summary": "Gorakhpur NEET student murder case: Prime accused arrested after encounter The Times of India",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxONnRxcFF3S2U3akJaUHFnWVkzc1BfTGZJaW51MWVvXzJJZ0xkUHFRYXNMWGdsdjBtYklpd0hTRkp2RlFaZ3V5eG1tNjkwSkxHQXMwdXhZZ2o0cFNIT0dZa21tazhCaFhTOWFWWTZfRE81WlZ6WFdZSUtadmJyUTFxbVZIUkNFV25ZNEpKazNDRmRfd2drSVRtQm9VZnl3Y0hENEdhSTZMTVZjTHpvTXdLeUJPcDdtS1I2clhtWXNsMFFwSjQ0ZjZxR3hOaXFIQkZZZURHZHpHRXFfaGx0VGhIcUt30gHnAUFVX3lxTFBWdTFtMXZiMzhuaVJyV1RKd0ptNUFEaUgxdU9DNHdKckFpeGlyMWg0SU1zWHZrSWJPU1Z1a3VSYkVGX0trcXpsZ0lpVEZCWGo1bUVKMDRaRFJVTTJYLU1LYlVveEpaYmJCcmlhWU1iR0RaVEIyVEFXeDBiV1ZpMUNLeDV5YnpSN0huNmZhMkZnTDBqMzFYcm9pcVFLbk1oNFpZZGhRTXdQRWNpSkg5OEVwVFBlNlJTamRJaUxRSTJTQkJxZDVEZkt4WDNjMGhHeHRLQ25vOVEzOEJUT0c2Z2Q4TVprUHNIWQ?oc=5",
+      "source": "GNews:gorakhpur crime law order poli",
+      "language": "en",
+      "published": "2025-09-17T07:00:00",
+      "topics": [
+        "Law and Order",
+        "Education"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:08.919789",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 1,
+        "anti": 1,
+        "net": -2.0,
+        "confidence": 0.333,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [
+          "encounter"
+        ],
+        "anti_matched": [
+          "murder"
+        ]
+      }
+    },
+    {
+      "title": "\"Not the first incident, law and order collapsing in Gorakhpur\": Akhilesh Yadav slams UP govt over youth's death - ANI News",
+      "summary": "\"Not the first incident, law and order collapsing in Gorakhpur\": Akhilesh Yadav slams UP govt over youth's death ANI News",
+      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNRnVvdjdnVm5kdjVfbDhGX0tGRVA3TVFwXzVOeXR3SjM3NXJWSW51SE5sLW5XQkliVVNTeU1qSDhIZGhtZzFBeVdPUkxQN1BaZ1Y0YlBYR19xUndSZnBZRi1KYnFUNmE1ZUNreVp3MU95Q0JIbmdpdWNuZVlFcFl5czZBbHhkNHFUSFJ1bm1HcWlSZ3l3Q0RoakR4UDZHemt1c1g3eGVQb18wMWk2Slc5bW9pVVBOazBHR0RBZ1k0enFnWVotRnduN1RheHVRT0NVLW0tYThwNndLZVlaVENPUURuQUlaYWxxc20zTWRTbFFpT2ZHc0h4RmdLUQ?oc=5",
+      "source": "GNews:gorakhpur crime law order poli",
+      "language": "en",
+      "published": "2025-09-16T07:00:00",
+      "topics": [
+        "Local Leaders"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:08.919789",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": 0,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "How an aspiring doctor's murder by cattle thieves in Gorakhpur sparked a violent protest - India Today",
+      "summary": "How an aspiring doctor's murder by cattle thieves in Gorakhpur sparked a violent protest India Today",
+      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPTXU0NTV5T3JaYk14TkRXdWpkWW85VWl4VWJtdUxPZlFZRVltRWhocl9ZdGg4UllLUTlBUF9qLVI5Q3R2VXBFN0REcGRjbUtNM29WeUtJVTBkdWJHNFpZZTB5WDV3XzQ3dl9PbXhYUjNuLTBRUERjMTJOYzBWVlB5THFSTGotb1VKYmJ0Ykc0MlpTb2NWVVVrNTlfME5TejFfWTVrYjR5bjdzcVEzRTVPODJCQVZ4aHlMUW4yQlNUbEQ3amJKZTFubWdLZUZxWnQxUVE0Y3l1TFRMcFBQT2RGRHdFSU0wZkZzWng4bkV6RdIB9AFBVV95cUxQSmI3cUh4b1RUT0dJUGFNWmxPc1VpWnNjUG1vcU1CVHFXbERwR3pLOXpWU2N1R1FQN3dhRHpWRnRIN0xIcGM4dXJPOS1pZzRJNUVZWGVpRE5OSFByVXBIY1BGTlBCaEE0Z041RS0wd3BlVmtnMmZMM1RlMV9pWUNjRFdnNkdmWmQ2cmtwNG9ONnpCeUZpV0xQNGszM0wtUTNhWnhKcjZ4YVRJMTRzTzFSZlVJb2RwdEs5UVF0N3Jab3dHQ2Vmc0pVdVhwWUNnSGVaRXR0R1BZZlR2bER2R1NmSThTbkk1T19nQmIxdnBTc21MVUs5?oc=5",
+      "source": "GNews:gorakhpur crime law order poli",
+      "language": "en",
+      "published": "2025-09-18T07:00:00",
+      "topics": [
+        "Law and Order",
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:08.919789",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -5.0,
+        "confidence": 1.0,
+        "topic_bias": -2,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": [
+          "murder"
+        ]
+      }
+    },
+    {
+      "title": "Gorakhpur murder case: Fourth accused nabbed after police encounter; Akhilesh Yadav slams BJP - India TV News",
+      "summary": "Gorakhpur murder case: Fourth accused nabbed after police encounter; Akhilesh Yadav slams BJP India TV News",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxORHdXQmxDM1hGN0RlTXZPV21tMEZmV2pta1NnZ0IwTElKajZVLUpiVGFlSWQ1RFRROGpkV3ZpY015UGZhdkQteW5HLTRsaGViNnNtUVgya0tBSEZPNEtEYUttZEptUXJqMF8xQkRTcW1yM0Y0X05ZM0owaGMxZFZMS3JBUDB3ZS1zbjMydTVjelhBeTd4VHVKNnlMZU5yNGZSRUE2M3JUcmRGUnZDeEdKckxPMUFIS05MMFFSS0hJRE45ZkV5Ym5PMzNsSG5MemRoZF9paUxNdTdUamJDVkRHVDh6d251MmfSAewBQVVfeXFMTjZaejJNNlpPVkdadnhKZ2FIUGk4R3BKS0FMcmdIN1p1enAxaGpSVnNlNF8tQmVObURob3RPNGY0R3V5c1BHVU9maFo4cW9RUmhxeC1UUFczbmVUS1M0eEV3MmhfR19wNFptM3hxbDRSZVZmOTc2VUVxX1I4aXczdVVjQ21uU3YzaVRuYmNPU3JfYjByUFNBdDlId0RCSmhKa3BtTmIyV3lBYUFSNEtjTUk5WVVkQmxaMlZRNVVmOXpGcnZrSlU2YXJIcGp1VmFfZ0s2T3dyVUtOdWE3c0l6X1ZJU0ZmTEpyVFJSM3E?oc=5",
+      "source": "GNews:gorakhpur crime law order poli",
+      "language": "en",
+      "published": "2025-09-17T07:00:00",
+      "topics": [
+        "Law and Order",
+        "Party Politics",
+        "Local Leaders"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:08.926435",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 1,
+        "anti": 1,
+        "net": -2.0,
+        "confidence": 0.333,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [
+          "encounter"
+        ],
+        "anti_matched": [
+          "murder"
+        ]
+      }
+    },
+    {
+      "title": "16-year-old student becomes Station Officer in Gorakhpur on Resolution Day: Issues strict orders to swiftly... - Bhaskar English",
+      "summary": "16-year-old student becomes Station Officer in Gorakhpur on Resolution Day: Issues strict orders to swiftly... Bhaskar English",
+      "url": "https://news.google.com/rss/articles/CBMinAJBVV95cUxNYm9kbTMzVERMU3lXRzFWQnNoVHZISjU3WTM4aFBSWTgtWVZUcGgzb3RRX0dKcmZuNzhXeXN5SldiN2FwR2FKRlRDQzdDREQ2OFFlUG9ONFlZdGFhdlYwU0l3Y0hoOUpwd0lKOWlkUUI0aERVV3VJWUdpazUxTS01OUVMOHY3aGhuanpRRzEwaVA3WWhyckFnc0M4X3hVT3IxRjNFb1Y2RFNWekRtMHZNTWdHRjA1Z2EtbXZ3ang5eUU0VFFSY2xncEtVRjBPZnlOT0czaW96eHpoa1BHN3BPenNVcHBDaHJhSFpsbmsxc1NuZmgtNkZhWmNUa1BLZ29IcHFWNU80TW42ZzlCcjl3N0g1RWNMZVNDVVAxS9IBogJBVV95cUxNQnpOdHkzWmRWWHZ2X2VUSGtOYzdMWHVDVFVBeFZYeUZsXzltcUh5VHZkYVBWYXZJRUtnLWM4N2kxbXF5NklBSElCeHdtMGZmWDJJZHhNTjQzYm1HeUJ4UlB4dWtfc2JtLVgtem90dVRzUWE2OUg3V0lvR1R3a29ULVhwbl9HVm5uaGZaY0FVUDFuTkhkaEpqTFpaSU9LdmtMQ2FjcEd3Vy1IVFAwTnNQdTBGSnoyRjFPZUx6SnlRLXk0WVl3REpoSVVrLUJCNkRlSGRSM0lCeU12a19zUE4zajB5TDAydmM5SzE1LTgzamNNc2d6UE42ZWVrQ2JUZTZ4T1Q2T0pXYS1pMHE2STJvV3ZnLUo4Z21CSDd6ZkctX2RGZw?oc=5",
+      "source": "GNews:gorakhpur crime law order poli",
+      "language": "en",
+      "published": "2025-09-27T15:08:08",
+      "topics": [
+        "Education"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:08.928424",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": 0,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Secretive Police Cybercrime Operation in Gorakhpur Ends With 20 Youths in Custody - The420.in",
+      "summary": "Secretive Police Cybercrime Operation in Gorakhpur Ends With 20 Youths in Custody The420.in",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBMamFJU2gzZi0zb1dnbnFhRThqOVZJdXZfa2RKLUFETnBHYkhUUVFSUjVSS3B1Qmt1WjdEYkJEdTlmTW1VdmpmdUN0d3I3bHo0VnFzbVp5VWhKVDZKUHRsVEZYc1N5b3hVa0ZKcmRuR3JGN0M2YmJ4NkRQbHZYVFU?oc=5",
+      "source": "GNews:gorakhpur crime law order poli",
+      "language": "en",
+      "published": "2026-04-30T06:07:59",
+      "topics": [
+        "Law and Order"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:08.931463",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Doctor held for woman’s murder: Gorakhpur cops to approach Nepal for forensic evidence - The Indian Express",
+      "summary": "Doctor held for woman’s murder: Gorakhpur cops to approach Nepal for forensic evidence The Indian Express",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQVXRhZFdnTlJSRnBxa0pMQzRvSlpNUm5TeEVDVm9yQVlxdUlvU3IyVnQ1RlNHdlBUcHFSSmRRNTZVVmp6d2d2VWNEdGsyUzRrTTQtRG1fek1yZE5GTUg4b0t0ak9CTTgxbUkzbEhGVmVYTFduZi1NSDktcEpSTjJfS3F6ZmxyLU8yQTBkU3A2WFNKTkRkaERQZGZhRURTNzhlbDhVUV9BRzJjMzVYS1hYWnJFVmY1MUZ4bkZDb3g3Q08ybjZibmI4U29tQmVxUdIB1AFBVV95cUxPMTkwVjN1QXVYQVJqem1wSklkOVh6bXpRZmM2N3hrM2VTelA5YU1hRkJWNm0zQ2JvMmYxZFNHS1BIVTJBelM2eHB3VGNNNmduMWZZYllqYUlSYndjQWJPcFo4Q1ZHNVdISVBtbmV4VjFYNjhXNVNJQW5aby1COTM3UjU0T0FRbWhLSDdFODNMeUNKNGJRTXRXUWFqc2syVW52eE15akhfUS00VVJSU0VFVDA2aDQ2TmpzdTVqM0VYMlpmMkp2T1Vxcm9tX0ZqMENHbnlKQg?oc=5",
+      "source": "GNews:gorakhpur crime law order poli",
+      "language": "en",
+      "published": "2018-12-25T08:00:00",
+      "topics": [
+        "Law and Order",
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:08.933831",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -5.0,
+        "confidence": 1.0,
+        "topic_bias": -2,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": [
+          "murder"
+        ]
+      }
+    },
+    {
+      "title": "IMD issues heavy rain & flood alerts in Gorakhpur: Water levels of Rohini and Rapti rivers rise; administra... - Bhaskar English",
+      "summary": "IMD issues heavy rain & flood alerts in Gorakhpur: Water levels of Rohini and Rapti rivers rise; administra... Bhaskar English",
+      "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxOZ3hYQnpXVVVaLUt6akRTXzJpUXF0NjVfeEpTbE5ISUpWNzVQN0Niak9qNEVWZWttOTJCRE9wMm9kMGpJMTB5NTZLOEZkRmpXVDBhNTBtRGlxc21OZEVvLVJmYlRvUW9qMlFNQjZPN1prVTlmeUMwdEhHUmc5MHA3RXh2cFpfSkNOS21rQjBIMHIyQ2hvVEc2czRjRXlHMUU0M1JzekJrNGVKZnNsdGlORVZEMTNYdTNWam82RmY0dkhFSm96amRIZ25BdWIwUldZSTZ5blM2WXBsUHFKRmxxX3pVM2ltS2RJNks3S0lkTWl1cElOR3hUaVpJNWRGVXVQYnBwSXQ0bDhkbmhRS1V0c2N0Sms2VU9maWhlVzBfSXbSAaYCQVVfeXFMTlJJWTdVeGhsT09HbWREMlYxSVl1VzRUOWNzR25qczNxdklHTzk1bUhMaHdUeHpqVzhlWDktdE14bVVUOWJrTTFxdUhYdEhSZ2hXZ3dLa3lTQ3BLM0cxam5YMTNhMzJ5QzFtTVdvLUpVLU1sdXp5bjVjeWJETWZ1UGs0SHJMTlllVkhHbzRMZ243dmpwdXVBWmtBVnpNTW5FbmNQbTNCaE5xZk9Mb3A5LWZ3ei1fX2llRnJFaFlxdEQyNWQ4eFJzWXZHWmQ0cUVsWFpRd0Y5UjJxcy1MdmJOakRkRVQ4V3V3eDRnbnhvMHNMTjdYNVF4OE00amxIMDhzMVY2emU1R00wRy1ZNHhDLVZTMENEaTJYTmpmUU1admtLeENiSW1B?oc=5",
+      "source": "GNews:gorakhpur flood rapti disaster",
+      "language": "en",
+      "published": "2025-09-18T10:09:09",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:14.252755",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Rising Rapti, Rohni levels put Gorakhpur villages on high alert | Hindustan Times - Hindustan Times",
+      "summary": "Rising Rapti, Rohni levels put Gorakhpur villages on high alert | Hindustan Times Hindustan Times",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNbGt1Y0JPUUxVZE5NUFVOZllydzVNeVlmNnJvY3ZZRERQbUxSQXlXY3BQMnp3Zkl0UU9XVGZoT2pINkdfdVJJWlFMVFNWR3BFZWRhZ2doTzVzamNFY1J0N0ZfSWF0cDRmcHBTOGpzS0V0WFFVODVwM292eW1ZWmpuZncyMm91ZzBIaVd1NnpaWXNtX0tpSjVBQnBORXZQUVBuUFV3VzQwQUdvU181MHJBWDZXOEhUTUM3VzEyeTlCUjZETmoxWWVJ0gHMAUFVX3lxTE9jM3VjalRQMWlrTnExb1JJeDZ0Zk1ZLVd5VUd3U2x3VXV0SHZ4V2xjYnV1Vm9FWnRJV244cS1SMTF2dmNTbjZtVVRCT3BDR3BLSGQ0c0RvLWtOTmJiZktRNmFfcnkxTk9PUzIxQWxNQkcxNFNhMlJwSUg1VkhMNmNXTVNsUld4cE1HWmg0b1hwYXlHUUMyeHVxcUVvMU5GaW5rZmpjaXhweVFlSVllU3RXV2RDVkdjRjNpcExqekRBeG0xNlp0LUl2OVZCUQ?oc=5",
+      "source": "GNews:gorakhpur flood rapti disaster",
+      "language": "en",
+      "published": "2025-09-21T07:00:00",
+      "topics": [
+        "Communal",
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:14.252755",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -3.0,
+        "confidence": 1.0,
+        "topic_bias": -2,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Flood threat in Gorakhpur as Rapti river swells - The Times of India",
+      "summary": "Flood threat in Gorakhpur as Rapti river swells The Times of India",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOb2hrbWRSQ1Z1ZjFuY2N6UkpmbzQ5aTZVY0lJVkdINlA3dmVhUnNsUnlNUDRGdFFPb2F2ek9xZm1kSHRHMFdPSU1MdFMtX1ZCemtQNHpBOVhSampYNzc0Q2h3b01LWHVncU5PbnQ0aUk1aTdwejRKb1BEWnd6akVtQ1h4YzVJbWNwdHQyOE5OZnRObGp3WTNQVmx6dlYwMGIyUFlnRmRER04tajdWU2ZfamtkdzJuVlVqQS1GTklQZ1nSAcYBQVVfeXFMTm1ic09vazhqYjRnclR3TWM5cmJOMGdmS20zOFhDWWowaTJvYno3dUhWTm5hWE94akpJWThDQWtGVGlvMFZfeEY3VmdsaXNhbFpYbHZOVnFzNGxEOUIyR2ZZdzIzNU5rdlBFYVlBc2NGaXZZdGxELWRLUHBmajktVEZPVWdhOHR5Y1IxcXk0RnVfbVJtakZDVlVWWXhmVFZVc1IwYXV6ak1rVm9oY1hpbXhZeHNXMmozRTBYQkpnT1oteWRPYUx3?oc=5",
+      "source": "GNews:gorakhpur flood rapti disaster",
+      "language": "en",
+      "published": "2025-08-07T07:00:00",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:14.256689",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Rapti, Saryu rivers flow above danger mark in Gorakhpur, villages flooded - Business Standard",
+      "summary": "Rapti, Saryu rivers flow above danger mark in Gorakhpur, villages flooded Business Standard",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPcmFpRC1raTlHSTFrTE1aYXVyNkpweWZqTDVLN19tRU5Ld2hPdUVEMmtJNzV0V1hzUFVqeDVsZFkweUdJdnJHeWNTeDhsMW00TUJTNnZuYUdKcVZNWDl2Vmpkb1R5YVBSN2lUMzVBR2JpNmt5OE5nOGVTd0xoUmcyQUczRDh0UDZuX0N0Skl1VEFHVHlMY2t1THAzRnUyTmtGWmRPdU15R0tsZHBPTTVZd0NaOEd0YTJxdldmMDVQdjJGdHhuQkhOd1RTZ29ORGRFY3fSAdcBQVVfeXFMTWJqbGY2VTdEb0ROYnVOcGVzdmxhY1ZWa3VaZzVKdXl5N08tSmVMR2xqeWxzdFVDQmZOaW40dTZVXzc1dFZzQi1OVUw5UFdOb2JjMW0xdzRrYjgtdG9BcEp0d29WNlRRVDVRY3Z1LURYRTVTT1draVNmaUlxQjNJeUZEVHpQVnJaVDBwc3E1NVpDb1RoaFVtMkZuYkxFODNYb1h3R1kwMlM0eGtLSS1iWXhNTHc2VXZYanNJNjhDVVRoakRjTHhOSC14OW9oWDZDRUtxaURVZEk?oc=5",
+      "source": "GNews:gorakhpur flood rapti disaster",
+      "language": "en",
+      "published": "2024-08-27T07:00:00",
+      "topics": [
+        "Flood",
+        "Party Politics"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:14.256689",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Uttar Pradesh: Rapti River flowing above danger mark in Gorakhpur, 29 villages affected - ANI News",
+      "summary": "Uttar Pradesh: Rapti River flowing above danger mark in Gorakhpur, 29 villages affected ANI News",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPbkRHNVNjLUZQMFdjaUJXNTZnSHNYOXQ0b0V5WnhfWDZ1S3RQVC10YmxPVVJpbnR2aXY5dGNHX0pya2l0V1BZSE1lejllZVNaZ1Z2QXFtMXVqU1d6ZWc5c19WUDJQaEZBeV9PbG5fQVUtY3RvYW42dDF4N1JHVy0ySVl1T1NlbFRHcF81cXFyV3MwXzl2bVozcENjYnRFclUyWEw5RkVqbm9xV2JVUVFSQ3pqMUNYUmR2WFA5QS1XNms1YzZ6eU92WVFBNE1XSzI0Vlh0YzNXaEJZcUhwaXhnMVJvYw?oc=5",
+      "source": "GNews:gorakhpur flood rapti disaster",
+      "language": "en",
+      "published": "2024-10-04T07:00:00",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:14.256689",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Gorakhpur Flood: Rapti, Rohan rivers flow above danger mark; several areas flooded - India TV News",
+      "summary": "Gorakhpur Flood: Rapti, Rohan rivers flow above danger mark; several areas flooded India TV News",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQNFVUQVdmY2pQOFdVX0c1THE0U3RvUkFxVlBWOVZ4OFI3VzRDblk2QVNlNGdhN2NTcWR3Q3duOXhrWE9xOURBYjEtN1RDTWs5TkduVk5tdUdqZ1JxZGNaQWdRT0xXVEdYZlpKVlNCdDNqcHJHV3U5bmRrSVhJVDdnc1JuaTFlT19LTDhBbllzZHRKRFFTb3hFMHJkME5rUUE3U1hMVjVlTG03QmFBTjZqYTJFaFZHS3VjYl83elFZNVYyOVRtYWVMUWwzUVItZ0JqakdEUVF2UkhHY1JaZXfSAeMBQVVfeXFMT2plRXJuOHNTTm9ZUFlydUFpUWNSNnlHd3VrSHI2c3A4Zk1WNWtNbUR5SXQ1NVlSc1BUX3JkNFpuZkJ4aG9DRzZvSW5wT0N2QkZSM1locndPbDNzMUFLcVdlUC1tU281ZDRwQTQ2WGwtbUx5bEhHbmMyM05oak55QnZxTno0cDRJeHdNQnZWaGxZc09sUWJLa0ZqV3ItdlhMZHZYazMxemVkc1JDSThpLXpRanJhTnRrZk5kYm1GMF8yYmhVYTdLd2FmNzZjNVJESjJJUVN6TWkxSnlEMzFXQXlOb28?oc=5",
+      "source": "GNews:gorakhpur flood rapti disaster",
+      "language": "en",
+      "published": "2021-09-03T07:00:00",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:14.263026",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Gorakhpur floods: 30 villages affected as Rapti river breaches danger mark - The Times of India",
+      "summary": "Gorakhpur floods: 30 villages affected as Rapti river breaches danger mark The Times of India",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOZkU2cWhoMnAzdm9uT2h0TEo5bmhmZWNMNWVyZnBNaFdPLVVoNWJKRTFBTnhFb2ZXbEV6V0ZMZjJJcVA3NGgyZlpzdHA5T1lGZ2JtMjZCT1FiR0hhNmlJbnd3c2MyQVhpT2EzWDVsR2kxR0lJei1qYUdicmhPRlNrNkI0SkJlbE56c1VObHJsNHBwQlZ0SWZKM1ZlM0E2TXVIM0ItMmRrTW5LNGFRaXc3ZGh0RkQ3dFFNNTgxYkJneVIzU0dLNUtpMUd1T0w3SGZ3N0dpQk9zVjYyRld2VnJDOVZXS2fSAeoBQVVfeXFMUGFLM2NaaGF6LXlBZ0dBUHFHTjBoaG4ybzFJOVAtbzQwSHB2N3V2LWZpYmRfdGhlbDF1U19lOEdWc3g0Z1FkWWlzcnp1XzZCM3Bja3JyeXQtUm94TFZJQXRvblpudncyZGh2Q2taQlB2cmcwSXFOdjlQVmY4OHRQQ212dHZNNVFjRExYckZPMXVQQ3FzMjhDTDNJaUVIZWdtbFBjTE92elFteDhXOU5fUlhlREtXVDg1Z3Q5QmYzQjZFNHdEdEhpbW9VelctQVRhRUJKOVh2OFBCakxmZ09MVkNpcjhRWThBVmZ3?oc=5",
+      "source": "GNews:gorakhpur flood rapti disaster",
+      "language": "en",
+      "published": "2024-10-03T07:00:00",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:14.264138",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Uttar Pradesh: Rapti River flowing above danger mark in Gorakhpur, 30 villages affected - ANI News",
+      "summary": "Uttar Pradesh: Rapti River flowing above danger mark in Gorakhpur, 30 villages affected ANI News",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOU0RGS1JwYkRPajFVQ2ZybTJUQ2lZUDJIWld6LXpsU1Fnb2FEVDNFSEs2UHpBTHp0cUZndUozWnZ4TVFjSFFaemRIRFIyOTlwbUZnV1ZWdU05QU04LWdHbnROT09IMDNZdm91SVBIWm95bVNTOUlUX09XbmpjeUxtZGFtblVFcnNpWkxEMG5FN1hCZ3ZRLW5WZWdGQXdMYXkybWFHTVVGOW94andCMldoTTUwWDZyVmxmNF8wSDlBTDFWZjBEWFdzdWZjd1kyaEFvenpFX1J3TmZKdEZNenVHMHNHQQ?oc=5",
+      "source": "GNews:gorakhpur flood rapti disaster",
+      "language": "en",
+      "published": "2024-10-03T07:00:00",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:14.264138",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Flood-like situation in Gorakhpur districts as Rapti, Rohini continue to swell | Hindustan Times - Hindustan Times",
+      "summary": "Flood-like situation in Gorakhpur districts as Rapti, Rohini continue to swell | Hindustan Times Hindustan Times",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOUWVfNXljcDFhR2FuM25xeVBhdjAwV2RjZkZHWEh3dHVyazlXMDVncU1lYnBqQjI3SzVsdDFlcHZvQW9rbmlkQnZBWFYxekN5eEcyLW16NWNqVlpENks0UkM2WXFnSTJPUEFRdlN0RFpVRHpuMnkwTnRyRG1aLWRhS1R2c2FvUFBieG40M1N1NVhndGdhblZ0MkVPa1poQkRwVFZ6bE5ZZ3NaV25teWtoWTA2MUdudDNYNGhrMXQybTR6YmtuUXVpblU3ZkJXUG1XSGh3emNQN1Z3d9IB3wFBVV95cUxPbkRtYlpERm82em01bmtwRC01THRVcTMyY19PTlluVWxWcW9RdzYwYXVoU21aTEJ4MTdSN2pjQnVkdWppM3JwMXpnU3dlMUlhYXQ2ZEFuNUxIS1AwWHFVNFVTNEV6TjdEWmFqanFYZmdpMHQtMnlIN0JSbFhELXF2ZFBfdWctNk44OTUtbV9fYzVuUHhCX3k5bFFzcWxZMzBOUkxzR0ZBUTJuSzBjM1lCeHFWQm1XWHZPY05XeUdLdDI4Q0t2dU5BNnFOLWhRWU1fOUU1TGF6OUtKeVZHanhJ?oc=5",
+      "source": "GNews:gorakhpur flood rapti disaster",
+      "language": "en",
+      "published": "2021-09-01T07:00:00",
+      "topics": [
+        "Communal",
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:14.267104",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -3.0,
+        "confidence": 1.0,
+        "topic_bias": -2,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "AES and Gorakhpur's BRD hospital: A case study in why primary healthcare needs beefing up - Down To Earth",
+      "summary": "AES and Gorakhpur's BRD hospital: A case study in why primary healthcare needs beefing up Down To Earth",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOT0RBWjcyc2NRLUpzV1BNOU45Ti1aVXo1aVBHRnpIVXZuUURfYlBNXzlEcl9BRFZGMWpCYXpRd2FUSTVsZkV5ZTZqaW93TTF5ZjF3UVdvaFF6ZHoyNHBfUWlGNGRmYkJHWFhLLWpOZkRUMF9YdGRSRU5MRlJMUmROeFV4VG1XWHVhaUpJdHh3UTBKSHdkUW0weW00a0VJblNOSjhyelhWWjhlcWtDdzVrbUwxaklBcWJEd3hFUG9NZ2hMdTctR1hwdEFqZHDSAdoBQVVfeXFMTTRKMG9wbVVKWkJIYXE5THNOSHVXWVRaZy02bFEyWEhPam92dG5kMER2Ui1MNUtOWVRGNFA2YzZpRGhqWFhxaUdXYmVwR3pVQUppTkFMQkVRT1JDM3Fob1kyWHZwVHpGTjU1eDZ6emlpRlluWmMxOW5SUjc5ZGxXSVVZbmQxLXdmbFBweVNxWmdIeDgxVVZUdTQyUXotdHVuNUJOUDBwOU9PbWptcTJtckxBQVN0ZmF5dW42czJrUDU3M3ZDc2RIdnRZQWxFd2MxR2pLRXQ4TjJfU2c?oc=5",
+      "source": "GNews:gorakhpur hospital healthcare ",
+      "language": "en",
+      "published": "2019-07-10T07:00:00",
+      "topics": [
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:15.419291",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Violent Attack on Gorakhpur Medical College doctors, 6 grievously injured - Medical Dialogues",
+      "summary": "Violent Attack on Gorakhpur Medical College doctors, 6 grievously injured Medical Dialogues",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQRmxoRFdDMUF1bmFEMzBZMHhDczhXWXVra0ttUGhxbUpLVE1NSEVxZUtzbVZmSHJyaWJ0bElUekw2c3Zuc2FyRDZVUmJ5TGpSZHBDZ0ZZWjJTSWY2Vlc4eVNmRzQxWXRoYXpnNzhjUEdMYmdPaVlXS0I3dEZ6aVlrSDNvelVMeHVrMlNRZnJ4d0ZXZ1NfT2JwQmR3RnRjQ1hkUEpVNml1aGdnTW1PalQ1YjhjVURNN0FhZWfSAb8BQVVfeXFMUDBuU2pXM2xad3l1LVRlSTJKRjFfODBuX0FtRC12YVQwT2ZDaThRbkZQSjhRcE5wSGhTdnV0RHBONlFzak9fdHFXWTMyREJSU2NmdTVDN2pQT2I2cWtUNVNFaDZtRk56enphZHhfN2JLN054NmU1M291Sy1kR3FrMHdzeWVVd1ZMQXZfNW9HTkNaMmRzVl9sei1hNXNaU0tuOFA5LWNJOC1qdGVYNkQ0TFZLLThXakEtTDlUNVZaVlk?oc=5",
+      "source": "GNews:gorakhpur hospital healthcare ",
+      "language": "en",
+      "published": "2022-10-29T07:00:00",
+      "topics": [
+        "Healthcare",
+        "Education"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:15.421448",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Gorakhpur: Protests at BRD Hospital after Poor Quality Food Given to Staffers on COVID-19 Duty - newsclick.in",
+      "summary": "Gorakhpur: Protests at BRD Hospital after Poor Quality Food Given to Staffers on COVID-19 Duty newsclick.in",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPVmdsUUlQSWh3empzRWJCd05NVU1NT1QxX3M1X3BmTTVvSjRobDBpcUUwdklLQkVlZkdLUnpPc0pCR2RmOHBhNXJFaFBTeHBwek9CMVRJeWE0aHlDbjRidHJicUs0U1owNUxoRmJUbjhfNERlemp6OW8zYjBVYzhzQ3ZMT2tyVVJTZ2gtQVdwZEhFTDlhbkRMbjJHbURXUdIBowFBVV95cUxQdXR4cXZJbVdKNmlLVW1pUGU5bWJ0akV3T2p2VFIzZUhCTTN3RXAxT0RWNjhHaUFKM1JLcXYtd2ZRYXk2UExWSjhJc2hkYW80OEJ0LXZXTFBuRlF1Rk9tRUdXbl9INzMzaVhvc2Z3QkU3MWVDQVp3ZV9DemZuZ3FSUjhkVjBDdUFOLVdQeWtVWnpwNzVWVmpKcElORW9DdTl4Rjhv?oc=5",
+      "source": "GNews:gorakhpur hospital healthcare ",
+      "language": "en",
+      "published": "2020-08-07T07:00:00",
+      "topics": [
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:15.422456",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "What the Gorakhpur Tragedy Tells Us About Indias Public Healthcare System - TheWire.in",
+      "summary": "What the Gorakhpur Tragedy Tells Us About Indias Public Healthcare System TheWire.in",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9oZGVzcDZxOVdKZGtrR1VxaGhxVXBTNlJEUVhnamVLaEVUM0ZpWjkteDc2QTNlQ1BDSjV0VEphby1uTDd6NWU5UWdJRU5nWmp2ZFkyRkNZWHdVai1Vclp5bjNSb2dIc1pncm1ISnl0bGxtenB6akktMDd0Z9IBgAFBVV95cUxQX2pOcTZ2TWRZY2FjQ3JvSkdTLWJwdGFEa1BMWGFCb0w5Skh5Ql9TVmpLX3llYWpyVlZEYWhNRHZUa3RfcGZGMDJKNXBnVVRBVFUxMXo2Y3BkTy1kWHpkTWV5dTlnMEJiOHFjTnptc0lLWTBxU1RTTXdQQnRQWG9KXw?oc=5",
+      "source": "GNews:gorakhpur hospital healthcare ",
+      "language": "en",
+      "published": "2017-08-17T07:00:00",
+      "topics": [
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:15.422964",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "BRD Medical College: Mass resignation of doctors due to poor work conditions puts this Gorakhpur hospital in deep trouble - Firstpost",
+      "summary": "BRD Medical College: Mass resignation of doctors due to poor work conditions puts this Gorakhpur hospital in deep trouble Firstpost",
+      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNLWtvU2taTjZwbjQtdDVVLVNRQVhES3N5NXNKNVY1ZTZlUmFMdFljWE5mMjRZSjlOS0JWZERoSnpnZzlKb1ZDQWU5WHBRSjc1NHU1Yzd4NmdTQTE0Q1hfZGJpWmd3TXVxRER1cGpyUVBWeXJZOEdiOVl5TTVrbnRDemNaTjB0YUhvOVV3N1p3S2tSTE8yMkl5c054QXFJYWEyMmlNMXQyUzVyNFFURDhKVnJwc0dCNWJsQW0tOE9EaE5QbzIwNHg3c1FhY3FZenM4SXFFRTNvX1d1ZUNGWV9VX1JVMzhabHlhdTd3V3puRUlfZmRSejAtQdIB_gFBVV95cUxNOVVuSUFiTVR4Vi1tQ0k0dEtXOElfbVZOV09LLURaSE9sN1FXVGs4SkU1ZFlLNDZLb2t2elQybGNybXdON2xzeVduS1IxU3d4TVl6UzlRZkFFV3M2czlhZVpyYzc3WWNUWTlXaTF1bXd1dGlVb0VJR3dNTXdoMkdkYlZfZ245WXhpRllCWDU5a25rTnFjeEM5d0NlM0F3eE9rN2NTOEF0VS1yWEVWRjZ6dzZXd3p0U2ZpSnVZRHhMY3JvSml5a05fWWUyVWlnRk9EejVNY0l4UC1ZRTlfd2Vtb1NFNmhRRDlXcndvY0Vid3JNYXE0d0trU3ZTczZEZw?oc=5",
+      "source": "GNews:gorakhpur hospital healthcare ",
+      "language": "en",
+      "published": "2018-08-16T07:00:00",
+      "topics": [
+        "Healthcare",
+        "Education"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:15.424041",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "With budget of Rs 152 per bed at Gorakhpur’s BRD hospital, medical experts decry funds distribution | India News - Hindustan Times",
+      "summary": "With budget of Rs 152 per bed at Gorakhpur’s BRD hospital, medical experts decry funds distribution | India News Hindustan Times",
+      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPMU5SVWhseURURUpHczU0RmQxaDZYRENidnY4ZnRucFl1RFlrWlZHdzktUjZCYV9MX0oydXlMdUxjSjRtSXk0dkxsN3U5SmVyaXZiWm5SNk9Pa3kyamFpbHJsdDdqdTR1dzMzT25Mcm1jSUp0UmkzLVJPYy1ENGdaNkVDd1NDQVN2UFJ1bTNPdlJoQXhiRFd6Y2NhZWh5RVBCaG9hUjZnUDk3T2k0TDhMQ3l6UHVmSWZ6NHVGaVJNZUdWdl9qQ3FUaklmdDUwamZqYVc3Y1EyN3Qta3NNUDI3ZFRfS0Y1THpQR0VRd1lYNE9peFBKV25yeGlacVZjTkdjRmfSAYcCQVVfeXFMTkEzaGxxWlJlbGZQdkZneEluVmVyQlBKSDhSTUpyV0s5amdva2tZM0xNR1BjMmczWjdYN0hrOEIycjZsQkVsVWMtbW5jVFRFeTVIWW9OM2t1MDhYMU9RZ0lmY0xYMXo2aEp4b05XV0xRUGVpaTRzUEhtM1ZDWkNlTWxUQ0xzV3NSQS1mZWFNcHRCLVczSTZrWDYwZ1RUU3BNYmdxbnZqNUpxQ0Y1aWxJWjM2bF91cnozMHhqa1gzbFhwcTUtLXRHaFZmX2daLTlIMl92RUlhZFBhbFhPSXlOZ3R3anFGTUh1b2gwbnBtaTV0ZE44UWQ3dGttN1F0NEhQdjdGTGNVVXc?oc=5",
+      "source": "GNews:gorakhpur hospital healthcare ",
+      "language": "en",
+      "published": "2017-08-15T07:00:00",
+      "topics": [
+        "Healthcare",
+        "Communal"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:15.424041",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -2,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "India: Child deaths in Gorakhpur hospital rise - Al Jazeera",
+      "summary": "India: Child deaths in Gorakhpur hospital rise Al Jazeera",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOTkpiUkF5TjJhS01UZEs3ZUlLUzFSenFTeDZhX0EzUThZcW5ralRNOFV5aGZPOHlJdUFmUDBRLVF6cjdxS1Qta3VTSXR4Z1JESnR6aEFzMEphWE5ILVZKem0wRGV6dk5kOTZ4VUEyWFRNbFZOT0JwRnBjLVNNWjI1al9uckRZZGhWVEFCZUY3NNIBlAFBVV95cUxOYXlJb0JIYVRHT1FpY0VxSHM5ZXBCMWZvemtLQWIxdks0QWgwbFFFMkpHMXJRN1BRZ1Y0V2RGTTNWVWZyNjhGYWFPdzZPbFg4a2R3NVluNFoxUlFDVmlwRDYzU1NfMGFhQUNWa3A1bzhtOExmaHN4R3Jjd2ZZTV9Xc2IzdWFHV3U5aVM1UXVtVkRUTHNO?oc=5",
+      "source": "GNews:gorakhpur hospital healthcare ",
+      "language": "en",
+      "published": "2017-08-30T07:00:00",
+      "topics": [
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:15.425119",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Situation in Gorakhpur's BRD medical college hospital is past the stage of prevention - The Economic Times",
+      "summary": "Situation in Gorakhpur's BRD medical college hospital is past the stage of prevention The Economic Times",
+      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOR250bzdEVnRSZGkxMWFBYk11LXRycFBBZS1KXzVCVUtuVWc3SElFLTZIVDBDcHpwVnRsSFZESm80anlPc0dPY0JGamV0SlhWN3JsS25DRDNSQUpuU1ZzRWMyNzB0Rlg3SEl6QVd0MEdWQzY2LU9aY0NVbGxia3YyUWExNkx4MmFGLXBqZnc4UlBMYnphdUNfVU9Jby1fNnJxVEctZUJLYUYwVWx2blgwWHduV1BWVEZZU1NXZ05tajZjb3VsdEdTU2YyTFhzR1VENjJ3TjlZY1VQbHhnVlA3ZmlqdndTNlBta240ak5nZWtzQVFU0gH6AUFVX3lxTE1tMGV0SGxmalJzQmxIWVo1TGFZOUNFbW4zYVNPUFBnUzhjUGxjWGlDTnBGT0VnRUpHdk9HRUhnbjgwVnNpVTVycE9aQ0gtN0FFWkp1dHpGMVdYbGMyelA2V3VqdXZyMmhTTEhZaGlSWGJvRVlDUjNnRVcydjhmVk9oT0tGWTZLTmtJZnE2Z2hSdHl4ZlAzUjZWTDZhdGdhVGZMUmRGdVZfdk1XVVg4UHppSFExOGFOblJ1cXR1ck9RVG5nQWJ1N21zdkVZci1wOHdUelN4QmZEX2UwVWc4eGIyNDlvMHN2SlVjbjdxV1FxQnh3a0NGNnVRdGc?oc=5",
+      "source": "GNews:gorakhpur hospital healthcare ",
+      "language": "en",
+      "published": "2017-08-19T07:00:00",
+      "topics": [
+        "Healthcare",
+        "Education"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:15.425119",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Massive fire at Gorakhpur BRD Medical College, 58 patients evacuated - Medical Dialogues",
+      "summary": "Massive fire at Gorakhpur BRD Medical College, 58 patients evacuated Medical Dialogues",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOZTRtWTY4czA5N1RZTlZsZ0pHVFA3UXBvcEtsUjdQa2ZZdUVYYlAwaXd6LUdIMHlOUGh1RWo0MGlmdXgxbnQwSWNic0lOTEdaQWkyOTZiRENIMWMxS1NleVAxeHZjY1pHUUdOTHZSZ2g4T2U5WTE3a3VkQWt2ZjNQWUF2UnhhM3FxTjBONGIwWGJSaTJYNW9YSGxyaktIaDJROGhwUHJpY29HNGlpSTZQVE5tZ1RZNGFCUVBYaVcyOFV1VnRLc3ktUUxfRHJ0ZzZN0gHWAUFVX3lxTE9GZEI5aVpKajN6NjBrbTBOSTJTZlNWV0N1SnItQ1hEWnZQSzlxZWdzNlBnNlJqZDZUOFBBdG1aaTVTdG9sXzZnWGdfWm5WNVB5VjVNM3p4eUU3M0FKZmZadHRsYmhNRkdicjEyV0loYzFJZjRRREo5VXdIWW81UHBSdFBXeU9rSkxqM3VCYkpEcDQ5QUdwWEczdDRma0hPRTdLcU9HQjhpajhkX3RfMFZjN2RLa19ObVZkWHlodXRPbWp4aFBZRHRWV0pxXzhXeVlMWFhrU1E?oc=5",
+      "source": "GNews:gorakhpur hospital healthcare ",
+      "language": "en",
+      "published": "2023-07-29T07:00:00",
+      "topics": [
+        "Healthcare",
+        "Education"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:15.426702",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Death of children in Gorakhpur hospital: file response to plea, High Court tells UP government - The Hindu",
+      "summary": "Death of children in Gorakhpur hospital: file response to plea, High Court tells UP government The Hindu",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPQ24tUjcwRG0ycmJpNmV2U1J0Z0FiN1VWWDF3Qy1uMDhXSnpZdmdvUk9DOTVtbk1Yc2R2bjhkdHZFeEVpdllib2xJNndBTThTNDVSV0xfOUNBNEpOUVNqdGNTWWVRMFRBajlKWkt5QmF5NUNkM2J1eDNDbjJJdDU3VVIwRTdRUF82R01SNjFFYmVaMUR0WFMyWkR4MmlneUdXOTFsUGRTNkQyRzFpSlRHZ0d5blR4cG9EeXFQUGs0QkM2d9IByAFBVV95cUxOdjdpUEZGdzgtcnIwVnBFVGY1dmxXMjB1UWozVllhb3JTSm1ybHdCQmFUVEYyZWdYWVJNZDdsT0thaTBVMUM0aW4zTUh1c2RIV0w4d3JBTFhxU0dMcFlMZ01SendNbkR6Qm41cXJjOC1mb2NNTDBBNVdhc0paNnE3bUVtbFc2VDZxVnU1THNpS2o4TDU1YTVsZnNVRlNTNHItQ0QwVHRIeWEtaHAza0VmYlM5TFJFTjZsUnNvcWEwTFpQeklsNEdOQg?oc=5",
+      "source": "GNews:gorakhpur hospital healthcare ",
+      "language": "en",
+      "published": "2017-08-18T07:00:00",
+      "topics": [
+        "Healthcare",
+        "Communal"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:15.428980",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -2,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Infant Deaths in Gorakhpur Hospital: A Preventable Human Tragedy - ET HealthWorld",
+      "summary": "Infant Deaths in Gorakhpur Hospital: A Preventable Human Tragedy ET HealthWorld",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNODRMS0lrcnBXS05QZ2tYc2h4ZEVrbDIxQWYzV3pLX2lIeFhUcndTZEZ2bi1fQWRBNGM5TV9OUUNTeTNsWTdnc1ZoTUlwajgyN2dqek5HT2xRTzRLR0dablRIV3QyTFV6Qk94bXpoT0xhSmFVQjV0cmItcjRiOFBXTF9XWDlaS1p2SmpJMTQ4bzZHNVBIZW5SN3BzbmgwU3EzMGFTM2VpdVRIYjZsU2Q5ZWdkM3dsSkpNRDJLYU4wZm9VSXlmNVBr0gHMAUFVX3lxTE9hRzR1bmg3V2E5N3lkT0ZQTWNsd0JxU1dmSTR3N0tYakpiaVpVR1ktaHN2WW8xV2JYMTlLLVNHT1k0cDhEYlFKd3NNTjFDRXphTEJBSzhYYUlTejhlSWFSbWMwa3JNNEo1YUpGMVJjWHJMcW1fQ3RHV1E1Vll6T1o0MXU2MDFRczMtS0s3QTl1amN6NnA2S3NCM2xOMXlhdTlQZkZyeEVwMlF3Ynl4VnlZZHdOeDM4MV9RTUtvS3BOTHh2VURzM09YXzlaWg?oc=5",
+      "source": "GNews:gorakhpur hospital healthcare ",
+      "language": "en",
+      "published": "2017-10-10T07:00:00",
+      "topics": [
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:15.431076",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "58 infant deaths in four days at BRD Medical college Gorakhpur - Medical Dialogues",
+      "summary": "58 infant deaths in four days at BRD Medical college Gorakhpur Medical Dialogues",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNZ3Z5Rlp3djFEZGFiNHlwb1Ftdnk0OGpDQUE5dml6bXNHZXBmb1p4enVNalpUY1VTbW82dkVnSDNvb01nMzFPOHNGczJ2WS1iQUExZEtUMXBlaXNManhzc0o5cDhMdUdpRGEyYVdacHJ6RUZDbl9nbWEzSEJ2Zkg0R1VFbklHeWpXMC1uWkRTVlN1dW9G0gGaAUFVX3lxTFBHREN2Wks3Q1pnTGZxS3NNMG9sT3lVWDJuRHFIUFR3SDNYU2Ezb3RYaEQ1N0RwQW5yb0NmdE40V1FSQVgxaXA5LUNDZ3dnOXM0WnNaT0EtOGIxZzlaa3l5V1lGZTYxOHJaczMyeWd6SFZZVUdlZmI1Z3VhVVdxa1FVQ1dIa2dJUUt4TThIbEU4UUFObjFEZy1nTXc?oc=5",
+      "source": "GNews:gorakhpur hospital healthcare ",
+      "language": "en",
+      "published": "2017-11-07T08:00:00",
+      "topics": [
+        "Healthcare",
+        "Education"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:15.432103",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Gorakhpur: 16 more child dies at BRD Medical College in 24 hours - Medical Dialogues",
+      "summary": "Gorakhpur: 16 more child dies at BRD Medical College in 24 hours Medical Dialogues",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWmVjcFpURkpOWmRpRDd5N2c5UjdTb1hFMVB6bW1LRXFpQWdKRW1OZGtQdGxqMmVidC1Rcm9sZHo0SXpzSVZDMnBCVGdkMjJyVUNfdHJublAzdU5MS3NFRkJTLTQ0VUNGSTdVYkpPR2lEamtJZThHb242emdoZndSV1lheWc0dFRFX2NaUnpObTdNUkl6OXfSAZsBQVVfeXFMUHZxeUg4VTZrdE5VSFZQZkVoWFMzYklFUHpxWG9lMkg2TENIandjeWlicC1GUDZaLXo1c1JoY3lIQlV3dE1DNV90MkF5d2VvVmFxRlFqRzRaemFTMDJUaG1CbVd4UGhXWnRDUWRHSE04SjVYMFlXSXRHUE12cERUMFZlQ0ZCOHN1WU5NSEJ6ZGxVRV9DazctX2l5YXM?oc=5",
+      "source": "GNews:gorakhpur hospital healthcare ",
+      "language": "en",
+      "published": "2017-10-11T07:00:00",
+      "topics": [
+        "Healthcare",
+        "Education"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:15.433629",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Crisis-hit Gorakhpur hospital staggers under patient load - The Hindu",
+      "summary": "Crisis-hit Gorakhpur hospital staggers under patient load The Hindu",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOSUIxbjNKVTlvMVBiaEFZNzVkRE5QY09xTTBGLXU4ZkdhZF9mbDRobmREYVQySFdzUUxaeTRMTmt4SDYwOW9Pa3VjRnFGMktUS2pCWllKZVNoeG10Z3ZRMlFTbnY1cVIyWkhsRjNLVncwYWFTVUVvWnNJRTFsYm5hN1NnSU9kVGVBOFhheW9pWE5qWXY1Vm1LYzlxcURUeFVlWFNkdTFPT2NTMGtiRlV3TGdBaXdBbXFseDJLVEY4MTIyUVcyTURQSdIBzwFBVV95cUxOaFpSOG8zeF9KeE0tRVpxSk9YTENPYlpFcVBYTG5mYzY3VWdILXBIMlpEMy1rbGJRYWE5NlFpY1QyZGJqQ0xoeUlzdnNickFEMHZISTh6a0lJeWxGSUFLSHBPTGtHNF85UktCV00zall4VU5fa0xBSlY5Q1BpZEVoVVJhUi1GSWVwb1FxX0d6cld0UTkzU2VnUks5Y2MyVThZYWNGcUtjOFhQemJCdFY0bWdQUXNybHh2LXRuRy14WXJEaU0wYXVad1NNRUZ4djQ?oc=5",
+      "source": "GNews:gorakhpur hospital healthcare ",
+      "language": "en",
+      "published": "2017-08-16T07:00:00",
+      "topics": [
+        "Healthcare",
+        "Communal"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:15.434675",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -2,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Exclusive : Administrative Failure, Not Just Oxygen Cut, Caused Gorakhpur Hospital Tragedy, Says Govt Panel - newsclick.in",
+      "summary": "Exclusive : Administrative Failure, Not Just Oxygen Cut, Caused Gorakhpur Hospital Tragedy, Says Govt Panel newsclick.in",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQbGVSeHpoNkNMQUI3djZjNVZGcGNaWmJjMEJGYnNQY2RXd21jZ1hxRjJLdWFNc2lsd1VxVlFhaG0tMGhMRWJic0hKNE0yRHVDelRoa2VxUUtQcjlDNXdaX2JmT2JvUG1hbFA3b3JNZ3hsRHZrS0ktc1NfdzcxUzdIUGFGbkRESXA5M1VfTEJJZ1RFYUFuMEs1cVZBRTl5VEI3QjByb0hIa2N4MXQyS3dLaDNCdUlObkpWUTZjcWNn0gHDAUFVX3lxTE1nNWJJckZRRkRVMDB5THgxaWNYeTFiU3BNdHVrU0tPTzI5NTJPNXl4bWxGdmg4VzI0VlFMWkR0WEUtRnpGNklzQ281c1ljbm1XckF1c2JpRWVrQ1FpWEpOUXhwZDVJOFJ2MUZkUFRxTU95dVBwekFIX2dCMjZLdHg1dzVoODJEYWJZVkxReG4tazhTSF8yVUNhR2J3eWRubVlQTjh1QlVtSGpldDNXTTNqYlJnTURFM0FtOWFmOXBBX3lxZw?oc=5",
+      "source": "GNews:gorakhpur hospital healthcare ",
+      "language": "en",
+      "published": "2018-04-23T07:00:00",
+      "topics": [
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:15.435780",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Gorakhpur tragedy: Most children's deaths not due to encephalitis, hospital records show - Mint",
+      "summary": "Gorakhpur tragedy: Most children's deaths not due to encephalitis, hospital records show Mint",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQdUtkSjJsNnZOdjJPQjF4WnVCT1pPVmozLVBKbDJubGNjSnRLWnVBdkxEWWRneXFmLWc0V19nMnFwTXJaYm9odWQyLXU4OGVBME5nR0pVTG56bG5TSkdxdEo5MWJKM3pGdm16ZWduNEhwdC12NlUtSWpTRWRNRmdOcWhhSDlNeHBPTTY1bDNheFVDazhDekdSZDFvNnd0ZVk4bnFadWpUT1NhTHE0TEp3MmxENmo3REhLYUstWTJn0gHLAUFVX3lxTE43a2Itd3lGbEdES0c1eFRLSkNka2dSVE9ENFUwSGZHUmgxc1hnZ2ttaFVkUzBFenBYeFd1MlNUc3ZoemExRTVkVGVxNy14OXR2QlJRTENLc2pSVVBsTWdlWHFOWmFSeG9vX2xEaTRKY3dtdTRqcXZ1QnlwVWlILWtoNnhiWWxpWkxtSEJDTzBmSVB1V0VFc1R5bXA0ckF3eDhDVkk5dUJUcnQ5OU5WeXdhS2RUNUFfSU84YUQtUUZVWFNYQkpnUVlhVF80?oc=5",
+      "source": "GNews:gorakhpur hospital healthcare ",
+      "language": "en",
+      "published": "2017-08-16T07:00:00",
+      "topics": [
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:15.436873",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Gorakhpur tragedy: 60 children die in Baba Raghav Das Medical College in a week amid oxygen supply disruption | India News - Hindustan Times",
+      "summary": "Gorakhpur tragedy: 60 children die in Baba Raghav Das Medical College in a week amid oxygen supply disruption | India News Hindustan Times",
+      "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPek9Dc19zU1NzUFpTdk84WHEtRUF6bTVvNFdBcm5nSFRJR2hma2VvOFdNbTdhT1ZhMHl5YkRjRHl6TkRCdUVoVFJMR0l0a2VFNUczemszWndRRkdkaVN0VGp0bHZ4SHJRMTRiMlFDRGxodXhFdm1qWDdDdjUySkFpLVI3NVR1VnBxSENxU3M4akVrYXJYb3VkSnhHcjU2SVM0TDEya3RYajNST2dvdjAtSk9DMkFMY0RoXzdiRXhMRHNWeEUxcEdUdTVtZEJyUGVvRXBBWVNzUWVmSS15eU9KSE42Rmh5RGVhRUow0gHwAUFVX3lxTE9oX3U5TWgwb0FaaHhfR3NOUWNBRUtjYmhHWWFveTZFOWw1R0ppN29VNXl3bzJNeXlrck1SMWVfQzJsVHV2Nkh1ZUpqOFltMm90aVlRZGlIQlJZOE5vZ0t4aFpOa3hFZVR2dWlLUzlZdVFYeTBKMUgwUGhQbC1mYmYtdWdiMS1HNUhQZEhyckhHYjIzdVlNMThLaVd0Zm91Q3dmTzdobWxQZXY1Tkp6WWtJQ0ZGQnAzWDNlY3ZGSElPUGV1N0w5SXN2QVVGNjBvZHhTUHRKZEtNY01rQldLY2JSZkd3TjBjdFlQbjE1SjJJQQ?oc=5",
+      "source": "GNews:gorakhpur hospital healthcare ",
+      "language": "en",
+      "published": "2017-08-13T07:00:00",
+      "topics": [
+        "Education",
+        "Communal"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:15.438008",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Death too frequent a visitor at Gorakhpur’s BRD Medical College | Hindustan Times - Hindustan Times",
+      "summary": "Death too frequent a visitor at Gorakhpur’s BRD Medical College | Hindustan Times Hindustan Times",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNRkpidkRwbkVqSWdkRlBzSnJqYmhfa0JpTDBUQ3JnMDRCMTIwR2JVeVNzTGM2TkRleE1qR2tQa0hvSTQ1bTZ1dW9nZGNsLVdWMDhUVlpwemlJWXZfNWVNOUNGR0dBMzd6M05ZWTNDY2VhQS1hdmVwSTl1bnY4ZjBEblNJZmVFc0c2MWhmLVQ4cG05ejI4QkJjQ3d3cWNIMlVfNEtwM3doT0o0Y1pXaTdQaVZ6dXlOTnFlZXdlYVl0dDZLOERpT21TWjNJbTJBejdiV2fSAdcBQVVfeXFMT0ttSFFVamlFR01KNXFQMzIxdWN3NER4R2U3X1VRZ1M3YVF0Mi1kc0lrVk9ZMThBYTZjcjQ1a0U1TzYyWUlzaDU4eW1GV05Kc29yWmJFSFdValItdXVSMWRaUmk5cHIyT1RxMXZUbkltcXVUbDExZWFjS1dma1h5S0N6M2VkTi1fOVdybDBSQ29IR2NPZTRXVWRhMHNJaWRJanpaRVZTRzNLOS1obDYtM3k0Z01QWjl6X1hNOUNqOFFha0xMNHFyU3NNVXpNRm54R0l3YlQ2cTA?oc=5",
+      "source": "GNews:gorakhpur hospital healthcare ",
+      "language": "en",
+      "published": "2017-08-31T07:00:00",
+      "topics": [
+        "Healthcare",
+        "Education",
+        "Communal"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:15.438008",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -2,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "The Gorakhpur Hospital: Dr Kafeel Khan's memoir of his darkest hours - The New Indian Express",
+      "summary": "The Gorakhpur Hospital: Dr Kafeel Khan's memoir of his darkest hours The New Indian Express",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPV1F2dVJ4a00tM0ZUX3IyU1JyMVFSZ0tHZVFaZ2w3eWZ3U2xKYU5nWkRLRzlVa2JjRDdiNG5zSVVFYUxiNVV1Vzg5NlNYSEVjN295dUZfNldFYzdRTGw1NWp5MTJ2enVoTlpSWHR5SnpGZXNtdUJZSGFwMVVGM0ZmYVFtNGtqOV9DQXJVOUJuREtpUVB6MVJDYmlDSmZyLXBwRGxxOFMyNXdXdmY2U1hBUjV6Y1dQUGJOYkRDNDVTRkVlYXZxMFRNVmF3Q2wtVEN6YUJxbjdxb9IB5AFBVV95cUxPeTZhVFNsUm9uSkJ2bjh4U2FLS19mXzNpWFdqc2pLbXZqb09rUnJnNklKWFRhV1VuU0d1NTZqU3VzeWVpaGxmNFdydUJVOXNCelI1VG1naDNBVUliTm10ZHRjRnM2ZGNHdU5PZGg5bXhlWkdfMjJOT0xXcS1zaHM1dkVVeGlIVWk4VkV6eXU5N200b1F3b1BPV0pnR0pNVWZYMmhQR3ZBWVRBRjVjTHpxQk9XVEVtZnlwamduSWdfYi0yWDhCVjhKeWNPQ0FmcTBsdERDZ0hVMDJaaEczTldmZkJwb1k?oc=5",
+      "source": "GNews:gorakhpur hospital healthcare ",
+      "language": "en",
+      "published": "2022-01-29T08:00:00",
+      "topics": [
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:15.438008",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Gorakhpur hospital tragedy: What killed those 70 children? - India Today",
+      "summary": "Gorakhpur hospital tragedy: What killed those 70 children? India Today",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNWjVOTV9oSG5xcHNhOW5HVW5nbS1QekVOTE5rVGNkVTlzd1hZcjg4VFpIVFVPREZFbUw0bDY5VDNQM1NXSVFDZ01VbDYxU0FMcTQ4YkJIMkRUVXpOZGpwejAxVWpDbkZmNmpyeHJkbjhBQ051Q3pxbTdEd0l1blJIdnhPRDFuUHRuVWNEdEJZcmEzOURHYmhRWVoxejZFb0ZkdDF5QVhrS2Z6THlyNDdsRnpaMDIyOHZDbGFpb01ndnUwNEdXcEU0SGZud9IB0AFBVV95cUxPQUcwRjF2aURYa0xLSTFPOGRXbTNDZXY4SDVBWlhQM3JmYnZEcWFIdTVoTWZzMC14WVVBa2NlcGVqbUMxNjJjUkJ3WWE5MjNKMktCak1GZUVmSWlxM3R5clRTdS1XbGNDaGVFNzRiVGRDMm9FdVdkazMwYW4zY0VCX2c3WnVvbjlTVGROeFZNY1VJWV9ybUhudEJIVEhaS0x1VVJyVXlQcUk3dWVCQWotVUw2V3VURFlPRmVXT243c2plSDVESmt3eVNEVldQaVN1?oc=5",
+      "source": "GNews:gorakhpur hospital healthcare ",
+      "language": "en",
+      "published": "2017-08-18T07:00:00",
+      "topics": [
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:15.438008",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Digital Payment Scam in Gorakhpur: 21 Named in ₹24 Crore Fake UPI Fraud Case - The420.in",
+      "summary": "Digital Payment Scam in Gorakhpur: 21 Named in ₹24 Crore Fake UPI Fraud Case The420.in",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNUGMtSzZmNTFNMm12MWtkb29mbEpFaDR6NEY4QUc3Zi1YcmE3M3diQVFoeHZqcUlJS2tUaWtoU216b29QTVhTTU15bkdveWVUX1BNUkVpbUdqUXFZZTMySlNPWFViS0EwU3NrTVVfSlFnN0FyR3NieWpUZEpXWTh2UTRzUXlSbzlKX2JLNEp3?oc=5",
+      "source": "GNews:gorakhpur corruption scam frau",
+      "language": "en",
+      "published": "2026-05-08T10:07:18",
+      "topics": [
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:16.943113",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 2,
+        "net": -9.0,
+        "confidence": 1.0,
+        "topic_bias": -2,
+        "source_bias": -6,
+        "pro_matched": [],
+        "anti_matched": [
+          "scam",
+          "fraud"
+        ]
+      }
+    },
+    {
+      "title": "₹6.5 crore compensation fraud: CBI probes Kandla–Gorakhpur LPG pipeline project, raids multiple cities | Hindustan Times - Hindustan Times",
+      "summary": "₹6.5 crore compensation fraud: CBI probes Kandla–Gorakhpur LPG pipeline project, raids multiple cities | Hindustan Times Hindustan Times",
+      "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQdzJKSU5NZnZfcnJjNHdTeGQ5MDV4VXdhOTRzaWw3TlIwdC1qTjRXZTRiZlRlaXVOQTZoWkE4dEh3UXJhRHlyX3NudDZIenJFT2w4TldhTUotUk9YX0RTQTFvT3JMVWp3ZXhYQ0Y3a2tSTUJZVG1leU16QWJtVU1ibWlOajk2ZWx2cDBoZjI5b1pYa3A1MUtUbUZOWU9KUWprR0c5X3duMGI1eUZEQlJvczdFSFRnaFVZTjRfaW40d0JiUWZJM3pQRUZHLWdWak5KVnZ5Y2NrM1FkRTNyb19sQk1sd3Rtd1h2T1YzdUhNZGcxRFEtTTNOdmU0U3AzY2vSAYQCQVVfeXFMTzUzNWZVYko4TzVURndtaEVqaUphTWRRY25qZTdFTmFkS3FHQU1mZXBBLXhTSVY2WHdLUHZPM095dkdGVVlRRnBCZkE3aFk4aWZrOWViMFBUNkJRYW1GTnA5LWJRc212S21RN3lET3psd0hsNFNNV1hPYXdzMXVqWW14UjA5VHd1ZTE2Nm1KY0tPSUVwMVIyNWNqMVlvb3dyOTZEN3R4c0E1QWZaOUQ5V0VYQTdsTVZJd3dOR2UyQ09hc3BMcmdTVHhJT3lXVUFpaU02dFV3ZlR1b0doV3BIWTVpUFFvSkkzbXdvX3dJdXJqNkVBcW9LVUQzTUt3VndJVm5aY0w?oc=5",
+      "source": "GNews:gorakhpur corruption scam frau",
+      "language": "en",
+      "published": "2025-11-27T08:00:00",
+      "topics": [
+        "Corruption",
+        "Communal"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:16.945194",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -8.0,
+        "confidence": 1.0,
+        "topic_bias": -3,
+        "source_bias": -6,
+        "pro_matched": [],
+        "anti_matched": [
+          "fraud"
+        ]
+      }
+    },
+    {
+      "title": "₹3 Crore E-Commerce Investment Scam Uncovered In Gorakhpur - The420.in",
+      "summary": "₹3 Crore E-Commerce Investment Scam Uncovered In Gorakhpur The420.in",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOS0tEQWt2SlVUb3Z1RXUwcl9PUGR3Z3VoWVlXZUNxaVhnMS1weC1yVkh1SFIxTDlKanRYUkdQYkN5eHhuWjVQNTJwdzU4QXpFRnQ2eHVhVnVham5BOWlWdG43VVN0bEdxbFRFQ184N0dJVVpib2trZHlmclhUU19nUG12cTVlTDVaWnBGcjMzYw?oc=5",
+      "source": "GNews:gorakhpur corruption scam frau",
+      "language": "en",
+      "published": "2026-04-02T07:00:00",
+      "topics": [
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:16.948367",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -7.0,
+        "confidence": 1.0,
+        "topic_bias": -2,
+        "source_bias": -6,
+        "pro_matched": [],
+        "anti_matched": [
+          "scam"
+        ]
+      }
+    },
+    {
+      "title": "Fake Police Inspector Arrested in Gorakhpur Job Scam - The420.in",
+      "summary": "Fake Police Inspector Arrested in Gorakhpur Job Scam The420.in",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE0yRFFYcGl2Ry1la0ljYkFXM2NqS1lnUklQcEt1Nm9FdXZnUXJzbU9jdkI4ZWx0dE5QamdIYk5VeGszV3Y0bXR4ZDN1cGZQaEZlVXA0U2Q0YUc3VTNFZEplVDQ2SDFkUHVveThWekExQ0FZVTBBOUE?oc=5",
+      "source": "GNews:gorakhpur corruption scam frau",
+      "language": "en",
+      "published": "2026-02-11T08:00:00",
+      "topics": [
+        "Law and Order",
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:16.950498",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -8.0,
+        "confidence": 1.0,
+        "topic_bias": -3,
+        "source_bias": -6,
+        "pro_matched": [],
+        "anti_matched": [
+          "scam"
+        ]
+      }
+    },
+    {
+      "title": "Fake Call Centre Racket Busted in Gorakhpur, Six Arrested for Defrauding 1,400 Foreign Nationals - The420.in",
+      "summary": "Fake Call Centre Racket Busted in Gorakhpur, Six Arrested for Defrauding 1,400 Foreign Nationals The420.in",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQVEJnU1VIelFlU3d6bDM3QVp6TXZqaXBrc1Jpb00yb0xXOENERGpxQThVTS1Od0ctRnhzaVZQNHk1QWkwYU9Qc1RwUGtlRU5KOGI3T25ENVF0RGl0QjNlNDlpd2xwemJ6dkR5Zk9Kc0VVWlJkTURiUVZELU1rNmJSODhn?oc=5",
+      "source": "GNews:gorakhpur corruption scam frau",
+      "language": "en",
+      "published": "2026-01-24T08:00:00",
+      "topics": [
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:16.952767",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -7.0,
+        "confidence": 1.0,
+        "topic_bias": -2,
+        "source_bias": -6,
+        "pro_matched": [],
+        "anti_matched": [
+          "fraud"
+        ]
+      }
+    },
+    {
+      "title": "Fake IAS Officer Busted in Gorakhpur: Multi-State Fraud Network Exposed, Over 40 People Duped - The420.in",
+      "summary": "Fake IAS Officer Busted in Gorakhpur: Multi-State Fraud Network Exposed, Over 40 People Duped The420.in",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOZHdmNkw3dzNtZmsyRW41YlRaSnppNVVUd2tJVXc0OXdGQ0lDNzhzZ0ZuMlZ0LWpNT0UtOUhRNmV3ZTYyNHF6Tzd2UEIyYVdUUC1XTUxDT1J0ZGhaTXh0RFJYTmw0SWs5UTFpeW5rVTFrRndxeS1VUVhVU3FxYkZYWFN0b0JBUTRqc25BUF9oajBGeTgw?oc=5",
+      "source": "GNews:gorakhpur corruption scam frau",
+      "language": "en",
+      "published": "2025-12-12T08:00:00",
+      "topics": [
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:16.955586",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -7.0,
+        "confidence": 1.0,
+        "topic_bias": -2,
+        "source_bias": -6,
+        "pro_matched": [],
+        "anti_matched": [
+          "fraud"
+        ]
+      }
+    },
+    {
+      "title": "‘IAS Officer’ Groom Scam: ₹30 Lakh Wedding Turns into Alleged Trafficking Plot in Gorakhpur - The420.in",
+      "summary": "‘IAS Officer’ Groom Scam: ₹30 Lakh Wedding Turns into Alleged Trafficking Plot in Gorakhpur The420.in",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQZXE5YlZQb0wxbTUxbW90X1hkV0hpYjdLRWlIUFNhcnhwNEs3SmF4WHpSQmpvMFNvcUVBWFZId3Y3UnUyc2ZTeEJ0emk0VXZ2NDVhdWx5MmNiM2EwUkw1cU4xeTc2NF9MWlNVa2dJZ0Etak9nZXhJaFEzcnJKOVIyc3JPc1NlQy1GVUh3RA?oc=5",
+      "source": "GNews:gorakhpur corruption scam frau",
+      "language": "en",
+      "published": "2026-03-22T07:00:00",
+      "topics": [
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:16.956643",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -7.0,
+        "confidence": 1.0,
+        "topic_bias": -2,
+        "source_bias": -6,
+        "pro_matched": [],
+        "anti_matched": [
+          "scam"
+        ]
+      }
+    },
+    {
+      "title": "Gorakhpur Police Arrests Fake IAS Officer Gaurav Kumar in Multi-State Job Scam - The420.in",
+      "summary": "Gorakhpur Police Arrests Fake IAS Officer Gaurav Kumar in Multi-State Job Scam The420.in",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBYNUR5TUk1OHdzTHplR0hZb1V6TTFzUUdXbHlpTmZBa2hKZFRqQlJOaTRkUjFxOV8wTEYyeHF3QlNjLWhtbGdkdktSQnVBSjJ0YzBfb0JLcnNqNVFTLTF1VmJ0SU83TWRHbUQ2djc4ajJ5VGY2bEE?oc=5",
+      "source": "GNews:gorakhpur corruption scam frau",
+      "language": "en",
+      "published": "2025-12-10T08:00:00",
+      "topics": [
+        "Law and Order",
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:16.963863",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -8.0,
+        "confidence": 1.0,
+        "topic_bias": -3,
+        "source_bias": -6,
+        "pro_matched": [],
+        "anti_matched": [
+          "scam"
+        ]
+      }
+    },
+    {
+      "title": "Gorakhpur cyber fraud: Paan masala owner impersonated, 2.7cr scammed - The Times of India",
+      "summary": "Gorakhpur cyber fraud: Paan masala owner impersonated, 2.7cr scammed The Times of India",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPMjhHQ3ZTREJzVzhPay1FT2pPYUFRUWJ5NF9PWFpqYjcyMW9xYVdVLXhSWDRRbTA3NmVLUVdpQ3paX0dUT1dxQURuS1hoN3NIX1Njd2xLTC1qbU8zbDRiT2djc2RHTjlpRzJXd2RKanltM2E0dXZMVmtKWUpVTVJDNkp4V2RHMEJOcXpXWGlhVlRZeEFjMjZkZ29VZHpQOGZwTlJNMElFZVJBMi02QmNscGhlbVpPZUlnNkpIbzQ4UVp5TU9lUktsRjFsM2JuRkgyX1RJM1A2YVVmSkljbUpyOdIB5gFBVV95cUxNWDBjQm0zaU9IbDdLdWNHbGtJQ20xRVdOa2ExU0lvT3FtMk1CNHRCUThJeHhReXB2VnRidHlUREFqN2lhTG9aU0ZDTzljSHp3VVJ6ZU1CRGJFRjhOVXZBTXVwYzhYSHBWZ0hSWkdGb0poLUt2Rk9GbUNWakFQYmV3bWl6T2JkVUc5MGs2R09DcEl1Q2J2Sm0wSWJ6dTctODM4VHZHell3MWZWc0c0Rk9MU3owZENNWjcwcERvdE04c195cElueEtRZzNjbnQteGFGNGx0YkVhVkFyVWlyaHFzbDRUZzVxUQ?oc=5",
+      "source": "GNews:gorakhpur corruption scam frau",
+      "language": "en",
+      "published": "2024-11-15T08:00:00",
+      "topics": [
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:16.965894",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 2,
+        "net": -9.0,
+        "confidence": 1.0,
+        "topic_bias": -2,
+        "source_bias": -6,
+        "pro_matched": [],
+        "anti_matched": [
+          "scam",
+          "fraud"
+        ]
+      }
+    },
+    {
+      "title": "Inside Adityanath's Gorakhnath Temple: Everyone expects justice here - dailyo.in",
+      "summary": "Inside Adityanath's Gorakhnath Temple: Everyone expects justice here dailyo.in",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQMlc2R20zaDdKMzQ3Q3BKOWszN2E3Q01HTXdjREVhZXZpMHd1UzloOXY4OWdGdWVUejg1bmxOMC1PYlhOMWc4b2dkc1FISGs2Zk1PVG5RV1F4ZzV5S05jRnpmTG1GTEthVnJnLUE3Vmo3dWp0eTJ0bmJOUWt4TnJsbE5WaFdSRTI0clR1MkkySklQYUo0d3pEdC1XU0dUQUJRemw3YTlNb3o4cV9oWXo5N2Fn0gG3AUFVX3lxTE02S2NtVkVjUG90M1V6TC1uODRJV2U5SEhrVzdUblNoaDlGV283bnFDSDZjdVEzRG1HN2h2d1pJZzlmSHhITVpOWGlJNUp1Qnlha2JmUU15c18zOWc2VHRhSDFnZG9SaGZROW5xb3BjeXQwOHRWTExnQ19jVzQ1b3RwTGxwdG81SzBQLVppRUpPRGEzeURKZjNhZHNaN1B5QjZfOEdCOUZOa0hxX2pWSHhDZ19jWm1sYw?oc=5",
+      "source": "GNews:gorakhpur communal riot temple",
+      "language": "en",
+      "published": "2017-09-13T07:00:00",
+      "topics": [
+        "Communal"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:18.400670",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Riots in Gorakhpur: A preliminary report - The Milli Gazette",
+      "summary": "Riots in Gorakhpur: A preliminary report The Milli Gazette",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNSW9sSHhSQzhQWVRYazhzYkE0dnZSaU05QnYtMFJNNkZveW10ak1MQ3czOWVnZXdFZUxTVVZ0Q0lXU1ZldlFZZXlaNmZJblFxY215X0RPMXBlcUgzMnp4M2VUaTRoYnk1aFBSM0ptcndvS3ZsT21uMzVrbnpqMUxjSnBYS0ZMeGhGR3o5TW5XRVY3b3dWaVkyMg?oc=5",
+      "source": "GNews:gorakhpur communal riot temple",
+      "language": "en",
+      "published": "2007-01-30T08:00:00",
+      "topics": [
+        "Communal"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:18.400670",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Gorakhpur riots: plea against U.P. CM rejected - The Hindu",
+      "summary": "Gorakhpur riots: plea against U.P. CM rejected The Hindu",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQT0ZpTHJ5cXZUOC1mU1d5SUY0a0ZUS1duVWkyYzV6TGNTVU41eGNWZENkZFhuZ2lSTDdJd180ZzBicjdfemNYZDMydnNXNHRid2dKRFlEX0ZGLUozV2NYb1FjU3lmRVNRZzY1NFM4SzBJLURfWlgxczU2OEJRUEhCSlJ5QUhqX0ZWd2gxZ283WjdYNC02Z19Bblp3RlBDZ0xSSHZyVUUxUFVSV3h1a1lPQ3hDYy1Hd9IBvAFBVV95cUxOamR6MEt1TmtyS1FjckU4UjVMVkpjRmVEYmN3cWNkMi1mM3JENnlGWVF1Vi03NHJhYVYyemwxZVRTU3lfNjF2MDlGWlhJTnlLU3VndUM0S0ktTm1QSV8xQkVMX1l6LVFwLURCcWxJZ1dOMjJENDFZODNTbDF3RzR0ZjctWktOalpIV25vRWVKYjE3S0sxdjV4dU1pZm9RVW9YR3hrUjZuNmF5Z1pUVWJSN1JtdnZQMWRrTHg2NA?oc=5",
+      "source": "GNews:gorakhpur communal riot temple",
+      "language": "en",
+      "published": "2018-02-22T08:00:00",
+      "topics": [
+        "Communal"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:18.406336",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Who is Yogi Adityanath? MP, head of Gorakhnath temple and a political rabble-rouser | Hindustan Times - Hindustan Times",
+      "summary": "Who is Yogi Adityanath? MP, head of Gorakhnath temple and a political rabble-rouser | Hindustan Times Hindustan Times",
+      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQV3JPdEVtYW5UUllsSm9FUnFCUFJLYWx4R21COERIYThhU0dlYk5NQjhtdE00VWRoMGhxWEZIWHBENXNoX2FnVzNkTlljM3BwVmp0Q3htNHBCbjRDS2hPVFItNm5QeVVaZ3VnQ0JKamNVZGVxd0JCNVJWX1RMZ3VCSFBPMDZQMHlQcnlUZjg0eWRFVnkzekc5NlpCNW15ZEhGMnlnUkU0OEJUZGFwQmhGRWpZLU9kcFk2ZUtyWTg2Z01BZjhlSHJxbHJZVFZsRi1wOXNocDd6WXlEVW9EYXBFb0phLWpmMlBYSWFiVjNyXzdXY04yOHpvVdIB_gFBVV95cUxQRHRtaWFwODl3LVNPOWVtZWJZbGtUUjVEMVBuWlF3NURQRW5qWlVtaFlXU2VsNHF5c1NlS0I4RmxqcVQ0TG5KcTllZEljcEZoRUNmZHMwT0l5RFZwMlFpT3dnZ2NpTjBha2xSb3ItNkJrcW5HdFhkd0wxbUlDbHktdklFeU9LVm84aU1fQkpqU3pHTzZhTUpEa2NMUDhka2FzSnlQc2tDNnBscVBRWEdRWUswN0xTVFdaeDR5RUx1dmcwUmlBeDBLUmlVMHhhX05mdFhrQzNzaGl2SU82UmpkcGE4ZW9kZ1dXTzhDU3cyTldtZ0pKMUZrTkxKb2hvQQ?oc=5",
+      "source": "GNews:gorakhpur communal riot temple",
+      "language": "en",
+      "published": "2017-04-06T07:00:00",
+      "topics": [
+        "Yogi Adityanath",
+        "Communal"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:18.413708",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": 0,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Gorakhpur, Phulpur Bypolls: Main Contest to be between SP-BSP Alliance and BJP - newsclick.in",
+      "summary": "Gorakhpur, Phulpur Bypolls: Main Contest to be between SP-BSP Alliance and BJP newsclick.in",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQeWtWX3hGbHJXdFZQcTVCZWZFZmhiZTV6QV9ST1FtWEZLTWlmMVBRWFJZaEYzSGl4cEhOQVBmNFlfQkZNRlVWcUNPOWRpRVY2RGtXX19IUVpaUTJwTGxtQkdDbU9IMlBOcW1uYkpQQzlBa2pwbU1aX0JwM2dTaXZzWElWbllBc1p5bFZ3MDI0TlpiTlI2MGNodnNVNjJSaFXSAaQBQVVfeXFMUHZlbE1KUVA4cnphVjdUMlYzcTJseUw2QUNqbkJRVjFFY21IZzJpVXR1YlE1WDhWUVFWSWNJY3dmME02TVgyUUM0ZW9IbGVoNUpmaXBYUXZOSkFvazRVOU45RDltVkh3ZjZFYWFnbEE4SWRzTEt3YUEwSDlkS3FnUnN4cDlTZ0tuUlFNNF8xZFl1ZDhxVFVqeWxsMDZXWGxvT0Q4MHA?oc=5",
+      "source": "GNews:gorakhpur bjp anti incumbency ",
+      "language": "en",
+      "published": "2018-03-06T08:00:00",
+      "topics": [
+        "Party Politics"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:19.748797",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.5,
+        "confidence": 1.0,
+        "topic_bias": 0,
+        "source_bias": -3,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Lok Sabha Elections 2019: Singed In Gorakhpur, Phulpur Last Year, BJP Yet To Name Poll Candidates - NDTV",
+      "summary": "Lok Sabha Elections 2019: Singed In Gorakhpur, Phulpur Last Year, BJP Yet To Name Poll Candidates NDTV",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNV3gyRGRMclhnODdMUmpPVzU3dk9LQVFJTTAtUm9EeXBwb3o0TVZZbmpaejhZNFB2eVpCLWdBMUg1cm1kQXlaNklmZ2pCNTJHdnhnQS1pbW81NjlsTEVnNTk3VmVjamI1NzVKd0sweFFBcGZkTlVma3ZESlozQWtFMXZjekxZTVpGZXhiTk9zaGRmczJteFFoOUVBdTRBWmhNcXpYMnVNSGFvTDdVWU9KYURhTlNHM1o5WVl6TDktRTJSa3JUZHp1cHJoTmV1bDQ?oc=5",
+      "source": "GNews:gorakhpur bjp anti incumbency ",
+      "language": "en",
+      "published": "2019-03-26T07:00:00",
+      "topics": [
+        "Party Politics"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:19.749824",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.5,
+        "confidence": 1.0,
+        "topic_bias": 0,
+        "source_bias": -3,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Gorakhpur: Why did Yogi pick Bhojpuri actor Ravi Kishan to contest from his bastion? - Newslaundry",
+      "summary": "Gorakhpur: Why did Yogi pick Bhojpuri actor Ravi Kishan to contest from his bastion? Newslaundry",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNMUJEN3VrRWFWOXQ2V0hEUjc4SU41SjRDMkhTdnk2RFR5NFlDUmxwQVdvRmVneGVKdHZ2RnlqNkxwbnVYZl80RWlPMVlKZ2JvcHpmV2R2R1EwUDdNVUFvY21aTV9GZlRuRnVZNy1yY3pmbDdxdFdRaGd2TFJldlRiUVp0ckw5azI3NUZ1amdpR0dZTGF0RUHSAasBQVVfeXFMTTFrbkZlczFBZ3pFc1BsaHd1WGRVc3ZaSldBalhJTmtOVk5rMUJQWVNfUThZNFJsaW55UDhhRjlON1dxU1BmRFRDREpBOHFPMzdnWVZiVDJJYTdLQTl3R2U0UXhOU3JpWUtxZzBtaFM0UC1QWDExWHQ1QTNJbGl4MVF6RnQ2SVRLWUlYZ1lUVXVMRS1tSFJVX0g5NklsRWx2MFIyamRjczh4WGFZ?oc=5",
+      "source": "GNews:gorakhpur bjp anti incumbency ",
+      "language": "en",
+      "published": "2019-05-03T07:00:00",
+      "topics": [
+        "Yogi Adityanath",
+        "Local Leaders"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:19.750346",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -0.5,
+        "confidence": 0.2,
+        "topic_bias": 1,
+        "source_bias": -3,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Animal husbandry: गाय और तकनीक का कमाल, सेक्स सीमन और उन्नत नस्लें बना रही गोरखपुर के किसानों का मुनाफा! - News18 Hindi",
+      "summary": "Animal husbandry: गाय और तकनीक का कमाल, सेक्स सीमन और उन्नत नस्लें बना रही गोरखपुर के किसानों का मुनाफा! News18 Hindi",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQWTh1d1NrM2VuQURwZVB2UFJsUDVNaFdSQVdjcm5aNG5iWmhieGxtcE9SdVpnRjExVUpDaElxMnpWUEhVTDNzTGdzM3dIYVVTZHZDWWRxMGg5UkRiVXozQkNyTkFDMVJtMEp5aTBPa0dKZVd5VUVMX0NxbUtOTnVKZzFfTmlXN25FeVpoRTVKWjJacEpNeE5faHNZaDk2WHVIUkgwQVB3MThubno2VzNmdWYtMGNRSjl2SG5nS01wSU5qd3QwSEMzNTNuRdIB0AFBVV95cUxNNHB4YjNVU3NGbXBuYm9iRGk5N0V6bGQ5WmVoc19DTGRDNU1XT2dNWHkzd3l1aXdlZ2NCbzhWUGVnaEhhWHFSLXJZYjJzT2VPM1RHSXg1a0tFamZTa2VwMVBfSFdDazRvc2lyU3ZsT3BUclVyOVFKQzUyZk5PUTJtQjlWckNTWUtwT3BiOTRxU3AtM1U1cUc4OG91T2dtUmhCUE1Bc2hJaTBhYm42NFJYamRoMHh6Wmd2OWM2cU4zMFVIbmRyTllHR3Q1Z1l0Y3Vs?oc=5",
+      "source": "GNews:गोरखपुर बेरोजगारी किसान समस्या",
+      "language": "hi",
+      "published": "2026-02-05T08:00:00",
+      "topics": [
+        "Farmers"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:24.579420",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Gorakhpur News: पिपराइच थाने के दरोगा और सिपाही पर भ्रष्टाचार का केस दर्ज, धमकी देकर वसूले थे 25000 रुपये - Amar Ujala",
+      "summary": "Gorakhpur News: पिपराइच थाने के दरोगा और सिपाही पर भ्रष्टाचार का केस दर्ज, धमकी देकर वसूले थे 25000 रुपये Amar Ujala",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOdGhFeEtTVXlzbnhHMGVubUpLLU5Vd0tnTDFfVEtNYWJNTW9iLWZIclk0bkdSekpjLVRCdHFQd2lROWtDRjhVV3RRVHpkVXJuNUZOTi1nUk81cHNpRXpuVXRKT2d6bWtqVW1tMU1QY0hOUHpLYUdDdGpCRlNlQnRnQWdkNVl6VTFVTG1rLTk1RDVTSEppTVp5SG05QlAyNml5eDNsU1hEdnlUMlZpSGp0ZkdYMlpNcl9maVlPcjZuMnRCQ0NvT3dmbNIBzgFBVV95cUxPbEtLa1JTN3lqUXhDREQ4emVOQV9xNlVlT2p5NTVkZlZLUWowa0hqSWpsb1NHbFVLZUR0OWY2ZnJFSS1UdjQ3UlBtb2tULWNpRGtKT2V2N2ZQMkctcTg0RjhGc2RrWExhSjRnYW51V2N5WG5fSUpWTDFhYzZTM0RpbnBCdm5zUnNuWnh2ZmNMajlhd1NWYkRkWFZVckt5OXVSTEx4NnlEMVhkQ1l1MDJVX0tSZEJWWTluR2dLR1pvSDNYUmdDQ0M0UTNsazl0UQ?oc=5",
+      "source": "GNews:गोरखपुर भ्रष्टाचार अपराध पुलिस",
+      "language": "hi",
+      "published": "2022-06-29T07:00:00",
+      "topics": [
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:26.542899",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -6.5,
+        "confidence": 1.0,
+        "topic_bias": -2,
+        "source_bias": -5,
+        "pro_matched": [],
+        "anti_matched": [
+          "भ्रष्टाचार"
+        ]
+      }
+    },
+    {
+      "title": "Gorakhpur News: स्टिंग ऑपरेशन के दौरान भ्रष्टाचार के मिले पुख्ता सबूत, तीन दलाल हुए गिरफ्तार - ABP News",
+      "summary": "Gorakhpur News: स्टिंग ऑपरेशन के दौरान भ्रष्टाचार के मिले पुख्ता सबूत, तीन दलाल हुए गिरफ्तार ABP News",
+      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPS1NBa0RJdVJlN3dLQWdVTnRrNGt2anVzV19oY01rYmxhektQbGdRUDR4dElYREcyRXBZbXJNYWZacXJVTzY4T3RON1A1YUVOcjBIYVg3VHBvMTJ6TnRfV1puSWNkOC1iMDRiMUwyN2o5OEF5TEtSa1d4TzdBZFRfZjB3T0pGbjgwaEtCTE9mN252R0NYd0loWllRS2o1czltMkRqcVV6X2xFQ1NLTl84WWlFWTdMVjVtUEJNb1ZjY0txYjdScXZSdGNRYTJLbzB6UXlwdlhzZEd0eGVjR3huM1huYi02azZNM0dsWFBQWFpReTJRaXfSAfsBQVVfeXFMTnhfbVZvSWpLVVlFZnRfT1VLX1VZRThHd2JZVzU1SDJjaDNJc1FQdmVtUGpDY3ZvdGhZRTFvT0t3cF9VUzliWWVnSDhfekNqeGtUXzlpTlJFemNiWHhRRFZwQ01Jd2RJSHE2M3ppYWJPZGx1aUZmXzlXYVBVUGNtUTRIYzYxeHVVb0ZTWGVsTjZpR1VsNHNJdlpya05pQkdNQ3R3dGJFSGR0cXBiWDVIV0ZmNEtVaXlncFZIYWhmRFFKSXFQX1BWSGY1TERUSEYybzVEWEl0MDVWM3VpajY1Z19HS3BHbk8xYWpDRWhQYUgxdjBZaXFFdUZLWDA?oc=5",
+      "source": "GNews:गोरखपुर भ्रष्टाचार अपराध पुलिस",
+      "language": "hi",
+      "published": "2022-04-13T07:00:00",
+      "topics": [
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:26.544310",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -6.5,
+        "confidence": 1.0,
+        "topic_bias": -2,
+        "source_bias": -5,
+        "pro_matched": [],
+        "anti_matched": [
+          "भ्रष्टाचार"
+        ]
+      }
+    },
+    {
+      "title": "Gorakhpur: 8 महीने में 21 पुलिसकर्मी सस्पेंड, 39 लाइन हाजिर और तीन हुए बर्खास्त, पढ़िए खाकी की 'करतूतों' की ... - News18 Hindi",
+      "summary": "Gorakhpur: 8 महीने में 21 पुलिसकर्मी सस्पेंड, 39 लाइन हाजिर और तीन हुए बर्खास्त, पढ़िए खाकी की 'करतूतों' की ... News18 Hindi",
+      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPb01vUnFyR3RqTHJPZ1hXVUFrRjdfeWNfRU1saklPaENzb05KNEVTV2FVSmk2R2h0WjFyaVE0ZzFkUFBuTlRzSGY4d0tPRnVCSU1TVUhFcnBGYnAzTDJXMnB4bTNUamtGZDhPQS1QR0h3MU1KZE1TaC0wVmp4c0hGd2JfWEYtMHB3dkE3WlhMMlVidzhMdG5MSW0wdC01S2NNREcwTF9zeW16dVdDYmdWM2dmOEQ1OU80aGhjcEttcnlGMHE5RzNxVnJaZWFNR2FwVnZHSUc0eTZmZ1dxeWNxcG1sTW1EZ3EwN3BNV3Y1SEd6Q2J1V0hxV9IB_gFBVV95cUxQbDB3cDVVR2hBVUlvOFlLZVJRQjJsODlDMVVlUDh4WE1zdjdCSGp3YUlUOHEyOFRlUlpJaEtEM2JRRjFyeXdoeXdfYzVqVDRjbHJXb21vX2xwSkluMGR3eXpobThUNGF1Z195WW1vTnFMSUxpV1lHN0tLTlpuVUx5Sl9lZ3c0LVViTE52cDUxMWNHS2ZMTW9kelhTTkpKYmZVc3lqQTk3ZEZzby1CS095OVA4QmJlTkFhUGNVeUg4OWlKQWZQTEVyb3VLNWZRQ1JUUWFHZDBDVFpaVU12SzZPSklxQTlMTEZfV2Q0dDhVbnpHOXhqMzducUV3dkVKZw?oc=5",
+      "source": "GNews:गोरखपुर भ्रष्टाचार अपराध पुलिस",
+      "language": "hi",
+      "published": "2021-09-22T07:00:00",
+      "topics": [
+        "Law and Order"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:26.548453",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -3.5,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -5,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Gorakhpur News: रजिस्ट्री ऑफिस और RTO में भ्रष्टाचार का मामला आया सामने, तीन गिरफ्तार - ABP News",
+      "summary": "Gorakhpur News: रजिस्ट्री ऑफिस और RTO में भ्रष्टाचार का मामला आया सामने, तीन गिरफ्तार ABP News",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQb3FmOWE5ZDVEd1NfUXkwbENxOXZMMXkxeTF2Umhmb29QTkJGYmJrcnJzeDJNNEo0N3Z2NWpaOHk0cXRqWjBTdjZoUHBYREZtZzduUjZSaU50TXEwelpHc294NUFlMzBHRk9ydmFFQ3pQVXItRGx3TEZ3VGswX1RIV2FrQlg2Q195dkllb3RSX3Z6VXZPeUU0OUVUYkJZWkNZOE43U1hKRmJzSmI1RjVlcUJrMjZ0XzhYbnRsTlpuUFVMT1ltc3VkbmNB0gHPAUFVX3lxTFBERkpWd3FNX2d0WnJ3UmtsWVN2YUctZGVtdVdxeGJhUGdGZldIWmZxa093ZmgydXpJWVYtNlU0dlFuQ2J0TlRJYkEzZ2Z3Z2FnT1JCZUczUFF1NUZ5a0VPOFdlM2NPU1VUMnc3U1pRV09xZU5LbkpPcS0wZUV0TVpwUVVGMzhjMTl6cThyVVpVbnNnSWh0b1RzVy1HNXRPV01Ibjg1MWx6ZjJIbWFHSFNjc2hEWTZ5UjdPVTRYa0p1TEs2SFQxczA4MW9McnI3TQ?oc=5",
+      "source": "GNews:गोरखपुर भ्रष्टाचार अपराध पुलिस",
+      "language": "hi",
+      "published": "2022-04-11T07:00:00",
+      "topics": [
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:26.549030",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -6.5,
+        "confidence": 1.0,
+        "topic_bias": -2,
+        "source_bias": -5,
+        "pro_matched": [],
+        "anti_matched": [
+          "भ्रष्टाचार"
+        ]
+      }
+    },
+    {
+      "title": "गोरखपुर पुलिस पर भारी पड़ा फरार दरोगा: 6 महीने बाद भी गिरफ्तार नहीं कर सकी पुलिस, भ्रष्टाचार के आरोपित दरोग... - Dainik Bhaskar",
+      "summary": "गोरखपुर पुलिस पर भारी पड़ा फरार दरोगा: 6 महीने बाद भी गिरफ्तार नहीं कर सकी पुलिस, भ्रष्टाचार के आरोपित दरोग... Dainik Bhaskar",
+      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPTTZYd0ZXNVpzWXN6ZWxWaXREVWozdnFZdHlmc1VxY0xZOEprOFExMnl6TU9xbld2UGE0OE83QVhzandxMy1VdmVBMHl1c2RsYTV6RHRHU19Fc0ZwZmpvemJ4MnpnaVBWNGg4ckZJX3dMNnY3U2EwbTU2cjlFY1hPYVJ2RlRaTGxfcm5rTnVuOHJyNnhseDdab1FfSUtmR243RDFhWmxuQThYcU5HRG9DZjhEWWdyY1FQZHFPczBQRVpWZUd3dGIxWklDUnh2SDJqTVZtcVlvMTUxMV9EX3djbjZEYXItTU1nY3M3T3NR0gHzAUFVX3lxTE5hZ0VvMUtNWWFqd0NFN08yd25jTEtGR1VvMU1vZE9BSW55N3VhdnhIcy15MVlhQ3RJSXB6c0g1Vm9CRnU4WEVRMTd1Ql9NVWM5bzNFREFfZzU1ZnpxWFhjTWNQZXJNYkpFXzhsRVl1TDBKRV9ZLU9LLVAwVHNsLXhtb1RRQVB4NmVVRUlLa2JIR0RwTmFfanVabHEwZ0QybWtKZ0dPV0YySXAwRmhRbW1jelg3UTU2VEF6ZjdCTGNHSlNINTVzcktGZHlXM3prTlY3bDVLdTVJcmdUVXY1RzJlSWgyTTBWdTNGaDBxdzdzVUN3RQ?oc=5",
+      "source": "GNews:गोरखपुर भ्रष्टाचार अपराध पुलिस",
+      "language": "hi",
+      "published": "2021-06-29T17:29:28",
+      "topics": [
+        "Law and Order",
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:26.550097",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -7.5,
+        "confidence": 1.0,
+        "topic_bias": -3,
+        "source_bias": -5,
+        "pro_matched": [],
+        "anti_matched": [
+          "भ्रष्टाचार"
+        ]
+      }
+    },
+    {
+      "title": "Gorakhpur News: दारोगा FIR दर्ज कराने के मांग रहा था रिश्‍वत, शिकायत पर विजलेंस टीम ने बनाया प्‍लान; चाय की दुकान पर रंगे हाथ गिरफ्तार - Inspector of Uruva police station arrested for taking bribe of Rs 10000 - Jagran",
+      "summary": "Gorakhpur News: दारोगा FIR दर्ज कराने के मांग रहा था रिश्‍वत, शिकायत पर विजलेंस टीम ने बनाया प्‍लान; चाय की दुकान पर रंगे हाथ गिरफ्तार - Inspector of Uruva police station arrested for taking bribe of Rs 10000 Jagran",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQNUFSVG4tVDJYUmRzbnFoa1ItSWRRV29qcVlNSFlIWGhfcTBkaTFGdjhHbUZXNy1HaE1VRXhFTGkzNFJZSlRoc3l0ODRodTB3SUUxS3Z2Mi1kLXBZbzNCVmhLMFJSVUI5cGFuTXNmNzBWWVdZVnJ2U0ZxU043ZC1saXNOWTlIM3c1VkM5UFVLTkVhNTNDNE52clhQbkdUVDJsSGtsSDR1SFlFUDJCSEhtUmZDZE1mcGVpN0ZuZGJ3SVhua2JMdHhBVnJMdDNFUWlpa2c?oc=5",
+      "source": "GNews:गोरखपुर भ्रष्टाचार अपराध पुलिस",
+      "language": "hi",
+      "published": "2024-08-21T07:00:00",
+      "topics": [
+        "Law and Order",
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:26.550097",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -7.5,
+        "confidence": 1.0,
+        "topic_bias": -3,
+        "source_bias": -5,
+        "pro_matched": [],
+        "anti_matched": [
+          "bribe"
+        ]
+      }
+    },
+    {
+      "title": "गोरखपुर नाबालिग रेप केस: पुलिस की लापरवाही पर SSP सख्त, इंस्पेक्टर समेत 6 पुलिसकर्मी - ABP News",
+      "summary": "गोरखपुर नाबालिग रेप केस: पुलिस की लापरवाही पर SSP सख्त, इंस्पेक्टर समेत 6 पुलिसकर्मी ABP News",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQSDJIZVdzbU42UENsV190U3RBOHl3c2M3Sk40MTVvMzcyNjJ0cjlrTENNSjl1RWljNGItVnNtX0tBZ21NbS1vSFN1TFZWa0JLem1OdjlaYjFQTmdVQjV0Ym9raHlxT0RsM2tMVTJpZlZzdnNXdDczZW0tcXZRN1FtOXhqNzhaNGtNQW5fZERJVUFEVGxTSmdnV1MzcE11ZVV3R1RxX28ybnlNSUlOLXhOLU5TdlY0SHNy0gG-AUFVX3lxTE1lUVJSeDlLakdxT0o4Vkt3TG9WLXQtcGtieXRpVnhwMDZMSnRwZ3I5OFVUTkw3UG11Mk5FUldheHdNcU1UX1RTNF9aUzZFaTJ4LTh3cVN4VDMxOFVnVFgzUjJyVFZtNXFjZ0gxQVBabmFrYlVfS3ZRNGZTNjF3M0pURnBnNjBGUVMxMm9Qb3BjTUl4RU5rM0ZTVWdxV2F2YzVrQllyQWt3YUI5OURuZXFiZFVwYzhhV1Z5eUhGZWc?oc=5",
+      "source": "GNews:गोरखपुर भ्रष्टाचार अपराध पुलिस",
+      "language": "hi",
+      "published": "2026-01-28T08:00:00",
+      "topics": [
+        "Law and Order"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:26.550097",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -3.5,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -5,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "गोरखपुर में बढ़ा साइबर क्राइम: नए- नए हथकंडे अपना शातिर कर रहे वार, पुलिस वालों को भी बना रहे अपना शिकार; प... - Dainik Bhaskar",
+      "summary": "गोरखपुर में बढ़ा साइबर क्राइम: नए- नए हथकंडे अपना शातिर कर रहे वार, पुलिस वालों को भी बना रहे अपना शिकार; प... Dainik Bhaskar",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQU3dLeU8tR01NZHl2RWV5SDRyZUFuUjEtOXIwSUs0ODZ1dE83dWVyeXVscU1VU0VnTlVfRDZfQ3pMRGVTMmhja3BTOXZjdHhLdUNRTkVlQ2JRVW9EUTdQVlRKZmNjZU1wRjVjLUxBc2hKdHJ3dzdOZmJQM0tQVjZ4c3V2Z29aTHRYVXpGWjUybmVYN3A2V0JMQ1lIY3BUUnc4c0k5aU1SdzRubkVLMVN4V3F4elNzUlNZYTVpdXBVQdIBxAFBVV95cUxPcy1kQURnd2s4dDdhOW1KRUJHUzBiUTNtbDN4cjB1bGRWbTk2dUIxSjJfMHppM2lnRWJ5alJ2X1RpXy1UYXZWbEJTXzZiVTU3NnE2em1PcHVRN2lFRDZHQ1Q5a3FjUWtsdmdmdXJKcW1hUzNTaHNySERFYk9YOGZ5NF9EU011WFpsTkllR0R0QUZaZW1kQ2Zzcnh1a1g5QzQ5THN0YlZzaGdfdzc4MUxvUzlhTDFTZjBmNF9mUEl3TENxelpO?oc=5",
+      "source": "GNews:गोरखपुर भ्रष्टाचार अपराध पुलिस",
+      "language": "hi",
+      "published": "2021-06-30T02:36:59",
+      "topics": [
+        "Law and Order"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:26.552754",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -3.5,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -5,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "गो-तस्करों का हाफ नहीं फुल एनकाउंटर हो... गोरखपुर घटना पर शिशिर चतुर्वेदी ने सीएम योगी से की मांग - Navbharat Times",
+      "summary": "गो-तस्करों का हाफ नहीं फुल एनकाउंटर हो... गोरखपुर घटना पर शिशिर चतुर्वेदी ने सीएम योगी से की मांग Navbharat Times",
+      "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxNYVl5OS1ZX29pT3lGcmRHa2RHYlEwLW9VWm11cFQzSFRKa3BSS1ZNellRVWhmcGxoMlBqd3hKVV9yU2VJUjA4Qm9SdmxQMldnUGFCbXI2MHRSVEk5ci1OZU1DSDE2Q0QwOWcyTEhFdE1JcEpBZWY0dUZNRlVvQVVxVmhaT3h1bmhFQ0xjcHJZX3k5akpDWll5bFhQZ1RzdllyRy1mTU14WGZyaEhLM3R4QjhQN3g0ZjdpV0lPdUQxRnh1OGVRNm5YUnE2Q2JUenBCQWxKM2NaVTFuNkI4Wjg5VEFweEtkN1JKMDI3b2RKZnBFZkhHUWVDeVVPTG16d0liZmY0MHpORzJZamI0S0FzUDQxT1Nwcks5VkRLYzFWRm7SAaYCQVVfeXFMTjVHXzlaWmJzdTd1UW1SLUx5UktzVjZzWnQxcGNweHFWb0JFR3I3ZXhRdmk5Z3oyX1l2YlN6VVRuc0FnMlFLUGppR2QwcDZEclhudTltY0V4dmt3TUgzWWVFV0dIclVQZzg5R3BrZnJ3aW9heVRRSnRjdFlIVVMxOTJMalRuS0xKR1lRVnhkZEhIeUh3aFRKYWlpNXdRUkU5QndGSUd0SzJENGVjc2c4UWk2S0djeTdrRldIbDRFbGYzRDA4eVgzQUE5WHRYbE50YlZXT2hPOE9WZDJvMnRVcFhkdWcyc25YeFZLaXFMRmJRNER0UmRzMExYQy1TTzltanJJMlpIcld1UVZGYk54Q2czczVpT0RKUmNZamJXR0pta1EzWE1R?oc=5",
+      "source": "GNews:गोरखपुर भ्रष्टाचार अपराध पुलिस",
+      "language": "hi",
+      "published": "2025-09-16T07:00:00",
+      "topics": [
+        "Yogi Adityanath"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:26.553320",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.5,
+        "confidence": 0.429,
+        "topic_bias": 1,
+        "source_bias": -5,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Gorakhpur News: गगहा के चर्चित हत्याकांड में पुलिस का दावा, पैरवी और रंगदारी बनी हत्या की वजह - News18 Hindi",
+      "summary": "Gorakhpur News: गगहा के चर्चित हत्याकांड में पुलिस का दावा, पैरवी और रंगदारी बनी हत्या की वजह News18 Hindi",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQeGNmQ1BwZHNuS2FFeVhyeFZSeFpCU09ZOFc1M0pweUtsZVg5U0VpeVNTc21BYktHcVVfQTJDRTNGVlJUVmk0Zmc5cUpKbGp1czAtV1UyS3RMOW5BdDdJcl90c0U5Zm9EcUhMNnU0bzJveU1raEhNTnRfLUxFS0djZ1pZT3lOVzRIeHhoTVpsMlFsMFQ5MkpxdmVsbm5EUFBjUnB5NVpXc3U2cjl1T2oxbVl4NWxrUTkwY0tmdExpZ2V3bldrUkhkczRuY2pBLWFRNWI00gHYAUFVX3lxTFBzdHBqRTFiTm1zRm9idmdNNHFmOHFYZ3J5UFlDTXI4UWQwWWQ5Y2F0N2hSVmoyQjhxVVBYdEIwZ0Jma2FMU09UaV8xWjhkd19nVVRtRXlGeFlFMXpVem02cUZLMkRZdklzZXhESUFEcGlYNWVDLVM4ZUxHQmdobXIzb01pY0JtanZoN3p3Q1JMN1BzcXI1MGFSemFlNHR6eTU1d0hEaHlQbU55LUhmNFVTX004T1VYY0ttTXlDTGJKRV9ub2s4d2dVUXNSclJIbEpwM013MktDWQ?oc=5",
+      "source": "GNews:गोरखपुर भ्रष्टाचार अपराध पुलिस",
+      "language": "hi",
+      "published": "2021-04-04T07:00:00",
+      "topics": [
+        "Law and Order"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:26.553320",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -5.5,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -5,
+        "pro_matched": [],
+        "anti_matched": [
+          "हत्या"
+        ]
+      }
+    },
+    {
+      "title": "गोरखपुर हत्याकांड को लेकर अखिलेश यादव ने योगी सरकार को घेरा, 'यूपी में कानून-व्यवस्था - ABP News",
+      "summary": "गोरखपुर हत्याकांड को लेकर अखिलेश यादव ने योगी सरकार को घेरा, 'यूपी में कानून-व्यवस्था ABP News",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNNDZfUUJWbWo2b3p3bExnZWZINk5vQjNpODlzaTNjY2o2bUJKMGJSeXVHRmd1Y2Z0Z1FzNkNYMW5Pa3FmTFpvRC04NUludXZaMVd4NEJxSUpid2NwcUhha1NWNFhuYUE1WFBWY0hwZ0NPcXk0aEZPaUIwSFNqYW1CRUs0Y1JGVXl6dXk2ZTVNNHFzM0JWd2NFbGQzR0VmemEtcGxmVDg4Tk5vTC15TFRGejlDUHFMbUhMN19nUU1Vb1ZMX2dUa1cxbGUtb2lpekZ3NWfSAdcBQVVfeXFMT3NGenVfTnRncHl0U2FZSUd4WWdObllTc00zUVRvWEdhalFCT2ZWWW5MWi1ocWF1NEtPU2ZaaHphQV81S0hSOWJEcVcydWJsTlQtSGdMbnJ3VmpUeF9WbS05WFVnbHowR2RRM2pIQVJENTFwbmQ0bmFnNnlZM1pvU1hKZXEtV01tUzZHODZVMHl4QlNIdDNoMGVOd1ZRZ2EzTDVCUC1yQ3ZXN3F0cEZhVkhfTGlTNG9BcnFDSG9vN1N2WTF4eEx6aGtiRXZpSFRJM0hqbXNQekk?oc=5",
+      "source": "GNews:गोरखपुर योगी आदित्यनाथ सरकार",
+      "language": "hi",
+      "published": "2026-03-17T07:00:00",
+      "topics": [
+        "Yogi Adityanath",
+        "Law and Order",
+        "Local Leaders"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:28.419321",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": 0,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": [
+          "हत्या"
+        ]
+      }
+    },
+    {
+      "title": "'BJP हमें अपनी हारी सीटें दे, हम जीत कर दिखाएंगे'; संजय निषाद ने गोरखपुर में दे दिया बड़ा ऑफर - Navbharat Times",
+      "summary": "'BJP हमें अपनी हारी सीटें दे, हम जीत कर दिखाएंगे'; संजय निषाद ने गोरखपुर में दे दिया बड़ा ऑफर Navbharat Times",
+      "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxPTHhMZEhCRUFxeFUxNl9kMmZJak85LVlaOWI3aE8tRTlFLWxNWGZVRnVZQmtSR3hLdjVHZTFHUktHZG5RMjdvVUF4OV9mQTBZQzVsVFp5ZnhEdWdkcHN3REFNVFlZUVFFc2dmVmZ0ZG1iUWxJM2hVNkMwdU9LNVMycXNIbnBtcHM1TjFCWWxRYmhrMDJOUklYMlkxTkxNR1BYU3BlTS0tVWVkakF3cERETDVWVTZBX2dKck42aHBNNnVySmRycmN2anN5bE10MTFublZVbFc3RVlrYk5hRzVTa2ppVk1JOXN1ZlViN1NSdFplTUgxVFNENGo4X09FZWVEYURnNV9TcXVqS0N1Vk4xbnZmc29GT3RH0gGeAkFVX3lxTE1Wbi05RV9LaVFTWlBNTUxqVDV6RzJHRW90bmh1cVZVTFZqNnllTFh2N2Juazh4eGk0dW4yblduR2tfVkgydGlxa3ZtOHdweG1RTGh4aTlWemdKTWNXS05QbkdiNjYyU1o1LW5BendFT1h6V29lR2F3Ykk0T2RmTHo3emcxTXpVcE1pWmVkckl0V2ZxMXJmN3RiVFB2N3RtTjFmSXRSTHJSU0hnUUN1M09pNzA0UU4zNTg1VlNxZVdpUXROVDJHeHFmeDNRV2kzT1pLdmZPdTlxMVg1OWxUNXFST3ZITEdqLWhPaXVaNTlsT2xxQ1ByUDA4dWV1WUZ2TW1iSDNjWGVNMTZ1bnp6TmljN2lxT3BybmY1eGg2cGc?oc=5",
+      "source": "GNews:गोरखपुर सपा भाजपा 2027 चुनाव",
+      "language": "hi",
+      "published": "2026-03-15T07:00:00",
+      "topics": [
+        "Party Politics"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:30.343103",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": 0,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": [
+          "हार"
+        ]
+      }
+    },
+    {
+      "title": "गोरखपुर: रोहिन और राप्ती नदी खतरे के निशान के पार, लोगों की बढ़ी परेशानी - ABP News",
+      "summary": "गोरखपुर: रोहिन और राप्ती नदी खतरे के निशान के पार, लोगों की बढ़ी परेशानी ABP News",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQSlpORjlvSVU3UGVTUllCNlk1QTM3aUJ3OFRQZWZ6cm9HREs1cFVxakM2RnZ5Qk5rcXFmZEt5Sm9pMnB4NVU4RDgyRUtJdDdhZjZEX0lvaDR3cnFhYm5KTkxSUl9ETzNpaWtUcm9ER2JDLVp1VGdqcFFIbFZUQVkwdmZtOEZsMHF6M19SZktHcFVJN2NHTnM3RXJaOEJhOTdhY3NnTWpMNjBfbWVhTWtpMTZTZDhzaHNKZnlVUzQ1OEhvVXNVSnhYRk9pdHZTWDBmUDhF0gHYAUFVX3lxTE9NS0NkZFRXQWN2S2lFaU1veGJDcGJoU3djQkI5SHlKMzRqUnVoaXZtSHZZM2VxRnBFS3ZCeU5uQ0Y1NE5kMWVqT2JmQUtuMXNIckJHbm5LczBZeDdsLUp0X1o0MUV2aW5vNWVkVXRTd0tlRUw5YkdxNUJrTWFKNUEwWGk3ek05VWpGZWktTl82WHJGNXhHaFdvZ1JBVHhBc2JNczhxamwxXzlfSW5PTjdvXzlObU15ZDdrRWM5U1VDUFlGLVBrbkZ6UnhFOEJaY05QSS1QQ0h4eA?oc=5",
+      "source": "GNews:गोरखपुर बाढ़ राप्ती नदी",
+      "language": "hi",
+      "published": "2025-09-21T07:00:00",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:31.810495",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "गोरखपुर में मानसून के पहले राप्ती की कटान से बढ़ी चिंता, किसानों की जमीन और रिवर फ्रंट परियोजना खतरे में - Jagran",
+      "summary": "गोरखपुर में मानसून के पहले राप्ती की कटान से बढ़ी चिंता, किसानों की जमीन और रिवर फ्रंट परियोजना खतरे में Jagran",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPeUREaGM5TFhNTk1TV21Tck44TzVjc1FCTlhNNXd6QTQ1MTk4bDlRLWxwVzRqb2o0NV9vSUQwMERsVzcxRktBMGQwZmhKVThzNjBWaVZOV2FWa1VzcENHSDZvSDlPdHRoNWxReHpMMkoyRU0xYnVtY2hiSXBSYk1PaEtBTFBrV0lkbzBpZ1YxQWFydjEyTVM0VFROY0cyS1lNbHI2OVpYZlNUa0NXOHd3Tm9Pb0l4VHJOMEpYcFM1Tkc0MUE?oc=5",
+      "source": "GNews:गोरखपुर बाढ़ राप्ती नदी",
+      "language": "hi",
+      "published": "2026-04-10T07:00:00",
+      "topics": [
+        "Farmers",
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:31.811999",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -3.0,
+        "confidence": 1.0,
+        "topic_bias": -2,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "गोरखपुर में राप्ती नदी उफान पर: कई जगहों पर कटान जारी, सहजनवा में बाढ़ का खतरा मंडरा रहा - Dainik Bhaskar",
+      "summary": "गोरखपुर में राप्ती नदी उफान पर: कई जगहों पर कटान जारी, सहजनवा में बाढ़ का खतरा मंडरा रहा Dainik Bhaskar",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPR1BIU2pJV3VkR0xZUlZWd3oyOFVaelJYaVQ0aVBYT2pLdFo1TTk5and2WC1tdnUxWWExYlZ5R1NsbGM3bXJpSzllMUZNWGxHbGtKUHA3UEMtMEpDdzZ1WHFVZUZDREdzWXdla0JoVlQ0YVl6UDIzVDVxSXhhbEstczJaRXhvODEybmFUT2dIWHZROGE0TFVIUG5JMHBUaVFHcWdWREZRanVTQlo2SDQ3WVNPY1F6dW_SAbwBQVVfeXFMTU5sMjg4MlJPSVhVbDJBNzJCS0h2WllFeGtsSFNraHNxWTMycE1hVC1lN19zekczaVJuQnFrVEctSkZnOTUySGFJbmxtenVlMEVJMG42bVEtQ1VsMUhQUHBvdm5Sb2hKWXFpOW1BRTd0dUg3SXVCa0xxejB1ZklCd1Zkd3lSbFI4Q1FNemhMM2pnUS1oNlgyYXdObU53VmxMcVlfZUg5R0dkWnUxRU1FM0RubWtXcUtRV0VsNnY?oc=5",
+      "source": "GNews:गोरखपुर बाढ़ राप्ती नदी",
+      "language": "hi",
+      "published": "2025-09-22T07:00:00",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:31.815376",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Gorakhpur News: तेजी से बढ़ रहा राप्ती-रोहिन का जलस्तर, मंडरा रहा बाढ़ का खतरा - inextlive",
+      "summary": "Gorakhpur News: तेजी से बढ़ रहा राप्ती-रोहिन का जलस्तर, मंडरा रहा बाढ़ का खतरा inextlive",
+      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPWEd5b3NrLW9wam5scE5kWUtJUGMyVk1yY2dnTmVodC04TVRBS2p3VXF0QW4wZ21Vbms5MDNETmxWQkthaHNCQ0UxYTUtMWE0TlpUMWVBN2lWeF8zN3NrUkNGbWdkNDgwYlhSYlV6bWUyVDVLWWJlTVdySXQ3SjNoeGFUTGF3aTZRZjFOOUFQUXZ5WTZRTUtPRWg0Vm9DWUg5SHVTTTBpVjQxcUcxQlhaSHZnNWVYUmN0OHZzZXJ6YXQ1UzRyNWp3MHZIMVBnQ1VmR2pBSkpGaWJSZFlDektQSmtUSlZRdERzUVlWYnl5VQ?oc=5",
+      "source": "GNews:गोरखपुर बाढ़ राप्ती नदी",
+      "language": "hi",
+      "published": "2025-09-19T07:00:00",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:31.816465",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Gorakhpur News: नेपाल में बारिश से ऊफनाई नदियां, राप्ती-रोहिन बढ़ी खतरे की तरफ - Amar Ujala",
+      "summary": "Gorakhpur News: नेपाल में बारिश से ऊफनाई नदियां, राप्ती-रोहिन बढ़ी खतरे की तरफ Amar Ujala",
+      "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxPU3pRYjFCZ2xLd2RINktqaUlwR1FrOWp2d0NrOE5WLUVENjRuY1JhRWV0UW14NmIwcmtyUXBEZV9jQjQtZE12WFVQZHNhZ0lKWXR3WHE4ay16LVV5T2NZSU9rME51N3NaMjJLTDZJYVd5ZGZMTGpZcjhOWTRCRVg0YUpHUEk4dFY1dUhhNjE5YXZEMlplMGNGOVBEaTFtYlFyemN6T2lzVmdpZmtBcHR2bkQwd2hUNFBSZzNJeEVHMy1CNXQtNzduN2YxUFlwS2lDT1ZrdFRya1VDMW9SWHM3dUNUNjJaZ1Zub0VzZVQ0Q2ZiZ3dxbUxPOTlDQ2Z3ejjSAYQCQVVfeXFMUEpUbTZVSkVRRzA4NWc4djJlTDBjRHdqdWdJTDJoTEFBT3Vyc1JJLXVYeHpZY1k4NjJoZ3l5bExDeGdvUHFNeGRJYUFSTnVWQmxnWUZyVzR2Y0JybjdSYnJWUlBOS2luS0VPdVJIVnVXRnNIeWs3VG9HLWRBR3ZrYlUzNHZUQ2lpWTVpbEozNGY0Q1pVNndaZ1h0cGtydzVZTHlGZ0RINGNmU3dPMkdNdzF5RnpqekpvWVg3bVpHRTFlaWhzTm5FWE5iOFpKaVQ3NzFNUDJtOEZ4cHFvTGx0MFhMaFk0VUcxejhicFdZQVRzUE5vbWFzZHY1V1d6V1RWQlM5anI?oc=5",
+      "source": "GNews:गोरखपुर बाढ़ राप्ती नदी",
+      "language": "hi",
+      "published": "2025-09-17T07:00:00",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:31.816465",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Gorakhpur News: गोरखपुर में राप्ती ने खतरे का निशान किया, गांव से कटा संपर्क, नाव बनी ग्रामीणों - ABP News",
+      "summary": "Gorakhpur News: गोरखपुर में राप्ती ने खतरे का निशान किया, गांव से कटा संपर्क, नाव बनी ग्रामीणों ABP News",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOSGRzN0V1STl1LVpmV1NBZVhNUk5fcU1UYTZuYndFR0ZPYVNwcE5GNTltQVRuVlZzcVZ2VzlnN2lpamZGWU03VkNZWUNFY28zWnZBbVRfb18zNlVRdWkxaG93UWExYjgtNTVCYmlKU2Fjb2hJY3UzZGhPZm5ZUFB1cUlMeXVxd0JNX2Ric2NQUEJ6WHZrVWFlTXE0TGxoazA4MHdWMnRuQVJaS3FXSlcxczRBMmxhZjTSAbwBQVVfeXFMT3RvSC1qOW1xUm5Pd1lIZFE4R0JKLVFGMUx1blphQ2tEMkJ3Uy11X2kzbENHSmlVTU92UHpPNEo3NllPS0hMSXJLaFAzMTk5Uk5Id1FHWVpDQTBod3RQajQ4N2JHTlRDYnVnbU1wWXVmSjRtZ3l6RjhOdTAwRlQxTXdKY0ZFXy1TUVJ0LWNCYUxFeGtWbDJLMHM2cWNhYlA2M0d5cjRsUEQ2Znh4RnQwTXdBYnQtZG1SbzdnOVE?oc=5",
+      "source": "GNews:गोरखपुर बाढ़ राप्ती नदी",
+      "language": "hi",
+      "published": "2025-09-22T07:00:00",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:31.819060",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "राप्ती और रोहिणी नदियों का जलस्तर बढ़ा: गोरखपुर के जंगल कौड़िया में बाढ़ का खतरा, प्रशासन अलर्ट - Dainik Bhaskar",
+      "summary": "राप्ती और रोहिणी नदियों का जलस्तर बढ़ा: गोरखपुर के जंगल कौड़िया में बाढ़ का खतरा, प्रशासन अलर्ट Dainik Bhaskar",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQLTFJT1dNdHRuU3IwTHpBYUxHeDlFOVBWWjk4X2ozdTlfRl9ielRRdWUwN2xLUG5pTEFiVkdNV2htekFDRGpab2ZHQmJPTUVza2tCRUNDODhCUWp5UEFzU29CVUxJSV9VdXJJWnRSeTBxWjVIcTJMWk51anVEWW9WQjBnVzY3RURMNWJwX3hsQjdXLXJ6QndjTlYwVXlvSEl0b1hTRmZhcFNFNmYwdmg1Rm0wS3k3Rk1seUxidDhQeUxWX2xieUZNQldIYm5hdHFJM3dNc1FUdnRrZmfSAeABQVVfeXFMT0RKUndZandoRlZyRUg3eGZOM2E3U3M2czBDY3VsemoyRDJaUWl4TDllWjk1TjRKM0lzMGF6Z3g5b3RGNGNlWlR2MEExWGNwYjBlbms1Q3J0WHpmRFRRUVF3V3BYeUxGaW5wbjBBc092ZGxETzZBMGFYY281T3dfSktNQjRZOW1fQWxXYmVSeU1OekFxemJraHAwRDJmSmpZTFoxcWNPTXE0eTdHTXp6dXVjakhXVFJUNlFRTjI4Z2FRQkVXblBLN0p1X1oxS1ItZVh3MHRrVW1OY29IRDJKd2I?oc=5",
+      "source": "GNews:गोरखपुर बाढ़ राप्ती नदी",
+      "language": "hi",
+      "published": "2025-09-21T07:00:00",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:31.819718",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Gorakhpur News: पूर्वी यूपी में मंडराया बाढ़ का खतरा, घाघरा-रोहिन नदी खतरे के निशान के पार, - ABP News",
+      "summary": "Gorakhpur News: पूर्वी यूपी में मंडराया बाढ़ का खतरा, घाघरा-रोहिन नदी खतरे के निशान के पार, ABP News",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPSXRteDRmQy0tTzM1enVwR3o4YmlUOTR3U1BpZURxOHdGYlRfUHd0OUhwRkEzRUs0N0NJWUJFQlI4XzJtb3pMbDBMUlFCNnhiWF9WYmNoVkZjMHdkNnktVmtuM09oOWhwQndMWnN6V2w4MGZQNTFOUGRrZW1KTFZPa0dTSC1fM21XbkJBOEJ3TV9BRkhzUlRWYkhLUUEyMTFLUXRjTU10dlpvNUpxbm9IUU92Z3hnTHJERTN0QTI4d3Btb1QwdV9jVmtrUzFFVU50THhwOHd3bmlyZGpN0gHiAUFVX3lxTFAyUUgwQjV5SHZLTVNPZmNDeXFFVWl0ZXMyVjJVdE5XdzlNV3NhVHBHc2VteTJnczhhT0ZRWWZUN085ZnBQUlhqcDZMa2xXclREQmdEMTFNR1ZsUU5hbHRHUG92S3hiMWNucEhZVmR4Z2NTMWVjeklyNWZWTmpPajlHdGFlajV2ajRVTnpLY0UtclJPbDZHbFN6Y3Y3UjZKMWlDcUloTmdaSFg1cEZVdzRpSUJUM09Pa19VZjNBQ3h4THB4d2YwbUgtcnVlWE5ZNkZOT1c5TEZNR3lKR3BtRUdZYnc?oc=5",
+      "source": "GNews:गोरखपुर बाढ़ राप्ती नदी",
+      "language": "hi",
+      "published": "2025-09-18T07:00:00",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:31.819718",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "UP Flood Alert: गोरखपुर में राप्ती और रोहिन का बढ़ा खतरा, उफान पर सरयू - Jagran",
+      "summary": "UP Flood Alert: गोरखपुर में राप्ती और रोहिन का बढ़ा खतरा, उफान पर सरयू Jagran",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQa1czWXk5RG1LX3Vka1U4enQxQk9pbG9kTGhWRGtEY1A3N1AxblBuQnJaendubVhEVENZSWdzOEtjZWlDUXpEemF6Wm5RQUNoS1N2UzFaQjlkakoxSkE4S05qYmhPR0R5c1dNa184ZzF0bGNsbkhFZnIxZnZOZllxeUwzVXBsT1NoQU9oR1owejNNampHd2poYWRWS2xuWldOeDFIZ0t5TmIzbW5SWE5iTnYzemdGaWV0bkZpaVdzQ25MaG5jbUcwVGI3RmlEdw?oc=5",
+      "source": "GNews:गोरखपुर बाढ़ राप्ती नदी",
+      "language": "hi",
+      "published": "2025-09-20T07:00:00",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:31.819718",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "गोरखपुर में बाढ़ का अलर्ट: रोहिणी और राप्ती नदियों का जलस्तर बढ़ा, खतरे को लेकर प्रशासन ने बढ़ाई सतर्कता - Dainik Bhaskar",
+      "summary": "गोरखपुर में बाढ़ का अलर्ट: रोहिणी और राप्ती नदियों का जलस्तर बढ़ा, खतरे को लेकर प्रशासन ने बढ़ाई सतर्कता Dainik Bhaskar",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNUDR0QzZrVXFBSmpzUllUM0JXT3lEaXZqRXRhTmVHS3RiQWJtbl9zbm5vUDQwTUR4UTVWaU1tYk1Va2JrRGVEWWFMc2MtT0oyOXFiQmxHeWxkb3k2R040a1BEdi1wOWp0Ty1YYWVzTUJCUFNSZ1djWWpfNVhpUmpaOTdLZkIzZ2VjTTJpcV9uMExHVVE4dUJ6V0lHMGI4ZjJrMDRSTDNKcExJYjZsNFV2YlFzdnZsN2Jha0NaSEFKemhnMHVoV05JZ2M0THM4dU5lUm5FOHhtNjBJQnhpTGI0OWpB0gHnAUFVX3lxTFA1MXExNmQ3NTNOUjdsWkVCVFlxOHBrYks2bmVHSlNmS09aUXI2a3diN0Zfb01SVDdjeERfOG9SV29JRWFjdGFQVllsRlRfQ3V0TFhTbHExN2RGamtOQVZOdmF4V1ZWdEVTakwwaU5aR2VTUFNQdTcxTjVyR0Zza292d0FCcndhLW9rYTdxNGJ6THlVQkZRakM0ZjFHajFoYmlSdHdpeV9IY2UxYW5CWFhEbnNHYkNGYjJMVnhXdHBSMVcyZ2RESnlhSWpyMUJGdXlEbE52dW11dWdLNjY1SXVaSE9zS3A3aw?oc=5",
+      "source": "GNews:गोरखपुर बाढ़ राप्ती नदी",
+      "language": "hi",
+      "published": "2025-09-18T07:00:00",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:31.819718",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Gorakhpur Flood Alert: सरयू और राप्ती नदी की बाढ़ में घिरे डेढ़ दर्जन गांव, आवाजाही ठप - Jagran",
+      "summary": "Gorakhpur Flood Alert: सरयू और राप्ती नदी की बाढ़ में घिरे डेढ़ दर्जन गांव, आवाजाही ठप Jagran",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQUjJxY1NSM0NnRWlEQzN0S3lqVnl6Z2NCdHpheURQVmYxRnp4c2FCcjRoN2U2dE5mcWdtRUJYRFltbDlsLUF0Xzd2YWk3ZGhKZmpydWNGVXc4NXpBZ3AwVzZyLVo0alRyMmdWM3RtMExtQnh2OXpCd2VXZDgzMm1IeG9TdFZuMGhrdUlqNTA4NEFDQzZmaXA2Q3E4d3lvS0NFZVNVN1VrQ2t6LTlxa25MQ19mVGxNTzZfTnhHWGhoYm5tUEU?oc=5",
+      "source": "GNews:गोरखपुर बाढ़ राप्ती नदी",
+      "language": "hi",
+      "published": "2025-09-20T07:00:00",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:31.819718",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "गोरखपुर में राप्ती-सरयू का जलस्तर बढ़ा, बाढ़ का खतरा: गोला तहसील के एक दर्जन गांवों तक पहुंचा बाढ का पानी, ... - Dainik Bhaskar",
+      "summary": "गोरखपुर में राप्ती-सरयू का जलस्तर बढ़ा, बाढ़ का खतरा: गोला तहसील के एक दर्जन गांवों तक पहुंचा बाढ का पानी, ... Dainik Bhaskar",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPRXFXay1CN1NWUFItQkpxMkh1YUMtTmpSRHdBTGFzaVBqWDI3ZjdZSlVOcGVRcldWcjVNandjVUdpT28zWnpSWWd3Z29DWDNlU005dE82aWh1VzhIdUZjakhkTW1IeWxKZmVJMUE5MEdLQ1NEUzlicEg2LUpncF9vSm5XVzk2OU9QY3p2al9fM2ZfUWZmdEJhRlBqcEk4TnZlNEZid000cVRYc0dRLTA3aWhYQi12NzVMSXFEZGhLdm1acU5OWVA2WUZELW4wRlNzRTJmdUVlS3VUTGpqX0taZ3VR0gHnAUFVX3lxTFBaWDc5X2dVNFhCVndnZVh2OFJXOXVlSnRULXQzM2FfanhmSnoxdlE4bXFENkdwT1pIRUxnd2plcTdsSVlDbUNDb2NHVWVzY1ItS29VbnpZQ21EZkx5UnRQeEtNVGpWTmFHbzJpNVVnSDd5Um5RVmJoLVdqQm81MjlKOUllaVlqbTZDZ19fY2tZZnFmaUFYVE95QzFiNmZxZlZkTU1RMjh4andSZGc2XzBvQ1NwRmhVQU44QkpZSktENlJON0o3SmNuMkZVVENCSmkzaENCdWUyTFl1ZWptN254bUljOS1aMA?oc=5",
+      "source": "GNews:गोरखपुर बाढ़ राप्ती नदी",
+      "language": "hi",
+      "published": "2025-09-18T07:00:00",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:31.819718",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Gorakhpur Flood Alert: गोरखपुर में सरयू लाल निशान पार, राप्ती- रोहिन में उतार-चढ़ाव जारी - Jagran",
+      "summary": "Gorakhpur Flood Alert: गोरखपुर में सरयू लाल निशान पार, राप्ती- रोहिन में उतार-चढ़ाव जारी Jagran",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNZGhxUG1EXzJSeEtJb3VlSmlPcnVyZ1FlRFotU3djNEJBSFNqcTZ1TUZGWGEzeXpmZ25GWDRPMjZXbjd2R2JaUlpOcHZudW1wMHUtbjFMLTBSaHYzenNmYVZZektSMG40MTJpYV84YzNSc3hyRm5ST0hOaTZqSXQycGpjVDQ0R3ZFMTE3azFmTDNDeUFXZlZwUWdLSUhGVl9BTzJvb2VsUk45X0poaGVzRDZwQmItSjRCcFRsMTFBMA?oc=5",
+      "source": "GNews:गोरखपुर बाढ़ राप्ती नदी",
+      "language": "hi",
+      "published": "2025-08-10T07:00:00",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:31.819718",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Gorakhpur Flood Alert: राप्ती और रोहिन का बढ़ा जलस्तर, रेग्युलेटर के गेट किए बंद - Jagran",
+      "summary": "Gorakhpur Flood Alert: राप्ती और रोहिन का बढ़ा जलस्तर, रेग्युलेटर के गेट किए बंद Jagran",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNcHRLNXJrUDNXcWd1NzVManlYR2pNTWxlM2RCTFlHbGRUVlNMT0laS0hZbTlGMUY2YW9rRzk2aGtGWldNMDZjQlFIV05uRi1QTHF1dWxBUFpQLVhKd1cxMVIzS3dIamhNUkVpSkhncWZMeVVvVWtxUXdjaTE0eEt0aXdFSWpzSjhXWGFVcFZqRzBKaU1la00wTE1pTFlwLVRTTDZFOUxyM0M5Qjl0U2VSUnBmVEtzWW1ncmxJT3BqZlpPLUw5TDZnazA2M2hMdm9Ta1hQcGhsNlE?oc=5",
+      "source": "GNews:गोरखपुर बाढ़ राप्ती नदी",
+      "language": "hi",
+      "published": "2025-09-18T07:00:00",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:31.819718",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Gorakhpur Flood Update: 24 घंटे में 28 सेंटीमीटर घटा राप्ती का पानी, जलस्तर में उतार-चढ़ाव जारी - Jagran",
+      "summary": "Gorakhpur Flood Update: 24 घंटे में 28 सेंटीमीटर घटा राप्ती का पानी, जलस्तर में उतार-चढ़ाव जारी Jagran",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOR3B2bkpEWnF2cU1ER2wyMjN6TzRQZkRzdkNYOVV3azBrMzNySmlmTUZhY3oyMHl2Y3V0YWJUZFAzSU9CYUhWbktXcHdaUjc2TEhwLUVudXYzOWFOb3EwYU1NUUpzUU5BTnZHRUw4WFB2Y2FXaXV4bDY4ZW1SSi1lLTEzc2dhVmVnS05zVmVaaFFQTnFSSGM0ci1JeTlHS1NOMm5VZkE2SUoxN1ppSWtUeXlOcHFsQnA3bTdBaWZCLUlOQ182NG5XMkllZWg?oc=5",
+      "source": "GNews:गोरखपुर बाढ़ राप्ती नदी",
+      "language": "hi",
+      "published": "2025-08-13T07:00:00",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:31.819718",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Gorakhpur Flood Alert: खतरे के निशान से ऊपर बह रही सरयू और राप्ती, प्रशासन ने जारी किया अलर्ट - Jagran",
+      "summary": "Gorakhpur Flood Alert: खतरे के निशान से ऊपर बह रही सरयू और राप्ती, प्रशासन ने जारी किया अलर्ट Jagran",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNNW9BVjhVcFVncTZ2U0g3V2w5d3NFQ0Y4SjJXYjdCZFZqa0lSSGc5Mi10aHZQWFQ0RjdlRjZESklMVTk5bmlCYUo4ZG82cmtTX3VDLUlNdEQySGlBMkpQQnJvNEtJbkh0UDZWZWtyYzFkSUhOTm91MnFaMzY2UnpMWkRoQmZIMnA0TFpoVHoxWkowVjU4emlCTzF0NTlDVm5yZWJicDhKQjFETUhpN0xjZy1uNWpGUUN4Y3RRZ3BWaFJXUHVtRFVIRlc3RGQ4RURx?oc=5",
+      "source": "GNews:गोरखपुर बाढ़ राप्ती नदी",
+      "language": "hi",
+      "published": "2025-08-08T07:00:00",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:31.826748",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Flood in Gorakhpur: राप्ती पौने दो मीटर, रोहिन दो मीटर चढ़ी...सरयू लाल निशान के पार- इन गांवों पर बढ़ा का खतरा - Amar Ujala",
+      "summary": "Flood in Gorakhpur: राप्ती पौने दो मीटर, रोहिन दो मीटर चढ़ी...सरयू लाल निशान के पार- इन गांवों पर बढ़ा का खतरा Amar Ujala",
+      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPUnZqbEFXdU05MUkwWkkwRkhDN3ZWYV9ibm5vWjlaOWxYYXo5aHlEQnR0RlJsYUNueFBUeEFJODVqc1M0WWNtS2dpZjQ5MDFiZkpnWTBLUTVpYTRPUVpFWXppUFNtVmI3RnN0enhJUkZ1M29UWWltZHpoUU5VOC1LdlZBcVNyNmJ6MzZqbFFjWDJUc3pNWUV3Z1NPUG5xb21PM2F1UExTZmNZaWdrZkVFS01tNXhUamF4anEtTVRLTkFMT0Q0cUV1QURtSldvNUhZNGc1VEp4dXJhZlJYUHF0NjV5VnRITzhtM3Y1MdIB8gFBVV95cUxPTHFYb2preFoxclRzV3VEUzQ0ZXFSdEYyUVFzSkFHaEZDb2J2Q2o5RlRjNUs3OFFqOVhtQXhMaEkwb01Ib0lBRm8wU3Z1TnlwWjdZUDd6UEk1OUVWVTlUcHJrV0pnZmlFX0JlaHdKS1Q2YnFheHdVaEJ4S2ZNSWlBSFRMODlUYVRBM0NXVXdsSjgycENpVm1teFlTbFNOZVhRa29xLVlnQ3lYZWpjdENZY1FyUGVkd3FyZ0NBajB3NG51aGI1Vzl5VVpKbjVVQlBHUmh1amM2T1BfOGlpdEVMOTFGbVpLa3RBbVhUS0xpWkZrZw?oc=5",
+      "source": "GNews:गोरखपुर बाढ़ राप्ती नदी",
+      "language": "hi",
+      "published": "2025-08-06T07:00:00",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:31.827384",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "गोरखपुर में राप्ती-रोहिनी का जलस्तर बढ़ा: कई गांवों में बाढ़ की स्थिति, प्रशासन ने जारी किया हाई अलर्ट - Dainik Bhaskar",
+      "summary": "गोरखपुर में राप्ती-रोहिनी का जलस्तर बढ़ा: कई गांवों में बाढ़ की स्थिति, प्रशासन ने जारी किया हाई अलर्ट Dainik Bhaskar",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQZHNkeUpDSXp3c2FZdl9JbUVlZ2ZQYWREOW1jQ3I1YVllME9ISGp1cTJHZUtGTWxZbS1ERElhUGppWGJYYUdiTWtTaV9zTHZUVklEeEJlRHVtQ2FpMWRqQVpfcldobzFRS2l6Nm9Hb3hXVm83Ui1OTEF5dm1qbDdtNXVkdUxTdFpBRUExQzU3dTUxbGhUbndRZG15ZThjRXI0TnNXbWxsV2VvQVpEczhPZmNDMWNuMWJUZVdHZzRGYlBnNmJRcDlN0gHMAUFVX3lxTE9FVUtuUzIyYVNoTU9yTllOaUxRY3dzalRYR2NRTWhJbnN5VFl2NzBPNFlCWnFOTkIyYlVGS0YwbkY1ZFFsMFc3SmNpVXZHcExsY05oQk9fQUNjU1NVZWp4eG1Zb1pIeHZhREJZd0p0Q3RiSVBaSlRIOGUydV9vMU91MWI1WE9HMmZKNW5xVlhmQ0QyalJKWkExLWw1ZnNuMkk3dTNyNEppRFhOVVVWbTI0Mm9Jd2JidG40U2t1RjVBOUNDSGdVSkYxZWpSNg?oc=5",
+      "source": "GNews:गोरखपुर बाढ़ राप्ती नदी",
+      "language": "hi",
+      "published": "2025-09-18T07:00:00",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:31.827384",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "गोरखपुर में राप्ती-रोहिनी नदियों का जलस्तर बढ़ा: गांवों में घुसा बाढ़ का पानी, फसलें डूबीं; लोग ऊंचे स्थानो... - Dainik Bhaskar",
+      "summary": "गोरखपुर में राप्ती-रोहिनी नदियों का जलस्तर बढ़ा: गांवों में घुसा बाढ़ का पानी, फसलें डूबीं; लोग ऊंचे स्थानो... Dainik Bhaskar",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPM1VjdHpNYlM0M2U1dWo2NnI0V1B0enB2M3lZd3lTWWhsUU91M1I0RGVmcWRLZ3ZfRE0yQXdLNU1WR1VsQzBUX2dxWGpITzZ6TThNa1V0T3IwTGpzYXA5VEVxa01EYmRpRDJ4dDVTYXdvWHZ2dWlsM25LRk1TMkNqNno2ZVlNMzhwcW1wekpPeXU0MXlYSWZFWUcwWGUzdGppSXl2NXJBYmpoMS1xeTEtaTFtdGUwdTNrOEhMTGhlMEJlQjgzMW1kU1hSTlpSekpM0gHWAUFVX3lxTFBuUWw2VE5zcDlMOG9sUkxYTHc5UjY3Qmg4RmpkZ0V6ZzJ3YnB4RVRONVJieTc5UndtOUVjSk13Si1OaXBaYTFjNGJTS015WGljeG1zV010a0o4NXk1QUxaN2gtbjRyTmlqcEtRalczdlpxZm5YT3RlYThuaTJPcFFRa0RzU1J6RVZOMHVpZ1dqU1JpU0dpdS1MS1FOekY0ZzR1VWQ1dlJQcHlDTWJDTVExSDR5dFVXa3dVb1c0RHBTa3E0a2VZN2ljYkt4UGFfMDhvMzZ5MFE?oc=5",
+      "source": "GNews:गोरखपुर बाढ़ राप्ती नदी",
+      "language": "hi",
+      "published": "2025-09-20T07:00:00",
+      "topics": [
+        "Farmers",
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:31.829872",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -3.0,
+        "confidence": 1.0,
+        "topic_bias": -2,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "गोरखपुर के राप्ती नदी में नहाने गए चार किशोर डूबे: घाट पर मिलीं साइकिलें, कपड़े; NDRF ने शुरू किया बचाव अभि... - Dainik Bhaskar",
+      "summary": "गोरखपुर के राप्ती नदी में नहाने गए चार किशोर डूबे: घाट पर मिलीं साइकिलें, कपड़े; NDRF ने शुरू किया बचाव अभि... Dainik Bhaskar",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOUGZkbi0xekg3eG1DbnBNbksyOEJrWnZ5TDZHM01kaW1mbklJcFhSdjVkSWNYUGFUNG5HLXZqUUQzeFowNUt5M2NibVlFUU9QajlySFVFY1BrV09QZ18zZUhhaEZ3cGF0eVNxQUUzLUFqeUVKTFg5OUlsYU5vNTRQTHdVWHNia2d0dFBiSXhuSE5DQ1ZxU0dSY181QmpLYzBrR1VRTjNUT1IyWDdTOElMT2lsU1EyQ2w4U1l4bDZ0Q1hUckhrQnp4VTU1dEhLSHFVT2F1Q3RqZjlpUGdTTUZJ0gHkAUFVX3lxTFBfMXVoZFc3TWdWSThOVG1JdWNZV2FDWXFvYTZUTlZEVzZrVDc5RWRmbkNmYkZkVDFFM2ZUSW9sVHIwMDNqY1ZKSDJHWlNnU3B5MUNGakpzM0RLejhfNVg4QWVyd253SG1aZWVxc012cXkzOXZGbmZhbHJDY3hYM0xLTkhETGFKeVhRS1VvOWdHMWFVTDZ0b1ZSSHJaVnFBWGRONkdvcGZ3VllfbjhrNklzMDRpWUdEWVZmZ0tUbS1BaWtLdWtGdjhNZUVCUW9tR2wwTTFYWWx5RHlXRzAtam15UTZLUw?oc=5",
+      "source": "GNews:गोरखपुर बाढ़ राप्ती नदी",
+      "language": "hi",
+      "published": "2026-04-01T13:42:59",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:31.831283",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "गोरखपुर में नदियों का बढ़ा जलस्तर: राप्ती में 68 हजार क्यूसेक पानी छोड़ा, बड़हलगंज में बाढ़ का खतरा - Dainik Bhaskar",
+      "summary": "गोरखपुर में नदियों का बढ़ा जलस्तर: राप्ती में 68 हजार क्यूसेक पानी छोड़ा, बड़हलगंज में बाढ़ का खतरा Dainik Bhaskar",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOUEtrZklUVElseUg1cFMzZFdXMEttaEFDUDNFRVlmUzBkRlptSEhUVmZQbl8zZU4wSjNoc0h6Uml1QzV4bC05RGNRZDRaMEY2MXozUS1DWXB1RkJKMXFlOWRLSE10M0Z0VXF0NDI4SGxaX2toZXowclJ5dDVjSE5mRWNmclVweGlXT00zQk9ITzJpaVJiU05SaEdRVkRjVktvX2ltRkd4R2ZnbVBqX28wRm9OTnM0LUtYcEHSAb8BQVVfeXFMTzBzX0M1TFhKZGVRczRzWkFuTkJwZEd1aC1BTm1RNm42Q2lrOUtLa01Yb1lkSXBadU4xVHNZOVpmSGNtWWhVejJ3Y3ZPbVRneml2X29uMkZ3eWNxVmRhMWdNbmdETEVxSHoyZHVjR3hOYVotUnBfZU43a3doSFlhbDJySTlqTmsxTURyUzNIQlRkR0l4M0ZJWnU1OWpHYmNqV191bGhPSHRkNlc2NTZZZnI0UWFIYndUU2hrbHNrZDA?oc=5",
+      "source": "GNews:गोरखपुर बाढ़ राप्ती नदी",
+      "language": "hi",
+      "published": "2025-08-06T07:00:00",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:31.833794",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "गोरखपुर में राप्ती-रोहिणी का जलस्तर घटा: राप्ती 75.22 और रोहिणी 83.14 मीटर पर, निचले इलाकों में अभी भी पानी - Dainik Bhaskar",
+      "summary": "गोरखपुर में राप्ती-रोहिणी का जलस्तर घटा: राप्ती 75.22 और रोहिणी 83.14 मीटर पर, निचले इलाकों में अभी भी पानी Dainik Bhaskar",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQVlpXVWMtWm95MnUyYTFZOVl4TUVzR25QNVZUamhycGpMMGdhWUJEU2dNU0NnYWtuTGUyYkhJc2otcTU2a2NndWU5MEJNM1Z2b0h5X2tIN2lITnZtT3NVWlJYc1RuYnl1SFF0VndpZHRJY3ZkczVvV3k4ZzZyVndyR0IxR3ZrRHN6dFRlemNKaWpfczZ5SW5kQk1Jb25jbWtaQ2w4ZEJkemVpVUNFWk1IMklkV3RyNXNxOHFnWHlIeGtDbFVzLVJj0gHMAUFVX3lxTFBVVzBOYW95WnpjMVNtVnlmdHNRTW4tV296VkZxS0dqUXFld09vbkM3ZjF2dk9XYU0zYzc3YnNoWmRDOFFsbDdhLWI0WnNWX1NySDlVdzByLUJTVUlCbUFjcmxTendIT3hwNXNIbDZBV1hMLWEwZi0zNWlIVW9YTTVUc29HdHVaeVpUWnMySmo2NzdlNXJMVzBsUVpFdDl4ejFWTGZIMVgwNW43OGsxRHhwVG9mUDhDWDFxNmxZUlN0NExENE5UZmcwWEVGMg?oc=5",
+      "source": "GNews:गोरखपुर बाढ़ राप्ती नदी",
+      "language": "hi",
+      "published": "2025-09-23T07:00:00",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:31.833794",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "राप्ती नदी खतरे के निशान के करीब: गोरखपुर में जलस्तर 70.530 मीटर पर पहुंचा, निचले इलाकों में बाढ़ की आशंका - Dainik Bhaskar",
+      "summary": "राप्ती नदी खतरे के निशान के करीब: गोरखपुर में जलस्तर 70.530 मीटर पर पहुंचा, निचले इलाकों में बाढ़ की आशंका Dainik Bhaskar",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPWXFOSWVuS3BUaDZ0eWRHTldWVmhwM1hxWmR6QWxxd01MNGJaZ3N6X3VJWEo5c3FPNEFmM1c0aV9oOGFtbEdHZHNlUzFkSTV3NHI1cXd0aENjX25lX0hiTWRuaHVXU285THBLVnpiU0V6TUhsRWJuUDI4eDd1Ql9HbzBvREx6WXNhUnItMzgtRTBtVGtYWi1TVURaa2V1RklORW95UEgyMEM4UFphUmtQV3o1a19HQklucWlabkV5MDNzY0ZRZklYR1ExSjN4SGpqNFdxc0ZlQlJoM3B6VUdBa01aa0hXTEnSAewBQVVfeXFMTU5IelM5NGZ1b0s1ZW45bGZlTFpUVEp6djc0Wm15Vjc0NE5NajcwWjBITkdYMFd2Z0lnVHNXYmpTVVNaX3A5V3VzZnBIaFBzQ09kYWt4ZUhQUV9meFlXdDdVUEZ5ajhsdE9sSm5hcEs2eVQ3OWdoUFlQMmc0ODJmNHE3RkkyZ2pPbEZBdXE4WVFpVXI5QUs1QTVWa0pXVUZhbjY4bmpMd1FyMjd1VXY5S1BtMjZ0TURKZzkxaDlacHQzU0FDSmJWMWdnS2piN0g5MTFsSE9WMnhXX3BFbHVGMks3blA5am83WTk4clY?oc=5",
+      "source": "GNews:गोरखपुर बाढ़ राप्ती नदी",
+      "language": "hi",
+      "published": "2025-07-01T07:00:00",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:31.833794",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "नेपाल से छूटे पानी से राप्ती नदी में उफान: गोरखपुर में 20 हजार लोग प्रभावित, NDRF-SDRF की टीमें राहत कार्य ... - Dainik Bhaskar",
+      "summary": "नेपाल से छूटे पानी से राप्ती नदी में उफान: गोरखपुर में 20 हजार लोग प्रभावित, NDRF-SDRF की टीमें राहत कार्य ... Dainik Bhaskar",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPSENhQkl0RVc5dDdRQ1EyNGgydzFJd2hpQnhGUktKbUhBSUFSaDk2Wkd4X0dwQ184LWZIbm85U1VQWVZYM1NSSmRITnRxcE56SnRmRlo5UGpHajdydjZ1ZGh5ZHpvN09PXzQ3eGMzaGRyMDVMQkRnT1NGOVhNTmFqMmpNdUtxVF9kZFFQZ1FlNk9OR2lXNkRtM0RKRWY1ZzR2b19WMHhBRHpyM2kwcXU4aDU5OEt0RW1fM2hpdEhaTko1WW_SAcgBQVVfeXFMTklvS1VCbWFXQVlDOUtCYUhhYTc5QTJSTy1haDMxYUg2ZEJIaHhWMDVvWmZ4UFl0dDVkR1NOY1ZYclRHSXJMeWt1SXVoYnRzMmtVblR4VnQ2Mnh3VDRsU3Y2N1ZCc2dvUllJRTJNVGhUZzNvNDhKNWROa2tKSkRrVjVqaHNzU3hlbHFieGpRUVFZRUNSVmNlX3F0TWF2SG9hQ1ZUQzRzczVmN0RXV3d1Z3ZfYWNDUHBLY1ZjelFSNFN4RElsUGw0d1g?oc=5",
+      "source": "GNews:गोरखपुर बाढ़ राप्ती नदी",
+      "language": "hi",
+      "published": "2025-07-13T07:00:00",
+      "topics": [
+        "Flood"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:31.833794",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -2.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": -2,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "गोरखपुर रेलवे अस्पताल में नहीं मिल रही शुगर, बीपी और गैस की दवा - gorakhpur railway hospital faces medicine shortage crisis - Jagran",
+      "summary": "गोरखपुर रेलवे अस्पताल में नहीं मिल रही शुगर, बीपी और गैस की दवा - gorakhpur railway hospital faces medicine shortage crisis Jagran",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQdHZkVl9oaHJJWEtMT2VQbDVvWXhIMVRLcFBZLXl3T3M4SnVWUTBfeWZrbDdzWFVrdFN0dms1bDZWWlVSX1ZvZERTOHlRT212UUhrTV9nQWZCTWt5enhKRmNOYWt0cmVzYjdtSWExMFFxQld1dFQtTElzd2g3UFpVVzdWMElCY0tsek5ueDlBNjB0OUFlVGxlTmxUR01ac1BPNFRaeWJfMVpkeVBtLVNaZWk5N1YxRjF1SDlYdzZwN0o?oc=5",
+      "source": "GNews:गोरखपुर स्वास्थ्य अस्पताल",
+      "language": "hi",
+      "published": "2026-05-08T07:21:00",
+      "topics": [
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:33.921717",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "गोरखपुर में खुलेंगे 16 नए बीपीएचयू, मिलेगी गुणवत्तापूर्ण स्वास्थ्य सेवा - ETV Bharat",
+      "summary": "गोरखपुर में खुलेंगे 16 नए बीपीएचयू, मिलेगी गुणवत्तापूर्ण स्वास्थ्य सेवा ETV Bharat",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPMmFvWWtVQVJucFczRmxTbkJhSG13b1dsUkE5TGo1NHdKZG1hU1oybm5SZ05jWFh5ODRjZ21NSkhYQ3paS1FreVgwLUQ5RDNUUEg2WGR4V1E2REN3UGxFeTRIbVBvdkl3UVNRTlIwang4RHVFZi0wdTVXYjdVb2g2c254a2RQMUYyUW5mdzBHajl2a3RPdmdTdDFnTmlCTko5VXRQUVZpOHNKaHItTWdmbjhrdENHWkhqcWV6c2xFdGZ0Z9IBwgFBVV95cUxPMmFvWWtVQVJucFczRmxTbkJhSG13b1dsUkE5TGo1NHdKZG1hU1oybm5SZ05jWFh5ODRjZ21NSkhYQ3paS1FreVgwLUQ5RDNUUEg2WGR4V1E2REN3UGxFeTRIbVBvdkl3UVNRTlIwang4RHVFZi0wdTVXYjdVb2g2c254a2RQMUYyUW5mdzBHajl2a3RPdmdTdDFnTmlCTko5VXRQUVZpOHNKaHItTWdmbjhrdENHWkhqcWV6c2xFdGZ0Zw?oc=5",
+      "source": "GNews:गोरखपुर स्वास्थ्य अस्पताल",
+      "language": "hi",
+      "published": "2026-05-07T12:50:17",
+      "topics": [
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:33.921717",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "Dynamite News Hindi. . Gorakhpur में फर्जी अस्पतालों पर बड़ी कार्रवाई | एक्सक्लूसिव खबर का असर, अस्पताल सील #GorakhpurNews #FakeHospital #IllegalPathology #HealthDepartmentAction #ExclusiveNews #UPNews #PatientSafety - Facebook",
+      "summary": "Dynamite News Hindi. . Gorakhpur में फर्जी अस्पतालों पर बड़ी कार्रवाई | एक्सक्लूसिव खबर का असर, अस्पताल सील #GorakhpurNews #FakeHospital #IllegalPathology #HealthDepartmentAction #ExclusiveNews #UPNews #PatientSafety Facebook",
+      "url": "https://news.google.com/rss/articles/CBMiygZBVV95cUxQWXFmandNV21XemRpc0VYV3JoaXdHbGlQYURGLVoyYXZ1ZjZCRXExZ05ib0FMalkxTHlmcjJqQlY4NTdBZHJtZXFPZFItTDBQTFBhNXFlNnRsZ2w1eWc0LXVrcHc4UUlBOUFTR0FWblhkekFQRVE4eDJldmNZVlJuVmVmeXBwWDIxXzQ5aDluRW8zR2xySlBtZFpRS2Jlb0h5NlowRnpuYjQ3aHdQQkVLa0RSbjRmWFRIS1lMQUpqOXZERnlGM2JNUHdBY0dkWVFUUFBaNTJjQm5iOHNqallXT1ZaRG50UmFPaVVHMWVWMFFDaUtxcTVkdm1paDhkTzJIakNiOS1mMGh4SDJpLWRfa1hPWWl0Qi1lcVlrWlNqeGZ5WkZENlEtc1Fuc1ZNQnIyX2RxMVB5RDc5SEljd29yQmlrNFFuakR0cWFQTElWRkNGcy1OT1FVOGJMTVJJQjc3U3pIQkhObUwzRm9Ud0xoam14aDlUalNDbkNoS3l2NXdMT3otdVY5c0FXdkthOGxkZEVjbjVZMzB2T0JydXpWTi1DSFM2NTBOaFhZWU5HRXdrdjBEM0RaUDhPSkw1Sy1RV3R5Vnl5RFZ5aldNRTZua3lCdFkxYlB3VUl3eXlaNDNlTkRwblpGT1ZwejNTbXlSRjYtdVNIT2Jsbi1manNTNnhiaHlVT3NHXzVZU2RFTzlMZ3pQbVVYNy03aFYxQ21NSmFDNElQWmlUamgtQjJvZFpHbGNlMUhtdHZmUTJvRGtRVTNJLWZHX2NuY2lsWjh3R19yOGtsaUhhLVpVUHplZ3kxdFZvNVRxdTQ2Mm5CSnN5cGZ4MTNQZG5WMURpSkR5VFRmQ1NTT0hHUGdhekdNVnVPSFBBN0N6NVJqVnhzS0dfcUJibGZMVklCWWh5NUxySjkzd3BoZ3V2Um1aMDUxcml1S3A5WTZDanRqb1JJdWRqcVlmZ0Y3NzRaYm1VVTYyVDRySjR2TzAtRGNFUVJPN1ZXY2NGUHFzLUVWVGhGUkdMcDktUjI2bElDMXctNHNNSjl6UHp3bTJrWTcyUzRiSUwwVUhUcjF6cXV2YWRTRWU3Z0piWGtBNTgtWWd2OVZiTTVodHFQa1M0Zw?oc=5",
+      "source": "GNews:गोरखपुर स्वास्थ्य अस्पताल",
+      "language": "hi",
+      "published": "2025-12-16T08:00:00",
+      "topics": [
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:33.924508",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -3.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": [
+          "illegal"
+        ]
+      }
+    },
+    {
+      "title": "गोरखपुर में शिकायतें लेकर अस्पतालों में नहीं भटकेंगे रेलकर्मी, विभागाध्यक्ष व DRM भी कर सकेंगे कार्रवाई - Jagran",
+      "summary": "गोरखपुर में शिकायतें लेकर अस्पतालों में नहीं भटकेंगे रेलकर्मी, विभागाध्यक्ष व DRM भी कर सकेंगे कार्रवाई Jagran",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPUTllUzhxYmNWa0JYRXdWT0YtQTF4ejVZc1R0Ml9PX2l4MDFZdFBPczMzZHBQZkg0ejR6c0hwQlpQa1Zsci1oTE9PSzEzS1h4YUtXQjZ4M3lzRUFTM2JrQTd1UkJFNldjQ25YSUVEakpjUHBJZ0x5TV9iQXB0ZUxWX1NjUlJyWUR2OFJzVERacWZBVFNzY2hGcmdkbzNKN0xDZHVYN1MxR0ZPWVNFZ0stYWFZd05wUWYxb0pGREFTd2hvNFdGN1J3?oc=5",
+      "source": "GNews:गोरखपुर स्वास्थ्य अस्पताल",
+      "language": "hi",
+      "published": "2026-05-03T07:40:00",
+      "topics": [
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:33.927175",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "गोरखपुर के लिए खुशखबरी…जल्द खुल सकता है मेदांता अस्पताल, मेडिकल डायरेक्टर ने साझा की जानकारी - Patrika News",
+      "summary": "गोरखपुर के लिए खुशखबरी…जल्द खुल सकता है मेदांता अस्पताल, मेडिकल डायरेक्टर ने साझा की जानकारी Patrika News",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPaWhxTHJLcmtzQjI4c1piMnVfcGJ1bDBweGRWNzQyWDJqdW1xUmVSM1FCdU5xdlFtLWtpVUhmdEIyLUYwblZwdE1lU0xxUmx1TVhQSkVZNDZJbzZuSElJd0h0d3NwdmJJcXdlN3ZaX2hkYlN2WFVQSDlpa0h5eXB2ellVS1RVYjNuR3piUm5Nako0SV9vbm5yQWJxQ1pqRlA0V3VqdXR1OVhhT3pTckpXTzVxOC05UkNDOERGczVKSlI2cEdQcWJaU0c5QkhpcnVFbGpKMlhXaTZUUdIB3wFBVV95cUxNcEpjcTR5TVZNVEtVV2Z2SHYyRkZISXhrOURudXRzaEoxdndoMmdxcFdVUFlBTVprdV93WnBrYVBWdk0takRHYXJKV3ZSbUVnd0hKVTJ1UGh1RG1JbWRlZDFIbDdfdWNYWFBIbWZlYTQ2dFBtR1hoTEpxVS1oUjRpVmtJSFJnU1dYQnZ1Q0p5dlU1Ry1ZdmdCRS1UTy1rX2FEejdERGEtY2NtcnVPbUlfS0c2b0ltbDNMWVRWQnNoWm1hSl9HUjdZV3Vtc0NEWlgwSU92clJlamw2Y2E4NG9F?oc=5",
+      "source": "GNews:गोरखपुर स्वास्थ्य अस्पताल",
+      "language": "hi",
+      "published": "2026-04-26T12:14:23",
+      "topics": [
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:33.929418",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "गोरखपुर में CHC-PHC पर डायलिसिस की तैयारी; पांच अस्पतालों को किया गया चिन्हित, शासन को भेजी गई सूची - ETV Bharat",
+      "summary": "गोरखपुर में CHC-PHC पर डायलिसिस की तैयारी; पांच अस्पतालों को किया गया चिन्हित, शासन को भेजी गई सूची ETV Bharat",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPQjE5NUJMQVpUV1JaQ2hmM2VKV0xzT1RjOFE3eWppbmdGVWZPdmUtSTB1Xzh5Zk56TkJCUEpNQnFXaFBndnJ5bEFnOGNhWlhIeHFFaUtKTHM5WWM5NGNfVmZLVHlDMjlTRm0yU0VsZkI3NklLS3V5OE5ZaVV4eVZCT0tNWDg3cFpGMXRpVjREclM1UEdnb1JSVDhRZ3VzN0xhWFNaaTdrX2s4clk2NzVacWpn?oc=5",
+      "source": "GNews:गोरखपुर स्वास्थ्य अस्पताल",
+      "language": "hi",
+      "published": "2026-04-29T07:00:00",
+      "topics": [
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:33.931899",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "गोरखपुर में स्वास्थ्य सेवाओं की समीक्षा, मंत्री ने दिए निर्देश: दवा-जांच, ट्रॉमा सेंटर सुधारने को कहा; लापर... - Dainik Bhaskar",
+      "summary": "गोरखपुर में स्वास्थ्य सेवाओं की समीक्षा, मंत्री ने दिए निर्देश: दवा-जांच, ट्रॉमा सेंटर सुधारने को कहा; लापर... Dainik Bhaskar",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxObEpYbmVieDZtT3UwVnRNV2hkaGs0N0lsRlJUMWhBcDY2MVlNcmNwRllOZ2hzNjVJbllDa0FlcjNaVFczSHZoRkxuemdZWXV1VVZJTUpsSFlfUEJtMExobTJJOHp4cDZQRjBCR00zWWFXalpWcVQ2Njl6UTZQaUlxMnhqNG5rdGtzOUlaNXI2eGZCa19KS1YtUUVMNHB0TWNKcTd0SGE0MUtna25janVqcGo4U1Z1LTVjanFJc2daUm1mandKZm1yS3MtNkxiZ9IB0wFBVV95cUxQNmhUU3A3UEF2Qlo3d1I3eTRJWlJjcHFZaF9id3NzbXZ4eks0SFRxRmhTeGR0aHBReERwbXhBakxKTFFwbzlfdk9NYldEMkp2YlRjVC11emNsYktfUXZ3OHA1cUxERWk2UHZLVWpzVzBUUTFPdDMyaXBLQ0FwcEFFN0g1c25kdjVfdWVUTEtFV1VyaVRFcDBOV2V6T1RibU81eDZYX1ZMSndzUWk4WlRsTkstWHFnYzZuRlFqaGRSeFNuSS1NazN4amtjZkpka2tOT3BV?oc=5",
+      "source": "GNews:गोरखपुर स्वास्थ्य अस्पताल",
+      "language": "hi",
+      "published": "2026-04-11T07:00:00",
+      "topics": [
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:33.935325",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "गोरखपुर में अस्पतालों के OT की जांच लगातार जारी: CMO बोले- लापरवाही पर होगी सख्त कार्रवाई, संक्रमणमुक्त इला... - Dainik Bhaskar",
+      "summary": "गोरखपुर में अस्पतालों के OT की जांच लगातार जारी: CMO बोले- लापरवाही पर होगी सख्त कार्रवाई, संक्रमणमुक्त इला... Dainik Bhaskar",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOT2tDbDhJaUMzQXgyNFhwdGNFY0tiSHItRkx2NEE2RlMyWU9pN21yOVprbmk2WlBRYkYwSU53YjNmclBiQ3RpN2FMR2VqVkFsTGNSLVdEUDNPcTMybmtwU0xFYUR4UUxOMG1lZmZXMExNdVBpWnVYT2NuQUxUQmNaZ0pJdnRKTVZvYVA5QzFKcEhpaVNOZ0FPcXhQcGF5dkdLSWtmWHAtcEJSTlpYV1FGaE12Zy1wcTNGRlJaS3lTTXptRkthN1A4UnpB0gHPAUFVX3lxTE5LLWUxZHBYaDNqenpmc3ptZ2ZsVzBvYkQ1TjRIRzBIa1U3NjBnaUtpLVhzcklFVXJBLU5OT2pSTmVmbDRmWW9OLUxpdG5DeVZJOERkalRIakd5S1I4dHlkSzNBbVFaSllpZnNjcWtvWGt3QS1JSVotTlk5TFBQbEdqa1FISTh1d0FnMXl6dGp0RUZEaGdKM2hRVTZLZ2xrSnlzWUdINEF3ZUtaRzJNZkRDSkZVeF9vdDVESGVBR3ZYWmRMeWhNcFhFM2YxbHNMVQ?oc=5",
+      "source": "GNews:गोरखपुर स्वास्थ्य अस्पताल",
+      "language": "hi",
+      "published": "2026-02-20T08:00:00",
+      "topics": [
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:33.935325",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "गोरखपुर में मेडिसिटी हॉस्पिटल पर स्वास्थ्य विभाग का छापा: संचालक फरार, अस्पताल में मिला ताला - Dainik Bhaskar",
+      "summary": "गोरखपुर में मेडिसिटी हॉस्पिटल पर स्वास्थ्य विभाग का छापा: संचालक फरार, अस्पताल में मिला ताला Dainik Bhaskar",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOYnRHMU5WSGw2RTMxbFRXNU5STEQwMDlPU1JkbGFDZUVBVE1KWXhHVVN5RnVROEVTSDI3cXdTSUhEbXNOLTRNVHhFSkdaOXp4R2F4ZUN5TkNMcTFNTExfdzlLN3hYQnd6QTZOdE1DN3J4cnB5M09GMWxuMFZtdl95Q1lZU1dBWFljLWp3QXVFUHFxbXh1SjAySW9QRmotNnRNeUVBcjdRQjFtZ0tYc19mbnlXZVFYdm5Fam5OZkhKa25yekpYNDhNbG80eW45SHV3c18w0gHYAUFVX3lxTE5RU0xpYVliS0QzNlVJRmdKN2tVNVREU3c2akRCTUdITExNOXpncjVHdWFDUXR3Zk10MC1vdjVxWkFKdjNxSFlNakxXbWFhMjZCZURPYWg5ZDJfbEhBOWZ5YlRPY1JQLWlJMll3RUhRWXg4bThBLVZ2UFlrYkZYZ3FzbloxYW1SZ05Yd1h6MHVZWFZvM1NmZEkwQ2NDcFkyWDZiZEcwU09iQ1BNcDBlUU9weGRkWmFGT280dzZSX1BSaHM4YUtDMDFXR2hoRTVfQl80NWNwbDVEQw?oc=5",
+      "source": "GNews:गोरखपुर स्वास्थ्य अस्पताल",
+      "language": "hi",
+      "published": "2025-10-31T10:52:07",
+      "topics": [
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:33.935325",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "गोरखपुर में कुत्ते के विवाद में भाई की मौत, निजी अस्पताल पर लापरवाही और किडनी निकालने का आरोप - Jagran",
+      "summary": "गोरखपुर में कुत्ते के विवाद में भाई की मौत, निजी अस्पताल पर लापरवाही और किडनी निकालने का आरोप Jagran",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxONExhM3N4ZWx5WktpYXpKUHQ1LUN1ZmhEWG81dHFBUTJGOVB3QWo5QndpMTZsRlFDZWZHekZobWRDVi1VTVVSRlpZSVlkdUpsb2RwZU5LbXJMOEljaDRFX0FQcXNqbjlueHVQdFRNSjlkMGw4SmVrNV9uZ0pFWTd6eDhmQk5FcjVSd2xtVmoyMnA2Z1pIX3VKdFFuS1ZtTTFsVmx2VzlVQmZHd05CbERtRVJFWGM3eHFHNm1MbzY4Y2l1VkJwRmFWc0pJeXpGeThp?oc=5",
+      "source": "GNews:गोरखपुर स्वास्थ्य अस्पताल",
+      "language": "hi",
+      "published": "2026-05-01T07:01:00",
+      "topics": [
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:33.939461",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "गोरखपुर में डॉक्टरों ने किया कमाल, सरिया घुसने के बाद बच्चे को दी नई जिंदगी - Jagran",
+      "summary": "गोरखपुर में डॉक्टरों ने किया कमाल, सरिया घुसने के बाद बच्चे को दी नई जिंदगी Jagran",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQY3BiNm9Gck1mZUo0MDR2V3pNRXdIZ0RVZ3p0REJSQUxvVmllQVZhRnplRWRNdF9HVWZhU3RpMVBGcUFVN1FkVmZ4OTBTRjVZdWVxamE3dlR3SnlTWHNXeWx0d2dMWlMtSy1ZT2tnd0VtUXBMSmpFRjNlQnY5NHY0WTFEZWJIRXFfUGYwXzBPRlUyWmhNQk54RWtubHdKQ1d5V3hiSVBWMWN4cnI5UXBVR0hTX3ljN0R1ZkRkRnk3aVY?oc=5",
+      "source": "GNews:गोरखपुर स्वास्थ्य अस्पताल",
+      "language": "hi",
+      "published": "2026-04-30T09:55:00",
+      "topics": [
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:33.940737",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "गोरखपुर जिला अस्पताल में इको जांच शुरू: बांसगांव में CHO-ANM को स्वास्थ्य सूचकांक सुधार का प्रशिक्षण - Dainik Bhaskar",
+      "summary": "गोरखपुर जिला अस्पताल में इको जांच शुरू: बांसगांव में CHO-ANM को स्वास्थ्य सूचकांक सुधार का प्रशिक्षण Dainik Bhaskar",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQelRXMFg0LWNrWTUxTjhNRGFYMDA5NUFRdlNQckM1Ml9LY0NGaEZEd2lkNjMyeWZQc2tZN2REaG5VMHZXOTRxMWxVTDQyWU5HVlZkMTZaQkVkRFZyajdkOUpVYWc4WkxveVVPZ2ZzVUxtdjZNbTVLbEpBZkpsUzBLZVlKT2I4QTRhdnlzYmU1dlhNV2Z1Q3o0cEVjTjFteVZHSklxWGpaUmd0QWdVTEotX3JhRUhWaGFNS3ZuT0RsRdIBxAFBVV95cUxPOUd1Sk1EdXBicV93TmdISDkwZklmZTNMcjA2R1lTdm1tNFVURjh0ckpxc3ZaSVZhZERRRXQtdndLZ0d0UGRzVVEyeE5KVGhsSVdKVkZJakNyNWdHUUJqM0NCRVNuR2luQnpWRm85SzB0Qy1yWFhQaTg0cVNiT2lqZHRuUjEzWmpPUnVsaWNuUGhKclI1bk5MSWo5dEVTRjFBVFUtcEx4QlctSldUV2RpWnFBV29nal90SXBjVWVLcEtBREZW?oc=5",
+      "source": "GNews:गोरखपुर स्वास्थ्य अस्पताल",
+      "language": "hi",
+      "published": "2025-11-27T16:21:03",
+      "topics": [
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:33.947938",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "गोरखपुर में सील हो चुके निजी अस्पताल में गर्भवती की मौत, तोड़फोड़ - Jagran",
+      "summary": "गोरखपुर में सील हो चुके निजी अस्पताल में गर्भवती की मौत, तोड़फोड़ Jagran",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOSldUTUV6RVNIRnNjUFRGVDZxbGotQlI5UVN6dzBsM1p4R0RfdFhnZDBtRXg3czJUSktLbkMzRHp1THV6SHRPNU9iREZvZGZiUzlKOE5TQkZGcW1rcFRtWGZCVnVFank0eVRPU2MyeW5vWFhnTmQzVm0tT3Qzd0NLRVFYRURDY2s1M0RRckZsbzhycGphRDljaFRQNTVDcmxzZXdVS0xZdkFPUDJlcGVoYmRjbVF5enV4MUpoZVplam4?oc=5",
+      "source": "GNews:गोरखपुर स्वास्थ्य अस्पताल",
+      "language": "hi",
+      "published": "2026-01-04T08:00:00",
+      "topics": [
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:33.952128",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "रोशनी पाने गए थे, अंधेरा ले आए: गोरखपुर के अस्पताल ने छीनी 9 बुजुर्गों की आंखें, खून के आंसू रो रहे परिवार! - AajTak",
+      "summary": "रोशनी पाने गए थे, अंधेरा ले आए: गोरखपुर के अस्पताल ने छीनी 9 बुजुर्गों की आंखें, खून के आंसू रो रहे परिवार! AajTak",
+      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxObzVYZUpQTWhVMUFkakkyTEREVEJFY25ISFNSdnR3U3pKeloyV0w4TWdLdFo3cTczbi02QWJIZmhYcE15bWhTNE1KcnJ0TzlqMjlYMThvX2MwQ2ZRdUF5RWJLZ2FlUXYxTldla2tvajB2X0t0YWVERzBnQWpPUktvREw1X3FYc2VrMndNXzRLQ1dwWVZnMjJVcnZKZGZmQUxzWWtvNDJ1ZWJnTVZCNDg1TFItQUF3ZUFnQlZFMmwtd0tCUDdTQzNXNjVkM1NtZU1OS0dxVm1NSkFFTy1ONmV3TnQtbWZvQjhyaEpBYkVRa1ktd2xxTnfSAfsBQVVfeXFMTmRNbHZyZ2dRNjl5RWVjWDNGVk50bmkxTXcwT0piNnB2ZjF1UW9HdE1RMm9FUTRrT0pIWVBVWnctOFJvak9zNWwzTUhXbUphMzhEbF9kelhEZHBNUDBneEhYd3lWcFZJaG82N0xCWXVOWkJwaERzRG8zNTFUNVVNUVJUNlZVMWJqUkp0di1NNXY0Y1d1T3dKQmVjbk50SkVKaUVpQzJXUjh3U0V3NnRjZnBIcVUzc25icURGaXNyd19ObHZPSUZuZ1U0UkdKb19sY2h3S1ZoaGI0RzhTdFpGOF9lNXRYa1BHYThBNGxSdW9sd2p2S2U1aUZ3dHM?oc=5",
+      "source": "GNews:गोरखपुर स्वास्थ्य अस्पताल",
+      "language": "hi",
+      "published": "2026-02-19T08:00:00",
+      "topics": [
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:33.956014",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "जागरण प्रभाव: गोरखपुर में न्यू राजेश हाईटेक अस्पताल का ओटी सील,चार सदस्यीय जांच कमेटी गठित - Jagran",
+      "summary": "जागरण प्रभाव: गोरखपुर में न्यू राजेश हाईटेक अस्पताल का ओटी सील,चार सदस्यीय जांच कमेटी गठित Jagran",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPNFJOQ0M3MGJ2cWFqX00zRnBPMmozWU9jVXJreU8xMVVqNEc1X3ZyWk4zNFdqRXhLVlRFQkIzMjlGckhZRGt1aHVnLUMyMkRqOE94enQxdVpuQ3FuUk81ZUZVbkM5b1ZKNXNndUZLcDJ5ZWtXNlhXTHpzVjZSUE1OVnRoaDdSQ25MajhTbmgtN1Rlbk9SbTBrUzhLSjBwcW1BY2dCbWQwQUNxZUVWc3dUT3lEZDY4QXBSOGhnUG54Vmg5dmZ5b1hMaEdB?oc=5",
+      "source": "GNews:गोरखपुर स्वास्थ्य अस्पताल",
+      "language": "hi",
+      "published": "2026-02-05T08:00:00",
+      "topics": [
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:33.956595",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "गोरखपुर के निजी अस्पताल में पूर्व सैनिक की मौत: घरवालों ने तोड़फोड़ कर हंगामा किया, चार घंटे बाद समझौता; हॉ... - Dainik Bhaskar",
+      "summary": "गोरखपुर के निजी अस्पताल में पूर्व सैनिक की मौत: घरवालों ने तोड़फोड़ कर हंगामा किया, चार घंटे बाद समझौता; हॉ... Dainik Bhaskar",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNQzFTVjFrcFJ4MlcwYTVOZkNvNHFwTWhobUFFM1hadF9DNEhzeE53WUQ3Y2JKOVhhczAtbFM2bHBmNS14WEdrYnBqdEExRTZVZWFSQWN1XzlGOWY4TnpfNzNWV2Z1M21xYlhzM25qZGQwXzV4R09FRjdKZTV1dmlfamJRS1pvZmVtc1QzallOZXlLYW5IU1dPNmF5MDR4SzZMdXpKN01NWERrc05pMGxtam9Hai0yYlZiWEk4eHBtV3Y2dEFOZDBIb3BCSUJzWlFy0gHWAUFVX3lxTE5zaXdzUExDenczWHNVQnNoWHBRejk2d1FjY2lmS1lGQTIyWEYzQjhkTzlDTC00bm55QVg5WHUyWDVhZlFWQm1aMUhkWWVLWjlta1dLMmhzM3oxcXhUZHdmNlVJMEhTSlFiUGplT3NaOEdSVS1OM29JRzdNT0ViMTNSYkpiRnp6S2VkMDhmWV9rQXpJZC1SRHAzNDJ1MDB3OWhTdVRNSUtyYXlMWHN1UFo0RWFmMVpKb3Y2YkU1bWt2ZEpfU2RmRXNPU1ZncElrVmhfZkF1SEE?oc=5",
+      "source": "GNews:गोरखपुर स्वास्थ्य अस्पताल",
+      "language": "hi",
+      "published": "2026-01-02T08:00:00",
+      "topics": [
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:33.958612",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    },
+    {
+      "title": "गोरखपुर में अवैध अस्पतालों पर अंकुश नहीं, लगातार जा रही मरीजों की जान - Jagran",
+      "summary": "गोरखपुर में अवैध अस्पतालों पर अंकुश नहीं, लगातार जा रही मरीजों की जान Jagran",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPZG8yYzVTaDNWbHlRQ1hucEhnbWdkY2UzOW9YaENNLWpvLWxZNmdsbjBqeTBoaVVXNk5LMDhNbUFEOGhzMEMtVXlUMDJJVUZfOFJ4VHV2eFZWZTdSeWJZbk5LSE82SktJSWVPdTQzMFlRRzNFV0UxNkdsWE12S24yOFpYZWQ3NnFYdm5ZYW1abEpKb3lNYkhnY2o2NWptNXo0QUNrUGtzaXNZSEZZSmt2UXZvcEFObmdNR1hYV2NTeGxycy1GUWRyaDFwOGo5TkpHQ3ZJQk0tczBxZENIanpUdlZmWnN0UQ?oc=5",
+      "source": "GNews:गोरखपुर स्वास्थ्य अस्पताल",
+      "language": "hi",
+      "published": "2026-03-03T08:00:00",
+      "topics": [
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:33.958612",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 0,
+        "net": -1.0,
+        "confidence": 1.0,
+        "topic_bias": -1,
+        "source_bias": 0,
+        "pro_matched": [],
+        "anti_matched": []
+      }
+    }
+  ]
+}
