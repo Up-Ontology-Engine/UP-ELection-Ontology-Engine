@@ -108,8 +108,18 @@ def process_one(
         best = max(extraction.statements, key=lambda s: s.confidence)
         final_polarity = best.polarity
         final_issue = best.issue.value if best.issue else None
-        final_entity = best.entity
         final_confidence = best.confidence
+
+        # Stage 6b — entity resolution: map raw text → canonical graph node
+        try:
+            from .entity_resolver import get_resolver
+            resolver = get_resolver()
+            _cid, canonical_name, _conf = resolver.resolve(
+                best.entity, best.entity_type.value if best.entity_type else "unknown"
+            )
+            final_entity = canonical_name or best.entity
+        except Exception:
+            final_entity = best.entity
 
     return PipelineResult(
         source_id=source_id,

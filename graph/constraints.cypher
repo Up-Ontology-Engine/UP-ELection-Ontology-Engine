@@ -19,6 +19,8 @@ CREATE CONSTRAINT IF NOT EXISTS FOR (pe:PulseEvent)             REQUIRE pe.event
 CREATE CONSTRAINT IF NOT EXISTS FOR (w:WorkItem)                REQUIRE w.work_id   IS UNIQUE;
 CREATE CONSTRAINT IF NOT EXISTS FOR (v:YouTubeVideo)            REQUIRE v.video_id  IS UNIQUE;
 CREATE CONSTRAINT IF NOT EXISTS FOR (ch:Channel)                REQUIRE ch.channel_id IS UNIQUE;
+CREATE CONSTRAINT IF NOT EXISTS FOR (cr:CriminalRecord)         REQUIRE cr.record_id  IS UNIQUE;
+CREATE CONSTRAINT IF NOT EXISTS FOR (ad:AssetDeclaration)       REQUIRE ad.decl_id    IS UNIQUE;
 
 // ── Performance indexes ───────────────────────────────────────────────────────
 CREATE INDEX IF NOT EXISTS FOR (b:Booth)      ON (b.ac_id);
@@ -29,5 +31,9 @@ CREATE INDEX IF NOT EXISTS FOR (pe:PulseEvent) ON (pe.entity);
 CREATE INDEX IF NOT EXISTS FOR (pe:PulseEvent) ON (pe.created_at);
 CREATE INDEX IF NOT EXISTS FOR (c:Candidate)  ON (c.ac_id);
 CREATE INDEX IF NOT EXISTS FOR (c:Candidate)  ON (c.party);
-CREATE INDEX IF NOT EXISTS FOR (v:YouTubeVideo) ON (v.views);
-CREATE INDEX IF NOT EXISTS FOR (v:YouTubeVideo) ON (v.query_source);
+CREATE INDEX IF NOT EXISTS FOR (v:YouTubeVideo)     ON (v.views);
+CREATE INDEX IF NOT EXISTS FOR (v:YouTubeVideo)     ON (v.query_source);
+CREATE INDEX IF NOT EXISTS FOR (cr:CriminalRecord)  ON (cr.candidate_id);
+CREATE INDEX IF NOT EXISTS FOR (ad:AssetDeclaration) ON (ad.candidate_id);
+CREATE INDEX IF NOT EXISTS FOR (c:Candidate)        ON (c.criminal_cases);
+CREATE INDEX IF NOT EXISTS FOR (c:Candidate)        ON (c.net_worth_cr);

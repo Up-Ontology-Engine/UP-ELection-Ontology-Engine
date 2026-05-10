@@ -6,7 +6,7 @@ Usage:
     python run_nlp_direct.py [--batch 500]
 """
 from __future__ import annotations
-import argparse, logging, os
+import argparse, logging, os, json as _json
 import sqlalchemy as sa
 from sqlalchemy import text
 from dotenv import load_dotenv
@@ -34,72 +34,69 @@ def write_pulse_events(results: list, engine: sa.Engine) -> int:
     if not results:
         return 0
     inserted = 0
-    with engine.connect() as conn:
-        for r in results:
-            if hasattr(r, "model_dump"):
-                r = r.model_dump()
-            extraction = r.get("extraction", {})
-            if hasattr(extraction, "model_dump"):
-                extraction = extraction.model_dump()
-            stmts = extraction.get("statements", [])
-            geo   = r.get("geo_resolution") or {}
-            if hasattr(geo, "model_dump"):
-                geo = geo.model_dump()
-            try:
+    processed_ids: list[str] = []
+
+    for r in results:
+        if hasattr(r, "model_dump"):
+            r = r.model_dump()
+        extraction = r.get("extraction", {})
+        if hasattr(extraction, "model_dump"):
+            extraction = extraction.model_dump()
+        stmts = extraction.get("statements", [])
+        geo   = r.get("geo_resolution") or {}
+        if hasattr(geo, "model_dump"):
+            geo = geo.model_dump()
+        source_id = r.get("source_id") or r.get("id")
+        try:
+            with engine.begin() as conn:
                 conn.execute(text("""
                     INSERT INTO pulse_events (
                         source_type, source_id, text_raw, text_normalized_hi,
                         language_detected, translation_method,
                         extraction_method, llm_output,
-                        entity, entity_type, issue, polarity, confidence, evidence,
-                        final_polarity, final_issue, final_confidence,
-                        location_text, mapped_booth_id, mapped_ac_id, geo_level, geo_confidence,
-                        source_weight
+                        entity, entity_type, issue, polarity, evidence,
+                        final_polarity, final_issue,
+                        location_text, mapped_booth_id, mapped_ac_id, geo_level
                     ) VALUES (
                         :source_type, :source_id, :text_raw, :text_hi,
                         :lang, :trans_method,
-                        :ext_method, :llm_output::jsonb,
-                        :entity, :entity_type, :issue, :polarity, :conf, :evidence,
-                        :final_polarity, :final_issue, :final_conf,
-                        :loc_text, :booth_id, :ac_id, :geo_level, :geo_conf,
-                        :src_weight
+                        :ext_method, CAST(:llm_output AS jsonb),
+                        :entity, :entity_type, :issue, :polarity, :evidence,
+                        :final_polarity, :final_issue,
+                        :loc_text, :booth_id, :ac_id, :geo_level
                     ) ON CONFLICT DO NOTHING
                 """), {
-                    "source_type":   r["source_type"],
-                    "source_id":     r["source_id"],
-                    "text_raw":      r["text_raw"],
-                    "text_hi":       r.get("text_normalized_hi"),
-                    "lang":          r.get("language_detected", "unknown"),
-                    "trans_method":  r.get("translation_method", "none"),
-                    "ext_method":    r.get("extraction_method", "unknown"),
-                    "llm_output":    str(stmts),
-                    "entity":        r.get("final_entity"),
-                    "entity_type":   stmts[0].get("entity_type") if stmts else None,
-                    "issue":         r.get("final_issue"),
-                    "polarity":      r.get("final_polarity"),
-                    "conf":          r.get("final_confidence", 0),
-                    "evidence":      stmts[0].get("evidence") if stmts else None,
+                    "source_type":    r["source_type"],
+                    "source_id":      source_id,
+                    "text_raw":       r["text_raw"],
+                    "text_hi":        r.get("text_normalized_hi"),
+                    "lang":           r.get("language_detected", "unknown"),
+                    "trans_method":   r.get("translation_method", "none"),
+                    "ext_method":     r.get("extraction_method", "unknown"),
+                    "llm_output":     _json.dumps(stmts),
+                    "entity":         r.get("final_entity"),
+                    "entity_type":    stmts[0].get("entity_type") if stmts else None,
+                    "issue":          r.get("final_issue"),
+                    "polarity":       r.get("final_polarity"),
+                    "evidence":       stmts[0].get("evidence") if stmts else None,
                     "final_polarity": r.get("final_polarity"),
-                    "final_issue":   r.get("final_issue"),
-                    "final_conf":    r.get("final_confidence", 0),
-                    "loc_text":      stmts[0].get("location_mention") if stmts else None,
-                    "booth_id":      geo.get("mapped_booth_id"),
-                    "ac_id":         geo.get("mapped_ac_id", os.environ.get("PILOT_AC_ID", "GKP_322")),
-                    "geo_level":     geo.get("mapped_type"),
-                    "geo_conf":      geo.get("geo_confidence", 0.0),
-                    "src_weight":    {"youtube": 0.6, "news": 0.4, "survey": 1.0}.get(
-                                         r["source_type"], 0.5),
+                    "final_issue":    r.get("final_issue"),
+                    "loc_text":       stmts[0].get("location_mention") if stmts else None,
+                    "booth_id":       geo.get("mapped_booth_id"),
+                    "ac_id":          geo.get("mapped_ac_id", os.environ.get("PILOT_AC_ID", "GKP_322")),
+                    "geo_level":      geo.get("mapped_type"),
                 })
-                inserted += 1
-            except Exception as e:
-                logger.warning(f"Insert failed for {r.get('source_id')}: {e}")
+            inserted += 1
+            processed_ids.append(str(source_id))
+        except Exception as e:
+            logger.warning("Insert failed for %s: %s", source_id, e)
 
-        source_ids = [r["source_id"] if isinstance(r, dict) else r.source_id for r in results]
-        conn.execute(text("""
-            UPDATE pulse_events_raw SET processed = TRUE
-            WHERE id::text = ANY(:ids)
-        """), {"ids": source_ids})
-        conn.commit()
+    if processed_ids:
+        with engine.begin() as conn:
+            conn.execute(text("""
+                UPDATE pulse_events_raw SET processed = TRUE
+                WHERE id::text = ANY(:ids)
+            """), {"ids": processed_ids})
 
     return inserted
 

@@ -1,19 +1,17 @@
-"""Instructor + Groq LLM extraction with constrained JSON output."""
-import os, logging, instructor
-from groq import Groq
+"""Gemini LLM extraction with structured JSON output via google.genai SDK."""
+import os, logging, json as _json
+from google import genai
+from google.genai import types
 from .schemas import ExtractionResult
 
 logger = logging.getLogger(__name__)
 
-_client = None
+_client: genai.Client | None = None
 
-def _get_client():
+def _get_client() -> genai.Client:
     global _client
     if _client is None:
-        _client = instructor.from_groq(
-            Groq(api_key=os.environ["GROQ_API_KEY"]),
-            mode=instructor.Mode.JSON,
-        )
+        _client = genai.Client(api_key=os.environ["GOOGLE_API_KEY"])
     return _client
 
 
@@ -32,6 +30,7 @@ STRICT RULES:
 8. One SentimentStatement per distinct entity+issue combination.
 9. If text is irrelevant to politics, return is_political=false, empty statements.
 10. Sarcasm: heavy praise in political Hindi often = sarcasm → polarity=-1, confidence=0.6.
+11. language field: one of hi | bho | en | mix
 
 GORAKHPUR CONTEXT:
 - "sarkar" without qualifier = BJP/UP state government
@@ -43,21 +42,30 @@ GORAKHPUR CONTEXT:
   CM's home district so expectations are very high.
 """
 
+_GEMINI_MODEL = "gemini-2.5-flash"
+
 
 def extract_from_normalized_text(text: str) -> ExtractionResult:
     if not text or len(text.strip()) < 5:
         return ExtractionResult(statements=[], is_political=False)
     try:
-        return _get_client().chat.completions.create(
-            model="llama-3.3-70b-versatile",
-            response_model=ExtractionResult,
-            max_retries=2,
-            temperature=0.0,
-            messages=[
-                {"role": "system", "content": SYSTEM_PROMPT},
-                {"role": "user", "content": f"Extract sentiment:\n\n{text}"},
-            ],
+        resp = _get_client().models.generate_content(
+            model=_GEMINI_MODEL,
+            contents=f"Extract sentiment:\n\n{text}",
+            config=types.GenerateContentConfig(
+                system_instruction=SYSTEM_PROMPT,
+                response_mime_type="application/json",
+                temperature=0.0,
+            ),
         )
+        raw = (resp.text or "").strip()
+        if not raw:
+            return ExtractionResult(statements=[], is_political=True)
+        data = _json.loads(raw)
+        for stmt in data.get("statements", []):
+            stmt.setdefault("entity_type", "party")
+            stmt.setdefault("language", "hi")
+        return ExtractionResult.model_validate(data)
     except Exception as e:
-        logger.error(f"LLM extraction failed: {e}")
+        logger.error("LLM extraction failed: %s", e)
         return ExtractionResult(statements=[], is_political=True)

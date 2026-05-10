@@ -5,6 +5,31 @@ from sqlalchemy import text
 from .db import get_neo4j_session, get_pg_engine
 
 
+# ── Booth geo data (lat/lon + pulse scores) ───────────────────────────────────
+def get_booth_geo(ac_id: str) -> list[dict]:
+    """Return booth lat/lon + latest pulse metrics for all geocoded booths in an AC."""
+    with get_pg_engine().connect() as conn:
+        rows = conn.execute(text("""
+            SELECT
+                b.booth_id, b.booth_number, b.polling_station_name AS name,
+                b.locality_hint, b.total_voters, b.lat, b.lon,
+                bm.bjp_pulse_score, bm.opp_pulse_score,
+                bm.digital_lean, bm.digital_lean_label,
+                bm.top_issue, bm.confidence_label
+            FROM booth_master b
+            LEFT JOIN LATERAL (
+                SELECT * FROM booth_metrics
+                WHERE booth_id = b.booth_id
+                ORDER BY window_start DESC LIMIT 1
+            ) bm ON TRUE
+            WHERE b.ac_id = :ac_id
+              AND b.lat IS NOT NULL
+              AND b.booth_id NOT LIKE '%_TOTAL'
+            ORDER BY b.booth_number
+        """), {"ac_id": ac_id}).mappings().fetchall()
+    return [dict(r) for r in rows]
+
+
 # ── Booth list for AC ─────────────────────────────────────────────────────────
 @functools.lru_cache(maxsize=32)
 def get_booths_for_ac(ac_id: str) -> list[dict]:

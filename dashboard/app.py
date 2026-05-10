@@ -47,6 +47,8 @@ PAGES = [
     ("🌊", "Narrative & Sentiment"),
     ("📅", "Event Timeline"),
     ("🕸️", "Knowledge Graph"),
+    ("🗺️", "Geospatial Intelligence"),
+    ("🧠", "Intelligence Query"),
     ("⚠️", "Data Quality"),
     ("🚨", "Recommendations"),
 ]
@@ -147,6 +149,14 @@ elif page_name == "Event Timeline":
 
 elif page_name == "Knowledge Graph":
     from dashboard.pages.knowledge_graph import render
+    render(AC_ID, AC_NAME, API_URL)
+
+elif page_name == "Geospatial Intelligence":
+    from dashboard.pages.geo_intelligence import render
+    render(AC_ID, AC_NAME, API_URL)
+
+elif page_name == "Intelligence Query":
+    from dashboard.pages.intelligence_query import render
     render(AC_ID, AC_NAME, API_URL)
 
 elif page_name == "Data Quality":

@@ -3,6 +3,7 @@ from __future__ import annotations
 import os
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -10,11 +11,13 @@ load_dotenv()
 from .queries import (
     get_booths_for_ac, get_booth_summary, get_booth_history,
     get_booth_issues, get_booth_pulse, get_booth_comments,
-    get_ac_candidates, get_candidate_issue_sentiment, get_scheme_gap,
+    get_ac_candidates, get_scheme_gap,
     get_booth_quality, get_booth_narratives, get_booth_contradictions,
     get_ac_schemes, get_ac_narratives, get_ac_events,
     get_ac_quality, get_ac_recommendations, get_graph_subgraph,
+    get_booth_geo,
 )
+from .reasoning import reasoning_query
 
 app = FastAPI(
     title="Gorakhpur KG API",
@@ -226,6 +229,28 @@ def graph_subgraph(
     """1-hop subgraph from Neo4j around the specified entity."""
     result = get_graph_subgraph(entity_type, entity_id)
     return result if result else {"nodes": [], "edges": []}
+
+
+@app.get("/ac/{ac_id}/geo")
+def ac_geo(ac_id: str):
+    """Geocoded booth positions with pulse scores — used by the Geospatial Intelligence page."""
+    rows = get_booth_geo(ac_id)
+    return {"ac_id": ac_id, "count": len(rows), "geo": rows}
+
+
+class ReasoningRequest(BaseModel):
+    question: str
+
+
+@app.post("/reasoning/query")
+def reasoning_endpoint(body: ReasoningRequest):
+    """
+    AI-assisted political reasoning: natural language → Cypher → Neo4j results.
+    Powered by Groq LLM with the full graph schema as context.
+    """
+    if not body.question.strip():
+        raise HTTPException(400, "question must not be empty")
+    return reasoning_query(body.question.strip())
 
 
 # ── Helper functions for insight/recommendation text ─────────────────────────
