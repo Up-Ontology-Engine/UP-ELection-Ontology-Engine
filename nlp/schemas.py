@@ -34,17 +34,50 @@ class IssueType(str, Enum):
 
 
 ENTITY_NORMALISATION = {
+    # BJP — Hindi, English, colloquial
     "भाजपा": "BJP", "bjp": "BJP", "कमल": "BJP", "lotus": "BJP",
     "double engine": "BJP", "डबल इंजन": "BJP",
+    "bharatiya janata party": "BJP", "भारतीय जनता पार्टी": "BJP",
+    "saffron party": "BJP", "भगवा": "BJP",
+
+    # BJP leaders
     "yogi": "Yogi Adityanath", "योगी": "Yogi Adityanath",
+    "yogi adityanath": "Yogi Adityanath", "cm yogi": "Yogi Adityanath",
+    "gorakhnath": "Yogi Adityanath",
     "modi": "Narendra Modi", "मोदी": "Narendra Modi",
-    "समाजवादी": "SP", "सपा": "SP", "cycle": "SP", "साइकिल": "SP",
+    "pm modi": "Narendra Modi", "prime minister": "Narendra Modi",
+    "नमो": "Narendra Modi",
+
+    # SP — Hindi, English, Romanized
+    "samajwadi": "SP", "samajwadi party": "SP",
+    "समाजवादी": "SP", "समाजवादी पार्टी": "SP",
+    "सपा": "SP", "cycle": "SP", "साइकिल": "SP",
+
+    # SP leaders
     "akhilesh": "Akhilesh Yadav", "अखिलेश": "Akhilesh Yadav",
+    "akhilesh yadav": "Akhilesh Yadav",
     "netaji": "Akhilesh Yadav", "नेताजी": "Akhilesh Yadav",
+
+    # BSP — Hindi, English
     "बसपा": "BSP", "हाथी": "BSP", "elephant": "BSP",
-    "mayawati": "Mayawati", "मायावती": "Mayawati", "behan ji": "Mayawati",
-    "कांग्रेस": "Congress", "inc": "Congress",
+    "bahujan samaj party": "BSP", "बहुजन समाज पार्टी": "BSP",
+    "mayawati": "Mayawati", "मायावती": "Mayawati",
+    "behan ji": "Mayawati", "बहनजी": "Mayawati",
+
+    # Congress
+    "कांग्रेस": "Congress", "inc": "Congress", "congress": "Congress",
+    "indian national congress": "Congress",
     "rahul": "Rahul Gandhi", "राहुल": "Rahul Gandhi",
+    "rahul gandhi": "Rahul Gandhi",
+
+    # AAP
+    "aap": "AAP", "aam aadmi": "AAP", "आप": "AAP",
+    "kejriwal": "Kejriwal", "केजरीवाल": "Kejriwal",
+
+    # Govt / institution references
+    "government": "BJP",  # in UP context, "sarkar" == BJP govt
+    "sarkar": "BJP", "सरकार": "BJP",
+    "up government": "BJP", "up sarkar": "BJP",
 }
 
 

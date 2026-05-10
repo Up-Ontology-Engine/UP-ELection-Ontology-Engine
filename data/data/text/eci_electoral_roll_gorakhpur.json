@@ -1,0 +1,44 @@
+{
+  "source": "voters.eci.gov.in / eci.gov.in",
+  "scraped_at": "2026-05-07",
+  "region": "Gorakhpur District, Uttar Pradesh",
+
+  "gorakhpur_assembly_constituencies": [
+    {"number": 320, "name": "Caimpiyarganj"},
+    {"number": 321, "name": "Pipraich"},
+    {"number": 322, "name": "Gorakhpur Urban"},
+    {"number": 323, "name": "Gorakhpur Rural"},
+    {"number": 324, "name": "Sahajanwa"},
+    {"number": 325, "name": "Khajani"},
+    {"number": 326, "name": "Chauri-Chaura"},
+    {"number": 327, "name": "Bansgaon"},
+    {"number": 328, "name": "Chillupar"}
+  ],
+
+  "gorakhpur_lok_sabha": {
+    "constituency_number": 64,
+    "name": "Gorakhpur",
+    "state": "Uttar Pradesh"
+  },
+
+  "eci_statistical_reports_available": [
+    "Item 33: Constituency Wise Detailed Result (PDF + XLS)",
+    "Item 30: Winning Candidates Analysis (PDF + XLS)",
+    "Result at a Glance for GE to Lok Sabha 2024 (e-Book)"
+  ],
+
+  "electoral_roll_download": {
+    "status": "CAPTCHA_BLOCKED",
+    "state": "Uttar Pradesh",
+    "district": "Gorakhpur",
+    "year_of_revision": 2026,
+    "roll_type": "SIR FinalRoll - 2026",
+    "note": "Electoral roll PDFs available but CAPTCHA prevents automated download"
+  },
+
+  "results_portal": {
+    "status": "REDIRECTED",
+    "current_url": "results.eci.gov.in now shows May 2026 Assembly results",
+    "note": "2024 General Election results archived, direct URLs return 404"
+  }
+}

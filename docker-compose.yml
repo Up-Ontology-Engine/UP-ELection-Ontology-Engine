@@ -13,7 +13,11 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - ./db/migrations/001_initial.sql:/docker-entrypoint-initdb.d/01_schema.sql
-      - ./db/seeds/seed_issues.sql:/docker-entrypoint-initdb.d/02_seeds.sql
+      - ./db/migrations/002_quality_narratives.sql:/docker-entrypoint-initdb.d/02_quality.sql
+      - ./db/migrations/003_new_tables.sql:/docker-entrypoint-initdb.d/03_new_tables.sql
+      - ./db/migrations/004_fixes.sql:/docker-entrypoint-initdb.d/04_fixes.sql
+      - ./db/migrations/005_political_events.sql:/docker-entrypoint-initdb.d/05_political_events.sql
+      - ./db/seeds/seed_issues.sql:/docker-entrypoint-initdb.d/06_seeds.sql
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 5s

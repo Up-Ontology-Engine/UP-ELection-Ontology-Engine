@@ -12,6 +12,8 @@ from .queries import (
     get_booth_issues, get_booth_pulse, get_booth_comments,
     get_ac_candidates, get_candidate_issue_sentiment, get_scheme_gap,
     get_booth_quality, get_booth_narratives, get_booth_contradictions,
+    get_ac_schemes, get_ac_narratives, get_ac_events,
+    get_ac_quality, get_ac_recommendations, get_graph_subgraph,
 )
 
 app = FastAPI(
@@ -183,10 +185,52 @@ def ac_candidates(ac_id: str):
     return {"ac_id": ac_id, "candidates": get_ac_candidates(ac_id)}
 
 
+@app.get("/ac/{ac_id}/schemes")
+def ac_schemes(ac_id: str):
+    """Aggregated scheme gap analysis across all booths in an AC."""
+    return {"ac_id": ac_id, "schemes": get_ac_schemes(ac_id)}
+
+
+@app.get("/ac/{ac_id}/narratives")
+def ac_narratives(ac_id: str):
+    """Aggregate narrative trends for the AC."""
+    return {"ac_id": ac_id, "narratives": get_ac_narratives(ac_id)}
+
+
+@app.get("/ac/{ac_id}/events")
+def ac_events(ac_id: str, limit: int = Query(50, ge=1, le=200)):
+    """Political events timeline for the AC."""
+    return {"ac_id": ac_id, "events": get_ac_events(ac_id, limit=limit)}
+
+
+@app.get("/ac/{ac_id}/quality")
+def ac_quality(ac_id: str):
+    """AC-level data quality summary (aggregated across booths)."""
+    return {"ac_id": ac_id, **get_ac_quality(ac_id)}
+
+
+@app.get("/ac/{ac_id}/recommendations")
+def ac_recommendations(ac_id: str):
+    """Strategic risks, opportunities, and action items derived from live data."""
+    recs = get_ac_recommendations(ac_id)
+    if not recs:
+        raise HTTPException(204, "Insufficient data for recommendations")
+    return {"ac_id": ac_id, **recs}
+
+
+@app.get("/graph/subgraph")
+def graph_subgraph(
+    entity_type: str = Query(..., description="AC | Booth | Issue | Candidate | Party | Scheme"),
+    entity_id:   str = Query(..., description="The entity's primary ID value"),
+):
+    """1-hop subgraph from Neo4j around the specified entity."""
+    result = get_graph_subgraph(entity_type, entity_id)
+    return result if result else {"nodes": [], "edges": []}
+
+
 # ── Helper functions for insight/recommendation text ─────────────────────────
 
-def _generate_insight(meta: dict, bjp_wins: int, bjp_shares: list, issues: list, momentum: dict) -> str:
-    lean = meta.get("digital_lean_label", "")
+def _generate_insight(_meta: dict, bjp_wins: int, bjp_shares: list, issues: list, _momentum: dict) -> str:
     parts = []
     if bjp_wins >= 2:
         parts.append(f"Strong BJP base ({bjp_wins} consecutive wins)")
@@ -198,7 +242,7 @@ def _generate_insight(meta: dict, bjp_wins: int, bjp_shares: list, issues: list,
     return ". ".join(parts) or "Insufficient data for insight."
 
 
-def _generate_recommendation(issues: list, momentum: dict) -> str:
+def _generate_recommendation(issues: list, _momentum: dict) -> str:
     if not issues:
         return "Collect more data before making recommendations."
     top = [i["issue"].replace("_", " ") for i in issues[:2]]

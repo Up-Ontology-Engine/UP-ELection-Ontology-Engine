@@ -26,7 +26,9 @@ def _get_resolver() -> GeoResolver:
         path = os.environ.get("ALIAS_INDEX_PATH", "data/seeds/gorakhpur_aliases.json")
         try:
             with open(path, encoding="utf-8") as f:
-                _geo_resolver = GeoResolver(json.load(f))
+                data = json.load(f)
+            aliases = data.get("geo_aliases", data) if isinstance(data, dict) and "geo_aliases" in data else data
+            _geo_resolver = GeoResolver(aliases)
         except FileNotFoundError:
             logger.warning(f"Alias index not found at {path}. Geo resolution disabled.")
             _geo_resolver = GeoResolver({})

@@ -1,27 +1,137 @@
 {
-  "_comment": "Map location names → booth_id. Add entries as you scrape booth_master.",
-  "_format": "{ 'locality_name': { 'id': 'booth_id_or_ac_id', 'type': 'booth|ac' } }",
+  "_comment": "Two sections: 'geo_aliases' for NLP geo_resolver, 'localities' for census village→booth mapping.",
 
-  "Gorakhpur Urban": { "id": "GKP_URBAN", "type": "ac" },
-  "गोरखपुर": { "id": "GKP_URBAN", "type": "ac" },
+  "geo_aliases": {
+    "Gorakhpur Urban": { "id": "GKP_322", "type": "ac" },
+    "गोरखपुर शहर": { "id": "GKP_322", "type": "ac" },
+    "Gorakhpur Rural": { "id": "GKP_323", "type": "ac" },
+    "Gorakhpur": { "id": "GKP_322", "type": "ac" },
+    "गोरखपुर": { "id": "GKP_322", "type": "ac" },
+    "Caimpiyarganj": { "id": "GKP_320", "type": "ac" },
+    "Campierganj": { "id": "GKP_320", "type": "ac" },
+    "कैंपियरगंज": { "id": "GKP_320", "type": "ac" },
+    "Pipraich": { "id": "GKP_321", "type": "ac" },
+    "पिपराइच": { "id": "GKP_321", "type": "ac" },
+    "Sahajanwa": { "id": "GKP_324", "type": "ac" },
+    "सहजनवां": { "id": "GKP_324", "type": "ac" },
+    "Khajani": { "id": "GKP_325", "type": "ac" },
+    "खजनी": { "id": "GKP_325", "type": "ac" },
+    "Chauri-Chaura": { "id": "GKP_326", "type": "ac" },
+    "Chaurichaura": { "id": "GKP_326", "type": "ac" },
+    "चौरीचौरा": { "id": "GKP_326", "type": "ac" },
+    "Bansgaon": { "id": "GKP_327", "type": "ac" },
+    "बांसगांव": { "id": "GKP_327", "type": "ac" },
+    "Chillupar": { "id": "GKP_328", "type": "ac" },
+    "चिल्लूपार": { "id": "GKP_328", "type": "ac" },
 
-  "Civil Lines": { "id": "GKP_U_001", "type": "booth" },
-  "Deoria Naka": { "id": "GKP_U_045", "type": "booth" },
-  "Rustampur": { "id": "GKP_U_067", "type": "booth" },
-  "Basharatpur": { "id": "GKP_U_089", "type": "booth" },
-  "Shahpur": { "id": "GKP_U_112", "type": "booth" },
-  "Mohaddipur": { "id": "GKP_U_134", "type": "booth" },
-  "Shivpuri": { "id": "GKP_U_156", "type": "booth" },
-  "Bargadwa": { "id": "GKP_U_178", "type": "booth" },
-  "Taramandal": { "id": "GKP_U_200", "type": "booth" },
-  "Bank Road": { "id": "GKP_U_223", "type": "booth" },
-  "Ramgarh Tal": { "id": "GKP_U_245", "type": "booth" },
-  "Padri Bazar": { "id": "GKP_U_267", "type": "booth" },
+    "Civil Lines": { "id": "GKP_322_001", "type": "booth" },
+    "सिविल लाइन्स": { "id": "GKP_322_001", "type": "booth" },
+    "Retiya Bazar": { "id": "GKP_322_001", "type": "booth" },
+    "Golghar": { "id": "GKP_322_001", "type": "booth" },
+    "गोलघर": { "id": "GKP_322_001", "type": "booth" },
 
-  "देवरिया नाका": { "id": "GKP_U_045", "type": "booth" },
-  "रुस्तमपुर": { "id": "GKP_U_067", "type": "booth" },
-  "बशारतपुर": { "id": "GKP_U_089", "type": "booth" },
-  "सिविल लाइन्स": { "id": "GKP_U_001", "type": "booth" },
+    "Betiahata": { "id": "GKP_322_010", "type": "booth" },
+    "बेतियाहाता": { "id": "GKP_322_010", "type": "booth" },
 
-  "_note": "Replace GKP_U_XXX IDs with actual booth_ids from booth_master after scraping ECI."
+    "Gorakhpur City": { "id": "GKP_322_020", "type": "booth" },
+    "Railway Station": { "id": "GKP_322_020", "type": "booth" },
+    "रेलवे स्टेशन": { "id": "GKP_322_020", "type": "booth" },
+
+    "Ghanta Ghar": { "id": "GKP_322_025", "type": "booth" },
+    "घंटाघर": { "id": "GKP_322_025", "type": "booth" },
+    "Town Hall": { "id": "GKP_322_025", "type": "booth" },
+
+    "Medical College": { "id": "GKP_322_030", "type": "booth" },
+    "BRD Medical": { "id": "GKP_322_030", "type": "booth" },
+    "मेडिकल कॉलेज": { "id": "GKP_322_030", "type": "booth" },
+
+    "Deoria Naka": { "id": "GKP_322_045", "type": "booth" },
+    "देवरिया नाका": { "id": "GKP_322_045", "type": "booth" },
+    "Deorianaka": { "id": "GKP_322_045", "type": "booth" },
+
+    "Humayunpur": { "id": "GKP_322_055", "type": "booth" },
+    "हुमायूंपुर": { "id": "GKP_322_055", "type": "booth" },
+
+    "Rustampur": { "id": "GKP_322_067", "type": "booth" },
+    "रुस्तमपुर": { "id": "GKP_322_067", "type": "booth" },
+
+    "Islampur": { "id": "GKP_322_075", "type": "booth" },
+    "इस्लामपुर": { "id": "GKP_322_075", "type": "booth" },
+
+    "Basharatpur": { "id": "GKP_322_089", "type": "booth" },
+    "बशारतपुर": { "id": "GKP_322_089", "type": "booth" },
+
+    "Alinagar": { "id": "GKP_322_095", "type": "booth" },
+    "अलीनगर": { "id": "GKP_322_095", "type": "booth" },
+
+    "Shahpur": { "id": "GKP_322_112", "type": "booth" },
+    "शाहपुर": { "id": "GKP_322_112", "type": "booth" },
+
+    "Daudpur": { "id": "GKP_322_120", "type": "booth" },
+    "दाउदपुर": { "id": "GKP_322_120", "type": "booth" },
+
+    "Mohaddipur": { "id": "GKP_322_134", "type": "booth" },
+    "मोहद्दीपुर": { "id": "GKP_322_134", "type": "booth" },
+
+    "Nausherwa": { "id": "GKP_322_142", "type": "booth" },
+    "नौशहरवा": { "id": "GKP_322_142", "type": "booth" },
+
+    "Shivpuri": { "id": "GKP_322_156", "type": "booth" },
+    "शिवपुरी": { "id": "GKP_322_156", "type": "booth" },
+
+    "Madan Mohan": { "id": "GKP_322_163", "type": "booth" },
+    "मदन मोहन": { "id": "GKP_322_163", "type": "booth" },
+
+    "Bargadwa": { "id": "GKP_322_178", "type": "booth" },
+    "बरगदवा": { "id": "GKP_322_178", "type": "booth" },
+
+    "Jungle Dhumanganj": { "id": "GKP_322_185", "type": "booth" },
+    "धूमनगंज": { "id": "GKP_322_185", "type": "booth" },
+    "Dhumanganj": { "id": "GKP_322_185", "type": "booth" },
+
+    "Taramandal": { "id": "GKP_322_200", "type": "booth" },
+    "तारामंडल": { "id": "GKP_322_200", "type": "booth" },
+    "Planetarium": { "id": "GKP_322_200", "type": "booth" },
+
+    "Mirzapur": { "id": "GKP_322_210", "type": "booth" },
+    "मिर्जापुर": { "id": "GKP_322_210", "type": "booth" },
+
+    "Bank Road": { "id": "GKP_322_223", "type": "booth" },
+    "बैंक रोड": { "id": "GKP_322_223", "type": "booth" },
+
+    "Ramgarh Tal": { "id": "GKP_322_245", "type": "booth" },
+    "रामगढ़ ताल": { "id": "GKP_322_245", "type": "booth" },
+    "Ramgarh Lake": { "id": "GKP_322_245", "type": "booth" },
+
+    "Padri Bazar": { "id": "GKP_322_267", "type": "booth" },
+    "पादरी बाज़ार": { "id": "GKP_322_267", "type": "booth" },
+    "Padribazar": { "id": "GKP_322_267", "type": "booth" },
+
+    "Uska Bazar": { "id": "GKP_322_280", "type": "booth" },
+    "उस्का बाज़ार": { "id": "GKP_322_280", "type": "booth" },
+
+    "Chargawan": { "id": "GKP_322_295", "type": "booth" },
+    "चरगांव": { "id": "GKP_322_295", "type": "booth" },
+
+    "Sahjanwa Road": { "id": "GKP_322_310", "type": "booth" },
+    "सहजनवां रोड": { "id": "GKP_322_310", "type": "booth" }
+  },
+
+  "localities": {
+    "_note": "Populated by running: python -m etl.transform_census (after Form-20 scraped).",
+    "_format": "{ 'GKP_322_045': ['village name in English', 'गांव का नाम हिंदी में'] }",
+
+    "GKP_322_001": ["Civil Lines", "Retiya Bazar", "Golghar"],
+    "GKP_322_045": ["Deoria Naka", "देवरिया नाका"],
+    "GKP_322_067": ["Rustampur", "रुस्तमपुर"],
+    "GKP_322_089": ["Basharatpur", "बशारतपुर"],
+    "GKP_322_112": ["Shahpur", "शाहपुर"],
+    "GKP_322_134": ["Mohaddipur", "मोहद्दीपुर"],
+    "GKP_322_156": ["Shivpuri", "शिवपुरी"],
+    "GKP_322_178": ["Bargadwa", "बरगदवा"],
+    "GKP_322_200": ["Taramandal", "तारामंडल"],
+    "GKP_322_223": ["Bank Road", "बैंक रोड"],
+    "GKP_322_245": ["Ramgarh Tal", "रामगढ़ ताल"],
+    "GKP_322_267": ["Padri Bazar", "पादरी बाज़ार"]
+  }
 }

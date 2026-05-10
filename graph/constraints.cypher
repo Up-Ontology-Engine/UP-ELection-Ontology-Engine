@@ -10,12 +10,15 @@ CREATE CONSTRAINT IF NOT EXISTS FOR (d:District)                REQUIRE d.name  
 CREATE CONSTRAINT IF NOT EXISTS FOR (a:AssemblyConstituency)    REQUIRE a.ac_id    IS UNIQUE;
 CREATE CONSTRAINT IF NOT EXISTS FOR (b:Booth)                   REQUIRE b.booth_id IS UNIQUE;
 CREATE CONSTRAINT IF NOT EXISTS FOR (c:Candidate)               REQUIRE c.candidate_id IS UNIQUE;
-CREATE CONSTRAINT IF NOT EXISTS FOR (p:Party)                   REQUIRE p.name     IS UNIQUE;
+CREATE CONSTRAINT IF NOT EXISTS FOR (p:Party)                   REQUIRE p.party_id IS UNIQUE;
 CREATE CONSTRAINT IF NOT EXISTS FOR (e:Election)                REQUIRE e.election_id IS UNIQUE;
 CREATE CONSTRAINT IF NOT EXISTS FOR (i:Issue)                   REQUIRE i.code     IS UNIQUE;
 CREATE CONSTRAINT IF NOT EXISTS FOR (sc:Scheme)                 REQUIRE sc.name    IS UNIQUE;
 CREATE CONSTRAINT IF NOT EXISTS FOR (pan:Panchayat)             REQUIRE pan.panchayat_id IS UNIQUE;
 CREATE CONSTRAINT IF NOT EXISTS FOR (pe:PulseEvent)             REQUIRE pe.event_id IS UNIQUE;
+CREATE CONSTRAINT IF NOT EXISTS FOR (w:WorkItem)                REQUIRE w.work_id   IS UNIQUE;
+CREATE CONSTRAINT IF NOT EXISTS FOR (v:YouTubeVideo)            REQUIRE v.video_id  IS UNIQUE;
+CREATE CONSTRAINT IF NOT EXISTS FOR (ch:Channel)                REQUIRE ch.channel_id IS UNIQUE;
 
 // ── Performance indexes ───────────────────────────────────────────────────────
 CREATE INDEX IF NOT EXISTS FOR (b:Booth)      ON (b.ac_id);
@@ -26,3 +29,5 @@ CREATE INDEX IF NOT EXISTS FOR (pe:PulseEvent) ON (pe.entity);
 CREATE INDEX IF NOT EXISTS FOR (pe:PulseEvent) ON (pe.created_at);
 CREATE INDEX IF NOT EXISTS FOR (c:Candidate)  ON (c.ac_id);
 CREATE INDEX IF NOT EXISTS FOR (c:Candidate)  ON (c.party);
+CREATE INDEX IF NOT EXISTS FOR (v:YouTubeVideo) ON (v.views);
+CREATE INDEX IF NOT EXISTS FOR (v:YouTubeVideo) ON (v.query_source);

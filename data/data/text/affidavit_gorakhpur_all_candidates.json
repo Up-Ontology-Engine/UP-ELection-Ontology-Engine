@@ -1,0 +1,61 @@
+{
+  "source": "affidavit.eci.gov.in",
+  "scraped_at": "2026-05-07",
+  "region": "Gorakhpur, Uttar Pradesh",
+  
+  "gorakhpur_urban_2022_assembly": {
+    "constituency": "Gorakhpur Urban (322)",
+    "election": "UP Assembly Election - Jan-March 2022",
+    "phase": 6,
+    "total_candidates": 37,
+    "accepted": 26,
+    "rejected": 11,
+    "key_candidates": [
+      {"name": "ADITYANATH", "party": "Bharatiya Janata Party (BJP)", "status": "Accepted"},
+      {"name": "SUBHAWATI UPENDRA DUTT SHUKLA", "party": "Samajwadi Party (SP)", "status": "Accepted"},
+      {"name": "KHWAJA SHAMSUDDIN", "party": "Bahujan Samaj Party (BSP)", "status": "Accepted"},
+      {"name": "CHANDRA SHEKHAR", "party": "Azad Samaj Party (Kanshi Ram)", "status": "Accepted"},
+      {"name": "DR. CHETNA PANDEY", "party": "Indian National Congress (INC)", "status": "Accepted"},
+      {"name": "VIJAY KUMAR SRIVASTAVA", "party": "Aam Aadmi Party", "status": "Accepted"},
+      {"name": "YUVRAJ SHARMA", "party": "Bharatiya Jan Jagriti Party", "status": "Accepted"},
+      {"name": "MANOJ KUMAR SHARMA", "party": "Loktantrik Janshakti Party", "status": "Rejected"},
+      {"name": "MEVALAL", "party": "Independent", "status": "Rejected"},
+      {"name": "NAVAL KISHOR NATHANI", "party": "Independent", "status": "Rejected"},
+      {"name": "AWDHESH", "party": "Bahujan Mukti Party", "status": "Rejected"}
+    ]
+  },
+
+  "gorakhpur_rural_2022_assembly": {
+    "constituency": "Gorakhpur Rural (323)",
+    "election": "UP Assembly Election - Jan-March 2022",
+    "phase": 6,
+    "total_candidates": 38,
+    "accepted": 28,
+    "rejected": 9,
+    "withdrawn": 1,
+    "key_candidates": [
+      {"name": "BIPIN SINGH", "party": "Bharatiya Janata Party (BJP)", "status": "Accepted"},
+      {"name": "VIJAY BAHADUR YADAV", "party": "Samajwadi Party (SP)", "status": "Accepted"},
+      {"name": "DARA SINGH NISHAD", "party": "Bahujan Samaj Party (BSP)", "status": "Accepted"},
+      {"name": "VAIBHAV SHAHI", "party": "Indian National Congress (INC)", "status": "Accepted"},
+      {"name": "HIFZURRAHMAN AJMAL ANSARI", "party": "Peace Party", "status": "Accepted"},
+      {"name": "VISHAL KUMAR", "party": "Unknown", "status": "Withdrawn"}
+    ]
+  },
+
+  "gorakhpur_2024_lok_sabha": {
+    "constituency": "Gorakhpur (64)",
+    "election": "General Election 2024 (Lok Sabha)",
+    "phase": 7,
+    "total_candidates": 53,
+    "accepted": 28,
+    "rejected": 25,
+    "key_candidates": [
+      {"name": "RAVINDRA SHUKLA ALIAS RAVI KISHAN", "party": "Bharatiya Janata Party (BJP)", "status": "Accepted"},
+      {"name": "KAJAL NISHAD", "party": "Samajwadi Party (SP)", "status": "Accepted"},
+      {"name": "JAVED ASHRAF ALIAS JAVED SIMNANI", "party": "Bahujan Samaj Party (BSP)", "status": "Accepted"},
+      {"name": "AMITA BHARATI", "party": "Independent", "status": "Accepted"},
+      {"name": "SHIVSHANKAR PRAJAPATI", "party": "Bhagidari Party(P)", "status": "Accepted"}
+    ]
+  }
+}

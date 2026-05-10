@@ -1,0 +1,21 @@
+{
+  "official_sources": [
+    { "id": "eci_booths", "type": "html_scraper", "target_table": "booth_master" },
+    { "id": "eci_results", "type": "html_scraper", "target_table": "booth_results", "credibility_score": 1.0, "bias_score": 0.0 },
+    { "id": "egramswaraj_schemes", "type": "api_scraper", "target_table": "panchayat_activity" }
+  ],
+  "youtube_sources": [
+    { "id": "air_news_gkp", "lean": "neutral", "scope": "local", "source_type": "yt_comment", "credibility_score": 0.9, "bias_score": 0.1, "capture_engagement": true, "geo_filter_required": false },
+    { "id": "sham_sharma", "lean": "pro_govt", "scope": "national", "source_type": "yt_comment", "credibility_score": 0.6, "bias_score": 0.8, "capture_engagement": true, "geo_filter_required": true },
+    { "id": "dhruv_rathee", "lean": "critical_govt", "scope": "national", "source_type": "yt_comment", "credibility_score": 0.6, "bias_score": -0.8, "capture_engagement": true, "geo_filter_required": true }
+  ],
+  "news_sources": [
+    { "id": "jagran_gorakhpur", "type": "html_scraper", "source_type": "news_article", "credibility_score": 0.8, "bias_score": 0.3 }
+  ],
+  "field_sources": [
+    { "id": "field_notes_gorakhpur", "type": "manual_form", "source_type": "field_note", "credibility_score": 0.9, "bias_score": 0.3 }
+  ],
+  "geo_aliases": [
+    "उत्तर प्रदेश", "UP", "गोरखपुर", "योगी", "Gorakhpur", "campierganj", "pipraich"
+  ]
+}

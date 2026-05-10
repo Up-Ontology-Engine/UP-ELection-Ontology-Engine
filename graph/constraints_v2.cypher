@@ -7,20 +7,20 @@
 // ── Uniqueness constraints ────────────────────────────────────────────────────
 
 // DataQuality: one record per booth per compute window
-CREATE CONSTRAINT IF NOT EXISTS FOR (dq:DataQuality)
-    REQUIRE (dq.booth_id, dq.computed_at) IS NODE KEY;
+// CREATE CONSTRAINT IF NOT EXISTS FOR (dq:DataQuality)
+//     REQUIRE (dq.booth_id, dq.computed_at) IS NODE KEY;
 
 // Narrative: one narrative type per booth per compute window
-CREATE CONSTRAINT IF NOT EXISTS FOR (n:Narrative)
-    REQUIRE (n.booth_id, n.narrative_type, n.computed_at) IS NODE KEY;
+// CREATE CONSTRAINT IF NOT EXISTS FOR (n:Narrative)
+//     REQUIRE (n.booth_id, n.narrative_type, n.computed_at) IS NODE KEY;
 
 // SchemeGap: one gap record per booth+scheme per compute window
-CREATE CONSTRAINT IF NOT EXISTS FOR (sg:SchemeGap)
-    REQUIRE (sg.booth_id, sg.scheme_name, sg.computed_at) IS NODE KEY;
+// CREATE CONSTRAINT IF NOT EXISTS FOR (sg:SchemeGap)
+//     REQUIRE (sg.booth_id, sg.scheme_name, sg.computed_at) IS NODE KEY;
 
 // ContradictionFlag: one flag per booth+entity+source pair per window
-CREATE CONSTRAINT IF NOT EXISTS FOR (cf:ContradictionFlag)
-    REQUIRE (cf.booth_id, cf.entity, cf.source_a, cf.source_b, cf.computed_at) IS NODE KEY;
+// CREATE CONSTRAINT IF NOT EXISTS FOR (cf:ContradictionFlag)
+//     REQUIRE (cf.booth_id, cf.entity, cf.source_a, cf.source_b, cf.computed_at) IS NODE KEY;
 
 // ── Performance indexes ───────────────────────────────────────────────────────
 

@@ -3,6 +3,34 @@ name = "gorakhpur-kg"
 version = "0.1.0"
 description = "Booth-level political intelligence for Gorakhpur Urban, UP"
 requires-python = ">=3.11"
+dependencies = [
+    # ETL & data
+    "pandas>=2.0",
+    "openpyxl>=3.1",
+    "xlrd==1.2.0",          # .xls support (BlockWise MGNREGA files)
+    "pdfplumber>=0.10",     # Form-20 PDF parsing
+    # Database
+    "sqlalchemy>=2.0",
+    "psycopg2-binary>=2.9",
+    "python-dotenv>=1.0",
+    # Graph
+    "neo4j>=5.0",
+    # NLP
+    "groq>=0.4",
+    "instructor>=1.0",
+    "pydantic>=2.0",
+    "thefuzz>=0.22",
+    "python-Levenshtein>=0.25",  # speed-up for thefuzz
+    "langdetect>=1.0",
+    # Orchestration
+    "prefect>=3.0",
+    # API & dashboard
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
+    "streamlit>=1.33",
+    "plotly>=5.20",
+    "requests>=2.31",
+]
 
 [tool.ruff]
 line-length = 100
@@ -21,3 +49,9 @@ asyncio_mode = "auto"
 [tool.mypy]
 python_version = "3.11"
 ignore_missing_imports = true
+
+[tool.pyright]
+pythonVersion = "3.11"
+extraPaths = ["digital-democracy-pipeline/src"]
+reportMissingImports = false
+reportMissingModuleSource = false

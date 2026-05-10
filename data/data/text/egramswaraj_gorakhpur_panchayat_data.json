@@ -1,0 +1,49 @@
+{
+  "source": "egramswaraj.gov.in",
+  "scraped_at": "2026-05-07",
+  "region": "Gorakhpur District, Uttar Pradesh",
+
+  "district_overview": {
+    "total_gram_panchayats": 1273,
+    "gps_with_profile": 1127,
+    "total_blocks": 20,
+    "total_elected_representatives": 15843,
+    "male_representatives": 8739,
+    "female_representatives": 7100,
+    "other_representatives": 4
+  },
+
+  "block_wise_gram_panchayats": {
+    "Belghat": 89,
+    "Khajni": 85,
+    "Uruwa": 85,
+    "Gagaha": 76,
+    "Campierganj": 72,
+    "Gola": 72,
+    "Bansgaon": 69,
+    "Barhalganj": 67,
+    "Bhathat": 64,
+    "Kauri Ram": 64,
+    "Sahjanawa": 64,
+    "Brahmpur": 63,
+    "Pipraich": 63,
+    "Piprauli": 63,
+    "Pali": 58,
+    "Sardarnagar": 53,
+    "Jangal Kaudia": 50,
+    "Khorabar": 41,
+    "Bharohiya": 40,
+    "Chargawan": 35
+  },
+
+  "sample_panchayat": {
+    "name": "Adda Moteeram",
+    "block": "Khorabar",
+    "pradhan": "Raju",
+    "elected_members": [
+      "Abhijeeta", "Dhamendra", "Dilip", "Geeta", "Ibarat Alli",
+      "Jitendra", "Kusmavati", "Madhuri", "Manju", "Manti",
+      "Mevalal", "Noorjhaha", "Ram Davan"
+    ]
+  }
+}

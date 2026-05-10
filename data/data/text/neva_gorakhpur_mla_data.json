@@ -1,0 +1,31 @@
+{
+  "source": "neva.gov.in (UP Vidhan Sabha)",
+  "scraped_at": "2026-05-07",
+  "region": "Gorakhpur, Uttar Pradesh",
+  
+  "gorakhpur_urban_mla": {
+    "constituency": "Gorakhpur Urban (AC 322)",
+    "name": "Shri Yogi Adityanath",
+    "party": "Bharatiya Janata Party (BJP)",
+    "designation": "Chief Minister, Uttar Pradesh",
+    "email": "yogiadityanath1972@gmail.com",
+    "phone_office": "0522-2236838",
+    "elected": "UP Assembly Election 2022"
+  },
+
+  "gorakhpur_rural_mla": {
+    "constituency": "Gorakhpur Rural (AC 323)",
+    "name": "Shri Bipin Singh",
+    "party": "Bharatiya Janata Party (BJP)",
+    "email": "bipinsinghmla@gmail.com",
+    "phone": "8887151123",
+    "elected": "UP Assembly Election 2022"
+  },
+
+  "up_vidhan_sabha_info": {
+    "assembly": "18th (Athaarahavi) Vidhan Sabha",
+    "total_members": 403,
+    "speaker_name": "Available on NeVA portal",
+    "leader_of_opposition": "Available on NeVA portal"
+  }
+}
