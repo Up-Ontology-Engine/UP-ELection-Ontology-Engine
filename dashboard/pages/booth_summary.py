@@ -15,7 +15,6 @@ from __future__ import annotations
 import requests
 import streamlit as st
 import plotly.graph_objects as go
-import plotly.express as px
 
 
 POLARITY_EMOJI = {1: "✅", -1: "❌", 0: "➖"}
@@ -176,12 +175,12 @@ def _render_historical(hist: dict):
 
 def _render_digital_lean(pulse: dict):
     st.markdown("### 📊 Current Digital Lean")
-    lean_label = pulse.get("lean_label", "Insufficient data")
+    lean_label = pulse.get("lean_label") or "Insufficient data"
     bjp   = pulse.get("bjp_pulse", 0) or 0
     opp   = pulse.get("opp_pulse", 0) or 0
     lean  = pulse.get("digital_lean", 0) or 0
 
-    color = "#FF6B35" if "BJP" in lean_label else "#3498db" if "Opp" in lean_label else "#95a5a6"
+    color = "#FF6B35" if "BJP" in str(lean_label) else "#3498db" if "Opp" in str(lean_label) else "#95a5a6"
     st.markdown(
         f"""<div style="background:{color}22;border-left:4px solid {color};
         padding:12px;border-radius:6px;font-size:1.2em;font-weight:bold;">

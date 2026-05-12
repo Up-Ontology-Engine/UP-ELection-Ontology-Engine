@@ -1,0 +1,45 @@
+{
+  "source": "ceouttarpradesh.nic.in",
+  "scraped_at": "2026-05-07",
+  "region": "Gorakhpur District, Uttar Pradesh",
+  
+  "electoral_roll_availability": {
+    "portal": "Chief Electoral Officer, Uttar Pradesh",
+    "district": "Gorakhpur",
+    "format": "PDF electoral rolls downloadable per Assembly Constituency",
+    "assembly_constituencies_in_district": [
+      "Caimpiyarganj (320)",
+      "Pipraich (321)",
+      "Gorakhpur Urban (322)",
+      "Gorakhpur Rural (323)",
+      "Sahajanwa (324)",
+      "Khajani (325)",
+      "Chauri-Chaura (326)",
+      "Bansgaon (327)",
+      "Chillupar (328)"
+    ]
+  },
+
+  "gorakhpur_urban_polling_stations": {
+    "ac_number": 169,
+    "total_polling_stations": 235,
+    "sample_stations": [
+      "Primary School Madhopur (Parts 1,2,3)",
+      "Sant Ravidas (Parts 4,5)",
+      "Saraswati Shishu Mandir High Secondary School Surajkund (Parts 6,7,8)"
+    ],
+    "note": "Each part has downloadable PDF electoral roll"
+  },
+
+  "form_20_availability": {
+    "lok_sabha_2024": {
+      "status": "Form-20 (Polling Booth Wise Statistics) available",
+      "link": "ceouttarpradesh.nic.in → Election Results → Lok Sabha Election-2024 Form-20",
+      "note": "Contains polling booth wise vote counts for Gorakhpur PC"
+    },
+    "assembly_2022": {
+      "status": "Available",
+      "link": "ceouttarpradesh.nic.in → Election Results → Assembly Election"
+    }
+  }
+}

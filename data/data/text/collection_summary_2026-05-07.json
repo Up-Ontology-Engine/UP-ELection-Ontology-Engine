@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-05-07T12:42:33.763Z",
+  "region": "Gorakhpur, Uttar Pradesh",
+  "focus": [
+    "election_data",
+    "nominee_data",
+    "electoral_rolls"
+  ],
+  "elapsedMinutes": "0.8",
+  "results": [
+    {
+      "site": "egramswaraj",
+      "url": "https://egramswaraj.gov.in",
+      "status": "failed",
+      "error": "spawnSync powershell.exe ETIMEDOUT"
+    }
+  ]
+}

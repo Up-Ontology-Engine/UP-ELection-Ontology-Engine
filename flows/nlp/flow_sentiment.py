@@ -4,7 +4,6 @@ Run: python -m flows.nlp.flow_sentiment
 """
 from __future__ import annotations
 import os, logging
-from datetime import datetime, timezone
 import sqlalchemy as sa
 from sqlalchemy import text
 from prefect import flow, task
@@ -49,7 +48,7 @@ def write_pulse_events(results: list[dict], engine: sa.Engine):
                     language_detected, translation_method,
                     extraction_method, llm_output,
                     entity, entity_type, issue, polarity, confidence, evidence,
-                    final_polarity, final_issue, final_entity, final_confidence,
+                    final_polarity, final_issue, final_confidence,
                     location_text, mapped_booth_id, mapped_ac_id, geo_level, geo_confidence,
                     source_weight
                 ) VALUES (
@@ -57,7 +56,7 @@ def write_pulse_events(results: list[dict], engine: sa.Engine):
                     :lang, :trans_method,
                     :ext_method, :llm_output::jsonb,
                     :entity, :entity_type, :issue, :polarity, :conf, :evidence,
-                    :final_polarity, :final_issue, :final_entity, :final_conf,
+                    :final_polarity, :final_issue, :final_conf,
                     :loc_text, :booth_id, :ac_id, :geo_level, :geo_conf,
                     :src_weight
                 )
@@ -78,11 +77,10 @@ def write_pulse_events(results: list[dict], engine: sa.Engine):
                 "evidence": stmts[0].get("evidence") if stmts else None,
                 "final_polarity": r.get("final_polarity"),
                 "final_issue": r.get("final_issue"),
-                "final_entity": r.get("final_entity"),
                 "final_conf": r.get("final_confidence", 0),
                 "loc_text": stmts[0].get("location_mention") if stmts else None,
                 "booth_id": geo.get("mapped_booth_id"),
-                "ac_id": geo.get("mapped_ac_id", os.environ.get("PILOT_AC_ID")),
+                "ac_id": geo.get("mapped_ac_id", os.environ.get("PILOT_AC_ID", "GKP_322")),
                 "geo_level": geo.get("mapped_type"),
                 "geo_conf": geo.get("geo_confidence", 0.0),
                 "src_weight": {"youtube": 0.6, "news": 0.4, "survey": 1.0}.get(

@@ -1,0 +1,52 @@
+{
+  "source": "ecisveep.nic.in",
+  "scraped_at": "2026-05-07",
+  "region": "Gorakhpur, Uttar Pradesh",
+  
+  "sveep_info": {
+    "portal": "Systematic Voters Education and Electoral Participation",
+    "purpose": "Voter awareness and electoral participation campaigns",
+    "resources_available": [
+      "General Voters - Registration & awareness",
+      "Service Voters - Armed forces voter registration", 
+      "Overseas Voters - NRI voting information",
+      "Person With Disabilities - Accessible voting",
+      "How to Vote - Step by step guide"
+    ],
+    "current_cec": "Shri Gyanesh Kumar, Chief Election Commissioner",
+    "gorakhpur_specific_results": "12 search results for Gorakhpur voter awareness activities"
+  },
+
+  "bharatmaps_info": {
+    "portal": "bharatmaps.gov.in",
+    "layers_available": [
+      "Administrative Boundary",
+      "Administrative Head Quarters",
+      "Road and Rail",
+      "India Assets",
+      "PMGSY Facilities",
+      "Parliamentary & Assembly Constituency"
+    ],
+    "gorakhpur_search": "Available - shows Gorakhpur district boundaries and constituency overlays"
+  },
+
+  "myscheme_info": {
+    "portal": "myscheme.gov.in",
+    "up_schemes_total": 681,
+    "election_specific": "No election-specific schemes found; portal focused on welfare/benefit schemes",
+    "relevant_categories": ["Education", "Agriculture", "Social Protection"]
+  },
+
+  "meri_panchayat_info": {
+    "portal": "meripanchayat.gov.in",
+    "status": "Accessible but requires individual GP-level navigation",
+    "gorakhpur_data": "Individual Gram Panchayat profiles available",
+    "note": "No aggregate election statistics page found; data is per-panchayat"
+  },
+
+  "datagov_info": {
+    "portal": "data.gov.in",
+    "gorakhpur_search_results": "Election-related open datasets available",
+    "catalog": "2024 Lok Sabha election metadata accessible"
+  }
+}

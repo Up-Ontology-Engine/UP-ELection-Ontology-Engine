@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($files = Get-ChildItem -Path \"E:\\\\UP-Election-Ontology-Engine\\\\data\\\\data\" -Recurse -Force | Where-Object {$_.PSIsContainer -eq $false}; $files | ForEach-Object { \"{0} | {1} bytes | {2}\" -f $_.FullName, $_.Length, $_.Extension } | Sort-Object)",
+      "PowerShell($dataPath = \"E:\\\\UP-Election-Ontology-Engine\\\\data\\\\data\"; Get-ChildItem -Path $dataPath | Where-Object {$_.PSIsContainer} | ForEach-Object { Write-Host \"Folder: $\\($_.Name\\)\"; \\(Get-ChildItem -Path $_.FullName -File\\).Count })",
+      "Bash(python -c ' *)",
+      "Bash(Get-ChildItem -Path \"E:\\\\UP-Election-Ontology-Engine\\\\data\\\\\" -Recurse -Force | Select-Object FullName, Length | Format-Table -AutoSize)",
+      "PowerShell(pip install xlrd==1.2.0 2>&1)",
+      "PowerShell(Get-ChildItem -Path \"e:\\\\UP-Election-Ontology-Engine\\\\etl\" -Force | Format-Table Name, @{Name=\"Type\";Expression={if\\($_.PSIsContainer\\){\"Folder\"}else{\"File\"}}} -AutoSize)",
+      "PowerShell(Get-ChildItem -Path \"e:\\\\UP-Election-Ontology-Engine\\\\data\" -Force | Format-Table Name, @{Name=\"Type\";Expression={if\\($_.PSIsContainer\\){\"Folder\"}else{\"File\"}}} -AutoSize)"
+    ]
+  }
+}
