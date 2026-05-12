@@ -44,7 +44,8 @@ def _load_classified(directory: Path) -> list[dict]:
 def _distribution_stats(records: list[dict]) -> dict:
     labels   = [r.get("classification", "unknown") for r in records]
     counts   = Counter(labels)
-    total    = max(len(records), 1)
+    total    = len(records)
+    divisor  = max(total, 1)
     by_month: dict[str, Counter] = defaultdict(Counter)
     for r in records:
         date_str = (r.get("upload_date") or r.get("published_at") or "")[:7]  # YYYY-MM
@@ -56,9 +57,9 @@ def _distribution_stats(records: list[dict]) -> dict:
         "pro_bjp_count":     counts.get("pro-BJP",  0),
         "anti_bjp_count":    counts.get("anti-BJP", 0),
         "neutral_count":     counts.get("neutral",  0),
-        "pro_bjp_pct":       round(100 * counts.get("pro-BJP",  0) / total, 1),
-        "anti_bjp_pct":      round(100 * counts.get("anti-BJP", 0) / total, 1),
-        "neutral_pct":       round(100 * counts.get("neutral",  0) / total, 1),
+        "pro_bjp_pct":       round(100 * counts.get("pro-BJP",  0) / divisor, 1),
+        "anti_bjp_pct":      round(100 * counts.get("anti-BJP", 0) / divisor, 1),
+        "neutral_pct":       round(100 * counts.get("neutral",  0) / divisor, 1),
         "by_month":          {k: dict(v) for k, v in sorted(by_month.items())},
     }
 

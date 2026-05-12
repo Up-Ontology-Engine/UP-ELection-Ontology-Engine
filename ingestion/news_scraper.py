@@ -1,10 +1,11 @@
 """
 Scrape local Hindi news from Jagran and Amar Ujala — Gorakhpur section.
-Usage: python -m ingestion.news_scraper [--validate] [--dry-run]
+Usage: python -m ingestion.news_scraper [--validate] [--dry-run] [--json]
 """
 from __future__ import annotations
-import os, time, random, hashlib, logging
-from datetime import datetime
+import json, os, time, random, hashlib, logging
+from datetime import datetime, timezone
+from pathlib import Path
 from typing import Iterator
 import requests
 from bs4 import BeautifulSoup
@@ -12,6 +13,14 @@ import sqlalchemy as sa
 from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
 
 logger = logging.getLogger(__name__)
+
+_REPO = Path(__file__).resolve().parents[1]
+NEWS_RAW_DIR      = _REPO / "data" / "Digital_Dataset" / "newspapers" / "raw"
+NEWS_PROC_DIR     = _REPO / "data" / "Digital_Dataset" / "newspapers" / "processed"
+NEWS_BY_SRC_DIR   = _REPO / "data" / "Digital_Dataset" / "newspapers" / "by_source"
+
+for _d in (NEWS_RAW_DIR, NEWS_PROC_DIR, NEWS_BY_SRC_DIR):
+    _d.mkdir(parents=True, exist_ok=True)
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
@@ -199,16 +208,73 @@ def validate_scrape(engine: sa.Engine, source: str = "jagran") -> dict:
     return results
 
 
-def run(dry_run: bool = False, validate_only: bool = False):
-    engine = sa.create_engine(os.environ["POSTGRES_URL"])
+def save_articles_json(articles: list[dict]) -> Path:
+    """Write raw scraped articles to newspapers/raw/articles_YYYYMMDD.json."""
+    today = datetime.now(timezone.utc).strftime("%Y%m%d")
+    out_path = NEWS_RAW_DIR / f"articles_{today}.json"
+    existing: list[dict] = []
+    if out_path.exists():
+        with open(out_path, encoding="utf-8") as f:
+            existing = json.load(f).get("articles", [])
+
+    seen_urls = {a["url"] for a in existing}
+    merged = existing + [a for a in articles if a["url"] not in seen_urls]
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(
+            {
+                "scraped_at": datetime.now(timezone.utc).isoformat(),
+                "total":      len(merged),
+                "articles":   merged,
+            },
+            f,
+            ensure_ascii=False,
+            indent=2,
+        )
+    logger.info(f"Saved {len(merged)} articles → {out_path}")
+    return out_path
+
+
+def classify_and_save_json(articles: list[dict]) -> Path:
+    """Classify articles and write to newspapers/processed/articles_classified_YYYYMMDD.json."""
+    from ingestion.classifier import classify_articles
+    classified = classify_articles(articles, use_zeroshot=False)
+    today = datetime.now(timezone.utc).strftime("%Y%m%d")
+    out_path = NEWS_PROC_DIR / f"articles_classified_{today}.json"
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(
+            {
+                "classified_at":       datetime.now(timezone.utc).isoformat(),
+                "total":               len(classified),
+                "classified_articles": classified,
+            },
+            f,
+            ensure_ascii=False,
+            indent=2,
+        )
+    logger.info(f"Classified {len(classified)} articles → {out_path}")
+    return out_path
+
+
+def run(dry_run: bool = False, validate_only: bool = False,
+        save_json: bool = False, classify: bool = False):
+    pg_url = os.environ.get("POSTGRES_URL", "")
+    engine: sa.Engine | None = None
+    if pg_url and not dry_run and not save_json:
+        try:
+            engine = sa.create_engine(pg_url)
+        except Exception as exc:
+            logger.warning(f"PostgreSQL not available: {exc}")
 
     if validate_only:
+        if engine is None:
+            logger.error("--validate requires POSTGRES_URL")
+            return
         for source in SOURCES:
             report = validate_scrape(engine, source["name"])
             logger.info(f"Validation [{source['name']}]: {report}")
         return
 
-    total = 0
+    all_articles: list[dict] = []
     for source in SOURCES:
         articles = list(scrape_source(source))
         logger.info(f"{source['name']}: scraped {len(articles)} articles")
@@ -216,19 +282,37 @@ def run(dry_run: bool = False, validate_only: bool = False):
             for a in articles[:3]:
                 logger.info(f"  DRY-RUN sample — {a['headline'][:60]} | {a['url']}")
             continue
-        n = load_to_postgres(articles, engine)
-        total += n
-        logger.info(f"{source['name']}: loaded {n} new articles")
+        all_articles.extend(articles)
 
-    if not dry_run:
-        logger.info(f"News ingestion complete. Total new: {total}")
+    if dry_run:
+        return
+
+    if save_json or classify:
+        save_articles_json(all_articles)
+
+    if classify:
+        classify_and_save_json(all_articles)
+
+    if engine:
+        total = 0
+        for a in all_articles:
+            total += load_to_postgres([a], engine)
+        logger.info(f"News ingestion complete. Total new in DB: {total}")
+    elif not save_json and not classify:
+        logger.warning("No POSTGRES_URL set and --json not used — articles not saved.")
+
+    logger.info(f"News ingestion complete. Total scraped: {len(all_articles)}")
 
 
 if __name__ == "__main__":
     import argparse
     logging.basicConfig(level=logging.INFO)
     parser = argparse.ArgumentParser(description="Gorakhpur news scraper")
-    parser.add_argument("--dry-run", action="store_true", help="Scrape but do not write to DB")
+    parser.add_argument("--dry-run",  action="store_true", help="Scrape but do not write")
     parser.add_argument("--validate", action="store_true", help="Run post-scrape validation only")
+    parser.add_argument("--json",     action="store_true", help="Save raw articles to newspapers/raw/")
+    parser.add_argument("--classify", action="store_true",
+                        help="Classify articles and save to newspapers/processed/")
     args = parser.parse_args()
-    run(dry_run=args.dry_run, validate_only=args.validate)
+    run(dry_run=args.dry_run, validate_only=args.validate,
+        save_json=args.json, classify=args.classify)

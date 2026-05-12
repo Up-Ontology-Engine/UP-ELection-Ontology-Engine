@@ -1,11 +1,81 @@
 {
-  "generated_at": "2026-05-09T10:53:57.311703+00:00",
-  "total": 1,
-  "pro_bjp_count": 0,
-  "anti_bjp_count": 0,
-  "neutral_count": 0,
-  "pro_bjp_pct": 0.0,
-  "anti_bjp_pct": 0.0,
-  "neutral_pct": 0.0,
-  "by_month": {}
+  "generated_at": "2026-05-12T10:57:48.525341+00:00",
+  "total": 831,
+  "pro_bjp_count": 494,
+  "anti_bjp_count": 85,
+  "neutral_count": 252,
+  "pro_bjp_pct": 59.4,
+  "anti_bjp_pct": 10.2,
+  "neutral_pct": 30.3,
+  "by_month": {
+    "2017-05": {
+      "pro-BJP": 1
+    },
+    "2018-01": {
+      "neutral": 1
+    },
+    "2018-03": {
+      "pro-BJP": 1
+    },
+    "2019-02": {
+      "pro-BJP": 1
+    },
+    "2021-05": {
+      "anti-BJP": 1
+    },
+    "2021-12": {
+      "pro-BJP": 1
+    },
+    "2022-02": {
+      "neutral": 1,
+      "pro-BJP": 1
+    },
+    "2023-04": {
+      "pro-BJP": 1,
+      "anti-BJP": 1
+    },
+    "2023-07": {
+      "pro-BJP": 4
+    },
+    "2024-02": {
+      "anti-BJP": 1
+    },
+    "2024-05": {
+      "neutral": 1,
+      "anti-BJP": 1
+    },
+    "2024-11": {
+      "anti-BJP": 1,
+      "neutral": 1
+    },
+    "2025-06": {
+      "neutral": 2,
+      "anti-BJP": 1
+    },
+    "2025-07": {
+      "pro-BJP": 2
+    },
+    "2025-08": {
+      "neutral": 1
+    },
+    "2025-09": {
+      "neutral": 1
+    },
+    "2025-10": {
+      "neutral": 1
+    },
+    "2025-12": {
+      "neutral": 1
+    },
+    "2026-01": {
+      "neutral": 1
+    },
+    "2026-02": {
+      "neutral": 2
+    },
+    "2026-04": {
+      "neutral": 2,
+      "pro-BJP": 1
+    }
+  }
 }

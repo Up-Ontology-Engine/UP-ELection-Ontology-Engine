@@ -1,23 +1,695 @@
 {
-  "generated_at": "2026-05-09T10:53:57.311703+00:00",
+  "generated_at": "2026-05-12T10:57:48.525341+00:00",
   "youtube_videos": {
-    "total": 1,
-    "pro_bjp_count": 0,
-    "anti_bjp_count": 0,
-    "neutral_count": 0,
-    "pro_bjp_pct": 0.0,
-    "anti_bjp_pct": 0.0,
-    "neutral_pct": 0.0,
-    "by_month": {}
+    "total": 831,
+    "pro_bjp_count": 494,
+    "anti_bjp_count": 85,
+    "neutral_count": 252,
+    "pro_bjp_pct": 59.4,
+    "anti_bjp_pct": 10.2,
+    "neutral_pct": 30.3,
+    "by_month": {
+      "2017-05": {
+        "pro-BJP": 1
+      },
+      "2018-01": {
+        "neutral": 1
+      },
+      "2018-03": {
+        "pro-BJP": 1
+      },
+      "2019-02": {
+        "pro-BJP": 1
+      },
+      "2021-05": {
+        "anti-BJP": 1
+      },
+      "2021-12": {
+        "pro-BJP": 1
+      },
+      "2022-02": {
+        "neutral": 1,
+        "pro-BJP": 1
+      },
+      "2023-04": {
+        "pro-BJP": 1,
+        "anti-BJP": 1
+      },
+      "2023-07": {
+        "pro-BJP": 4
+      },
+      "2024-02": {
+        "anti-BJP": 1
+      },
+      "2024-05": {
+        "neutral": 1,
+        "anti-BJP": 1
+      },
+      "2024-11": {
+        "anti-BJP": 1,
+        "neutral": 1
+      },
+      "2025-06": {
+        "neutral": 2,
+        "anti-BJP": 1
+      },
+      "2025-07": {
+        "pro-BJP": 2
+      },
+      "2025-08": {
+        "neutral": 1
+      },
+      "2025-09": {
+        "neutral": 1
+      },
+      "2025-10": {
+        "neutral": 1
+      },
+      "2025-12": {
+        "neutral": 1
+      },
+      "2026-01": {
+        "neutral": 1
+      },
+      "2026-02": {
+        "neutral": 2
+      },
+      "2026-04": {
+        "neutral": 2,
+        "pro-BJP": 1
+      }
+    }
   },
   "news_articles": {
-    "total": 1,
-    "pro_bjp_count": 0,
-    "anti_bjp_count": 0,
-    "neutral_count": 0,
-    "pro_bjp_pct": 0.0,
-    "anti_bjp_pct": 0.0,
-    "neutral_pct": 0.0,
-    "by_month": {}
+    "total": 792,
+    "pro_bjp_count": 69,
+    "anti_bjp_count": 462,
+    "neutral_count": 261,
+    "pro_bjp_pct": 8.7,
+    "anti_bjp_pct": 58.3,
+    "neutral_pct": 33.0,
+    "by_month": {
+      "2024-07": {
+        "neutral": 2
+      },
+      "2024-08": {
+        "neutral": 6
+      },
+      "2025-02": {
+        "neutral": 2
+      },
+      "Fri, 01": {
+        "anti-BJP": 1,
+        "neutral": 1
+      },
+      "Fri, 03": {
+        "neutral": 1
+      },
+      "Fri, 04": {
+        "neutral": 2,
+        "anti-BJP": 5
+      },
+      "Fri, 05": {
+        "pro-BJP": 1,
+        "anti-BJP": 2
+      },
+      "Fri, 08": {
+        "neutral": 3,
+        "anti-BJP": 22
+      },
+      "Fri, 09": {
+        "pro-BJP": 1
+      },
+      "Fri, 10": {
+        "neutral": 1,
+        "anti-BJP": 2
+      },
+      "Fri, 11": {
+        "anti-BJP": 11
+      },
+      "Fri, 12": {
+        "anti-BJP": 1
+      },
+      "Fri, 13": {
+        "pro-BJP": 1,
+        "neutral": 3,
+        "anti-BJP": 1
+      },
+      "Fri, 14": {
+        "anti-BJP": 1
+      },
+      "Fri, 16": {
+        "anti-BJP": 1
+      },
+      "Fri, 17": {
+        "anti-BJP": 2,
+        "neutral": 1
+      },
+      "Fri, 18": {
+        "anti-BJP": 1
+      },
+      "Fri, 19": {
+        "anti-BJP": 1
+      },
+      "Fri, 20": {
+        "neutral": 5,
+        "anti-BJP": 2
+      },
+      "Fri, 21": {
+        "anti-BJP": 2
+      },
+      "Fri, 24": {
+        "pro-BJP": 1,
+        "anti-BJP": 6,
+        "neutral": 1
+      },
+      "Fri, 25": {
+        "anti-BJP": 1
+      },
+      "Fri, 26": {
+        "anti-BJP": 5
+      },
+      "Fri, 27": {
+        "pro-BJP": 4,
+        "neutral": 2,
+        "anti-BJP": 2
+      },
+      "Fri, 28": {
+        "anti-BJP": 2,
+        "neutral": 1
+      },
+      "Fri, 29": {
+        "anti-BJP": 1
+      },
+      "Fri, 31": {
+        "anti-BJP": 1
+      },
+      "Fri, 6 ": {
+        "neutral": 2,
+        "anti-BJP": 1
+      },
+      "Fri, 8 ": {
+        "neutral": 1,
+        "pro-BJP": 1
+      },
+      "Mon, 04": {
+        "anti-BJP": 2,
+        "neutral": 1
+      },
+      "Mon, 05": {
+        "anti-BJP": 1
+      },
+      "Mon, 07": {
+        "anti-BJP": 5
+      },
+      "Mon, 08": {
+        "anti-BJP": 2
+      },
+      "Mon, 11": {
+        "neutral": 24,
+        "anti-BJP": 55
+      },
+      "Mon, 13": {
+        "neutral": 2,
+        "anti-BJP": 1
+      },
+      "Mon, 16": {
+        "neutral": 5,
+        "pro-BJP": 2
+      },
+      "Mon, 17": {
+        "neutral": 2,
+        "pro-BJP": 1
+      },
+      "Mon, 2 ": {
+        "neutral": 4
+      },
+      "Mon, 20": {
+        "neutral": 1,
+        "anti-BJP": 1
+      },
+      "Mon, 23": {
+        "neutral": 5,
+        "anti-BJP": 6
+      },
+      "Mon, 24": {
+        "anti-BJP": 1
+      },
+      "Mon, 25": {
+        "anti-BJP": 1
+      },
+      "Mon, 27": {
+        "anti-BJP": 4
+      },
+      "Mon, 28": {
+        "anti-BJP": 1
+      },
+      "Mon, 29": {
+        "neutral": 1
+      },
+      "Mon, 30": {
+        "neutral": 3,
+        "pro-BJP": 1
+      },
+      "Mon, 6 ": {
+        "anti-BJP": 1,
+        "neutral": 3,
+        "pro-BJP": 1
+      },
+      "Mon, 9 ": {
+        "neutral": 6,
+        "anti-BJP": 1
+      },
+      "Sat, 02": {
+        "anti-BJP": 1
+      },
+      "Sat, 05": {
+        "anti-BJP": 1
+      },
+      "Sat, 07": {
+        "anti-BJP": 1
+      },
+      "Sat, 08": {
+        "anti-BJP": 1
+      },
+      "Sat, 09": {
+        "anti-BJP": 30,
+        "neutral": 1
+      },
+      "Sat, 11": {
+        "pro-BJP": 1,
+        "neutral": 1,
+        "anti-BJP": 2
+      },
+      "Sat, 12": {
+        "anti-BJP": 1
+      },
+      "Sat, 13": {
+        "anti-BJP": 4
+      },
+      "Sat, 14": {
+        "neutral": 1,
+        "pro-BJP": 2
+      },
+      "Sat, 15": {
+        "anti-BJP": 1,
+        "neutral": 1
+      },
+      "Sat, 16": {
+        "anti-BJP": 5
+      },
+      "Sat, 18": {
+        "neutral": 1,
+        "anti-BJP": 3
+      },
+      "Sat, 2 ": {
+        "neutral": 1
+      },
+      "Sat, 21": {
+        "pro-BJP": 1,
+        "anti-BJP": 1
+      },
+      "Sat, 25": {
+        "anti-BJP": 1
+      },
+      "Sat, 26": {
+        "anti-BJP": 1
+      },
+      "Sat, 28": {
+        "neutral": 4,
+        "anti-BJP": 2
+      },
+      "Sat, 7 ": {
+        "neutral": 2
+      },
+      "Sun, 01": {
+        "anti-BJP": 1
+      },
+      "Sun, 02": {
+        "anti-BJP": 3
+      },
+      "Sun, 03": {
+        "anti-BJP": 4
+      },
+      "Sun, 05": {
+        "anti-BJP": 3,
+        "neutral": 1
+      },
+      "Sun, 07": {
+        "pro-BJP": 1,
+        "anti-BJP": 2
+      },
+      "Sun, 08": {
+        "anti-BJP": 1
+      },
+      "Sun, 09": {
+        "pro-BJP": 2,
+        "anti-BJP": 1
+      },
+      "Sun, 10": {
+        "anti-BJP": 25,
+        "neutral": 3
+      },
+      "Sun, 12": {
+        "neutral": 2
+      },
+      "Sun, 13": {
+        "neutral": 1
+      },
+      "Sun, 15": {
+        "neutral": 3,
+        "pro-BJP": 1,
+        "anti-BJP": 1
+      },
+      "Sun, 16": {
+        "anti-BJP": 3
+      },
+      "Sun, 18": {
+        "neutral": 1
+      },
+      "Sun, 19": {
+        "neutral": 1,
+        "anti-BJP": 2
+      },
+      "Sun, 20": {
+        "neutral": 1
+      },
+      "Sun, 21": {
+        "anti-BJP": 1
+      },
+      "Sun, 22": {
+        "pro-BJP": 3,
+        "neutral": 3,
+        "anti-BJP": 4
+      },
+      "Sun, 23": {
+        "anti-BJP": 1
+      },
+      "Sun, 26": {
+        "anti-BJP": 2
+      },
+      "Sun, 27": {
+        "anti-BJP": 2
+      },
+      "Sun, 28": {
+        "anti-BJP": 2
+      },
+      "Sun, 29": {
+        "neutral": 2,
+        "anti-BJP": 1
+      },
+      "Sun, 3 ": {
+        "neutral": 2
+      },
+      "Sun, 30": {
+        "anti-BJP": 2
+      },
+      "Sun, 5 ": {
+        "pro-BJP": 1,
+        "neutral": 1
+      },
+      "Sun, 8 ": {
+        "pro-BJP": 1,
+        "neutral": 1
+      },
+      "Thu, 01": {
+        "anti-BJP": 1
+      },
+      "Thu, 02": {
+        "anti-BJP": 1
+      },
+      "Thu, 03": {
+        "anti-BJP": 1,
+        "neutral": 2
+      },
+      "Thu, 04": {
+        "anti-BJP": 2
+      },
+      "Thu, 05": {
+        "anti-BJP": 1
+      },
+      "Thu, 06": {
+        "anti-BJP": 2
+      },
+      "Thu, 07": {
+        "anti-BJP": 12,
+        "neutral": 2
+      },
+      "Thu, 09": {
+        "anti-BJP": 1
+      },
+      "Thu, 10": {
+        "anti-BJP": 16
+      },
+      "Thu, 11": {
+        "anti-BJP": 1
+      },
+      "Thu, 12": {
+        "neutral": 5,
+        "anti-BJP": 1,
+        "pro-BJP": 1
+      },
+      "Thu, 13": {
+        "anti-BJP": 4
+      },
+      "Thu, 14": {
+        "anti-BJP": 1
+      },
+      "Thu, 16": {
+        "neutral": 1
+      },
+      "Thu, 17": {
+        "anti-BJP": 3,
+        "neutral": 1
+      },
+      "Thu, 19": {
+        "neutral": 4,
+        "anti-BJP": 4,
+        "pro-BJP": 2
+      },
+      "Thu, 2 ": {
+        "neutral": 2
+      },
+      "Thu, 20": {
+        "anti-BJP": 3,
+        "neutral": 1
+      },
+      "Thu, 22": {
+        "anti-BJP": 1
+      },
+      "Thu, 23": {
+        "neutral": 2,
+        "anti-BJP": 4,
+        "pro-BJP": 1
+      },
+      "Thu, 24": {
+        "pro-BJP": 1,
+        "anti-BJP": 1,
+        "neutral": 2
+      },
+      "Thu, 25": {
+        "anti-BJP": 2
+      },
+      "Thu, 26": {
+        "pro-BJP": 3,
+        "anti-BJP": 5,
+        "neutral": 1
+      },
+      "Thu, 27": {
+        "anti-BJP": 2,
+        "neutral": 1
+      },
+      "Thu, 29": {
+        "anti-BJP": 1,
+        "neutral": 1
+      },
+      "Thu, 30": {
+        "anti-BJP": 2
+      },
+      "Thu, 5 ": {
+        "anti-BJP": 2,
+        "neutral": 4
+      },
+      "Thu, 7 ": {
+        "neutral": 4
+      },
+      "Thu, 9 ": {
+        "pro-BJP": 1
+      },
+      "Tue, 01": {
+        "pro-BJP": 2,
+        "anti-BJP": 2
+      },
+      "Tue, 02": {
+        "anti-BJP": 2
+      },
+      "Tue, 03": {
+        "anti-BJP": 2
+      },
+      "Tue, 04": {
+        "anti-BJP": 9
+      },
+      "Tue, 05": {
+        "anti-BJP": 2
+      },
+      "Tue, 06": {
+        "neutral": 2
+      },
+      "Tue, 07": {
+        "anti-BJP": 2
+      },
+      "Tue, 10": {
+        "neutral": 5
+      },
+      "Tue, 12": {
+        "neutral": 18,
+        "pro-BJP": 5,
+        "anti-BJP": 34
+      },
+      "Tue, 13": {
+        "anti-BJP": 1
+      },
+      "Tue, 14": {
+        "neutral": 1,
+        "anti-BJP": 2
+      },
+      "Tue, 15": {
+        "neutral": 1
+      },
+      "Tue, 17": {
+        "neutral": 7,
+        "anti-BJP": 3,
+        "pro-BJP": 1
+      },
+      "Tue, 21": {
+        "anti-BJP": 1
+      },
+      "Tue, 23": {
+        "anti-BJP": 1
+      },
+      "Tue, 24": {
+        "neutral": 2,
+        "pro-BJP": 1,
+        "anti-BJP": 3
+      },
+      "Tue, 28": {
+        "anti-BJP": 2
+      },
+      "Tue, 3 ": {
+        "neutral": 2
+      },
+      "Tue, 30": {
+        "anti-BJP": 1
+      },
+      "Tue, 31": {
+        "neutral": 2,
+        "anti-BJP": 1
+      },
+      "Tue, 5 ": {
+        "pro-BJP": 4,
+        "neutral": 3
+      },
+      "Tue, 7 ": {
+        "neutral": 3,
+        "pro-BJP": 1
+      },
+      "Wed, 01": {
+        "neutral": 1
+      },
+      "Wed, 03": {
+        "pro-BJP": 1,
+        "anti-BJP": 1
+      },
+      "Wed, 04": {
+        "anti-BJP": 2
+      },
+      "Wed, 06": {
+        "anti-BJP": 5
+      },
+      "Wed, 07": {
+        "anti-BJP": 1,
+        "pro-BJP": 1
+      },
+      "Wed, 08": {
+        "anti-BJP": 3
+      },
+      "Wed, 09": {
+        "anti-BJP": 2
+      },
+      "Wed, 1 ": {
+        "pro-BJP": 1,
+        "neutral": 2,
+        "anti-BJP": 1
+      },
+      "Wed, 10": {
+        "anti-BJP": 1
+      },
+      "Wed, 11": {
+        "neutral": 5
+      },
+      "Wed, 12": {
+        "anti-BJP": 2
+      },
+      "Wed, 13": {
+        "anti-BJP": 2
+      },
+      "Wed, 14": {
+        "anti-BJP": 1,
+        "neutral": 1
+      },
+      "Wed, 15": {
+        "pro-BJP": 2,
+        "neutral": 2
+      },
+      "Wed, 16": {
+        "anti-BJP": 1,
+        "neutral": 1
+      },
+      "Wed, 17": {
+        "anti-BJP": 1
+      },
+      "Wed, 18": {
+        "neutral": 5,
+        "pro-BJP": 1,
+        "anti-BJP": 2
+      },
+      "Wed, 19": {
+        "neutral": 1
+      },
+      "Wed, 20": {
+        "anti-BJP": 1
+      },
+      "Wed, 22": {
+        "anti-BJP": 3
+      },
+      "Wed, 23": {
+        "pro-BJP": 2,
+        "anti-BJP": 1
+      },
+      "Wed, 25": {
+        "neutral": 5,
+        "pro-BJP": 1,
+        "anti-BJP": 7
+      },
+      "Wed, 28": {
+        "anti-BJP": 2,
+        "neutral": 1
+      },
+      "Wed, 29": {
+        "neutral": 2,
+        "pro-BJP": 1,
+        "anti-BJP": 4
+      },
+      "Wed, 31": {
+        "anti-BJP": 3
+      },
+      "Wed, 4 ": {
+        "neutral": 5,
+        "pro-BJP": 1
+      },
+      "Wed, 6 ": {
+        "pro-BJP": 2
+      }
+    }
   }
 }

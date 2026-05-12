@@ -386,6 +386,52 @@ def update_index(videos: list[dict]) -> Path:
     return index_path
 
 
+# ── classify existing raw data (no re-scrape) ────────────────────────────────
+def classify_existing_raw(dry_run: bool = False) -> list[dict]:
+    """
+    Read all videos from VIDEOS_RAW_DIR JSON files and classify them,
+    saving output to VIDEOS_PROC_DIR. No network calls.
+    """
+    all_videos: list[dict] = []
+    for f in sorted(VIDEOS_RAW_DIR.glob("*.json")):
+        try:
+            data = json.loads(f.read_text(encoding="utf-8"))
+            all_videos.extend(data.get("videos", []))
+        except Exception as exc:
+            logger.warning(f"Could not read {f}: {exc}")
+
+    videos = _dedup(all_videos)
+    logger.info(f"Loaded {len(videos)} unique videos from raw files")
+
+    if dry_run:
+        for v in videos[:3]:
+            logger.info(f"  DRY-RUN: {v['title'][:70]}")
+        return videos
+
+    try:
+        from ingestion.classifier import classify_videos
+        processed = classify_videos(videos, use_zeroshot=False)
+    except Exception as exc:
+        logger.error(f"Classification failed: {exc}")
+        return []
+
+    today = datetime.now(timezone.utc).strftime("%Y%m%d")
+    out_path = VIDEOS_PROC_DIR / f"videos_classified_{today}.json"
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(
+            {
+                "classified_at": datetime.now(timezone.utc).isoformat(),
+                "total":         len(processed),
+                "videos":        processed,
+            },
+            f,
+            ensure_ascii=False,
+            indent=2,
+        )
+    logger.info(f"Classified {len(processed)} videos → {out_path}")
+    return processed
+
+
 # ── entry point ───────────────────────────────────────────────────────────────
 def run(years_back: int = 10, max_per_query: int = 50,
         dry_run: bool = False, classify: bool = False) -> list[dict]:
@@ -438,8 +484,14 @@ if __name__ == "__main__":
                         help="Scrape one batch but do not save files")
     parser.add_argument("--classify", action="store_true",
                         help="Run BJP/neutral/anti-BJP classification after scraping")
+    parser.add_argument("--classify-existing", action="store_true",
+                        help="Classify already-scraped raw videos without re-scraping")
     args = parser.parse_args()
 
-    results = run(years_back=args.years, max_per_query=args.max,
-                  dry_run=args.dry_run, classify=args.classify)
-    print(f"\nDone. {len(results)} unique videos collected.")
+    if args.classify_existing:
+        results = classify_existing_raw(dry_run=args.dry_run)
+        print(f"\nDone. {len(results)} videos classified.")
+    else:
+        results = run(years_back=args.years, max_per_query=args.max,
+                      dry_run=args.dry_run, classify=args.classify)
+        print(f"\nDone. {len(results)} unique videos collected.")

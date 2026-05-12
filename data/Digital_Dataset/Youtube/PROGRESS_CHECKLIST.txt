@@ -60,10 +60,10 @@ STAGE 2 — NEWS SCRAPING MODULE
 
 [x] 2.4  Error handling & retry (3 attempts, exponential backoff 2-10 s)
 
-[ ] 2.5  Output JSON in newspapers/raw/
-         Status: news_scraper.py writes to PostgreSQL by default;
-         add --json flag or call save_raw() to get file output
-         (enhancement needed)
+[x] 2.5  Output JSON in newspapers/raw/ — IMPLEMENTED 2026-05-12
+         news_scraper.py now supports --json flag (saves to newspapers/raw/)
+         and --classify flag (classifies + saves to newspapers/processed/)
+         directories created: newspapers/{raw,processed,by_source}/
 
 ================================================================================
 STAGE 3 — NEWS CLASSIFICATION
@@ -86,8 +86,8 @@ STAGE 3 — NEWS CLASSIFICATION
 [x] 3.4  Confidence scoring (0.0–1.0) + per-label scores
          (pro_bjp_score, anti_bjp_score, neutral_score)
 
-[ ] 3.5  Output classified articles to newspapers/processed/
-         (wire news_scraper.py → classifier.py → save JSON)
+[x] 3.5  Output classified articles to newspapers/processed/ — IMPLEMENTED 2026-05-12
+         news_scraper.py --classify writes newspapers/processed/articles_classified_YYYYMMDD.json
 
 ================================================================================
 STAGE 4 — YOUTUBE VIDEO SCRAPING  ★ PRIMARY DELIVERY
@@ -139,13 +139,14 @@ STAGE 4 — YOUTUBE VIDEO SCRAPING  ★ PRIMARY DELIVERY
 ================================================================================
 STAGE 5 — VIDEO CLASSIFICATION
 ================================================================================
-[~] 5.1  classify_videos() in ingestion/classifier.py — READY
-         Run with:  python -m ingestion.youtube_videos --classify
+[x] 5.1  classify_videos() in ingestion/classifier.py — READY
+         Run with:  python -m ingestion.youtube_videos --classify-existing
          Output  :  videos/processed/videos_classified_YYYYMMDD.json
 
-[ ] 5.2  Full classification run on all 732 videos
-         (requires: pip install transformers torch  for best accuracy,
-          or runs keyword-based classifier immediately)
+[x] 5.2  Full classification run on all 831 videos — COMPLETED 2026-05-12
+         Method: keyword classifier (no transformers required)
+         Output: videos/processed/videos_classified_20260512.json
+         Results: pro-BJP=494 (59.4%), anti-BJP=85 (10.2%), neutral=252 (30.3%)
 
 ================================================================================
 STAGE 6 — YOUTUBE COMMENTS SCRAPING
@@ -184,8 +185,12 @@ STAGE 8 — ANALYSIS & INDEXING
              analysis/news_sentiment_summary.json
              analysis/combined_analysis.json
 
-[ ] 8.2  Run analysis after classification is complete
+[x] 8.2  Run analysis after classification is complete — COMPLETED 2026-05-12
          python -m ingestion.analyzer
+         Results updated in:
+           Youtube/analysis/sentiment_distribution.json   (831 videos)
+           analysis/news_sentiment_summary.json           (0 articles — run news scraper)
+           analysis/combined_analysis.json
 
 ================================================================================
 FILES CREATED / MODIFIED
@@ -222,7 +227,10 @@ HOW TO RUN (QUICK REFERENCE)
 # 1. Scrape YouTube videos (last 10 years, already done)
 python -m ingestion.youtube_videos --years 10 --max 50
 
-# 2. Scrape YouTube videos AND classify them
+# 1b. Classify already-scraped raw videos (no re-scrape, already done)
+python -m ingestion.youtube_videos --classify-existing
+
+# 2. Scrape YouTube videos AND classify them (fresh scrape)
 python -m ingestion.youtube_videos --years 10 --classify
 
 # 3. Fetch comments for all scraped videos
@@ -233,6 +241,9 @@ python -m ingestion.youtube_comments --classify
 
 # 5. Scrape news articles (dry run)
 python -m ingestion.news_scraper --dry-run
+
+# 5b. Scrape + save JSON + classify news
+python -m ingestion.news_scraper --json --classify
 
 # 6. Run analysis after classification
 python -m ingestion.analyzer
