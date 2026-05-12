@@ -1,19 +1,34 @@
 """
-YouTube comment ingestion using yt-dlp (no API key needed).
-Saves comments as JSON files per the Digital_Dataset directory structure.
-Optionally loads into PostgreSQL if POSTGRES_URL env var is set.
+YouTube comment ingestion for Gorakhpur political videos (10-year dataset, 831 videos).
+
+Primary engine  : youtube-comment-downloader (pure Python, no API key)
+Fallback engine : yt-dlp (if installed)
+
+Priority ordering for scraping:
+  P1 — videos with known comment_count > 0       (27 videos)
+  P2 — views > 50 000 (high engagement proxies)  (55 videos)
+  P3 — views 10 000–50 000                       (141 videos)
+  P4 — remaining videos                          (608 videos)
 
 Usage:
-    python -m ingestion.youtube_comments                   # from video_index
-    python -m ingestion.youtube_comments --classify        # classify after fetch
-    python -m ingestion.youtube_comments --video URL       # single video
+    python -m ingestion.youtube_comments                      # all videos, incremental
+    python -m ingestion.youtube_comments --max-videos 150     # top-150 by priority
+    python -m ingestion.youtube_comments --classify           # fetch + classify
+    python -m ingestion.youtube_comments --video URL          # single video
+    python -m ingestion.youtube_comments --classify-existing  # classify already-fetched
+    python -m ingestion.youtube_comments --stats              # show collection stats
 """
 from __future__ import annotations
-import os, json, time, random, hashlib, logging
-from pathlib import Path
+
+import hashlib
+import json
+import logging
+import os
+import random
+import time
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Optional
-import sqlalchemy as sa
 
 logger = logging.getLogger(__name__)
 
@@ -22,30 +37,127 @@ CACHE_DIR          = _REPO / "data" / "yt_cache"
 COMMENTS_RAW_DIR   = _REPO / "data" / "Digital_Dataset" / "Youtube" / "comments" / "raw"
 COMMENTS_PROC_DIR  = _REPO / "data" / "Digital_Dataset" / "Youtube" / "comments" / "processed"
 BY_VIDEO_DIR       = _REPO / "data" / "Digital_Dataset" / "Youtube" / "comments" / "by_video"
+ANALYSIS_DIR       = _REPO / "data" / "Digital_Dataset" / "Youtube" / "analysis"
 VIDEO_INDEX        = _REPO / "data" / "Digital_Dataset" / "Youtube" / "videos" / "metadata" / "video_index.json"
-SEEDS_FILE         = _REPO / "data" / "seeds" / "yt_video_seeds.json"
 
-for _d in (CACHE_DIR, COMMENTS_RAW_DIR, COMMENTS_PROC_DIR, BY_VIDEO_DIR):
+for _d in (CACHE_DIR, COMMENTS_RAW_DIR, COMMENTS_PROC_DIR, BY_VIDEO_DIR, ANALYSIS_DIR):
     _d.mkdir(parents=True, exist_ok=True)
 
 
-def fetch_comments_ytdlp(video_url: str, max_comments: int = 500) -> list[dict]:
-    """Download comments for a single video using yt-dlp. Returns list of comment dicts."""
+# ── priority-sorted video list ────────────────────────────────────────────────
+def load_videos_prioritised() -> list[dict]:
+    """Load all 831 videos sorted by scraping priority."""
+    if not VIDEO_INDEX.exists():
+        logger.warning("video_index.json not found — run youtube_videos.py first")
+        return []
+
+    vids: list[dict] = json.loads(VIDEO_INDEX.read_text(encoding="utf-8")).get("videos", [])
+
+    def _priority(v: dict) -> tuple[int, int]:
+        cc   = v.get("comment_count") or 0
+        views = v.get("views") or 0
+        if cc > 0:
+            return (0, -cc)           # P1: known comments — highest first
+        if views >= 50_000:
+            return (1, -views)        # P2: high-view videos
+        if views >= 10_000:
+            return (2, -views)        # P3: medium-view
+        return (3, -views)            # P4: lower-view
+
+    return sorted(vids, key=_priority)
+
+
+# ── already-scraped check ─────────────────────────────────────────────────────
+def _already_scraped(video_id: str) -> bool:
+    return (BY_VIDEO_DIR / f"{video_id}_comments.json").exists()
+
+
+# ── comment normalisation ──────────────────────────────────────────────────────
+def _normalise_ycd(comment: dict, video_id: str, video_meta: Optional[dict] = None) -> dict:
+    """Convert youtube-comment-downloader dict to our schema."""
+    text = (comment.get("text") or "").strip()
+    cid  = comment.get("cid") or hashlib.md5(text.encode()).hexdigest()[:12]
+
+    # parse relative time to ISO-ish
+    raw_time = comment.get("time") or ""
+    pub: Optional[str] = None
+    tp = comment.get("time_parsed")
+    if tp:
+        try:
+            pub = datetime.fromtimestamp(float(tp), tz=timezone.utc).isoformat()
+        except Exception:
+            pass
+
+    return {
+        "comment_id":    cid,
+        "video_id":      video_id,
+        "video_title":   (video_meta or {}).get("title", ""),
+        "channel":       (video_meta or {}).get("channel", ""),
+        "video_date":    (video_meta or {}).get("upload_date", ""),
+        "author":        comment.get("author", ""),
+        "author_channel":comment.get("channel", ""),
+        "text_raw":      text,
+        "like_count":    comment.get("votes") or 0,
+        "reply_count":   comment.get("replies") or 0,
+        "published_at":  pub,
+        "time_relative": raw_time,
+        "is_reply":      bool(comment.get("reply")),
+        "parent_id":     None,
+        "language":      "",
+        "content_hash":  hashlib.sha256(f"{video_id}:{cid}:{text}".encode()).hexdigest(),
+        "scraped_at":    datetime.now(timezone.utc).isoformat(),
+    }
+
+
+# ── primary fetcher: youtube-comment-downloader ───────────────────────────────
+def fetch_comments_ycd(
+    video_url: str,
+    max_comments: int = 200,
+    video_meta: Optional[dict] = None,
+) -> list[dict]:
+    """Fetch comments using youtube-comment-downloader (no API key, no yt-dlp)."""
     try:
-        import yt_dlp
+        from youtube_comment_downloader import YoutubeCommentDownloader, SORT_BY_POPULAR
     except ImportError:
-        logger.error("yt-dlp not installed. Run: pip install yt-dlp")
+        logger.error("youtube-comment-downloader not installed. Run: pip install youtube-comment-downloader")
         return []
 
     video_id = video_url.split("v=")[-1].split("&")[0]
     cache_file = CACHE_DIR / f"comments_{video_id}.json"
-
     if cache_file.exists():
-        logger.info(f"Cache hit (comments): {video_id}")
-        with open(cache_file, encoding="utf-8") as f:
-            return json.load(f)
+        logger.debug(f"Cache hit (comments): {video_id}")
+        return json.loads(cache_file.read_text(encoding="utf-8"))
 
-    ydl_opts = {
+    dl = YoutubeCommentDownloader()
+    comments: list[dict] = []
+    try:
+        import itertools
+        gen = dl.get_comments_from_url(video_url, sort_by=SORT_BY_POPULAR)
+        raw = list(itertools.islice(gen, max_comments))
+        comments = [_normalise_ycd(c, video_id, video_meta) for c in raw if c.get("text")]
+    except Exception as exc:
+        logger.warning(f"ycd failed [{video_id}]: {exc}")
+        return []
+
+    cache_file.write_text(json.dumps(comments, ensure_ascii=False, indent=2), encoding="utf-8")
+    logger.info(f"  {video_id}: {len(comments)} comments")
+    return comments
+
+
+# ── fallback fetcher: yt-dlp ──────────────────────────────────────────────────
+def fetch_comments_ytdlp(
+    video_url: str,
+    max_comments: int = 200,
+    video_meta: Optional[dict] = None,
+) -> list[dict]:
+    """Fallback comment fetcher using yt-dlp."""
+    try:
+        import yt_dlp
+    except ImportError:
+        return []
+
+    video_id = video_url.split("v=")[-1].split("&")[0]
+    opts = {
         "writecomments": True,
         "skip_download": True,
         "quiet": True,
@@ -53,53 +165,68 @@ def fetch_comments_ytdlp(video_url: str, max_comments: int = 500) -> list[dict]:
         "max_comments": [str(max_comments)],
         "ignoreerrors": True,
     }
-
-    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+    with yt_dlp.YoutubeDL(opts) as ydl:
         try:
-            info = ydl.extract_info(video_url, download=False)
-        except Exception as e:
-            logger.error(f"yt-dlp failed for {video_url}: {e}")
+            info = ydl.extract_info(video_url, download=False) or {}
+        except Exception as exc:
+            logger.warning(f"yt-dlp failed [{video_id}]: {exc}")
             return []
 
     comments: list[dict] = []
-    for c in (info or {}).get("comments", []):
-        ts = c.get("timestamp")
-        pub = (datetime.fromtimestamp(ts, tz=timezone.utc).isoformat()
-               if ts else None)
-        text = c.get("text", "").strip()
+    for c in info.get("comments", []):
+        ts  = c.get("timestamp")
+        pub = datetime.fromtimestamp(ts, tz=timezone.utc).isoformat() if ts else None
+        text = (c.get("text") or "").strip()
+        if not text:
+            continue
+        cid = c.get("id") or hashlib.md5(text.encode()).hexdigest()[:12]
         comments.append({
-            "comment_id":   c.get("id", hashlib.md5(text.encode()).hexdigest()[:12]),
-            "video_id":     video_id,
-            "author":       c.get("author", ""),
-            "author_id":    c.get("author_id", ""),
-            "text_raw":     text,
-            "like_count":   c.get("like_count", 0),
-            "reply_count":  c.get("reply_count", 0),
-            "published_at": pub,
-            "parent_id":    c.get("parent", None),
-            "is_reply":     bool(c.get("parent")),
-            "language":     "",   # filled by classifier if needed
+            "comment_id":    cid,
+            "video_id":      video_id,
+            "video_title":   (video_meta or {}).get("title", ""),
+            "channel":       (video_meta or {}).get("channel", ""),
+            "video_date":    (video_meta or {}).get("upload_date", ""),
+            "author":        c.get("author", ""),
+            "author_channel":"",
+            "text_raw":      text,
+            "like_count":    c.get("like_count") or 0,
+            "reply_count":   c.get("reply_count") or 0,
+            "published_at":  pub,
+            "time_relative": "",
+            "is_reply":      bool(c.get("parent")),
+            "parent_id":     c.get("parent"),
+            "language":      "",
+            "content_hash":  hashlib.sha256(f"{video_id}:{cid}:{text}".encode()).hexdigest(),
+            "scraped_at":    datetime.now(timezone.utc).isoformat(),
         })
-
-    with open(cache_file, "w", encoding="utf-8") as f:
-        json.dump(comments, f, ensure_ascii=False, indent=2)
-
-    logger.info(f"Fetched {len(comments)} comments from {video_id}")
-    time.sleep(random.uniform(3, 6))
     return comments
 
 
-def save_comments_json(video_id: str, comments: list[dict]) -> None:
-    """Save per-video comments to by_video/ and append to raw daily file."""
-    # per-video file
-    per_vid = BY_VIDEO_DIR / f"{video_id}_comments.json"
-    per_vid.write_text(
-        json.dumps({"video_id": video_id, "total": len(comments), "comments": comments},
-                   ensure_ascii=False, indent=2),
+def fetch_comments(
+    video_url: str,
+    max_comments: int = 200,
+    video_meta: Optional[dict] = None,
+) -> list[dict]:
+    """Primary: ycd, fallback: yt-dlp."""
+    comments = fetch_comments_ycd(video_url, max_comments, video_meta)
+    if not comments:
+        comments = fetch_comments_ytdlp(video_url, max_comments, video_meta)
+    return comments
+
+
+# ── persistence ───────────────────────────────────────────────────────────────
+def save_per_video(video_id: str, comments: list[dict]) -> None:
+    out = BY_VIDEO_DIR / f"{video_id}_comments.json"
+    out.write_text(
+        json.dumps(
+            {"video_id": video_id, "total": len(comments), "comments": comments},
+            ensure_ascii=False, indent=2
+        ),
         encoding="utf-8",
     )
 
-    # daily raw file
+
+def append_to_daily_raw(comments: list[dict]) -> Path:
     today = datetime.now(timezone.utc).strftime("%Y%m%d")
     daily = COMMENTS_RAW_DIR / f"comments_{today}.json"
     existing: list[dict] = []
@@ -108,123 +235,232 @@ def save_comments_json(video_id: str, comments: list[dict]) -> None:
             existing = json.loads(daily.read_text(encoding="utf-8")).get("comments", [])
         except Exception:
             pass
-    merged = existing + comments
+    seen = {c["content_hash"] for c in existing}
+    new  = [c for c in comments if c["content_hash"] not in seen]
+    merged = existing + new
     daily.write_text(
-        json.dumps({"scraped_at": datetime.now(timezone.utc).isoformat(),
-                    "total": len(merged), "comments": merged},
-                   ensure_ascii=False, indent=2),
+        json.dumps(
+            {"scraped_at": datetime.now(timezone.utc).isoformat(),
+             "total": len(merged), "comments": merged},
+            ensure_ascii=False, indent=2
+        ),
         encoding="utf-8",
+    )
+    return daily
+
+
+# ── classification ────────────────────────────────────────────────────────────
+def classify_and_save(comments: list[dict]) -> Path:
+    from ingestion.classifier import classify_comments
+    classified = classify_comments(comments, use_zeroshot=False)
+    today = datetime.now(timezone.utc).strftime("%Y%m%d")
+    out = COMMENTS_PROC_DIR / f"comments_classified_{today}.json"
+
+    existing: list[dict] = []
+    if out.exists():
+        try:
+            existing = json.loads(out.read_text(encoding="utf-8")).get("classified_comments", [])
+        except Exception:
+            pass
+    seen = {c.get("content_hash", c.get("comment_id", "")) for c in existing}
+    new  = [c for c in classified
+            if c.get("content_hash", c.get("comment_id", "")) not in seen]
+    merged = existing + new
+
+    out.write_text(
+        json.dumps(
+            {
+                "classified_at":       datetime.now(timezone.utc).isoformat(),
+                "total":               len(merged),
+                "classified_comments": merged,
+            },
+            ensure_ascii=False, indent=2
+        ),
+        encoding="utf-8",
+    )
+    logger.info(f"Classified → {out} ({len(merged)} total, {len(new)} new)")
+    return out
+
+
+def classify_existing() -> Path:
+    """Classify all comments already saved to by_video/."""
+    all_comments: list[dict] = []
+    for f in sorted(BY_VIDEO_DIR.glob("*_comments.json")):
+        try:
+            data = json.loads(f.read_text(encoding="utf-8"))
+            all_comments.extend(data.get("comments", []))
+        except Exception as exc:
+            logger.warning(f"Could not read {f}: {exc}")
+    logger.info(f"Loaded {len(all_comments)} comments from {len(list(BY_VIDEO_DIR.glob('*_comments.json')))} videos")
+    if not all_comments:
+        logger.warning("No comments to classify.")
+        return COMMENTS_PROC_DIR
+    return classify_and_save(all_comments)
+
+
+# ── analysis stats ────────────────────────────────────────────────────────────
+def write_analysis(classified_path: Path) -> None:
+    from collections import Counter, defaultdict
+    try:
+        data = json.loads(classified_path.read_text(encoding="utf-8"))
+    except Exception:
+        return
+    comments = data.get("classified_comments", [])
+    if not comments:
+        return
+
+    labels   = [c.get("classification", "unknown") for c in comments]
+    counts   = Counter(labels)
+    total    = len(comments)
+    divisor  = max(total, 1)
+    by_month: dict = defaultdict(Counter)
+    for c in comments:
+        ds = (c.get("published_at") or c.get("time_relative") or "")[:7]
+        if ds and len(ds) == 7:
+            by_month[ds][c.get("classification", "unknown")] += 1
+
+    # pro / anti breakdown
+    stats = {
+        "generated_at":     datetime.now(timezone.utc).isoformat(),
+        "total":            total,
+        "pro_bjp_count":    counts.get("pro-BJP",  0),
+        "anti_bjp_count":   counts.get("anti-BJP", 0),
+        "neutral_count":    counts.get("neutral",  0),
+        "pro_bjp_pct":      round(100 * counts.get("pro-BJP",  0) / divisor, 1),
+        "anti_bjp_pct":     round(100 * counts.get("anti-BJP", 0) / divisor, 1),
+        "neutral_pct":      round(100 * counts.get("neutral",  0) / divisor, 1),
+        "by_month":         {k: dict(v) for k, v in sorted(by_month.items())},
+        "videos_scraped":   len(list(BY_VIDEO_DIR.glob("*_comments.json"))),
+    }
+
+    out = ANALYSIS_DIR / "comment_sentiment_distribution.json"
+    out.write_text(json.dumps(stats, ensure_ascii=False, indent=2), encoding="utf-8")
+    logger.info(f"Analysis written → {out}")
+
+    # print summary
+    logger.info(
+        f"Comments: total={total} "
+        f"pro-BJP={stats['pro_bjp_count']} ({stats['pro_bjp_pct']}%) "
+        f"anti-BJP={stats['anti_bjp_count']} ({stats['anti_bjp_pct']}%) "
+        f"neutral={stats['neutral_count']} ({stats['neutral_pct']}%)"
     )
 
 
-def load_to_postgres(comments: list[dict], engine: sa.Engine) -> int:
-    if not comments:
-        return 0
-    loaded = 0
-    with engine.connect() as conn:
-        for c in comments:
-            text = c.get("text_raw", "").strip()
-            if not text:
-                continue
-            content_hash = hashlib.sha256(text.encode()).hexdigest()
-            try:
-                conn.execute(sa.text("""
-                    INSERT INTO yt_comments
-                      (comment_id, video_id, author, text_raw, like_count,
-                       published_at, content_hash)
-                    VALUES
-                      (:cid, :vid, :author, :text, :likes, :pub, :hash)
-                    ON CONFLICT (content_hash) DO NOTHING
-                """), {
-                    "cid":    c.get("comment_id") or content_hash[:20],
-                    "vid":    c.get("video_id"),
-                    "author": c.get("author", ""),
-                    "text":   text,
-                    "likes":  c.get("like_count", 0),
-                    "pub":    c.get("published_at"),
-                    "hash":   content_hash,
-                })
-                loaded += 1
-            except Exception as e:
-                logger.debug(f"Skip comment: {e}")
-        conn.commit()
-    return loaded
-
-
-def _load_video_urls() -> list[str]:
-    """Load video URLs from video_index.json or seeds file."""
-    if VIDEO_INDEX.exists():
+# ── stats display ─────────────────────────────────────────────────────────────
+def print_stats() -> None:
+    scraped = list(BY_VIDEO_DIR.glob("*_comments.json"))
+    total_scraped = len(scraped)
+    total_comments = 0
+    for f in scraped:
         try:
-            data = json.loads(VIDEO_INDEX.read_text(encoding="utf-8"))
-            urls = [v["url"] for v in data.get("videos", []) if v.get("url")]
-            if urls:
-                logger.info(f"Loaded {len(urls)} video URLs from index.")
-                return urls
-        except Exception as exc:
-            logger.warning(f"Could not read video index: {exc}")
-
-    if SEEDS_FILE.exists():
-        try:
-            urls = json.loads(SEEDS_FILE.read_text(encoding="utf-8"))
-            logger.info(f"Loaded {len(urls)} seed URLs.")
-            return urls
+            d = json.loads(f.read_text(encoding="utf-8"))
+            total_comments += d.get("total", 0)
         except Exception:
             pass
 
-    logger.warning("No video URLs found. Run youtube_videos.py first, or add seeds.")
-    return []
+    classified_files = list(COMMENTS_PROC_DIR.glob("comments_classified_*.json"))
+    classified_count = 0
+    if classified_files:
+        try:
+            d = json.loads(max(classified_files).read_text(encoding="utf-8"))
+            classified_count = d.get("total", 0)
+        except Exception:
+            pass
+
+    print(f"\n=== Comment Collection Stats ===")
+    print(f"  Videos scraped       : {total_scraped} / 831")
+    print(f"  Total comments       : {total_comments}")
+    print(f"  Classified comments  : {classified_count}")
+
+    analysis = ANALYSIS_DIR / "comment_sentiment_distribution.json"
+    if analysis.exists():
+        try:
+            s = json.loads(analysis.read_text(encoding="utf-8"))
+            print(f"\n=== Sentiment (classified comments) ===")
+            print(f"  pro-BJP  : {s['pro_bjp_count']:4d} ({s['pro_bjp_pct']}%)")
+            print(f"  anti-BJP : {s['anti_bjp_count']:4d} ({s['anti_bjp_pct']}%)")
+            print(f"  neutral  : {s['neutral_count']:4d} ({s['neutral_pct']}%)")
+        except Exception:
+            pass
 
 
-def run(video_urls: Optional[list[str]] = None, classify: bool = False,
-        use_postgres: bool = False) -> int:
-    urls = video_urls or _load_video_urls()
-    if not urls:
-        return 0
+# ── main orchestrator ──────────────────────────────────────────────────────────
+def run(
+    video_urls: Optional[list[str]] = None,
+    max_videos: int = 831,
+    max_per_video: int = 200,
+    classify: bool = False,
+    delay_min: float = 2.0,
+    delay_max: float = 4.0,
+    resume: bool = True,
+) -> int:
+    """
+    Scrape comments for up to max_videos videos (priority-ordered).
+    Returns total new comments collected.
+    """
+    if video_urls:
+        videos = [{"url": u, "video_id": u.split("v=")[-1].split("&")[0],
+                   "title": "", "channel": "", "upload_date": ""}
+                  for u in video_urls]
+    else:
+        videos = load_videos_prioritised()
 
-    engine: Optional[sa.Engine] = None
-    if use_postgres and os.environ.get("POSTGRES_URL"):
-        engine = sa.create_engine(os.environ["POSTGRES_URL"])
+    # Respect max_videos cap
+    videos = videos[:max_videos]
+    logger.info(f"Processing {len(videos)} videos (max_per_video={max_per_video})")
 
-    total_comments = 0
-    all_comments: list[dict] = []
+    total_new  = 0
+    batch_comments: list[dict] = []
+    batch_size = 25   # classify + write raw every N videos
 
-    for url in urls:
-        comments = fetch_comments_ytdlp(url)
-        if not comments:
+    for i, vid in enumerate(videos, 1):
+        vid_id = vid.get("video_id") or vid.get("url", "").split("v=")[-1].split("&")[0]
+        url    = vid.get("url") or f"https://www.youtube.com/watch?v={vid_id}"
+
+        if resume and _already_scraped(vid_id):
+            logger.debug(f"  [{i}/{len(videos)}] SKIP (already scraped): {vid_id}")
             continue
 
-        vid_id = url.split("v=")[-1].split("&")[0]
-        save_comments_json(vid_id, comments)
-        all_comments.extend(comments)
+        logger.info(
+            f"  [{i}/{len(videos)}] {vid_id} | "
+            f"views={vid.get('views',0):,} | {vid.get('title','')[:50]}"
+        )
 
-        if engine:
-            n = load_to_postgres(comments, engine)
-            logger.info(f"DB: loaded {n} new comments from {vid_id}")
+        comments = fetch_comments(url, max_per_video, vid)
+        if not comments:
+            # save empty file so we skip on resume
+            save_per_video(vid_id, [])
+            time.sleep(delay_min)
+            continue
 
-        total_comments += len(comments)
+        save_per_video(vid_id, comments)
+        append_to_daily_raw(comments)
+        batch_comments.extend(comments)
+        total_new += len(comments)
 
-    logger.info(f"Total comments collected: {total_comments}")
+        # classify + flush every batch_size videos
+        if classify and len(batch_comments) >= batch_size * max_per_video:
+            classify_and_save(batch_comments)
+            batch_comments = []
 
-    if classify and all_comments:
-        try:
-            from ingestion.classifier import classify_comments
-            classified = classify_comments(all_comments)
-            today = datetime.now(timezone.utc).strftime("%Y%m%d")
-            out = COMMENTS_PROC_DIR / f"comments_classified_{today}.json"
-            out.write_text(
-                json.dumps({"classified_at": datetime.now(timezone.utc).isoformat(),
-                            "total": len(classified),
-                            "classified_comments": classified},
-                           ensure_ascii=False, indent=2),
-                encoding="utf-8",
-            )
-            logger.info(f"Classified {len(classified)} comments → {out}")
-        except Exception as exc:
-            logger.warning(f"Classification skipped: {exc}")
+        time.sleep(random.uniform(delay_min, delay_max))
 
-    return total_comments
+    # classify any remaining batch
+    if classify and batch_comments:
+        classify_and_save(batch_comments)
+
+    logger.info(f"\nDone. New comments collected: {total_new}")
+
+    if classify:
+        classified_path = max(COMMENTS_PROC_DIR.glob("comments_classified_*.json"),
+                              default=None)
+        if classified_path:
+            write_analysis(classified_path)
+
+    return total_new
 
 
+# ── entry point ───────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     import argparse
     logging.basicConfig(
@@ -233,20 +469,46 @@ if __name__ == "__main__":
         handlers=[
             logging.StreamHandler(),
             logging.FileHandler(
-                Path(__file__).resolve().parents[1] / "logs" / "youtube_comments.log",
+                _REPO / "logs" / "youtube_comments.log",
                 encoding="utf-8",
             ),
         ],
     )
+
     parser = argparse.ArgumentParser(description="Gorakhpur YouTube comment scraper")
-    parser.add_argument("--video",    type=str, default=None,
-                        help="Single video URL to fetch comments for")
-    parser.add_argument("--classify", action="store_true",
-                        help="Run BJP/neutral/anti-BJP classification after fetching")
-    parser.add_argument("--postgres", action="store_true",
-                        help="Also write to PostgreSQL (requires POSTGRES_URL env var)")
+    parser.add_argument("--video",     type=str,  default=None,
+                        help="Single video URL")
+    parser.add_argument("--max-videos", type=int, default=831,
+                        help="Max videos to scrape (default: all 831)")
+    parser.add_argument("--max-per-video", type=int, default=200,
+                        help="Max comments per video (default: 200)")
+    parser.add_argument("--classify",  action="store_true",
+                        help="Classify comments after fetching")
+    parser.add_argument("--classify-existing", action="store_true",
+                        help="Classify already-fetched comments without scraping")
+    parser.add_argument("--stats",     action="store_true",
+                        help="Show collection statistics")
+    parser.add_argument("--no-resume", action="store_true",
+                        help="Re-scrape even already-scraped videos")
     args = parser.parse_args()
 
-    urls = [args.video] if args.video else None
-    total = run(video_urls=urls, classify=args.classify, use_postgres=args.postgres)
-    print(f"\nDone. {total} comments collected.")
+    if args.stats:
+        print_stats()
+
+    elif args.classify_existing:
+        path = classify_existing()
+        write_analysis(path)
+        print_stats()
+
+    else:
+        urls = [args.video] if args.video else None
+        total = run(
+            video_urls=urls,
+            max_videos=args.max_videos,
+            max_per_video=args.max_per_video,
+            classify=args.classify,
+            resume=not args.no_resume,
+        )
+        print(f"\nDone. {total} new comments collected.")
+        if args.classify:
+            print_stats()

@@ -1,0 +1,115 @@
+{
+  "generated_at": "2026-05-12T11:31:41.728946+00:00",
+  "total": 8166,
+  "pro_bjp_count": 1939,
+  "anti_bjp_count": 598,
+  "neutral_count": 5629,
+  "pro_bjp_pct": 23.7,
+  "anti_bjp_pct": 7.3,
+  "neutral_pct": 68.9,
+  "by_month": {
+    "2017-05": {
+      "neutral": 184,
+      "pro-BJP": 79,
+      "anti-BJP": 84
+    },
+    "2018-05": {
+      "neutral": 308,
+      "anti-BJP": 50,
+      "pro-BJP": 188
+    },
+    "2019-05": {
+      "anti-BJP": 25,
+      "neutral": 259,
+      "pro-BJP": 107
+    },
+    "2020-05": {
+      "neutral": 117,
+      "pro-BJP": 16,
+      "anti-BJP": 5
+    },
+    "2021-05": {
+      "pro-BJP": 76,
+      "neutral": 227,
+      "anti-BJP": 12
+    },
+    "2022-05": {
+      "pro-BJP": 861,
+      "neutral": 1808,
+      "anti-BJP": 259
+    },
+    "2023-05": {
+      "pro-BJP": 34,
+      "neutral": 230,
+      "anti-BJP": 22
+    },
+    "2024-05": {
+      "pro-BJP": 66,
+      "anti-BJP": 15,
+      "neutral": 307
+    },
+    "2025-05": {
+      "neutral": 382,
+      "anti-BJP": 30,
+      "pro-BJP": 51
+    },
+    "2025-06": {
+      "neutral": 8,
+      "pro-BJP": 3
+    },
+    "2025-07": {
+      "neutral": 71,
+      "anti-BJP": 7,
+      "pro-BJP": 18
+    },
+    "2025-08": {
+      "pro-BJP": 8,
+      "neutral": 19
+    },
+    "2025-09": {
+      "neutral": 15,
+      "pro-BJP": 4
+    },
+    "2025-10": {
+      "neutral": 153,
+      "pro-BJP": 50,
+      "anti-BJP": 5
+    },
+    "2025-11": {
+      "neutral": 84,
+      "anti-BJP": 5,
+      "pro-BJP": 8
+    },
+    "2025-12": {
+      "neutral": 67,
+      "anti-BJP": 6,
+      "pro-BJP": 14
+    },
+    "2026-01": {
+      "neutral": 166,
+      "pro-BJP": 40,
+      "anti-BJP": 19
+    },
+    "2026-02": {
+      "neutral": 92,
+      "pro-BJP": 20,
+      "anti-BJP": 7
+    },
+    "2026-03": {
+      "neutral": 436,
+      "pro-BJP": 109,
+      "anti-BJP": 21
+    },
+    "2026-04": {
+      "anti-BJP": 19,
+      "neutral": 505,
+      "pro-BJP": 129
+    },
+    "2026-05": {
+      "neutral": 191,
+      "anti-BJP": 7,
+      "pro-BJP": 58
+    }
+  },
+  "videos_scraped": 150
+}

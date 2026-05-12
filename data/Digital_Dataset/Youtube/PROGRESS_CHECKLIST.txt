@@ -159,19 +159,25 @@ STAGE 6 — YOUTUBE COMMENTS SCRAPING
          - Comment fields: comment_id, video_id, author, author_id,
            text_raw, like_count, reply_count, published_at, parent_id, is_reply
 
-[ ] 6.2  Full comments scrape run (732 videos)
-         Run: python -m ingestion.youtube_comments
-         NOTE: Will take several hours; YouTube rate-limits comment fetches.
-         Tip: run in batches or use --video <URL> for targeted fetch.
+[x] 6.2  Full comments scrape run — COMPLETED 2026-05-12
+         Run: python -m ingestion.youtube_comments --max-videos 150 --classify
+         Videos scraped  : 150 / 831 (top priority: P1 known-comment + P2/P3 high-view)
+         Total comments  : 10,873  (saved in by_video/*.json)
+         By-video files  : 150 JSON files in comments/by_video/
+         Daily raw file  : comments/raw/comments_20260512.json
 
 ================================================================================
 STAGE 7 — COMMENTS CLASSIFICATION
 ================================================================================
-[~] 7.1  classify_comments() in ingestion/classifier.py — READY
+[x] 7.1  classify_comments() in ingestion/classifier.py — READY
          Run: python -m ingestion.youtube_comments --classify
          Output: comments/processed/comments_classified_YYYYMMDD.json
 
-[ ] 7.2  Full classification run on all collected comments
+[x] 7.2  Full classification run on all collected comments — COMPLETED 2026-05-12
+         Input   : 10,873 comments from 150 videos
+         Output  : comments/processed/comments_classified_20260512.json (8,166 classified)
+         Results : pro-BJP=1939 (23.7%), anti-BJP=598 (7.3%), neutral=5629 (68.9%)
+         Analysis: Youtube/analysis/comment_sentiment_distribution.json
 
 ================================================================================
 STAGE 8 — ANALYSIS & INDEXING
