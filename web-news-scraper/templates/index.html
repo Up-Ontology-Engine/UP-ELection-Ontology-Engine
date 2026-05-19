@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gorakhpur Political Ontology Engine</title>
+  <meta name="description" content="Real-time political sentiment analysis and ontology mapping for Gorakhpur, Uttar Pradesh — powered by AI-driven newspaper scraping." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════ SIDEBAR ═══════════════════════ -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <div class="brand-icon">⚖️</div>
+    <div class="brand-text">
+      <span class="brand-name">PolitiSense</span>
+      <span class="brand-sub">Gorakhpur</span>
+    </div>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a href="#" class="nav-item active" data-section="dashboard" id="nav-dashboard">
+      <span class="nav-icon">📊</span><span class="nav-label">Dashboard</span>
+    </a>
+    <a href="#" class="nav-item" data-section="articles" id="nav-articles">
+      <span class="nav-icon">📰</span><span class="nav-label">Articles</span>
+    </a>
+    <a href="#" class="nav-item" data-section="entities" id="nav-entities">
+      <span class="nav-icon">🧠</span><span class="nav-label">Entities</span>
+    </a>
+    <a href="#" class="nav-item" data-section="topics" id="nav-topics">
+      <span class="nav-icon">🗂️</span><span class="nav-label">Topics</span>
+    </a>
+    <a href="#" class="nav-item" data-section="sources" id="nav-sources">
+      <span class="nav-icon">📡</span><span class="nav-label">Sources</span>
+    </a>
+    <a href="#" class="nav-item" data-section="ontology" id="nav-ontology">
+      <span class="nav-icon">🕸️</span><span class="nav-label">Ontology</span>
+    </a>
+    <a href="#" class="nav-item" data-section="search" id="nav-search">
+      <span class="nav-icon">🔍</span><span class="nav-label">Search</span>
+    </a>
+  </nav>
+
+  <div class="sidebar-footer">
+    <div class="status-badge" id="status-badge">
+      <span class="status-dot"></span>
+      <span id="status-text">Connecting…</span>
+    </div>
+    <div class="last-refresh" id="last-refresh">Last refresh: —</div>
+  </div>
+</aside>
+
+<!-- ═══════════════════════ MAIN ═══════════════════════ -->
+<main class="main-content" id="main-content">
+
+  <!-- ── TOP BAR ── -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="hamburger" id="hamburger">☰</button>
+      <div class="page-title" id="page-title">
+        <h1>Live Sentiment Dashboard</h1>
+        <p>Real-time political pulse of Gorakhpur</p>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <div class="search-mini">
+        <input type="text" id="quick-search" placeholder="Quick search…" />
+        <button id="quick-search-btn">🔍</button>
+      </div>
+      <button class="refresh-btn" id="refresh-btn" title="Refresh Data">
+        <span id="refresh-icon">↻</span> Refresh
+      </button>
+      <div class="article-count-badge">
+        <span id="article-count">0</span> articles
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════════ SECTIONS ══════════════ -->
+
+  <!-- ── DASHBOARD SECTION ── -->
+  <section class="section active" id="section-dashboard">
+
+    <!-- KPI Cards -->
+    <div class="kpi-grid">
+      <div class="kpi-card positive-kpi">
+        <div class="kpi-icon">😊</div>
+        <div class="kpi-body">
+          <div class="kpi-value" id="kpi-positive">—</div>
+          <div class="kpi-label">Positive Articles</div>
+          <div class="kpi-pct" id="kpi-positive-pct">— %</div>
+        </div>
+        <div class="kpi-glow positive-glow"></div>
+      </div>
+      <div class="kpi-card negative-kpi">
+        <div class="kpi-icon">😠</div>
+        <div class="kpi-body">
+          <div class="kpi-value" id="kpi-negative">—</div>
+          <div class="kpi-label">Negative Articles</div>
+          <div class="kpi-pct" id="kpi-negative-pct">— %</div>
+        </div>
+        <div class="kpi-glow negative-glow"></div>
+      </div>
+      <div class="kpi-card neutral-kpi">
+        <div class="kpi-icon">😐</div>
+        <div class="kpi-body">
+          <div class="kpi-value" id="kpi-neutral">—</div>
+          <div class="kpi-label">Neutral Articles</div>
+          <div class="kpi-pct" id="kpi-neutral-pct">— %</div>
+        </div>
+        <div class="kpi-glow neutral-glow"></div>
+      </div>
+      <div class="kpi-card total-kpi">
+        <div class="kpi-icon">📰</div>
+        <div class="kpi-body">
+          <div class="kpi-value" id="kpi-total">—</div>
+          <div class="kpi-label">Total Articles</div>
+          <div class="kpi-pct" id="kpi-overall-label">Overall: —</div>
+        </div>
+        <div class="kpi-glow total-glow"></div>
+      </div>
+    </div>
+
+    <!-- Charts Row 1 -->
+    <div class="charts-row">
+      <div class="chart-card wide">
+        <div class="chart-header">
+          <span class="chart-title">📈 Sentiment Timeline</span>
+          <span class="chart-subtitle">Daily distribution over time</span>
+        </div>
+        <div class="chart-body">
+          <canvas id="timelineChart"></canvas>
+        </div>
+      </div>
+      <div class="chart-card narrow">
+        <div class="chart-header">
+          <span class="chart-title">🥧 Sentiment Distribution</span>
+        </div>
+        <div class="chart-body">
+          <canvas id="donutChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charts Row 2 -->
+    <div class="charts-row">
+      <div class="chart-card medium">
+        <div class="chart-header">
+          <span class="chart-title">🔥 Trending Topics</span>
+        </div>
+        <div class="chart-body">
+          <canvas id="trendingChart"></canvas>
+        </div>
+      </div>
+      <div class="chart-card medium">
+        <div class="chart-header">
+          <span class="chart-title">👤 Top Entities by Mentions</span>
+        </div>
+        <div class="chart-body">
+          <canvas id="entityChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Latest Articles Preview -->
+    <div class="section-card">
+      <div class="card-header">
+        <span class="card-title">🗞️ Latest Gorakhpur News</span>
+        <button class="view-all-btn" onclick="switchSection('articles')">View All →</button>
+      </div>
+      <div class="articles-preview" id="preview-articles">
+        <div class="loading-state">
+          <div class="spinner"></div>
+          <p>Fetching latest articles…</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ARTICLES SECTION ── -->
+  <section class="section" id="section-articles">
+    <div class="section-toolbar">
+      <div class="filter-group">
+        <label>Sentiment:</label>
+        <select id="filter-sentiment">
+          <option value="">All</option>
+          <option value="Positive">😊 Positive</option>
+          <option value="Negative">😠 Negative</option>
+          <option value="Neutral">😐 Neutral</option>
+        </select>
+        <label>Source:</label>
+        <select id="filter-source">
+          <option value="">All Sources</option>
+        </select>
+        <label>Topic:</label>
+        <select id="filter-topic">
+          <option value="">All Topics</option>
+        </select>
+      </div>
+      <button class="apply-filters-btn" id="apply-filters-btn">Apply Filters</button>
+    </div>
+    <div class="articles-grid" id="articles-grid">
+      <div class="loading-state">
+        <div class="spinner"></div>
+        <p>Loading articles…</p>
+      </div>
+    </div>
+    <div class="pagination" id="pagination"></div>
+  </section>
+
+  <!-- ── ENTITIES SECTION ── -->
+  <section class="section" id="section-entities">
+    <div class="entity-hero">
+      <h2>Political Entity Tracker</h2>
+      <p>Monitor sentiment around political figures, parties and institutions</p>
+    </div>
+    <div class="entity-controls">
+      <div class="entity-tabs">
+        <button class="entity-tab active" data-type="">All</button>
+        <button class="entity-tab" data-type="person">Persons</button>
+        <button class="entity-tab" data-type="party">Parties</button>
+        <button class="entity-tab" data-type="issue">Issues</button>
+      </div>
+    </div>
+    <div class="entities-grid" id="entities-grid">
+      <div class="loading-state"><div class="spinner"></div><p>Loading entities…</p></div>
+    </div>
+  </section>
+
+  <!-- ── TOPICS SECTION ── -->
+  <section class="section" id="section-topics">
+    <div class="topics-hero">
+      <h2>Political Topic Analysis</h2>
+      <p>Topic classification across all scraped Gorakhpur news</p>
+    </div>
+    <div class="topics-chart-row">
+      <div class="chart-card full">
+        <div class="chart-header"><span class="chart-title">📊 Topic Frequency &amp; Sentiment</span></div>
+        <div class="chart-body tall">
+          <canvas id="topicBarChart"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="topics-grid" id="topics-grid">
+      <div class="loading-state"><div class="spinner"></div><p>Loading topics…</p></div>
+    </div>
+  </section>
+
+  <!-- ── SOURCES SECTION ── -->
+  <section class="section" id="section-sources">
+    <div class="sources-hero">
+      <h2>News Sources Monitor</h2>
+      <p>Coverage and sentiment breakdown by newspaper</p>
+    </div>
+    <div class="charts-row">
+      <div class="chart-card full">
+        <div class="chart-header"><span class="chart-title">📡 Articles per Source</span></div>
+        <div class="chart-body">
+          <canvas id="sourceChart"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="sources-grid" id="sources-grid">
+      <div class="loading-state"><div class="spinner"></div><p>Loading sources…</p></div>
+    </div>
+  </section>
+
+  <!-- ── ONTOLOGY SECTION ── -->
+  <section class="section" id="section-ontology">
+    <div class="ontology-hero">
+      <h2>Political Ontology Map</h2>
+      <p>Structured knowledge graph of Gorakhpur's political landscape</p>
+    </div>
+    <div class="ontology-content" id="ontology-content">
+      <div class="loading-state"><div class="spinner"></div><p>Loading ontology…</p></div>
+    </div>
+  </section>
+
+  <!-- ── SEARCH SECTION ── -->
+  <section class="section" id="section-search">
+    <div class="search-hero">
+      <h2>🔍 Live News Search</h2>
+      <p>Search Google News in real-time and run political analysis</p>
+    </div>
+    <div class="search-box-large">
+      <input type="text" id="search-input" placeholder="e.g. Yogi Adityanath Gorakhpur development…" />
+      <button id="search-btn">Search &amp; Analyze</button>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </section>
+
+</main>
+
+<!-- ── ARTICLE MODAL ── -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" id="article-modal">
+    <button class="modal-close" id="modal-close">✕</button>
+    <div class="modal-content" id="modal-content"></div>
+  </div>
+</div>
+
+<script src="/static/js/main.js"></script>
+</body>
+</html>

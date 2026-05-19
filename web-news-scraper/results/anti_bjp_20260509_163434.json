@@ -1,0 +1,620 @@
+{
+  "label": "ANTI-BJP",
+  "total": 25,
+  "articles": [
+    {
+      "title": "UP: अवैध संबंध और सुनियोजित साजिश का नतीजा था प्रिया शेट्टी हत्याकांड, प्रेमी, उसकी पत्नी और ससुर ने की हत्या",
+      "summary": "गोरखपुर के पीपीगंज थाना क्षेत्र में 30 जनवरी 2026 को बैरघट्टा पुल के पास मुंबई के वसई ईस्ट निवासी प्रिया शेट्टी की हत्या के मामले में पुलिस ने आठ मई 2026 को 778 पन्नों की विस्तृत चार्जशीट अदालत में दाखिल कर दी है।",
+      "url": "https://www.amarujala.com/gorakhpur/priya-shetty-murder-was-result-of-illicit-affair-and-planned-conspiracy-lover-family-named-in-chargesheet-2026-05-09",
+      "source": "Amar Ujala UP",
+      "language": "hi",
+      "published": "2026-05-09T03:27:50",
+      "topics": [
+        "Law and Order"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:00.405531",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -1,
+        "confidence": 1.0,
+        "pro_matched": [],
+        "anti_matched": [
+          "हत्या"
+        ]
+      }
+    },
+    {
+      "title": "Dubai Job Scam: Gorakhpur Youth Duped of ₹30.45 Lakh, Wanted Accused Arrested - The420.in",
+      "summary": "Dubai Job Scam: Gorakhpur Youth Duped of ₹30.45 Lakh, Wanted Accused Arrested The420.in",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9wQjczVHVpOVNZME0waG9SeGhPZG93aWF5bkJONXhrbGVibFU0eDVqRVJWbFgteGxpNjBMaEIyRFFTN2psVExSZENHb2F0OHpBekVMeDhCUkxweXlHQ2hCZksxTmhUbVFDYU1hUUl6UDZtZ0VGOFQ2NE1lTVA?oc=5",
+      "source": "GNews:gorakhpur unemployment jobs yo",
+      "language": "en",
+      "published": "2026-02-05T08:00:00",
+      "topics": [
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:07.677590",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -1,
+        "confidence": 1.0,
+        "pro_matched": [],
+        "anti_matched": [
+          "scam"
+        ]
+      }
+    },
+    {
+      "title": "How an aspiring doctor's murder by cattle thieves in Gorakhpur sparked a violent protest - India Today",
+      "summary": "How an aspiring doctor's murder by cattle thieves in Gorakhpur sparked a violent protest India Today",
+      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPTXU0NTV5T3JaYk14TkRXdWpkWW85VWl4VWJtdUxPZlFZRVltRWhocl9ZdGg4UllLUTlBUF9qLVI5Q3R2VXBFN0REcGRjbUtNM29WeUtJVTBkdWJHNFpZZTB5WDV3XzQ3dl9PbXhYUjNuLTBRUERjMTJOYzBWVlB5THFSTGotb1VKYmJ0Ykc0MlpTb2NWVVVrNTlfME5TejFfWTVrYjR5bjdzcVEzRTVPODJCQVZ4aHlMUW4yQlNUbEQ3amJKZTFubWdLZUZxWnQxUVE0Y3l1TFRMcFBQT2RGRHdFSU0wZkZzWng4bkV6RdIB9AFBVV95cUxQSmI3cUh4b1RUT0dJUGFNWmxPc1VpWnNjUG1vcU1CVHFXbERwR3pLOXpWU2N1R1FQN3dhRHpWRnRIN0xIcGM4dXJPOS1pZzRJNUVZWGVpRE5OSFByVXBIY1BGTlBCaEE0Z041RS0wd3BlVmtnMmZMM1RlMV9pWUNjRFdnNkdmWmQ2cmtwNG9ONnpCeUZpV0xQNGszM0wtUTNhWnhKcjZ4YVRJMTRzTzFSZlVJb2RwdEs5UVF0N3Jab3dHQ2Vmc0pVdVhwWUNnSGVaRXR0R1BZZlR2bER2R1NmSThTbkk1T19nQmIxdnBTc21MVUs5?oc=5",
+      "source": "GNews:gorakhpur crime law order poli",
+      "language": "en",
+      "published": "2025-09-18T07:00:00",
+      "topics": [
+        "Law and Order",
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:08.919789",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -1,
+        "confidence": 1.0,
+        "pro_matched": [],
+        "anti_matched": [
+          "murder"
+        ]
+      }
+    },
+    {
+      "title": "Doctor held for woman’s murder: Gorakhpur cops to approach Nepal for forensic evidence - The Indian Express",
+      "summary": "Doctor held for woman’s murder: Gorakhpur cops to approach Nepal for forensic evidence The Indian Express",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQVXRhZFdnTlJSRnBxa0pMQzRvSlpNUm5TeEVDVm9yQVlxdUlvU3IyVnQ1RlNHdlBUcHFSSmRRNTZVVmp6d2d2VWNEdGsyUzRrTTQtRG1fek1yZE5GTUg4b0t0ak9CTTgxbUkzbEhGVmVYTFduZi1NSDktcEpSTjJfS3F6ZmxyLU8yQTBkU3A2WFNKTkRkaERQZGZhRURTNzhlbDhVUV9BRzJjMzVYS1hYWnJFVmY1MUZ4bkZDb3g3Q08ybjZibmI4U29tQmVxUdIB1AFBVV95cUxPMTkwVjN1QXVYQVJqem1wSklkOVh6bXpRZmM2N3hrM2VTelA5YU1hRkJWNm0zQ2JvMmYxZFNHS1BIVTJBelM2eHB3VGNNNmduMWZZYllqYUlSYndjQWJPcFo4Q1ZHNVdISVBtbmV4VjFYNjhXNVNJQW5aby1COTM3UjU0T0FRbWhLSDdFODNMeUNKNGJRTXRXUWFqc2syVW52eE15akhfUS00VVJSU0VFVDA2aDQ2TmpzdTVqM0VYMlpmMkp2T1Vxcm9tX0ZqMENHbnlKQg?oc=5",
+      "source": "GNews:gorakhpur crime law order poli",
+      "language": "en",
+      "published": "2018-12-25T08:00:00",
+      "topics": [
+        "Law and Order",
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:08.933831",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -1,
+        "confidence": 1.0,
+        "pro_matched": [],
+        "anti_matched": [
+          "murder"
+        ]
+      }
+    },
+    {
+      "title": "Digital Payment Scam in Gorakhpur: 21 Named in ₹24 Crore Fake UPI Fraud Case - The420.in",
+      "summary": "Digital Payment Scam in Gorakhpur: 21 Named in ₹24 Crore Fake UPI Fraud Case The420.in",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNUGMtSzZmNTFNMm12MWtkb29mbEpFaDR6NEY4QUc3Zi1YcmE3M3diQVFoeHZqcUlJS2tUaWtoU216b29QTVhTTU15bkdveWVUX1BNUkVpbUdqUXFZZTMySlNPWFViS0EwU3NrTVVfSlFnN0FyR3NieWpUZEpXWTh2UTRzUXlSbzlKX2JLNEp3?oc=5",
+      "source": "GNews:gorakhpur corruption scam frau",
+      "language": "en",
+      "published": "2026-05-08T10:07:18",
+      "topics": [
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:16.943113",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 2,
+        "net": -2,
+        "confidence": 1.0,
+        "pro_matched": [],
+        "anti_matched": [
+          "scam",
+          "fraud"
+        ]
+      }
+    },
+    {
+      "title": "₹6.5 crore compensation fraud: CBI probes Kandla–Gorakhpur LPG pipeline project, raids multiple cities | Hindustan Times - Hindustan Times",
+      "summary": "₹6.5 crore compensation fraud: CBI probes Kandla–Gorakhpur LPG pipeline project, raids multiple cities | Hindustan Times Hindustan Times",
+      "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQdzJKSU5NZnZfcnJjNHdTeGQ5MDV4VXdhOTRzaWw3TlIwdC1qTjRXZTRiZlRlaXVOQTZoWkE4dEh3UXJhRHlyX3NudDZIenJFT2w4TldhTUotUk9YX0RTQTFvT3JMVWp3ZXhYQ0Y3a2tSTUJZVG1leU16QWJtVU1ibWlOajk2ZWx2cDBoZjI5b1pYa3A1MUtUbUZOWU9KUWprR0c5X3duMGI1eUZEQlJvczdFSFRnaFVZTjRfaW40d0JiUWZJM3pQRUZHLWdWak5KVnZ5Y2NrM1FkRTNyb19sQk1sd3Rtd1h2T1YzdUhNZGcxRFEtTTNOdmU0U3AzY2vSAYQCQVVfeXFMTzUzNWZVYko4TzVURndtaEVqaUphTWRRY25qZTdFTmFkS3FHQU1mZXBBLXhTSVY2WHdLUHZPM095dkdGVVlRRnBCZkE3aFk4aWZrOWViMFBUNkJRYW1GTnA5LWJRc212S21RN3lET3psd0hsNFNNV1hPYXdzMXVqWW14UjA5VHd1ZTE2Nm1KY0tPSUVwMVIyNWNqMVlvb3dyOTZEN3R4c0E1QWZaOUQ5V0VYQTdsTVZJd3dOR2UyQ09hc3BMcmdTVHhJT3lXVUFpaU02dFV3ZlR1b0doV3BIWTVpUFFvSkkzbXdvX3dJdXJqNkVBcW9LVUQzTUt3VndJVm5aY0w?oc=5",
+      "source": "GNews:gorakhpur corruption scam frau",
+      "language": "en",
+      "published": "2025-11-27T08:00:00",
+      "topics": [
+        "Corruption",
+        "Communal"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:16.945194",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -1,
+        "confidence": 1.0,
+        "pro_matched": [],
+        "anti_matched": [
+          "fraud"
+        ]
+      }
+    },
+    {
+      "title": "₹3 Crore E-Commerce Investment Scam Uncovered In Gorakhpur - The420.in",
+      "summary": "₹3 Crore E-Commerce Investment Scam Uncovered In Gorakhpur The420.in",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOS0tEQWt2SlVUb3Z1RXUwcl9PUGR3Z3VoWVlXZUNxaVhnMS1weC1yVkh1SFIxTDlKanRYUkdQYkN5eHhuWjVQNTJwdzU4QXpFRnQ2eHVhVnVham5BOWlWdG43VVN0bEdxbFRFQ184N0dJVVpib2trZHlmclhUU19nUG12cTVlTDVaWnBGcjMzYw?oc=5",
+      "source": "GNews:gorakhpur corruption scam frau",
+      "language": "en",
+      "published": "2026-04-02T07:00:00",
+      "topics": [
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:16.948367",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -1,
+        "confidence": 1.0,
+        "pro_matched": [],
+        "anti_matched": [
+          "scam"
+        ]
+      }
+    },
+    {
+      "title": "Fake Police Inspector Arrested in Gorakhpur Job Scam - The420.in",
+      "summary": "Fake Police Inspector Arrested in Gorakhpur Job Scam The420.in",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE0yRFFYcGl2Ry1la0ljYkFXM2NqS1lnUklQcEt1Nm9FdXZnUXJzbU9jdkI4ZWx0dE5QamdIYk5VeGszV3Y0bXR4ZDN1cGZQaEZlVXA0U2Q0YUc3VTNFZEplVDQ2SDFkUHVveThWekExQ0FZVTBBOUE?oc=5",
+      "source": "GNews:gorakhpur corruption scam frau",
+      "language": "en",
+      "published": "2026-02-11T08:00:00",
+      "topics": [
+        "Law and Order",
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:16.950498",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -1,
+        "confidence": 1.0,
+        "pro_matched": [],
+        "anti_matched": [
+          "scam"
+        ]
+      }
+    },
+    {
+      "title": "Fake Call Centre Racket Busted in Gorakhpur, Six Arrested for Defrauding 1,400 Foreign Nationals - The420.in",
+      "summary": "Fake Call Centre Racket Busted in Gorakhpur, Six Arrested for Defrauding 1,400 Foreign Nationals The420.in",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQVEJnU1VIelFlU3d6bDM3QVp6TXZqaXBrc1Jpb00yb0xXOENERGpxQThVTS1Od0ctRnhzaVZQNHk1QWkwYU9Qc1RwUGtlRU5KOGI3T25ENVF0RGl0QjNlNDlpd2xwemJ6dkR5Zk9Kc0VVWlJkTURiUVZELU1rNmJSODhn?oc=5",
+      "source": "GNews:gorakhpur corruption scam frau",
+      "language": "en",
+      "published": "2026-01-24T08:00:00",
+      "topics": [
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:16.952767",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -1,
+        "confidence": 1.0,
+        "pro_matched": [],
+        "anti_matched": [
+          "fraud"
+        ]
+      }
+    },
+    {
+      "title": "Fake IAS Officer Busted in Gorakhpur: Multi-State Fraud Network Exposed, Over 40 People Duped - The420.in",
+      "summary": "Fake IAS Officer Busted in Gorakhpur: Multi-State Fraud Network Exposed, Over 40 People Duped The420.in",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOZHdmNkw3dzNtZmsyRW41YlRaSnppNVVUd2tJVXc0OXdGQ0lDNzhzZ0ZuMlZ0LWpNT0UtOUhRNmV3ZTYyNHF6Tzd2UEIyYVdUUC1XTUxDT1J0ZGhaTXh0RFJYTmw0SWs5UTFpeW5rVTFrRndxeS1VUVhVU3FxYkZYWFN0b0JBUTRqc25BUF9oajBGeTgw?oc=5",
+      "source": "GNews:gorakhpur corruption scam frau",
+      "language": "en",
+      "published": "2025-12-12T08:00:00",
+      "topics": [
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:16.955586",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -1,
+        "confidence": 1.0,
+        "pro_matched": [],
+        "anti_matched": [
+          "fraud"
+        ]
+      }
+    },
+    {
+      "title": "‘IAS Officer’ Groom Scam: ₹30 Lakh Wedding Turns into Alleged Trafficking Plot in Gorakhpur - The420.in",
+      "summary": "‘IAS Officer’ Groom Scam: ₹30 Lakh Wedding Turns into Alleged Trafficking Plot in Gorakhpur The420.in",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQZXE5YlZQb0wxbTUxbW90X1hkV0hpYjdLRWlIUFNhcnhwNEs3SmF4WHpSQmpvMFNvcUVBWFZId3Y3UnUyc2ZTeEJ0emk0VXZ2NDVhdWx5MmNiM2EwUkw1cU4xeTc2NF9MWlNVa2dJZ0Etak9nZXhJaFEzcnJKOVIyc3JPc1NlQy1GVUh3RA?oc=5",
+      "source": "GNews:gorakhpur corruption scam frau",
+      "language": "en",
+      "published": "2026-03-22T07:00:00",
+      "topics": [
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:16.956643",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -1,
+        "confidence": 1.0,
+        "pro_matched": [],
+        "anti_matched": [
+          "scam"
+        ]
+      }
+    },
+    {
+      "title": "Gorakhpur Police Arrests Fake IAS Officer Gaurav Kumar in Multi-State Job Scam - The420.in",
+      "summary": "Gorakhpur Police Arrests Fake IAS Officer Gaurav Kumar in Multi-State Job Scam The420.in",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBYNUR5TUk1OHdzTHplR0hZb1V6TTFzUUdXbHlpTmZBa2hKZFRqQlJOaTRkUjFxOV8wTEYyeHF3QlNjLWhtbGdkdktSQnVBSjJ0YzBfb0JLcnNqNVFTLTF1VmJ0SU83TWRHbUQ2djc4ajJ5VGY2bEE?oc=5",
+      "source": "GNews:gorakhpur corruption scam frau",
+      "language": "en",
+      "published": "2025-12-10T08:00:00",
+      "topics": [
+        "Law and Order",
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:16.963863",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -1,
+        "confidence": 1.0,
+        "pro_matched": [],
+        "anti_matched": [
+          "scam"
+        ]
+      }
+    },
+    {
+      "title": "Gorakhpur cyber fraud: Paan masala owner impersonated, 2.7cr scammed - The Times of India",
+      "summary": "Gorakhpur cyber fraud: Paan masala owner impersonated, 2.7cr scammed The Times of India",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPMjhHQ3ZTREJzVzhPay1FT2pPYUFRUWJ5NF9PWFpqYjcyMW9xYVdVLXhSWDRRbTA3NmVLUVdpQ3paX0dUT1dxQURuS1hoN3NIX1Njd2xLTC1qbU8zbDRiT2djc2RHTjlpRzJXd2RKanltM2E0dXZMVmtKWUpVTVJDNkp4V2RHMEJOcXpXWGlhVlRZeEFjMjZkZ29VZHpQOGZwTlJNMElFZVJBMi02QmNscGhlbVpPZUlnNkpIbzQ4UVp5TU9lUktsRjFsM2JuRkgyX1RJM1A2YVVmSkljbUpyOdIB5gFBVV95cUxNWDBjQm0zaU9IbDdLdWNHbGtJQ20xRVdOa2ExU0lvT3FtMk1CNHRCUThJeHhReXB2VnRidHlUREFqN2lhTG9aU0ZDTzljSHp3VVJ6ZU1CRGJFRjhOVXZBTXVwYzhYSHBWZ0hSWkdGb0poLUt2Rk9GbUNWakFQYmV3bWl6T2JkVUc5MGs2R09DcEl1Q2J2Sm0wSWJ6dTctODM4VHZHell3MWZWc0c0Rk9MU3owZENNWjcwcERvdE04c195cElueEtRZzNjbnQteGFGNGx0YkVhVkFyVWlyaHFzbDRUZzVxUQ?oc=5",
+      "source": "GNews:gorakhpur corruption scam frau",
+      "language": "en",
+      "published": "2024-11-15T08:00:00",
+      "topics": [
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:16.965894",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 2,
+        "net": -2,
+        "confidence": 1.0,
+        "pro_matched": [],
+        "anti_matched": [
+          "scam",
+          "fraud"
+        ]
+      }
+    },
+    {
+      "title": "बिहार चुनाव के बाद विकास को गति: गोरखपुर-सिलीगुड़ी एक्सप्रेसवे पर काम तेज, इन 8 जिलों का होगा सीधा विकास - Navbharat Times",
+      "summary": "बिहार चुनाव के बाद विकास को गति: गोरखपुर-सिलीगुड़ी एक्सप्रेसवे पर काम तेज, इन 8 जिलों का होगा सीधा विकास Navbharat Times",
+      "url": "https://news.google.com/rss/articles/CBMiqwJBVV95cUxOMk1jYTktUEpvcXNfeVo1aDEySHJReXNjcmhFRVlnY2tQWE1XazlUdkh6ZEExUU40cnVucGc2S19tZmlMUXpTSmczUC1iaWJYS3AyeEVrODlGUEVLaTFCeVdSUU1QdVNHQ1FQSEhlZWRiVVZ3UVo2Q2J2NDdUd0N4TU9UNlZ1OVVEN1lrMHVwcXZodGR4T1BYWHpIM3RBQjRCZHlVeHhYaUwwaFpZZVhqdHpLR2o3bWFFVTFpRTdJTVd5LWlGT3hCTU5yWVNlUzVLTng3dEJRZDFBRno5aEpzVFVtSnR1UUp4V05UT0RVT0pCaW5VZjAyenZBUDkzSGdzd1lEdzBIWE5oVW9OZ2toZU5QdVdmZ1A5QmFfeXdueU92SzlNbHpZTTRoRdIBsAJBVV95cUxNejhjSzdFd284VW1PVlVnbnZYS2VQQzlPbmFDZ0ItQzZ5eThTbzh2TGxEeldUUWFpSWZJbUdaWWxoXzI5TFRkbG40dXhpU0FFeDdYZmVPNjI3OEJwTHNVM0ZnTGFESy14ZWNURUNiWXk3OW1ESUlTQUxzbjlsYnFrSlBOSHBKaUdCNTNvRDhtVFdXazJQR2JjQkV5VFk2NGdtclA3QnNUX0F5UVZKWUhaZFhVX1lIZEsydVV5R1NKNTVwS044cVhvZi1UemNPZkhOeWRNZGh2SXZ2NktmdmdZQ3dKNVRhRTQ3eGM4cjBEeUl5eUhZaC1kWEZ1MngySmhPaVNoelY0THhNZ0p1Vi1PQVZrLXA0SlRoblN1bnlGN0VjbGJLN3pBWFlJNnEzX2dB?oc=5",
+      "source": "GNews:गोरखपुर विकास योजना चुनाव",
+      "language": "hi",
+      "published": "2025-11-29T08:00:00",
+      "topics": [
+        "Development",
+        "Party Politics"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:23.219886",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -1,
+        "confidence": 1.0,
+        "pro_matched": [],
+        "anti_matched": [
+          "हार"
+        ]
+      }
+    },
+    {
+      "title": "EVM से विपक्ष जीते तो पुरुषार्थ, BJP जीते तो बेईमानी... गोरखपुर से CM योगी आदियनाथ ने ऐसे साधा 'बिहार' - Navbharat Times",
+      "summary": "EVM से विपक्ष जीते तो पुरुषार्थ, BJP जीते तो बेईमानी... गोरखपुर से CM योगी आदियनाथ ने ऐसे साधा 'बिहार' Navbharat Times",
+      "url": "https://news.google.com/rss/articles/CBMipwJBVV95cUxQRjVkUnFpYjJTZVBlaHBOVGJ2cDRTVTBLNGtGbGR5bnF6UHB4Q0s1X2s2TnNFSmMxNUNvVk05bUtwMlNYMW9VelFXT1EySHAxMG5XR05YSllMQUU0LUdUdlptdlhfeDd2NDg3RWVmZG9WTkZncFNrbWJKM2xadHNOaFpZMzI1S0Y3a0M3cmdMMUlLY2o4VGtxWTdCaVh0VWxhR2ZpY3hTS0Rwb3BRUS00ZFFyYUhPZjEzTDJ5ZUhHUV9yc2FOb0ZOeGRIMHlrOXRqMGtKalp0LXAyQS1YWFZzdWc2T0lZbWZfbHZOZjhmd2VGR3p0QnB5cVF2RU16ek5wSTNKNkMtVDJpcmRwY2FlcHhKcWcxSldKZUZDTUlCQW9CRnJDTS1F0gGsAkFVX3lxTFBHRGpYVzREcTZoNkZMX2w3Y1NsbVZORWtlLWJpNEh0VHVlZC1RclRRZExNMW1venlmVlJhM3JhUHNzVXFhNm50QldaM2VvNXhLdlJBUFREVVpHMTE4R3lpNjJUcXFxcEl3Nkh5Q0V2YklNS1pRQkRkUFdUN21GOFhvNXk0MkVSTXpkampLZUFLVzBYWU9BUktuWFRMbktRWXFFc01XSkM2Tjc4djlxNnFwTGVaZ3FTMDF5N0plVDVSUmNWZF90SktWc2Z3cjktWVR3NUpxV3pVQk8tR1lTS3NKd2d0c2Zkdk1TUk9IYkRTQ0FIc2Y2d0s2bWh5MVRqUTRFdERFM0hKS2M2MU51aEY1TDduLVpNaUJmVmFaTUdSZElZNThDOERXLWVpYQ?oc=5",
+      "source": "GNews:गोरखपुर विकास योजना चुनाव",
+      "language": "hi",
+      "published": "2025-09-04T07:00:00",
+      "topics": [
+        "Yogi Adityanath",
+        "Party Politics"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:23.227293",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -1,
+        "confidence": 1.0,
+        "pro_matched": [],
+        "anti_matched": [
+          "हार"
+        ]
+      }
+    },
+    {
+      "title": "'EVM से विपक्ष जीता तो पुरुषार्थ, भाजपा जीते तो बेईमानी...', गोरखपुर से बिहार चुनाव साध रहे सीएम योगी - Jagran",
+      "summary": "'EVM से विपक्ष जीता तो पुरुषार्थ, भाजपा जीते तो बेईमानी...', गोरखपुर से बिहार चुनाव साध रहे सीएम योगी Jagran",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQLWl3dUpfQ1hyWnkwSTB1RE83WWpZcVNwd0V0Nmc4RVUwS3Zqa2Q1OEdHUmNyWlJteXFKdmJrN0ZENmpVeXZCcDMxcFVqNjFvR3lCZ0REOTE3RGltQUkyaFRiVzB1UGFULWN3M2ViQlBKQ0NqTlJ1RmUtaTNzZXdGdTFPOTNBdWxtTHcxUm01NF9QTWJyYXlVYWpFeFlwaDdxM0piS1NoMXU4SmJIb0hSQVVBZFdOa3p5eWF2YVRRWFZzZl8yWUZyb1YwRzdGYTFFNmc?oc=5",
+      "source": "GNews:गोरखपुर विकास योजना चुनाव",
+      "language": "hi",
+      "published": "2025-09-04T07:00:00",
+      "topics": [
+        "Yogi Adityanath",
+        "Party Politics"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:23.229355",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -1,
+        "confidence": 1.0,
+        "pro_matched": [],
+        "anti_matched": [
+          "हार"
+        ]
+      }
+    },
+    {
+      "title": "Gorakhpur News: पिपराइच थाने के दरोगा और सिपाही पर भ्रष्टाचार का केस दर्ज, धमकी देकर वसूले थे 25000 रुपये - Amar Ujala",
+      "summary": "Gorakhpur News: पिपराइच थाने के दरोगा और सिपाही पर भ्रष्टाचार का केस दर्ज, धमकी देकर वसूले थे 25000 रुपये Amar Ujala",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOdGhFeEtTVXlzbnhHMGVubUpLLU5Vd0tnTDFfVEtNYWJNTW9iLWZIclk0bkdSekpjLVRCdHFQd2lROWtDRjhVV3RRVHpkVXJuNUZOTi1nUk81cHNpRXpuVXRKT2d6bWtqVW1tMU1QY0hOUHpLYUdDdGpCRlNlQnRnQWdkNVl6VTFVTG1rLTk1RDVTSEppTVp5SG05QlAyNml5eDNsU1hEdnlUMlZpSGp0ZkdYMlpNcl9maVlPcjZuMnRCQ0NvT3dmbNIBzgFBVV95cUxPbEtLa1JTN3lqUXhDREQ4emVOQV9xNlVlT2p5NTVkZlZLUWowa0hqSWpsb1NHbFVLZUR0OWY2ZnJFSS1UdjQ3UlBtb2tULWNpRGtKT2V2N2ZQMkctcTg0RjhGc2RrWExhSjRnYW51V2N5WG5fSUpWTDFhYzZTM0RpbnBCdm5zUnNuWnh2ZmNMajlhd1NWYkRkWFZVckt5OXVSTEx4NnlEMVhkQ1l1MDJVX0tSZEJWWTluR2dLR1pvSDNYUmdDQ0M0UTNsazl0UQ?oc=5",
+      "source": "GNews:गोरखपुर भ्रष्टाचार अपराध पुलिस",
+      "language": "hi",
+      "published": "2022-06-29T07:00:00",
+      "topics": [
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:26.542899",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -1,
+        "confidence": 1.0,
+        "pro_matched": [],
+        "anti_matched": [
+          "भ्रष्टाचार"
+        ]
+      }
+    },
+    {
+      "title": "Gorakhpur News: स्टिंग ऑपरेशन के दौरान भ्रष्टाचार के मिले पुख्ता सबूत, तीन दलाल हुए गिरफ्तार - ABP News",
+      "summary": "Gorakhpur News: स्टिंग ऑपरेशन के दौरान भ्रष्टाचार के मिले पुख्ता सबूत, तीन दलाल हुए गिरफ्तार ABP News",
+      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPS1NBa0RJdVJlN3dLQWdVTnRrNGt2anVzV19oY01rYmxhektQbGdRUDR4dElYREcyRXBZbXJNYWZacXJVTzY4T3RON1A1YUVOcjBIYVg3VHBvMTJ6TnRfV1puSWNkOC1iMDRiMUwyN2o5OEF5TEtSa1d4TzdBZFRfZjB3T0pGbjgwaEtCTE9mN252R0NYd0loWllRS2o1czltMkRqcVV6X2xFQ1NLTl84WWlFWTdMVjVtUEJNb1ZjY0txYjdScXZSdGNRYTJLbzB6UXlwdlhzZEd0eGVjR3huM1huYi02azZNM0dsWFBQWFpReTJRaXfSAfsBQVVfeXFMTnhfbVZvSWpLVVlFZnRfT1VLX1VZRThHd2JZVzU1SDJjaDNJc1FQdmVtUGpDY3ZvdGhZRTFvT0t3cF9VUzliWWVnSDhfekNqeGtUXzlpTlJFemNiWHhRRFZwQ01Jd2RJSHE2M3ppYWJPZGx1aUZmXzlXYVBVUGNtUTRIYzYxeHVVb0ZTWGVsTjZpR1VsNHNJdlpya05pQkdNQ3R3dGJFSGR0cXBiWDVIV0ZmNEtVaXlncFZIYWhmRFFKSXFQX1BWSGY1TERUSEYybzVEWEl0MDVWM3VpajY1Z19HS3BHbk8xYWpDRWhQYUgxdjBZaXFFdUZLWDA?oc=5",
+      "source": "GNews:गोरखपुर भ्रष्टाचार अपराध पुलिस",
+      "language": "hi",
+      "published": "2022-04-13T07:00:00",
+      "topics": [
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:26.544310",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -1,
+        "confidence": 1.0,
+        "pro_matched": [],
+        "anti_matched": [
+          "भ्रष्टाचार"
+        ]
+      }
+    },
+    {
+      "title": "Gorakhpur News: रजिस्ट्री ऑफिस और RTO में भ्रष्टाचार का मामला आया सामने, तीन गिरफ्तार - ABP News",
+      "summary": "Gorakhpur News: रजिस्ट्री ऑफिस और RTO में भ्रष्टाचार का मामला आया सामने, तीन गिरफ्तार ABP News",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQb3FmOWE5ZDVEd1NfUXkwbENxOXZMMXkxeTF2Umhmb29QTkJGYmJrcnJzeDJNNEo0N3Z2NWpaOHk0cXRqWjBTdjZoUHBYREZtZzduUjZSaU50TXEwelpHc294NUFlMzBHRk9ydmFFQ3pQVXItRGx3TEZ3VGswX1RIV2FrQlg2Q195dkllb3RSX3Z6VXZPeUU0OUVUYkJZWkNZOE43U1hKRmJzSmI1RjVlcUJrMjZ0XzhYbnRsTlpuUFVMT1ltc3VkbmNB0gHPAUFVX3lxTFBERkpWd3FNX2d0WnJ3UmtsWVN2YUctZGVtdVdxeGJhUGdGZldIWmZxa093ZmgydXpJWVYtNlU0dlFuQ2J0TlRJYkEzZ2Z3Z2FnT1JCZUczUFF1NUZ5a0VPOFdlM2NPU1VUMnc3U1pRV09xZU5LbkpPcS0wZUV0TVpwUVVGMzhjMTl6cThyVVpVbnNnSWh0b1RzVy1HNXRPV01Ibjg1MWx6ZjJIbWFHSFNjc2hEWTZ5UjdPVTRYa0p1TEs2SFQxczA4MW9McnI3TQ?oc=5",
+      "source": "GNews:गोरखपुर भ्रष्टाचार अपराध पुलिस",
+      "language": "hi",
+      "published": "2022-04-11T07:00:00",
+      "topics": [
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:26.549030",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -1,
+        "confidence": 1.0,
+        "pro_matched": [],
+        "anti_matched": [
+          "भ्रष्टाचार"
+        ]
+      }
+    },
+    {
+      "title": "गोरखपुर पुलिस पर भारी पड़ा फरार दरोगा: 6 महीने बाद भी गिरफ्तार नहीं कर सकी पुलिस, भ्रष्टाचार के आरोपित दरोग... - Dainik Bhaskar",
+      "summary": "गोरखपुर पुलिस पर भारी पड़ा फरार दरोगा: 6 महीने बाद भी गिरफ्तार नहीं कर सकी पुलिस, भ्रष्टाचार के आरोपित दरोग... Dainik Bhaskar",
+      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPTTZYd0ZXNVpzWXN6ZWxWaXREVWozdnFZdHlmc1VxY0xZOEprOFExMnl6TU9xbld2UGE0OE83QVhzandxMy1VdmVBMHl1c2RsYTV6RHRHU19Fc0ZwZmpvemJ4MnpnaVBWNGg4ckZJX3dMNnY3U2EwbTU2cjlFY1hPYVJ2RlRaTGxfcm5rTnVuOHJyNnhseDdab1FfSUtmR243RDFhWmxuQThYcU5HRG9DZjhEWWdyY1FQZHFPczBQRVpWZUd3dGIxWklDUnh2SDJqTVZtcVlvMTUxMV9EX3djbjZEYXItTU1nY3M3T3NR0gHzAUFVX3lxTE5hZ0VvMUtNWWFqd0NFN08yd25jTEtGR1VvMU1vZE9BSW55N3VhdnhIcy15MVlhQ3RJSXB6c0g1Vm9CRnU4WEVRMTd1Ql9NVWM5bzNFREFfZzU1ZnpxWFhjTWNQZXJNYkpFXzhsRVl1TDBKRV9ZLU9LLVAwVHNsLXhtb1RRQVB4NmVVRUlLa2JIR0RwTmFfanVabHEwZ0QybWtKZ0dPV0YySXAwRmhRbW1jelg3UTU2VEF6ZjdCTGNHSlNINTVzcktGZHlXM3prTlY3bDVLdTVJcmdUVXY1RzJlSWgyTTBWdTNGaDBxdzdzVUN3RQ?oc=5",
+      "source": "GNews:गोरखपुर भ्रष्टाचार अपराध पुलिस",
+      "language": "hi",
+      "published": "2021-06-29T17:29:28",
+      "topics": [
+        "Law and Order",
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:26.550097",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -1,
+        "confidence": 1.0,
+        "pro_matched": [],
+        "anti_matched": [
+          "भ्रष्टाचार"
+        ]
+      }
+    },
+    {
+      "title": "Gorakhpur News: दारोगा FIR दर्ज कराने के मांग रहा था रिश्‍वत, शिकायत पर विजलेंस टीम ने बनाया प्‍लान; चाय की दुकान पर रंगे हाथ गिरफ्तार - Inspector of Uruva police station arrested for taking bribe of Rs 10000 - Jagran",
+      "summary": "Gorakhpur News: दारोगा FIR दर्ज कराने के मांग रहा था रिश्‍वत, शिकायत पर विजलेंस टीम ने बनाया प्‍लान; चाय की दुकान पर रंगे हाथ गिरफ्तार - Inspector of Uruva police station arrested for taking bribe of Rs 10000 Jagran",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQNUFSVG4tVDJYUmRzbnFoa1ItSWRRV29qcVlNSFlIWGhfcTBkaTFGdjhHbUZXNy1HaE1VRXhFTGkzNFJZSlRoc3l0ODRodTB3SUUxS3Z2Mi1kLXBZbzNCVmhLMFJSVUI5cGFuTXNmNzBWWVdZVnJ2U0ZxU043ZC1saXNOWTlIM3c1VkM5UFVLTkVhNTNDNE52clhQbkdUVDJsSGtsSDR1SFlFUDJCSEhtUmZDZE1mcGVpN0ZuZGJ3SVhua2JMdHhBVnJMdDNFUWlpa2c?oc=5",
+      "source": "GNews:गोरखपुर भ्रष्टाचार अपराध पुलिस",
+      "language": "hi",
+      "published": "2024-08-21T07:00:00",
+      "topics": [
+        "Law and Order",
+        "Corruption"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:26.550097",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -1,
+        "confidence": 1.0,
+        "pro_matched": [],
+        "anti_matched": [
+          "bribe"
+        ]
+      }
+    },
+    {
+      "title": "Gorakhpur News: गगहा के चर्चित हत्याकांड में पुलिस का दावा, पैरवी और रंगदारी बनी हत्या की वजह - News18 Hindi",
+      "summary": "Gorakhpur News: गगहा के चर्चित हत्याकांड में पुलिस का दावा, पैरवी और रंगदारी बनी हत्या की वजह News18 Hindi",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQeGNmQ1BwZHNuS2FFeVhyeFZSeFpCU09ZOFc1M0pweUtsZVg5U0VpeVNTc21BYktHcVVfQTJDRTNGVlJUVmk0Zmc5cUpKbGp1czAtV1UyS3RMOW5BdDdJcl90c0U5Zm9EcUhMNnU0bzJveU1raEhNTnRfLUxFS0djZ1pZT3lOVzRIeHhoTVpsMlFsMFQ5MkpxdmVsbm5EUFBjUnB5NVpXc3U2cjl1T2oxbVl4NWxrUTkwY0tmdExpZ2V3bldrUkhkczRuY2pBLWFRNWI00gHYAUFVX3lxTFBzdHBqRTFiTm1zRm9idmdNNHFmOHFYZ3J5UFlDTXI4UWQwWWQ5Y2F0N2hSVmoyQjhxVVBYdEIwZ0Jma2FMU09UaV8xWjhkd19nVVRtRXlGeFlFMXpVem02cUZLMkRZdklzZXhESUFEcGlYNWVDLVM4ZUxHQmdobXIzb01pY0JtanZoN3p3Q1JMN1BzcXI1MGFSemFlNHR6eTU1d0hEaHlQbU55LUhmNFVTX004T1VYY0ttTXlDTGJKRV9ub2s4d2dVUXNSclJIbEpwM013MktDWQ?oc=5",
+      "source": "GNews:गोरखपुर भ्रष्टाचार अपराध पुलिस",
+      "language": "hi",
+      "published": "2021-04-04T07:00:00",
+      "topics": [
+        "Law and Order"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:26.553320",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -1,
+        "confidence": 1.0,
+        "pro_matched": [],
+        "anti_matched": [
+          "हत्या"
+        ]
+      }
+    },
+    {
+      "title": "गोरखपुर हत्याकांड को लेकर अखिलेश यादव ने योगी सरकार को घेरा, 'यूपी में कानून-व्यवस्था - ABP News",
+      "summary": "गोरखपुर हत्याकांड को लेकर अखिलेश यादव ने योगी सरकार को घेरा, 'यूपी में कानून-व्यवस्था ABP News",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNNDZfUUJWbWo2b3p3bExnZWZINk5vQjNpODlzaTNjY2o2bUJKMGJSeXVHRmd1Y2Z0Z1FzNkNYMW5Pa3FmTFpvRC04NUludXZaMVd4NEJxSUpid2NwcUhha1NWNFhuYUE1WFBWY0hwZ0NPcXk0aEZPaUIwSFNqYW1CRUs0Y1JGVXl6dXk2ZTVNNHFzM0JWd2NFbGQzR0VmemEtcGxmVDg4Tk5vTC15TFRGejlDUHFMbUhMN19nUU1Vb1ZMX2dUa1cxbGUtb2lpekZ3NWfSAdcBQVVfeXFMT3NGenVfTnRncHl0U2FZSUd4WWdObllTc00zUVRvWEdhalFCT2ZWWW5MWi1ocWF1NEtPU2ZaaHphQV81S0hSOWJEcVcydWJsTlQtSGdMbnJ3VmpUeF9WbS05WFVnbHowR2RRM2pIQVJENTFwbmQ0bmFnNnlZM1pvU1hKZXEtV01tUzZHODZVMHl4QlNIdDNoMGVOd1ZRZ2EzTDVCUC1yQ3ZXN3F0cEZhVkhfTGlTNG9BcnFDSG9vN1N2WTF4eEx6aGtiRXZpSFRJM0hqbXNQekk?oc=5",
+      "source": "GNews:गोरखपुर योगी आदित्यनाथ सरकार",
+      "language": "hi",
+      "published": "2026-03-17T07:00:00",
+      "topics": [
+        "Yogi Adityanath",
+        "Law and Order",
+        "Local Leaders"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:28.419321",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -1,
+        "confidence": 1.0,
+        "pro_matched": [],
+        "anti_matched": [
+          "हत्या"
+        ]
+      }
+    },
+    {
+      "title": "'BJP हमें अपनी हारी सीटें दे, हम जीत कर दिखाएंगे'; संजय निषाद ने गोरखपुर में दे दिया बड़ा ऑफर - Navbharat Times",
+      "summary": "'BJP हमें अपनी हारी सीटें दे, हम जीत कर दिखाएंगे'; संजय निषाद ने गोरखपुर में दे दिया बड़ा ऑफर Navbharat Times",
+      "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxPTHhMZEhCRUFxeFUxNl9kMmZJak85LVlaOWI3aE8tRTlFLWxNWGZVRnVZQmtSR3hLdjVHZTFHUktHZG5RMjdvVUF4OV9mQTBZQzVsVFp5ZnhEdWdkcHN3REFNVFlZUVFFc2dmVmZ0ZG1iUWxJM2hVNkMwdU9LNVMycXNIbnBtcHM1TjFCWWxRYmhrMDJOUklYMlkxTkxNR1BYU3BlTS0tVWVkakF3cERETDVWVTZBX2dKck42aHBNNnVySmRycmN2anN5bE10MTFublZVbFc3RVlrYk5hRzVTa2ppVk1JOXN1ZlViN1NSdFplTUgxVFNENGo4X09FZWVEYURnNV9TcXVqS0N1Vk4xbnZmc29GT3RH0gGeAkFVX3lxTE1Wbi05RV9LaVFTWlBNTUxqVDV6RzJHRW90bmh1cVZVTFZqNnllTFh2N2Juazh4eGk0dW4yblduR2tfVkgydGlxa3ZtOHdweG1RTGh4aTlWemdKTWNXS05QbkdiNjYyU1o1LW5BendFT1h6V29lR2F3Ykk0T2RmTHo3emcxTXpVcE1pWmVkckl0V2ZxMXJmN3RiVFB2N3RtTjFmSXRSTHJSU0hnUUN1M09pNzA0UU4zNTg1VlNxZVdpUXROVDJHeHFmeDNRV2kzT1pLdmZPdTlxMVg1OWxUNXFST3ZITEdqLWhPaXVaNTlsT2xxQ1ByUDA4dWV1WUZ2TW1iSDNjWGVNMTZ1bnp6TmljN2lxT3BybmY1eGg2cGc?oc=5",
+      "source": "GNews:गोरखपुर सपा भाजपा 2027 चुनाव",
+      "language": "hi",
+      "published": "2026-03-15T07:00:00",
+      "topics": [
+        "Party Politics"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:30.343103",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -1,
+        "confidence": 1.0,
+        "pro_matched": [],
+        "anti_matched": [
+          "हार"
+        ]
+      }
+    },
+    {
+      "title": "Dynamite News Hindi. . Gorakhpur में फर्जी अस्पतालों पर बड़ी कार्रवाई | एक्सक्लूसिव खबर का असर, अस्पताल सील #GorakhpurNews #FakeHospital #IllegalPathology #HealthDepartmentAction #ExclusiveNews #UPNews #PatientSafety - Facebook",
+      "summary": "Dynamite News Hindi. . Gorakhpur में फर्जी अस्पतालों पर बड़ी कार्रवाई | एक्सक्लूसिव खबर का असर, अस्पताल सील #GorakhpurNews #FakeHospital #IllegalPathology #HealthDepartmentAction #ExclusiveNews #UPNews #PatientSafety Facebook",
+      "url": "https://news.google.com/rss/articles/CBMiygZBVV95cUxQWXFmandNV21XemRpc0VYV3JoaXdHbGlQYURGLVoyYXZ1ZjZCRXExZ05ib0FMalkxTHlmcjJqQlY4NTdBZHJtZXFPZFItTDBQTFBhNXFlNnRsZ2w1eWc0LXVrcHc4UUlBOUFTR0FWblhkekFQRVE4eDJldmNZVlJuVmVmeXBwWDIxXzQ5aDluRW8zR2xySlBtZFpRS2Jlb0h5NlowRnpuYjQ3aHdQQkVLa0RSbjRmWFRIS1lMQUpqOXZERnlGM2JNUHdBY0dkWVFUUFBaNTJjQm5iOHNqallXT1ZaRG50UmFPaVVHMWVWMFFDaUtxcTVkdm1paDhkTzJIakNiOS1mMGh4SDJpLWRfa1hPWWl0Qi1lcVlrWlNqeGZ5WkZENlEtc1Fuc1ZNQnIyX2RxMVB5RDc5SEljd29yQmlrNFFuakR0cWFQTElWRkNGcy1OT1FVOGJMTVJJQjc3U3pIQkhObUwzRm9Ud0xoam14aDlUalNDbkNoS3l2NXdMT3otdVY5c0FXdkthOGxkZEVjbjVZMzB2T0JydXpWTi1DSFM2NTBOaFhZWU5HRXdrdjBEM0RaUDhPSkw1Sy1RV3R5Vnl5RFZ5aldNRTZua3lCdFkxYlB3VUl3eXlaNDNlTkRwblpGT1ZwejNTbXlSRjYtdVNIT2Jsbi1manNTNnhiaHlVT3NHXzVZU2RFTzlMZ3pQbVVYNy03aFYxQ21NSmFDNElQWmlUamgtQjJvZFpHbGNlMUhtdHZmUTJvRGtRVTNJLWZHX2NuY2lsWjh3R19yOGtsaUhhLVpVUHplZ3kxdFZvNVRxdTQ2Mm5CSnN5cGZ4MTNQZG5WMURpSkR5VFRmQ1NTT0hHUGdhekdNVnVPSFBBN0N6NVJqVnhzS0dfcUJibGZMVklCWWh5NUxySjkzd3BoZ3V2Um1aMDUxcml1S3A5WTZDanRqb1JJdWRqcVlmZ0Y3NzRaYm1VVTYyVDRySjR2TzAtRGNFUVJPN1ZXY2NGUHFzLUVWVGhGUkdMcDktUjI2bElDMXctNHNNSjl6UHp3bTJrWTcyUzRiSUwwVUhUcjF6cXV2YWRTRWU3Z0piWGtBNTgtWWd2OVZiTTVodHFQa1M0Zw?oc=5",
+      "source": "GNews:गोरखपुर स्वास्थ्य अस्पताल",
+      "language": "hi",
+      "published": "2025-12-16T08:00:00",
+      "topics": [
+        "Healthcare"
+      ],
+      "content": "",
+      "scraped_at": "2026-05-09T16:34:33.924508",
+      "bjp_sentiment": {
+        "label": "ANTI-BJP",
+        "pro": 0,
+        "anti": 1,
+        "net": -1,
+        "confidence": 1.0,
+        "pro_matched": [],
+        "anti_matched": [
+          "illegal"
+        ]
+      }
+    }
+  ]
+}
