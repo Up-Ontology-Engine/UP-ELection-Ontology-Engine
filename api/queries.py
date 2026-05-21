@@ -373,6 +373,35 @@ def get_booth_contradictions(booth_id: str) -> list[dict]:
     return [dict(r) for r in rows]
 
 
+# ── Voter segments (aggregated demographics, no PII) ─────────────────────────
+def get_booth_segments(booth_id: str) -> list[dict]:
+    """Aggregated demographic segments for a booth from electoral roll data."""
+    with get_pg_engine().connect() as conn:
+        rows = conn.execute(text("""
+            SELECT segment_type, count, pct_of_voters, computed_at
+            FROM booth_demographic_segments
+            WHERE booth_id = :bid
+            ORDER BY count DESC
+        """), {"bid": booth_id}).mappings().fetchall()
+    return [dict(r) for r in rows]
+
+
+# ── Conversion opportunity scores ──────────────────────────────────────────────
+def get_booth_conversion(booth_id: str) -> dict | None:
+    """Conversion opportunity scores and recommended action for a booth."""
+    with get_pg_engine().connect() as conn:
+        row = conn.execute(text("""
+            SELECT booth_id,
+                   persuasion_room_score, beneficiary_density_score,
+                   turnout_mobilization_score, service_risk_score,
+                   overall_conversion_score, recommended_action,
+                   action_reason, computed_at
+            FROM conversion_opportunity
+            WHERE booth_id = :bid
+        """), {"bid": booth_id}).mappings().fetchone()
+    return dict(row) if row else None
+
+
 # ── AC-level scheme overview ──────────────────────────────────────────────────
 def get_ac_schemes(ac_id: str) -> list[dict]:
     """Aggregated scheme gap analysis across all booths in an AC."""
