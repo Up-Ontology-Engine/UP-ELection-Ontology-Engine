@@ -1,24 +1,30 @@
 """
-AI-assisted political reasoning engine.
+Enhanced AI Political Reasoning Engine — UP Election Ontology Engine
 
-Takes a natural language question, generates Cypher via Sarvam when available
-(with the full Neo4j schema as context), falls back to Gemini otherwise,
-executes it, and returns structured results.
+Pipeline per question:
+  1. Neo4j: NL -> Cypher -> graph results
+  2. Web:   DuckDuckGo HTML + Wikipedia search
+  3. LLM:   Sarvam-30b synthesis of graph + web into a comprehensive answer
+  4. Return: rich response with answer, sources, mode, raw results
 
-Example questions:
-  "Show candidates with more than 2 criminal cases"
-  "Which party has the most YouTube coverage in Gorakhpur Urban?"
-  "Find booths where water is the top issue"
-  "Show BJP candidates ordered by net worth"
+LLM chain: Sarvam (primary) -> Gemini (fallback) -> plain summarisation
+Web search: DuckDuckGo HTML -> Wikipedia API (merged, deduplicated)
 """
 from __future__ import annotations
+
 import logging
 import os
 import re
-from functools import lru_cache
-from typing import Any, cast
+import time
+import urllib.parse
+from typing import Any
+
+import httpx
+from bs4 import BeautifulSoup
 
 logger = logging.getLogger(__name__)
+
+# ── Neo4j schema (for Cypher generation) ─────────────────────────────────────
 
 _SCHEMA = """
 NODE TYPES (with key properties):
@@ -61,13 +67,13 @@ GORAKHPUR CONTEXT:
 - election_year = 2022 for latest data
 """
 
-_SYSTEM_PROMPT = f"""You are a Cypher query generator for a political intelligence Neo4j graph about Gorakhpur, India.
+_CYPHER_SYSTEM = f"""You are a Cypher query generator for a political intelligence Neo4j graph about Gorakhpur, India.
 
 SCHEMA:
 {_SCHEMA}
 
 STRICT RULES:
-1. Output ONLY a valid Cypher query — no explanation, no markdown, no comments.
+1. Output ONLY a valid Cypher query -- no explanation, no markdown, no comments.
 2. Always include LIMIT (default 25 unless user asks for more, max 100).
 3. Return flat key-value pairs in RETURN clause (not whole nodes or maps).
 4. Use direct property access, not complex subqueries.
@@ -76,339 +82,387 @@ STRICT RULES:
 6. Never use undefined node types or properties.
 """
 
-_SARVAM_MODEL = os.environ.get("SARVAM_REASONING_MODEL", "sarvam-30b")
-_GEMINI_MODEL = os.environ.get("GOOGLE_REASONING_MODEL", "gemini-2.5-flash")
-_DEFAULT_AC_ID = os.environ.get("PILOT_AC_ID", "GKP_URBAN")
+_SYNTHESIS_SYSTEM = """You are an expert political intelligence analyst for Gorakhpur Urban Assembly Constituency (AC-322), Uttar Pradesh, India.
 
+You have access to a proprietary knowledge graph with booth-level voter data, issue tracking, digital pulse scores, and candidate information -- and live web search results about Indian politics and UP elections.
 
-@lru_cache(maxsize=1)
-def _get_sarvam_client():
+RESPONSE RULES:
+- Answer the question directly in the FIRST sentence
+- Quote specific numbers and percentages when available from the data
+- When using graph data, say "Our constituency database shows..."
+- When using web data, briefly attribute it: "According to [source name]..."
+- Be analytical and objective -- no party bias
+- Keep responses to 2-4 tight paragraphs; bullets only when listing 3+ items
+- If graph and web data conflict, note the discrepancy explicitly
+- If neither source can answer, say so clearly and suggest what would help
+
+Always end with one actionable insight relevant to electoral strategy or governance."""
+
+# ── Shared HTTP client ────────────────────────────────────────────────────────
+
+_HTTP_CLIENT = httpx.Client(timeout=30, follow_redirects=True)
+
+_SARVAM_BASE  = "https://api.sarvam.ai/v1"
+_SARVAM_MODEL = os.environ.get("SARVAM_REASONING_MODEL", "sarvam-m")
+
+# ── LLM calls ────────────────────────────────────────────────────────────────
+
+def _call_sarvam(messages: list[dict], max_tokens: int = 2500) -> str:
     api_key = os.environ.get("SARVAM_API_KEY")
     if not api_key:
-        raise RuntimeError("SARVAM_API_KEY is not set")
-    from sarvamai import SarvamAI
+        raise RuntimeError("SARVAM_API_KEY not set")
+    resp = _HTTP_CLIENT.post(
+        f"{_SARVAM_BASE}/chat/completions",
+        headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+        json={
+            "model": _SARVAM_MODEL,
+            "messages": messages,
+            "temperature": 0.3,
+            "max_tokens": max_tokens,
+        },
+        timeout=90,
+    )
+    resp.raise_for_status()
+    msg = resp.json()["choices"][0]["message"]
+    # Sarvam-30b is a reasoning model; answer is in `content` after thinking completes
+    return (msg.get("content") or msg.get("reasoning_content") or "").strip()
 
-    return SarvamAI(api_subscription_key=api_key)
+
+def _call_gemini(system: str, user: str, max_tokens: int = 1024) -> str:
+    from google import genai
+    from google.genai import types
+    client = genai.Client(api_key=os.environ["GOOGLE_API_KEY"])
+    resp = client.models.generate_content(
+        model=os.environ.get("GOOGLE_REASONING_MODEL", "gemini-2.5-flash"),
+        config=types.GenerateContentConfig(
+            system_instruction=system,
+            temperature=0.3,
+            max_output_tokens=max_tokens,
+        ),
+        contents=user,
+    )
+    return (resp.text or "").strip()
 
 
-def _clean_model_output(raw: str) -> str:
+def _clean_cypher(raw: str) -> str:
     raw = raw.strip()
-    if not raw:
-        raise ValueError("LLM returned empty response")
-    # Strip any accidental markdown fences
     raw = re.sub(r"^```(?:cypher)?\s*", "", raw, flags=re.MULTILINE)
     raw = re.sub(r"```\s*$", "", raw, flags=re.MULTILINE)
     return raw.strip()
 
 
-def _generate_cypher_with_sarvam(question: str) -> str:
-    client = _get_sarvam_client()
-    resp = client.chat.completions(
-        model=_SARVAM_MODEL,
-        messages=[
-            {"role": "system", "content": _SYSTEM_PROMPT},
-            {"role": "user", "content": f"Generate Cypher for: {question}"},
-        ],
-        temperature=0.0,
-        top_p=1,
-        max_tokens=500,
-    )
-    raw = getattr(resp.choices[0].message, "content", "") or ""
-    return _clean_model_output(raw)
-
-
-def _generate_cypher_with_gemini(question: str) -> str:
-    from google import genai  # type: ignore[import-not-found]
-    from google.genai import types  # type: ignore[import-not-found]
-
-    client = genai.Client(api_key=os.environ["GOOGLE_API_KEY"])
-    resp = client.models.generate_content(
-        model=_GEMINI_MODEL,
-        config=types.GenerateContentConfig(
-            system_instruction=_SYSTEM_PROMPT,
-            temperature=0.0,
-            max_output_tokens=500,
-        ),
-        contents=f"Generate Cypher for: {question}",
-    )
-    return _clean_model_output(resp.text or "")
-
-
 def generate_cypher(question: str) -> str:
-    """Generate Cypher using Sarvam first, then Gemini as fallback."""
-    if os.environ.get("SARVAM_API_KEY"):
-        try:
-            return _generate_cypher_with_sarvam(question)
-        except Exception as exc:
-            logger.warning("Sarvam reasoning failed, falling back to Gemini: %s", exc)
-    return _generate_cypher_with_gemini(question)
+    msgs = [
+        {"role": "system", "content": _CYPHER_SYSTEM},
+        {"role": "user", "content": f"Generate Cypher for: {question}"},
+    ]
+    try:
+        return _clean_cypher(_call_sarvam(msgs, max_tokens=2000))
+    except Exception as e:
+        logger.warning("Sarvam Cypher gen failed (%s), trying Gemini", e)
+    return _clean_cypher(_call_gemini(_CYPHER_SYSTEM, f"Generate Cypher for: {question}", 500))
 
 
 def execute_cypher(cypher: str) -> list[dict[str, Any]]:
-    """Run Cypher against Neo4j; return results as list of plain dicts."""
     from .db import get_neo4j_session
     with get_neo4j_session() as session:
-        result = session.run(cast(Any, cypher))
+        result = session.run(cypher)
         return [dict(record) for record in result]
 
 
-def _fetch_latest_booth_rows(ac_id: str) -> list[dict[str, Any]]:
-    from sqlalchemy import text
-    from .db import get_pg_engine
-    from .queries import _rac
+# ── Web Search ────────────────────────────────────────────────────────────────
 
-    resolved = _rac(ac_id)
-    with get_pg_engine().connect() as conn:
-        rows = conn.execute(text("""
-            SELECT
-                b.booth_id,
-                b.booth_number,
-                b.polling_station_name AS name,
-                bm.bjp_pulse_score,
-                bm.opp_pulse_score,
-                bm.digital_lean_label,
-                bm.top_issue,
-                bm.confidence_label,
-                bm.event_count
-            FROM booth_master b
-            LEFT JOIN LATERAL (
-                SELECT bjp_pulse_score, opp_pulse_score, digital_lean_label,
-                       top_issue, confidence_label, event_count
-                FROM booth_metrics
-                WHERE booth_id = b.booth_id
-                ORDER BY window_start DESC
-                LIMIT 1
-            ) bm ON TRUE
-            WHERE b.ac_id = :ac_id
-              AND b.booth_id NOT LIKE '%_TOTAL'
-            ORDER BY b.booth_number
-        """), {"ac_id": resolved}).mappings().fetchall()
-    return [dict(row) for row in rows]
+_WEB_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"
+    ),
+    "Accept-Language": "en-US,en;q=0.9",
+}
+_WIKI_UA = "UP-EOM-Research/1.0 (political intelligence; open-source) httpx/0.28"
 
 
-def _fetch_booth_narratives(ac_id: str, narrative_type: str) -> list[dict[str, Any]]:
-    from sqlalchemy import text
-    from .db import get_pg_engine
-    from .queries import _rac
-
-    resolved = _rac(ac_id)
-    with get_pg_engine().connect() as conn:
-        rows = conn.execute(text("""
-            SELECT
-                bn.booth_id,
-                b.booth_number,
-                b.polling_station_name AS name,
-                bn.narrative_type,
-                bn.strength,
-                bn.description,
-                bn.evidence_count,
-                bn.confidence,
-                bn.computed_at
-            FROM booth_narratives bn
-            JOIN booth_master b ON b.booth_id = bn.booth_id
-            LEFT JOIN booth_metrics bm ON bm.booth_id = bn.booth_id
-            WHERE b.ac_id = :ac_id
-              AND bn.narrative_type = :narrative_type
-            ORDER BY bn.computed_at DESC, bn.strength DESC
-            LIMIT 25
-        """), {"ac_id": resolved, "narrative_type": narrative_type}).mappings().fetchall()
-    return [dict(row) for row in rows]
+def _decode_ddg_url(raw: str) -> str:
+    if raw.startswith("//"):
+        raw = "https:" + raw
+    qs = urllib.parse.parse_qs(urllib.parse.urlparse(raw).query)
+    return qs.get("uddg", [raw])[0]
 
 
-def _fetch_scheme_gaps(ac_id: str) -> list[dict[str, Any]]:
-    from sqlalchemy import text
-    from .db import get_pg_engine
-    from .queries import _rac
-
-    resolved = _rac(ac_id)
-    with get_pg_engine().connect() as conn:
-        rows = conn.execute(text("""
-            SELECT
-                sga.scheme_name,
-                sga.issue_tag,
-                COUNT(DISTINCT sga.booth_id) AS booth_count,
-                SUM(sga.beneficiary_count) AS total_beneficiaries,
-                MODE() WITHIN GROUP (ORDER BY sga.gap_type) AS gap_type,
-                MODE() WITHIN GROUP (ORDER BY sga.priority) AS priority,
-                ROUND(AVG(sga.avg_sentiment)::numeric, 3) AS avg_sentiment,
-                SUM(sga.positive_events) AS positive_events,
-                SUM(sga.negative_events) AS negative_events,
-                STRING_AGG(DISTINCT sga.gap_label, ' | ' ORDER BY sga.gap_label) AS gap_label
-            FROM scheme_gap_analysis sga
-            JOIN booth_master bm ON bm.booth_id = sga.booth_id
-            WHERE bm.ac_id = :ac_id
-            GROUP BY sga.scheme_name, sga.issue_tag
-            ORDER BY
-                CASE MODE() WITHIN GROUP (ORDER BY sga.priority)
-                    WHEN 'HIGH' THEN 1 WHEN 'MEDIUM' THEN 2 ELSE 3 END,
-                total_beneficiaries DESC
-            LIMIT 25
-        """), {"ac_id": resolved}).mappings().fetchall()
-    return [dict(row) for row in rows]
+def _search_duckduckgo(query: str, max_results: int = 6) -> list[dict]:
+    results: list[dict] = []
+    try:
+        resp = _HTTP_CLIENT.get(
+            "https://html.duckduckgo.com/html/",
+            params={"q": query},
+            headers=_WEB_HEADERS,
+            timeout=12,
+        )
+        if not resp.is_success:
+            return results
+        soup = BeautifulSoup(resp.text, "html.parser")
+        for item in soup.select(".result__body")[:max_results]:
+            title_el   = item.select_one(".result__title")
+            snippet_el = item.select_one(".result__snippet")
+            url_el     = item.select_one("a.result__url, .result__title a")
+            title   = title_el.get_text(strip=True)   if title_el   else ""
+            snippet = snippet_el.get_text(strip=True) if snippet_el else ""
+            url     = _decode_ddg_url(url_el.get("href", "")) if url_el else ""
+            if title or snippet:
+                results.append({"title": title, "snippet": snippet, "url": url, "source": "DuckDuckGo"})
+    except Exception as e:
+        logger.debug("DuckDuckGo search failed: %s", e)
+    return results
 
 
-def _fallback_reasoning(question: str) -> dict | None:
-    normalized = question.lower()
-
-    if "highest bjp pulse" in normalized or "bjp pulse score" in normalized:
-        rows = sorted(
-            _fetch_latest_booth_rows(_DEFAULT_AC_ID),
-            key=lambda row: float(row.get("bjp_pulse_score") or -1),
-            reverse=True,
-        )[:10]
-        summary = _summarize_results(rows)
-        return {
-            "question": question,
-            "cypher": "MATCH (b:Booth) RETURN b.booth_id, b.booth_number, b.name, bjp_pulse_score, opp_pulse_score LIMIT 10",
-            "results": rows,
-            "summary": summary,
-            "row_count": len(rows),
-            "error": None,
-        }
-
-    if "strong_opp" in normalized or "strong opp" in normalized or "opposition lean" in normalized:
-        rows = [
-            row for row in _fetch_latest_booth_rows(_DEFAULT_AC_ID)
-            if str(row.get("digital_lean_label") or "").upper() == "STRONG_OPP"
-        ]
-        rows = rows[:25]
-        summary = _summarize_results(rows)
-        return {
-            "question": question,
-            "cypher": "MATCH (b:Booth) WHERE b.digital_lean_label = 'STRONG_OPP' RETURN b.booth_id, b.booth_number, b.name, b.digital_lean_label, b.top_issue LIMIT 25",
-            "results": rows,
-            "summary": summary,
-            "row_count": len(rows),
-            "error": None,
-        }
-
-    if "anti-incumbency" in normalized:
-        rows = _fetch_booth_narratives(_DEFAULT_AC_ID, "anti_incumbency")
-        summary = _summarize_results(rows)
-        return {
-            "question": question,
-            "cypher": "MATCH (b:Booth)-[:HAS_NARRATIVE]->(n:Narrative {narrative_type:'anti_incumbency'}) RETURN b.booth_id, b.booth_number, b.name, n.strength, n.description LIMIT 25",
-            "results": rows,
-            "summary": summary,
-            "row_count": len(rows),
-            "error": None,
-        }
-
-    if "delivery gap" in normalized or "highest delivery gap" in normalized or "schemes" in normalized:
-        rows = _fetch_scheme_gaps(_DEFAULT_AC_ID)
-        summary = _summarize_results(rows)
-        return {
-            "question": question,
-            "cypher": "MATCH (s:SchemeGap) RETURN s.scheme_name, s.issue_tag, s.priority, s.total_beneficiaries LIMIT 25",
-            "results": rows,
-            "summary": summary,
-            "row_count": len(rows),
-            "error": None,
-        }
-
-    if "low data confidence" in normalized or "confidence" in normalized:
-        rows = [
-            row for row in _fetch_latest_booth_rows(_DEFAULT_AC_ID)
-            if str(row.get("confidence_label") or "").upper() == "LOW"
-        ]
-        rows = rows[:25]
-        summary = _summarize_results(rows)
-        return {
-            "question": question,
-            "cypher": "MATCH (b:Booth) WHERE b.confidence_label = 'LOW' RETURN b.booth_id, b.booth_number, b.name, b.confidence_label, b.event_count LIMIT 25",
-            "results": rows,
-            "summary": summary,
-            "row_count": len(rows),
-            "error": None,
-        }
-
-    if "water" in normalized and "top issue" in normalized:
-        rows = [
-            row for row in _fetch_latest_booth_rows(_DEFAULT_AC_ID)
-            if str(row.get("top_issue") or "").lower() == "water"
-        ]
-        rows = rows[:25]
-        summary = _summarize_results(rows)
-        return {
-            "question": question,
-            "cypher": "MATCH (b:Booth) WHERE b.top_issue = 'water' RETURN b.booth_id, b.booth_number, b.name, b.top_issue, b.confidence_label LIMIT 25",
-            "results": rows,
-            "summary": summary,
-            "row_count": len(rows),
-            "error": None,
-        }
-
-    if "won in the last election" in normalized or "last election" in normalized:
-        from .queries import get_ac_election_results
-
-        data = get_ac_election_results(_DEFAULT_AC_ID, year=2022)
-        rows = data.get("results", []) if isinstance(data, dict) else []
-        summary = _summarize_results(rows)
-        return {
-            "question": question,
-            "cypher": "MATCH (p:Party)<-[:REPRESENTS]-(c:Candidate)-[:CONTESTED_IN]->(a:AssemblyConstituency) RETURN p.name AS party, count(*) AS booth_count LIMIT 25",
-            "results": rows,
-            "summary": summary,
-            "row_count": len(rows),
-            "error": None,
-        }
-
-    return None
+def _search_duckduckgo_instant(query: str) -> list[dict]:
+    results: list[dict] = []
+    try:
+        resp = _HTTP_CLIENT.get(
+            "https://api.duckduckgo.com/",
+            params={"q": query, "format": "json", "no_html": "1", "skip_disambig": "1"},
+            headers=_WEB_HEADERS,
+            timeout=8,
+        )
+        if not resp.is_success:
+            return results
+        data = resp.json()
+        if data.get("AbstractText"):
+            results.append({
+                "title":   data.get("Heading") or query,
+                "snippet": data["AbstractText"][:500],
+                "url":     data.get("AbstractURL") or "",
+                "source":  "DuckDuckGo Instant",
+            })
+        for topic in data.get("RelatedTopics", [])[:3]:
+            if isinstance(topic, dict) and topic.get("Text"):
+                results.append({
+                    "title":   topic["Text"][:80],
+                    "snippet": topic["Text"][:400],
+                    "url":     topic.get("FirstURL") or "",
+                    "source":  "DuckDuckGo",
+                })
+    except Exception as e:
+        logger.debug("DDG instant failed: %s", e)
+    return results
 
 
-def _summarize_results(results: list[dict[str, Any]]) -> str:
-    if not results:
-        return "No matching records were found."
+def _search_wikipedia(query: str, max_results: int = 3) -> list[dict]:
+    results: list[dict] = []
+    try:
+        resp = _HTTP_CLIENT.get(
+            "https://en.wikipedia.org/w/api.php",
+            params={
+                "action": "query", "list": "search",
+                "srsearch": query, "srlimit": max_results,
+                "format": "json", "utf8": 1,
+            },
+            headers={"User-Agent": _WIKI_UA},
+            timeout=10,
+        )
+        if not resp.is_success:
+            return results
+        for hit in resp.json().get("query", {}).get("search", []):
+            snippet = re.sub(r"<[^>]+>", "", hit.get("snippet", ""))
+            title   = hit.get("title", "")
+            results.append({
+                "title":   title,
+                "snippet": snippet[:400],
+                "url":     f"https://en.wikipedia.org/wiki/{urllib.parse.quote(title.replace(' ', '_'))}",
+                "source":  "Wikipedia",
+            })
+    except Exception as e:
+        logger.debug("Wikipedia search failed: %s", e)
+    return results
 
-    first_row = results[0]
-    preview_items: list[str] = []
-    for key in list(first_row.keys())[:3]:
-        value = first_row.get(key)
-        if value is None:
-            continue
-        label = key.replace("_", " ")
-        preview_items.append(f"{label}: {value}")
 
-    if len(results) == 1:
-        heading = "I found 1 matching record."
-    else:
-        heading = f"I found {len(results)} matching records."
+def web_search(question: str, max_results: int = 8) -> list[dict]:
+    """Combine DDG HTML + Instant + Wikipedia, deduplicated."""
+    enriched = f"{question} Gorakhpur UP India" if "gorakhpur" not in question.lower() else question
 
-    if preview_items:
-        return heading + " The first result shows " + "; ".join(preview_items) + "."
-    return heading
+    instant  = _search_duckduckgo_instant(question)
+    ddg_html = _search_duckduckgo(enriched, max_results=6)
+    wiki     = _search_wikipedia(question, max_results=3)
 
+    seen: set[str] = set()
+    merged: list[dict] = []
+    for r in instant + ddg_html + wiki:
+        key = r.get("url") or r.get("title", "")
+        if key and key not in seen:
+            seen.add(key)
+            merged.append(r)
+        if len(merged) >= max_results:
+            break
+    return merged
+
+
+# ── Question classifier ───────────────────────────────────────────────────────
+
+_GRAPH_ONLY_TERMS = {
+    "booth", "pulse score", "bjp score", "opp score",
+    "digital lean", "event count", "confidence_label",
+    "narrative", "contradiction", "scheme gap",
+}
+
+_WEB_SIGNALS = {
+    "latest", "recent", "current", "news", "today",
+    "2024", "2025", "2026",
+    "who is", "who won", "who will", "result", "winner",
+    "yogi adityanath", "modi", "rahul", "akhilesh", "mayawati",
+    "government policy", "scheme launch", "budget", "census",
+    "why", "explain", "what is", "background", "history",
+}
+
+
+def _needs_web_search(question: str, graph_results: list[dict]) -> bool:
+    q = question.lower()
+    # Graph returned nothing useful
+    if not graph_results:
+        return True
+    if len(graph_results) == 1 and "cannot answer" in str(graph_results[0]).lower():
+        return True
+    # Question is about real-time or general knowledge
+    if any(kw in q for kw in _WEB_SIGNALS):
+        return True
+    # Graph-native question with good results -> still supplement unless purely internal
+    if any(kw in q for kw in _GRAPH_ONLY_TERMS) and len(graph_results) >= 3:
+        return False
+    return True  # default: always supplement with web
+
+
+# ── Synthesis ─────────────────────────────────────────────────────────────────
+
+def _build_context(graph_results: list[dict], web_results: list[dict]) -> str:
+    import json
+    parts: list[str] = []
+    has_graph = graph_results and not (
+        len(graph_results) == 1 and "cannot answer" in str(graph_results[0]).lower()
+    )
+    if has_graph:
+        parts.append(f"=== KNOWLEDGE GRAPH DATA ({len(graph_results)} records) ===")
+        for row in graph_results[:15]:
+            parts.append(json.dumps(row, default=str))
+    if web_results:
+        parts.append(f"\n=== WEB SEARCH RESULTS ({len(web_results)} sources) ===")
+        for r in web_results:
+            parts.append(f"[{r.get('source','Web')}] {r.get('title','')}")
+            parts.append(f"  {r.get('snippet','')}")
+            if r.get("url"):
+                parts.append(f"  Source: {r['url']}")
+    return "\n".join(parts) if parts else "No data available."
+
+
+def synthesize_answer(question: str, graph_results: list[dict], web_results: list[dict]) -> str:
+    context = _build_context(graph_results, web_results)
+    user_msg = (
+        f"Question: {question}\n\n"
+        f"Available Data:\n{context}\n\n"
+        "Provide a comprehensive political intelligence analysis answering this question."
+    )
+    msgs = [
+        {"role": "system", "content": _SYNTHESIS_SYSTEM},
+        {"role": "user",   "content": user_msg},
+    ]
+    try:
+        answer = _call_sarvam(msgs, max_tokens=2500)
+        if answer:
+            return answer
+    except Exception as e:
+        logger.warning("Sarvam synthesis failed: %s", e)
+    try:
+        answer = _call_gemini(_SYNTHESIS_SYSTEM, user_msg, 1024)
+        if answer:
+            return answer
+    except Exception as e:
+        logger.warning("Gemini synthesis failed: %s", e)
+    return _plain_summarise(graph_results, web_results)
+
+
+def _plain_summarise(graph_results: list[dict], web_results: list[dict]) -> str:
+    parts: list[str] = []
+    if graph_results:
+        parts.append(f"Knowledge graph returned {len(graph_results)} record(s).")
+        first = graph_results[0]
+        sample = "; ".join(f"{k}: {v}" for k, v in list(first.items())[:4])
+        parts.append(f"Sample: {sample}")
+    if web_results:
+        parts.append(f"\nWeb search found {len(web_results)} result(s):")
+        for r in web_results[:3]:
+            parts.append(f"* {r.get('title','')}: {r.get('snippet','')[:150]}")
+    return "\n".join(parts) or "No data found for this question."
+
+
+def _mode_label(graph_results: list[dict], web_results: list[dict]) -> str:
+    has_graph = bool(graph_results) and not (
+        len(graph_results) == 1 and "cannot answer" in str(graph_results[0]).lower()
+    )
+    if has_graph and web_results:  return "hybrid"
+    if has_graph:                   return "graph"
+    if web_results:                 return "web"
+    return "llm"
+
+
+# ── Public entry point ────────────────────────────────────────────────────────
 
 def reasoning_query(question: str) -> dict:
     """
-    Main entry point: natural language → Cypher → Neo4j results.
-    Returns {question, cypher, results, summary, error, row_count}.
+    Full pipeline: NL -> Cypher -> Neo4j -> web search -> LLM synthesis.
+
+    Returns rich dict:
+      question, cypher, graph_results, results (alias), web_results,
+      answer, summary (compat), sources, mode, row_count, elapsed_ms, error
     """
+    t0 = time.monotonic()
+    cypher: str | None     = None
+    graph_results: list    = []
+    graph_error: str | None = None
+
+    # Step 1: Neo4j
     try:
         cypher = generate_cypher(question)
-        logger.info("Generated Cypher: %.200s", cypher)
-        results = execute_cypher(cypher)
-        summary = _summarize_results(results)
-        return {
-            "question":  question,
-            "cypher":    cypher,
-            "results":   results[:100],
-            "summary":   summary,
-            "row_count": len(results),
-            "error":     None,
-        }
+        logger.info("Cypher generated: %.150s", cypher)
     except Exception as exc:
-        logger.warning("Primary reasoning path failed: %s", exc)
+        graph_error = f"Cypher generation failed: {exc}"
+        logger.warning(graph_error)
 
-    fallback = _fallback_reasoning(question)
-    if fallback is not None:
-        return fallback
+    if cypher and not graph_error:
+        try:
+            graph_results = execute_cypher(cypher)
+        except Exception as exc:
+            graph_error = f"Neo4j execution failed: {exc}"
+            logger.warning(graph_error)
+
+    # Step 2: Web search
+    web_results: list[dict] = []
+    if _needs_web_search(question, graph_results):
+        try:
+            web_results = web_search(question)
+            logger.info("Web search: %d results", len(web_results))
+        except Exception as exc:
+            logger.warning("Web search failed: %s", exc)
+
+    # Step 3: Synthesis
+    answer = ""
+    try:
+        answer = synthesize_answer(question, graph_results, web_results)
+    except Exception as exc:
+        logger.error("Synthesis failed: %s", exc)
+        answer = _plain_summarise(graph_results, web_results)
+
+    sources = [r["url"] for r in web_results if r.get("url")]
+    mode    = _mode_label(graph_results, web_results)
 
     return {
-        "question": question,
-        "cypher": None,
-        "results": [],
-        "summary": "I could not answer that question with the available data source.",
-        "row_count": 0,
-        "error": f"Reasoning failed: {question}",
+        "question":      question,
+        "cypher":        cypher,
+        "graph_results": graph_results,
+        "results":       graph_results,   # legacy field — keep for compat
+        "web_results":   web_results,
+        "answer":        answer,
+        "summary":       answer[:300] if answer else None,
+        "sources":       sources,
+        "mode":          mode,
+        "row_count":     len(graph_results),
+        "elapsed_ms":    round((time.monotonic() - t0) * 1000),
+        "error":         graph_error,
     }

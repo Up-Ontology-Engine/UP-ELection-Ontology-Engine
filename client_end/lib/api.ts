@@ -286,13 +286,29 @@ export interface GraphResult {
   edges: GraphEdge[];
 }
 
+export interface WebResult {
+  title: string;
+  snippet: string;
+  url: string;
+  source: string;
+}
+
 export interface ReasoningResult {
   question: string;
   cypher: string | null;
+  /** Raw records from Neo4j */
+  graph_results: Record<string, unknown>[];
+  /** Legacy alias for graph_results */
   results: Record<string, unknown>[];
+  web_results: WebResult[];
+  /** LLM-synthesized comprehensive answer */
+  answer: string;
   summary: string | null;
-  error: string | null;
+  sources: string[];
+  mode: "graph" | "web" | "hybrid" | "llm";
   row_count: number;
+  elapsed_ms: number;
+  error: string | null;
 }
 
 export interface OntologyConstraint {

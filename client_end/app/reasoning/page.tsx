@@ -1,34 +1,234 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { api, type ReasoningResult } from "@/lib/api";
-import { MessageSquare, Send, Code, Loader, Terminal, ChevronRight, Clock, Database } from "lucide-react";
+import { api, type ReasoningResult, type WebResult } from "@/lib/api";
+import {
+  Send, Code, Loader, Terminal, ChevronRight, Globe,
+  Database, Zap, ExternalLink, ChevronDown, ChevronUp,
+  Brain, Clock, AlertCircle,
+} from "lucide-react";
 
 const EXAMPLES = [
-  { cat: "Booths", q: "Which booths have the highest BJP pulse score?" },
-  { cat: "Booths", q: "Show me all booths with STRONG_OPP lean" },
-  { cat: "Issues", q: "What are the top 5 issues by booth count?" },
-  { cat: "Issues", q: "Which booths have water supply as the top issue?" },
-  { cat: "Schemes", q: "Which schemes have the highest delivery gap?" },
-  { cat: "Narratives", q: "List booths with anti-incumbency narrative" },
-  { cat: "Quality", q: "Show booths with LOW data confidence" },
-  { cat: "Candidates", q: "Who won in the last election?" },
+  { cat: "Booths",      q: "Which booths have the highest BJP pulse score?" },
+  { cat: "Booths",      q: "Show booths with STRONG_OPP lean" },
+  { cat: "Issues",      q: "What are the top 5 issues by mention count?" },
+  { cat: "Issues",      q: "Which booths have water supply as the top issue?" },
+  { cat: "Candidates",  q: "Who won in the 2022 Gorakhpur Urban election?" },
+  { cat: "Candidates",  q: "Show candidates with criminal records" },
+  { cat: "Intel",       q: "What is the current political situation in Gorakhpur?" },
+  { cat: "Intel",       q: "What development schemes are active in Gorakhpur Urban?" },
+  { cat: "Intel",       q: "What issues are dominating Gorakhpur politics recently?" },
 ];
+
+const MODE_CONFIG: Record<string, { label: string; color: string; bg: string; Icon: React.ElementType }> = {
+  hybrid: { label: "HYBRID", color: "#a78bfa", bg: "rgba(167,139,250,0.1)", Icon: Zap      },
+  graph:  { label: "GRAPH",  color: "#10b981", bg: "rgba(16,185,129,0.1)",  Icon: Database  },
+  web:    { label: "WEB",    color: "#3b82f6", bg: "rgba(59,130,246,0.1)",  Icon: Globe     },
+  llm:    { label: "LLM",    color: "#f59e0b", bg: "rgba(245,158,11,0.1)",  Icon: Brain     },
+};
+
+function SourceCard({ r }: { r: WebResult }) {
+  const host = r.url
+    ? (() => { try { return new URL(r.url).hostname.replace("www.", ""); } catch { return r.source; } })()
+    : r.source;
+  return (
+    <a href={r.url || "#"} target="_blank" rel="noopener noreferrer"
+      className="block rounded-lg p-2.5 transition-all hover:bg-white/5"
+      style={{ border: "1px solid #1a2b44", background: "#060e1c" }}>
+      <div className="flex items-start justify-between gap-2">
+        <p className="text-xs font-medium text-white line-clamp-2 flex-1">{r.title}</p>
+        {r.url && <ExternalLink size={10} className="flex-shrink-0 mt-0.5" style={{ color: "#4d6480" }} />}
+      </div>
+      <p className="text-xs mt-1 line-clamp-2" style={{ color: "#4d6480" }}>{r.snippet}</p>
+      <p className="mono mt-1.5 flex items-center gap-1" style={{ color: "#2e4260", fontSize: 9 }}>
+        <Globe size={8} /> {host}
+        <span className="ml-1 px-1 rounded" style={{ background: "#0f1929", color: "#2e4260" }}>
+          {r.source}
+        </span>
+      </p>
+    </a>
+  );
+}
+
+function GraphTable({ results }: { results: Record<string, unknown>[] }) {
+  if (!results.length) return null;
+  const keys = Object.keys(results[0]);
+  return (
+    <div className="rounded overflow-hidden mt-2" style={{ border: "1px solid #1a2b44" }}>
+      <div className="px-3 py-1.5 flex items-center gap-2"
+        style={{ background: "#060b14", borderBottom: "1px solid #1a2b44" }}>
+        <Database size={10} style={{ color: "#10b981" }} />
+        <span className="mono text-xs" style={{ color: "#4d6480" }}>
+          {results.length} row{results.length !== 1 ? "s" : ""} from graph
+        </span>
+      </div>
+      <div className="overflow-x-auto max-h-48">
+        <table className="w-full text-xs">
+          <thead>
+            <tr style={{ background: "#060b14", borderBottom: "1px solid #1a2b44" }}>
+              {keys.map((k) => (
+                <th key={k} className="px-3 py-1.5 text-left"
+                  style={{ color: "#2e4260", fontSize: 9, textTransform: "uppercase" }}>
+                  {k}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {results.slice(0, 25).map((row, ri) => (
+              <tr key={ri} style={{ borderBottom: "1px solid #1a2b4420",
+                background: ri % 2 === 0 ? "#0f1929" : "transparent" }}>
+                {keys.map((k) => (
+                  <td key={k} className="px-3 py-1.5 mono" style={{ color: "#8ba0bc" }}>
+                    {String(row[k] ?? "—")}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
+function AssistantMessage({ result }: { result: ReasoningResult }) {
+  const [showCypher,  setShowCypher]  = useState(false);
+  const [showTable,   setShowTable]   = useState(false);
+  const [showSources, setShowSources] = useState(false);
+
+  const conf = MODE_CONFIG[result.mode] ?? MODE_CONFIG.llm;
+  const { Icon } = conf;
+  const hasGraph  = (result.graph_results?.length ?? 0) > 0 &&
+    !(result.graph_results?.length === 1 && String(result.graph_results[0]).includes("Cannot answer"));
+  const hasWeb    = (result.web_results?.length ?? 0) > 0;
+  const hasCypher = Boolean(result.cypher);
+
+  function renderAnswer(text: string) {
+    return text
+      .replace(/\*\*(.*?)\*\*/g, '<strong style="color:#f1f5f9">$1</strong>')
+      .split("\n")
+      .map((line) => {
+        if (!line.trim()) return '<div style="height:8px"></div>';
+        if (line.match(/^\d+\./))
+          return `<div style="margin:3px 0;padding-left:12px;color:#cbd5e1">${line}</div>`;
+        if (line.startsWith("* ") || line.startsWith("• "))
+          return `<div style="margin:2px 0;padding-left:12px;color:#94a3b8">• ${line.slice(2)}</div>`;
+        return `<div style="margin:2px 0;color:#cbd5e1;line-height:1.65">${line}</div>`;
+      })
+      .join("");
+  }
+
+  return (
+    <div className="rounded-xl overflow-hidden" style={{ background: "#0b1626", border: "1px solid #1a2b44" }}>
+      {/* Mode header */}
+      <div className="flex items-center gap-2 px-4 py-2"
+        style={{ background: "#070e1b", borderBottom: "1px solid #1a2b4440" }}>
+        <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full"
+          style={{ background: conf.bg, border: `1px solid ${conf.color}30` }}>
+          <Icon size={9} style={{ color: conf.color }} />
+          <span className="mono font-bold" style={{ color: conf.color, fontSize: 9 }}>{conf.label}</span>
+        </div>
+        {hasGraph && (
+          <span className="mono" style={{ color: "#2e4260", fontSize: 9 }}>
+            {result.row_count} graph rows
+          </span>
+        )}
+        {hasWeb && (
+          <span className="mono flex items-center gap-1" style={{ color: "#2e4260", fontSize: 9 }}>
+            <Globe size={8} /> {result.web_results.length} sources
+          </span>
+        )}
+        <span className="ml-auto mono flex items-center gap-1" style={{ color: "#1e3a5f", fontSize: 9 }}>
+          <Clock size={8} /> {result.elapsed_ms}ms
+        </span>
+      </div>
+
+      {/* Answer text */}
+      <div className="px-4 py-3">
+        {result.error && !result.answer && (
+          <div className="flex items-start gap-2 text-xs rounded-lg p-2 mb-3"
+            style={{ background: "rgba(239,68,68,0.08)", border: "1px solid rgba(239,68,68,0.2)", color: "#fca5a5" }}>
+            <AlertCircle size={12} className="flex-shrink-0 mt-0.5" />
+            <span>{result.error}</span>
+          </div>
+        )}
+        {result.answer && (
+          <div className="text-sm" dangerouslySetInnerHTML={{ __html: renderAnswer(result.answer) }} />
+        )}
+      </div>
+
+      {/* Sources */}
+      {hasWeb && (
+        <div style={{ borderTop: "1px solid #1a2b4430" }}>
+          <button onClick={() => setShowSources((s) => !s)}
+            className="w-full flex items-center gap-2 px-4 py-2 text-xs hover:bg-white/3 transition-colors"
+            style={{ color: "#3b82f6" }}>
+            <Globe size={10} />
+            {result.web_results.length} web source{result.web_results.length !== 1 ? "s" : ""}
+            {showSources ? <ChevronUp size={10} className="ml-auto" /> : <ChevronDown size={10} className="ml-auto" />}
+          </button>
+          {showSources && (
+            <div className="px-4 pb-3 grid grid-cols-1 gap-2">
+              {result.web_results.map((r, i) => <SourceCard key={i} r={r} />)}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Cypher */}
+      {hasCypher && (
+        <div style={{ borderTop: "1px solid #1a2b4430" }}>
+          <button onClick={() => setShowCypher((s) => !s)}
+            className="w-full flex items-center gap-2 px-4 py-2 text-xs hover:bg-white/3 transition-colors"
+            style={{ color: "#8b5cf6" }}>
+            <Code size={10} /> Cypher query
+            {showCypher ? <ChevronUp size={10} className="ml-auto" /> : <ChevronDown size={10} className="ml-auto" />}
+          </button>
+          {showCypher && (
+            <div className="px-4 pb-3">
+              <pre className="p-3 rounded text-xs overflow-x-auto"
+                style={{ background: "#030508", color: "#8b5cf6", border: "1px solid #1a2b44", fontSize: 11 }}>
+                {result.cypher}
+              </pre>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Graph table */}
+      {hasGraph && (
+        <div style={{ borderTop: "1px solid #1a2b4430" }}>
+          <button onClick={() => setShowTable((s) => !s)}
+            className="w-full flex items-center gap-2 px-4 py-2 text-xs hover:bg-white/3 transition-colors"
+            style={{ color: "#10b981" }}>
+            <Database size={10} /> Raw graph data ({result.row_count} rows)
+            {showTable ? <ChevronUp size={10} className="ml-auto" /> : <ChevronDown size={10} className="ml-auto" />}
+          </button>
+          {showTable && (
+            <div className="px-4 pb-3">
+              <GraphTable results={result.graph_results} />
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
 
 interface Message {
   role: "user" | "assistant";
   content: string;
   result?: ReasoningResult;
   ts: string;
-  loading?: boolean;
 }
 
 export default function ReasoningPage() {
   const [messages, setMessages] = useState<Message[]>([]);
-  const [input, setInput] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [showCypher, setShowCypher] = useState<Set<number>>(new Set());
+  const [input, setInput]       = useState("");
+  const [loading, setLoading]   = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
+  const inputRef  = useRef<HTMLInputElement>(null);
 
   useEffect(() => { bottomRef.current?.scrollIntoView({ behavior: "smooth" }); }, [messages]);
 
@@ -37,182 +237,159 @@ export default function ReasoningPage() {
   }
 
   async function submit(question?: string) {
-    const q = question ?? input.trim();
+    const q = (question ?? input).trim();
     if (!q || loading) return;
     setInput("");
-    const userMsg: Message = { role: "user", content: q, ts: ts() };
-    setMessages((prev) => [...prev, userMsg]);
+    setMessages((prev) => [...prev, { role: "user", content: q, ts: ts() }]);
     setLoading(true);
     try {
       const result = await api.reason(q);
       setMessages((prev) => [...prev, {
         role: "assistant",
-        content: result.summary ?? "I could not generate a textual answer for that query.",
+        content: result.answer || result.summary || "Analysis complete.",
         result,
         ts: ts(),
       }]);
     } catch (err) {
-      const message = err instanceof Error ? err.message : "Unknown error";
+      const msg = err instanceof Error ? err.message : "Unknown error";
       setMessages((prev) => [...prev, {
         role: "assistant",
-        content: `Error: ${message || "Could not reach the reasoning API. Ensure the backend is running with Neo4j connected."}`,
+        content: `Error: ${msg}`,
         ts: ts(),
       }]);
-    } finally { setLoading(false); }
+    } finally {
+      setLoading(false);
+      setTimeout(() => inputRef.current?.focus(), 50);
+    }
   }
 
-  function toggleCypher(idx: number) {
-    setShowCypher((s) => { const n = new Set(s); n.has(idx) ? n.delete(idx) : n.add(idx); return n; });
-  }
+  const grouped = EXAMPLES.reduce<Record<string, typeof EXAMPLES>>((acc, e) => {
+    (acc[e.cat] ??= []).push(e);
+    return acc;
+  }, {});
 
   return (
-    <div className="flex h-screen flex-col" style={{ background: "#060b14" }}>
+    <div className="flex h-screen flex-col" style={{ background: "#040810" }}>
       {/* Header */}
-      <div className="flex items-center justify-between px-5 py-3"
-        style={{ borderBottom: "1px solid #1a2b44", background: "#060b14" }}>
+      <div className="flex items-center justify-between px-5 py-3 flex-shrink-0"
+        style={{ borderBottom: "1px solid #0f1d30", background: "#040810" }}>
         <div className="flex items-center gap-3">
-          <div className="w-7 h-7 rounded-md flex items-center justify-center"
-            style={{ background: "rgba(236,72,153,0.15)", border: "1px solid rgba(236,72,153,0.3)" }}>
-            <Terminal size={13} style={{ color: "#ec4899" }} />
+          <div className="w-8 h-8 rounded-lg flex items-center justify-center"
+            style={{ background: "linear-gradient(135deg,rgba(167,139,250,0.2),rgba(59,130,246,0.2))",
+                     border: "1px solid rgba(167,139,250,0.3)" }}>
+            <Brain size={15} style={{ color: "#a78bfa" }} />
           </div>
           <div>
             <h1 className="text-sm font-bold text-white">AI Political Reasoning</h1>
-            <p className="text-xs mono" style={{ color: "#4d6480" }}>
-              Natural language → Cypher → Knowledge Graph · Powered by Sarvam LLM
+            <p className="mono text-xs" style={{ color: "#2e4260" }}>
+              Knowledge Graph + Web Search · Sarvam-30b Synthesis
             </p>
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <div className="flex items-center gap-1.5 text-xs mono px-2 py-1 rounded"
-            style={{ background: "#0b1220", border: "1px solid #1a2b44", color: "#4d6480" }}>
-            <Database size={10} style={{ color: "#10b981" }} />
-            Neo4j
-          </div>
+          {Object.entries(MODE_CONFIG).map(([k, v]) => {
+            const { Icon: ModeIcon } = v;
+            return (
+              <div key={k} className="hidden md:flex items-center gap-1 px-2 py-0.5 rounded"
+                style={{ background: v.bg, border: `1px solid ${v.color}20` }}>
+                <ModeIcon size={9} style={{ color: v.color }} />
+                <span className="mono" style={{ color: v.color, fontSize: 9 }}>{v.label}</span>
+              </div>
+            );
+          })}
           <button onClick={() => setMessages([])}
-            className="px-3 py-1.5 rounded-md text-xs transition-colors hover:bg-white/5"
-            style={{ border: "1px solid #1a2b44", color: "#4d6480" }}>
-            Clear session
+            className="px-3 py-1.5 rounded text-xs hover:bg-white/5"
+            style={{ border: "1px solid #0f1d30", color: "#2e4260" }}>
+            Clear
           </button>
         </div>
       </div>
 
       <div className="flex flex-1 overflow-hidden">
-        {/* Example sidebar */}
-        <div className="w-56 flex-shrink-0 flex flex-col overflow-y-auto"
-          style={{ borderRight: "1px solid #1a2b44", background: "#060b14" }}>
-          <div className="px-3 py-3">
-            <p className="label mb-3" style={{ color: "#4d6480" }}>Example Queries</p>
-            {/* Group by category */}
-            {["Booths", "Issues", "Schemes", "Narratives", "Quality", "Candidates"].map((cat) => {
-              const items = EXAMPLES.filter((e) => e.cat === cat);
-              if (!items.length) return null;
-              return (
-                <div key={cat} className="mb-3">
-                  <p className="label mb-1.5" style={{ color: "#2e4260" }}>{cat}</p>
-                  {items.map(({ q }) => (
-                    <button key={q} onClick={() => submit(q)}
-                      className="w-full text-left px-2.5 py-2 rounded-md text-xs mb-1 transition-all hover:bg-white/5 flex items-start gap-1.5"
-                      style={{ border: "1px solid transparent", color: "#4d6480" }}>
-                      <ChevronRight size={9} className="mt-0.5 flex-shrink-0" style={{ color: "#2e4260" }} />
-                      {q}
-                    </button>
-                  ))}
-                </div>
-              );
-            })}
+        {/* Sidebar */}
+        <div className="w-52 flex-shrink-0 overflow-y-auto"
+          style={{ borderRight: "1px solid #0f1d30", background: "#040810" }}>
+          <div className="p-3">
+            <p className="mono mb-3" style={{ color: "#1e3a5f", fontSize: 9, letterSpacing: "0.1em" }}>
+              EXAMPLE QUERIES
+            </p>
+            {Object.entries(grouped).map(([cat, items]) => (
+              <div key={cat} className="mb-4">
+                <p className="mono mb-2" style={{ color: "#1e3a5f", fontSize: 9 }}>{cat.toUpperCase()}</p>
+                {items.map(({ q }) => (
+                  <button key={q} onClick={() => submit(q)} disabled={loading}
+                    className="w-full text-left px-2 py-1.5 rounded text-xs mb-1 hover:bg-white/5 flex items-start gap-1.5 disabled:opacity-40"
+                    style={{ color: "#3d5a7a" }}>
+                    <ChevronRight size={8} className="mt-0.5 flex-shrink-0 opacity-50" />
+                    {q}
+                  </button>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Chat area */}
+        {/* Chat */}
         <div className="flex-1 flex flex-col overflow-hidden">
-          <div className="flex-1 overflow-y-auto px-6 py-4 space-y-4">
+          <div className="flex-1 overflow-y-auto px-5 py-4 space-y-4">
+
             {messages.length === 0 && (
               <div className="flex flex-col items-center justify-center h-full py-20">
-                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-4"
-                  style={{ background: "rgba(236,72,153,0.1)", border: "1px solid rgba(236,72,153,0.2)" }}>
-                  <Terminal size={28} style={{ color: "#ec4899" }} />
+                <div className="w-20 h-20 rounded-2xl flex items-center justify-center mb-5"
+                  style={{ background: "rgba(167,139,250,0.1)", border: "1px solid rgba(167,139,250,0.2)" }}>
+                  <Brain size={36} style={{ color: "#a78bfa" }} />
                 </div>
-                <p className="text-white font-semibold text-base mb-1">Political Intelligence Query Engine</p>
-                <p className="text-sm mb-2" style={{ color: "#4d6480" }}>
-                  Ask in plain English — queries are translated to Cypher and run against the knowledge graph
+                <p className="text-white font-bold text-lg mb-2">Political Intelligence Engine</p>
+                <p className="text-sm text-center mb-5 max-w-md" style={{ color: "#2e4260" }}>
+                  Combines real-time web search with our knowledge graph — ask about local booth data
+                  or broad UP political context; the system intelligently routes and synthesises.
                 </p>
-                <div className="flex items-center gap-3 text-xs mono" style={{ color: "#2e4260" }}>
-                  <span className="flex items-center gap-1"><Terminal size={10} /> Natural language</span>
-                  <span>→</span>
-                  <span className="flex items-center gap-1"><Code size={10} /> Cypher</span>
-                  <span>→</span>
-                  <span className="flex items-center gap-1"><Database size={10} /> Neo4j</span>
+                <div className="flex items-center gap-5 text-xs mono" style={{ color: "#1e3a5f" }}>
+                  <span className="flex items-center gap-1.5">
+                    <Database size={11} style={{ color: "#10b981" }} /> Neo4j Graph
+                  </span>
+                  <span>+</span>
+                  <span className="flex items-center gap-1.5">
+                    <Globe size={11} style={{ color: "#3b82f6" }} /> DuckDuckGo + Wikipedia
+                  </span>
+                  <span>+</span>
+                  <span className="flex items-center gap-1.5">
+                    <Brain size={11} style={{ color: "#a78bfa" }} /> Sarvam-30b
+                  </span>
                 </div>
               </div>
             )}
 
             {messages.map((m, i) => (
-              <div key={i} className={`flex gap-3 animate-fade-up ${m.role === "user" ? "justify-end" : ""}`}>
+              <div key={i} className={`flex gap-3 ${m.role === "user" ? "justify-end" : ""}`}>
                 {m.role === "assistant" && (
                   <div className="w-7 h-7 rounded-md flex-shrink-0 flex items-center justify-center mt-0.5"
-                    style={{ background: "rgba(236,72,153,0.15)", border: "1px solid rgba(236,72,153,0.3)" }}>
-                    <Terminal size={12} style={{ color: "#ec4899" }} />
+                    style={{ background: "rgba(167,139,250,0.15)", border: "1px solid rgba(167,139,250,0.3)" }}>
+                    <Brain size={12} style={{ color: "#a78bfa" }} />
                   </div>
                 )}
-                <div className="max-w-2xl flex-1" style={{ maxWidth: m.role === "user" ? "70%" : undefined }}>
-                  <div className="rounded-lg px-4 py-3"
-                    style={{
-                      background: m.role === "user" ? "rgba(249,115,22,0.08)" : "#0f1929",
-                      border: `1px solid ${m.role === "user" ? "rgba(249,115,22,0.25)" : "#1a2b44"}`,
-                    }}>
-                    <p className="text-sm text-white mb-1">{m.content}</p>
-                    {/* Cypher toggle */}
-                    {m.result?.cypher && (
-                      <div>
-                        <button onClick={() => toggleCypher(i)}
-                          className="flex items-center gap-1.5 text-xs mono mt-2 transition-colors hover:text-purple-400"
-                          style={{ color: "#4d6480" }}>
-                          <Code size={10} />
-                          {showCypher.has(i) ? "Hide" : "Show"} Cypher
-                        </button>
-                        {showCypher.has(i) && (
-                          <pre className="mt-2 p-3 rounded text-xs mono overflow-x-auto"
-                            style={{ background: "#060b14", color: "#8b5cf6", border: "1px solid #1a2b44", fontSize: 11 }}>
-                            {m.result.cypher}
-                          </pre>
-                        )}
-                      </div>
-                    )}
-                    {/* Results table */}
-                    {m.result?.results && m.result.results.length > 0 && (
-                      <div className="mt-3 rounded overflow-hidden" style={{ border: "1px solid #1a2b44" }}>
-                        <div className="px-3 py-1.5 flex items-center justify-between"
-                          style={{ background: "#060b14", borderBottom: "1px solid #1a2b44" }}>
-                          <span className="mono text-xs" style={{ color: "#4d6480" }}>
-                            {m.result.results.length} row{m.result.results.length !== 1 ? "s" : ""} returned
-                          </span>
-                        </div>
-                        <div className="overflow-x-auto max-h-48">
-                          <table className="w-full data-table text-xs">
-                            <thead>
-                              <tr>
-                                {Object.keys(m.result.results[0]).map((k) => <th key={k}>{k}</th>)}
-                              </tr>
-                            </thead>
-                            <tbody>
-                              {m.result.results.slice(0, 25).map((row, ri) => (
-                                <tr key={ri}>
-                                  {Object.values(row).map((v, vi) => (
-                                    <td key={vi} className="mono" style={{ color: "#8ba0bc" }}>{String(v ?? "—")}</td>
-                                  ))}
-                                </tr>
-                              ))}
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                  <div className="flex items-center gap-1.5 mt-1 px-1">
-                    <Clock size={9} style={{ color: "#2e4260" }} />
-                    <span className="mono text-xs" style={{ color: "#2e4260", fontSize: 9 }}>{m.ts}</span>
+
+                <div className={`flex-1 ${m.role === "user" ? "flex flex-col items-end" : ""}`}>
+                  {m.role === "user" ? (
+                    <div className="inline-block rounded-xl px-4 py-2.5"
+                      style={{ background: "rgba(249,115,22,0.07)", border: "1px solid rgba(249,115,22,0.2)" }}>
+                      <p className="text-sm text-white">{m.content}</p>
+                    </div>
+                  ) : m.result ? (
+                    <div className="max-w-3xl w-full">
+                      <AssistantMessage result={m.result} />
+                    </div>
+                  ) : (
+                    <div className="rounded-xl px-4 py-3" style={{ background: "#0b1626", border: "1px solid #1a2b44" }}>
+                      <p className="text-sm" style={{ color: "#ef4444" }}>{m.content}</p>
+                    </div>
+                  )}
+                  <div className="flex items-center gap-1 mt-1 px-1">
+                    <Clock size={8} style={{ color: "#0f1d30" }} />
+                    <span className="mono" style={{ color: "#0f1d30", fontSize: 9 }}>{m.ts}</span>
                   </div>
                 </div>
+
                 {m.role === "user" && (
                   <div className="w-7 h-7 rounded-md flex-shrink-0 flex items-center justify-center mt-0.5"
                     style={{ background: "rgba(249,115,22,0.1)", border: "1px solid rgba(249,115,22,0.2)" }}>
@@ -225,18 +402,22 @@ export default function ReasoningPage() {
             {loading && (
               <div className="flex gap-3">
                 <div className="w-7 h-7 rounded-md flex-shrink-0 flex items-center justify-center"
-                  style={{ background: "rgba(236,72,153,0.15)", border: "1px solid rgba(236,72,153,0.3)" }}>
-                  <Loader size={12} className="animate-spin" style={{ color: "#ec4899" }} />
+                  style={{ background: "rgba(167,139,250,0.15)", border: "1px solid rgba(167,139,250,0.3)" }}>
+                  <Loader size={12} className="animate-spin" style={{ color: "#a78bfa" }} />
                 </div>
-                <div className="rounded-lg px-4 py-3"
-                  style={{ background: "#0f1929", border: "1px solid #1a2b44" }}>
-                  <div className="flex items-center gap-2">
-                    <div className="flex gap-1">
-                      <span className="w-1.5 h-1.5 rounded-full animate-pulse-dot" style={{ background: "#ec4899" }} />
-                      <span className="w-1.5 h-1.5 rounded-full animate-pulse-dot" style={{ background: "#ec4899", animationDelay: "0.2s" }} />
-                      <span className="w-1.5 h-1.5 rounded-full animate-pulse-dot" style={{ background: "#ec4899", animationDelay: "0.4s" }} />
-                    </div>
-                    <span className="text-xs mono" style={{ color: "#4d6480" }}>Translating to Cypher and querying Neo4j…</span>
+                <div className="rounded-xl px-4 py-3"
+                  style={{ background: "#0b1626", border: "1px solid #1a2b44" }}>
+                  <div className="space-y-1.5">
+                    {[
+                      { Icon: Database, label: "Querying knowledge graph…", color: "#10b981" },
+                      { Icon: Globe,    label: "Searching the web…",        color: "#3b82f6" },
+                      { Icon: Brain,    label: "Synthesising answer…",      color: "#a78bfa" },
+                    ].map(({ Icon: StepIcon, label, color }) => (
+                      <div key={label} className="flex items-center gap-2">
+                        <StepIcon size={10} style={{ color }} />
+                        <span className="mono text-xs" style={{ color: "#2e4260" }}>{label}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -244,25 +425,28 @@ export default function ReasoningPage() {
             <div ref={bottomRef} />
           </div>
 
-          {/* Input bar */}
-          <div className="px-6 py-4" style={{ borderTop: "1px solid #1a2b44", background: "#060b14" }}>
+          {/* Input */}
+          <div className="px-5 py-4 flex-shrink-0"
+            style={{ borderTop: "1px solid #0f1d30", background: "#040810" }}>
             <div className="flex gap-3">
-              <div className="flex-1 relative">
-                <input value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                  onKeyDown={(e) => e.key === "Enter" && !e.shiftKey && submit()}
-                  placeholder="Ask about booths, candidates, issues, schemes, narratives…"
-                  className="w-full px-4 py-3 rounded-lg text-sm text-white outline-none"
-                  style={{ background: "#0f1929", border: "1px solid #1a2b44" }} />
-              </div>
+              <input
+                ref={inputRef}
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && !e.shiftKey && submit()}
+                placeholder="Ask about booths, candidates, issues, UP politics, current events…"
+                className="flex-1 px-4 py-3 rounded-xl text-sm text-white outline-none"
+                style={{ background: "#0b1626", border: "1px solid #0f1d30" }}
+              />
               <button onClick={() => submit()} disabled={loading || !input.trim()}
-                className="px-5 rounded-lg flex items-center gap-2 text-sm font-semibold transition-all hover:opacity-80 disabled:opacity-30"
-                style={{ background: "#ec4899", color: "#fff" }}>
+                className="px-5 rounded-xl flex items-center gap-2 text-sm font-semibold hover:opacity-80 disabled:opacity-30"
+                style={{ background: "linear-gradient(135deg,#7c3aed,#2563eb)", color: "#fff" }}>
                 <Send size={15} />
               </button>
             </div>
-            <p className="text-xs mono mt-2" style={{ color: "#2e4260" }}>
-              Enter to submit · Results from Neo4j knowledge graph · Session not persisted
+            <p className="mono mt-2" style={{ color: "#0f1d30", fontSize: 9 }}>
+              Enter to submit · Graph + DuckDuckGo + Wikipedia + Sarvam-30b ·{" "}
+              {messages.filter((m) => m.role === "user").length} queries this session
             </p>
           </div>
         </div>
