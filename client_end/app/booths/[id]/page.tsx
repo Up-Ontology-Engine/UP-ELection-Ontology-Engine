@@ -6,7 +6,8 @@ import SectionHeader from "@/components/SectionHeader";
 import BoothDetailCharts from "./BoothDetailCharts";
 import {
   ArrowLeft, Users, Shield, AlertTriangle, BookOpen,
-  TrendingUp, ChevronRight, Radio, Eye, Zap, Database
+  TrendingUp, ChevronRight, Radio, Eye, Zap, Database,
+  Target, Activity
 } from "lucide-react";
 
 function fmt(n: number | null | undefined, dec = 0) {
@@ -20,6 +21,10 @@ export default async function BoothDetailPage({ params }: Props) {
   const { id } = await params;
   let summary: Awaited<ReturnType<typeof api.boothSummary>> | null = null;
   try { summary = await api.boothSummary(id); } catch {}
+  const [segments, conversion] = await Promise.all([
+    api.boothSegments(id),
+    api.boothConversion(id),
+  ]);
 
   if (!summary) {
     return (
@@ -283,6 +288,115 @@ export default async function BoothDetailPage({ params }: Props) {
                   </div>
                 ))}
               </div>
+            </div>
+          )}
+
+          {/* Voter Segments */}
+          {segments && segments.segments.length > 0 && (
+            <div className="card p-4">
+              <SectionHeader title="Voter Segments" sub="aggregated · no PII" accent="#8b5cf6"
+                right={<Users size={12} style={{ color: "#8b5cf6" }} />}
+              />
+              <div className="space-y-2 mt-1">
+                {segments.segments.map((seg) => {
+                  const labels: Record<string, string> = {
+                    youth: "Youth (18–30)",
+                    first_voter: "First-time Voters (18–21)",
+                    women: "Women",
+                    elderly: "Elderly (60+)",
+                    working_age: "Working Age (25–55)",
+                  };
+                  const colors: Record<string, string> = {
+                    youth: "#f97316", first_voter: "#facc15", women: "#ec4899",
+                    elderly: "#06b6d4", working_age: "#10b981",
+                  };
+                  const color = colors[seg.segment_type] ?? "#8b5cf6";
+                  const pct = seg.pct_of_voters != null ? (seg.pct_of_voters * 100).toFixed(1) : null;
+                  return (
+                    <div key={seg.segment_type} className="flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: color }} />
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between mb-0.5">
+                          <span className="text-xs text-white">{labels[seg.segment_type] ?? seg.segment_type}</span>
+                          <div className="flex items-center gap-2">
+                            <span className="mono text-xs" style={{ color, fontSize: 10 }}>{seg.count.toLocaleString("en-IN")}</span>
+                            {pct && <span className="mono text-xs" style={{ color: "#4d6480", fontSize: 9 }}>{pct}%</span>}
+                          </div>
+                        </div>
+                        {pct && (
+                          <div className="h-1 rounded-full" style={{ background: "#0b1220" }}>
+                            <div className="h-1 rounded-full" style={{ width: `${Math.min(parseFloat(pct), 100)}%`, background: color, opacity: 0.7 }} />
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Conversion Opportunity */}
+          {conversion && (
+            <div className="card p-4">
+              <SectionHeader title="Conversion Opportunity" sub={conversion.recommended_action?.replace(/_/g, " ") ?? ""} accent="#10b981"
+                right={<Target size={12} style={{ color: "#10b981" }} />}
+              />
+              {/* Overall score bar */}
+              {conversion.overall_conversion_score != null && (
+                <div className="mb-3">
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="text-xs" style={{ color: "#4d6480" }}>Overall score</span>
+                    <span className="mono text-xs font-bold" style={{ color: "#10b981" }}>
+                      {(conversion.overall_conversion_score * 100).toFixed(0)}
+                    </span>
+                  </div>
+                  <div className="h-2 rounded-full" style={{ background: "#0b1220" }}>
+                    <div className="h-2 rounded-full" style={{
+                      width: `${conversion.overall_conversion_score * 100}%`,
+                      background: "linear-gradient(90deg, #10b981, #3b82f6)"
+                    }} />
+                  </div>
+                </div>
+              )}
+              {/* 4 sub-scores */}
+              <div className="grid grid-cols-2 gap-2 mb-3">
+                {[
+                  { label: "Persuasion Room", value: conversion.persuasion_room_score, color: "#f97316" },
+                  { label: "Beneficiary Density", value: conversion.beneficiary_density_score, color: "#8b5cf6" },
+                  { label: "Turnout Mobilization", value: conversion.turnout_mobilization_score, color: "#3b82f6" },
+                  { label: "Service Risk", value: conversion.service_risk_score, color: "#ef4444", invert: true },
+                ].map(({ label, value, color, invert }) => (
+                  <div key={label} className="rounded-md p-2" style={{ background: "#0b1220", border: "1px solid #1a2b44" }}>
+                    <p className="text-xs mb-1" style={{ color: "#4d6480", fontSize: 9 }}>{label}</p>
+                    <div className="flex items-center gap-1.5">
+                      <div className="flex-1 h-1 rounded-full" style={{ background: "#1a2b44" }}>
+                        <div className="h-1 rounded-full" style={{
+                          width: value != null ? `${value * 100}%` : "0%",
+                          background: invert
+                            ? (value != null && value > 0.6 ? "#ef4444" : "#f59e0b")
+                            : color
+                        }} />
+                      </div>
+                      <span className="mono" style={{ color, fontSize: 9 }}>
+                        {value != null ? (value * 100).toFixed(0) : "—"}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              {/* Recommended action */}
+              {conversion.action_reason && (
+                <div className="rounded-md px-3 py-2" style={{ background: "rgba(16,185,129,0.06)", border: "1px solid rgba(16,185,129,0.15)" }}>
+                  <div className="flex items-center gap-1.5 mb-1">
+                    <Activity size={10} style={{ color: "#10b981" }} />
+                    <span className="text-xs font-medium capitalize" style={{ color: "#10b981" }}>
+                      {conversion.recommended_action?.replace(/_/g, " ")}
+                    </span>
+                  </div>
+                  <p className="text-xs" style={{ color: "#8ba0bc" }}>{conversion.action_reason}</p>
+                </div>
+              )}
             </div>
           )}
 

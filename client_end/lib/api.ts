@@ -43,6 +43,8 @@ export const api = {
   boothPulse: (boothId: string, days = 7) => get<PulseResponse>(`/booth/${boothId}/pulse?days=${days}`),
   boothIssues: (boothId: string) => get<{ booth_id: string; issues: Issue[] }>(`/booth/${boothId}/issues`),
   boothComments: (boothId: string) => get<{ booth_id: string; comments: Comment[] }>(`/booth/${boothId}/comments`),
+  boothSegments: (boothId: string) => get<BoothSegmentsResponse>(`/booth/${boothId}/segments`).catch(() => null),
+  boothConversion: (boothId: string) => get<ConversionOpportunity>(`/booth/${boothId}/conversion`).catch(() => null),
 
   // Graph
   subgraph: (entityType: string, entityId: string, excludeTypes: string[] = [], limit = 120) => {
@@ -407,6 +409,29 @@ export interface AcElectionResults {
   year: number;
   results: { party: string; total_votes: number; vote_share_pct: number; booths_won: number }[];
   turnout: { total_voters: number; total_votes: number; turnout_pct: number } | null;
+}
+
+export interface VoterSegment {
+  segment_type: string;
+  count: number;
+  pct_of_voters: number | null;
+}
+
+export interface BoothSegmentsResponse {
+  booth_id: string;
+  segments: VoterSegment[];
+}
+
+export interface ConversionOpportunity {
+  booth_id: string;
+  persuasion_room_score: number | null;
+  beneficiary_density_score: number | null;
+  turnout_mobilization_score: number | null;
+  service_risk_score: number | null;
+  overall_conversion_score: number | null;
+  recommended_action: string | null;
+  action_reason: string | null;
+  computed_at: string | null;
 }
 
 export interface AcIntelSummary {

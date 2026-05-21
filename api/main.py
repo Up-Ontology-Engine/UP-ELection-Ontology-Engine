@@ -14,6 +14,7 @@ from .queries import (
     get_booth_issues, get_booth_pulse, get_booth_comments,
     get_ac_candidates, get_scheme_gap,
     get_booth_quality, get_booth_narratives, get_booth_contradictions,
+    get_booth_segments, get_booth_conversion,
     get_ac_schemes, get_ac_narratives, get_ac_events,
     get_ac_quality, get_ac_recommendations, get_graph_subgraph,
     get_booth_geo, get_infrastructure_overview, get_graph_coverage,
@@ -164,6 +165,22 @@ def booth_contradictions(booth_id: str):
         "has_mixed_signals": has_mixed,
         "contradictions": contradictions,
     }
+
+
+@app.get("/booth/{booth_id}/segments")
+def booth_segments(booth_id: str):
+    """Privacy-safe voter demographic segments aggregated from electoral roll."""
+    segments = get_booth_segments(booth_id)
+    return {"booth_id": booth_id, "segments": segments}
+
+
+@app.get("/booth/{booth_id}/conversion")
+def booth_conversion(booth_id: str):
+    """Conversion opportunity scores and recommended field action for a booth."""
+    data = get_booth_conversion(booth_id)
+    if not data:
+        raise HTTPException(status_code=404, detail="No conversion data for this booth")
+    return data
 
 
 @app.get("/booth/{booth_id}/pulse")
