@@ -528,6 +528,129 @@ def get_ac_quality(ac_id: str) -> dict:
     return {"summary": summary, "booths": [dict(r) for r in booth_rows]}
 
 
+# ── Booth-level action intelligence ──────────────────────────────────────────
+
+_ISSUE_GUIDANCE: dict[str, str] = {
+    "education":    "Schools, teachers, exam results dominate discourse — direct voter concern",
+    "water":        "Drinking water access and pipeline complaints are top voter ask",
+    "roads":        "Road quality and pothole complaints signal infrastructure gap",
+    "law_order":    "Law & order narrative active — address crime visibility urgently",
+    "jobs":         "Youth unemployment frustration driving opposition narrative",
+    "price_rise":   "Inflation/petrol prices cited frequently — economic relief messaging needed",
+    "corruption":   "Corruption narrative active — requires proactive transparency response",
+    "farmer":       "Farmer distress signals (MSP, sugarcane) need direct outreach",
+    "health":       "Health and hospital access concerns present in discourse",
+    "women_safety": "Women safety narrative present — highlight scheme delivery",
+    "housing":      "PMAY/housing delivery gap flagged in digital discourse",
+}
+
+_NARRATIVE_RESPONSE: dict[str, str] = {
+    "anti_incumbency":   "Counter anti-incumbency through direct voter contact and highlighting scheme delivery",
+    "development_push":  "Amplify development narrative — connect voters to visible infrastructure wins",
+    "employment_crisis": "Engage youth with skill/employment messaging — address paper leak concerns",
+    "youth_frustration": "Youth outreach event — direct engagement on education and job opportunities",
+    "welfare_positive":  "Leverage positive welfare narrative — expand outreach to scheme beneficiaries",
+}
+
+
+def get_booth_actions(booth_id: str) -> list[dict]:
+    """Derive prioritised action items for a single booth from its issues, narratives, and scheme gaps."""
+    issues      = get_booth_issues(booth_id, limit=5, days=30)
+    narratives  = get_booth_narratives(booth_id, limit=5)
+    scheme_gaps = get_scheme_gap(booth_id)
+
+    # Fetch pulse scores directly
+    with get_pg_engine().connect() as conn:
+        pulse_row = conn.execute(text("""
+            SELECT bjp_pulse_score, opp_pulse_score
+            FROM booth_metrics
+            WHERE booth_id = :bid
+            ORDER BY window_start DESC LIMIT 1
+        """), {"bid": booth_id}).mappings().fetchone()
+    bjp_pulse = float(pulse_row["bjp_pulse_score"]) if pulse_row and pulse_row["bjp_pulse_score"] is not None else None
+    opp_pulse = float(pulse_row["opp_pulse_score"]) if pulse_row and pulse_row["opp_pulse_score"] is not None else None
+
+    actions: list[dict] = []
+
+    # 1. Scheme delivery gaps
+    for gap in sorted(scheme_gaps, key=lambda g: 0 if g.get("priority") == "HIGH" else 1)[:2]:
+        gap_type  = (gap.get("gap_type") or "").replace("_", " ")
+        gap_label = gap.get("gap_label") or ""
+        desc = f"Gap type: {gap_type}"
+        if gap_label:
+            desc += f" — {gap_label}"
+        neg = gap.get("negative_events") or 0
+        ben = gap.get("beneficiary_count") or 0
+        actions.append({
+            "title":    f"Close {gap['scheme_name']} delivery gap",
+            "description": desc,
+            "priority": "high" if gap.get("priority") == "HIGH" else "medium",
+            "category": "scheme",
+            "rationale": f"{neg} negative signals · {ben} beneficiaries affected",
+        })
+
+    # 2. Issue-based outreach (top 3)
+    for iss in issues[:3]:
+        cnt     = int(iss.get("mention_count") or 0)
+        pol     = float(iss.get("avg_polarity") or 0)
+        issue   = iss["issue"]
+        label   = issue.replace("_", " ").title()
+        guidance = _ISSUE_GUIDANCE.get(issue, f"{cnt} signals flagging this issue")
+        priority = "high" if pol < -0.1 and cnt > 5 else "medium"
+        actions.append({
+            "title":       f"Targeted outreach — {label}",
+            "description": guidance,
+            "priority":    priority,
+            "category":    "issue",
+            "rationale":   f"{cnt} mentions · avg sentiment {pol:+.2f}",
+        })
+
+    # 3. Narrative-based messaging (strength > 0.4)
+    for narr in narratives[:2]:
+        strength = float(narr.get("strength") or 0)
+        if strength < 0.4:
+            continue
+        nt  = narr.get("narrative_type", "")
+        msg = _NARRATIVE_RESPONSE.get(nt, f"Address {nt.replace('_', ' ')} narrative through targeted engagement")
+        actions.append({
+            "title":       f"Counter {nt.replace('_', ' ').title()} narrative",
+            "description": msg,
+            "priority":    "high" if strength > 0.65 else "medium",
+            "category":    "narrative",
+            "rationale":   f"Detected at strength {strength:.0%} in this booth",
+        })
+
+    # 4. Pulse-based mobilisation
+    if bjp_pulse is not None and opp_pulse is not None:
+        gap_val = bjp_pulse - opp_pulse
+        if gap_val < -0.1:
+            actions.append({
+                "title":       "Swing booth — mobilise base voters",
+                "description": f"Opposition leads digitally by {abs(gap_val):.3f} — intensive field presence required",
+                "priority":    "high",
+                "category":    "mobilisation",
+                "rationale":   f"BJP {bjp_pulse:+.3f} vs Opp {opp_pulse:+.3f}",
+            })
+        elif abs(gap_val) < 0.1:
+            actions.append({
+                "title":       "Consolidate swing voters",
+                "description": "Closely contested booth — each contact matters; focus on uncommitted voters",
+                "priority":    "medium",
+                "category":    "mobilisation",
+                "rationale":   f"Narrow gap: BJP {bjp_pulse:+.3f} vs Opp {opp_pulse:+.3f}",
+            })
+
+    # Deduplicate + sort: high first
+    seen: set[str] = set()
+    unique: list[dict] = []
+    for a in actions:
+        if a["title"] not in seen:
+            seen.add(a["title"])
+            unique.append(a)
+    unique.sort(key=lambda x: (0 if x["priority"] == "high" else 1, x["title"]))
+    return unique[:8]
+
+
 # ── Recommendations engine ────────────────────────────────────────────────────
 def get_ac_recommendations(ac_id: str) -> dict:
     """
@@ -1153,3 +1276,184 @@ def get_ontology_status() -> dict:
             "tables": pg_tables,
         },
     }
+
+
+# ── AC issue breakdown (pain-point engine core) ───────────────────────────────
+
+def get_ac_issue_breakdown(ac_id: str) -> list[dict]:
+    """
+    Per-issue aggregation across all booths in an AC.
+
+    Returns for each issue:
+      - total_signals, affected_booth_count, avg_polarity, avg_confidence
+      - negative_count, positive_count
+      - severity label (high / medium / low)
+      - trend direction (rising / falling / stable) based on 7-day windows
+      - top_booths: up to 5 booths with highest signal count for that issue
+      - evidence: up to 3 high-confidence text snippets as backing evidence
+
+    Data source: pulse_events joined to booth_master.
+    """
+    resolved = _rac(ac_id)
+
+    with get_pg_engine().connect() as conn:
+
+        # ── 1. Issue-level aggregation ────────────────────────────────────────
+        issue_rows = conn.execute(text("""
+            SELECT
+                final_issue                                                    AS issue,
+                COUNT(*)                                                       AS total_signals,
+                COUNT(DISTINCT mapped_booth_id)
+                    FILTER (WHERE mapped_booth_id IS NOT NULL)                 AS affected_booth_count,
+                ROUND(AVG(final_polarity)::numeric, 3)                        AS avg_polarity,
+                ROUND(AVG(final_confidence)::numeric, 3)                      AS avg_confidence,
+                SUM(CASE WHEN final_polarity < 0 THEN 1 ELSE 0 END)          AS negative_count,
+                SUM(CASE WHEN final_polarity > 0 THEN 1 ELSE 0 END)          AS positive_count,
+                COUNT(*) FILTER (
+                    WHERE created_at >= NOW() - INTERVAL '7 days')            AS recent_7d,
+                COUNT(*) FILTER (
+                    WHERE created_at >= NOW() - INTERVAL '14 days'
+                      AND created_at <  NOW() - INTERVAL '7 days')            AS prev_7d
+            FROM pulse_events
+            WHERE (
+                mapped_ac_id = :ac_id
+                OR mapped_booth_id IN (
+                    SELECT booth_id FROM booth_master WHERE ac_id = :ac_id
+                )
+            )
+              AND final_issue IS NOT NULL
+            GROUP BY final_issue
+            ORDER BY total_signals DESC
+        """), {"ac_id": resolved}).mappings().fetchall()
+
+        if not issue_rows:
+            return []
+
+        # ── 2. Top 5 booths per issue (ranked by signal count) ────────────────
+        booth_rows = conn.execute(text("""
+            SELECT issue, booth_id, booth_name, locality_hint, signals, avg_polarity
+            FROM (
+                SELECT
+                    pe.final_issue                                             AS issue,
+                    pe.mapped_booth_id                                         AS booth_id,
+                    bm.polling_station_name                                    AS booth_name,
+                    bm.locality_hint,
+                    COUNT(*)                                                   AS signals,
+                    ROUND(AVG(pe.final_polarity)::numeric, 3)                 AS avg_polarity,
+                    ROW_NUMBER() OVER (
+                        PARTITION BY pe.final_issue
+                        ORDER BY COUNT(*) DESC
+                    )                                                          AS rn
+                FROM pulse_events pe
+                JOIN booth_master bm ON pe.mapped_booth_id = bm.booth_id
+                WHERE bm.ac_id = :ac_id
+                  AND pe.final_issue IS NOT NULL
+                GROUP BY pe.final_issue, pe.mapped_booth_id,
+                         bm.polling_station_name, bm.locality_hint
+            ) ranked
+            WHERE rn <= 5
+            ORDER BY issue, rn
+        """), {"ac_id": resolved}).mappings().fetchall()
+
+        # ── 3. Top 3 evidence snippets per issue (high-confidence, recent) ────
+        evidence_rows = conn.execute(text("""
+            SELECT issue, text, source, polarity, confidence, created_at
+            FROM (
+                SELECT
+                    final_issue                                                AS issue,
+                    text_raw                                                   AS text,
+                    source_type                                                AS source,
+                    final_polarity                                             AS polarity,
+                    final_confidence                                           AS confidence,
+                    created_at::text                                           AS created_at,
+                    ROW_NUMBER() OVER (
+                        PARTITION BY final_issue
+                        ORDER BY final_confidence DESC, created_at DESC
+                    )                                                          AS rn
+                FROM pulse_events
+                WHERE (
+                    mapped_ac_id = :ac_id
+                    OR mapped_booth_id IN (
+                        SELECT booth_id FROM booth_master WHERE ac_id = :ac_id
+                    )
+                )
+                  AND final_issue IS NOT NULL
+                  AND final_confidence >= 0.6
+                  AND text_raw IS NOT NULL
+                  AND LENGTH(text_raw) > 25
+            ) ranked
+            WHERE rn <= 3
+            ORDER BY issue, rn
+        """), {"ac_id": resolved}).mappings().fetchall()
+
+    # ── Assemble into per-issue dicts ─────────────────────────────────────────
+    booth_map: dict[str, list[dict]] = {}
+    for r in booth_rows:
+        booth_map.setdefault(r["issue"], []).append({
+            "booth_id":     r["booth_id"],
+            "booth_name":   r["booth_name"],
+            "locality_hint": r["locality_hint"],
+            "signals":      int(r["signals"]),
+            "avg_polarity": float(r["avg_polarity"] or 0),
+        })
+
+    evidence_map: dict[str, list[dict]] = {}
+    for r in evidence_rows:
+        evidence_map.setdefault(r["issue"], []).append({
+            "text":       r["text"],
+            "source":     r["source"],
+            "polarity":   float(r["polarity"] or 0),
+            "confidence": float(r["confidence"] or 0),
+            "created_at": r["created_at"],
+        })
+
+    result = []
+    for row in issue_rows:
+        total   = int(row["total_signals"])
+        recent  = int(row["recent_7d"] or 0)
+        prev    = int(row["prev_7d"]   or 0)
+
+        # Severity
+        if total >= 30:
+            severity = "high"
+        elif total >= 10:
+            severity = "medium"
+        else:
+            severity = "low"
+
+        # Trend direction
+        if prev == 0 and recent > 3:
+            trend = "rising"
+            trend_delta_pct = None
+        elif prev == 0:
+            trend = "stable"
+            trend_delta_pct = None
+        else:
+            delta_pct = (recent - prev) / prev * 100
+            if delta_pct > 20 and recent > 3:
+                trend = "rising"
+            elif delta_pct < -20 and prev > 3:
+                trend = "falling"
+            else:
+                trend = "stable"
+            trend_delta_pct = round(delta_pct, 1)
+
+        issue = row["issue"]
+        result.append({
+            "issue":                issue,
+            "total_signals":        total,
+            "affected_booth_count": int(row["affected_booth_count"] or 0),
+            "avg_polarity":         float(row["avg_polarity"] or 0),
+            "avg_confidence":       float(row["avg_confidence"] or 0),
+            "negative_count":       int(row["negative_count"] or 0),
+            "positive_count":       int(row["positive_count"] or 0),
+            "recent_7d":            recent,
+            "prev_7d":              prev,
+            "severity":             severity,
+            "trend":                trend,
+            "trend_delta_pct":      trend_delta_pct,
+            "top_booths":           booth_map.get(issue, []),
+            "evidence":             evidence_map.get(issue, []),
+        })
+
+    return result

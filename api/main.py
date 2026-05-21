@@ -19,6 +19,7 @@ from .queries import (
     get_booth_geo, get_infrastructure_overview, get_graph_coverage,
     get_ac_intel_summary, get_ac_election_results, get_ac_demographics_summary,
     get_ac_booth_election_rows, get_ontology_status,
+    get_ac_issue_breakdown,
 )
 from .reasoning import reasoning_query
 
@@ -248,6 +249,27 @@ def ac_geo(ac_id: str):
 def ac_intel_summary(ac_id: str):
     """Combined intelligence summary: voter stats (PG) + issues/videos/candidates (Neo4j)."""
     return {"ac_id": ac_id, **get_ac_intel_summary(ac_id)}
+
+
+@app.get("/ac/{ac_id}/issue-breakdown")
+def ac_issue_breakdown(ac_id: str):
+    """
+    Pain-point engine core data.
+
+    Per-issue aggregation across all booths in the AC:
+      - total_signals, affected_booth_count, avg_polarity, avg_confidence
+      - severity (high / medium / low), trend (rising / falling / stable)
+      - top_booths: up to 5 booths with highest signal density for that issue
+      - evidence: up to 3 high-confidence text snippets from pulse_events
+
+    Powers /pain-points, dashboard risk summary, and heatmap tooltips.
+    """
+    breakdown = get_ac_issue_breakdown(_rac(ac_id))
+    return {
+        "ac_id":  ac_id,
+        "count":  len(breakdown),
+        "issues": breakdown,
+    }
 
 
 @app.get("/ac/{ac_id}/booth-election-rows")

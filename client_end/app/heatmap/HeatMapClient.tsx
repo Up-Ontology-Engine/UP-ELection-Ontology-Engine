@@ -13,9 +13,9 @@ const Map = dynamic(() => import("./LeafletMap"), {
   ssr: false,
   loading: () => (
     <div className="w-full h-full flex flex-col items-center justify-center"
-      style={{ background: "#060b14" }}>
+      style={{ background: "var(--bg-base)" }}>
       <div className="w-8 h-8 border-2 border-orange-500/30 border-t-orange-500 rounded-full animate-spin mb-3" />
-      <p className="text-xs mono" style={{ color: "#4d6480" }}>
+      <p className="text-xs mono" style={{ color: "var(--text-3)" }}>
         Initialising constituency heatmap…
       </p>
     </div>
@@ -46,42 +46,17 @@ function addCoords(b: GraphCoverageBooth): PlottedBooth {
   return { ...b, synthLat: lat, synthLon: lon };
 }
 
-// ── Layer config ─────────────────────────────────────────────────────────────
-const LAYERS: {
+// ── Layer config — hasData is computed dynamically from booth data ────────────
+const LAYER_DEFS: {
   id: HeatLayer;
   label: string;
   desc: string;
   color: string;
-  hasData: boolean;
 }[] = [
-  {
-    id: "voters",
-    label: "Voter Density",
-    desc: "Heat intensity by registered voter count",
-    color: "#f97316",
-    hasData: true,
-  },
-  {
-    id: "kg_coverage",
-    label: "KG Coverage",
-    desc: "Knowledge Graph node presence per booth",
-    color: "#10b981",
-    hasData: true,
-  },
-  {
-    id: "bjp_lean",
-    label: "Political Lean",
-    desc: "BJP vs Opposition digital pulse signal",
-    color: "#3b82f6",
-    hasData: false,
-  },
-  {
-    id: "confidence",
-    label: "Data Quality",
-    desc: "Data confidence score per booth",
-    color: "#8b5cf6",
-    hasData: false,
-  },
+  { id: "voters",      label: "Voter Density",    desc: "Heat intensity by registered voter count",        color: "#f97316" },
+  { id: "kg_coverage", label: "KG Coverage",      desc: "Knowledge Graph node presence per booth",        color: "#10b981" },
+  { id: "bjp_lean",    label: "Political Lean",   desc: "BJP vs Opposition digital pulse score per booth", color: "#f97316" },
+  { id: "confidence",  label: "Data Quality",     desc: "Data confidence label per booth",                color: "#8b5cf6" },
 ];
 
 const LEGENDS: Record<HeatLayer, { label: string; color: string }[]> = {
@@ -123,13 +98,23 @@ export default function HeatMapClient({ coverage }: Props) {
     [coverage]
   );
 
-  const total      = booths.length;
-  const inKg       = booths.filter((b) => b.in_neo4j).length;
+  const total       = booths.length;
+  const inKg        = booths.filter((b) => b.in_neo4j).length;
   const totalVoters = booths.reduce((s, b) => s + (b.total_voters ?? 0), 0);
-  const maxVoters  = Math.max(...booths.map((b) => b.total_voters ?? 0));
-  const minVoters  = Math.min(...booths.map((b) => b.total_voters ?? Infinity));
+  const maxVoters   = Math.max(...booths.map((b) => b.total_voters ?? 0));
+  const minVoters   = Math.min(...booths.map((b) => b.total_voters ?? Infinity));
 
   const usingRealCoords = booths.some((b) => b.lat != null);
+
+  const hasBjpData  = booths.some((b) => b.bjp_pulse_score != null);
+  const hasConfData = booths.some((b) => b.confidence_label != null);
+
+  const LAYERS = LAYER_DEFS.map((l) => ({
+    ...l,
+    hasData: l.id === "bjp_lean"   ? hasBjpData
+           : l.id === "confidence" ? hasConfData
+           : true,
+  }));
 
   return (
     <div className="flex" style={{ height: "calc(100vh - 44px)", background: "var(--bg-base)" }}>

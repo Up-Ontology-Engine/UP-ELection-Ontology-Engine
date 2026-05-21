@@ -3,133 +3,213 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
-  LayoutDashboard, Network, BarChart3, Brain,
+  LayoutDashboard, Network, Brain,
   MessageSquare, BookOpen, Users, Activity,
-  ChevronDown, GitBranch, Database, Shield, Radio, Zap, Flame
+  ChevronDown, GitBranch, Database, Shield, Radio, Zap, Flame,
+  AlertTriangle, ListChecks, Target,
 } from "lucide-react";
+
+interface SidebarProps {
+  topOffset: number;
+  sidebarWidth: number;
+}
 
 const SECTIONS = [
   {
     label: "Operations",
+    labelHi: "संचालन",
     items: [
-      { href: "/",       icon: LayoutDashboard, label: "Command Center",     badge: null,  dot: "green" },
-      { href: "/booths", icon: Activity,        label: "Booth Intelligence", badge: "30",  dot: "green" },
+      { href: "/",          icon: LayoutDashboard, label: "Home",               labelHi: "मुख्य पृष्ठ",     badge: null },
+      { href: "/dashboard", icon: Activity,        label: "Command Center",     labelHi: "कमांड सेंटर",     badge: null },
+      { href: "/booths",    icon: Shield,          label: "Booth Intelligence", labelHi: "बूथ बुद्धिमत्ता", badge: null },
+    ],
+  },
+  {
+    label: "Decisions",
+    labelHi: "निर्णय",
+    items: [
+      { href: "/pain-points", icon: AlertTriangle, label: "Pain Point Engine",      labelHi: "दर्द बिंदु इंजन",   badge: null },
+      { href: "/actions",     icon: ListChecks,    label: "Action Recommendations", labelHi: "कार्य अनुशंसाएं",   badge: null },
+      { href: "/drivers",     icon: Target,        label: "Candidate + Drivers",    labelHi: "उम्मीदवार विश्लेषण", badge: null },
     ],
   },
   {
     label: "Intelligence",
+    labelHi: "आसूचना",
     items: [
-      { href: "/heatmap",   icon: Flame,         label: "Constituency Heatmap", badge: null, dot: "amber" },
-      { href: "/graph",     icon: Network,       label: "Knowledge Graph",      badge: null, dot: "blue"  },
-      { href: "/reasoning", icon: MessageSquare, label: "AI Reasoning",         badge: null, dot: "pink"  },
+      { href: "/heatmap",   icon: Flame,         label: "Constituency Heatmap", labelHi: "क्षेत्र हीटमैप", badge: null },
+      { href: "/graph",     icon: Network,       label: "Knowledge Graph",      labelHi: "ज्ञान ग्राफ",    badge: null },
+      { href: "/reasoning", icon: MessageSquare, label: "AI Reasoning",         labelHi: "AI तर्कशक्ति",   badge: null },
     ],
   },
   {
     label: "Analytics",
+    labelHi: "विश्लेषण",
     items: [
-      { href: "/demographics", icon: Users,    label: "Demographics",   badge: null, dot: "cyan"  },
-      { href: "/ontology",     icon: BookOpen, label: "Ontology Layer", badge: "v1", dot: "slate" },
+      { href: "/demographics", icon: Users,    label: "Demographics",   labelHi: "जनसांख्यिकी", badge: null  },
+      { href: "/ontology",     icon: BookOpen, label: "Ontology Layer", labelHi: "ऑन्टोलॉजी",   badge: "v1" },
     ],
   },
 ];
 
-const DOT_COLORS: Record<string, string> = {
-  green:  "var(--green)",
-  amber:  "var(--amber)",
-  blue:   "var(--blue)",
-  purple: "var(--purple)",
-  pink:   "var(--pink)",
-  cyan:   "var(--cyan)",
-  slate:  "#64748b",
-  orange: "var(--saffron)",
-};
-
 const PIPELINE = [
-  { label: "PostgreSQL", status: "LIVE", icon: Database, color: "var(--green)", pulse: true  },
-  { label: "Neo4j Graph", status: "LIVE", icon: GitBranch, color: "var(--green)", pulse: true  },
-  { label: "ETL Pipeline", status: "IDLE", icon: Radio, color: "var(--amber)", pulse: false },
+  { label: "PostgreSQL",   status: "LIVE", icon: Database,  color: "#138808", pulse: true  },
+  { label: "Neo4j Graph",  status: "LIVE", icon: GitBranch, color: "#138808", pulse: true  },
+  { label: "ETL Pipeline", status: "IDLE", icon: Radio,     color: "#d97706", pulse: false },
 ];
 
-export default function Sidebar() {
-  const path = usePathname();
+const NAVY = "#061225";
+const NAVY_2 = "#0a1b35";
+const NAVY_3 = "#10294d";
+const LINE = "rgba(255,255,255,0.14)";
+const TEXT = "#f3f7ff";
+const MUTED = "rgba(243,247,255,0.62)";
+const DIM = "rgba(243,247,255,0.42)";
 
+export default function Sidebar({ topOffset, sidebarWidth }: SidebarProps) {
+  const path = usePathname();
   const isActive = (href: string) =>
     href === "/" ? path === "/" : path === href || path.startsWith(href + "/");
 
   return (
-    <aside className="fixed top-0 left-0 h-full w-56 flex flex-col z-50 select-none"
-      style={{ background: "var(--bg-base)", borderRight: "1px solid var(--border)" }}>
-
-      {/* Top accent line */}
-      <div className="h-0.5 w-full flex-shrink-0"
-        style={{ background: "var(--sidebar-top-line)" }} />
-
-      {/* Logo / Brand */}
-      <div className="px-4 pt-4 pb-3.5" style={{ borderBottom: "1px solid var(--border)" }}>
-        <div className="flex items-center gap-2.5 mb-3.5">
-          <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
-            style={{ background: "linear-gradient(135deg, #f97316 0%, #dc2626 100%)", boxShadow: "0 2px 8px rgba(249,115,22,0.3)" }}>
-            <BarChart3 size={15} className="text-white" />
+    <aside
+      aria-label="Main Navigation"
+      style={{
+        position: "fixed",
+        top: topOffset,
+        left: 0,
+        width: sidebarWidth,
+        height: `calc(100vh - ${topOffset}px)`,
+        background: NAVY,
+        borderRight: "1px solid rgba(255,153,51,0.35)",
+        display: "flex",
+        flexDirection: "column",
+        zIndex: 50,
+        overflowY: "auto",
+        boxShadow: "4px 0 18px rgba(0,18,48,0.28)",
+      }}
+    >
+      {/* AC selector */}
+      <div style={{
+        padding: "10px 10px 8px",
+        borderBottom: `1px solid ${LINE}`,
+        background: NAVY_2,
+      }}>
+        <button
+          aria-label="Switch constituency"
+          style={{
+            width: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            padding: "8px 10px",
+            borderRadius: 4,
+            border: `1px solid ${LINE}`,
+            background: NAVY_3,
+            cursor: "pointer",
+            boxShadow: "inset 0 1px 0 rgba(255,255,255,0.05)",
+          }}
+        >
+          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+            <Shield size={12} style={{ color: "#FF9933" }} />
+            <div style={{ textAlign: "left" }}>
+              <div style={{ fontSize: 11, fontWeight: 700, color: TEXT, lineHeight: 1.2 }}>
+                Gorakhpur Urban
+              </div>
+              <div style={{ fontSize: 9, color: MUTED, lineHeight: 1.2, marginTop: 1 }} lang="hi">
+                गोरखपुर शहरी · AC-322
+              </div>
+            </div>
           </div>
-          <div>
-            <p className="font-bold text-xs leading-none tracking-widest" style={{ color: "var(--text-1)" }}>UP-EOM</p>
-            <p className="text-xs leading-none mt-1" style={{ color: "var(--text-3)", fontSize: 10 }}>Election Ontology Engine</p>
-          </div>
-        </div>
-
-        {/* AC Selector */}
-        <button className="w-full flex items-center justify-between px-2.5 py-2 rounded-md text-xs transition-all"
-          style={{ background: "var(--bg-surface)", border: "1px solid var(--border)" }}
-          onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--saffron-dim)")}
-          onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--border)")}>
-          <div className="flex items-center gap-2">
-            <Shield size={10} style={{ color: "var(--saffron)" }} />
-            <span className="font-semibold" style={{ color: "var(--saffron)", fontSize: 11 }}>Gorakhpur Urban</span>
-          </div>
-          <ChevronDown size={10} style={{ color: "var(--text-4)" }} />
+          <ChevronDown size={10} style={{ color: MUTED }} />
         </button>
       </div>
 
       {/* Navigation */}
-      <nav className="flex-1 py-2 overflow-y-auto">
+      <nav aria-label="Site sections" style={{ flex: 1, paddingTop: 6, paddingBottom: 4 }}>
         {SECTIONS.map((section, si) => (
-          <div key={section.label} className={si > 0 ? "mt-1" : ""}>
+          <div key={section.label} style={{ marginTop: si > 0 ? 2 : 0 }}>
             {/* Section header */}
-            <div className="flex items-center gap-2 px-4 pt-3 pb-1.5">
-              <span className="label" style={{ color: "var(--text-4)", fontSize: 9, letterSpacing: "0.12em" }}>
+            <div style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 8,
+              padding: "10px 14px 5px",
+            }}>
+              <span style={{
+                fontSize: 9,
+                fontWeight: 700,
+                color: "#FF9933",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                whiteSpace: "nowrap",
+              }}>
                 {section.label}
               </span>
-              <div className="flex-1 h-px" style={{ background: "var(--border)" }} />
+              <span style={{ fontSize: 9, color: DIM }} lang="hi">
+                / {section.labelHi}
+              </span>
+              <div style={{ flex: 1, height: 1, background: LINE }} />
             </div>
 
-            {section.items.map(({ href, icon: Icon, label, badge, dot }) => {
+            {section.items.map(({ href, icon: Icon, label, labelHi, badge }) => {
               const active = isActive(href);
               return (
-                <Link key={href} href={href} className={`nav-item ${active ? "active" : ""}`}>
-                  {/* Status dot */}
-                  <span
-                    className={active ? "animate-pulse-dot" : ""}
+                <Link
+                  key={href}
+                  href={href}
+                  aria-label={label}
+                  aria-current={active ? "page" : undefined}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 9,
+                    margin: "1px 8px",
+                    padding: "7px 10px",
+                    borderRadius: 4,
+                    textDecoration: "none",
+                    background: active ? "rgba(255,153,51,0.14)" : "transparent",
+                    borderLeft: active ? "3px solid #FF9933" : "3px solid transparent",
+                    transition: "all 0.1s ease",
+                  }}
+                >
+                  <Icon
+                    size={14}
                     style={{
-                      display: "inline-block",
-                      width: 6,
-                      height: 6,
-                      borderRadius: "50%",
-                      background: DOT_COLORS[dot] ?? "#64748b",
-                      opacity: active ? 1 : 0.4,
+                      color: active ? "#FF9933" : MUTED,
                       flexShrink: 0,
-                    }} />
-                  <Icon size={13} style={{ flexShrink: 0, opacity: active ? 1 : 0.7 }} />
-                  <span className="flex-1 leading-none" style={{ fontSize: 12 }}>{label}</span>
+                    }}
+                  />
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{
+                      fontSize: 12,
+                      fontWeight: active ? 700 : 500,
+                      color: active ? "#ffffff" : "rgba(243,247,255,0.82)",
+                      lineHeight: 1.2,
+                    }}>
+                      {label}
+                    </div>
+                    <div style={{
+                      fontSize: 9,
+                      color: active ? "rgba(255,255,255,0.68)" : DIM,
+                      lineHeight: 1,
+                      marginTop: 1.5,
+                    }} lang="hi">
+                      {labelHi}
+                    </div>
+                  </div>
                   {badge && (
-                    <span className="mono px-1.5 py-0.5 rounded"
-                      style={{
-                        background: active ? "rgba(249,115,22,0.2)" : "var(--bg-surface)",
-                        color: active ? "var(--saffron)" : "var(--text-4)",
-                        fontSize: 9,
-                        fontWeight: 600,
-                        letterSpacing: "0.04em",
-                        border: `1px solid ${active ? "rgba(249,115,22,0.3)" : "var(--border)"}`,
-                      }}>
+                    <span style={{
+                      padding: "1px 5px",
+                      borderRadius: 3,
+                      fontSize: 9,
+                      fontWeight: 700,
+                      background: active ? "rgba(255,153,51,0.18)" : NAVY_3,
+                      color: active ? "#FF9933" : MUTED,
+                      border: `1px solid ${active ? "rgba(255,153,51,0.35)" : LINE}`,
+                      fontFamily: "monospace",
+                      flexShrink: 0,
+                    }}>
                       {badge}
                     </span>
                   )}
@@ -141,36 +221,88 @@ export default function Sidebar() {
       </nav>
 
       {/* Pipeline status */}
-      <div className="px-3.5 py-3" style={{ borderTop: "1px solid var(--border)" }}>
-        <div className="flex items-center gap-2 mb-2.5">
-          <Zap size={9} style={{ color: "var(--text-4)" }} />
-          <p className="label" style={{ color: "var(--text-4)", fontSize: 9 }}>Pipeline Status</p>
+      <div style={{
+        padding: "10px 10px 8px",
+        borderTop: `1px solid ${LINE}`,
+        background: NAVY_2,
+      }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 5, marginBottom: 7 }}>
+          <Zap size={9} style={{ color: "#FF9933" }} />
+          <span style={{
+            fontSize: 9,
+            fontWeight: 700,
+            color: MUTED,
+            letterSpacing: "0.1em",
+            textTransform: "uppercase",
+          }}>
+            Data Pipeline
+          </span>
         </div>
-        <div className="space-y-1.5">
+        <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
           {PIPELINE.map(({ label, status, icon: Icon, color, pulse }) => (
-            <div key={label} className="flex items-center gap-2 px-2.5 py-1.5 rounded-md"
-              style={{ background: "var(--bg-surface)", border: "1px solid var(--border)" }}>
+            <div key={label} style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 8,
+              padding: "5px 8px",
+              borderRadius: 4,
+              background: NAVY_3,
+              border: `1px solid ${LINE}`,
+            }}>
               <Icon size={10} style={{ color, flexShrink: 0 }} />
-              <span className="flex-1 text-xs" style={{ color: "var(--text-3)", fontSize: 11 }}>{label}</span>
-              <div className="flex items-center gap-1">
-                <span className={pulse ? "animate-pulse-dot" : ""}
-                  style={{ display: "inline-block", width: 5, height: 5, borderRadius: "50%", background: color }} />
-                <span className="mono" style={{ color, fontSize: 9, fontWeight: 700, letterSpacing: "0.05em" }}>{status}</span>
+              <span style={{ flex: 1, fontSize: 10.5, color: MUTED }}>{label}</span>
+              <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+                <span
+                  className={pulse ? "animate-pulse-dot" : ""}
+                  style={{
+                    display: "inline-block",
+                    width: 6,
+                    height: 6,
+                    borderRadius: "50%",
+                    background: color,
+                    flexShrink: 0,
+                  }}
+                />
+                <span style={{
+                  fontSize: 9,
+                  fontWeight: 700,
+                  color,
+                  fontFamily: "monospace",
+                  letterSpacing: "0.04em",
+                }}>
+                  {status}
+                </span>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Version */}
-      <div className="px-4 py-2.5 flex items-center justify-between"
-        style={{ borderTop: "1px solid var(--border)" }}>
-        <div className="flex items-center gap-1.5">
-          <Brain size={9} style={{ color: "var(--text-4)" }} />
-          <span className="mono" style={{ color: "var(--text-4)", fontSize: 10 }}>v1.0.0-ontology</span>
+      {/* Version footer */}
+      <div style={{
+        padding: "7px 12px",
+        borderTop: `1px solid ${LINE}`,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        background: "#041027",
+      }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
+          <Brain size={9} style={{ color: DIM }} />
+          <span style={{ fontSize: 9.5, color: DIM, fontFamily: "monospace" }}>
+            v1.0.0-ontology
+          </span>
         </div>
-        <span className="mono px-1.5 py-0.5 rounded"
-          style={{ background: "var(--bg-surface)", color: "var(--text-4)", fontSize: 9, border: "1px solid var(--border)" }}>
+        <span style={{
+          padding: "1px 6px",
+          borderRadius: 3,
+          background: NAVY_3,
+          color: MUTED,
+          fontSize: 9,
+          border: `1px solid ${LINE}`,
+          fontFamily: "monospace",
+          fontWeight: 700,
+        }}>
           PHASE 0
         </span>
       </div>

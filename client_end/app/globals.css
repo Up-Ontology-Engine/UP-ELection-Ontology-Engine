@@ -1,29 +1,55 @@
 @import "tailwindcss";
 
-/* ── Fixed accent tokens (same in both themes) ──────────────────────────────── */
+/* ── Government accent tokens (fixed, both themes) ──────────────────────────── */
 :root {
-  --saffron:        #f97316;
-  --saffron-dim:    #c2611a;
-  --saffron-glow:   rgba(249,115,22,0.15);
-  --saffron-subtle: rgba(249,115,22,0.08);
-  --blue:           #3b82f6;
-  --blue-dim:       #2563a8;
-  --blue-glow:      rgba(59,130,246,0.12);
-  --green:          #10b981;
-  --green-glow:     rgba(16,185,129,0.12);
-  --red:            #ef4444;
-  --red-glow:       rgba(239,68,68,0.12);
-  --amber:          #f59e0b;
-  --purple:         #8b5cf6;
-  --pink:           #ec4899;
-  --cyan:           #06b6d4;
+  --gov-navy:    #002060;
+  --gov-blue:    #003380;
+  --gov-saffron: #FF9933;
+  --gov-green:   #138808;
+
+  --saffron:        #e8890a;
+  --saffron-dim:    #c07008;
+  --saffron-glow:   rgba(232,137,10,0.14);
+  --saffron-subtle: rgba(232,137,10,0.08);
+  --blue:           #003380;
+  --blue-dim:       #002060;
+  --blue-glow:      rgba(0,51,128,0.12);
+  --green:          #138808;
+  --green-glow:     rgba(19,136,8,0.12);
+  --red:            #cc2200;
+  --red-glow:       rgba(204,34,0,0.12);
+  --amber:          #d97706;
+  --purple:         #6d28d9;
+  --pink:           #be185d;
+  --cyan:           #0369a1;
 
   --font-mono: var(--font-geist-mono), 'Courier New', monospace;
-  --font-sans: var(--font-geist-sans), -apple-system, sans-serif;
+  --font-sans: var(--font-noto-sans), 'Noto Sans', Arial, -apple-system, sans-serif;
+  --font-devanagari: var(--font-noto-devanagari), 'Noto Sans Devanagari', 'Mangal', sans-serif;
 }
 
-/* ── Dark theme (default) ───────────────────────────────────────────────────── */
-:root, [data-theme="dark"] {
+/* ── Light theme — Indian Government portal palette ─────────────────────────── */
+:root, [data-theme="light"] {
+  --bg-base:        #f0f2f5;
+  --bg-surface:     #e8ecf2;
+  --bg-card:        #ffffff;
+  --bg-card-2:      #f5f7fb;
+  --bg-hover:       #dde4ef;
+  --border:         #c0cfe0;
+  --border-bright:  #8fa3c0;
+
+  --text-1:         #0a1628;
+  --text-2:         #1e3a5f;
+  --text-3:         #4a6280;
+  --text-4:         #7890a8;
+
+  --grid-line:      rgba(0,51,128,0.04);
+  --scrollbar-thumb: #9aaec4;
+  --sidebar-top-line: linear-gradient(90deg, #FF9933 0%, #ffffff 50%, #138808 100%);
+}
+
+/* ── Dark theme ─────────────────────────────────────────────────────────────── */
+[data-theme="dark"] {
   --bg-base:        #060b14;
   --bg-surface:     #0b1220;
   --bg-card:        #0f1929;
@@ -39,30 +65,22 @@
 
   --grid-line:      rgba(26,43,68,0.35);
   --scrollbar-thumb: #243552;
-  --sidebar-top-line: linear-gradient(90deg, #f97316 0%, #dc2626 60%, transparent 100%);
+  --sidebar-top-line: linear-gradient(90deg, #FF9933 0%, #dc2626 60%, transparent 100%);
+
+  --saffron:        #f97316;
+  --saffron-dim:    #c2611a;
+  --saffron-glow:   rgba(249,115,22,0.15);
+  --saffron-subtle: rgba(249,115,22,0.08);
+  --blue:           #3b82f6;
+  --green:          #10b981;
+  --red:            #ef4444;
+  --amber:          #f59e0b;
+  --purple:         #8b5cf6;
+  --pink:           #ec4899;
+  --cyan:           #06b6d4;
 }
 
-/* ── Light theme ────────────────────────────────────────────────────────────── */
-[data-theme="light"] {
-  --bg-base:        #f4f7fb;
-  --bg-surface:     #edf1f7;
-  --bg-card:        #ffffff;
-  --bg-card-2:      #f8fafc;
-  --bg-hover:       #e4eaf5;
-  --border:         #cbd8ea;
-  --border-bright:  #9aaec4;
-
-  --text-1:         #0f1f35;
-  --text-2:         #2d4a6a;
-  --text-3:         #5a7899;
-  --text-4:         #8aabcc;
-
-  --grid-line:      rgba(100,140,180,0.12);
-  --scrollbar-thumb: #9aaec4;
-  --sidebar-top-line: linear-gradient(90deg, #f97316 0%, #dc2626 60%, transparent 100%);
-}
-
-/* ── Base ───────────────────────────────────────────────────────────────────── */
+/* ── Base reset ──────────────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
 html, body { height: 100%; }
 
@@ -71,18 +89,30 @@ body {
   color: var(--text-1);
   font-family: var(--font-sans);
   font-size: 13px;
-  line-height: 1.5;
+  line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   transition: background 0.2s ease, color 0.2s ease;
 }
 
-/* ── Scrollbar ──────────────────────────────────────────────────────────────── */
-::-webkit-scrollbar { width: 3px; height: 3px; }
+/* ── Devanagari text ─────────────────────────────────────────────────────────── */
+[lang="hi"], .devanagari {
+  font-family: var(--font-devanagari);
+}
+
+/* ── Accessibility: visible focus rings ──────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--gov-saffron);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; height: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 2px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--text-3); }
 
-/* ── Grid background pattern ────────────────────────────────────────────────── */
+/* ── Grid background (dark mode only) ───────────────────────────────────────── */
 .grid-bg {
   background-image:
     linear-gradient(var(--grid-line) 1px, transparent 1px),
@@ -90,13 +120,13 @@ body {
   background-size: 32px 32px;
 }
 
-/* ── Glow effects ───────────────────────────────────────────────────────────── */
-.glow-saffron { box-shadow: 0 0 20px var(--saffron-glow), inset 0 1px 0 rgba(249,115,22,0.1); }
-.glow-blue    { box-shadow: 0 0 20px var(--blue-glow),    inset 0 1px 0 rgba(59,130,246,0.1); }
-.glow-green   { box-shadow: 0 0 20px var(--green-glow),   inset 0 1px 0 rgba(16,185,129,0.1); }
-.glow-red     { box-shadow: 0 0 20px var(--red-glow),     inset 0 1px 0 rgba(239,68,68,0.1); }
+/* ── Glow effects ────────────────────────────────────────────────────────────── */
+.glow-saffron { box-shadow: 0 0 16px var(--saffron-glow), inset 0 1px 0 rgba(232,137,10,0.1); }
+.glow-blue    { box-shadow: 0 0 16px var(--blue-glow),    inset 0 1px 0 rgba(0,51,128,0.1); }
+.glow-green   { box-shadow: 0 0 16px var(--green-glow),   inset 0 1px 0 rgba(19,136,8,0.1); }
+.glow-red     { box-shadow: 0 0 16px var(--red-glow),     inset 0 1px 0 rgba(204,34,0,0.1); }
 
-/* ── Animations ─────────────────────────────────────────────────────────────── */
+/* ── Animations ──────────────────────────────────────────────────────────────── */
 @keyframes pulse-dot {
   0%, 100% { opacity: 1; transform: scale(1); }
   50%       { opacity: 0.4; transform: scale(0.8); }
@@ -123,31 +153,27 @@ body {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
-@keyframes theme-spin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-}
 
 .animate-pulse-dot  { animation: pulse-dot 2s ease-in-out infinite; }
 .animate-blink      { animation: blink 1s step-end infinite; }
 .animate-fade-up    { animation: fade-up 0.3s ease forwards; }
 .animate-ticker     { animation: ticker 40s linear infinite; }
 
-/* ── Utility classes ────────────────────────────────────────────────────────── */
+/* ── Utility ─────────────────────────────────────────────────────────────────── */
 .mono   { font-family: var(--font-mono); letter-spacing: -0.01em; }
 .label  { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
 
-/* ── Card base ──────────────────────────────────────────────────────────────── */
+/* ── Card base ───────────────────────────────────────────────────────────────── */
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: 4px;
   transition: background 0.2s ease, border-color 0.2s ease;
 }
 .card-2 {
   background: var(--bg-card-2);
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: 4px;
   transition: background 0.2s ease, border-color 0.2s ease;
 }
 .card-hover:hover {
@@ -156,36 +182,55 @@ body {
   transition: all 0.15s;
 }
 
-/* ── Table ──────────────────────────────────────────────────────────────────── */
+/* ── Government card — flat with left accent border ─────────────────────────── */
+.gov-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gov-blue);
+  border-radius: 4px;
+}
+
+/* ── Data table ──────────────────────────────────────────────────────────────── */
 .data-table thead th {
-  background: var(--bg-surface);
-  color: var(--text-3);
-  font-size: 10px;
+  background: #002060;
+  color: #ffffff;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  padding: 8px 12px;
-  border-bottom: 1px solid var(--border);
+  padding: 9px 12px;
+  border-bottom: 1px solid #003380;
   white-space: nowrap;
   position: sticky;
   top: 0;
   z-index: 1;
 }
+[data-theme="dark"] .data-table thead th {
+  background: var(--bg-surface);
+  color: var(--text-3);
+  border-bottom: 1px solid var(--border);
+}
 .data-table tbody tr {
   border-bottom: 1px solid var(--border);
   transition: background 0.1s;
 }
+.data-table tbody tr:nth-child(even) {
+  background: rgba(0, 51, 128, 0.025);
+}
+[data-theme="dark"] .data-table tbody tr:nth-child(even) {
+  background: rgba(255,255,255,0.015);
+}
 .data-table tbody tr:hover { background: var(--bg-hover); }
-.data-table tbody td { padding: 7px 12px; }
+.data-table tbody td { padding: 8px 12px; }
 
-/* ── Theme toggle button ────────────────────────────────────────────────────── */
+/* ── Theme toggle button ─────────────────────────────────────────────────────── */
 .theme-toggle {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 28px;
   height: 28px;
-  border-radius: 6px;
+  border-radius: 4px;
   border: 1px solid var(--border);
   background: var(--bg-surface);
   color: var(--text-3);
@@ -194,61 +239,52 @@ body {
 }
 .theme-toggle:hover {
   background: var(--bg-hover);
-  border-color: var(--border-bright);
-  color: var(--saffron);
+  border-color: var(--gov-blue);
+  color: var(--gov-blue);
 }
 
-/* ── Sidebar nav item ───────────────────────────────────────────────────────── */
+/* ── Header (breadcrumb bar) ─────────────────────────────────────────────────── */
+.header-bar {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+/* ── Sidebar nav item ────────────────────────────────────────────────────────── */
 .nav-item {
   display: flex;
   align-items: center;
   gap: 10px;
   margin: 1px 8px;
   padding: 7px 10px;
-  border-radius: 6px;
+  border-radius: 4px;
   font-size: 12px;
   font-weight: 500;
-  color: var(--text-3);
+  color: var(--text-2);
   text-decoration: none;
   position: relative;
+  border-left: 3px solid transparent;
   transition: background 0.12s ease, color 0.12s ease;
 }
 .nav-item:hover {
-  background: var(--bg-hover);
-  color: var(--text-2);
+  background: rgba(0,51,128,0.05);
+  color: var(--gov-blue);
 }
 .nav-item.active {
-  background: var(--saffron-subtle);
-  color: var(--saffron);
-}
-.nav-item.active::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 3px;
-  height: 18px;
-  border-radius: 0 3px 3px 0;
-  background: var(--saffron);
+  background: rgba(0,51,128,0.07);
+  color: var(--gov-blue);
+  border-left-color: var(--gov-blue);
+  font-weight: 700;
 }
 
-/* ── Header ─────────────────────────────────────────────────────────────────── */
-.header-bar {
-  background: var(--bg-base);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(8px);
-  transition: background 0.2s ease, border-color 0.2s ease;
-}
-
-/* ── Leaflet overrides ──────────────────────────────────────────────────────── */
+/* ── Leaflet overrides ───────────────────────────────────────────────────────── */
 .leaflet-container { background: var(--bg-base); }
 .leaflet-popup-content-wrapper {
   background: var(--bg-card) !important;
   color: var(--text-1) !important;
   border: 1px solid var(--border) !important;
-  border-radius: 6px !important;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.3) !important;
+  border-radius: 4px !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12) !important;
 }
 .leaflet-popup-tip { background: var(--bg-card) !important; }
 .leaflet-bar a, .leaflet-control-zoom a {
