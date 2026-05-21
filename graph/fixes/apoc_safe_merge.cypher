@@ -31,7 +31,6 @@ Notes:
 // for quick review. It does NOT change relationships or merge nodes.
 
 CALL {
-  WITH 1000 AS LIMIT
   MATCH (n:Candidate)
   WHERE n.candidate_id IS NOT NULL
   WITH n.candidate_id AS cid, collect(n) AS nodes, size(collect(n)) AS cnt
@@ -39,9 +38,9 @@ CALL {
   UNWIND nodes AS d
   SET d:Duplicate
   WITH cid, nodes
-  LIMIT LIMIT
+  LIMIT 1000
   RETURN cid, size(nodes) AS dup_count, [x IN nodes | id(x)] AS node_ids
-}
+};
 
 // ====== CREATE CANONICAL MAP (select canonical id per group) ======
 // Strategy: pick the node with the earliest created_at (if present), else first.
@@ -58,7 +57,7 @@ CALL {
   WITH cid, head(nodes) AS canonical, tail(nodes) AS duplicates
   RETURN cid, id(canonical) AS canonical_id, [d IN duplicates | id(d)] AS duplicate_ids
   LIMIT 100
-}
+};
 
 // ====== REWIRE RELATIONSHIPS (safe, non-destructive) ======
 // For each duplicate node, copy/merge relationships to the canonical node, then tag duplicate as deprecated.
@@ -79,11 +78,9 @@ CALL {
     WITH d, canonical
     MATCH (d)-[r]->(t)
     WITH d, canonical, r, t
-    // create same relationship from canonical to the target if not exists
-    MERGE (canonical)-[r2:TYPE(r)]->(t)
-    // copy simple relationship properties if necessary (optional)
-    // SET r2 += r
-    RETURN count(*) AS out_rewired
+    // create same relationship from canonical to the target if not exists using APOC
+    CALL apoc.merge.relationship(canonical, TYPE(r), {}, properties(r), t) YIELD rel
+    RETURN count(rel) AS out_rewired
   }
 
   // Incoming relationships from source -> duplicate
@@ -91,9 +88,8 @@ CALL {
     WITH d, canonical
     MATCH (s)-[r]->(d)
     WITH s, r, canonical
-    MERGE (s)-[r2:TYPE(r)]->(canonical)
-    // SET r2 += r
-    RETURN count(*) AS in_rewired
+    CALL apoc.merge.relationship(s, TYPE(r), {}, properties(r), canonical) YIELD rel
+    RETURN count(rel) AS in_rewired
   }
 
   // mark duplicate node for review
@@ -102,7 +98,7 @@ CALL {
   SET d.rewired_to = id(canonical)
   RETURN cid, id(canonical) AS canonical_id, id(d) AS duplicate_id
   LIMIT 1000
-}
+};
 
 // ====== DRY-RUN CHECK: list tagged duplicates and rewired counts ======
 MATCH (d:Deprecated)

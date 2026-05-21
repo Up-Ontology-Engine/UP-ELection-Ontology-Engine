@@ -19,8 +19,15 @@ os.makedirs(REPORT_DIR, exist_ok=True)
 def read_queries(path: str) -> list[str]:
     s = open(path, 'r', encoding='utf-8').read()
     # split on semicolons but keep queries simple — the file uses separate RETURN blocks
-    parts = [p.strip() for p in s.split(';') if p.strip()]
-    return parts
+    parts = [p for p in s.split(';') if p.strip()]
+    queries = []
+    for p in parts:
+        # remove single-line comments starting with // and blank lines
+        lines = [ln for ln in p.splitlines() if not ln.strip().startswith('//')]
+        cleaned = '\n'.join(lines).strip()
+        if cleaned:
+            queries.append(cleaned)
+    return queries
 
 def run(uri: str, user: str, password: str) -> dict:
     drv = GraphDatabase.driver(uri, auth=basic_auth(user, password))

@@ -22,8 +22,8 @@ os.makedirs(OUT_DIR, exist_ok=True)
 
 ORPHAN_QUERY = """
 MATCH (pe:PulseEvent)
-WHERE NOT (pe)-[:AT_BOOTH]->(:Booth)
-RETURN pe.event_id AS event_id, pe.published_at AS published_at
+WHERE NOT EXISTS { MATCH (pe)-[r]->(:Booth) WHERE type(r) = 'AT_BOOTH' }
+RETURN pe.event_id AS event_id
 """
 
 def get_orphans(uri: str, user: str, pw: str) -> list[str]:

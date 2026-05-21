@@ -1,14 +1,10 @@
 import { api } from "@/lib/api";
 import HeatMapClient from "./HeatMapClient";
 
-const AC_ID = "GKP_URBAN";
-
 export default async function HeatMapPage() {
-  let geo: Awaited<ReturnType<typeof api.geo>>["geo"] = [];
+  let coverage = null;
   try {
-    const res = await api.geo(AC_ID);
-    geo = res.geo;
+    coverage = await api.graphCoverage("GKP_URBAN");
   } catch {}
-
-  return <HeatMapClient geo={geo} />;
+  return <HeatMapClient coverage={coverage} />;
 }

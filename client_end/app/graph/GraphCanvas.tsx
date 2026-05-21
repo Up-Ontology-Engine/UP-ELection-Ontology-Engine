@@ -7,6 +7,8 @@ interface Props {
   nodes: GraphNode[];
   edges: GraphEdge[];
   nodeColors: Record<string, string>;
+  selectedId?: string;
+  theme?: "dark" | "light";
   onSelect: (node: GraphNode) => void;
 }
 
@@ -14,10 +16,49 @@ interface SimNode extends GraphNode {
   x: number; y: number; vx: number; vy: number;
 }
 
-export default function GraphCanvas({ nodes, edges, nodeColors, onSelect }: Props) {
+interface State {
+  nodes: SimNode[];
+  edges: GraphEdge[];
+  dragging: SimNode | null;
+  draggingMoved: boolean;
+  hoveredId: string | null;
+  frame: number;
+  // Simulation convergence — physics only runs while ticksLeft > 0
+  ticksLeft: number;
+  scale: number;
+  panX: number;
+  panY: number;
+  isPanning: boolean;
+  panStartX: number;
+  panStartY: number;
+}
+
+const NODE_RADII: Record<string, number> = {
+  AssemblyConstituency: 22,
+  Booth:                14,
+  Issue:                13,
+  Candidate:            16,
+  Party:                18,
+  Scheme:               13,
+  Narrative:            12,
+  PulseEvent:           10,
+  DataQuality:          10,
+  SchemeGap:            11,
+  ContradictionFlag:    12,
+  TwinScenario:         12,
+};
+
+function getRadius(type: string): number {
+  return NODE_RADII[type] ?? 13;
+}
+
+export default function GraphCanvas({ nodes, edges, nodeColors, selectedId, theme = "dark", onSelect }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const stateRef = useRef<{ nodes: SimNode[]; edges: GraphEdge[]; dragging: SimNode | null; frame: number }>({
-    nodes: [], edges: [], dragging: null, frame: 0
+  const stateRef = useRef<State>({
+    nodes: [], edges: [], dragging: null, draggingMoved: false,
+    hoveredId: null, frame: 0, ticksLeft: 0,
+    scale: 1, panX: 0, panY: 0,
+    isPanning: false, panStartX: 0, panStartY: 0,
   });
 
   const getColor = useCallback((type: string) => nodeColors[type] ?? "#94a3b8", [nodeColors]);
@@ -25,44 +66,64 @@ export default function GraphCanvas({ nodes, edges, nodeColors, onSelect }: Prop
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const w = canvas.width = canvas.offsetWidth;
-    const h = canvas.height = canvas.offsetHeight;
 
-    // Initialize sim nodes
-    const simNodes: SimNode[] = nodes.map((n, i) => ({
+    let w = canvas.width = canvas.offsetWidth;
+    let h = canvas.height = canvas.offsetHeight;
+
+    // Theme-aware colors
+    const isDark = theme === "dark";
+    const bgColor      = isDark ? "#060b14" : "#f4f7fb";
+    const edgeColor    = isDark ? "#1e3050" : "#c8d8e8";
+    const edgeLabelBg  = isDark ? "#060b14" : "#f4f7fb";
+    const edgeLabelFg  = isDark ? "#3d5570" : "#7a9ab8";
+    const nodeLabelFg  = isDark ? "#f0f4fa" : "#0f1f35";
+    const typeTagFg    = isDark ? "#5a7899" : "#7a9ab8";
+    const gridLine     = isDark ? "rgba(26,43,68,0.4)" : "rgba(100,140,180,0.12)";
+
+    // Initialize sim nodes with random positions near center
+    const simNodes: SimNode[] = nodes.map((n) => ({
       ...n,
-      x: w / 2 + (Math.random() - 0.5) * 300,
-      y: h / 2 + (Math.random() - 0.5) * 300,
+      x: w / 2 + (Math.random() - 0.5) * Math.min(w, 400),
+      y: h / 2 + (Math.random() - 0.5) * Math.min(h, 400),
       vx: 0, vy: 0,
     }));
     stateRef.current.nodes = simNodes;
     stateRef.current.edges = edges;
+    stateRef.current.scale = 1;
+    stateRef.current.panX = 0;
+    stateRef.current.panY = 0;
+    // Give more ticks for larger graphs so they settle fully
+    stateRef.current.ticksLeft = Math.min(600, 250 + nodes.length * 2);
 
     const idxMap = new Map(simNodes.map((n, i) => [n.id, i]));
+
+    // ── Simulation ─────────────────────────────────────────────
+    const springLen = 100;
+    const repulsionK = 4000;
+    const springK = 0.04;
+    const gravityK = 0.018;
+    const damping = 0.82;
 
     function tick() {
       const ns = stateRef.current.nodes;
       const es = stateRef.current.edges;
-      const k = 80; // spring length
-      const repulsion = 3000;
-      const damping = 0.85;
-      const gravity = 0.02;
 
-      // Repulsion
+      // Repulsion between all node pairs
       for (let i = 0; i < ns.length; i++) {
         for (let j = i + 1; j < ns.length; j++) {
           const dx = ns[j].x - ns[i].x;
           const dy = ns[j].y - ns[i].y;
-          const dist = Math.sqrt(dx * dx + dy * dy) || 1;
-          const force = repulsion / (dist * dist);
-          ns[i].vx -= force * dx / dist;
-          ns[i].vy -= force * dy / dist;
-          ns[j].vx += force * dx / dist;
-          ns[j].vy += force * dy / dist;
+          const dist2 = dx * dx + dy * dy || 1;
+          const dist = Math.sqrt(dist2);
+          const force = repulsionK / dist2;
+          const fx = force * dx / dist;
+          const fy = force * dy / dist;
+          ns[i].vx -= fx; ns[i].vy -= fy;
+          ns[j].vx += fx; ns[j].vy += fy;
         }
       }
 
-      // Spring (edges)
+      // Spring forces along edges
       for (const e of es) {
         const si = idxMap.get(e.source);
         const ti = idxMap.get(e.target);
@@ -70,142 +131,308 @@ export default function GraphCanvas({ nodes, edges, nodeColors, onSelect }: Prop
         const dx = ns[ti].x - ns[si].x;
         const dy = ns[ti].y - ns[si].y;
         const dist = Math.sqrt(dx * dx + dy * dy) || 1;
-        const force = (dist - k) * 0.05;
-        const fx = force * dx / dist;
-        const fy = force * dy / dist;
+        const stretch = dist - springLen;
+        const fx = springK * stretch * dx / dist;
+        const fy = springK * stretch * dy / dist;
         ns[si].vx += fx; ns[si].vy += fy;
         ns[ti].vx -= fx; ns[ti].vy -= fy;
       }
 
-      // Gravity to center
+      // Gravity toward center + damping + integrate
       for (const n of ns) {
         if (n === stateRef.current.dragging) { n.vx = 0; n.vy = 0; continue; }
-        n.vx += (w / 2 - n.x) * gravity;
-        n.vy += (h / 2 - n.y) * gravity;
+        n.vx += (w / 2 - n.x) * gravityK;
+        n.vy += (h / 2 - n.y) * gravityK;
         n.vx *= damping; n.vy *= damping;
         n.x += n.vx; n.y += n.vy;
-        // Boundary
-        n.x = Math.max(20, Math.min(w - 20, n.x));
-        n.y = Math.max(20, Math.min(h - 20, n.y));
+        n.x = Math.max(30, Math.min(w - 30, n.x));
+        n.y = Math.max(30, Math.min(h - 30, n.y));
+      }
+    }
+
+    // ── Helpers ────────────────────────────────────────────────
+    function screenToWorld(sx: number, sy: number) {
+      const { scale, panX, panY } = stateRef.current;
+      return { x: (sx - panX) / scale, y: (sy - panY) / scale };
+    }
+
+    function findNode(wx: number, wy: number): SimNode | null {
+      for (const n of [...stateRef.current.nodes].reverse()) {
+        const dx = n.x - wx, dy = n.y - wy;
+        if (Math.sqrt(dx * dx + dy * dy) < getRadius(n.type) + 4) return n;
+      }
+      return null;
+    }
+
+    // ── Draw ───────────────────────────────────────────────────
+    function drawGrid(ctx: CanvasRenderingContext2D) {
+      const { scale, panX, panY } = stateRef.current;
+      const gridSize = 32 * scale;
+      const startX = panX % gridSize;
+      const startY = panY % gridSize;
+      ctx.strokeStyle = gridLine;
+      ctx.lineWidth = 0.5;
+      ctx.beginPath();
+      for (let x = startX; x < w; x += gridSize) {
+        ctx.moveTo(x, 0); ctx.lineTo(x, h);
+      }
+      for (let y = startY; y < h; y += gridSize) {
+        ctx.moveTo(0, y); ctx.lineTo(w, y);
+      }
+      ctx.stroke();
+    }
+
+    function drawEdge(
+      ctx: CanvasRenderingContext2D,
+      s: SimNode, t: SimNode,
+      edgeType: string,
+      isHighlighted: boolean,
+      scale: number
+    ) {
+      const dx = t.x - s.x, dy = t.y - s.y;
+      const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+      const ux = dx / dist, uy = dy / dist;
+      const sr = getRadius(s.type), tr = getRadius(t.type);
+      if (dist < sr + tr + 2) return;
+
+      const x1 = s.x + ux * sr, y1 = s.y + uy * sr;
+      const x2 = t.x - ux * tr, y2 = t.y - uy * tr;
+
+      const color = isHighlighted ? "#f9731680" : edgeColor;
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      ctx.lineTo(x2, y2);
+      ctx.strokeStyle = color;
+      ctx.lineWidth = (isHighlighted ? 1.5 : 1) / scale;
+      ctx.stroke();
+
+      // Arrowhead
+      const headLen = 7 / scale;
+      const angle = Math.atan2(dy, dx);
+      ctx.beginPath();
+      ctx.moveTo(x2, y2);
+      ctx.lineTo(x2 - headLen * Math.cos(angle - Math.PI / 6), y2 - headLen * Math.sin(angle - Math.PI / 6));
+      ctx.lineTo(x2 - headLen * Math.cos(angle + Math.PI / 6), y2 - headLen * Math.sin(angle + Math.PI / 6));
+      ctx.closePath();
+      ctx.fillStyle = color;
+      ctx.fill();
+
+      // Edge label (only when zoomed in enough)
+      if (scale > 0.65 && edgeType) {
+        const mx = (x1 + x2) / 2, my = (y1 + y2) / 2;
+        const fontSize = Math.max(7, 8 / scale);
+        ctx.font = `${fontSize}px monospace`;
+        const tw = ctx.measureText(edgeType).width;
+        ctx.fillStyle = edgeLabelBg + "d0";
+        ctx.fillRect(mx - tw / 2 - 2, my - fontSize, tw + 4, fontSize + 2);
+        ctx.fillStyle = edgeLabelFg;
+        ctx.textAlign = "center";
+        ctx.fillText(edgeType, mx, my);
       }
     }
 
     function draw() {
       const ctx = canvas!.getContext("2d")!;
-      ctx.clearRect(0, 0, w, h);
-      ctx.fillStyle = "#0a0e1a";
-      ctx.fillRect(0, 0, w, h);
+      const { nodes: ns, edges: es, hoveredId, scale, panX, panY } = stateRef.current;
 
-      const ns = stateRef.current.nodes;
-      const es = stateRef.current.edges;
+      ctx.clearRect(0, 0, w, h);
+      ctx.fillStyle = bgColor;
+      ctx.fillRect(0, 0, w, h);
+      drawGrid(ctx);
+
+      ctx.save();
+      ctx.translate(panX, panY);
+      ctx.scale(scale, scale);
 
       // Edges
       for (const e of es) {
-        const si = idxMap.get(e.source);
-        const ti = idxMap.get(e.target);
+        const si = idxMap.get(e.source), ti = idxMap.get(e.target);
         if (si == null || ti == null) continue;
-        const s = ns[si]; const t = ns[ti];
-        ctx.beginPath();
-        ctx.moveTo(s.x, s.y); ctx.lineTo(t.x, t.y);
-        ctx.strokeStyle = "#1e2d45";
-        ctx.lineWidth = 1;
-        ctx.stroke();
-
-        // Edge label
-        const mx = (s.x + t.x) / 2; const my = (s.y + t.y) / 2;
-        ctx.fillStyle = "#475569";
-        ctx.font = "9px monospace";
-        ctx.textAlign = "center";
-        ctx.fillText(e.type, mx, my - 3);
+        const s = ns[si], t = ns[ti];
+        const isHighlighted = s.id === hoveredId || t.id === hoveredId || s.id === selectedId || t.id === selectedId;
+        drawEdge(ctx, s, t, e.type, isHighlighted, scale);
       }
 
       // Nodes
       for (const n of ns) {
+        const r = getRadius(n.type);
         const color = getColor(n.type);
-        const r = 14;
+        const isHovered = n.id === hoveredId;
+        const isSel = n.id === selectedId;
+
+        // Outer glow ring for selected
+        if (isSel) {
+          ctx.beginPath();
+          ctx.arc(n.x, n.y, r + 7, 0, Math.PI * 2);
+          ctx.fillStyle = color + "25";
+          ctx.fill();
+          ctx.beginPath();
+          ctx.arc(n.x, n.y, r + 4, 0, Math.PI * 2);
+          ctx.strokeStyle = color + "70";
+          ctx.lineWidth = 1.5 / scale;
+          ctx.stroke();
+        }
+
+        // Node fill
         ctx.beginPath();
         ctx.arc(n.x, n.y, r, 0, Math.PI * 2);
-        ctx.fillStyle = color + "33";
+        ctx.fillStyle = isHovered ? color + "50" : color + "28";
         ctx.fill();
-        ctx.strokeStyle = color;
-        ctx.lineWidth = 2;
+
+        // Node border
+        ctx.strokeStyle = isHovered ? color : (isSel ? color : color + "cc");
+        ctx.lineWidth = (isSel ? 2.5 : isHovered ? 2 : 1.5) / scale;
         ctx.stroke();
 
-        ctx.fillStyle = "#f1f5f9";
-        ctx.font = "bold 10px sans-serif";
+        // Node label
+        const labelSize = Math.max(8, Math.min(11, 10 / scale));
+        ctx.font = `bold ${labelSize}px sans-serif`;
+        ctx.fillStyle = nodeLabelFg;
         ctx.textAlign = "center";
-        const label = n.label.length > 12 ? n.label.slice(0, 10) + "…" : n.label;
-        ctx.fillText(label, n.x, n.y + 3);
+        const maxChars = Math.max(6, Math.floor(r * 1.4));
+        const lbl = n.label.length > maxChars ? n.label.slice(0, maxChars - 1) + "…" : n.label;
+        ctx.fillText(lbl, n.x, n.y + labelSize * 0.35);
 
-        ctx.fillStyle = "#94a3b8";
-        ctx.font = "8px sans-serif";
-        ctx.fillText(n.type, n.x, n.y + r + 10);
+        // Type tag below node (only when not too zoomed out)
+        if (scale > 0.4) {
+          const typeSize = Math.max(7, Math.min(9, 8 / scale));
+          ctx.font = `${typeSize}px sans-serif`;
+          ctx.fillStyle = typeTagFg;
+          ctx.fillText(n.type, n.x, n.y + r + typeSize + 2);
+        }
       }
+
+      ctx.restore();
     }
 
     function loop() {
-      tick(); draw();
-      stateRef.current.frame = requestAnimationFrame(loop);
+      const s = stateRef.current;
+      if (s.ticksLeft > 0 || s.dragging) {
+        tick();
+        if (s.ticksLeft > 0) s.ticksLeft--;
+      }
+      draw();
+      s.frame = requestAnimationFrame(loop);
     }
     stateRef.current.frame = requestAnimationFrame(loop);
 
-    // Mouse handlers
-    let mx = 0, my = 0;
-    function mousedown(e: MouseEvent) {
+    // ── Event handlers ─────────────────────────────────────────
+    function onMouseDown(e: MouseEvent) {
       const rect = canvas!.getBoundingClientRect();
-      mx = e.clientX - rect.left; my = e.clientY - rect.top;
-      for (const n of stateRef.current.nodes) {
-        const dx = n.x - mx; const dy = n.y - my;
-        if (Math.sqrt(dx * dx + dy * dy) < 16) { stateRef.current.dragging = n; return; }
+      const sx = e.clientX - rect.left, sy = e.clientY - rect.top;
+      const wp = screenToWorld(sx, sy);
+      const hit = findNode(wp.x, wp.y);
+
+      if (hit) {
+        stateRef.current.dragging = hit;
+        stateRef.current.draggingMoved = false;
+        // Re-heat the simulation briefly so neighbors react to the drag
+        stateRef.current.ticksLeft = Math.max(stateRef.current.ticksLeft, 80);
+        canvas!.style.cursor = "grabbing";
+      } else {
+        stateRef.current.isPanning = true;
+        stateRef.current.panStartX = sx - stateRef.current.panX;
+        stateRef.current.panStartY = sy - stateRef.current.panY;
+        canvas!.style.cursor = "grabbing";
       }
     }
-    function mousemove(e: MouseEvent) {
-      if (!stateRef.current.dragging) return;
+
+    function onMouseMove(e: MouseEvent) {
       const rect = canvas!.getBoundingClientRect();
-      stateRef.current.dragging.x = e.clientX - rect.left;
-      stateRef.current.dragging.y = e.clientY - rect.top;
-    }
-    function mouseup(e: MouseEvent) {
-      const rect = canvas!.getBoundingClientRect();
-      const cx = e.clientX - rect.left; const cy = e.clientY - rect.top;
-      const wasDragging = stateRef.current.dragging;
-      stateRef.current.dragging = null;
-      if (wasDragging) {
-        const dx = wasDragging.x - cx; const dy = wasDragging.y - cy;
-        if (Math.sqrt(dx * dx + dy * dy) < 5) onSelect(wasDragging);
+      const sx = e.clientX - rect.left, sy = e.clientY - rect.top;
+
+      if (stateRef.current.dragging) {
+        const wp = screenToWorld(sx, sy);
+        stateRef.current.dragging.x = wp.x;
+        stateRef.current.dragging.y = wp.y;
+        stateRef.current.dragging.vx = 0;
+        stateRef.current.dragging.vy = 0;
+        stateRef.current.draggingMoved = true;
         return;
       }
-      // Click without drag
-      for (const n of stateRef.current.nodes) {
-        const dx = n.x - cx; const dy = n.y - cy;
-        if (Math.sqrt(dx * dx + dy * dy) < 16) { onSelect(n); return; }
+      if (stateRef.current.isPanning) {
+        stateRef.current.panX = sx - stateRef.current.panStartX;
+        stateRef.current.panY = sy - stateRef.current.panStartY;
+        return;
       }
+
+      // Hover detection
+      const wp = screenToWorld(sx, sy);
+      const hit = findNode(wp.x, wp.y);
+      stateRef.current.hoveredId = hit?.id ?? null;
+      canvas!.style.cursor = hit ? "pointer" : "grab";
     }
 
-    canvas.addEventListener("mousedown", mousedown);
-    canvas.addEventListener("mousemove", mousemove);
-    canvas.addEventListener("mouseup", mouseup);
+    function onMouseUp(e: MouseEvent) {
+      const rect = canvas!.getBoundingClientRect();
+      const sx = e.clientX - rect.left, sy = e.clientY - rect.top;
+      const wp = screenToWorld(sx, sy);
+
+      if (stateRef.current.dragging) {
+        const n = stateRef.current.dragging;
+        stateRef.current.dragging = null;
+        if (!stateRef.current.draggingMoved) {
+          // It was a click, not a drag
+          onSelect(n);
+        }
+      } else if (stateRef.current.isPanning) {
+        stateRef.current.isPanning = false;
+        const hit = findNode(wp.x, wp.y);
+        canvas!.style.cursor = hit ? "pointer" : "grab";
+      }
+      stateRef.current.draggingMoved = false;
+    }
+
+    function onMouseLeave() {
+      stateRef.current.hoveredId = null;
+      stateRef.current.dragging = null;
+      stateRef.current.isPanning = false;
+      canvas!.style.cursor = "grab";
+    }
+
+    function onWheel(e: WheelEvent) {
+      e.preventDefault();
+      const rect = canvas!.getBoundingClientRect();
+      const sx = e.clientX - rect.left, sy = e.clientY - rect.top;
+      const delta = e.deltaY < 0 ? 1.1 : 0.91;
+      const newScale = Math.max(0.2, Math.min(4, stateRef.current.scale * delta));
+
+      // Zoom toward cursor position
+      const worldX = (sx - stateRef.current.panX) / stateRef.current.scale;
+      const worldY = (sy - stateRef.current.panY) / stateRef.current.scale;
+      stateRef.current.panX = sx - worldX * newScale;
+      stateRef.current.panY = sy - worldY * newScale;
+      stateRef.current.scale = newScale;
+    }
+
+    canvas.addEventListener("mousedown", onMouseDown);
+    canvas.addEventListener("mousemove", onMouseMove);
+    canvas.addEventListener("mouseup", onMouseUp);
+    canvas.addEventListener("mouseleave", onMouseLeave);
+    canvas.addEventListener("wheel", onWheel, { passive: false });
 
     const ro = new ResizeObserver(() => {
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
+      w = canvas.width = canvas.offsetWidth;
+      h = canvas.height = canvas.offsetHeight;
     });
     ro.observe(canvas);
 
     return () => {
       cancelAnimationFrame(stateRef.current.frame);
-      canvas.removeEventListener("mousedown", mousedown);
-      canvas.removeEventListener("mousemove", mousemove);
-      canvas.removeEventListener("mouseup", mouseup);
+      canvas.removeEventListener("mousedown", onMouseDown);
+      canvas.removeEventListener("mousemove", onMouseMove);
+      canvas.removeEventListener("mouseup", onMouseUp);
+      canvas.removeEventListener("mouseleave", onMouseLeave);
+      canvas.removeEventListener("wheel", onWheel);
       ro.disconnect();
     };
-  }, [nodes, edges, getColor, onSelect]);
+  }, [nodes, edges, getColor, onSelect, theme, selectedId]);
 
   return (
     <canvas
       ref={canvasRef}
-      className="w-full h-full cursor-grab active:cursor-grabbing"
-      style={{ display: "block" }}
+      className="w-full h-full"
+      style={{ display: "block", cursor: "grab" }}
     />
   );
 }

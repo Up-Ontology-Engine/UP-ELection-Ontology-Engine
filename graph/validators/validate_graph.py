@@ -14,6 +14,7 @@ Checks performed:
 from __future__ import annotations
 
 from api.db import get_neo4j_session
+from neo4j import exceptions as neo4j_exceptions
 
 LABEL_KEY_MAP = {
     "State": ("state_id",),
@@ -36,12 +37,15 @@ def _find_duplicate_ids(session, label: str, prop: str) -> list[tuple[str, int]]
         f"MATCH (n:{label}) WHERE n.{prop} IS NOT NULL "
         f"WITH n.{prop} as id, count(*) as c WHERE c > 1 RETURN id, c LIMIT 50"
     )
-    return [(r["id"], int(r["c"])) for r in session.run(q).records()]
+    result = session.run(q)
+    return [(r["id"], int(r["c"])) for r in result]
 
 
 def _count_orphan_pulse_events(session) -> int:
     r = session.run(
-        "MATCH (pe:PulseEvent) WHERE NOT (pe)-[:AT_BOOTH]->() RETURN count(pe) AS c"
+        "MATCH (pe:PulseEvent) "
+        "WHERE NOT EXISTS { MATCH (pe)-[r]->(:Booth) WHERE type(r) = 'AT_BOOTH' } "
+        "RETURN count(pe) AS c"
     ).single()
     return int(r["c"]) if r else 0
 
@@ -103,5 +107,25 @@ def pretty_print(res: dict) -> None:
 
 if __name__ == "__main__":
     print("Running graph validation checks...")
-    r = run_checks()
-    pretty_print(r)
+    try:
+        r = run_checks()
+        pretty_print(r)
+    except RuntimeError as e:
+        print("Error:", e)
+        print(
+            "Ensure environment variables are set: NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD"
+        )
+        print("Example:")
+        print(
+            "NEO4J_URI='neo4j://localhost:7687' NEO4J_USER='neo4j' NEO4J_PASSWORD='yourpw' python -m graph.validators.validate_graph"
+        )
+        raise
+    except neo4j_exceptions.AuthError:
+        print("Authentication failed when connecting to Neo4j.")
+        print(" - Verify NEO4J_USER and NEO4J_PASSWORD are correct.")
+        print(" - Verify the Neo4j server at NEO4J_URI is running and reachable.")
+        print(" - You can test with: cypher-shell -u <user> -p <pass> -a <host:port>")
+        raise
+    except Exception as e:
+        print("Unexpected error while validating graph:", e)
+        raise

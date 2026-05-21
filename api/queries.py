@@ -4,6 +4,16 @@ import functools
 from sqlalchemy import text
 from .db import get_neo4j_session, get_pg_engine
 
+# Logical → physical AC-ID aliases (frontend uses logical, DBs use physical)
+_PG_AC_ALIASES: dict[str, str] = {
+    "GKP_URBAN": "GKP_322",
+    "GKP_RURAL": "GKP_323",
+}
+
+def _rac(ac_id: str) -> str:
+    """Resolve a logical AC-ID to its physical DB counterpart."""
+    return _PG_AC_ALIASES.get(ac_id, ac_id)
+
 
 # ── Booth geo data (lat/lon + pulse scores) ───────────────────────────────────
 def get_booth_geo(ac_id: str) -> list[dict]:
@@ -33,6 +43,7 @@ def get_booth_geo(ac_id: str) -> list[dict]:
 # ── Booth list for AC ─────────────────────────────────────────────────────────
 @functools.lru_cache(maxsize=32)
 def get_booths_for_ac(ac_id: str) -> list[dict]:
+    resolved = _rac(ac_id)
     with get_pg_engine().connect() as conn:
         rows = conn.execute(text("""
             SELECT
@@ -49,7 +60,7 @@ def get_booths_for_ac(ac_id: str) -> list[dict]:
             ) bm ON TRUE
             WHERE b.ac_id = :ac_id
             ORDER BY b.booth_number
-        """), {"ac_id": ac_id}).mappings().fetchall()
+        """), {"ac_id": resolved}).mappings().fetchall()
     return [dict(r) for r in rows]
 
 
@@ -573,65 +584,381 @@ def get_ac_recommendations(ac_id: str) -> dict:
 
 # ── Knowledge graph subgraph ──────────────────────────────────────────────────
 
-_LABEL_MAP = {
-    "AC":              ("AssemblyConstituency", "ac_id"),
-    "Booth":           ("Booth",                "booth_id"),
-    "Issue":           ("Issue",                "code"),
-    "Candidate":       ("Candidate",            "candidate_id"),
-    "Party":           ("Party",                "party_id"),
-    "Scheme":          ("Scheme",               "name"),
-    "YouTubeVideo":    ("YouTubeVideo",          "video_id"),
-    "Channel":         ("Channel",              "channel_id"),
+# Maps the API entity_type param → (Neo4j label, id property name)
+_LABEL_MAP: dict[str, tuple[str, str]] = {
+    "AC":           ("AssemblyConstituency", "ac_id"),
+    "Booth":        ("Booth",                "booth_id"),
+    "Issue":        ("Issue",                "code"),
+    "Candidate":    ("Candidate",            "candidate_id"),
+    "Party":        ("Party",                "party_id"),
+    "Scheme":       ("Scheme",               "name"),
+    "Narrative":    ("Narrative",            "narrative_type"),
+    "YouTubeVideo": ("YouTubeVideo",         "video_id"),
+    "Channel":      ("Channel",              "channel_id"),
+    "Panchayat":    ("Panchayat",            "panchayat_id"),
+    "District":     ("District",             "district_id"),
+    "State":        ("State",                "state_id"),
 }
 
+# Logical ID aliases: what the app calls → actual Neo4j property value
+_ID_ALIASES: dict[str, dict[str, str]] = {
+    "AC": {
+        "GKP_URBAN":  "GKP_322",
+        "GKP_RURAL":  "GKP_323",
+    },
+    "District": {
+        "GKP": "GKP",
+    },
+}
 
-def get_graph_subgraph(entity_type: str, entity_id: str) -> dict:
+# Priority order for deriving a human-readable display label from node properties
+_DISPLAY_PROPS = [
+    "name", "polling_station_name", "title", "narrative_type",
+    "booth_id", "ac_id", "candidate_id", "party_id",
+    "video_id", "channel_id", "code", "panchayat_id",
+    "district_id", "state_id", "asset_id", "segment_id",
+]
+
+
+def _display_label(props: dict) -> str:
+    for key in _DISPLAY_PROPS:
+        val = props.get(key)
+        if val:
+            return str(val)[:40]
+    return "—"
+
+
+def get_graph_subgraph(
+    entity_type: str,
+    entity_id: str,
+    exclude_types: list[str] | None = None,
+    limit: int = 120,
+) -> dict:
     """
-    Return 1-hop subgraph from Neo4j around a given entity.
-    Falls back to empty dict if Neo4j is unavailable.
+    Return 1-hop subgraph from Neo4j around the given entity.
+
+    Returns the format the frontend GraphCanvas expects:
+      nodes: [{id, label, type, properties}]
+      edges: [{source, target, type}]
+
+    Falls back gracefully if Neo4j is unavailable.
     """
-    label, id_prop = _LABEL_MAP.get(entity_type, ("AC", "ac_id"))
+    label, id_prop = _LABEL_MAP.get(entity_type, ("AssemblyConstituency", "ac_id"))
+    resolved_id    = _ID_ALIASES.get(entity_type, {}).get(entity_id, entity_id)
+    excluded       = set(exclude_types or [])
 
     cypher = f"""
         MATCH (center:{label} {{{id_prop}: $eid}})
         OPTIONAL MATCH (center)-[r]-(neighbor)
         RETURN center, r, neighbor
-        LIMIT 120
+        LIMIT $limit
     """
     try:
         with get_neo4j_session() as session:
-            result = session.run(cypher, eid=entity_id)
-            nodes: dict[str, dict] = {}
-            edges_list: list[dict] = []
+            records = list(session.run(cypher, eid=resolved_id, limit=limit + 20))
 
-            for record in result:
-                center   = record["center"]
-                neighbor = record.get("neighbor")
-                rel      = record.get("r")
+        if not records:
+            return {"nodes": [], "edges": []}
 
-                for node in [n for n in [center, neighbor] if n is not None]:
-                    nid = str(node.element_id)
-                    if nid not in nodes:
-                        lbl = list(node.labels)[0] if node.labels else "Node"
-                        props = dict(node)
-                        name = (props.get("name") or props.get("title") or
-                                props.get("booth_id") or props.get("ac_id") or
-                                props.get("candidate_id") or props.get("video_id") or
-                                props.get("channel_id") or props.get("code") or nid)
-                        nodes[nid] = {
-                            "id":           nid,
-                            "label":        lbl,
-                            "display_name": str(name)[:30],
-                            "tooltip":      f"{lbl}: {name}",
-                        }
+        nodes: dict[str, dict] = {}
+        edges_list: list[dict] = []
+        neighbor_count = 0
 
-                if rel is not None and neighbor is not None:
+        for record in records:
+            center   = record["center"]
+            neighbor = record.get("neighbor")
+            rel      = record.get("r")
+
+            # Always add center node regardless of exclude filter
+            c_nid = str(center.element_id)
+            if c_nid not in nodes:
+                c_type  = next(iter(center.labels), "Node")
+                c_props = dict(center)
+                nodes[c_nid] = {
+                    "id":         c_nid,
+                    "label":      _display_label(c_props),
+                    "type":       c_type,
+                    "properties": c_props,
+                }
+
+            # Filter neighbor by excluded types and overall limit
+            if neighbor is not None:
+                n_type = next(iter(neighbor.labels), "Node")
+                if n_type in excluded:
+                    continue
+                if neighbor_count >= limit:
+                    continue
+                n_nid = str(neighbor.element_id)
+                if n_nid not in nodes:
+                    n_props = dict(neighbor)
+                    nodes[n_nid] = {
+                        "id":         n_nid,
+                        "label":      _display_label(n_props),
+                        "type":       n_type,
+                        "properties": n_props,
+                    }
+                    neighbor_count += 1
+
+                if rel is not None:
                     edges_list.append({
-                        "from": str(center.element_id),
-                        "to":   str(neighbor.element_id),
-                        "type": rel.type,
+                        "source": c_nid,
+                        "target": n_nid,
+                        "type":   rel.type,
                     })
 
-            return {"nodes": list(nodes.values()), "edges": edges_list}
-    except Exception:
-        return {}
+        return {"nodes": list(nodes.values()), "edges": edges_list}
+
+    except Exception as exc:
+        import logging
+        logging.getLogger(__name__).warning("Neo4j subgraph failed: %s", exc)
+        return {"nodes": [], "edges": []}
+
+
+# ── Infrastructure overview ───────────────────────────────────────────────────
+
+def get_infrastructure_overview() -> dict:
+    """PostgreSQL table row counts + Neo4j node/edge topology."""
+    pg_stats: dict[str, int | None] = {}
+    with get_pg_engine().connect() as conn:
+        for table in [
+            "booth_master", "booth_metrics", "booth_results",
+            "pulse_events", "booth_narratives", "scheme_gap_analysis",
+            "data_quality_metrics",
+        ]:
+            try:
+                pg_stats[table] = conn.execute(text(f"SELECT COUNT(*) FROM {table}")).scalar()
+            except Exception:
+                pg_stats[table] = None
+
+    neo4j: dict = {
+        "nodes_by_type": {},
+        "edges_by_type": {},
+        "total_nodes": 0,
+        "total_edges": 0,
+    }
+    try:
+        with get_neo4j_session() as session:
+            for r in session.run(
+                "MATCH (n) RETURN labels(n)[0] AS label, count(n) AS cnt ORDER BY cnt DESC"
+            ):
+                lbl = r["label"] or "Unknown"
+                neo4j["nodes_by_type"][lbl] = r["cnt"]
+                neo4j["total_nodes"] += r["cnt"]
+
+            for r in session.run(
+                "MATCH ()-[r]->() RETURN type(r) AS rel_type, count(r) AS cnt ORDER BY cnt DESC"
+            ):
+                neo4j["edges_by_type"][r["rel_type"]] = r["cnt"]
+                neo4j["total_edges"] += r["cnt"]
+    except Exception as exc:
+        import logging
+        logging.getLogger(__name__).warning("Neo4j infra overview failed: %s", exc)
+
+    return {"postgresql": pg_stats, "neo4j": neo4j}
+
+
+def get_graph_coverage(ac_id: str) -> list[dict]:
+    """Per-booth: lat/lon + pulse from PostgreSQL, plus Neo4j graph presence."""
+    resolved = _rac(ac_id)
+    with get_pg_engine().connect() as conn:
+        rows = conn.execute(text("""
+            SELECT
+                b.booth_id, b.booth_number,
+                b.polling_station_name AS name,
+                b.lat, b.lon, b.total_voters,
+                bm.bjp_pulse_score, bm.opp_pulse_score,
+                bm.confidence_label, bm.event_count
+            FROM booth_master b
+            LEFT JOIN LATERAL (
+                SELECT bjp_pulse_score, opp_pulse_score,
+                       confidence_label, event_count
+                FROM booth_metrics
+                WHERE booth_id = b.booth_id
+                ORDER BY window_start DESC LIMIT 1
+            ) bm ON TRUE
+            WHERE b.ac_id = :ac_id
+              AND b.booth_id NOT LIKE '%_TOTAL'
+            ORDER BY b.booth_number
+        """), {"ac_id": resolved}).mappings().fetchall()
+        pg_booths = [dict(r) for r in rows]
+
+    in_neo4j: set[str] = set()
+    neo4j_degree: dict[str, int] = {}
+    try:
+        with get_neo4j_session() as session:
+            for r in session.run(
+                "MATCH (b:Booth) RETURN b.booth_id AS bid, size([(b)-[]-() | 1]) AS degree"
+            ):
+                if r["bid"]:
+                    in_neo4j.add(r["bid"])
+                    neo4j_degree[r["bid"]] = r["degree"]
+    except Exception as exc:
+        import logging
+        logging.getLogger(__name__).warning("Neo4j coverage query failed: %s", exc)
+
+    for booth in pg_booths:
+        bid = booth["booth_id"]
+        booth["in_neo4j"] = bid in in_neo4j
+        booth["neo4j_degree"] = neo4j_degree.get(bid, 0)
+
+    return pg_booths
+
+
+# ── AC intelligence summary (PG voter stats + Neo4j issues/videos/candidates) ─
+
+_NEO4J_AC_ID = "GKP_322"   # physical Neo4j AC ID for Gorakhpur Urban
+
+
+def get_ac_intel_summary(ac_id: str) -> dict:
+    """
+    Combined intelligence summary for a constituency:
+      - Voter demographics from PostgreSQL (booth_master)
+      - YouTube issue mentions from Neo4j
+      - Sample video titles from Neo4j
+      - Candidate roster from Neo4j
+    """
+    resolved = _rac(ac_id)
+
+    # ── PostgreSQL: voter demographics ──────────────────────────────────────
+    voter_stats: dict = {
+        "total": 0, "total_voters": 0, "male_voters": 0, "female_voters": 0,
+    }
+    with get_pg_engine().connect() as conn:
+        row = conn.execute(text("""
+            SELECT COUNT(*)           AS total,
+                   SUM(total_voters)  AS total_voters,
+                   SUM(male_voters)   AS male_voters,
+                   SUM(female_voters) AS female_voters
+            FROM booth_master
+            WHERE ac_id = :ac_id
+              AND booth_id NOT LIKE '%_TOTAL'
+        """), {"ac_id": resolved}).mappings().fetchone()
+        if row:
+            voter_stats = {k: (int(v) if v is not None else 0) for k, v in dict(row).items()}
+
+    # ── Neo4j: issues, videos, candidates ───────────────────────────────────
+    issues: list[dict] = []
+    videos: list[dict] = []
+    candidates: list[dict] = []
+    youtube_count = 0
+
+    try:
+        with get_neo4j_session() as session:
+            # Issue mentions by YouTube signal count
+            for r in session.run("""
+                MATCH (v:YouTubeVideo)-[:ABOUT_AC]->(:AssemblyConstituency {ac_id: $ac})
+                MATCH (v)-[:MENTIONS_ISSUE]->(i:Issue)
+                RETURN i.code AS code,
+                       coalesce(i.label, i.code) AS label,
+                       count(v) AS count
+                ORDER BY count DESC
+            """, ac=_NEO4J_AC_ID):
+                issues.append({"code": r["code"], "label": r["label"], "count": r["count"]})
+
+            # Total YouTube video count
+            res = session.run("""
+                MATCH (v:YouTubeVideo)-[:ABOUT_AC]->(:AssemblyConstituency {ac_id: $ac})
+                RETURN count(v) AS cnt
+            """, ac=_NEO4J_AC_ID).single()
+            youtube_count = int(res["cnt"]) if res else 0
+
+            # Sample video titles (latest 15)
+            for r in session.run("""
+                MATCH (v:YouTubeVideo)-[:ABOUT_AC]->(:AssemblyConstituency {ac_id: $ac})
+                RETURN v.title AS title, v.url AS url, v.channel_name AS channel
+                LIMIT 15
+            """, ac=_NEO4J_AC_ID):
+                videos.append({
+                    "title":   r["title"],
+                    "url":     r["url"],
+                    "channel": r["channel"],
+                })
+
+            # Candidates who contested in this AC
+            for r in session.run("""
+                MATCH (c:Candidate)-[:CONTESTED_IN]->(:AssemblyConstituency {ac_id: $ac})
+                OPTIONAL MATCH (c)-[:REPRESENTS]->(p:Party)
+                RETURN c.name         AS name,
+                       c.election_year AS year,
+                       c.candidate_id  AS candidate_id,
+                       c.is_incumbent  AS is_incumbent,
+                       c.is_primary_opp AS is_primary_opp,
+                       coalesce(p.name, c.party_id) AS party
+                ORDER BY c.election_year DESC, c.name
+            """, ac=_NEO4J_AC_ID):
+                candidates.append({
+                    "name":         r["name"],
+                    "year":         r["year"],
+                    "candidate_id": r["candidate_id"],
+                    "is_incumbent": r["is_incumbent"],
+                    "is_primary_opp": r["is_primary_opp"],
+                    "party":        r["party"],
+                })
+
+    except Exception as exc:
+        import logging
+        logging.getLogger(__name__).warning("Neo4j intel summary failed: %s", exc)
+
+    return {
+        "voter_stats":   voter_stats,
+        "issues":        issues,
+        "youtube_count": youtube_count,
+        "videos":        videos,
+        "candidates":    candidates,
+    }
+
+
+# ── AC election results (from Form-20 ingested data) ─────────────────────────
+
+def get_ac_election_results(ac_id: str, year: int = 2022) -> dict:
+    """Aggregate 2022 booth_results into AC-level party vote shares."""
+    resolved = _rac(ac_id)
+    with get_pg_engine().connect() as conn:
+        rows = conn.execute(text("""
+            SELECT br.party,
+                   SUM(br.votes)::int  AS total_votes,
+                   ROUND(SUM(br.votes)::numeric /
+                     NULLIF(SUM(SUM(br.votes)) OVER (), 0) * 100, 2) AS vote_share_pct,
+                   SUM(CASE WHEN br.winner_flag THEN 1 ELSE 0 END) AS booths_won
+            FROM booth_results br
+            JOIN booth_master bm ON bm.booth_id = br.booth_id
+            WHERE bm.ac_id = :ac_id
+              AND br.election_year = :yr
+            GROUP BY br.party
+            ORDER BY total_votes DESC
+        """), {"ac_id": resolved, "yr": year}).mappings().fetchall()
+
+        turnout = conn.execute(text("""
+            SELECT SUM(ts.total_voters)::int AS total_voters,
+                   SUM(ts.total_votes)::int  AS total_votes,
+                   ROUND(SUM(ts.total_votes)::numeric /
+                     NULLIF(SUM(ts.total_voters), 0) * 100, 2) AS turnout_pct
+            FROM turnout_stats ts
+            JOIN booth_master bm ON bm.booth_id = ts.booth_id
+            WHERE bm.ac_id = :ac_id
+              AND ts.election_year = :yr
+        """), {"ac_id": resolved, "yr": year}).mappings().fetchone()
+
+    return {
+        "year":    year,
+        "results": [dict(r) for r in rows],
+        "turnout": dict(turnout) if turnout and turnout["total_voters"] else None,
+    }
+
+
+# ── AC demographics summary ───────────────────────────────────────────────────
+
+def get_ac_demographics_summary(ac_id: str) -> dict | None:
+    """Return ac_demographics row for this AC."""
+    resolved = _rac(ac_id)
+    with get_pg_engine().connect() as conn:
+        row = conn.execute(text("""
+            SELECT ac_id, total_voters, male_voters, female_voters, other_voters,
+                   CASE WHEN male_voters > 0
+                        THEN ROUND(female_voters::numeric / male_voters * 1000, 0)
+                        ELSE NULL END AS gender_ratio,
+                   data_source, last_updated, notes
+            FROM ac_demographics
+            WHERE ac_id = :ac_id
+        """), {"ac_id": resolved}).mappings().fetchone()
+    return dict(row) if row else None

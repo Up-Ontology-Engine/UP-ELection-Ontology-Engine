@@ -9,13 +9,15 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from .queries import (
+    _rac,
     get_booths_for_ac, get_booth_summary, get_booth_history,
     get_booth_issues, get_booth_pulse, get_booth_comments,
     get_ac_candidates, get_scheme_gap,
     get_booth_quality, get_booth_narratives, get_booth_contradictions,
     get_ac_schemes, get_ac_narratives, get_ac_events,
     get_ac_quality, get_ac_recommendations, get_graph_subgraph,
-    get_booth_geo,
+    get_booth_geo, get_infrastructure_overview, get_graph_coverage,
+    get_ac_intel_summary, get_ac_election_results, get_ac_demographics_summary,
 )
 from .reasoning import reasoning_query
 
@@ -41,7 +43,7 @@ def health():
 @app.get("/ac/{ac_id}/booths")
 def list_booths(ac_id: str):
     """All booths for an AC with latest pulse scores. Powers the booth selector."""
-    rows = get_booths_for_ac(ac_id)
+    rows = get_booths_for_ac(_rac(ac_id))
     if not rows:
         raise HTTPException(404, f"AC '{ac_id}' not found or has no booths.")
     return {"ac_id": ac_id, "count": len(rows), "booths": rows}
@@ -185,37 +187,37 @@ def booth_comments(
 
 @app.get("/ac/{ac_id}/candidates")
 def ac_candidates(ac_id: str):
-    return {"ac_id": ac_id, "candidates": get_ac_candidates(ac_id)}
+    return {"ac_id": ac_id, "candidates": get_ac_candidates(_rac(ac_id))}
 
 
 @app.get("/ac/{ac_id}/schemes")
 def ac_schemes(ac_id: str):
     """Aggregated scheme gap analysis across all booths in an AC."""
-    return {"ac_id": ac_id, "schemes": get_ac_schemes(ac_id)}
+    return {"ac_id": ac_id, "schemes": get_ac_schemes(_rac(ac_id))}
 
 
 @app.get("/ac/{ac_id}/narratives")
 def ac_narratives(ac_id: str):
     """Aggregate narrative trends for the AC."""
-    return {"ac_id": ac_id, "narratives": get_ac_narratives(ac_id)}
+    return {"ac_id": ac_id, "narratives": get_ac_narratives(_rac(ac_id))}
 
 
 @app.get("/ac/{ac_id}/events")
 def ac_events(ac_id: str, limit: int = Query(50, ge=1, le=200)):
     """Political events timeline for the AC."""
-    return {"ac_id": ac_id, "events": get_ac_events(ac_id, limit=limit)}
+    return {"ac_id": ac_id, "events": get_ac_events(_rac(ac_id), limit=limit)}
 
 
 @app.get("/ac/{ac_id}/quality")
 def ac_quality(ac_id: str):
     """AC-level data quality summary (aggregated across booths)."""
-    return {"ac_id": ac_id, **get_ac_quality(ac_id)}
+    return {"ac_id": ac_id, **get_ac_quality(_rac(ac_id))}
 
 
 @app.get("/ac/{ac_id}/recommendations")
 def ac_recommendations(ac_id: str):
     """Strategic risks, opportunities, and action items derived from live data."""
-    recs = get_ac_recommendations(ac_id)
+    recs = get_ac_recommendations(_rac(ac_id))
     if not recs:
         raise HTTPException(204, "Insufficient data for recommendations")
     return {"ac_id": ac_id, **recs}
@@ -223,19 +225,60 @@ def ac_recommendations(ac_id: str):
 
 @app.get("/graph/subgraph")
 def graph_subgraph(
-    entity_type: str = Query(..., description="AC | Booth | Issue | Candidate | Party | Scheme"),
-    entity_id:   str = Query(..., description="The entity's primary ID value"),
+    entity_type:   str       = Query(..., description="AC | Booth | Issue | Candidate | Party | Scheme"),
+    entity_id:     str       = Query(..., description="The entity's primary ID value"),
+    exclude_types: list[str] = Query(default=[], description="Node types to exclude from results"),
+    limit:         int       = Query(default=120, ge=1, le=300, description="Max neighbor nodes to return"),
 ):
     """1-hop subgraph from Neo4j around the specified entity."""
-    result = get_graph_subgraph(entity_type, entity_id)
-    return result if result else {"nodes": [], "edges": []}
+    result = get_graph_subgraph(entity_type, entity_id,
+                                exclude_types=exclude_types, limit=limit)
+    return result
 
 
 @app.get("/ac/{ac_id}/geo")
 def ac_geo(ac_id: str):
     """Geocoded booth positions with pulse scores — used by the Geospatial Intelligence page."""
-    rows = get_booth_geo(ac_id)
+    rows = get_booth_geo(_rac(ac_id))
     return {"ac_id": ac_id, "count": len(rows), "geo": rows}
+
+
+@app.get("/ac/{ac_id}/intel-summary")
+def ac_intel_summary(ac_id: str):
+    """Combined intelligence summary: voter stats (PG) + issues/videos/candidates (Neo4j)."""
+    return {"ac_id": ac_id, **get_ac_intel_summary(ac_id)}
+
+
+@app.get("/ac/{ac_id}/election-results")
+def ac_election_results(ac_id: str, year: int = Query(2022, ge=2000, le=2030)):
+    """AC-level election results aggregated from booth_results."""
+    data = get_ac_election_results(_rac(ac_id), year=year)
+    if not data["results"]:
+        raise HTTPException(404, f"No election results found for AC '{ac_id}', year {year}.")
+    return {"ac_id": ac_id, **data}
+
+
+@app.get("/ac/{ac_id}/demographics/summary")
+def ac_demographics_summary(ac_id: str):
+    """Voter demographics summary from ac_demographics table."""
+    data = get_ac_demographics_summary(_rac(ac_id))
+    if not data:
+        raise HTTPException(404, f"No demographics data for AC '{ac_id}'.")
+    return data
+
+
+@app.get("/infrastructure/overview")
+def infrastructure_overview():
+    """PostgreSQL table row counts + Neo4j node/edge topology for the Data Infrastructure page."""
+    return get_infrastructure_overview()
+
+
+@app.get("/ac/{ac_id}/graph-coverage")
+def graph_coverage(ac_id: str):
+    """Per-booth: lat/lon from PostgreSQL plus Neo4j graph presence and degree."""
+    rows = get_graph_coverage(ac_id)
+    neo4j_count = sum(1 for b in rows if b.get("in_neo4j"))
+    return {"ac_id": ac_id, "total": len(rows), "in_neo4j": neo4j_count, "booths": rows}
 
 
 class ReasoningRequest(BaseModel):

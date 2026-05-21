@@ -42,11 +42,24 @@ export const api = {
   boothComments: (boothId: string) => get<{ booth_id: string; comments: Comment[] }>(`/booth/${boothId}/comments`),
 
   // Graph
-  subgraph: (entityType: string, entityId: string) =>
-    get<GraphResult>(`/graph/subgraph?entity_type=${encodeURIComponent(entityType)}&entity_id=${encodeURIComponent(entityId)}`),
+  subgraph: (entityType: string, entityId: string, excludeTypes: string[] = [], limit = 120) => {
+    const base = `/graph/subgraph?entity_type=${encodeURIComponent(entityType)}&entity_id=${encodeURIComponent(entityId)}&limit=${limit}`;
+    const excl = excludeTypes.map((t) => `&exclude_types=${encodeURIComponent(t)}`).join("");
+    return get<GraphResult>(base + excl);
+  },
 
   // Reasoning
   reason: (question: string) => post<ReasoningResult>("/reasoning/query", { question }),
+
+  // Infrastructure
+  infraOverview: () => get<InfraOverview>("/infrastructure/overview"),
+  graphCoverage: (acId: string) => get<GraphCoverageResponse>(`/ac/${acId}/graph-coverage`),
+
+  // Intelligence summary (PG voter stats + Neo4j issues/videos/candidates)
+  intelSummary: (acId: string) => get<AcIntelSummary>(`/ac/${acId}/intel-summary`),
+
+  // Election results (Form-20 ingested)
+  electionResults: (acId: string, year = 2022) => get<AcElectionResults>(`/ac/${acId}/election-results?year=${year}`),
 };
 
 // ── Types ─────────────────────────────────────────────────────────────────────
@@ -287,5 +300,65 @@ export interface DemographicSegments {
     booth_count: number;
     description: string;
     booth_ids: string[];
+  }[];
+}
+
+export interface InfraOverview {
+  postgresql: Record<string, number | null>;
+  neo4j: {
+    nodes_by_type: Record<string, number>;
+    edges_by_type: Record<string, number>;
+    total_nodes: number;
+    total_edges: number;
+  };
+}
+
+export interface GraphCoverageBooth {
+  booth_id: string;
+  booth_number: number;
+  name: string;
+  lat: number | null;
+  lon: number | null;
+  total_voters: number | null;
+  bjp_pulse_score: number | null;
+  opp_pulse_score: number | null;
+  confidence_label: string | null;
+  event_count: number | null;
+  in_neo4j: boolean;
+  neo4j_degree: number;
+}
+
+export interface GraphCoverageResponse {
+  ac_id: string;
+  total: number;
+  in_neo4j: number;
+  booths: GraphCoverageBooth[];
+}
+
+export interface AcElectionResults {
+  ac_id: string;
+  year: number;
+  results: { party: string; total_votes: number; vote_share_pct: number; booths_won: number }[];
+  turnout: { total_voters: number; total_votes: number; turnout_pct: number } | null;
+}
+
+export interface AcIntelSummary {
+  ac_id: string;
+  voter_stats: {
+    total: number;
+    total_voters: number;
+    male_voters: number;
+    female_voters: number;
+  };
+  issues: { code: string; label: string; count: number }[];
+  youtube_count: number;
+  videos: { title: string; url: string | null; channel: string | null }[];
+  candidates: {
+    name: string;
+    year: number | null;
+    candidate_id: string;
+    is_incumbent: boolean | null;
+    is_primary_opp: boolean | null;
+    party: string | null;
   }[];
 }
