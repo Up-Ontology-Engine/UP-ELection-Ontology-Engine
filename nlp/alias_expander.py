@@ -27,9 +27,7 @@ from __future__ import annotations
 
 import json
 import logging
-import os
 from pathlib import Path
-from typing import Optional
 
 from thefuzz import process as fuzz_process
 
@@ -142,7 +140,7 @@ class AliasExpander:
 
     def expand_from_db(self, engine) -> tuple[int, int]:
         """
-        Pull unresolved location_mentions from pulse_events, run expansion,
+        Pull unresolved location_text values from pulse_events, run expansion,
         and return (proposals_count, auto_added_count).
         """
         from sqlalchemy import text
@@ -150,10 +148,10 @@ class AliasExpander:
         with engine.connect() as conn:
             rows = conn.execute(
                 text("""
-                    SELECT DISTINCT location_mention
+                    SELECT DISTINCT location_text
                     FROM pulse_events
-                    WHERE location_mention IS NOT NULL
-                      AND location_mention != ''
+                    WHERE location_text IS NOT NULL
+                      AND location_text != ''
                       AND mapped_booth_id IS NULL
                     LIMIT 500
                 """)

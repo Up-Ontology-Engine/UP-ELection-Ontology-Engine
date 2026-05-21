@@ -1701,3 +1701,138 @@ def get_conversion_stats(ac_id: str) -> dict:
         "target_contact_pct":  round(row[4] / row[2] * 100, 1) if row[2] else 0,
         "top_schemes": [{"scheme": r[0], "count": r[1]} for r in scheme_rows],
     }
+
+
+# ── AC-level pulse intelligence (from pulse_events, honest geo attribution) ──
+
+def get_ac_level_pulse(ac_id: str, days: int = 365) -> dict:
+    """
+    Compute BJP/OPP pulse scores from pulse_events at AC level.
+
+    Only uses events where mapped_ac_id matches and final_polarity != 0.
+    Never uses booth_metrics (which would include synthetic rows).
+    Returns attribution_level='ac' to signal no booth-level breakdown is available.
+    """
+    resolved = _rac(ac_id)
+    from datetime import datetime, timedelta, timezone
+    cutoff = datetime.now(timezone.utc) - timedelta(days=days)
+
+    with get_pg_engine().connect() as conn:
+        row = conn.execute(text("""
+            SELECT
+                COUNT(*)                                        AS total_events,
+                COUNT(*) FILTER (WHERE final_polarity != 0)    AS polarity_events,
+                COUNT(*) FILTER (WHERE mapped_booth_id IS NOT NULL
+                                   AND geo_confidence >= 0.75) AS booth_attributed,
+                AVG(geo_confidence) FILTER (WHERE geo_confidence IS NOT NULL) AS avg_geo_conf,
+                SUM(
+                    CASE WHEN entity_type = 'party'
+                              AND entity ILIKE '%bjp%'
+                              AND final_polarity != 0
+                         THEN final_polarity * COALESCE(source_weight, 0.6)
+                         ELSE 0 END
+                ) AS bjp_weighted_sum,
+                SUM(
+                    CASE WHEN entity_type = 'party'
+                              AND entity NOT ILIKE '%bjp%'
+                              AND final_polarity != 0
+                         THEN ABS(final_polarity) * COALESCE(source_weight, 0.6)
+                         ELSE 0 END
+                ) AS opp_weighted_sum,
+                SUM(CASE WHEN entity_type = 'party'
+                              AND entity ILIKE '%bjp%'
+                              AND final_polarity != 0
+                         THEN COALESCE(source_weight, 0.6) ELSE 0 END) AS bjp_weight_total,
+                SUM(CASE WHEN entity_type = 'party'
+                              AND entity NOT ILIKE '%bjp%'
+                              AND final_polarity != 0
+                         THEN COALESCE(source_weight, 0.6) ELSE 0 END) AS opp_weight_total
+            FROM pulse_events
+            WHERE mapped_ac_id = :ac_id
+              AND created_at >= :cutoff
+        """), {"ac_id": resolved, "cutoff": cutoff}).mappings().fetchone()
+
+    r = dict(row) if row else {}
+    total = int(r.get("total_events") or 0)
+    polarity = int(r.get("polarity_events") or 0)
+    booth_attr = int(r.get("booth_attributed") or 0)
+
+    bjp_sum   = float(r.get("bjp_weighted_sum") or 0)
+    opp_sum   = float(r.get("opp_weighted_sum") or 0)
+    bjp_wt    = float(r.get("bjp_weight_total") or 1)
+    opp_wt    = float(r.get("opp_weight_total") or 1)
+
+    bjp_pulse = round(bjp_sum / bjp_wt, 3) if bjp_wt > 0 else 0.0
+    opp_pulse = round(opp_sum / opp_wt, 3) if opp_wt > 0 else 0.0
+
+    diff = bjp_pulse - opp_pulse
+    if diff > 0.15:
+        lean = "Strong BJP"
+    elif diff > 0.05:
+        lean = "Lean BJP"
+    elif diff < -0.15:
+        lean = "Strong Opposition"
+    elif diff < -0.05:
+        lean = "Lean Opposition"
+    else:
+        lean = "Competitive"
+
+    return {
+        "ac_id":             resolved,
+        "attribution_level": "ac",
+        "window_days":       days,
+        "total_events":      total,
+        "polarity_events":   polarity,
+        "booth_attributed":  booth_attr,
+        "avg_geo_confidence": round(float(r.get("avg_geo_conf") or 0), 3),
+        "bjp_pulse":         bjp_pulse,
+        "opp_pulse":         opp_pulse,
+        "lean":              lean,
+        "warning": (
+            None if booth_attr > 0
+            else "No booth-level geo attribution — signals are constituency-wide only"
+        ),
+    }
+
+
+def get_ac_level_issues(ac_id: str, days: int = 365, limit: int = 10) -> list[dict]:
+    """
+    Top issues mentioned in AC-level pulse_events, with polarity breakdown.
+    Only counts events that have a non-empty final_issue.
+    """
+    resolved = _rac(ac_id)
+    from datetime import datetime, timedelta, timezone
+    cutoff = datetime.now(timezone.utc) - timedelta(days=days)
+
+    with get_pg_engine().connect() as conn:
+        rows = conn.execute(text("""
+            SELECT
+                final_issue                                          AS issue,
+                COUNT(*)                                             AS mention_count,
+                AVG(final_polarity)                                  AS avg_polarity,
+                COUNT(*) FILTER (WHERE final_polarity > 0)           AS positive,
+                COUNT(*) FILTER (WHERE final_polarity < 0)           AS negative,
+                COUNT(*) FILTER (WHERE final_polarity = 0)           AS neutral,
+                AVG(final_confidence)                                AS avg_confidence
+            FROM pulse_events
+            WHERE mapped_ac_id = :ac_id
+              AND created_at   >= :cutoff
+              AND final_issue IS NOT NULL
+              AND final_issue  != ''
+            GROUP BY final_issue
+            ORDER BY mention_count DESC
+            LIMIT :lim
+        """), {"ac_id": resolved, "cutoff": cutoff, "lim": limit}).mappings().fetchall()
+
+    return [
+        {
+            "issue":          r["issue"],
+            "mention_count":  int(r["mention_count"]),
+            "avg_polarity":   round(float(r["avg_polarity"] or 0), 3),
+            "positive":       int(r["positive"]),
+            "negative":       int(r["negative"]),
+            "neutral":        int(r["neutral"]),
+            "avg_confidence": round(float(r["avg_confidence"] or 0), 3),
+        }
+        for r in rows
+    ]
