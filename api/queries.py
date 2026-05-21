@@ -1038,6 +1038,28 @@ def get_ac_election_results(ac_id: str, year: int = 2022) -> dict:
 
 # ── AC demographics summary ───────────────────────────────────────────────────
 
+def get_ac_booth_election_rows(ac_id: str, year: int = 2022) -> list[dict]:
+    """Per-booth per-party vote rows with turnout — one call for the whole AC."""
+    resolved = _rac(ac_id)
+    with get_pg_engine().connect() as conn:
+        rows = conn.execute(text("""
+            SELECT
+                br.booth_id, bm.booth_number,
+                br.party, br.votes, br.vote_share, br.winner_flag,
+                ts.turnout_percent,
+                ts.total_voters AS registered,
+                ts.total_votes  AS cast
+            FROM booth_results br
+            JOIN booth_master bm ON bm.booth_id = br.booth_id
+            LEFT JOIN turnout_stats ts
+                   ON ts.booth_id = br.booth_id
+                  AND ts.election_year = br.election_year
+            WHERE bm.ac_id = :ac_id AND br.election_year = :yr
+            ORDER BY bm.booth_number, br.vote_share DESC
+        """), {"ac_id": resolved, "yr": year}).mappings().fetchall()
+    return [dict(r) for r in rows]
+
+
 def get_ac_demographics_summary(ac_id: str) -> dict | None:
     """Return ac_demographics row for this AC."""
     resolved = _rac(ac_id)
@@ -1052,3 +1074,82 @@ def get_ac_demographics_summary(ac_id: str) -> dict | None:
             WHERE ac_id = :ac_id
         """), {"ac_id": resolved}).mappings().fetchone()
     return dict(row) if row else None
+
+
+# ── Live ontology status (for Ontology Layer page) ────────────────────────────
+
+_PG_TRACKED_TABLES = [
+    "ac_master", "booth_master", "booth_metrics", "booth_results",
+    "turnout_stats", "candidate_master", "candidate_affidavits",
+    "ac_demographics", "pulse_events_raw", "yt_videos",
+    "scheme_gap_analysis", "booth_narratives", "contradiction_flags",
+    "data_quality_metrics",
+]
+
+
+def get_ontology_status() -> dict:
+    """
+    Returns live Neo4j node/rel/constraint counts and PostgreSQL table counts.
+    Used by the /ontology/status API endpoint.
+    """
+    # ── PostgreSQL ────────────────────────────────────────────────────────────
+    pg_online = False
+    pg_tables: dict[str, int | None] = {}
+    try:
+        with get_pg_engine().connect() as conn:
+            pg_online = True
+            for tbl in _PG_TRACKED_TABLES:
+                try:
+                    pg_tables[tbl] = conn.execute(
+                        text(f"SELECT COUNT(*) FROM {tbl}")
+                    ).scalar() or 0
+                except Exception:
+                    pg_tables[tbl] = None
+    except Exception:
+        pg_tables = {t: None for t in _PG_TRACKED_TABLES}
+
+    # ── Neo4j ─────────────────────────────────────────────────────────────────
+    neo4j_online = False
+    node_counts: dict[str, int] = {}
+    rel_counts:  dict[str, int] = {}
+    constraints: list[dict]     = []
+    try:
+        with get_neo4j_session() as session:
+            neo4j_online = True
+            for rec in session.run(
+                "MATCH (n) WITH labels(n)[0] AS lbl, count(n) AS cnt "
+                "WHERE lbl IS NOT NULL RETURN lbl, cnt ORDER BY cnt DESC"
+            ):
+                node_counts[rec["lbl"]] = rec["cnt"]
+
+            for rec in session.run(
+                "MATCH ()-[r]->() RETURN type(r) AS rel_type, count(r) AS cnt ORDER BY cnt DESC"
+            ):
+                rel_counts[rec["rel_type"]] = rec["cnt"]
+
+            for rec in session.run(
+                "SHOW CONSTRAINTS YIELD name, type, labelsOrTypes, properties"
+            ):
+                constraints.append({
+                    "name":       rec["name"],
+                    "type":       rec["type"],
+                    "labels":     list(rec["labelsOrTypes"]),
+                    "properties": list(rec["properties"]),
+                })
+    except Exception:
+        pass
+
+    return {
+        "neo4j": {
+            "online":        neo4j_online,
+            "nodes":         node_counts,
+            "relationships": rel_counts,
+            "constraints":   constraints,
+            "total_nodes":   sum(node_counts.values()),
+            "total_edges":   sum(rel_counts.values()),
+        },
+        "postgresql": {
+            "online": pg_online,
+            "tables": pg_tables,
+        },
+    }

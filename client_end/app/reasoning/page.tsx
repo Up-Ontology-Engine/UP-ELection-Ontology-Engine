@@ -47,14 +47,15 @@ export default function ReasoningPage() {
       const result = await api.reason(q);
       setMessages((prev) => [...prev, {
         role: "assistant",
-        content: result.summary ?? "Query executed.",
+        content: result.summary ?? "I could not generate a textual answer for that query.",
         result,
         ts: ts(),
       }]);
-    } catch {
+    } catch (err) {
+      const message = err instanceof Error ? err.message : "Unknown error";
       setMessages((prev) => [...prev, {
         role: "assistant",
-        content: "Error: Could not reach the reasoning API. Ensure the backend is running with Neo4j connected.",
+        content: `Error: ${message || "Could not reach the reasoning API. Ensure the backend is running with Neo4j connected."}`,
         ts: ts(),
       }]);
     } finally { setLoading(false); }
@@ -77,7 +78,7 @@ export default function ReasoningPage() {
           <div>
             <h1 className="text-sm font-bold text-white">AI Political Reasoning</h1>
             <p className="text-xs mono" style={{ color: "#4d6480" }}>
-              Natural language → Cypher → Knowledge Graph · Powered by Groq LLM
+              Natural language → Cypher → Knowledge Graph · Powered by Sarvam LLM
             </p>
           </div>
         </div>

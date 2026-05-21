@@ -13,7 +13,10 @@ async function post<T>(path: string, body: unknown): Promise<T> {
     body: JSON.stringify(body),
     cache: "no-store",
   });
-  if (!res.ok) throw new Error(`API POST ${path} → ${res.status}`);
+  if (!res.ok) {
+    const message = await res.text().catch(() => "");
+    throw new Error(message || `API POST ${path} → ${res.status}`);
+  }
   return res.json();
 }
 
@@ -55,11 +58,17 @@ export const api = {
   infraOverview: () => get<InfraOverview>("/infrastructure/overview"),
   graphCoverage: (acId: string) => get<GraphCoverageResponse>(`/ac/${acId}/graph-coverage`),
 
+  // Ontology live status
+  ontologyStatus: () => get<OntologyStatus>("/ontology/status").catch(() => null),
+
   // Intelligence summary (PG voter stats + Neo4j issues/videos/candidates)
   intelSummary: (acId: string) => get<AcIntelSummary>(`/ac/${acId}/intel-summary`),
 
   // Election results (Form-20 ingested)
   electionResults: (acId: string, year = 2022) => get<AcElectionResults>(`/ac/${acId}/election-results?year=${year}`),
+
+  // Per-booth election rows (bulk)
+  boothElectionRows: (acId: string, year = 2022) => get<BoothElectionRowsResponse>(`/ac/${acId}/booth-election-rows?year=${year}`),
 };
 
 // ── Types ─────────────────────────────────────────────────────────────────────
@@ -279,9 +288,33 @@ export interface GraphResult {
 
 export interface ReasoningResult {
   question: string;
-  cypher: string;
+  cypher: string | null;
   results: Record<string, unknown>[];
-  summary: string;
+  summary: string | null;
+  error: string | null;
+  row_count: number;
+}
+
+export interface OntologyConstraint {
+  name: string;
+  type: string;
+  labels: string[];
+  properties: string[];
+}
+
+export interface OntologyStatus {
+  neo4j: {
+    online: boolean;
+    nodes: Record<string, number>;
+    relationships: Record<string, number>;
+    constraints: OntologyConstraint[];
+    total_nodes: number;
+    total_edges: number;
+  };
+  postgresql: {
+    online: boolean;
+    tables: Record<string, number | null>;
+  };
 }
 
 export interface DemographicsSummary {
@@ -333,6 +366,24 @@ export interface GraphCoverageResponse {
   total: number;
   in_neo4j: number;
   booths: GraphCoverageBooth[];
+}
+
+export interface BoothElectionRow {
+  booth_id: string;
+  booth_number: number;
+  party: string;
+  votes: number;
+  vote_share: number;
+  winner_flag: boolean;
+  turnout_percent: number | null;
+  registered: number | null;
+  cast: number | null;
+}
+
+export interface BoothElectionRowsResponse {
+  ac_id: string;
+  year: number;
+  rows: BoothElectionRow[];
 }
 
 export interface AcElectionResults {

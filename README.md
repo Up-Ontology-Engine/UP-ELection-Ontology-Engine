@@ -334,6 +334,8 @@ pip install -r requirements.txt
 cp .env.example .env           # fill in your API keys
 ```
 
+For AI reasoning, set `SARVAM_API_KEY` in `.env`. The backend will use Sarvam chat models first and fall back to Gemini if the Sarvam key is not present.
+
 ### 2. Start local infrastructure
 
 ```bash

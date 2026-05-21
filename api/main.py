@@ -18,6 +18,7 @@ from .queries import (
     get_ac_quality, get_ac_recommendations, get_graph_subgraph,
     get_booth_geo, get_infrastructure_overview, get_graph_coverage,
     get_ac_intel_summary, get_ac_election_results, get_ac_demographics_summary,
+    get_ac_booth_election_rows, get_ontology_status,
 )
 from .reasoning import reasoning_query
 
@@ -249,6 +250,13 @@ def ac_intel_summary(ac_id: str):
     return {"ac_id": ac_id, **get_ac_intel_summary(ac_id)}
 
 
+@app.get("/ac/{ac_id}/booth-election-rows")
+def ac_booth_election_rows(ac_id: str, year: int = Query(2022, ge=2000, le=2030)):
+    """Per-booth per-party vote rows with turnout — bulk call for demographics page."""
+    rows = get_ac_booth_election_rows(_rac(ac_id), year=year)
+    return {"ac_id": ac_id, "year": year, "rows": rows}
+
+
 @app.get("/ac/{ac_id}/election-results")
 def ac_election_results(ac_id: str, year: int = Query(2022, ge=2000, le=2030)):
     """AC-level election results aggregated from booth_results."""
@@ -273,6 +281,12 @@ def infrastructure_overview():
     return get_infrastructure_overview()
 
 
+@app.get("/ontology/status")
+def ontology_status():
+    """Live graph topology — node/rel counts, active constraints, PG table stats. Powers the Ontology Layer page."""
+    return get_ontology_status()
+
+
 @app.get("/ac/{ac_id}/graph-coverage")
 def graph_coverage(ac_id: str):
     """Per-booth: lat/lon from PostgreSQL plus Neo4j graph presence and degree."""
@@ -289,7 +303,7 @@ class ReasoningRequest(BaseModel):
 def reasoning_endpoint(body: ReasoningRequest):
     """
     AI-assisted political reasoning: natural language → Cypher → Neo4j results.
-    Powered by Groq LLM with the full graph schema as context.
+    Powered by Sarvam LLM when `SARVAM_API_KEY` is set, otherwise Gemini.
     """
     if not body.question.strip():
         raise HTTPException(400, "question must not be empty")

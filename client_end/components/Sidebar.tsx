@@ -4,8 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   LayoutDashboard, Network, BarChart3, Brain,
-  MessageSquare, BookOpen, Users, Cpu, Activity,
-  ChevronDown, GitBranch, Database, Shield, Radio, Zap, Server, Flame
+  MessageSquare, BookOpen, Users, Activity,
+  ChevronDown, GitBranch, Database, Shield, Radio, Zap, Flame
 } from "lucide-react";
 
 const SECTIONS = [
@@ -19,23 +19,16 @@ const SECTIONS = [
   {
     label: "Intelligence",
     items: [
-      { href: "/heatmap",   icon: Flame,         label: "Constituency Heatmap", badge: null,   dot: "amber"  },
-      { href: "/graph",     icon: Network,       label: "Knowledge Graph",      badge: null,   dot: "blue"   },
-      { href: "/twin",      icon: Cpu,           label: "Digital Twin",         badge: "BETA", dot: "purple" },
-      { href: "/reasoning", icon: MessageSquare, label: "AI Reasoning",         badge: null,   dot: "pink"   },
+      { href: "/heatmap",   icon: Flame,         label: "Constituency Heatmap", badge: null, dot: "amber" },
+      { href: "/graph",     icon: Network,       label: "Knowledge Graph",      badge: null, dot: "blue"  },
+      { href: "/reasoning", icon: MessageSquare, label: "AI Reasoning",         badge: null, dot: "pink"  },
     ],
   },
   {
     label: "Analytics",
     items: [
-      { href: "/demographics", icon: Users,     label: "Demographics",  badge: null, dot: "cyan"  },
-      { href: "/ontology",     icon: BookOpen,  label: "Ontology Layer", badge: "v1", dot: "slate" },
-    ],
-  },
-  {
-    label: "Infrastructure",
-    items: [
-      { href: "/infrastructure", icon: Server, label: "Data Infrastructure", badge: null, dot: "orange" },
+      { href: "/demographics", icon: Users,    label: "Demographics",   badge: null, dot: "cyan"  },
+      { href: "/ontology",     icon: BookOpen, label: "Ontology Layer", badge: "v1", dot: "slate" },
     ],
   },
 ];

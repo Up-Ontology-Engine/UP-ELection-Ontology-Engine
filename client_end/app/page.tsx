@@ -453,10 +453,10 @@ export default async function DashboardPage() {
                     </div>
                   </div>
                   {c.is_incumbent && (
-                    <CheckCircle size={10} style={{ color: "#f97316", flexShrink: 0 }} title="Incumbent" />
+                    <CheckCircle size={10} style={{ color: "#f97316", flexShrink: 0 }} />
                   )}
                   {c.is_primary_opp && !c.is_incumbent && (
-                    <AlertCircle size={10} style={{ color: "#3b82f6", flexShrink: 0 }} title="Primary opposition" />
+                    <AlertCircle size={10} style={{ color: "#3b82f6", flexShrink: 0 }} />
                   )}
                 </div>
               ))}
