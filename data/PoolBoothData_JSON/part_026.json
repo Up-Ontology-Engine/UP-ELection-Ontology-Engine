@@ -672,7 +672,7 @@
       "name": "Anavarullaha Shaha",
       "relation_type": "Father",
       "relation_name": ".khairulalaha Shaha",
-      "house_number": "5 बी",
+      "house_number": "5",
       "age": 27,
       "gender": "Male",
       "photo_available": true
@@ -705,7 +705,7 @@
       "name": "Khushi Keshavani",
       "relation_type": "Father",
       "relation_name": "Paramanamda Keshavani Pa",
-      "house_number": "00 WH/09",
+      "house_number": "00",
       "age": 20,
       "gender": "Female",
       "photo_available": true
@@ -1539,7 +1539,7 @@
       "name": "Dort Vishvakarma",
       "relation_type": "Husband",
       "relation_name": "Pritama Vishvakarma",
-      "house_number": "5,",
+      "house_number": "5",
       "age": 25,
       "gender": "Female",
       "photo_available": false
@@ -1979,7 +1979,7 @@
       "name": "Kirana Simha",
       "relation_type": "Husband",
       "relation_name": "Manoja Kumara Simha",
-      "house_number": "43 ए",
+      "house_number": "43",
       "age": 33,
       "gender": "Female",
       "photo_available": true
@@ -2275,7 +2275,7 @@
       "name": "Ritesha Kumara Praja",
       "relation_type": "Father",
       "relation_name": "Dhrupachamda",
-      "house_number": "5 जी",
+      "house_number": "5",
       "age": 27,
       "gender": "Male",
       "photo_available": true
@@ -2385,7 +2385,7 @@
       "name": "Harikesha Kumara",
       "relation_type": "Father",
       "relation_name": "Dhrupa Chanda",
-      "house_number": "5 जी",
+      "house_number": "5",
       "age": 25,
       "gender": "Male",
       "photo_available": true
@@ -3221,7 +3221,7 @@
       "name": "Memdra Kumara",
       "relation_type": "Father",
       "relation_name": "Mohana Lala",
-      "house_number": "84.",
+      "house_number": "84",
       "age": 28,
       "gender": "Male",
       "photo_available": false
@@ -4872,7 +4872,7 @@
       "name": "Maniruna Nisha",
       "relation_type": "Husband",
       "relation_name": "Jakki",
-      "house_number": "24%",
+      "house_number": "24",
       "age": 6,
       "gender": "Female",
       "photo_available": true
@@ -7331,7 +7331,7 @@
       "name": "Hevanti Devi",
       "relation_type": "Husband",
       "relation_name": "Lalu Yadava Pa",
-      "house_number": "274 क",
+      "house_number": "274",
       "age": 38,
       "gender": "Female",
       "photo_available": true
@@ -7994,7 +7994,7 @@
       "name": "Shesha Natha",
       "relation_type": "Father",
       "relation_name": "Shamkara Prasada",
-      "house_number": "एच नं 63",
+      "house_number": "एच",
       "age": 38,
       "gender": "Male",
       "photo_available": true
@@ -8007,7 +8007,7 @@
       "name": "Ra La Sharma",
       "relation_type": "Father",
       "relation_name": "Amara Sharma",
-      "house_number": "एच नं 2",
+      "house_number": "एच",
       "age": 27,
       "gender": "Male",
       "photo_available": false
@@ -8020,7 +8020,7 @@
       "name": "Gita Devi",
       "relation_type": "Husband",
       "relation_name": "Ramesha Chamda",
-      "house_number": "एच नं 24",
+      "house_number": "एच",
       "age": 47,
       "gender": "Female",
       "photo_available": true
@@ -8070,7 +8070,7 @@
       "section_number": 3,
       "section_name": "Manbela Khan Madaiya Tola",
       "name": "Manisha Kumara Simha",
-      "house_number": "हाऊस नं 250एम,मानस वीला.._",
+      "house_number": "हाऊस",
       "age": 57,
       "gender": "Male",
       "photo_available": true
@@ -8083,7 +8083,7 @@
       "name": "Smrti Saitha",
       "relation_type": "Husband",
       "relation_name": "Aloka Kumara Saitha",
-      "house_number": "5 सी",
+      "house_number": "5",
       "age": 35,
       "gender": "Female",
       "photo_available": true
@@ -8096,7 +8096,7 @@
       "name": "Dipika Sharma",
       "relation_type": "Father",
       "relation_name": "Rama Naresha Sharma",
-      "house_number": "79 एफ.एन. 702 पीएम आवास",
+      "house_number": "79",
       "age": 23,
       "gender": "Female",
       "photo_available": true
@@ -8122,7 +8122,7 @@
       "name": "Sumita Kumara Gau.da",
       "relation_type": "Father",
       "relation_name": "Mukesha Kumara Gau.da",
-      "house_number": "एच नं 26",
+      "house_number": "एच",
       "age": 20,
       "gender": "Male",
       "photo_available": true
@@ -8135,7 +8135,7 @@
       "name": "Mamju",
       "relation_type": "Husband",
       "relation_name": "Leta Lalachamda Q",
-      "house_number": "एच नं 5",
+      "house_number": "एच",
       "age": 47,
       "gender": "Female",
       "photo_available": true
@@ -8174,7 +8174,7 @@
       "name": "Aloka Kumara Saitha",
       "relation_type": "Father",
       "relation_name": "Shyama Dulare",
-      "house_number": "5 सी",
+      "house_number": "5",
       "age": 34,
       "gender": "Male",
       "photo_available": false
@@ -8226,7 +8226,7 @@
       "name": "Ishika Simha",
       "relation_type": "Father",
       "relation_name": "Brijesha Prasada",
-      "house_number": "एच नं 64",
+      "house_number": "एच",
       "age": 8,
       "gender": "Female",
       "photo_available": false
@@ -8304,7 +8304,7 @@
       "name": "Allauddina",
       "relation_type": "Father",
       "relation_name": "Nija~nasudadina",
-      "house_number": "एफ सी आई रोड",
+      "house_number": "एफ",
       "age": 2,
       "gender": "Male",
       "photo_available": true
@@ -8356,7 +8356,7 @@
       "name": "Ramavati Devi",
       "relation_type": "Husband",
       "relation_name": "Sukkhu Prasada",
-      "house_number": "00 वार्ड 7",
+      "house_number": "00",
       "age": 6,
       "gender": "Female",
       "photo_available": true
@@ -8447,7 +8447,7 @@
       "name": "Ashiya",
       "relation_type": "Husband",
       "relation_name": "Javeda Khana",
-      "house_number": "एच ओ न॑ 69",
+      "house_number": "एच",
       "age": 29,
       "gender": "Female",
       "photo_available": false
@@ -8460,7 +8460,7 @@
       "name": "Sunita",
       "relation_type": "Husband",
       "relation_name": "Rama Prakasha",
-      "house_number": "Arsen चौ",
+      "house_number": "Arsen",
       "age": 23,
       "gender": "Female",
       "photo_available": false
@@ -8473,7 +8473,7 @@
       "name": "Khushabu Kannaujiya",
       "relation_type": "Husband",
       "relation_name": "Abhaya Kumara",
-      "house_number": "63 एफ",
+      "house_number": "63",
       "age": 20,
       "gender": "Female",
       "photo_available": false
