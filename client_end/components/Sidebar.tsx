@@ -5,15 +5,16 @@ import { usePathname } from "next/navigation";
 import {
   LayoutDashboard, Network, BarChart3, Brain,
   MessageSquare, BookOpen, Users, Activity,
-  ChevronDown, GitBranch, Database, Shield, Radio, Zap, Flame
+  ChevronDown, GitBranch, Database, Shield, Radio, Zap, Flame, Target
 } from "lucide-react";
 
 const SECTIONS = [
   {
     label: "Operations",
     items: [
-      { href: "/",       icon: LayoutDashboard, label: "Command Center",     badge: null,  dot: "green" },
-      { href: "/booths", icon: Activity,        label: "Booth Intelligence", badge: "30",  dot: "green" },
+      { href: "/",           icon: LayoutDashboard, label: "Command Center",     badge: null,  dot: "green"  },
+      { href: "/booths",     icon: Activity,        label: "Booth Intelligence", badge: "30",  dot: "green"  },
+      { href: "/conversion", icon: Target,          label: "Voter Conversion",   badge: "NEW", dot: "orange" },
     ],
   },
   {
