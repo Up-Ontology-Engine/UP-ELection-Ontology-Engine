@@ -16,6 +16,7 @@ import logging
 from neo4j import Session
 import sqlalchemy as sa
 from sqlalchemy import text
+from etl.constants import normalise_party
 
 logger = logging.getLogger(__name__)
 
@@ -33,10 +34,11 @@ PARTY_COLORS: dict[str, str] = {
 def load_parties(pg_engine: sa.Engine, session: Session) -> int:
     with pg_engine.connect() as conn:
         rows = conn.execute(text(
-            "SELECT DISTINCT party FROM candidate_master WHERE party IS NOT NULL"
+            "SELECT DISTINCT party FROM candidate_master "
+            "WHERE party IS NOT NULL AND ac_id = 'GKP_322'"
         )).fetchall()
 
-    parties = [r[0] for r in rows]
+    parties = [normalise_party(r[0]) for r in rows]
     for p in parties:
         session.run("""
             MERGE (party:Party {party_id: $party_id})
@@ -65,9 +67,11 @@ def load_candidates(pg_engine: sa.Engine, session: Session) -> int:
                 ca.criminal_cases, ca.total_assets AS total_assets_rs
             FROM candidate_master cm
             LEFT JOIN candidate_affidavits ca USING (candidate_id)
+            WHERE cm.ac_id = 'GKP_322'
         """)).mappings().fetchall()
 
     for r in rows:
+        canonical_party = normalise_party(r["party"]) if r["party"] else "IND"
         session.run("""
             MERGE (c:Candidate {candidate_id: $candidate_id})
             SET c.name              = $name,
@@ -91,7 +95,7 @@ def load_candidates(pg_engine: sa.Engine, session: Session) -> int:
         """, {
             "candidate_id":       r["candidate_id"],
             "name":               r["name"],
-            "party":              r["party"],
+            "party":              canonical_party,
             "ac_id":              r["ac_id"],
             "election_year":      r["election_year"],
             "is_incumbent":       bool(r["is_incumbent"]),
@@ -137,6 +141,7 @@ def load_election_results(pg_engine: sa.Engine, session: Session) -> int:
             LEFT JOIN candidate_expense_detail ced
                 ON ced.candidate_id = cph.candidate_id
                AND ced.election_year = cph.election_year
+            WHERE cph.constituency = 'GKP_322'
         """)).mappings().fetchall()
 
     count = 0

@@ -68,6 +68,52 @@ PARTY_NORM: dict[str, str] = {
     # NOTA
     "NOTA": "NOTA",
     "NONE OF THE ABOVE": "NOTA",
+
+    # Independent candidates
+    "INDEPENDENT": "IND",
+    "INDPENDENT":  "IND",   # common misspelling
+    "INDEPENDENT CANDIDATE": "IND",
+    "IND": "IND",
+
+    # Common BJP spellings / OCR variants
+    "BHARATIYA JANTA PARTY": "BJP",   # missing 'A' in JANATA — very common
+    "BHARATIYA JANATA PARTY": "BJP",
+    "B J P": "BJP",
+    "B.J.P": "BJP",
+    "B.J.P.": "BJP",
+
+    # Common BSP OCR artifacts (space-separated)
+    "B A S P": "BSP",
+    "B.S.P": "BSP",
+    "B.S.P.": "BSP",
+    "BAHUJAN SAMAJ PARTY": "BSP",
+
+    # Common SP / AAP OCR artifacts
+    "A A P": "AAP",
+    "A.A.P": "AAP",
+    "A.A.P.": "AAP",
+
+    # PSP Lohia variants
+    "PRAGATISHIL SAMAJWADI PARTY (LOHIA)": "PSP(L)",
+    "PSP (LOHIYA)": "PSP(L)",
+    "P.S.P LOHIYA": "PSP(L)",
+    "PSP LOHIYA": "PSP(L)",
+
+    # CPI
+    "COMMUNIST PARTY OF INDIA": "CPI",
+    "C.P.I": "CPI",
+    "CPI": "CPI",
+
+    # Suheldev Bharatiya Samaj Party
+    "SUHELDEV BHARATIYA SAMAJ PARTY": "SBSP",
+
+    # RLD
+    "RASHTRIYA LOK DAL": "RLD",
+    "RLD": "RLD",
+
+    # Vikassheel Insaan Party
+    "VIKASSSHEEL INSAAN PARTY": "VIP",
+    "VIKASSHEEL INSAAN PARTY": "VIP",
 }
 
 

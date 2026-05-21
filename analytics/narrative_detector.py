@@ -89,7 +89,7 @@ def detect_narratives_for_booth(
                     entity,
                     entity_type,
                     final_polarity  AS final_polarity,
-                    nlp_confidence,
+                    final_confidence AS nlp_confidence,
                     source_type
                 FROM pulse_events
                 WHERE mapped_booth_id = :booth_id

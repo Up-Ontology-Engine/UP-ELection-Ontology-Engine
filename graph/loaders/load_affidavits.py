@@ -35,6 +35,7 @@ def load_all(pg_engine: sa.Engine, session: Session) -> dict[str, int]:
             FROM candidate_affidavits ca
             JOIN candidate_master cm ON cm.candidate_id = ca.candidate_id
             WHERE ca.candidate_id IS NOT NULL
+              AND cm.ac_id = 'GKP_322'
         """)).mappings().fetchall()
 
     if not rows:

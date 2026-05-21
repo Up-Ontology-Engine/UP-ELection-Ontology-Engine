@@ -30,8 +30,9 @@ from sqlalchemy.engine import Engine
 
 logger = logging.getLogger(__name__)
 
-# Only load rows computed in the last N days to avoid stale node explosion
-LOAD_WINDOW_DAYS = 1
+# How far back to look when loading intelligence nodes.
+# Set large for the initial bulk load; tighten for incremental refreshes.
+LOAD_WINDOW_DAYS = 3650  # 10 years — loads all historical data on first run
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────

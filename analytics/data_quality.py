@@ -62,7 +62,7 @@ def compute_quality_for_booth(
                     geo_confidence,
                     mapped_booth_id,
                     mapped_ac_id,
-                    nlp_confidence,
+                    final_confidence AS nlp_confidence,
                     extraction_method,
                     entity
                 FROM pulse_events
