@@ -136,18 +136,114 @@ def load_candidate_master(engine: sa.Engine) -> int:
     return len(rows)
 
 
+def compute_net_worth(engine: sa.Engine) -> int:
+    """
+    Backfill candidate_master.net_worth_rs = total_assets - total_liabilities
+    for all candidates where it is not yet set.
+    Returns number of rows updated.
+    """
+    with engine.connect() as conn:
+        result = conn.execute(text("""
+            UPDATE candidate_master cm
+            SET net_worth_rs = ca.total_assets - ca.total_liabilities
+            FROM candidate_affidavits ca
+            WHERE ca.candidate_id = cm.candidate_id
+              AND ca.total_assets IS NOT NULL
+              AND ca.total_liabilities IS NOT NULL
+              AND cm.net_worth_rs IS NULL
+        """))
+        conn.commit()
+    updated = result.rowcount
+    logger.info("compute_net_worth: updated %d rows", updated)
+    return updated
+
+
+def merge_affidavit_detail(engine: sa.Engine, rows: list[dict]) -> int:
+    """
+    Apply enriched affidavit fields (from MyNeta detail-page scrape) to
+    candidate_affidavits, then refresh net_worth_rs on candidate_master.
+
+    Each dict in `rows` must have at minimum: candidate_id.
+    All other fields are optional — COALESCE keeps existing values when new value is None.
+
+    Returns number of affidavit rows touched.
+    """
+    if not rows:
+        return 0
+
+    jsonb_fields = (
+        "movable_assets_json", "immovable_assets_json", "liabilities_json",
+        "criminal_case_details_json", "itr_income_json",
+    )
+    count = 0
+    with engine.connect() as conn:
+        for row in rows:
+            cid = row.get("candidate_id")
+            if not cid:
+                continue
+
+            params: dict = {"cid": cid}
+            for f in jsonb_fields:
+                v = row.get(f)
+                params[f] = json.dumps(v, ensure_ascii=False) if v is not None else None
+
+            params.update({
+                "movable_assets_rs":    row.get("movable_assets_rs"),
+                "immovable_assets_rs":  row.get("immovable_assets_rs"),
+                "source_affidavit_url": row.get("source_affidavit_url"),
+                "html_snapshot_path":   row.get("html_snapshot_path"),
+                "parse_status":         row.get("parse_status", "scraped"),
+                "parse_error":          row.get("parse_error"),
+            })
+
+            conn.execute(text("""
+                UPDATE candidate_affidavits SET
+                    movable_assets_rs          = COALESCE(:movable_assets_rs,    movable_assets_rs),
+                    immovable_assets_rs        = COALESCE(:immovable_assets_rs,  immovable_assets_rs),
+                    movable_assets_json        = COALESCE(CAST(:movable_assets_json   AS jsonb), movable_assets_json),
+                    immovable_assets_json      = COALESCE(CAST(:immovable_assets_json AS jsonb), immovable_assets_json),
+                    liabilities_json           = COALESCE(CAST(:liabilities_json      AS jsonb), liabilities_json),
+                    criminal_case_details_json = COALESCE(CAST(:criminal_case_details_json AS jsonb),
+                                                          criminal_case_details_json),
+                    itr_income_json            = COALESCE(CAST(:itr_income_json AS jsonb), itr_income_json),
+                    source_affidavit_url       = COALESCE(:source_affidavit_url, source_affidavit_url),
+                    html_snapshot_path         = COALESCE(:html_snapshot_path,   html_snapshot_path),
+                    parse_status               = :parse_status,
+                    parse_error                = :parse_error,
+                    scraped_at                 = NOW()
+                WHERE candidate_id = :cid
+            """), params)
+            count += 1
+
+        conn.commit()
+
+    logger.info("merge_affidavit_detail: updated %d affidavit rows", count)
+    compute_net_worth(engine)
+    return count
+
+
 def validate(engine: sa.Engine) -> None:
     with engine.connect() as conn:
         total     = conn.execute(text("SELECT COUNT(*) FROM candidate_master")).scalar()
         by_party  = conn.execute(text(
             "SELECT party, COUNT(*) FROM candidate_master GROUP BY party ORDER BY COUNT(*) DESC"
         )).fetchall()
-    logger.info("[VALIDATE] %d total candidates | by party: %s", total, dict(by_party))
+        enriched  = conn.execute(text(
+            "SELECT COUNT(*) FROM candidate_affidavits WHERE parse_status = 'scraped'"
+        )).scalar()
+        with_results = conn.execute(text(
+            "SELECT COUNT(*) FROM candidate_party_history WHERE is_winner IS NOT NULL"
+        )).scalar()
+    logger.info(
+        "[VALIDATE] %d candidates | %d affidavits enriched | %d result rows | by party: %s",
+        total, enriched, with_results, {r[0]: r[1] for r in by_party},
+    )
 
 
 def run():
     engine = sa.create_engine(os.environ["POSTGRES_URL"])
     load_candidate_master(engine)
+    compute_net_worth(engine)
     validate(engine)
 
 

@@ -400,6 +400,32 @@ streamlit run dashboard/app.py              # http://localhost:8501
 
 ---
 
+## 🗳️ Election Completeness & Null Policies
+
+To support both complete historical datasets (like the 2017/2022 Vidhan Sabha results) and partially available datasets (like the 2024 Lok Sabha results), the engine implements a strict, PostgreSQL-first **Election Completeness and Null Policy**:
+
+### 1. Database Completeness Taxonomy
+Each row in the candidate results fact table (`candidate_party_history`) is annotated with a `result_completeness_status` state:
+- `'complete'`: All contesting candidates have confirmed vote totals and ranks.
+- `'winner_runnerup_only'`: Only the winner (rank 1) and runner-up (rank 2) have vote counts. All other non-winning candidates have `NULL` votes.
+- `'partial'`: Used for temporal stubs or elections where vote totals are not yet seeded.
+
+### 2. Strict Null Rules
+- **Missing Votes**: All unconfirmed candidate vote counts remain `NULL` rather than being padded with zeros or runtime mocks.
+- **Derived Metrics**: Any derived metrics (e.g., margins, vote share percentages) that depend on missing vote counts remain `NULL` to prevent mathematical distortion.
+- **Uniqueness & key grain**: API and UI results are strictly queried using a unique grain key (`candidate_id + election_year + constituency_id + election_type`), removing slow and fragile runtime `GROUP BY` logic.
+
+### 3. Neo4j Projections
+The Neo4j graph loaders (`graph.loaders.load_candidates` and `load_results`) dynamically project the completeness status, campaign expenses, and voter metadata onto Candidate nodes and the `ELECTION_RESULT` relationship, ensuring graph visualizations are aligned with the operational database.
+
+### 4. QA Audits
+Continuous database integrity is enforced by `scripts/verify_election_results_qa.py` which validates:
+- **Winner Uniqueness**: Maximum of one winner per constituency-year.
+- **Monotonic Vote Ordering**: Winners have more votes than runners-up, descending down the ranks.
+- **Null Policy Adherence**: Strictly checks that nulls are only allowed in matching completeness states.
+
+---
+
 ## 🔐 Security & Compliance
 
 *   **Electoral Roll Privacy:** No PII stored; only aggregated demographic counts.

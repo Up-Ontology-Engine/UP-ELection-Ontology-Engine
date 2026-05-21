@@ -154,6 +154,8 @@ def load_all(pg_engine: sa.Engine, session: Session) -> dict[str, int]:
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
+    from dotenv import load_dotenv
+    load_dotenv()
     from api.db import get_pg_engine, get_neo4j_session
     pg = get_pg_engine()
     with get_neo4j_session() as s:
