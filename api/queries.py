@@ -145,27 +145,117 @@ def get_booth_comments(booth_id: str, limit: int = 10, source: str | None = None
 
 # ── Candidates ────────────────────────────────────────────────────────────────
 def get_ac_candidates(ac_id: str) -> list[dict]:
+    """
+    Returns enriched candidate list for an AC, joining across:
+      candidate_master        — identity, profession, net_worth_rs   (007)
+      candidate_affidavits    — assets, criminal cases, detail fields (007)
+      candidate_party_history — vote totals, rank, result facts       (007)
+      candidate_expense_detail — campaign spend, if available         (007)
+      pulse_events            — live sentiment score + mention count
+
+    Result rows are ordered by election rank (winner first), then party.
+    """
     with get_pg_engine().connect() as conn:
         rows = conn.execute(text("""
-            SELECT cm.candidate_id, cm.name, cm.party,
-                   cm.is_incumbent, cm.is_primary_opp,
-                   ca.criminal_cases, ca.serious_cases,
-                   ca.total_assets, ca.total_liabilities,
-                   ca.education, ca.age,
-                   -- Candidate-level sentiment (last 30 days)
-                   ROUND(AVG(pe.final_polarity * pe.final_confidence)::numeric, 3)
-                       AS sentiment_score,
-                   COUNT(pe.id) AS mention_count
+            WITH sentiment_cte AS (
+                SELECT 
+                    cm.candidate_id,
+                    ROUND(AVG(pe.final_polarity * pe.final_confidence)::numeric, 3)::float AS sentiment_score,
+                    COUNT(pe.id) AS mention_count
+                FROM candidate_master cm
+                LEFT JOIN pulse_events pe 
+                    ON (pe.entity ILIKE '%' || cm.name || '%' OR pe.entity = cm.party)
+                   AND pe.created_at >= NOW() - INTERVAL '30 days'
+                WHERE cm.ac_id = :ac_id
+                GROUP BY cm.candidate_id
+            )
+            SELECT
+                cm.candidate_id,
+                cm.name,
+                cm.party,
+                cm.is_incumbent,
+                cm.is_primary_opp,
+                cm.net_worth_rs,
+                cm.self_profession,
+                cm.voter_enrolled_ac_name,
+                cm.election_year,
+                cm.ac_id,
+
+                -- Affidavit summary
+                ca.criminal_cases,
+                ca.serious_cases,
+                ca.total_assets,
+                ca.total_liabilities,
+                ca.movable_assets_rs,
+                ca.immovable_assets_rs,
+                ca.movable_assets_json,
+                ca.immovable_assets_json,
+                ca.liabilities_json,
+                ca.criminal_case_details_json,
+                ca.itr_income_json,
+                ca.education,
+                ca.age,
+                ca.parse_status         AS affidavit_parse_status,
+                ca.source_affidavit_url,
+
+                -- Election result facts (strictly keyed by candidate-election grain)
+                cph.votes_received      AS total_votes,
+                cph.vote_share          AS vote_share_pct,
+                cph.rank,
+                cph.is_winner,
+                cph.result_position_label,
+                cph.victory_margin_votes,
+                cph.results_source,
+                cph.result_completeness_status,
+
+                -- Expense (optional — NULL if not scraped)
+                ced.total_election_expense_rs,
+                ced.own_funds_rs,
+                ced.party_funds_rs,
+                ced.expense_scrape_status,
+
+                -- Live sentiment from sentiment CTE
+                COALESCE(s.sentiment_score, 0.0) AS sentiment_score,
+                COALESCE(s.mention_count, 0)     AS mention_count,
+
+                -- Complete historical contesting history resolved dynamically by candidate name
+                hist.history_json
+
             FROM candidate_master cm
-            LEFT JOIN candidate_affidavits ca USING (candidate_id)
-            LEFT JOIN pulse_events pe
-                ON pe.entity ILIKE '%' || cm.name || '%'
-               OR pe.entity = cm.party
+            LEFT JOIN candidate_affidavits ca
+                ON ca.candidate_id = cm.candidate_id
+            LEFT JOIN candidate_party_history cph
+                ON cph.candidate_id  = cm.candidate_id
+               AND cph.constituency   = cm.ac_id
+               AND cph.election_year  = cm.election_year
+            LEFT JOIN candidate_expense_detail ced
+                ON ced.candidate_id  = cm.candidate_id
+               AND ced.election_year = cm.election_year
+            LEFT JOIN sentiment_cte s
+                ON s.candidate_id = cm.candidate_id
+            LEFT JOIN LATERAL (
+                SELECT COALESCE(json_agg(json_build_object(
+                    'election_year', h.election_year,
+                    'constituency', h.constituency,
+                    'party_id', h.party_id,
+                    'votes_received', h.votes_received,
+                    'vote_share', h.vote_share,
+                    'rank', h.rank,
+                    'is_winner', h.is_winner,
+                    'result_position_label', h.result_position_label,
+                    'victory_margin_votes', h.victory_margin_votes,
+                    'result_completeness_status', h.result_completeness_status,
+                    'results_source', h.results_source,
+                    'election_type', CASE WHEN h.constituency LIKE '%LS%' THEN 'Lok Sabha' ELSE 'Vidhan Sabha' END
+                ) ORDER BY h.election_year DESC), '[]'::json) AS history_json
+                FROM candidate_party_history h
+                WHERE h.candidate_name = cm.name
+            ) hist ON TRUE
             WHERE cm.ac_id = :ac_id
-            GROUP BY cm.candidate_id, cm.name, cm.party, cm.is_incumbent,
-                     cm.is_primary_opp, ca.criminal_cases, ca.serious_cases,
-                     ca.total_assets, ca.total_liabilities, ca.education, ca.age
-            ORDER BY cm.is_incumbent DESC, cm.party
+            ORDER BY
+                cph.rank ASC NULLS LAST,
+                cm.is_incumbent DESC,
+                cm.party
         """), {"ac_id": ac_id}).mappings().fetchall()
     return [dict(r) for r in rows]
 

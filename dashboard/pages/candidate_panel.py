@@ -15,37 +15,15 @@ def _fetch_candidates(ac_id: str, api_url: str) -> list[dict]:
         return []
 
 
-@st.cache_data(ttl=300, show_spinner=False)
-def _fetch_ac_results(ac_id: str, api_url: str) -> list[dict]:
-    """Aggregate vote totals by party from booth_results."""
-    try:
-        r = requests.get(f"{api_url}/ac/{ac_id}/booths", timeout=10)
-        r.raise_for_status()
-        return r.json().get("booths", [])
-    except Exception:
-        return []
-
-
 def _fmt_amount(v) -> str:
     if v is None:
         return "N/A"
     v = int(v)
     if v >= 10_000_000:
-        return f"₹{v/10_000_000:.1f} Cr"
+        return f"₹{v/10_000_000:.2f} Cr"
     if v >= 100_000:
-        return f"₹{v/100_000:.1f} L"
+        return f"₹{v/100_000:.2f} L"
     return f"₹{v:,}"
-
-
-# Known 2022 Gorakhpur Urban results (public ECI data, used as fallback)
-_KNOWN_RESULTS = {
-    "BJP": {"votes_2022": 103_390, "vote_share_2022": 62.55,
-            "votes_2017": 97_000,  "vote_share_2017": 59.80},
-    "SP":  {"votes_2022": 46_783,  "vote_share_2022": 28.30,
-            "votes_2017": 41_000,  "vote_share_2017": 25.10},
-    "BSP": {"votes_2022": 9_254,   "vote_share_2022": 5.60,
-            "votes_2017": 14_000,  "vote_share_2017": 8.60},
-}
 
 
 def render(ac_id: str, _booth_id: str, api_url: str) -> None:
@@ -56,9 +34,8 @@ def render(ac_id: str, _booth_id: str, api_url: str) -> None:
     candidates = _fetch_candidates(ac_id, api_url)
 
     if not candidates:
-        st.warning("No candidate data in DB. Run seed first.")
+        st.warning("No candidate data in database for this AC.")
         st.code("python -m etl.seed_known_candidates")
-        _render_demo(ac_id)
         return
 
     candidates.sort(key=lambda c: (
@@ -73,91 +50,162 @@ def render(ac_id: str, _booth_id: str, api_url: str) -> None:
         label   = "🔵 Ruling" if is_inc else "🔴 Opposition" if is_opp else "⚪ Others"
 
         with st.expander(f"{label} | {name} ({party})", expanded=bool(is_inc or is_opp)):
-            _render_candidate_card(c, party)
+            _render_candidate_card(c)
 
 
-def _render_candidate_card(c: dict, party: str) -> None:
-    col1, col2, col3 = st.columns(3)
+def _render_candidate_card(c: dict) -> None:
+    # 1. Warning Badge for Incomplete Results
+    completeness = c.get("result_completeness_status")
+    if completeness == "winner_runnerup_only":
+        st.warning("⚠️ **Partial Election Data**: Detailed non-winner breakdown is not yet finalized in the database. Omitted rows will show pending.")
+    
+    # 2. Key Metrics Columns
+    st.markdown("### 💰 Financial Disclosures")
+    m_col1, m_col2, m_col3 = st.columns(3)
+    
+    with m_col1:
+        st.metric(
+            label="Net Worth",
+            value=_fmt_amount(c.get("net_worth_rs")),
+            help="Computed as Total Assets - Total Liabilities"
+        )
+    with m_col2:
+        st.metric(
+            label="Total Assets",
+            value=_fmt_amount(c.get("total_assets")),
+            help="Movable + Immovable assets declared in affidavit"
+        )
+    with m_col3:
+        st.metric(
+            label="Total Liabilities",
+            value=_fmt_amount(c.get("total_liabilities")),
+            help="Debts, loans, and other liabilities declared in affidavit"
+        )
 
-    with col1:
-        st.markdown("**Affidavit Summary**")
+    # 3. Dynamic Tabs for Details
+    tab_summary, tab_assets, tab_history, tab_sentiment = st.tabs([
+        "📋 Profile & Summary",
+        "💎 Detailed Asset Breakdown",
+        "⏱️ Contesting History",
+        "📈 Digital Sentiment"
+    ])
+    
+    with tab_summary:
+        st.markdown("**Candidate Profile**")
         criminal = c.get("criminal_cases") or 0
         serious  = c.get("serious_cases") or 0
-        assets   = _fmt_amount(c.get("total_assets"))
-        liabs    = _fmt_amount(c.get("total_liabilities"))
         age      = c.get("age") or "N/A"
         edu      = c.get("education") or "N/A"
+        prof     = c.get("self_profession") or "N/A"
+        enroll   = c.get("voter_enrolled_ac_name") or "N/A"
+        
         crim_icon = "🔴" if criminal > 0 else "🟢"
-
+        
         st.markdown(f"""
 | Field | Value |
 |-------|-------|
-| Criminal cases | {crim_icon} {criminal} ({serious} serious) |
-| Total assets | {assets} |
-| Total liabilities | {liabs} |
-| Age | {age} |
-| Education | {edu} |
+| **Age** | {age} years |
+| **Education** | {edu} |
+| **Declared Profession** | {prof} |
+| **Voter Enrollment Constituency** | {enroll} |
+| **Criminal Records** | {crim_icon} {criminal} cases ({serious} serious) |
 """)
+        
+        if c.get("source_affidavit_url"):
+            st.link_button("🔗 View Original Affidavit PDF", c["source_affidavit_url"])
 
-    with col2:
-        st.markdown("**Vote History**")
-        res = _KNOWN_RESULTS.get(party, {})
-        v22  = res.get("votes_2022")
-        vs22 = res.get("vote_share_2022")
-        v17  = res.get("votes_2017")
-        vs17 = res.get("vote_share_2017")
+    with tab_assets:
+        # Movable and Immovable breakdowns
+        col_mov, col_imm = st.columns(2)
+        
+        with col_mov:
+            st.markdown("**Movable Assets Breakdown**")
+            movable_items = c.get("movable_assets_json") or []
+            if movable_items:
+                mov_rows = []
+                for item in movable_items:
+                    val = item.get("total_rs") or item.get("value_rs") or 0
+                    if val > 0:
+                        mov_rows.append({"Asset Type": item.get("item", "Other"), "Value": _fmt_amount(val)})
+                if mov_rows:
+                    st.dataframe(mov_rows, use_container_width=True, hide_index=True)
+                else:
+                    st.caption("No positive movable assets listed.")
+            else:
+                st.caption("No movable breakdown available.")
+                
+        with col_imm:
+            st.markdown("**Immovable Assets Breakdown**")
+            immovable_items = c.get("immovable_assets_json") or []
+            if immovable_items:
+                imm_rows = []
+                for item in immovable_items:
+                    val = item.get("total_rs") or item.get("value_rs") or 0
+                    if val > 0:
+                        imm_rows.append({"Property Type": item.get("item", "Other"), "Value": _fmt_amount(val)})
+                if imm_rows:
+                    st.dataframe(imm_rows, use_container_width=True, hide_index=True)
+                else:
+                    st.caption("No positive immovable assets listed.")
+            else:
+                st.caption("No immovable breakdown available.")
 
-        if v22 is not None:
-            delta = ""
-            if vs22 is not None and vs17 is not None:
-                chg = vs22 - vs17
-                delta = f" ({chg:+.1f}pp vs 2017)"
-            st.markdown(f"""
-| Year | Votes | Share |
-|------|-------|-------|
-| 2022 | {v22:,} | {vs22:.1f}%{delta} |
-| 2017 | {v17:,} | {vs17:.1f}% |
-""")
+        # ITR Income Disclosures
+        itr_items = c.get("itr_income_json") or []
+        if itr_items:
+            st.markdown("**ITR Income Disclosures**")
+            itr_rows = []
+            for item in itr_items:
+                year = item.get("year")
+                rel = item.get("relation", "self")
+                inc = item.get("total_income_rs")
+                if inc is not None:
+                    itr_rows.append({"Assessment Year": year, "Disclosed By": rel.capitalize(), "Annual Income": _fmt_amount(inc)})
+            if itr_rows:
+                st.dataframe(itr_rows, use_container_width=True, hide_index=True)
+
+    with tab_history:
+        st.markdown("**Dynamic Contest History**")
+        history = c.get("history_json") or []
+        if history:
+            history_rows = []
+            for h in history:
+                year = h.get("election_year")
+                constituency = h.get("constituency")
+                party_id = h.get("party_id")
+                votes = h.get("votes_received")
+                share = h.get("vote_share")
+                is_winner = h.get("is_winner")
+                etype = h.get("election_type", "Vidhan Sabha")
+                
+                votes_str = f"{votes:,}" if votes is not None else "Pending"
+                share_str = f"{share:.2f}%" if share is not None else "Pending"
+                status_str = "🏆 Won" if is_winner else "Runner-up" if h.get("result_position_label") == "runner_up" else "Contested"
+                
+                history_rows.append({
+                    "Year": year,
+                    "Type": etype,
+                    "Constituency": constituency,
+                    "Party": party_id,
+                    "Votes": votes_str,
+                    "Vote Share": share_str,
+                    "Result": status_str
+                })
+            
+            st.dataframe(history_rows, use_container_width=True, hide_index=True)
         else:
-            st.caption("No historical data for this party")
+            st.caption("No contest history found in the database.")
 
-    with col3:
-        st.markdown("**Digital Sentiment**")
+    with tab_sentiment:
+        st.markdown("**Digital Signal Analysis (Past 30 Days)**")
         score    = c.get("sentiment_score")
         mentions = c.get("mention_count") or 0
-        if score is not None:
+        if score is not None and mentions > 0:
             pol = ("🟢 Positive" if score > 0.1
                    else "🔴 Negative" if score < -0.1
                    else "🟡 Neutral")
-            st.markdown(f"Overall: **{pol}**")
-            st.markdown(f"Score: `{score:+.3f}`")
-            st.caption(f"Based on {mentions} mentions")
+            st.markdown(f"Overall Digital Sentiment: **{pol}**")
+            st.markdown(f"Sentiment Score: `{score:+.3f}`")
+            st.caption(f"Based on {mentions} live mentions in YouTube comments and news articles.")
         else:
-            st.caption("No digital signal yet")
-
-
-def _render_demo(_ac_id: str) -> None:
-    st.divider()
-    st.caption("Demo view — seed candidate data to see live affidavit detail")
-
-    demo = [
-        {"name": "Yogi Adityanath", "party": "BJP", "is_incumbent": True, "is_primary_opp": False,
-         "criminal_cases": 0, "serious_cases": 0, "total_assets": 959645, "total_liabilities": 0,
-         "age": 49, "education": "M.Sc. Mathematics", "sentiment_score": 0.18, "mention_count": 1240},
-        {"name": "Subhawati Upendra Dutt Shukla", "party": "SP", "is_incumbent": False, "is_primary_opp": True,
-         "criminal_cases": 2, "serious_cases": 1, "total_assets": 12345000, "total_liabilities": 1500000,
-         "age": 52, "education": "Graduate", "sentiment_score": -0.05, "mention_count": 312},
-        {"name": "Khwaja Shamsuddin", "party": "BSP", "is_incumbent": False, "is_primary_opp": False,
-         "criminal_cases": 0, "serious_cases": 0, "total_assets": 4500000, "total_liabilities": 0,
-         "age": 58, "education": "Post Graduate", "sentiment_score": 0.02, "mention_count": 78},
-    ]
-
-    for c in demo:
-        party  = c["party"]
-        name   = c["name"]
-        is_inc = c["is_incumbent"]
-        is_opp = c["is_primary_opp"]
-        label  = "🔵 Ruling" if is_inc else "🔴 Opposition" if is_opp else "⚪ Others"
-
-        with st.expander(f"{label} | {name} ({party})", expanded=bool(is_inc or is_opp)):
-            _render_candidate_card(c, party)
+            st.caption("No digital signal yet. Keep collecting comments and news to see sentiment analytics.")
