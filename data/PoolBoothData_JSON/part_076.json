@@ -333,7 +333,7 @@
       "name": "Mithilesha Cos 80",
       "relation_type": "Father",
       "relation_name": "Es Photo Pa",
-      "house_number": "उपलब्ध मः",
+      "house_number": "उपलब्ध",
       "age": 54,
       "gender": "Female",
       "photo_available": true
@@ -1024,7 +1024,7 @@
       "name": "Dipashikha",
       "relation_type": "Father",
       "relation_name": "Paramatma Natha Simha",
-      "house_number": "08 डबलयू",
+      "house_number": "08",
       "age": 20,
       "gender": "Female",
       "photo_available": true
@@ -1673,7 +1673,7 @@
       "name": "Mamata Kumari",
       "relation_type": "Husband",
       "relation_name": "Amita Kumara Simha",
-      "house_number": "2 एन",
+      "house_number": "2",
       "age": 30,
       "gender": "Female",
       "photo_available": true
@@ -1684,7 +1684,7 @@
       "name": "Ra La Raya",
       "relation_type": "Father",
       "relation_name": "Mrtyumjaya Raya",
-      "house_number": "2 एन",
+      "house_number": "2",
       "age": 27,
       "gender": "Male",
       "photo_available": true
@@ -1805,7 +1805,7 @@
       "name": "Samtosha Kumara Raya",
       "relation_type": "Father",
       "relation_name": "Mrtyumjaya Kumara Raya Wi",
-      "house_number": "3 जे",
+      "house_number": "3",
       "age": 43,
       "gender": "Male",
       "photo_available": true
@@ -1816,7 +1816,7 @@
       "name": "Adarsha Kumara",
       "relation_type": "Father",
       "relation_name": "Vinaya Kumara Raya",
-      "house_number": "3 जे",
+      "house_number": "3",
       "age": 27,
       "gender": "Male",
       "photo_available": true
@@ -1838,7 +1838,7 @@
       "name": "Yasamina Kham Kham",
       "relation_type": "Father",
       "relation_name": "Jagira Ahamada Kham",
-      "house_number": "4.",
+      "house_number": "4",
       "age": 32,
       "gender": "Female",
       "photo_available": true
@@ -1882,7 +1882,7 @@
       "name": "Krtika Raya",
       "relation_type": "Father",
       "relation_name": "Prechandra",
-      "house_number": "73 जे",
+      "house_number": "73",
       "age": 40,
       "gender": "Female",
       "photo_available": false
@@ -1904,7 +1904,7 @@
       "name": "Samjaya Bhushana",
       "relation_type": "Father",
       "relation_name": "Vinoda Kumara",
-      "house_number": "74,",
+      "house_number": "74",
       "age": 32,
       "gender": "Male",
       "photo_available": false
@@ -1937,7 +1937,7 @@
       "name": "Ajita Simha",
       "relation_type": "Father",
       "relation_name": "Ramabrxa Simha",
-      "house_number": "9 के",
+      "house_number": "9",
       "age": 62,
       "gender": "Male",
       "photo_available": true
@@ -1948,7 +1948,7 @@
       "name": "Gautama Simha",
       "relation_type": "Father",
       "relation_name": "Ajita Simha",
-      "house_number": "9 के",
+      "house_number": "9",
       "age": 34,
       "gender": "Male",
       "photo_available": false
@@ -1970,7 +1970,7 @@
       "name": "Mamju Devi",
       "relation_type": "Husband",
       "relation_name": "Vinaya Kumara Rava",
-      "house_number": "24 एच",
+      "house_number": "24",
       "age": 40,
       "gender": "Female",
       "photo_available": true
@@ -2003,7 +2003,7 @@
       "name": "Sonakesha Simha",
       "relation_type": "Father",
       "relation_name": "Shrikrshna Simha Qi",
-      "house_number": "9 के",
+      "house_number": "9",
       "age": 57,
       "gender": "Female",
       "photo_available": true
@@ -2067,7 +2067,7 @@
       "voter_id": "ISP208560",
       "part_number": 76,
       "name": "Nahida Paravina",
-      "house_number": "0079 आई",
+      "house_number": "0079",
       "age": 35,
       "gender": "Female",
       "photo_available": false
@@ -2078,7 +2078,7 @@
       "name": "Kumvara Simha",
       "relation_type": "Father",
       "relation_name": "Ajita Simha",
-      "house_number": "9 के",
+      "house_number": "9",
       "age": 34,
       "gender": "Male",
       "photo_available": false
@@ -2109,7 +2109,7 @@
       "voter_id": "ISP4876942",
       "part_number": 76,
       "name": "Shobha Simha Kinnara",
-      "house_number": "24 डी",
+      "house_number": "24",
       "age": 50,
       "photo_available": false
     },
@@ -2227,7 +2227,7 @@
       "name": "arfeer qeatt ना",
       "relation_type": "Father",
       "relation_name": "Jamalluddina Quraishi Pa",
-      "house_number": "32 एम वार्ड",
+      "house_number": "32",
       "age": 22,
       "gender": "Male",
       "photo_available": true
@@ -2238,7 +2238,7 @@
       "name": "Rajanisha Kumara",
       "relation_type": "Father",
       "relation_name": "Premachanda",
-      "house_number": "35 जी",
+      "house_number": "35",
       "age": 3,
       "gender": "Male",
       "photo_available": false
@@ -2381,7 +2381,7 @@
       "name": "Gitamjali Chau I",
       "relation_type": "Father",
       "relation_name": "Chandrika Prasada",
-      "house_number": "87 एफ",
+      "house_number": "87",
       "age": 36,
       "gender": "Female",
       "photo_available": true
@@ -2403,7 +2403,7 @@
       "name": "Gudadi Devi",
       "relation_type": "Husband",
       "relation_name": "Jaya Gopala",
-      "house_number": "87 एफ",
+      "house_number": "87",
       "age": 47,
       "gender": "Female",
       "photo_available": true
@@ -2436,7 +2436,7 @@
       "name": "Sunila Kumara",
       "relation_type": "Father",
       "relation_name": "Chandrika Prasada",
-      "house_number": "87 एफ",
+      "house_number": "87",
       "age": 45,
       "gender": "Male",
       "photo_available": true
@@ -2447,7 +2447,7 @@
       "name": "Rajana Sahani",
       "relation_type": "Father",
       "relation_name": "Samtaraja Sahani",
-      "house_number": "68 ए",
+      "house_number": "68",
       "age": 33,
       "gender": "Male",
       "photo_available": true
@@ -2480,7 +2480,7 @@
       "name": "Jaya Gopala",
       "relation_type": "Father",
       "relation_name": "Chandrika Prasada",
-      "house_number": "87 एफ",
+      "house_number": "87",
       "age": 54,
       "gender": "Male",
       "photo_available": true
@@ -2491,7 +2491,7 @@
       "name": "Sunita Devi",
       "relation_type": "Husband",
       "relation_name": "Jaya Govinda Prasada",
-      "house_number": "87 एफ",
+      "house_number": "87",
       "age": 44,
       "gender": "Female",
       "photo_available": true
@@ -2513,7 +2513,7 @@
       "name": "Satisha Kumara Chau I",
       "relation_type": "Father",
       "relation_name": "Chandrika Prasada",
-      "house_number": "87 एफ",
+      "house_number": "87",
       "age": 42,
       "gender": "Male",
       "photo_available": false
@@ -2524,7 +2524,7 @@
       "name": "Mu. Kasima",
       "relation_type": "Father",
       "relation_name": "Ali Muhammada",
-      "house_number": "76 एक्स",
+      "house_number": "76",
       "age": 48,
       "gender": "Male",
       "photo_available": false
@@ -2557,7 +2557,7 @@
       "name": "Jaya Govinda Prasada",
       "relation_type": "Father",
       "relation_name": "Chandrika Prasada",
-      "house_number": "87 एफ",
+      "house_number": "87",
       "age": 5,
       "gender": "Male",
       "photo_available": false
@@ -2568,7 +2568,7 @@
       "name": "Aravinda Kumara",
       "relation_type": "Father",
       "relation_name": "Chandrika Prasada",
-      "house_number": "87 एफ",
+      "house_number": "87",
       "age": 39,
       "gender": "Male",
       "photo_available": false
@@ -2579,7 +2579,7 @@
       "name": "Kirana",
       "relation_type": "Husband",
       "relation_name": "Aravinda Kumara",
-      "house_number": "87 एफ",
+      "house_number": "87",
       "age": 34,
       "gender": "Female",
       "photo_available": true
@@ -2601,7 +2601,7 @@
       "name": "Anupama Simha",
       "relation_type": "Father",
       "relation_name": "Raja Rama Maurya",
-      "house_number": "95 एस",
+      "house_number": "95",
       "age": 39,
       "gender": "Female",
       "photo_available": true
@@ -2678,7 +2678,7 @@
       "name": "Sujita Kumara Sharma",
       "relation_type": "Father",
       "relation_name": "Tameshvara Sharma",
-      "house_number": "95 के",
+      "house_number": "95",
       "age": 38,
       "gender": "Male",
       "photo_available": false
@@ -2726,7 +2726,7 @@
       "name": "Jitendra Pratapa",
       "relation_type": "Father",
       "relation_name": "Hotilala",
-      "house_number": "08 ए",
+      "house_number": "08",
       "age": 24,
       "gender": "Male",
       "photo_available": true
@@ -2752,7 +2752,7 @@
       "name": "Sudha",
       "relation_type": "Husband",
       "relation_name": "Rajakishora",
-      "house_number": "32 आर",
+      "house_number": "32",
       "age": 29,
       "gender": "Female",
       "photo_available": true
@@ -2853,7 +2853,7 @@
       "section_number": 2,
       "section_name": "Jungle Matadeen Saraswatipuram Lane-:",
       "name": "Aditya Kumara Gupta",
-      "house_number": "732 ए",
+      "house_number": "732",
       "age": 26,
       "gender": "Male",
       "photo_available": false
@@ -2879,7 +2879,7 @@
       "name": "Amshu Kumara",
       "relation_type": "Father",
       "relation_name": "Kamalesha Kumara Pa",
-      "house_number": "0733%",
+      "house_number": "0733",
       "age": 20,
       "gender": "Male",
       "photo_available": true
@@ -2905,7 +2905,7 @@
       "name": "Suresha Chandra Shrivastava",
       "relation_type": "Father",
       "relation_name": "Asharafi Lala",
-      "house_number": "03 यु",
+      "house_number": "03",
       "age": 6,
       "gender": "Male",
       "photo_available": false
@@ -3060,7 +3060,7 @@
       "name": "Amita Sharma",
       "relation_type": "Father",
       "relation_name": "Rama Shamkara Sharma",
-      "house_number": "775 डी",
+      "house_number": "775",
       "age": 42,
       "gender": "Male",
       "photo_available": true
@@ -3073,7 +3073,7 @@
       "name": "Alamkrta Shrivastava",
       "relation_type": "Father",
       "relation_name": "Ajaya Kumara Shrivastava",
-      "house_number": "76 यु",
+      "house_number": "76",
       "age": 24,
       "gender": "Male",
       "photo_available": true
@@ -3099,7 +3099,7 @@
       "name": "Nadima Ahamada Amsari",
       "relation_type": "Father",
       "relation_name": "Mo0 Shamashada Amsari",
-      "house_number": "0792 एन",
+      "house_number": "0792",
       "age": 27,
       "gender": "Male",
       "photo_available": true
@@ -3125,7 +3125,7 @@
       "name": "Abdula Kadira",
       "relation_type": "Father",
       "relation_name": "Moinuddina",
-      "house_number": "67 ए",
+      "house_number": "67",
       "age": 40,
       "gender": "Male",
       "photo_available": true
@@ -3164,7 +3164,7 @@
       "name": "Renu Sharma",
       "relation_type": "Husband",
       "relation_name": "Rama Sharma Pa",
-      "house_number": "75 डी",
+      "house_number": "75",
       "age": 6,
       "gender": "Female",
       "photo_available": true
@@ -3177,7 +3177,7 @@
       "name": "Ajaya Kumara Shrivastava",
       "relation_type": "Father",
       "relation_name": "Shri Shiva Rama Lala Shrivastava",
-      "house_number": "76 यु",
+      "house_number": "76",
       "age": 60,
       "gender": "Male",
       "photo_available": true
@@ -3190,7 +3190,7 @@
       "name": "Akrshta Shrivastava",
       "relation_type": "Father",
       "relation_name": "Ajaya Kumara Shrivastava",
-      "house_number": "76 यु",
+      "house_number": "76",
       "age": 23,
       "gender": "Male",
       "photo_available": true
@@ -3203,7 +3203,7 @@
       "name": "Mo0 Shamashada Amsari",
       "relation_type": "Father",
       "relation_name": "Sva Nazibulla Amsari Pa",
-      "house_number": "092 एन",
+      "house_number": "092",
       "age": 60,
       "gender": "Male",
       "photo_available": true
@@ -3216,7 +3216,7 @@
       "name": "Saipha Ali Amsari",
       "relation_type": "Father",
       "relation_name": "Mo0 Shamashada Amsari",
-      "house_number": "092 एन",
+      "house_number": "092",
       "age": 25,
       "gender": "Male",
       "photo_available": true
@@ -3242,7 +3242,7 @@
       "name": "Mahafuza Ali",
       "relation_type": "Father",
       "relation_name": "Afasara Ali",
-      "house_number": "067 ए जे",
+      "house_number": "067",
       "age": 22,
       "gender": "Male",
       "photo_available": false
@@ -3268,7 +3268,7 @@
       "name": "Manya Seraphina Natala",
       "relation_type": "Father",
       "relation_name": "Serafina Natala",
-      "house_number": "72/¢",
+      "house_number": "72/",
       "age": 32,
       "gender": "Female",
       "photo_available": false
@@ -3281,7 +3281,7 @@
       "name": "Kanaka Sharma",
       "relation_type": "Father",
       "relation_name": "Jagata Narayana Pandeya",
-      "house_number": "75 डी",
+      "house_number": "75",
       "age": 42,
       "gender": "Female",
       "photo_available": false
@@ -3294,7 +3294,7 @@
       "name": "Kausara Jaha.n",
       "relation_type": "Husband",
       "relation_name": "Mo0 Shamashada Amsari",
-      "house_number": "092 एन",
+      "house_number": "092",
       "age": 55,
       "gender": "Female",
       "photo_available": false
@@ -3359,7 +3359,7 @@
       "name": "Ratnesha Kumara",
       "relation_type": "Father",
       "relation_name": "Shri Ramaprasada",
-      "house_number": "206 आर",
+      "house_number": "206",
       "age": 28,
       "gender": "Male",
       "photo_available": true
@@ -3424,7 +3424,7 @@
       "name": "Amina",
       "relation_type": "Husband",
       "relation_name": "Sagira Alama Pa",
-      "house_number": "206 एन",
+      "house_number": "206",
       "age": 74,
       "gender": "Female",
       "photo_available": true
@@ -3540,7 +3540,7 @@
       "name": "Hasarata Jahoasiddiki",
       "relation_type": "Husband",
       "relation_name": "Sagira Alama Siddiki",
-      "house_number": "206 एन",
+      "house_number": "206",
       "age": 57,
       "gender": "Female",
       "photo_available": false
@@ -3553,7 +3553,7 @@
       "name": "Ikara Jabi",
       "relation_type": "Father",
       "relation_name": "Shamima Ahamada",
-      "house_number": "206 एन",
+      "house_number": "206",
       "age": 30,
       "gender": "Female",
       "photo_available": false
@@ -3696,7 +3696,7 @@
       "name": "Mohammada Naushada",
       "relation_type": "Father",
       "relation_name": "Mu.khatara Ahamada",
-      "house_number": "208 एन",
+      "house_number": "208",
       "age": 40,
       "gender": "Male",
       "photo_available": true
@@ -3812,7 +3812,7 @@
       "name": "Munna",
       "relation_type": "Father",
       "relation_name": "Mu.khatara Ahamada",
-      "house_number": "208 एन",
+      "house_number": "208",
       "age": 27,
       "gender": "Male",
       "photo_available": false
@@ -3981,7 +3981,7 @@
       "name": "Ajaya Kumara Sharma",
       "relation_type": "Father",
       "relation_name": "Vidya Sagara Sharma",
-      "house_number": "223 सी",
+      "house_number": "223",
       "age": 35,
       "gender": "Male",
       "photo_available": true
@@ -4033,7 +4033,7 @@
       "name": "Abhaya Kumara Sharma",
       "relation_type": "Father",
       "relation_name": "Vidya Sagara Sharma",
-      "house_number": "223 सी",
+      "house_number": "223",
       "age": 32,
       "gender": "Male",
       "photo_available": false
@@ -4046,7 +4046,7 @@
       "name": "Nura Jahana",
       "relation_type": "Husband",
       "relation_name": "Sagira Ahamada Khana",
-      "house_number": "225 एच",
+      "house_number": "225",
       "age": 55,
       "gender": "Female",
       "photo_available": true
@@ -4059,7 +4059,7 @@
       "name": "Mobashsharina",
       "relation_type": "Father",
       "relation_name": "Mohammada Aripha Khana",
-      "house_number": "225 एच",
+      "house_number": "225",
       "age": 3,
       "gender": "Female",
       "photo_available": true
@@ -4072,7 +4072,7 @@
       "name": "Abhisheka Pandeya",
       "relation_type": "Father",
       "relation_name": "Rakesha Kumara Pandeya",
-      "house_number": "225 एच सरस्वतीपुरम",
+      "house_number": "225",
       "age": 27,
       "gender": "Male",
       "photo_available": true
@@ -4148,7 +4148,7 @@
       "name": "Mohammada Aripha Khana",
       "relation_type": "Father",
       "relation_name": "Sagira Ahamada Khana",
-      "house_number": "225 एच",
+      "house_number": "225",
       "age": 38,
       "gender": "Male",
       "photo_available": true
@@ -4161,7 +4161,7 @@
       "name": "Mohammada Asipha Khana",
       "relation_type": "Father",
       "relation_name": "Sagira Ahamada Khana",
-      "house_number": "225 एच",
+      "house_number": "225",
       "age": 29,
       "gender": "Male",
       "photo_available": true
@@ -4252,7 +4252,7 @@
       "name": "Mo Marufa Khana",
       "relation_type": "Father",
       "relation_name": "Sagira Ahamada Khana",
-      "house_number": "225 एच",
+      "house_number": "225",
       "age": 35,
       "gender": "Male",
       "photo_available": false
@@ -4291,7 +4291,7 @@
       "name": "Naina Yadava",
       "relation_type": "Father",
       "relation_name": "Subhasha Chamda Yadava",
-      "house_number": "24 ए",
+      "house_number": "24",
       "age": 33,
       "gender": "Female",
       "photo_available": false
@@ -4317,7 +4317,7 @@
       "name": "Nitu",
       "relation_type": "Father",
       "relation_name": "Parasa Natha",
-      "house_number": "245 क",
+      "house_number": "245",
       "age": 35,
       "gender": "Female",
       "photo_available": true
@@ -4343,7 +4343,7 @@
       "name": "Jaya Prakasha Simha",
       "relation_type": "Father",
       "relation_name": "Rama Natha Simha",
-      "house_number": "250 डी",
+      "house_number": "250",
       "age": 65,
       "gender": "Male",
       "photo_available": true
@@ -4356,7 +4356,7 @@
       "name": "Sudhamshu Kumara Simha",
       "relation_type": "Father",
       "relation_name": "Jaya Prakasha Simha",
-      "house_number": "250 डी",
+      "house_number": "250",
       "age": 33,
       "gender": "Male",
       "photo_available": true
@@ -4369,7 +4369,7 @@
       "name": "Vinoda Kumara Varuna",
       "relation_type": "Father",
       "relation_name": "Harisha Chandra Prasada",
-      "house_number": "250 एच",
+      "house_number": "250",
       "age": 48,
       "gender": "Male",
       "photo_available": true
@@ -4382,7 +4382,7 @@
       "name": "Gita Devi",
       "relation_type": "Husband",
       "relation_name": "Pradipa Shrivastava",
-      "house_number": "245 क",
+      "house_number": "245",
       "age": 49,
       "gender": "Female",
       "photo_available": true
@@ -4395,7 +4395,7 @@
       "name": "Shyamalata Devi",
       "relation_type": "Husband",
       "relation_name": "Prasiddha Shrivastava",
-      "house_number": "245 क",
+      "house_number": "245",
       "age": 39,
       "gender": "Female",
       "photo_available": true
@@ -4447,7 +4447,7 @@
       "name": "Uma Simha",
       "relation_type": "Husband",
       "relation_name": "Jaya Prakasha Simha",
-      "house_number": "0250 डी",
+      "house_number": "0250",
       "age": 58,
       "gender": "Female",
       "photo_available": true
@@ -4460,7 +4460,7 @@
       "name": "Soni Simha",
       "relation_type": "Husband",
       "relation_name": "Siya Rama Simha",
-      "house_number": "250 डी",
+      "house_number": "250",
       "age": 28,
       "gender": "Female",
       "photo_available": true
@@ -4486,7 +4486,7 @@
       "name": "Smrti",
       "relation_type": "Father",
       "relation_name": "Rama Ugraha Vishvakarma",
-      "house_number": "0248 ए",
+      "house_number": "0248",
       "age": 27,
       "gender": "Female",
       "photo_available": false
@@ -4499,7 +4499,7 @@
       "name": "Mamshu Simha",
       "relation_type": "Father",
       "relation_name": "Jaya Prakasha Simha",
-      "house_number": "250 डी",
+      "house_number": "250",
       "age": 36,
       "gender": "Male",
       "photo_available": false
@@ -4512,7 +4512,7 @@
       "name": "Monika Simha",
       "relation_type": "Father",
       "relation_name": "Ramakumara Simha",
-      "house_number": "250 डी",
+      "house_number": "250",
       "age": 26,
       "gender": "Female",
       "photo_available": false
@@ -4588,7 +4588,7 @@
       "name": "Bibhuti Simha",
       "relation_type": "Father",
       "relation_name": "Axayavara Simha",
-      "house_number": "262 ए",
+      "house_number": "262",
       "age": 64,
       "gender": "Male",
       "photo_available": true
@@ -4640,7 +4640,7 @@
       "name": "Atula Sharma",
       "relation_type": "Father",
       "relation_name": "Avadhesha Prasada Vishvakarma Pa",
-      "house_number": "260 सी",
+      "house_number": "260",
       "age": 47,
       "gender": "Male",
       "photo_available": true
@@ -4653,7 +4653,7 @@
       "name": "Shalini Simha",
       "relation_type": "Father",
       "relation_name": "Memdra Simha",
-      "house_number": "260 एच",
+      "house_number": "260",
       "age": 23,
       "gender": "Female",
       "photo_available": false
@@ -4679,7 +4679,7 @@
       "name": "Champa Simha",
       "relation_type": "Husband",
       "relation_name": "Bibhuti Simha",
-      "house_number": "262 ए",
+      "house_number": "262",
       "age": 62,
       "gender": "Female",
       "photo_available": true
@@ -4718,7 +4718,7 @@
       "name": "Abhisheka Simha",
       "relation_type": "Father",
       "relation_name": "Harishnamdra Simha",
-      "house_number": "253 बी",
+      "house_number": "253",
       "age": 28,
       "gender": "Male",
       "photo_available": false
@@ -4744,7 +4744,7 @@
       "name": "Jyoti Sharma",
       "relation_type": "Husband",
       "relation_name": "Atula Sharma",
-      "house_number": "260 सी",
+      "house_number": "260",
       "age": 37,
       "gender": "Female",
       "photo_available": false
@@ -4783,7 +4783,7 @@
       "name": "Rakesha Simha",
       "relation_type": "Father",
       "relation_name": "Bibhuti Simha",
-      "house_number": "262 ए",
+      "house_number": "262",
       "age": 40,
       "gender": "Male",
       "photo_available": false
@@ -4796,7 +4796,7 @@
       "name": "Rina Simha",
       "relation_type": "Father",
       "relation_name": "Bhagavanta Sharana Mishra",
-      "house_number": "262 ए",
+      "house_number": "262",
       "age": 36,
       "gender": "Female",
       "photo_available": true
@@ -4809,7 +4809,7 @@
       "name": "Dinesha Simha",
       "relation_type": "Father",
       "relation_name": "Sva. Rama Dhari Simha",
-      "house_number": "264 डी",
+      "house_number": "264",
       "age": 82,
       "gender": "Male",
       "photo_available": true
@@ -4822,7 +4822,7 @@
       "name": "Shivani Simha",
       "relation_type": "Father",
       "relation_name": "Janardana Simha",
-      "house_number": "264 डी",
+      "house_number": "264",
       "age": 27,
       "gender": "Female",
       "photo_available": true
@@ -4861,7 +4861,7 @@
       "name": "Nagesha Kumara Simha",
       "relation_type": "Father",
       "relation_name": "Bibhuti Simha Pa",
-      "house_number": "262 ए",
+      "house_number": "262",
       "age": 34,
       "gender": "Male",
       "photo_available": true
@@ -4898,7 +4898,7 @@
       "name": "Janardana Simha",
       "relation_type": "Father",
       "relation_name": "Dinesha Simha",
-      "house_number": "264 डी",
+      "house_number": "264",
       "age": 55,
       "gender": "Male",
       "photo_available": true
@@ -5573,7 +5573,7 @@
       "name": "Hrdayesha Kumara",
       "relation_type": "Father",
       "relation_name": "Yadunamdana",
-      "house_number": "307 / के सरस्वथीपुरम",
+      "house_number": "307",
       "age": 28,
       "gender": "Male",
       "photo_available": true
@@ -5729,7 +5729,7 @@
       "name": "Ruchi Shukla",
       "relation_type": "Husband",
       "relation_name": "Anupama Pati Tripathi",
-      "house_number": "P.A.C.camp",
+      "house_number": "P",
       "age": 29,
       "gender": "Female",
       "photo_available": false
@@ -5807,7 +5807,7 @@
       "name": "Abhinava Simha",
       "relation_type": "Father",
       "relation_name": "Anila Kumara Simha",
-      "house_number": "336ए सरस्वतीपुरम",
+      "house_number": "336ए",
       "age": 22,
       "gender": "Male",
       "photo_available": true
@@ -5846,7 +5846,7 @@
       "name": "Usha Simha",
       "relation_type": "Husband",
       "relation_name": "Bhanu Pratapa",
-      "house_number": "37 75h",
+      "house_number": "37",
       "age": 64,
       "gender": "Female",
       "photo_available": true
@@ -5872,7 +5872,7 @@
       "name": "Thr Lala Dasa",
       "relation_type": "Father",
       "relation_name": "Sachchidanamda Dasa",
-      "house_number": "334 बी",
+      "house_number": "334",
       "age": 64,
       "gender": "Male",
       "photo_available": true
@@ -5963,7 +5963,7 @@
       "name": "Puja Shrivastava",
       "relation_type": "Father",
       "relation_name": "Ramasharana Sharma",
-      "house_number": "एच नं 24 एस लेन 5 सरस्वती",
+      "house_number": "एच",
       "age": 39,
       "gender": "Female",
       "photo_available": true
@@ -5974,7 +5974,7 @@
       "section_number": 4,
       "section_name": "Jungle Matadin, Sant Hussain Nagar",
       "name": "Punama Mishra",
-      "house_number": "5 आर",
+      "house_number": "5",
       "age": 45,
       "gender": "Female",
       "photo_available": true
@@ -5987,7 +5987,7 @@
       "name": "Akamxa Simha",
       "relation_type": "Father",
       "relation_name": "Aruna Kumara Simha",
-      "house_number": "एचएनओ- 468ए",
+      "house_number": "एचएनओ-",
       "age": 2,
       "gender": "Female",
       "photo_available": true
@@ -6000,7 +6000,7 @@
       "name": "Akarsha Simha",
       "relation_type": "Father",
       "relation_name": "Dilipa Simha",
-      "house_number": "206 क्यू",
+      "house_number": "206",
       "age": 78,
       "gender": "Male",
       "photo_available": true
@@ -6011,7 +6011,7 @@
       "section_number": 4,
       "section_name": "Jungle Matadin, Sant Hussain Nagar",
       "name": "Priya Mani",
-      "house_number": "श्यामइन्द्र नगर",
+      "house_number": "श्यामइन्द्र",
       "age": 32,
       "gender": "Female",
       "photo_available": true
@@ -6024,7 +6024,7 @@
       "name": "Anamika Simha",
       "relation_type": "Husband",
       "relation_name": "Manisha Simha",
-      "house_number": "240,सरस्वतीपुरम कॉलनी",
+      "house_number": "240",
       "age": 3,
       "gender": "Female",
       "photo_available": true
@@ -6037,7 +6037,7 @@
       "name": "Kamala Kishora",
       "relation_type": "Father",
       "relation_name": "राम pela ae 3",
-      "house_number": "337 के,सरस्वतीपुरम,लेन-3",
+      "house_number": "337",
       "age": 37,
       "gender": "Male",
       "photo_available": true
@@ -6063,7 +6063,7 @@
       "name": "Sonama Simha",
       "relation_type": "Husband",
       "relation_name": "Samgama Kumara Simha Pa",
-      "house_number": "6 सी",
+      "house_number": "6",
       "age": 36,
       "gender": "Female",
       "photo_available": true
@@ -6089,7 +6089,7 @@
       "name": "Mina Simha",
       "relation_type": "Husband",
       "relation_name": "Devemdranatha Simha",
-      "house_number": "209 डी",
+      "house_number": "209",
       "age": 60,
       "gender": "Female",
       "photo_available": false
@@ -6102,7 +6102,7 @@
       "name": "Amkura Simha",
       "relation_type": "Father",
       "relation_name": "Gauri Shamkara Simha",
-      "house_number": "376,सरस्वतीपुरम",
+      "house_number": "376",
       "age": 28,
       "gender": "Male",
       "photo_available": true
@@ -6128,7 +6128,7 @@
       "name": "Pratixa Tivari",
       "relation_type": "Husband",
       "relation_name": "Devemdra Natha Tivari",
-      "house_number": "जंगले हकीम,एन. 7",
+      "house_number": "जंगले",
       "age": 37,
       "gender": "Female",
       "photo_available": true
@@ -6165,7 +6165,7 @@
       "name": "Shephali Simha",
       "relation_type": "Father",
       "relation_name": "Ramasajana Yadava",
-      "house_number": "सरस्वतीपुरम कॉलनी",
+      "house_number": "सरस्वतीपुरम",
       "age": 3,
       "gender": "Female",
       "photo_available": false
@@ -6178,7 +6178,7 @@
       "name": "Roshani Simha",
       "relation_type": "Father",
       "relation_name": "Gauri Shamkara Simha",
-      "house_number": "376 सरस्वतीपुरम",
+      "house_number": "376",
       "age": 27,
       "gender": "Female",
       "photo_available": false
@@ -6191,7 +6191,7 @@
       "name": "Rajakumari Devi",
       "relation_type": "Father",
       "relation_name": "Arjuna",
-      "house_number": "357 ,सरस्वतीपुरम",
+      "house_number": "357",
       "age": 54,
       "gender": "Female",
       "photo_available": false
@@ -6217,7 +6217,7 @@
       "name": "Ae Sharma",
       "relation_type": "Father",
       "relation_name": "Sushila Kumara Sharma",
-      "house_number": "92 बी",
+      "house_number": "92",
       "age": 2,
       "gender": "Female",
       "photo_available": true
@@ -6230,7 +6230,7 @@
       "name": "Mohammada Adila",
       "relation_type": "Father",
       "relation_name": "Mo Iftekhara",
-      "house_number": "087 सी",
+      "house_number": "087",
       "age": 22,
       "gender": "Male",
       "photo_available": true
@@ -6243,7 +6243,7 @@
       "name": "Naja Shekha",
       "relation_type": "Father",
       "relation_name": "Asagara Ali",
-      "house_number": "एच नं 72",
+      "house_number": "एच",
       "age": 22,
       "gender": "Female",
       "photo_available": true
@@ -6269,7 +6269,7 @@
       "name": "Yasamina Bano",
       "relation_type": "Husband",
       "relation_name": "Mohammada Dilashada",
-      "house_number": "एच नं 772",
+      "house_number": "एच",
       "age": 25,
       "gender": "Female",
       "photo_available": true
@@ -6282,7 +6282,7 @@
       "name": "Samixa Raya",
       "relation_type": "Father",
       "relation_name": "Bhupemdra Kumara Raya",
-      "house_number": "302 बी,सरस्वतीपुरम",
+      "house_number": "302",
       "age": 20,
       "gender": "Female",
       "photo_available": true
@@ -6321,7 +6321,7 @@
       "name": "Arati Simha",
       "relation_type": "Husband",
       "relation_name": "Mrtyumjaya Kumara Simha",
-      "house_number": "302 X जल agurasia",
+      "house_number": "302",
       "age": 40,
       "gender": "Female",
       "photo_available": true
@@ -6360,7 +6360,7 @@
       "name": "Bano Begama",
       "relation_type": "Husband",
       "relation_name": "Shamashada Ali",
-      "house_number": "0767 ए जंगल मतादीन",
+      "house_number": "0767",
       "age": 35,
       "gender": "Female",
       "photo_available": false
@@ -6373,7 +6373,7 @@
       "name": "Ayasha Khatuna",
       "relation_type": "Husband",
       "relation_name": "Adanana Alama",
-      "house_number": "23 आई",
+      "house_number": "23",
       "age": 32,
       "gender": "Female",
       "photo_available": true
@@ -6412,7 +6412,7 @@
       "name": "Lala Babu Saha",
       "relation_type": "Father",
       "relation_name": "Thakura Dayala Saha",
-      "house_number": "एच.नं 408-इ",
+      "house_number": "एच",
       "age": 60,
       "gender": "Male",
       "photo_available": false
@@ -6425,7 +6425,7 @@
       "name": "Puja Shrivastava",
       "relation_type": "Husband",
       "relation_name": "Mukesha Kumara Shrivastava",
-      "house_number": "लेन 5 एच 24 एस",
+      "house_number": "लेन",
       "age": 39,
       "gender": "Female",
       "photo_available": false
@@ -6438,7 +6438,7 @@
       "name": "Neha Simha",
       "relation_type": "Father",
       "relation_name": "Rise Kumara Simha",
-      "house_number": "302 X जेल बाई पास रोड फर्स्ट",
+      "house_number": "302",
       "age": 9,
       "gender": "Female",
       "photo_available": false
@@ -6451,7 +6451,7 @@
       "name": "Mahanaza .khatuna",
       "relation_type": "Father",
       "relation_name": "Asagara Ali",
-      "house_number": "एच न॑ 72",
+      "house_number": "एच",
       "age": 23,
       "gender": "Female",
       "photo_available": false
@@ -6464,7 +6464,7 @@
       "name": "Anama Pharida",
       "relation_type": "Father",
       "relation_name": "Phariuddina",
-      "house_number": "94 सी",
+      "house_number": "94",
       "age": 30,
       "gender": "Female",
       "photo_available": false
@@ -6490,7 +6490,7 @@
       "name": "Mohammada Sa La",
       "relation_type": "Father",
       "relation_name": "Hamida Ali",
-      "house_number": "88 डी",
+      "house_number": "88",
       "age": 27,
       "gender": "Male",
       "photo_available": false
@@ -6503,7 +6503,7 @@
       "name": "Mo Taliba",
       "relation_type": "Father",
       "relation_name": "Hamida Ali",
-      "house_number": "88 डी",
+      "house_number": "88",
       "age": 29,
       "gender": "Male",
       "photo_available": true
@@ -6542,7 +6542,7 @@
       "name": "Shilu Pandeya",
       "relation_type": "Father",
       "relation_name": "Soma Natha Pandeya",
-      "house_number": "420 सरस्वती पुरम",
+      "house_number": "420",
       "age": 34,
       "gender": "Female",
       "photo_available": true
@@ -6553,7 +6553,7 @@
       "section_number": 4,
       "section_name": "Jungle Matadin, Sant Hussain Nagar",
       "name": "Pramoda Kumara Simha",
-      "house_number": "260 डी",
+      "house_number": "260",
       "age": 57,
       "gender": "Male",
       "photo_available": true
@@ -6566,7 +6566,7 @@
       "name": "Rima Naja",
       "relation_type": "Husband",
       "relation_name": "Mo Taliba",
-      "house_number": "88 डी",
+      "house_number": "88",
       "age": 26,
       "gender": "Female",
       "photo_available": true
@@ -6592,7 +6592,7 @@
       "name": "Mariyama Fatima",
       "relation_type": "Father",
       "relation_name": "Mo Ifte.khara",
-      "house_number": "087 सी",
+      "house_number": "087",
       "age": 9,
       "gender": "Female",
       "photo_available": true
@@ -6603,7 +6603,7 @@
       "section_number": 4,
       "section_name": "Jungle Matadin, Sant Hussain Nagar",
       "name": "Aditi Maurya",
-      "house_number": "जेएन मातादीन",
+      "house_number": "जेएन",
       "age": 8,
       "gender": "Female",
       "photo_available": true
@@ -6629,7 +6629,7 @@
       "name": "Irama Khana",
       "relation_type": "Father",
       "relation_name": "Farukha Khana",
-      "house_number": "सरस्वतीपुरम लेन",
+      "house_number": "सरस्वतीपुरम",
       "age": 2,
       "gender": "Female",
       "photo_available": false
@@ -6655,7 +6655,7 @@
       "name": "Naza Fatima",
       "relation_type": "Father",
       "relation_name": "Mo Ifte.khara",
-      "house_number": "087 सी",
+      "house_number": "087",
       "age": 2,
       "gender": "Female",
       "photo_available": false
@@ -6681,7 +6681,7 @@
       "name": "Ashoka Simha",
       "relation_type": "Father",
       "relation_name": "Rama Pravesha Simha",
-      "house_number": "335,सरस्वतीपुरम",
+      "house_number": "335",
       "age": 60,
       "gender": "Male",
       "photo_available": false
