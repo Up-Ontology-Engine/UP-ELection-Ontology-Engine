@@ -1,0 +1,123 @@
+{
+  "created_at_utc": "2026-05-15T05:17:03.684636+00:00",
+  "description": "Gorakhpur grievance-only JSON export from MyNeta check, GDELT Events, and latest GDELT DOC API search.",
+  "output_dir": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json",
+  "myneta": {
+    "file": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\myneta_grievance_records.json",
+    "records": 0,
+    "discrepancy_submission_form_present": true
+  },
+  "gdelt_events_source_csv": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\gorakhpur_events_merged.csv",
+  "gdelt_doc_latest_search": {
+    "timespan": "1week",
+    "maxrecords_per_query": 50,
+    "queries": {
+      "legal_police_crime": "Gorakhpur (police OR court OR arrest OR crime OR murder OR case OR probe)",
+      "protest_demand_public_pressure": "Gorakhpur (protest OR demand OR complaint OR petition OR strike)",
+      "public_services_health_education": "Gorakhpur (hospital OR doctor OR health OR school OR college OR road OR water OR electricity)",
+      "accident_disaster": "Gorakhpur (accident OR death OR injured OR flood OR fire)",
+      "welfare_livelihood": "Gorakhpur (farmer OR worker OR migrant OR loan OR aid OR relief OR unemployment)",
+      "other_grievance_signal": "Gorakhpur (grievance OR corruption OR problem OR issue OR crisis)"
+    },
+    "records_added": 82,
+    "failures": []
+  },
+  "grievance_records": {
+    "all_file": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\grievance_records.json",
+    "total_rows": 10422,
+    "counts_by_record_type": {
+      "gdelt_doc_article": 82,
+      "gdelt_event": 10340
+    },
+    "files": {
+      "by_archive_year": {
+        "2016": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_archive_year\\2016.json",
+        "2017": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_archive_year\\2017.json",
+        "2018": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_archive_year\\2018.json",
+        "2019": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_archive_year\\2019.json",
+        "2020": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_archive_year\\2020.json",
+        "2021": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_archive_year\\2021.json",
+        "2022": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_archive_year\\2022.json",
+        "2023": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_archive_year\\2023.json",
+        "2024": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_archive_year\\2024.json",
+        "2025": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_archive_year\\2025.json",
+        "2026": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_archive_year\\2026.json"
+      },
+      "by_event_year": {
+        "1920": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_event_year\\1920.json",
+        "2015": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_event_year\\2015.json",
+        "2016": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_event_year\\2016.json",
+        "2017": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_event_year\\2017.json",
+        "2018": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_event_year\\2018.json",
+        "2019": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_event_year\\2019.json",
+        "2020": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_event_year\\2020.json",
+        "2021": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_event_year\\2021.json",
+        "2022": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_event_year\\2022.json",
+        "2023": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_event_year\\2023.json",
+        "2024": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_event_year\\2024.json",
+        "2025": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_event_year\\2025.json",
+        "2026": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_event_year\\2026.json"
+      },
+      "by_source_type": {
+        "government": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_source_type\\government.json",
+        "news_media": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_source_type\\news_media.json",
+        "other_web": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_source_type\\other_web.json",
+        "unknown": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_source_type\\unknown.json"
+      },
+      "by_category": {
+        "accident_disaster": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_category\\accident_disaster.json",
+        "governance_conflict": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_category\\governance_conflict.json",
+        "legal_police_crime": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_category\\legal_police_crime.json",
+        "other_grievance_signal": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_category\\other_grievance_signal.json",
+        "protest_demand_public_pressure": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_category\\protest_demand_public_pressure.json",
+        "public_services_health_education": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_category\\public_services_health_education.json",
+        "welfare_livelihood": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gorakhpur_grievance_only\\json\\by_category\\welfare_livelihood.json"
+      }
+    },
+    "counts": {
+      "by_archive_year": {
+        "2016": 380,
+        "2017": 3523,
+        "2018": 1664,
+        "2019": 975,
+        "2020": 1075,
+        "2021": 665,
+        "2022": 471,
+        "2023": 408,
+        "2024": 535,
+        "2025": 474,
+        "2026": 252
+      },
+      "by_event_year": {
+        "1920": 20,
+        "2015": 2,
+        "2016": 388,
+        "2017": 3564,
+        "2018": 1620,
+        "2019": 988,
+        "2020": 1041,
+        "2021": 669,
+        "2022": 464,
+        "2023": 406,
+        "2024": 534,
+        "2025": 474,
+        "2026": 252
+      },
+      "by_source_type": {
+        "government": 2,
+        "news_media": 7720,
+        "other_web": 2698,
+        "unknown": 2
+      },
+      "by_category": {
+        "accident_disaster": 238,
+        "governance_conflict": 138,
+        "legal_police_crime": 4265,
+        "other_grievance_signal": 1239,
+        "protest_demand_public_pressure": 3126,
+        "public_services_health_education": 1177,
+        "welfare_livelihood": 239
+      }
+    }
+  }
+}

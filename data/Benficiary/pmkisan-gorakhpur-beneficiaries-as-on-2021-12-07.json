@@ -1,0 +1,16 @@
+{
+  "record_id": "pmkisan-gorakhpur-beneficiaries-as-on-2021-12-07",
+  "scheme_name": "PM Kisan Samman Nidhi",
+  "source_name": "Rajya Sabha Unstarred Question AU1469 Annexure - PM-Kisan district beneficiaries and amount paid",
+  "source_url": "https://sansad.in/getFile/annex/255/AU1469.pdf?source=pqars",
+  "source_file": "output\\pmkisan_up_district_beneficiaries_as_on_2021_12_07_AU1469.pdf",
+  "source_page": 2,
+  "district": "Gorakhpur",
+  "state": "Uttar Pradesh",
+  "period_type": "as_on_date_snapshot",
+  "as_on_date": "2021-12-07",
+  "metric_type": "registered_beneficiary_count_and_amount_paid",
+  "beneficiaries": 525009,
+  "amount_paid_rupees": 7641606000,
+  "raw_context": " \n             \n7,54,86,58,000 \n33.\n \n \nGORAKHPUR \n \n5,25,009\n \n             \n7,64,16,06,000 \n34.\n "
+}

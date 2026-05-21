@@ -1,0 +1,15 @@
+{
+  "record_id": "pmkisan-gorakhpur-beneficiaries-as-on-2023-03-22",
+  "scheme_name": "PM Kisan Samman Nidhi",
+  "source_name": "Lok Sabha Unstarred Question AU4500 Annexure - PM-Kisan district beneficiaries",
+  "source_url": "https://sansad.in/getFile/loksabhaquestions/annex/1711/AU4500.pdf?source=pqals",
+  "source_file": "output\\pmkisan_up_district_beneficiaries_as_on_2023_03_22_AU4500.pdf",
+  "source_page": 3,
+  "district": "Gorakhpur",
+  "state": "Uttar Pradesh",
+  "period_type": "as_on_date_snapshot",
+  "as_on_date": "2023-03-22",
+  "metric_type": "registered_beneficiary_count",
+  "beneficiaries": 533937,
+  "raw_context": "GONDA\n \n5,13,863\n \n33\n \nGORAKHPUR\n \n5,33,937\n \n34\n \nHAMIRPUR\n "
+}

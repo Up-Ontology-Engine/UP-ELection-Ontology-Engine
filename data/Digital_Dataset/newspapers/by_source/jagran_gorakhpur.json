@@ -1,6 +1,6 @@
 {
   "source_id": "jagran_gorakhpur",
-  "total": 20,
+  "total": 24,
   "articles": [
     {
       "source_id": "jagran_gorakhpur",
@@ -341,6 +341,74 @@
       "bias_score": 0.15,
       "content_hash": "f52904770d645a426803baa87d910c83139ca970ff8895b563a48625bb934e04",
       "scraped_at": "2026-05-12T10:53:28.204048+00:00"
+    },
+    {
+      "source_id": "jagran_gorakhpur",
+      "source_name": "Dainik Jagran — Gorakhpur",
+      "headline": "'पीएम इटली में टॉफी बांट रहे हैं...', मोदी-मेलोनी की 'मेलोडी' वीडियो पर राहुल गांधी का तंज",
+      "body_raw": "राहुल गांधी ने इटली दौरे पर पीएम मोदी द्वारा जॉर्जिया मेलोनी को 'पारले मेलोडी' टॉफी भेंट करने पर निशाना साधा है। उन्होंने कहा कि देश आर्थिक संकट से जूझ रहा है, जबकि प्रधानमंत्री विदेश में 'तमाशा' कर रहे हैं।",
+      "url": "https://www.jagran.com/politics/national-gorakhpur-pm-distributing-toffees-in-italy-rahul-gandhi-dig-at-modi-meloni-melody-diplomacy-40245598.html",
+      "published_at": "Wed, 20 May 2026 03:00 PM (IST)",
+      "author": "",
+      "category": "politics",
+      "language": "hi",
+      "district_hint": "Gorakhpur",
+      "ac_hint": "Gorakhpur Urban",
+      "credibility": 0.8,
+      "bias_score": 0.15,
+      "content_hash": "33a49d1d6e2e96f4a8a6660e69643c4e77dc23b90137091b9df5a8a13df485ac",
+      "scraped_at": "2026-05-21T03:23:46.246366+00:00"
+    },
+    {
+      "source_id": "jagran_gorakhpur",
+      "source_name": "Dainik Jagran — Gorakhpur",
+      "headline": "'अर्थव्यवस्था पर भ्रम फैला रहे राहुल गांधी', भाजपा का तीखा हमला; पूछा- किसके इशारे पर कर रहे काम?",
+      "body_raw": "भाजपा ने मंगलवार को राहुल गांधी पर देश की अर्थव्यवस्था की स्थिति को लेकर गलत सूचना फैलाकर भ्रम और अराजकता पैदा करने का आरोप लगाया और कांग्रेस नेता से पूछा कि क्या वह किसी भारत विरोधी ताकतों के इशारे पर काम कर रहे हैं।",
+      "url": "https://www.jagran.com/politics/national-gorakhpur-rahul-gandhi-creating-confusion-by-spreading-wrong-information-on-economy-says-bjp-40245074.html",
+      "published_at": "Wed, 20 May 2026 02:00 AM (IST)",
+      "author": "",
+      "category": "politics",
+      "language": "hi",
+      "district_hint": "Gorakhpur",
+      "ac_hint": "Gorakhpur Urban",
+      "credibility": 0.8,
+      "bias_score": 0.15,
+      "content_hash": "bda80d1711de08509b02d2891737832cc771a31c8d1f1d0444180873a98b4bf0",
+      "scraped_at": "2026-05-21T03:23:46.246396+00:00"
+    },
+    {
+      "source_id": "jagran_gorakhpur",
+      "source_name": "Dainik Jagran — Gorakhpur",
+      "headline": "यूपी के सीएम योगी की टिप्पणी पर रिजीजू ने कहा, किसी को तनाव पैदा नहीं करना चाहिए",
+      "body_raw": "केंद्रीय अल्पसंख्यक कार्य मंत्री किरेन रिजीजू ने सड़कों पर नमाज पढ़ने के संदर्भ में उत्तर प्रदेश के मुख्यमंत्री योगी आदित्यनाथ द्वारा की गई टिप्पणी पर मंगलवार को कहा कि किसी भी व्यक्ति या नेता को तनाव पैदा नहीं करना चाहिए।",
+      "url": "https://www.jagran.com/politics/national-gorakhpur-no-one-should-create-tension-says-rijiju-on-up-cm-yogi-remarks-40245079.html",
+      "published_at": "Wed, 20 May 2026 02:00 AM (IST)",
+      "author": "",
+      "category": "politics",
+      "language": "hi",
+      "district_hint": "Gorakhpur",
+      "ac_hint": "Gorakhpur Urban",
+      "credibility": 0.8,
+      "bias_score": 0.15,
+      "content_hash": "4a401d4caac174071e07db42c1a0efc767553b3c2851eec24bc6256dd5cabe04",
+      "scraped_at": "2026-05-21T03:23:46.246422+00:00"
+    },
+    {
+      "source_id": "jagran_gorakhpur",
+      "source_name": "Dainik Jagran — Gorakhpur",
+      "headline": "जहाँ था कूड़े का पहाड़… आज बना राष्ट्र प्रेरणा पथ | Badhata UP",
+      "body_raw": "",
+      "url": "https://www.jagran.com/uttar-pradesh/gorakhpur",
+      "published_at": "",
+      "author": "",
+      "category": null,
+      "language": "hi",
+      "district_hint": "Gorakhpur",
+      "ac_hint": "Gorakhpur Urban",
+      "credibility": 0.8,
+      "bias_score": 0.15,
+      "content_hash": "396d0c78c2f9da12e742b871ef1468764ef9f7f1b791850aed62622597c76aad",
+      "scraped_at": "2026-05-21T03:23:46.246594+00:00"
     }
   ]
 }

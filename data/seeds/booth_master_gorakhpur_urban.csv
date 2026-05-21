@@ -1,0 +1,31 @@
+booth_id,ac_id,booth_number,polling_station_name,address,locality_hint,male_voters,female_voters,other_voters,total_voters
+GKP_322_001,GKP_322,1,Primary School Rampur,Rampur,Rampur,1200,1150,0,2350
+GKP_322_002,GKP_322,2,Community Hall Basti,Basti,Basti,980,1050,0,2030
+GKP_322_003,GKP_322,3,Temple Road School,Temple Road,Temple,870,910,0,1780
+GKP_322_004,GKP_322,4,Shivaji Park Center,Shivaji Park,Shivaji Park,760,780,0,1540
+GKP_322_005,GKP_322,5,Govt Middle School,Near Market,Market Area,1100,1080,0,2180
+GKP_322_006,GKP_322,6,Panchayat Bhawan,Gorakhpur Cantt,Cantt,540,520,0,1060
+GKP_322_007,GKP_322,7,Village Hall North,North Village,North,430,420,0,850
+GKP_322_008,GKP_322,8,Community Center East,East Side,East,610,600,0,1210
+GKP_322_009,GKP_322,9,High School West,West End,West,980,1000,0,1980
+GKP_322_010,GKP_322,10,Anganwadi Center 1,Old Town,Old Town,210,220,0,430
+GKP_322_011,GKP_322,11,Anganwadi Center 2,New Town,New Town,190,200,0,390
+GKP_322_012,GKP_322,12,Community Hall South,South End,South,450,470,0,920
+GKP_322_013,GKP_322,13,Primary Health Center,Health Lane,Health,300,320,0,620
+GKP_322_014,GKP_322,14,Library Ground,Library Street,Library,660,640,0,1300
+GKP_322_015,GKP_322,15,School Annex A,Annex,Annex,880,860,0,1740
+GKP_322_016,GKP_322,16,Market Shed 1,Market Road,Market,1020,1005,0,2025
+GKP_322_017,GKP_322,17,Market Shed 2,Market Road,Market,980,995,0,1975
+GKP_322_018,GKP_322,18,Community Centre 3,Block C,Block C,720,710,0,1430
+GKP_322_019,GKP_322,19,Youth Club,Club Lane,Club,430,450,0,880
+GKP_322_020,GKP_322,20,Old Primary School,Old School,Old,540,560,0,1100
+GKP_322_021,GKP_322,21,Village Common A,Village A,Village A,300,310,0,610
+GKP_322_022,GKP_322,22,Village Common B,Village B,Village B,320,330,0,650
+GKP_322_023,GKP_322,23,School Hall C,Hall C,Hall C,410,420,0,830
+GKP_322_024,GKP_322,24,Govt Office Annex,Office Area,Office,230,240,0,470
+GKP_322_025,GKP_322,25,Community Centre D,Center D,Center D,760,780,0,1540
+GKP_322_026,GKP_322,26,Primary School E,School E,School E,840,820,0,1660
+GKP_322_027,GKP_322,27,Meeting Hall F,Hall F,Hall F,610,590,0,1200
+GKP_322_028,GKP_322,28,Community Field G,Field G,Field G,470,480,0,950
+GKP_322_029,GKP_322,29,Anganwadi H,Anganwadi H,Anganwadi H,150,160,0,310
+GKP_322_030,GKP_322,30,Health Post I,Post I,Post I,200,210,0,410

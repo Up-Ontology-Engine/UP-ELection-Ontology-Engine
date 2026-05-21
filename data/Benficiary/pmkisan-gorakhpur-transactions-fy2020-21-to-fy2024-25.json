@@ -1,0 +1,24 @@
+{
+  "record_id": "pmkisan-gorakhpur-transactions-fy2020-21-to-fy2024-25",
+  "scheme_name": "PM Kisan Samman Nidhi",
+  "source_name": "Lok Sabha Unstarred Question AU446 Annexure - PM-Kisan district transactions",
+  "source_url": "https://sansad.in/getFile/loksabhaquestions/annex/186/AU446_mtIyXe.pdf?source=pqals",
+  "source_file": "output\\pmkisan_up_district_transactions_fy2020_21_to_2024_25_AU446.pdf",
+  "source_page": 7,
+  "district": "Gorakhpur",
+  "state": "Uttar Pradesh",
+  "period_type": "five_financial_year_period",
+  "financial_years_covered": [
+    "2020-21",
+    "2021-22",
+    "2022-23",
+    "2023-24",
+    "2024-25"
+  ],
+  "metric_type": "benefit_transaction_count",
+  "total_transactions": 7374359,
+  "failed_transactions": 195916,
+  "successful_or_processed_transactions_estimate": 7178443,
+  "important_note": "This official source reports transactions for five financial years, not unique beneficiary persons.",
+  "raw_context": "27 Fatehpur 49,85,377 33,209 \n28 Firozabad 36,36,461 35,267 \n29 Gautam Buddha Nagar 7,69,948 15,868 \n30 Ghaziabad 7,72,814 10,440 \n31 Ghazipur 67,84,349 49,460 \n32 Gonda 71,81,071 52,576 \n33 Gorakhpur 73,74,359 1,95,916 \n34 Hamirpur 25,49,652 21,324 \n35 Hapur 16,49,017 17,603 \n36 Hardoi 1,02,48,719 86,100 \n37 Hathras 27,18,057 39,530 \n38 Jalaun 30,48,141 26,703 \n39 Jaunpur 1,05,59,102 77,733 \n40 Jhansi 33,66,177 32,966 "
+}
