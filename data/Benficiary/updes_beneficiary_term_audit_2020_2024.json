@@ -1,0 +1,57 @@
+[
+  {
+    "source_name": "UPDES District Development Indicators 2020",
+    "source_url": "https://updes.up.nic.in/updes/data/dist_dev_indicator/dist_dev_indicators_2020.pdf",
+    "source_file": "output\\dist_dev_indicators_2020.pdf",
+    "district": "Gorakhpur",
+    "state": "Uttar Pradesh",
+    "report_year": "2020",
+    "pages_checked": 301,
+    "beneficiary_term_pages_with_gorakhpur": [],
+    "beneficiary_record_status": "No Gorakhpur beneficiary-specific rows found by beneficiary/PM-Kisan terms."
+  },
+  {
+    "source_name": "UPDES District Development Indicators 2021",
+    "source_url": "https://updes.up.nic.in/updes/data/dist_dev_indicator/dist_dev_indicators_2021.pdf",
+    "source_file": "output\\dist_dev_indicators_2021.pdf",
+    "district": "Gorakhpur",
+    "state": "Uttar Pradesh",
+    "report_year": "2021",
+    "pages_checked": 285,
+    "beneficiary_term_pages_with_gorakhpur": [],
+    "beneficiary_record_status": "No Gorakhpur beneficiary-specific rows found by beneficiary/PM-Kisan terms."
+  },
+  {
+    "source_name": "UPDES District Development Indicators 2022",
+    "source_url": "https://updes.up.nic.in/updes/data/dist_dev_indicator/dist_dev_indicators_2022.pdf",
+    "source_file": "output\\dist_dev_indicators_2022.pdf",
+    "district": "Gorakhpur",
+    "state": "Uttar Pradesh",
+    "report_year": "2022",
+    "pages_checked": 350,
+    "beneficiary_term_pages_with_gorakhpur": [],
+    "beneficiary_record_status": "No Gorakhpur beneficiary-specific rows found by beneficiary/PM-Kisan terms."
+  },
+  {
+    "source_name": "UPDES District Development Indicators 2023",
+    "source_url": "https://updes.up.nic.in/updes/data/dist_dev_indicator/dist_dev_indicators_2023.pdf",
+    "source_file": "output\\dist_dev_indicators_2023.pdf",
+    "district": "Gorakhpur",
+    "state": "Uttar Pradesh",
+    "report_year": "2023",
+    "pages_checked": 258,
+    "beneficiary_term_pages_with_gorakhpur": [],
+    "beneficiary_record_status": "No Gorakhpur beneficiary-specific rows found by beneficiary/PM-Kisan terms."
+  },
+  {
+    "source_name": "UPDES District Development Indicators 2024",
+    "source_url": "https://updes.up.nic.in/updes/data/dist_dev_indicator/dist_dev_indicators_2024.pdf",
+    "source_file": "output\\dist_dev_indicators_2024.pdf",
+    "district": "Gorakhpur",
+    "state": "Uttar Pradesh",
+    "report_year": "2024",
+    "pages_checked": 259,
+    "beneficiary_term_pages_with_gorakhpur": [],
+    "beneficiary_record_status": "No Gorakhpur beneficiary-specific rows found by beneficiary/PM-Kisan terms."
+  }
+]

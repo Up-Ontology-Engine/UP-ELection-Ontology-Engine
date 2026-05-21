@@ -1,0 +1,79 @@
+{
+  "input_csv": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\gorakhpur_events_merged.csv",
+  "output_dir": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged",
+  "total_rows": 19233,
+  "files": {
+    "by_year": {
+      "1920": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_year\\1920.json",
+      "2007": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_year\\2007.json",
+      "2014": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_year\\2014.json",
+      "2015": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_year\\2015.json",
+      "2016": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_year\\2016.json",
+      "2017": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_year\\2017.json",
+      "2018": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_year\\2018.json",
+      "2019": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_year\\2019.json",
+      "2020": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_year\\2020.json",
+      "2021": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_year\\2021.json",
+      "2022": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_year\\2022.json",
+      "2023": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_year\\2023.json",
+      "2024": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_year\\2024.json",
+      "2025": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_year\\2025.json",
+      "2026": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_year\\2026.json"
+    },
+    "by_archive_year": {
+      "2016": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_archive_year\\2016.json",
+      "2017": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_archive_year\\2017.json",
+      "2018": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_archive_year\\2018.json",
+      "2019": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_archive_year\\2019.json",
+      "2020": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_archive_year\\2020.json",
+      "2021": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_archive_year\\2021.json",
+      "2022": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_archive_year\\2022.json",
+      "2023": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_archive_year\\2023.json",
+      "2024": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_archive_year\\2024.json",
+      "2025": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_archive_year\\2025.json",
+      "2026": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_archive_year\\2026.json"
+    },
+    "by_source_type": {
+      "government": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_source_type\\government.json",
+      "news_media": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_source_type\\news_media.json",
+      "other_web": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_source_type\\other_web.json",
+      "unknown": "C:\\Users\\Smruti\\OneDrive\\Documents\\New project\\output\\gdelt_gorakhpur\\json_merged\\by_source_type\\unknown.json"
+    }
+  },
+  "counts_by_year": {
+    "1920": 35,
+    "2007": 1,
+    "2014": 1,
+    "2015": 17,
+    "2016": 785,
+    "2017": 6320,
+    "2018": 2904,
+    "2019": 1746,
+    "2020": 1668,
+    "2021": 1138,
+    "2022": 919,
+    "2023": 996,
+    "2024": 1175,
+    "2025": 1145,
+    "2026": 383
+  },
+  "counts_by_archive_year": {
+    "2016": 786,
+    "2017": 6269,
+    "2018": 2957,
+    "2019": 1738,
+    "2020": 1710,
+    "2021": 1142,
+    "2022": 923,
+    "2023": 1001,
+    "2024": 1176,
+    "2025": 1146,
+    "2026": 385
+  },
+  "counts_by_source_type": {
+    "government": 3,
+    "news_media": 10662,
+    "other_web": 8563,
+    "unknown": 5
+  }
+}

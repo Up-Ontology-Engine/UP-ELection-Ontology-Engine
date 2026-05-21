@@ -1,12 +1,14 @@
 """Shared database connection helpers for FastAPI."""
 import os
 from contextlib import contextmanager
+from typing import Optional
+
 from neo4j import GraphDatabase
 import sqlalchemy as sa
 from sqlalchemy.orm import sessionmaker
 
 # ── PostgreSQL ────────────────────────────────────────────────────────────────
-_pg_engine: sa.Engine | None = None
+_pg_engine: Optional[sa.Engine] = None
 
 def get_pg_engine() -> sa.Engine:
     global _pg_engine

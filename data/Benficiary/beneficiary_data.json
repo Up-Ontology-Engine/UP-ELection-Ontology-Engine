@@ -1,0 +1,317 @@
+{
+  "source": "www.data.gov.in",
+  "extracted_from": "HAR capture",
+  "extraction_date": "2026-05-21",
+  "beneficiary_datasets": {
+    "query": "beneficiary",
+    "total_matching_on_site": 534,
+    "loaded_in_session": 10,
+    "note": "Only the first 10 results were fetched in this HAR session; 534 total exist on the portal.",
+    "items": [
+      {
+        "nid": 87147,
+        "uuid": "a8f1b4b9-4de5-42b4-ad5e-4830184a9158",
+        "title": "Distribution of Households by Occupation Group  Beneficiary vs. Non-Beneficiary",
+        "type": "resources",
+        "ministry": "NITI Aayog",
+        "sector": [
+          "Health and Family welfare",
+          "Health"
+        ],
+        "file_format": "application/vnd.ms-excel",
+        "datafile_url": "https://www.data.gov.in/files/ogdpv2dms/s3fs-public/datafile/ICDS_Table9.7.xls",
+        "resource_page": "https://www.data.gov.in/resource/distribution-households-occupation-group-beneficiary-vs-non-beneficiary",
+        "is_api_available": false,
+        "is_visualized": false,
+        "domain": "data.gov.in",
+        "created_at": "2013-08-01T09:10:00Z",
+        "updated_at": "2014-04-17T09:22:36Z",
+        "relevance_score": 48.087196
+      },
+      {
+        "nid": 87145,
+        "uuid": "573b52ef-b253-4015-88b9-e567ab356e5d",
+        "title": "Distribution of Households by Level of Education  Beneficiary vs. Non-Beneficiary",
+        "type": "resources",
+        "ministry": "NITI Aayog",
+        "sector": [
+          "Health and Family welfare",
+          "Health"
+        ],
+        "file_format": "application/vnd.ms-excel",
+        "datafile_url": "https://www.data.gov.in/files/ogdpv2dms/s3fs-public/datafile/ICDS_Table9.6.xls",
+        "resource_page": "https://www.data.gov.in/resource/distribution-households-level-education-beneficiary-vs-non-beneficiary",
+        "is_api_available": false,
+        "is_visualized": false,
+        "domain": "data.gov.in",
+        "created_at": "2013-08-01T09:10:00Z",
+        "updated_at": "2014-04-17T09:22:36Z",
+        "relevance_score": 47.141575
+      },
+      {
+        "nid": 87143,
+        "uuid": "2427a05b-0450-4ef9-a74c-e93a6ac71558",
+        "title": "/Month)  Beneficiary vs. Non-Beneficiary",
+        "type": "resources",
+        "ministry": "NITI Aayog",
+        "sector": [
+          "Health and Family welfare",
+          "Health"
+        ],
+        "file_format": "application/vnd.ms-excel",
+        "datafile_url": "https://www.data.gov.in/files/ogdpv2dms/s3fs-public/datafile/ICDS_Table9.8.xls",
+        "resource_page": "https://www.data.gov.in/resource/distribution-households-expenditure-class-rsmonth-beneficiary-vs-non-beneficiary",
+        "is_api_available": false,
+        "is_visualized": false,
+        "domain": "data.gov.in",
+        "created_at": "2013-08-01T09:10:00Z",
+        "updated_at": "2014-04-17T09:22:36Z",
+        "relevance_score": 46.23243
+      },
+      {
+        "nid": 128339,
+        "uuid": "4f89b058-f84f-4416-9c06-352d6e01e13a",
+        "title": "Sample Beneficiary by Gender - 2013",
+        "type": "resources",
+        "ministry": "NITI Aayog",
+        "sector": [
+          "Power and Energy"
+        ],
+        "file_format": "text/csv",
+        "datafile_url": "https://www.data.gov.in/files/ogdpv2dms/s3fs-public/datafile/5.2.csv",
+        "resource_page": "https://www.data.gov.in/resource/sample-beneficiary-gender-2013",
+        "is_api_available": false,
+        "is_visualized": false,
+        "domain": "data.gov.in",
+        "created_at": "2014-09-29T11:44:53Z",
+        "updated_at": "2021-12-10T17:27:26Z",
+        "relevance_score": 43.546566
+      },
+      {
+        "nid": 128278,
+        "uuid": "d8dbb3c6-6e5b-4dce-88aa-54bc4bea51c2",
+        "title": "Beneficiary Receiving Bills Regularly - 2013",
+        "type": "resources",
+        "ministry": "NITI Aayog",
+        "sector": [
+          "Power and Energy"
+        ],
+        "file_format": "text/csv",
+        "datafile_url": "https://www.data.gov.in/files/ogdpv2dms/s3fs-public/datafile/5.50.csv",
+        "resource_page": "https://www.data.gov.in/resource/beneficiary-receiving-bills-regularly-2013",
+        "is_api_available": false,
+        "is_visualized": false,
+        "domain": "data.gov.in",
+        "created_at": "2014-09-29T08:58:59Z",
+        "updated_at": "2014-09-30T07:29:03Z",
+        "relevance_score": 43.546566
+      },
+      {
+        "nid": 128280,
+        "uuid": "a8d5bf2c-6058-4ecf-b808-483cdbebb996",
+        "title": "Education Status of Sample Beneficiary - 2013",
+        "type": "resources",
+        "ministry": "NITI Aayog",
+        "sector": [
+          "Power and Energy"
+        ],
+        "file_format": "text/csv",
+        "datafile_url": "https://www.data.gov.in/files/ogdpv2dms/s3fs-public/datafile/5.29.csv",
+        "resource_page": "https://www.data.gov.in/resource/education-status-sample-beneficiary-2013",
+        "is_api_available": false,
+        "is_visualized": false,
+        "domain": "data.gov.in",
+        "created_at": "2014-09-29T09:01:06Z",
+        "updated_at": "2014-09-30T07:25:19Z",
+        "relevance_score": 42.019974
+      },
+      {
+        "nid": 128270,
+        "uuid": "99e1f0d9-a305-4ff0-8d4b-a8230624da55",
+        "title": "State wise Beneficiary Paying Bills regularly - 2013",
+        "type": "resources",
+        "ministry": "NITI Aayog",
+        "sector": [
+          "Power and Energy"
+        ],
+        "file_format": "text/csv",
+        "datafile_url": "https://www.data.gov.in/files/ogdpv2dms/s3fs-public/datafile/5.12.csv",
+        "resource_page": "https://www.data.gov.in/resource/state-wise-beneficiary-paying-bills-regularly-2013",
+        "is_api_available": false,
+        "is_visualized": false,
+        "domain": "data.gov.in",
+        "created_at": "2014-09-29T08:49:41Z",
+        "updated_at": "2014-09-30T07:28:56Z",
+        "relevance_score": 40.59679
+      },
+      {
+        "nid": 128338,
+        "uuid": "648311cb-a281-4ecd-9d87-3082a99137d3",
+        "title": "Economic Category of the Sample Beneficiary - 2013",
+        "type": "resources",
+        "ministry": "NITI Aayog",
+        "sector": [
+          "Power and Energy"
+        ],
+        "file_format": "text/csv",
+        "datafile_url": "https://www.data.gov.in/files/ogdpv2dms/s3fs-public/datafile/5.1.csv",
+        "resource_page": "https://www.data.gov.in/resource/economic-category-sample-beneficiary-2013",
+        "is_api_available": false,
+        "is_visualized": false,
+        "domain": "data.gov.in",
+        "created_at": "2014-09-29T11:40:40Z",
+        "updated_at": "2021-12-10T17:27:26Z",
+        "relevance_score": 40.59679
+      },
+      {
+        "nid": 128344,
+        "uuid": "6923437a-368d-4ef7-b6b9-88a53e3bd2f3",
+        "title": "Social Category of the Sample Beneficiary - 2013",
+        "type": "resources",
+        "ministry": "NITI Aayog",
+        "sector": [
+          "Power and Energy"
+        ],
+        "file_format": "text/csv",
+        "datafile_url": "https://www.data.gov.in/files/ogdpv2dms/s3fs-public/datafile/5.30.csv",
+        "resource_page": "https://www.data.gov.in/resource/social-category-sample-beneficiary-2013",
+        "is_api_available": false,
+        "is_visualized": false,
+        "domain": "data.gov.in",
+        "created_at": "2014-09-29T11:53:07Z",
+        "updated_at": "2021-12-10T17:27:26Z",
+        "relevance_score": 40.59679
+      },
+      {
+        "nid": 128346,
+        "uuid": "2e5f882f-d60e-4c6a-a2b5-3768c8bbfe3f",
+        "title": "Family Size Beneficiary Households by District - 2013",
+        "type": "resources",
+        "ministry": "NITI Aayog",
+        "sector": [
+          "Power and Energy"
+        ],
+        "file_format": "text/csv",
+        "datafile_url": "https://www.data.gov.in/files/ogdpv2dms/s3fs-public/datafile/5.31.csv",
+        "resource_page": "https://www.data.gov.in/resource/family-size-beneficiary-households-district-2013",
+        "is_api_available": false,
+        "is_visualized": false,
+        "domain": "data.gov.in",
+        "created_at": "2014-09-29T11:54:39Z",
+        "updated_at": "2021-12-10T17:27:26Z",
+        "relevance_score": 40.59679
+      }
+    ]
+  },
+  "beneficiary_visualizations": {
+    "total_on_site": 12,
+    "loaded_in_session": 10,
+    "items": [
+      {
+        "id": 118588,
+        "title": "State/UT-wise Beneficiary Families Aged 70 years and above Benefited under Ayushmaan Bharat-Pradhan Mantri Jan Aarogya Yojana during 2024-25",
+        "summary": "The graph shows State/UT-wise number of beneficiary families aged 70 years and above who benefited under Ayushmaan Bharat-Pradhan Mantri Jan Aarogya Yojana (AB-PMJAY) during 2024-25 (as on 25-11-2024). The total number of family beneficiaries (70 years and above) was 3,93,65,541 under Ayushmaan Bharat-Pradhan Mantri Jan Aarogya Yojana (AB-PMJAY). The Top 10 State/UT total number of family beneficiaries (70 years and above) under Ayushmaan Bharat-Pradhan Mantri Jan Aarogya Yojana (AB-PMJAY) were Uttar Pradesh, Maharashtra, Tamil Nadu, Bihar, Madhya Pradesh, Karnataka, Rajasthan, Gujarat, Kerala and Andhra Pradesh.\r\n\r\nNote:- Source - RAJYA SABHA SESSION - 266 STARRED QUESTION No 88. ANSWERED ON, 3RD DECEMBER 2024. Data Figures are in Number. Data for 2024-25 (as on 25-11-2024).\r\n\r\nDataset UR",
+        "link": "https://artefacts.data.gov.in/state-ut-wise-beneficiary-families-aged-70-years-and-above-benefited-under-ayushmaan-bharat-pradhan-mantri-jan-aarogya-yojana-during-2024-25/",
+        "date": null,
+        "featured_image": null,
+        "category": "visualization"
+      },
+      {
+        "id": 118546,
+        "title": "Year-wise Average Number of LPG Cylinder Refill per Beneficiary under Pradhan Mantri Ujjwala Yojana (PMUY) from 2019-20 to 2024-25",
+        "summary": "This chart shows the year-wise average number of LPG cylinder refills per beneficiary under the Pradhan Mantri Ujjwala Yojana (PMUY) from 2019-20 to 2024-25. The highest average number of LPG cylinder refills per beneficiary under the Pradhan Mantri Ujjwala Yojana (PMUY) from 2019-20 to 2024-25 was 4.39 in the year 2020-21. The lowest was 3.01 in the year 2019-20.\r\nNote: Source - RAJYA SABHA SESSION - 266 STARRED QUESTION No 140. ANSWERED ON, 9TH DECEMBER 2024. Source - Indian Oil Corporation Limited on industry basis. The increase in consumption during FY 2020-21 is mainly due to the provision of Free refills to PMUY Beneficiaries under PMGKY scheme, under which up to three free refills were given to PMUY Beneficiaries and beneficiaries availed 14.17 crore refills.\r\n\r\nDataset URL: https:/",
+        "link": "https://artefacts.data.gov.in/year-wise-average-number-of-lpg-cylinder-refill-per-beneficiary-under-pradhan-mantri-ujjwala-yojana-pmuy-from-2019-20-to-2024-25/",
+        "date": null,
+        "featured_image": null,
+        "category": "visualization"
+      },
+      {
+        "id": 117041,
+        "title": "State/UT-wise Number of Beneficiary Establishments under Atmanirbhar Bharat Rojgar Yojna (ABRY) as on 22-07-2023",
+        "summary": "This chart shows information about the State/UT-wise number of beneficiary establishments under Atmanirbhar Bharat Rojgar Yojna (ABRY) as on 22-07-2023. The total number of beneficiary establishments was 1,52,374 under Atmanirbhar Bharat Rojgar Yojna (ABRY). The top 10 State/UT in terms of beneficiaries were Maharashtra, Tamil Nadu, Gujarat, Uttar Pradesh, Rajasthan, Karnataka, West Bengal, Haryana, Punjab, and Madhya Pradesh.\r\n\r\nNote : Source - RAJYA SABHA SESSION - 260 UNSTARRED QUESTION No 1686. ANSWERED ON, 3rd August 2023.\r\n\r\nDataset URL: https://data.gov.in/resource/stateut-wise-number-beneficiaries-under-atmanirbhar-bharat-rojgar-yojna-abry-22-07-2023\r\n\r\nResource Title: State/UT-wise Number of Beneficiaries under Atmanirbhar Bharat Rojgar Yojna (ABRY) as on 22-07-2023",
+        "link": "https://artefacts.data.gov.in/state-ut-wise-number-of-beneficiary-establishments-under-atmanirbhar-bharat-rojgar-yojna-abry-as-on-22-07-2023/",
+        "date": null,
+        "featured_image": null,
+        "category": "visualization"
+      },
+      {
+        "id": 117029,
+        "title": "State/UT-wise Eligible Beneficiary Families under Ayushman Bharat &#8211; Pradhan Mantri Jan Arogya Yojana (AB-PMJAY) as on 25th July 2023",
+        "summary": "This chart shows information about the State/UT-wise Eligible Beneficiary Families under Ayushman Bharat - Pradhan Mantri Jan Arogya Yojana (AB-PMJAY) as on 25 July 2023. The total number of eligible beneficiaries was 10,01,28,167 families under Ayushman Bharat - Pradhan Mantri Jan Arogya Yojana (AB-PMJAY). The top 10 State/UT in terms of beneficiaries were Uttar Pradesh, Bihar, Madhya Pradesh, Maharashtra, Tamil Nadu, Karnataka, Rajasthan, Andhra Pradesh, Gujarat, and Chhattisgarh.\r\nNote: Source - RAJYA SABHA SESSION - 260 UNSTARRED QUESTION No 1374. ANSWERED ON, 1st August 2023. States/UT of Odisha, West Bengal and Delhi are not implementing AB-PMJAY.\r\n\r\nDataset URL: https://data.gov.in/resource/stateut-wise-number-eligible-beneficiary-families-under-ayushman-bharat-pradhan-mantri-jan",
+        "link": "https://artefacts.data.gov.in/state-ut-wise-eligible-beneficiary-families-under-ayushman-bharat-pradhan-mantri-jan-arogya-yojana-ab-pmjay-as-on-25th-july-2023/",
+        "date": null,
+        "featured_image": null,
+        "category": "visualization"
+      },
+      {
+        "id": 114842,
+        "title": "Schemes-wise Beneficiary of Economic Empowerment Schemes from 2016-17 to 2021-22",
+        "summary": "This bar chart provides information about the schemes-wise details of Economic Empowerment Schemes from 2016-17 to 2021-22. A total number of 15,21,922 beneficiaries benefited under the Economic Empowerment Schemes. The highest number of beneficiaries was 8,00,608 in the Loan scheme of National Minorities Development and Finance Corporation (NMDFC). The lowest number of beneficiaries was 23,130 in Upgrading Skills and Training in Traditional Arts /Crafts for Development (USTTAD) scheme.\r\nNote - Source - RAJYA SABHA SESSION - 256 UNSTARRED QUESTION No 3643.\r\n\r\nDataset URL: https://data.gov.in/resource/scheme-wise-details-beneficiaries-educational-empowerment-schemes-and-economic-empowerment\r\n\r\nResource Title: Scheme-wise Details of Beneficiaries Educational Empowerment Schemes and Economic",
+        "link": "https://artefacts.data.gov.in/schemes-wise-beneficiary-of-economic-empowerment-schemes-from-2016-17-to-2021-22/",
+        "date": null,
+        "featured_image": null,
+        "category": "visualization"
+      },
+      {
+        "id": 119393,
+        "title": "Year-wise Number of Unique Beneficiaries Paid under Pradhan Mantri Matru Vandana Yojana (PMMVY) from 2019-20 to 2024-25",
+        "summary": "The graph illustrates the year-wise total number of unique beneficiaries paid under the Pradhan Mantri Matru Vandana Yojana (PMMVY) from 2019-20 to 2024-25 (data as on 17 March 2025). The highest number of unique beneficiaries was recorded in the year 2022-23, with 72.88 lakh beneficiaries. The lowest number of unique beneficiaries was in 2023-24, with only 22.47 lakh beneficiaries. This data highlights significant year-to-year fluctuations in beneficiary numbers under the scheme.\r\n\r\nNote - Source - RAJYA SABHA SESSION - 267 UNSTARRED QUESTION No. 2221 ANSWERED ON, 19TH MARCH 2025. Data Figures are Number in Lakhs. Data for 2024-25 (as on 17-03-2025). Data of Unique Beneficiaries Paid before 2023-24, payments to eligible beneficiaries in PMMVY were made through PMMVY-CAS (old software) and",
+        "link": "https://artefacts.data.gov.in/year-wise-number-of-unique-beneficiaries-paid-under-pradhan-mantri-matru-vandana-yojana-pmmvy-from-2019-20-to-2024-25/",
+        "date": null,
+        "featured_image": null,
+        "category": "visualization"
+      },
+      {
+        "id": 119144,
+        "title": "State/UT-wise Number of Ayushman Vay Vandana Cards Created under Ayushman Bharat &#8211; Pradhan Mantri Jan Arogya Yojana (AB-PMJAY) as on 04-12-2024",
+        "summary": "The chart provides data on the number of Ayushman Vay Vandana cards created under the Ayushman Bharat - Pradhan Mantri Jan Arogya Yojana (AB-PMJAY) across various States and Union Territories (UTs) in India, as of December 4, 2024, a total of 21,80,007 Ayushman Vay Vandana cards were created under the Ayushman Bharat - Pradhan Mantri Jan Arogya Yojana (AB-PMJAY). Among them, the top 10 states/UTs with the highest number of card creations were Madhya Pradesh (817175), Kerala (397320), Uttar Pradesh (314330), Gujarat (219865), Karnataka (68638), Bihar (66712), Haryana (63297), Tamil Nadu (63233), Punjab (38988), Chhattisgarh (26142). This data reflects the varying levels of adoption and implementation of the scheme across different regions, with states like Madhya Pradesh and Kerala leading",
+        "link": "https://artefacts.data.gov.in/state-ut-wise-number-of-ayushman-vay-vandana-cards-created-under-ayushman-bharat-pradhan-mantri-jan-arogya-yojana-ab-pmjay-as-on-04-12-2024/",
+        "date": null,
+        "featured_image": null,
+        "category": "visualization"
+      },
+      {
+        "id": 116641,
+        "title": "State/UT-wise Enrolments under Atal Pension Yojana (APY) as on 8th March, 2023",
+        "summary": "This chart provides information about the States/UT-wise beneficiary's enrolments under Atal Pension Yojana (APY) as on 8th March, 2023. The total number of 5,13,19,825 beneficiaries were enrolled under Atal Pension Yojana (APY). The top 10 State/UT in terms of beneficiary enrolments were Uttar Pradesh, Bihar, Maharashtra, West Bengal, Tamil Nadu, Madhya Pradesh, Andhra Pradesh, Rajasthan, Karnataka, and Gujarat.\r\nNote: Source - RAJYA SABHA SESSION - 259 UNSTARRED QUESTION No 2283. ANSWERED ON, 21TH March 2023. (Source - PFRDA). Data for Others include NRI Subscribers etc.\r\n\r\nDataset URL: https://data.gov.in/resource/statesuts-wise-enrolments-under-atal-pension-yojana-apy-8th-march-2023\r\n\r\nResource Title: States/UTs-wise Enrolments under Atal Pension Yojana (APY) as on 8th March, 2023",
+        "link": "https://artefacts.data.gov.in/state-ut-wise-enrolments-under-atal-pension-yojana-apy-as-on-8th-march-2023/",
+        "date": null,
+        "featured_image": null,
+        "category": "visualization"
+      },
+      {
+        "id": 110103,
+        "title": "Top 10 States/UTs with respect to Beneficiaries Enrolled under PM-SYM As on 25th Feb 2020",
+        "summary": "Ministry of Labour and Employment has launched Pradhan Mantri Shram Yogi Maan-dhan (PM-SYM) for old age protection of Unorganised Workers, in the form of monthly pension, which is a voluntary and contributory pension scheme for providing monthly minimum assured pension of Rs. 3,000/- on attaining the age of 60 years. The unorganised workers in the age group of 18-40 years whose monthly income is Rs. 15,000/- or less and not a member of EPFO/ESIC/NPS (Govt. funded) can join the scheme. Under the scheme, 50% monthly contribution is payable by the beneficiary and equal matching contribution is paid by the Central Government.\r\n\r\nThere were 3,699,836 beneficiaries enrolled under PM-SYM in India as on 25th February 2020. The top 10 States/UTs with respect to enrollment of beneficiaries under PM-",
+        "link": "https://artefacts.data.gov.in/top-10-states-uts-with-respect-to-beneficiaries-enrolled-under-pm-sym-as-on-25th-feb-2020/",
+        "date": null,
+        "featured_image": null,
+        "category": "visualization"
+      },
+      {
+        "id": 6301,
+        "title": "Top 10 States in New Lives Covered under Aam Admi Bima Yojana as on 30.09.2014",
+        "summary": "Aam Admi Bima Yojana came into effect from 01.01.2013 with the following main features: insurance cover of Rs.30,000 &amp; Permanent Total Disability/ death due to accident cover of  Rs.75,000 and Free Add-on benefit of scholarship of Rs.100/- per month for each child to a maximum of  two children of the beneficiary studying between 9th to 12th Standard.\r\n\r\nThe total number of new lives covered under Aam Admi Bima Yojana in all the States and UTs of India was 2830914 as on 30th September, 2014.\r\n\r\nTop 10 States/UTs in number of new lives covered under Aam Admi Bima Yojana as on 30th September, 2014 were: Rajasthan, Punjab, Andhra Pradesh, Karnataka, Uttar Pradesh, Tamil Nadu, Orissa, Gujarat, Chhattisgarh and Bihar.\r\n\r\nIn Rajasthan, total number of new lives covered under Aam Admi Bima Yoj",
+        "link": "https://artefacts.data.gov.in/top-10-states-in-new-lives-covered-under-aam-admi-bima-yojana-as-on-30-09-2014/",
+        "date": null,
+        "featured_image": null,
+        "category": "visualization"
+      }
+    ]
+  },
+  "beneficiary_blogs": {
+    "total_on_site": 1,
+    "loaded_in_session": 1,
+    "items": [
+      {
+        "id": 117391,
+        "title": "Analysis of Self Help Group (SHG) and Members under National Rural Livelihoods Mission (NRLM)",
+        "summary": "Deendayal Antyodaya Yojana-National Rural Livelihood Mission (DAY-NRLM) is a flagship poverty alleviation program implemented by the Ministry of Rural Development, Government of India. It aims to reduce poverty by enabling the poor household to access gainful self-employment and skilled wage employment opportunities resulting in sustainable and diversified livelihood options for the poor. This is one of the world's largest initiatives to improve the livelihoods of the poor.\r\nhttps://aajeevika.gov.in/about/introduction\r\n\r\nDeendayal Antyodaya Yojana- National Rural Livelihoods Mission (DAY-NRLM) aims at mobilizing about 9 crore rural poor households into Self Help Groups (SHGs) in a phased manner and provide them long-term support such that they diversify their livelihoods, improve their inc",
+        "link": "https://artefacts.data.gov.in/analysis-of-self-help-group-shg-and-members-under-national-rural-livelihoods-mission-nrlm/",
+        "date": null,
+        "featured_image": null,
+        "category": "blog"
+      }
+    ]
+  }
+}

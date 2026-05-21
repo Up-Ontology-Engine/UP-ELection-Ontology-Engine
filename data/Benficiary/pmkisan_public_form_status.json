@@ -1,0 +1,16 @@
+{
+  "record_id": "pmkisan-public-beneficiary-form-gorakhpur-audit",
+  "source_name": "PM-Kisan Beneficiary List public form",
+  "source_url": "https://pmkisan.gov.in/Rpt_BeneficiaryStatus_pub.aspx",
+  "source_file": "output\\pmkisan_beneficiary_status.html",
+  "district": "Gorakhpur",
+  "state": "Uttar Pradesh",
+  "target_period": "five years",
+  "page_timestamp": "16/05/2026 09:50 PM",
+  "uttar_pradesh_state_option": {
+    "value": "9",
+    "label": "UTTAR PRADESH"
+  },
+  "status": "Public form exists, but fetched HTML does not expose district/block/village beneficiary rows or a five-year/year-wise export.",
+  "privacy_note": "Individual beneficiary names/identifiers were not mass-scraped; JSON contains aggregate official beneficiary evidence only."
+}
