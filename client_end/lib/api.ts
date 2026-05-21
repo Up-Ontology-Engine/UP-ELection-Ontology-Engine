@@ -20,6 +20,29 @@ async function post<T>(path: string, body: unknown): Promise<T> {
   return res.json();
 }
 
+async function patch<T>(path: string, body: unknown): Promise<T> {
+  const res = await fetch(`${API_BASE}${path}`, {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+    cache: "no-store",
+  });
+  if (!res.ok) {
+    const message = await res.text().catch(() => "");
+    throw new Error(message || `API PATCH ${path} → ${res.status}`);
+  }
+  return res.json();
+}
+
+async function del<T>(path: string): Promise<T> {
+  const res = await fetch(`${API_BASE}${path}`, { method: "DELETE", cache: "no-store" });
+  if (!res.ok) {
+    const message = await res.text().catch(() => "");
+    throw new Error(message || `API DELETE ${path} → ${res.status}`);
+  }
+  return res.json();
+}
+
 export const api = {
   health: () => get<{ status: string; ac: string }>("/health"),
 
@@ -53,6 +76,35 @@ export const api = {
 
   // Reasoning
   reason: (question: string) => post<ReasoningResult>("/reasoning/query", { question }),
+
+  // Voter Conversion Engine
+  conversion: {
+    overview: (acId: string) => get<{ ac_id: string; booths: ConversionBoothSummary[] }>(`/ac/${acId}/conversion-overview`),
+    stats: (acId: string) => get<ConversionStats>(`/ac/${acId}/conversion-stats`),
+    targets: (boothId: string, contacted?: boolean, limit = 200) => {
+      const ct = contacted === undefined ? "" : `&contacted=${contacted}`;
+      return get<{ booth_id: string; count: number; targets: BeneficiaryRow[] }>(`/booth/${boothId}/conversion-targets?limit=${limit}${ct}`);
+    },
+    contact: (id: string, notes?: string, workerId?: string) =>
+      patch<{ beneficiary_id: string; contacted: boolean }>(`/beneficiaries/${id}/contact`, { notes, worker_id: workerId }),
+    import: (rows: Partial<BeneficiaryRow>[]) =>
+      post<{ imported: number }>("/beneficiaries/import", { rows }),
+    seedDemo: (acId: string, perBooth = 18) =>
+      post<{ ac_id: string; seeded: number }>(`/ac/${acId}/conversion/seed-demo?per_booth=${perBooth}`, {}),
+  },
+
+  // Chat session persistence
+  chat: {
+    sessions: (limit = 50) => get<{ sessions: ChatSession[] }>(`/chat/sessions?limit=${limit}`),
+    createSession: (title?: string) => post<ChatSession>("/chat/sessions", { title }),
+    getSession: (id: string) => get<ChatSession>(`/chat/sessions/${id}`),
+    messages: (id: string) => get<{ session_id: string; messages: ChatMessage[] }>(`/chat/sessions/${id}/messages`),
+    addMessage: (id: string, msg: { role: string; content: string; result?: unknown; ts: string }) =>
+      post<ChatMessage>(`/chat/sessions/${id}/messages`, msg),
+    renameSession: (id: string, title: string) =>
+      patch<{ session_id: string; title: string }>(`/chat/sessions/${id}/title`, { title }),
+    deleteSession: (id: string) => del<{ deleted: string }>(`/chat/sessions/${id}`),
+  },
 
   // Infrastructure
   infraOverview: () => get<InfraOverview>("/infrastructure/overview"),
@@ -428,4 +480,67 @@ export interface AcIntelSummary {
     is_primary_opp: boolean | null;
     party: string | null;
   }[];
+}
+
+export type PartyLean = "BJP" | "SP" | "BSP" | "INC" | "OTHERS" | "UNKNOWN";
+
+export interface BeneficiaryRow {
+  beneficiary_id: string;
+  voter_id: string | null;
+  name: string;
+  father_name: string | null;
+  address: string | null;
+  ward: string | null;
+  locality: string | null;
+  scheme_name: string;
+  benefit_desc: string | null;
+  phone: string | null;
+  party_lean: PartyLean;
+  contacted: boolean;
+  contact_date: string | null;
+  contact_notes: string | null;
+  worker_id: string | null;
+}
+
+export interface ConversionBoothSummary {
+  booth_id: string;
+  booth_number: number;
+  booth_name: string | null;
+  total: number;
+  supporters: number;
+  targets: number;
+  unknown_lean: number;
+  opp_lean: number;
+  contacted: number;
+  targets_contacted: number;
+}
+
+export interface ConversionStats {
+  ac_id: string;
+  total_beneficiaries: number;
+  total_supporters: number;
+  total_targets: number;
+  total_contacted: number;
+  targets_contacted: number;
+  booths_with_data: number;
+  contact_rate_pct: number;
+  target_contact_pct: number;
+  top_schemes: { scheme: string; count: number }[];
+}
+
+export interface ChatSession {
+  session_id: string;
+  title: string | null;
+  created_at: string;
+  updated_at: string;
+  message_count: number;
+}
+
+export interface ChatMessage {
+  message_id: string;
+  role: "user" | "assistant";
+  content: string;
+  result: ReasoningResult | null;
+  ts: string;
+  created_at: string;
 }

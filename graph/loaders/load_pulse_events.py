@@ -103,7 +103,10 @@ def load_pulse_events(pg_engine: sa.Engine, session: Session) -> int:
             session.run("""
                 UNWIND $rows AS r
                 MATCH (pe:PulseEvent {event_id: r.event_id})
-                MATCH (p:Party {party_id: r.entity})
+                OPTIONAL MATCH (p1:Party {party_id: r.entity})
+                OPTIONAL MATCH (p2:Party {name: r.entity})
+                WITH pe, coalesce(p1, p2) AS p
+                WHERE p IS NOT NULL
                 MERGE (pe)-[:MENTIONS_PARTY]->(p)
             """, {"rows": party_rows})
 

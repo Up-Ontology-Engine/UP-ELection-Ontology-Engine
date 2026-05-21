@@ -4,6 +4,7 @@ import os
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from typing import Optional
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -19,6 +20,12 @@ from .queries import (
     get_booth_geo, get_infrastructure_overview, get_graph_coverage,
     get_ac_intel_summary, get_ac_election_results, get_ac_demographics_summary,
     get_ac_booth_election_rows, get_ontology_status,
+    get_ac_demographic_segments, get_heatmap_coverage, get_twin_snapshot,
+    init_chat_tables, create_session, get_sessions, get_session,
+    get_session_messages, add_message, update_session_title, delete_session,
+    init_beneficiary_tables, seed_demo_beneficiaries,
+    get_conversion_overview, get_conversion_targets,
+    mark_beneficiary_contacted, bulk_import_beneficiaries, get_conversion_stats,
 )
 from .reasoning import reasoning_query
 
@@ -27,6 +34,18 @@ app = FastAPI(
     description="Booth-level political intelligence for Gorakhpur Urban AC",
     version="0.1.0",
 )
+
+
+@app.on_event("startup")
+def _startup():
+    try:
+        init_chat_tables()
+    except Exception as exc:
+        print(f"[startup] chat tables init failed: {exc}")
+    try:
+        init_beneficiary_tables()
+    except Exception as exc:
+        print(f"[startup] beneficiary tables init failed: {exc}")
 
 app.add_middleware(
     CORSMiddleware,
@@ -275,6 +294,25 @@ def ac_demographics_summary(ac_id: str):
     return data
 
 
+@app.get("/ac/{ac_id}/demographics/segments")
+def ac_demographics_segments(ac_id: str):
+    """Booth-level demographic segments for targeting and messaging."""
+    segments = get_ac_demographic_segments(_rac(ac_id))
+    return {"ac_id": ac_id, "segments": segments}
+
+
+@app.get("/ac/{ac_id}/heatmap-coverage")
+def ac_heatmap_coverage(ac_id: str, target_pct: float = Query(0.85, ge=0.1, le=1.0)):
+    """Heatmap readiness KPI. Target default is 85% geocoded booth coverage."""
+    return get_heatmap_coverage(_rac(ac_id), target_pct=target_pct)
+
+
+@app.get("/ac/{ac_id}/twin-snapshot")
+def ac_twin_snapshot(ac_id: str):
+    """Ontology twin snapshot combining graph topology, heatmap readiness, and segments."""
+    return get_twin_snapshot(_rac(ac_id))
+
+
 @app.get("/infrastructure/overview")
 def infrastructure_overview():
     """PostgreSQL table row counts + Neo4j node/edge topology for the Data Infrastructure page."""
@@ -308,6 +346,137 @@ def reasoning_endpoint(body: ReasoningRequest):
     if not body.question.strip():
         raise HTTPException(400, "question must not be empty")
     return reasoning_query(body.question.strip())
+
+
+# ── Chat session endpoints ────────────────────────────────────────────────────
+
+class CreateSessionRequest(BaseModel):
+    title: Optional[str] = None
+
+class AddMessageRequest(BaseModel):
+    role: str
+    content: str
+    result: Optional[dict] = None
+    ts: str
+
+class UpdateTitleRequest(BaseModel):
+    title: str
+
+
+@app.get("/chat/sessions")
+def list_sessions(limit: int = Query(50, ge=1, le=200)):
+    """List all reasoning sessions, newest first."""
+    return {"sessions": get_sessions(limit=limit)}
+
+
+@app.post("/chat/sessions")
+def new_session(body: CreateSessionRequest):
+    """Create a new reasoning session."""
+    return create_session(title=body.title)
+
+
+@app.get("/chat/sessions/{session_id}")
+def get_session_detail(session_id: str):
+    """Get session metadata."""
+    sess = get_session(session_id)
+    if not sess:
+        raise HTTPException(404, f"Session '{session_id}' not found.")
+    return sess
+
+
+@app.get("/chat/sessions/{session_id}/messages")
+def list_messages(session_id: str):
+    """Load all messages for a session."""
+    sess = get_session(session_id)
+    if not sess:
+        raise HTTPException(404, f"Session '{session_id}' not found.")
+    return {"session_id": session_id, "messages": get_session_messages(session_id)}
+
+
+@app.post("/chat/sessions/{session_id}/messages")
+def post_message(session_id: str, body: AddMessageRequest):
+    """Append a message to a session."""
+    sess = get_session(session_id)
+    if not sess:
+        raise HTTPException(404, f"Session '{session_id}' not found.")
+    return add_message(session_id, body.role, body.content, body.result, body.ts)
+
+
+@app.patch("/chat/sessions/{session_id}/title")
+def patch_session_title(session_id: str, body: UpdateTitleRequest):
+    """Rename a session."""
+    ok = update_session_title(session_id, body.title)
+    if not ok:
+        raise HTTPException(404, f"Session '{session_id}' not found.")
+    return {"session_id": session_id, "title": body.title}
+
+
+@app.delete("/chat/sessions/{session_id}")
+def remove_session(session_id: str):
+    """Delete a session and all its messages."""
+    ok = delete_session(session_id)
+    if not ok:
+        raise HTTPException(404, f"Session '{session_id}' not found.")
+    return {"deleted": session_id}
+
+
+# ── Voter Conversion Engine endpoints ────────────────────────────────────────
+
+class ContactRequest(BaseModel):
+    notes: Optional[str] = None
+    worker_id: Optional[str] = None
+
+class ImportBeneficiariesRequest(BaseModel):
+    rows: list[dict]
+
+
+@app.get("/ac/{ac_id}/conversion-overview")
+def conversion_overview(ac_id: str):
+    """Per-booth beneficiary + conversion funnel stats — powers the main dashboard."""
+    rows = get_conversion_overview(_rac(ac_id))
+    return {"ac_id": ac_id, "booths": rows}
+
+
+@app.get("/ac/{ac_id}/conversion-stats")
+def conversion_stats(ac_id: str):
+    """AC-level KPIs: total beneficiaries, targets, contacted, top schemes."""
+    return {"ac_id": ac_id, **get_conversion_stats(_rac(ac_id))}
+
+
+@app.get("/booth/{booth_id}/conversion-targets")
+def booth_conversion_targets(
+    booth_id: str,
+    contacted: Optional[bool] = Query(None, description="Filter by contacted status"),
+    limit: int = Query(200, ge=1, le=500),
+):
+    """Route map: ordered beneficiary list for a booth's field worker."""
+    rows = get_conversion_targets(booth_id, contacted=contacted, limit=limit)
+    return {"booth_id": booth_id, "count": len(rows), "targets": rows}
+
+
+@app.patch("/beneficiaries/{beneficiary_id}/contact")
+def contact_beneficiary(beneficiary_id: str, body: ContactRequest):
+    """Mark a beneficiary as contacted (with optional notes and worker ID)."""
+    ok = mark_beneficiary_contacted(beneficiary_id, body.notes, body.worker_id)
+    if not ok:
+        raise HTTPException(404, f"Beneficiary '{beneficiary_id}' not found.")
+    return {"beneficiary_id": beneficiary_id, "contacted": True}
+
+
+@app.post("/beneficiaries/import")
+def import_beneficiaries(body: ImportBeneficiariesRequest):
+    """Bulk-import beneficiary records from Electoral Roll / scheme data."""
+    if not body.rows:
+        raise HTTPException(400, "rows must not be empty")
+    count = bulk_import_beneficiaries(body.rows)
+    return {"imported": count}
+
+
+@app.post("/ac/{ac_id}/conversion/seed-demo")
+def seed_demo(ac_id: str, per_booth: int = Query(18, ge=5, le=50)):
+    """Seed synthetic beneficiary data for demo purposes."""
+    count = seed_demo_beneficiaries(_rac(ac_id), per_booth=per_booth)
+    return {"ac_id": ac_id, "seeded": count}
 
 
 # ── Helper functions for insight/recommendation text ─────────────────────────

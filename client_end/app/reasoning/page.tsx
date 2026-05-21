@@ -1,11 +1,12 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
-import { api, type ReasoningResult, type WebResult } from "@/lib/api";
+import { useState, useRef, useEffect, useCallback } from "react";
+import { api, type ReasoningResult, type WebResult, type ChatSession, type ChatMessage } from "@/lib/api";
 import {
-  Send, Code, Loader, Terminal, ChevronRight, Globe,
+  Send, Code, Loader, ChevronRight, Globe,
   Database, Zap, ExternalLink, ChevronDown, ChevronUp,
-  Brain, Clock, AlertCircle,
+  Brain, Clock, AlertCircle, Plus, Trash2, MessageSquare,
+  PencilLine,
 } from "lucide-react";
 
 const EXAMPLES = [
@@ -121,7 +122,6 @@ function AssistantMessage({ result }: { result: ReasoningResult }) {
 
   return (
     <div className="rounded-xl overflow-hidden" style={{ background: "#0b1626", border: "1px solid #1a2b44" }}>
-      {/* Mode header */}
       <div className="flex items-center gap-2 px-4 py-2"
         style={{ background: "#070e1b", borderBottom: "1px solid #1a2b4440" }}>
         <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full"
@@ -144,7 +144,6 @@ function AssistantMessage({ result }: { result: ReasoningResult }) {
         </span>
       </div>
 
-      {/* Answer text */}
       <div className="px-4 py-3">
         {result.error && !result.answer && (
           <div className="flex items-start gap-2 text-xs rounded-lg p-2 mb-3"
@@ -158,7 +157,6 @@ function AssistantMessage({ result }: { result: ReasoningResult }) {
         )}
       </div>
 
-      {/* Sources */}
       {hasWeb && (
         <div style={{ borderTop: "1px solid #1a2b4430" }}>
           <button onClick={() => setShowSources((s) => !s)}
@@ -176,7 +174,6 @@ function AssistantMessage({ result }: { result: ReasoningResult }) {
         </div>
       )}
 
-      {/* Cypher */}
       {hasCypher && (
         <div style={{ borderTop: "1px solid #1a2b4430" }}>
           <button onClick={() => setShowCypher((s) => !s)}
@@ -196,7 +193,6 @@ function AssistantMessage({ result }: { result: ReasoningResult }) {
         </div>
       )}
 
-      {/* Graph table */}
       {hasGraph && (
         <div style={{ borderTop: "1px solid #1a2b4430" }}>
           <button onClick={() => setShowTable((s) => !s)}
@@ -216,47 +212,190 @@ function AssistantMessage({ result }: { result: ReasoningResult }) {
   );
 }
 
-interface Message {
+interface LocalMessage {
   role: "user" | "assistant";
   content: string;
   result?: ReasoningResult;
   ts: string;
 }
 
+function sessionLabel(s: ChatSession) {
+  return s.title || "Untitled chat";
+}
+
+function fmtDate(iso: string) {
+  const d = new Date(iso);
+  const now = new Date();
+  const diffDays = Math.floor((now.getTime() - d.getTime()) / 86400000);
+  if (diffDays === 0) return d.toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit", hour12: false });
+  if (diffDays === 1) return "Yesterday";
+  if (diffDays < 7) return d.toLocaleDateString("en-IN", { weekday: "short" });
+  return d.toLocaleDateString("en-IN", { day: "2-digit", month: "short" });
+}
+
 export default function ReasoningPage() {
-  const [messages, setMessages] = useState<Message[]>([]);
-  const [input, setInput]       = useState("");
-  const [loading, setLoading]   = useState(false);
-  const bottomRef = useRef<HTMLDivElement>(null);
-  const inputRef  = useRef<HTMLInputElement>(null);
+  const [sessions, setSessions]             = useState<ChatSession[]>([]);
+  const [currentId, setCurrentId]           = useState<string | null>(null);
+  const [messages, setMessages]             = useState<LocalMessage[]>([]);
+  const [input, setInput]                   = useState("");
+  const [loading, setLoading]               = useState(false);
+  const [sessionsLoading, setSessionsLoading] = useState(true);
+  const [renaming, setRenaming]             = useState<string | null>(null);
+  const [renameVal, setRenameVal]           = useState("");
+  const bottomRef  = useRef<HTMLDivElement>(null);
+  const inputRef   = useRef<HTMLInputElement>(null);
+  const renameRef  = useRef<HTMLInputElement>(null);
 
   useEffect(() => { bottomRef.current?.scrollIntoView({ behavior: "smooth" }); }, [messages]);
 
+  // Load sessions on mount; restore last session from localStorage
+  useEffect(() => {
+    loadSessions().then(() => {
+      const saved = typeof window !== "undefined" ? localStorage.getItem("reasoning_session_id") : null;
+      if (saved) switchSession(saved);
+    });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  async function loadSessions() {
+    setSessionsLoading(true);
+    try {
+      const { sessions: list } = await api.chat.sessions();
+      setSessions(list);
+    } catch { /* backend may be offline */ }
+    setSessionsLoading(false);
+  }
+
+  const switchSession = useCallback(async (id: string) => {
+    setCurrentId(id);
+    if (typeof window !== "undefined") localStorage.setItem("reasoning_session_id", id);
+    setMessages([]);
+    try {
+      const { messages: dbMsgs } = await api.chat.messages(id);
+      const hydrated: LocalMessage[] = dbMsgs.map((m: ChatMessage) => ({
+        role: m.role,
+        content: m.content,
+        result: m.result ?? undefined,
+        ts: m.ts,
+      }));
+      setMessages(hydrated);
+    } catch { /* ignore load failure */ }
+  }, []);
+
+  async function newChat() {
+    try {
+      const sess = await api.chat.createSession();
+      setSessions((prev) => [sess, ...prev]);
+      setCurrentId(sess.session_id);
+      if (typeof window !== "undefined") localStorage.setItem("reasoning_session_id", sess.session_id);
+      setMessages([]);
+      setTimeout(() => inputRef.current?.focus(), 50);
+    } catch {
+      // Offline: just clear messages locally without persisting
+      setCurrentId(null);
+      setMessages([]);
+    }
+  }
+
+  async function removeSession(id: string, e: React.MouseEvent) {
+    e.stopPropagation();
+    try {
+      await api.chat.deleteSession(id);
+    } catch { /* ignore */ }
+    setSessions((prev) => prev.filter((s) => s.session_id !== id));
+    if (currentId === id) {
+      setCurrentId(null);
+      setMessages([]);
+      if (typeof window !== "undefined") localStorage.removeItem("reasoning_session_id");
+    }
+  }
+
+  function startRename(s: ChatSession, e: React.MouseEvent) {
+    e.stopPropagation();
+    setRenaming(s.session_id);
+    setRenameVal(s.title ?? "");
+    setTimeout(() => renameRef.current?.focus(), 30);
+  }
+
+  async function commitRename(id: string) {
+    const title = renameVal.trim() || "Untitled chat";
+    setRenaming(null);
+    setSessions((prev) => prev.map((s) => s.session_id === id ? { ...s, title } : s));
+    try { await api.chat.renameSession(id, title); } catch { /* ignore */ }
+  }
+
   function ts() {
     return new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false });
+  }
+
+  async function ensureSession(): Promise<string | null> {
+    if (currentId) return currentId;
+    try {
+      const sess = await api.chat.createSession();
+      setSessions((prev) => [sess, ...prev]);
+      setCurrentId(sess.session_id);
+      if (typeof window !== "undefined") localStorage.setItem("reasoning_session_id", sess.session_id);
+      return sess.session_id;
+    } catch {
+      return null;
+    }
   }
 
   async function submit(question?: string) {
     const q = (question ?? input).trim();
     if (!q || loading) return;
     setInput("");
-    setMessages((prev) => [...prev, { role: "user", content: q, ts: ts() }]);
+
+    const userTs = ts();
+    const userMsg: LocalMessage = { role: "user", content: q, ts: userTs };
+    setMessages((prev) => [...prev, userMsg]);
     setLoading(true);
+
+    const sessionId = await ensureSession();
+
+    // Persist user message (fire-and-forget)
+    if (sessionId) {
+      api.chat.addMessage(sessionId, { role: "user", content: q, ts: userTs }).catch(() => {});
+
+      // Auto-title: first message becomes session title
+      const isFirst = messages.length === 0;
+      if (isFirst) {
+        const title = q.length > 60 ? q.slice(0, 57) + "…" : q;
+        api.chat.renameSession(sessionId, title).catch(() => {});
+        setSessions((prev) => prev.map((s) => s.session_id === sessionId ? { ...s, title } : s));
+      }
+    }
+
     try {
       const result = await api.reason(q);
-      setMessages((prev) => [...prev, {
+      const asstTs = ts();
+      const asstMsg: LocalMessage = {
         role: "assistant",
         content: result.answer || result.summary || "Analysis complete.",
         result,
-        ts: ts(),
-      }]);
+        ts: asstTs,
+      };
+      setMessages((prev) => [...prev, asstMsg]);
+
+      // Persist assistant message (fire-and-forget)
+      if (sessionId) {
+        api.chat.addMessage(sessionId, {
+          role: "assistant",
+          content: asstMsg.content,
+          result: result as unknown as Record<string, unknown>,
+          ts: asstTs,
+        }).then(() => {
+          // Update local message_count
+          setSessions((prev) => prev.map((s) =>
+            s.session_id === sessionId
+              ? { ...s, message_count: s.message_count + 2, updated_at: new Date().toISOString() }
+              : s
+          ));
+        }).catch(() => {});
+      }
     } catch (err) {
       const msg = err instanceof Error ? err.message : "Unknown error";
-      setMessages((prev) => [...prev, {
-        role: "assistant",
-        content: `Error: ${msg}`,
-        ts: ts(),
-      }]);
+      setMessages((prev) => [...prev, { role: "assistant", content: `Error: ${msg}`, ts: ts() }]);
     } finally {
       setLoading(false);
       setTimeout(() => inputRef.current?.focus(), 50);
@@ -282,7 +421,7 @@ export default function ReasoningPage() {
           <div>
             <h1 className="text-sm font-bold text-white">AI Political Reasoning</h1>
             <p className="mono text-xs" style={{ color: "#2e4260" }}>
-              Knowledge Graph + Web Search · Sarvam-30b Synthesis
+              Knowledge Graph + Web Search · Sarvam-30b · Persistent Sessions
             </p>
           </div>
         </div>
@@ -297,31 +436,91 @@ export default function ReasoningPage() {
               </div>
             );
           })}
-          <button onClick={() => setMessages([])}
-            className="px-3 py-1.5 rounded text-xs hover:bg-white/5"
-            style={{ border: "1px solid #0f1d30", color: "#2e4260" }}>
-            Clear
-          </button>
         </div>
       </div>
 
       <div className="flex flex-1 overflow-hidden">
-        {/* Sidebar */}
-        <div className="w-52 flex-shrink-0 overflow-y-auto"
-          style={{ borderRight: "1px solid #0f1d30", background: "#040810" }}>
-          <div className="p-3">
-            <p className="mono mb-3" style={{ color: "#1e3a5f", fontSize: 9, letterSpacing: "0.1em" }}>
-              EXAMPLE QUERIES
+        {/* Sessions sidebar */}
+        <div className="w-56 flex-shrink-0 flex flex-col overflow-hidden"
+          style={{ borderRight: "1px solid #0f1d30", background: "#030710" }}>
+
+          {/* New chat button */}
+          <div className="p-3 flex-shrink-0" style={{ borderBottom: "1px solid #0f1d30" }}>
+            <button onClick={newChat}
+              className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-all hover:opacity-90"
+              style={{ background: "rgba(167,139,250,0.12)", border: "1px solid rgba(167,139,250,0.25)", color: "#a78bfa" }}>
+              <Plus size={12} /> New Chat
+            </button>
+          </div>
+
+          {/* Session list */}
+          <div className="flex-1 overflow-y-auto p-2">
+            {sessionsLoading && (
+              <p className="mono text-center py-4" style={{ color: "#1e3a5f", fontSize: 9 }}>Loading...</p>
+            )}
+            {!sessionsLoading && sessions.length === 0 && (
+              <p className="mono text-center py-4" style={{ color: "#1e3a5f", fontSize: 9 }}>No saved chats</p>
+            )}
+            {sessions.map((s) => (
+              <div key={s.session_id}
+                onClick={() => switchSession(s.session_id)}
+                className={`group relative flex flex-col gap-0.5 px-2 py-2 rounded-lg mb-1 cursor-pointer transition-all ${
+                  currentId === s.session_id ? "bg-white/6" : "hover:bg-white/3"
+                }`}
+                style={currentId === s.session_id ? { border: "1px solid #1a2b44" } : { border: "1px solid transparent" }}>
+
+                {renaming === s.session_id ? (
+                  <input
+                    ref={renameRef}
+                    value={renameVal}
+                    onChange={(e) => setRenameVal(e.target.value)}
+                    onBlur={() => commitRename(s.session_id)}
+                    onKeyDown={(e) => { if (e.key === "Enter") commitRename(s.session_id); if (e.key === "Escape") setRenaming(null); }}
+                    className="w-full text-xs bg-transparent outline-none text-white"
+                    onClick={(e) => e.stopPropagation()}
+                  />
+                ) : (
+                  <p className="text-xs font-medium truncate pr-10" style={{ color: currentId === s.session_id ? "#e2e8f0" : "#4d6480" }}>
+                    {sessionLabel(s)}
+                  </p>
+                )}
+
+                <p className="mono flex items-center gap-1" style={{ color: "#1e3a5f", fontSize: 9 }}>
+                  <MessageSquare size={8} /> {s.message_count}
+                  <span className="ml-auto">{fmtDate(s.updated_at)}</span>
+                </p>
+
+                {/* Action buttons — visible on hover / active */}
+                <div className="absolute right-1.5 top-1.5 hidden group-hover:flex items-center gap-0.5">
+                  <button onClick={(e) => startRename(s, e)}
+                    className="p-1 rounded hover:bg-white/10 transition-colors"
+                    style={{ color: "#2e4260" }}>
+                    <PencilLine size={9} />
+                  </button>
+                  <button onClick={(e) => removeSession(s.session_id, e)}
+                    className="p-1 rounded hover:bg-red-500/10 transition-colors"
+                    style={{ color: "#2e4260" }}>
+                    <Trash2 size={9} />
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Example queries */}
+          <div className="flex-shrink-0 overflow-y-auto p-2 max-h-56" style={{ borderTop: "1px solid #0f1d30" }}>
+            <p className="mono mb-2 px-1" style={{ color: "#1e3a5f", fontSize: 9, letterSpacing: "0.1em" }}>
+              EXAMPLES
             </p>
             {Object.entries(grouped).map(([cat, items]) => (
-              <div key={cat} className="mb-4">
-                <p className="mono mb-2" style={{ color: "#1e3a5f", fontSize: 9 }}>{cat.toUpperCase()}</p>
+              <div key={cat} className="mb-3">
+                <p className="mono mb-1 px-1" style={{ color: "#1e3a5f", fontSize: 9 }}>{cat.toUpperCase()}</p>
                 {items.map(({ q }) => (
                   <button key={q} onClick={() => submit(q)} disabled={loading}
-                    className="w-full text-left px-2 py-1.5 rounded text-xs mb-1 hover:bg-white/5 flex items-start gap-1.5 disabled:opacity-40"
+                    className="w-full text-left px-2 py-1 rounded text-xs mb-0.5 hover:bg-white/5 flex items-start gap-1.5 disabled:opacity-40"
                     style={{ color: "#3d5a7a" }}>
                     <ChevronRight size={8} className="mt-0.5 flex-shrink-0 opacity-50" />
-                    {q}
+                    <span className="line-clamp-2">{q}</span>
                   </button>
                 ))}
               </div>
@@ -329,7 +528,7 @@ export default function ReasoningPage() {
           </div>
         </div>
 
-        {/* Chat */}
+        {/* Chat area */}
         <div className="flex-1 flex flex-col overflow-hidden">
           <div className="flex-1 overflow-y-auto px-5 py-4 space-y-4">
 
@@ -341,8 +540,8 @@ export default function ReasoningPage() {
                 </div>
                 <p className="text-white font-bold text-lg mb-2">Political Intelligence Engine</p>
                 <p className="text-sm text-center mb-5 max-w-md" style={{ color: "#2e4260" }}>
-                  Combines real-time web search with our knowledge graph — ask about local booth data
-                  or broad UP political context; the system intelligently routes and synthesises.
+                  Combines real-time web search with our knowledge graph. Sessions are saved automatically —
+                  pick up any conversation after login.
                 </p>
                 <div className="flex items-center gap-5 text-xs mono" style={{ color: "#1e3a5f" }}>
                   <span className="flex items-center gap-1.5">
@@ -380,73 +579,68 @@ export default function ReasoningPage() {
                       <AssistantMessage result={m.result} />
                     </div>
                   ) : (
-                    <div className="rounded-xl px-4 py-3" style={{ background: "#0b1626", border: "1px solid #1a2b44" }}>
-                      <p className="text-sm" style={{ color: "#ef4444" }}>{m.content}</p>
+                    <div className="rounded-xl px-4 py-3"
+                      style={{ background: "#0b1626", border: "1px solid #1a2b44" }}>
+                      <p className="text-sm" style={{ color: "#cbd5e1" }}>{m.content}</p>
                     </div>
                   )}
-                  <div className="flex items-center gap-1 mt-1 px-1">
-                    <Clock size={8} style={{ color: "#0f1d30" }} />
-                    <span className="mono" style={{ color: "#0f1d30", fontSize: 9 }}>{m.ts}</span>
-                  </div>
+                  <p className="mono mt-1 px-1" style={{ color: "#1e3a5f", fontSize: 9 }}>{m.ts}</p>
                 </div>
-
-                {m.role === "user" && (
-                  <div className="w-7 h-7 rounded-md flex-shrink-0 flex items-center justify-center mt-0.5"
-                    style={{ background: "rgba(249,115,22,0.1)", border: "1px solid rgba(249,115,22,0.2)" }}>
-                    <span className="mono text-xs font-bold" style={{ color: "#f97316" }}>U</span>
-                  </div>
-                )}
               </div>
             ))}
 
             {loading && (
               <div className="flex gap-3">
-                <div className="w-7 h-7 rounded-md flex-shrink-0 flex items-center justify-center"
+                <div className="w-7 h-7 rounded-md flex-shrink-0 flex items-center justify-center mt-0.5"
                   style={{ background: "rgba(167,139,250,0.15)", border: "1px solid rgba(167,139,250,0.3)" }}>
-                  <Loader size={12} className="animate-spin" style={{ color: "#a78bfa" }} />
+                  <Loader size={12} style={{ color: "#a78bfa" }} className="animate-spin" />
                 </div>
                 <div className="rounded-xl px-4 py-3"
                   style={{ background: "#0b1626", border: "1px solid #1a2b44" }}>
-                  <div className="space-y-1.5">
+                  <div className="flex flex-col gap-1.5">
                     {[
-                      { Icon: Database, label: "Querying knowledge graph…", color: "#10b981" },
-                      { Icon: Globe,    label: "Searching the web…",        color: "#3b82f6" },
-                      { Icon: Brain,    label: "Synthesising answer…",      color: "#a78bfa" },
-                    ].map(({ Icon: StepIcon, label, color }) => (
-                      <div key={label} className="flex items-center gap-2">
-                        <StepIcon size={10} style={{ color }} />
-                        <span className="mono text-xs" style={{ color: "#2e4260" }}>{label}</span>
+                      { icon: Database, color: "#10b981", label: "Querying graph..." },
+                      { icon: Globe,    color: "#3b82f6", label: "Searching web..."  },
+                      { icon: Brain,    color: "#a78bfa", label: "Synthesising..."   },
+                    ].map(({ icon: Ic, color, label }, idx) => (
+                      <div key={idx} className="flex items-center gap-2 mono" style={{ color, fontSize: 10 }}>
+                        <Ic size={10} className="animate-pulse" style={{ animationDelay: `${idx * 0.3}s` }} />
+                        {label}
                       </div>
                     ))}
                   </div>
                 </div>
               </div>
             )}
+
             <div ref={bottomRef} />
           </div>
 
-          {/* Input */}
-          <div className="px-5 py-4 flex-shrink-0"
-            style={{ borderTop: "1px solid #0f1d30", background: "#040810" }}>
-            <div className="flex gap-3">
+          {/* Input bar */}
+          <div className="flex-shrink-0 p-4" style={{ borderTop: "1px solid #0f1d30" }}>
+            <div className="flex gap-2 rounded-xl p-1"
+              style={{ background: "#070e1b", border: "1px solid #1a2b44" }}>
               <input
                 ref={inputRef}
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                onKeyDown={(e) => e.key === "Enter" && !e.shiftKey && submit()}
-                placeholder="Ask about booths, candidates, issues, UP politics, current events…"
-                className="flex-1 px-4 py-3 rounded-xl text-sm text-white outline-none"
-                style={{ background: "#0b1626", border: "1px solid #0f1d30" }}
+                onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); submit(); } }}
+                placeholder="Ask about booths, candidates, issues, or UP politics…"
+                disabled={loading}
+                className="flex-1 bg-transparent outline-none text-sm text-white placeholder-opacity-30 px-3 py-2 disabled:opacity-50"
+                style={{ color: "#e2e8f0" }}
               />
-              <button onClick={() => submit()} disabled={loading || !input.trim()}
-                className="px-5 rounded-xl flex items-center gap-2 text-sm font-semibold hover:opacity-80 disabled:opacity-30"
-                style={{ background: "linear-gradient(135deg,#7c3aed,#2563eb)", color: "#fff" }}>
-                <Send size={15} />
+              <button
+                onClick={() => submit()}
+                disabled={loading || !input.trim()}
+                className="flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-medium transition-all disabled:opacity-40"
+                style={{ background: "rgba(167,139,250,0.15)", border: "1px solid rgba(167,139,250,0.3)", color: "#a78bfa" }}>
+                {loading ? <Loader size={12} className="animate-spin" /> : <Send size={12} />}
+                {loading ? "…" : "Ask"}
               </button>
             </div>
-            <p className="mono mt-2" style={{ color: "#0f1d30", fontSize: 9 }}>
-              Enter to submit · Graph + DuckDuckGo + Wikipedia + Sarvam-30b ·{" "}
-              {messages.filter((m) => m.role === "user").length} queries this session
+            <p className="mono text-center mt-2" style={{ color: "#1e3a5f", fontSize: 9 }}>
+              Chats auto-saved · Sessions persist across logins
             </p>
           </div>
         </div>
