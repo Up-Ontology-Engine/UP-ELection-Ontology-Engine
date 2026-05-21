@@ -19,6 +19,7 @@ from .queries import (
     get_booth_geo, get_infrastructure_overview, get_graph_coverage,
     get_ac_intel_summary, get_ac_election_results, get_ac_demographics_summary,
     get_ac_booth_election_rows, get_ontology_status,
+    get_ac_level_pulse, get_ac_level_issues,
 )
 from .reasoning import reasoning_query
 
@@ -132,6 +133,14 @@ def booth_summary(booth_id: str, days: int = Query(7, ge=1, le=90)):
         # Insight + recommendation
         "key_insight": insight,
         "recommendation": recommendation,
+        # Honest attribution metadata — UI should gate on this
+        "attribution_level": (
+            "booth" if (meta.get("event_count") or 0) > 0 else "none"
+        ),
+        "data_warning": (
+            None if (meta.get("event_count") or 0) > 0
+            else "Insufficient booth-linked digital evidence — no pulse events geo-attributed to this booth"
+        ),
     }
 
 
@@ -293,6 +302,34 @@ def graph_coverage(ac_id: str):
     rows = get_graph_coverage(ac_id)
     neo4j_count = sum(1 for b in rows if b.get("in_neo4j"))
     return {"ac_id": ac_id, "total": len(rows), "in_neo4j": neo4j_count, "booths": rows}
+
+
+@app.get("/ac/{ac_id}/intel")
+def ac_intel(ac_id: str, days: int = Query(365, ge=1, le=3650)):
+    """
+    Honest AC-level pulse intelligence derived from pulse_events.
+
+    Returns BJP/OPP pulse scores, lean, top issues, and attribution metadata.
+    When no booth-level geo attribution exists the response carries a 'warning'
+    field explaining that all signals are constituency-wide only — callers should
+    surface this to the user rather than presenting AC scores as booth data.
+    """
+    pulse  = get_ac_level_pulse(_rac(ac_id), days=days)
+    issues = get_ac_level_issues(_rac(ac_id), days=days)
+    return {
+        "ac_id":             ac_id,
+        "attribution_level": pulse["attribution_level"],
+        "window_days":       days,
+        "total_events":      pulse["total_events"],
+        "polarity_events":   pulse["polarity_events"],
+        "booth_attributed":  pulse["booth_attributed"],
+        "avg_geo_confidence": pulse["avg_geo_confidence"],
+        "bjp_pulse":         pulse["bjp_pulse"],
+        "opp_pulse":         pulse["opp_pulse"],
+        "lean":              pulse["lean"],
+        "top_issues":        issues,
+        "warning":           pulse["warning"],
+    }
 
 
 class ReasoningRequest(BaseModel):
