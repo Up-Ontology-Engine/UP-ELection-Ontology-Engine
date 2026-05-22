@@ -80,9 +80,9 @@ export default async function DemographicsPage() {
   boothRows.forEach((r: BoothElectionRow) => {
     const entry = boothMap[r.booth_number];
     if (!entry) return;
-    if (r.party === "BJP") entry.bjp_share = r.vote_share;
-    if (r.party === "SP")  entry.sp_share  = r.vote_share;
-    if (r.party === "BSP") entry.bsp_share = r.vote_share;
+    if (r.party === "BJP") entry.bjp_share = r.vote_share ?? 0;
+    if (r.party === "SP")  entry.sp_share  = r.vote_share ?? 0;
+    if (r.party === "BSP") entry.bsp_share = r.vote_share ?? 0;
     if (r.turnout_percent != null) entry.turnout_pct = r.turnout_percent;
   });
 
