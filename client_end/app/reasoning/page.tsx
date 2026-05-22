@@ -35,15 +35,15 @@ function SourceCard({ r }: { r: WebResult }) {
   return (
     <a href={r.url || "#"} target="_blank" rel="noopener noreferrer"
       className="block rounded-lg p-2.5 transition-all hover:bg-white/5"
-      style={{ border: "1px solid #1a2b44", background: "#060e1c" }}>
+      style={{ border: "1px solid var(--border)", background: "var(--bg-card)" }}>
       <div className="flex items-start justify-between gap-2">
-        <p className="text-xs font-medium text-white line-clamp-2 flex-1">{r.title}</p>
-        {r.url && <ExternalLink size={10} className="flex-shrink-0 mt-0.5" style={{ color: "#4d6480" }} />}
+        <p className="text-xs font-medium line-clamp-2 flex-1" style={{ color: "var(--text-1)" }}>{r.title}</p>
+        {r.url && <ExternalLink size={10} className="flex-shrink-0 mt-0.5" style={{ color: "var(--text-3)" }} />}
       </div>
-      <p className="text-xs mt-1 line-clamp-2" style={{ color: "#4d6480" }}>{r.snippet}</p>
-      <p className="mono mt-1.5 flex items-center gap-1" style={{ color: "#2e4260", fontSize: 9 }}>
+      <p className="text-xs mt-1 line-clamp-2" style={{ color: "var(--text-3)" }}>{r.snippet}</p>
+      <p className="mono mt-1.5 flex items-center gap-1" style={{ color: "var(--text-4)", fontSize: 9 }}>
         <Globe size={8} /> {host}
-        <span className="ml-1 px-1 rounded" style={{ background: "#0f1929", color: "#2e4260" }}>
+        <span className="ml-1 px-1 rounded" style={{ background: "var(--bg-card)", color: "var(--text-4)" }}>
           {r.source}
         </span>
       </p>
@@ -55,21 +55,21 @@ function GraphTable({ results }: { results: Record<string, unknown>[] }) {
   if (!results.length) return null;
   const keys = Object.keys(results[0]);
   return (
-    <div className="rounded overflow-hidden mt-2" style={{ border: "1px solid #1a2b44" }}>
+    <div className="rounded overflow-hidden mt-2" style={{ border: "1px solid var(--border)" }}>
       <div className="px-3 py-1.5 flex items-center gap-2"
-        style={{ background: "#060b14", borderBottom: "1px solid #1a2b44" }}>
+        style={{ background: "var(--bg-base)", borderBottom: "1px solid var(--border)" }}>
         <Database size={10} style={{ color: "#10b981" }} />
-        <span className="mono text-xs" style={{ color: "#4d6480" }}>
+        <span className="mono text-xs" style={{ color: "var(--text-3)" }}>
           {results.length} row{results.length !== 1 ? "s" : ""} from graph
         </span>
       </div>
       <div className="overflow-x-auto max-h-48">
         <table className="w-full text-xs">
           <thead>
-            <tr style={{ background: "#060b14", borderBottom: "1px solid #1a2b44" }}>
+            <tr style={{ background: "var(--bg-base)", borderBottom: "1px solid var(--border)" }}>
               {keys.map((k) => (
                 <th key={k} className="px-3 py-1.5 text-left"
-                  style={{ color: "#2e4260", fontSize: 9, textTransform: "uppercase" }}>
+                  style={{ color: "var(--text-4)", fontSize: 9, textTransform: "uppercase" }}>
                   {k}
                 </th>
               ))}
@@ -77,10 +77,10 @@ function GraphTable({ results }: { results: Record<string, unknown>[] }) {
           </thead>
           <tbody>
             {results.slice(0, 25).map((row, ri) => (
-              <tr key={ri} style={{ borderBottom: "1px solid #1a2b4420",
-                background: ri % 2 === 0 ? "#0f1929" : "transparent" }}>
+              <tr key={ri} style={{ borderBottom: "1px solid var(--border)",
+                background: ri % 2 === 0 ? "var(--bg-card)" : "transparent" }}>
                 {keys.map((k) => (
-                  <td key={k} className="px-3 py-1.5 mono" style={{ color: "#8ba0bc" }}>
+                  <td key={k} className="px-3 py-1.5 mono" style={{ color: "var(--text-2)" }}>
                     {String(row[k] ?? "—")}
                   </td>
                 ))}
@@ -121,21 +121,21 @@ function AssistantMessage({ result }: { result: ReasoningResult }) {
   }
 
   return (
-    <div className="rounded-xl overflow-hidden" style={{ background: "#0b1626", border: "1px solid #1a2b44" }}>
+    <div className="rounded-xl overflow-hidden" style={{ background: "var(--bg-card)", border: "1px solid var(--border)" }}>
       <div className="flex items-center gap-2 px-4 py-2"
-        style={{ background: "#070e1b", borderBottom: "1px solid #1a2b4440" }}>
+        style={{ background: "var(--bg-surface)", borderBottom: "1px solid var(--border)" }}>
         <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full"
           style={{ background: conf.bg, border: `1px solid ${conf.color}30` }}>
           <Icon size={9} style={{ color: conf.color }} />
           <span className="mono font-bold" style={{ color: conf.color, fontSize: 9 }}>{conf.label}</span>
         </div>
         {hasGraph && (
-          <span className="mono" style={{ color: "#2e4260", fontSize: 9 }}>
+          <span className="mono" style={{ color: "var(--text-4)", fontSize: 9 }}>
             {result.row_count} graph rows
           </span>
         )}
         {hasWeb && (
-          <span className="mono flex items-center gap-1" style={{ color: "#2e4260", fontSize: 9 }}>
+          <span className="mono flex items-center gap-1" style={{ color: "var(--text-4)", fontSize: 9 }}>
             <Globe size={8} /> {result.web_results.length} sources
           </span>
         )}
@@ -158,7 +158,7 @@ function AssistantMessage({ result }: { result: ReasoningResult }) {
       </div>
 
       {hasWeb && (
-        <div style={{ borderTop: "1px solid #1a2b4430" }}>
+        <div style={{ borderTop: "1px solid var(--border)" }}>
           <button onClick={() => setShowSources((s) => !s)}
             className="w-full flex items-center gap-2 px-4 py-2 text-xs hover:bg-white/3 transition-colors"
             style={{ color: "#3b82f6" }}>
@@ -175,7 +175,7 @@ function AssistantMessage({ result }: { result: ReasoningResult }) {
       )}
 
       {hasCypher && (
-        <div style={{ borderTop: "1px solid #1a2b4430" }}>
+        <div style={{ borderTop: "1px solid var(--border)" }}>
           <button onClick={() => setShowCypher((s) => !s)}
             className="w-full flex items-center gap-2 px-4 py-2 text-xs hover:bg-white/3 transition-colors"
             style={{ color: "#8b5cf6" }}>
@@ -185,7 +185,7 @@ function AssistantMessage({ result }: { result: ReasoningResult }) {
           {showCypher && (
             <div className="px-4 pb-3">
               <pre className="p-3 rounded text-xs overflow-x-auto"
-                style={{ background: "#030508", color: "#8b5cf6", border: "1px solid #1a2b44", fontSize: 11 }}>
+                style={{ background: "var(--bg-base)", color: "#8b5cf6", border: "1px solid var(--border)", fontSize: 11 }}>
                 {result.cypher}
               </pre>
             </div>
@@ -194,7 +194,7 @@ function AssistantMessage({ result }: { result: ReasoningResult }) {
       )}
 
       {hasGraph && (
-        <div style={{ borderTop: "1px solid #1a2b4430" }}>
+        <div style={{ borderTop: "1px solid var(--border)" }}>
           <button onClick={() => setShowTable((s) => !s)}
             className="w-full flex items-center gap-2 px-4 py-2 text-xs hover:bg-white/3 transition-colors"
             style={{ color: "#10b981" }}>
@@ -408,10 +408,10 @@ export default function ReasoningPage() {
   }, {});
 
   return (
-    <div className="flex h-screen flex-col" style={{ background: "#040810" }}>
+    <div className="flex h-screen flex-col" style={{ background: "var(--bg-base)" }}>
       {/* Header */}
       <div className="flex items-center justify-between px-5 py-3 flex-shrink-0"
-        style={{ borderBottom: "1px solid #0f1d30", background: "#040810" }}>
+        style={{ borderBottom: "1px solid var(--border)", background: "var(--bg-base)" }}>
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 rounded-lg flex items-center justify-center"
             style={{ background: "linear-gradient(135deg,rgba(167,139,250,0.2),rgba(59,130,246,0.2))",
@@ -419,8 +419,8 @@ export default function ReasoningPage() {
             <Brain size={15} style={{ color: "#a78bfa" }} />
           </div>
           <div>
-            <h1 className="text-sm font-bold text-white">AI Political Reasoning</h1>
-            <p className="mono text-xs" style={{ color: "#2e4260" }}>
+            <h1 className="text-sm font-bold" style={{ color: "var(--text-1)" }}>AI Political Reasoning</h1>
+            <p className="mono text-xs" style={{ color: "var(--text-4)" }}>
               Knowledge Graph + Web Search · Sarvam-30b · Persistent Sessions
             </p>
           </div>
@@ -442,10 +442,10 @@ export default function ReasoningPage() {
       <div className="flex flex-1 overflow-hidden">
         {/* Sessions sidebar */}
         <div className="w-56 flex-shrink-0 flex flex-col overflow-hidden"
-          style={{ borderRight: "1px solid #0f1d30", background: "#030710" }}>
+          style={{ borderRight: "1px solid var(--border)", background: "var(--bg-base)" }}>
 
           {/* New chat button */}
-          <div className="p-3 flex-shrink-0" style={{ borderBottom: "1px solid #0f1d30" }}>
+          <div className="p-3 flex-shrink-0" style={{ borderBottom: "1px solid var(--border)" }}>
             <button onClick={newChat}
               className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-all hover:opacity-90"
               style={{ background: "rgba(167,139,250,0.12)", border: "1px solid rgba(167,139,250,0.25)", color: "#a78bfa" }}>
@@ -467,7 +467,7 @@ export default function ReasoningPage() {
                 className={`group relative flex flex-col gap-0.5 px-2 py-2 rounded-lg mb-1 cursor-pointer transition-all ${
                   currentId === s.session_id ? "bg-white/6" : "hover:bg-white/3"
                 }`}
-                style={currentId === s.session_id ? { border: "1px solid #1a2b44" } : { border: "1px solid transparent" }}>
+                style={currentId === s.session_id ? { border: "1px solid var(--border)" } : { border: "1px solid transparent" }}>
 
                 {renaming === s.session_id ? (
                   <input
@@ -476,11 +476,11 @@ export default function ReasoningPage() {
                     onChange={(e) => setRenameVal(e.target.value)}
                     onBlur={() => commitRename(s.session_id)}
                     onKeyDown={(e) => { if (e.key === "Enter") commitRename(s.session_id); if (e.key === "Escape") setRenaming(null); }}
-                    className="w-full text-xs bg-transparent outline-none text-white"
+                    className="w-full text-xs bg-transparent outline-none" style={{ color: "var(--text-1)" }}
                     onClick={(e) => e.stopPropagation()}
                   />
                 ) : (
-                  <p className="text-xs font-medium truncate pr-10" style={{ color: currentId === s.session_id ? "#e2e8f0" : "#4d6480" }}>
+                  <p className="text-xs font-medium truncate pr-10" style={{ color: currentId === s.session_id ? "var(--text-1)" : "var(--text-3)" }}>
                     {sessionLabel(s)}
                   </p>
                 )}
@@ -494,12 +494,12 @@ export default function ReasoningPage() {
                 <div className="absolute right-1.5 top-1.5 hidden group-hover:flex items-center gap-0.5">
                   <button onClick={(e) => startRename(s, e)}
                     className="p-1 rounded hover:bg-white/10 transition-colors"
-                    style={{ color: "#2e4260" }}>
+                    style={{ color: "var(--text-4)" }}>
                     <PencilLine size={9} />
                   </button>
                   <button onClick={(e) => removeSession(s.session_id, e)}
                     className="p-1 rounded hover:bg-red-500/10 transition-colors"
-                    style={{ color: "#2e4260" }}>
+                    style={{ color: "var(--text-4)" }}>
                     <Trash2 size={9} />
                   </button>
                 </div>
@@ -508,7 +508,7 @@ export default function ReasoningPage() {
           </div>
 
           {/* Example queries */}
-          <div className="flex-shrink-0 overflow-y-auto p-2 max-h-56" style={{ borderTop: "1px solid #0f1d30" }}>
+          <div className="flex-shrink-0 overflow-y-auto p-2 max-h-56" style={{ borderTop: "1px solid var(--border)" }}>
             <p className="mono mb-2 px-1" style={{ color: "#1e3a5f", fontSize: 9, letterSpacing: "0.1em" }}>
               EXAMPLES
             </p>
@@ -538,8 +538,8 @@ export default function ReasoningPage() {
                   style={{ background: "rgba(167,139,250,0.1)", border: "1px solid rgba(167,139,250,0.2)" }}>
                   <Brain size={36} style={{ color: "#a78bfa" }} />
                 </div>
-                <p className="text-white font-bold text-lg mb-2">Political Intelligence Engine</p>
-                <p className="text-sm text-center mb-5 max-w-md" style={{ color: "#2e4260" }}>
+                <p className="font-bold text-lg mb-2" style={{ color: "var(--text-1)" }}>Political Intelligence Engine</p>
+                <p className="text-sm text-center mb-5 max-w-md" style={{ color: "var(--text-4)" }}>
                   Combines real-time web search with our knowledge graph. Sessions are saved automatically —
                   pick up any conversation after login.
                 </p>
@@ -572,7 +572,7 @@ export default function ReasoningPage() {
                   {m.role === "user" ? (
                     <div className="inline-block rounded-xl px-4 py-2.5"
                       style={{ background: "rgba(249,115,22,0.07)", border: "1px solid rgba(249,115,22,0.2)" }}>
-                      <p className="text-sm text-white">{m.content}</p>
+                      <p className="text-sm" style={{ color: "var(--text-1)" }}>{m.content}</p>
                     </div>
                   ) : m.result ? (
                     <div className="max-w-3xl w-full">
@@ -580,7 +580,7 @@ export default function ReasoningPage() {
                     </div>
                   ) : (
                     <div className="rounded-xl px-4 py-3"
-                      style={{ background: "#0b1626", border: "1px solid #1a2b44" }}>
+                      style={{ background: "var(--bg-card)", border: "1px solid var(--border)" }}>
                       <p className="text-sm" style={{ color: "#cbd5e1" }}>{m.content}</p>
                     </div>
                   )}
@@ -596,7 +596,7 @@ export default function ReasoningPage() {
                   <Loader size={12} style={{ color: "#a78bfa" }} className="animate-spin" />
                 </div>
                 <div className="rounded-xl px-4 py-3"
-                  style={{ background: "#0b1626", border: "1px solid #1a2b44" }}>
+                  style={{ background: "var(--bg-card)", border: "1px solid var(--border)" }}>
                   <div className="flex flex-col gap-1.5">
                     {[
                       { icon: Database, color: "#10b981", label: "Querying graph..." },
@@ -617,9 +617,9 @@ export default function ReasoningPage() {
           </div>
 
           {/* Input bar */}
-          <div className="flex-shrink-0 p-4" style={{ borderTop: "1px solid #0f1d30" }}>
+          <div className="flex-shrink-0 p-4" style={{ borderTop: "1px solid var(--border)" }}>
             <div className="flex gap-2 rounded-xl p-1"
-              style={{ background: "#070e1b", border: "1px solid #1a2b44" }}>
+              style={{ background: "var(--bg-surface)", border: "1px solid var(--border)" }}>
               <input
                 ref={inputRef}
                 value={input}
@@ -627,8 +627,8 @@ export default function ReasoningPage() {
                 onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); submit(); } }}
                 placeholder="Ask about booths, candidates, issues, or UP politics…"
                 disabled={loading}
-                className="flex-1 bg-transparent outline-none text-sm text-white placeholder-opacity-30 px-3 py-2 disabled:opacity-50"
-                style={{ color: "#e2e8f0" }}
+                className="flex-1 bg-transparent outline-none text-sm px-3 py-2 disabled:opacity-50"
+                style={{ color: "var(--text-1)" }}
               />
               <button
                 onClick={() => submit()}

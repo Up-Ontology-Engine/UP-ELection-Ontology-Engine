@@ -15,11 +15,13 @@ from .queries import (
     get_booth_issues, get_booth_pulse, get_booth_comments,
     get_ac_candidates, get_scheme_gap,
     get_booth_quality, get_booth_narratives, get_booth_contradictions,
+    get_booth_actions,
     get_ac_schemes, get_ac_narratives, get_ac_events,
     get_ac_quality, get_ac_recommendations, get_graph_subgraph,
     get_booth_geo, get_infrastructure_overview, get_graph_coverage,
     get_ac_intel_summary, get_ac_election_results, get_ac_demographics_summary,
     get_ac_booth_election_rows, get_ontology_status,
+    get_ac_issue_breakdown,
     get_booth_segments, get_booth_conversion,
     get_ac_demographic_segments, get_heatmap_coverage, get_twin_snapshot,
     init_chat_tables, create_session, get_sessions, get_session,
@@ -163,6 +165,13 @@ def booth_summary(booth_id: str, days: int = Query(7, ge=1, le=90)):
     }
 
 
+@app.get("/booth/{booth_id}/actions")
+def booth_actions(booth_id: str):
+    """Prioritised action recommendations derived from issues, narratives, and scheme gaps for a booth."""
+    actions = get_booth_actions(booth_id)
+    return {"booth_id": booth_id, "count": len(actions), "actions": actions}
+
+
 @app.get("/booth/{booth_id}/quality")
 def booth_quality(booth_id: str):
     """Data quality metrics for a booth — shows WHY confidence is what it is."""
@@ -292,6 +301,27 @@ def ac_geo(ac_id: str):
 def ac_intel_summary(ac_id: str):
     """Combined intelligence summary: voter stats (PG) + issues/videos/candidates (Neo4j)."""
     return {"ac_id": ac_id, **get_ac_intel_summary(ac_id)}
+
+
+@app.get("/ac/{ac_id}/issue-breakdown")
+def ac_issue_breakdown(ac_id: str):
+    """
+    Pain-point engine core data.
+
+    Per-issue aggregation across all booths in the AC:
+      - total_signals, affected_booth_count, avg_polarity, avg_confidence
+      - severity (high / medium / low), trend (rising / falling / stable)
+      - top_booths: up to 5 booths with highest signal density for that issue
+      - evidence: up to 3 high-confidence text snippets from pulse_events
+
+    Powers /pain-points, dashboard risk summary, and heatmap tooltips.
+    """
+    breakdown = get_ac_issue_breakdown(_rac(ac_id))
+    return {
+        "ac_id":  ac_id,
+        "count":  len(breakdown),
+        "issues": breakdown,
+    }
 
 
 @app.get("/ac/{ac_id}/booth-election-rows")

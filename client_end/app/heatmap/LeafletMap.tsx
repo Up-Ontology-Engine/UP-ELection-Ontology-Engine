@@ -5,7 +5,7 @@ import { MapContainer, TileLayer, CircleMarker, Popup, useMap } from "react-leaf
 import type { GraphCoverageBooth } from "@/lib/api";
 import "leaflet/dist/leaflet.css";
 
-export type HeatLayer = "voters" | "kg_coverage" | "bjp_lean" | "confidence";
+export type HeatLayer = "voters" | "kg_coverage" | "bjp_lean" | "confidence" | "top_issue";
 
 export interface PlottedBooth extends GraphCoverageBooth {
   synthLat: number;
@@ -21,6 +21,21 @@ interface Props {
 
 // Voter count thresholds for normalised heat colour
 const MAX_VOTERS = 3000;
+
+const ISSUE_COLORS: Record<string, string> = {
+  water:        "#3b82f6",
+  roads:        "#f59e0b",
+  electricity:  "#fbbf24",
+  jobs:         "#10b981",
+  health:       "#ec4899",
+  education:    "#8b5cf6",
+  law_order:    "#ef4444",
+  farmer:       "#84cc16",
+  corruption:   "#f97316",
+  price_rise:   "#dc2626",
+  women_safety: "#db2777",
+  housing:      "#6366f1",
+};
 
 function hsl(h: number, s: number, l: number) {
   return `hsl(${h},${s}%,${l}%)`;
@@ -59,6 +74,13 @@ function getHeatColor(b: PlottedBooth, layer: HeatLayer): { fill: string; glow: 
     if (l === "MEDIUM") return { fill: "#f59e0b", glow: "#f59e0b" };
     if (l === "LOW")    return { fill: "#ef4444", glow: "#ef4444" };
     return { fill: "#1e3a5f", glow: "#1e3a5f" };
+  }
+
+  if (layer === "top_issue") {
+    const issue = b.top_issue;
+    if (!issue) return { fill: "#374151", glow: "#374151" };
+    const color = ISSUE_COLORS[issue] ?? "#94a3b8";
+    return { fill: color, glow: color };
   }
 
   return { fill: "#1e3a5f", glow: "#1e3a5f" };
@@ -162,6 +184,7 @@ export default function LeafletMap({ booths, layer, onSelect, selected }: Props)
                       ["In KG",     b.in_neo4j ? "Yes" : "No"],
                       ["BJP pulse", b.bjp_pulse_score?.toFixed(3) ?? "No data"],
                       ["Quality",   b.confidence_label ?? "No data"],
+                      ["Top issue", b.top_issue ? b.top_issue.replace(/_/g, " ") : "No data"],
                     ].map(([k, v]) => (
                       <div key={String(k)} style={{ display: "flex", justifyContent: "space-between" }}>
                         <span style={{ color: "#64748b" }}>{k}</span>
