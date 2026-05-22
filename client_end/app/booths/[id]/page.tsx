@@ -27,6 +27,11 @@ export default async function BoothDetailPage({ params }: Props) {
     boothActions = actResult.actions;
   } catch {}
 
+  const [segments, conversion] = await Promise.all([
+    api.boothSegments(id),
+    api.boothConversion(id),
+  ]);
+
   if (!summary) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center" style={{ background: "var(--bg-base)" }}>
@@ -320,6 +325,78 @@ export default async function BoothDetailPage({ params }: Props) {
                   );
                 })}
               </div>
+            </div>
+          )}
+
+          {/* Voter Segments */}
+          {segments && segments.segments.length > 0 && (
+            <div className="card p-4">
+              <SectionHeader title="Voter Segments" sub="aggregated · no PII" accent="#8b5cf6" />
+              <div className="space-y-2">
+                {segments.segments.map((seg) => {
+                  const pct = seg.pct_of_voters ?? 0;
+                  return (
+                    <div key={seg.segment_type}>
+                      <div className="flex justify-between mb-1">
+                        <span className="text-xs capitalize" style={{ color: "var(--text-2)" }}>
+                          {seg.segment_type.replace(/_/g, " ")}
+                        </span>
+                        <span className="mono text-xs" style={{ color: "var(--text-3)" }}>
+                          {seg.count} · {pct.toFixed(1)}%
+                        </span>
+                      </div>
+                      <div className="h-1.5 rounded-full" style={{ background: "var(--bg-base)" }}>
+                        <div className="h-1.5 rounded-full" style={{ width: `${pct}%`, background: "#8b5cf6" }} />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Conversion Opportunity */}
+          {conversion && (
+            <div className="card p-4">
+              <SectionHeader
+                title="Conversion Opportunity"
+                sub={conversion.recommended_action?.replace(/_/g, " ") ?? ""}
+                accent="#10b981"
+              />
+              {conversion.overall_conversion_score != null && (
+                <div className="mb-3">
+                  <div className="flex justify-between mb-1">
+                    <span className="text-xs" style={{ color: "var(--text-3)" }}>Overall Score</span>
+                    <span className="mono text-xs font-bold" style={{ color: "#10b981" }}>
+                      {(conversion.overall_conversion_score * 100).toFixed(0)}%
+                    </span>
+                  </div>
+                  <div className="h-2 rounded-full" style={{ background: "var(--bg-base)" }}>
+                    <div className="h-2 rounded-full" style={{ width: `${conversion.overall_conversion_score * 100}%`, background: "#10b981" }} />
+                  </div>
+                </div>
+              )}
+              <div className="grid grid-cols-2 gap-2 mt-2">
+                {([
+                  { label: "Persuasion Room",      value: conversion.persuasion_room_score,      color: "#f97316" },
+                  { label: "Beneficiary Density",  value: conversion.beneficiary_density_score,  color: "#8b5cf6" },
+                  { label: "Turnout Mobilization", value: conversion.turnout_mobilization_score, color: "#3b82f6" },
+                  { label: "Service Risk",          value: conversion.service_risk_score,         color: "#ef4444" },
+                ] as { label: string; value: number | null | undefined; color: string }[]).map(({ label, value, color }) => value != null ? (
+                  <div key={label} className="rounded-md p-2" style={{ background: "var(--bg-surface)", border: "1px solid var(--border)" }}>
+                    <p className="text-xs mb-1" style={{ color: "var(--text-4)", fontSize: 9 }}>{label}</p>
+                    <p className="mono font-bold text-sm" style={{ color }}>{(value * 100).toFixed(0)}%</p>
+                  </div>
+                ) : null)}
+              </div>
+              {conversion.action_reason && (
+                <div className="mt-2 rounded-md p-2.5" style={{ background: "rgba(16,185,129,0.05)", border: "1px solid rgba(16,185,129,0.2)" }}>
+                  <span className="mono text-xs capitalize font-medium" style={{ color: "#10b981", fontSize: 9 }}>
+                    {conversion.recommended_action?.replace(/_/g, " ")}
+                  </span>
+                  <p className="text-xs mt-0.5" style={{ color: "var(--text-3)" }}>{conversion.action_reason}</p>
+                </div>
+              )}
             </div>
           )}
 

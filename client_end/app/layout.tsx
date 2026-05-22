@@ -60,7 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <GovHeader />
 
           {/* ── Fixed sidebar (below gov headers) ── */}
-          <Sidebar topOffset={TOP_OFFSET} sidebarWidth={SIDEBAR_W} />
+          <Sidebar />
 
           {/* ── Main area: right of sidebar, below gov headers ── */}
           <div

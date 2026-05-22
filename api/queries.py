@@ -1,6 +1,7 @@
 """All database queries for the FastAPI layer."""
 from __future__ import annotations
 import functools
+from datetime import datetime, timezone
 from sqlalchemy import text
 from .db import get_neo4j_session, get_pg_engine
 
@@ -370,6 +371,35 @@ def get_booth_contradictions(booth_id: str) -> list[dict]:
             ORDER BY computed_at DESC, delta DESC
         """), {"bid": booth_id}).mappings().fetchall()
     return [dict(r) for r in rows]
+
+
+# ── Voter segments (aggregated demographics, no PII) ─────────────────────────
+def get_booth_segments(booth_id: str) -> list[dict]:
+    """Aggregated demographic segments for a booth from electoral roll data."""
+    with get_pg_engine().connect() as conn:
+        rows = conn.execute(text("""
+            SELECT segment_type, count, pct_of_voters, computed_at
+            FROM booth_demographic_segments
+            WHERE booth_id = :bid
+            ORDER BY count DESC
+        """), {"bid": booth_id}).mappings().fetchall()
+    return [dict(r) for r in rows]
+
+
+# ── Conversion opportunity scores ──────────────────────────────────────────────
+def get_booth_conversion(booth_id: str) -> dict | None:
+    """Conversion opportunity scores and recommended action for a booth."""
+    with get_pg_engine().connect() as conn:
+        row = conn.execute(text("""
+            SELECT booth_id,
+                   persuasion_room_score, beneficiary_density_score,
+                   turnout_mobilization_score, service_risk_score,
+                   overall_conversion_score, recommended_action,
+                   action_reason, computed_at
+            FROM conversion_opportunity
+            WHERE booth_id = :bid
+        """), {"bid": booth_id}).mappings().fetchone()
+    return dict(row) if row else None
 
 
 # ── AC-level scheme overview ──────────────────────────────────────────────────
@@ -1186,6 +1216,157 @@ def get_ac_demographics_summary(ac_id: str) -> dict | None:
     return dict(row) if row else None
 
 
+def get_ac_demographic_segments(ac_id: str) -> list[dict]:
+    """
+    Returns booth-level segment buckets for the constituency.
+    Uses voter_segments table if present; otherwise derives segments from booth data.
+    """
+    resolved = _rac(ac_id)
+    with get_pg_engine().connect() as conn:
+        has_voter_segments = conn.execute(text("""
+            SELECT EXISTS (
+              SELECT 1
+              FROM information_schema.tables
+              WHERE table_schema = 'public' AND table_name = 'voter_segments'
+            )
+        """)).scalar()
+
+        if has_voter_segments:
+            rows = conn.execute(text("""
+                SELECT
+                    segment_name AS name,
+                    COUNT(DISTINCT booth_id) AS booth_count,
+                    COALESCE(MAX(description), segment_name) AS description,
+                    ARRAY_AGG(DISTINCT booth_id ORDER BY booth_id) AS booth_ids
+                FROM voter_segments
+                WHERE ac_id = :ac_id
+                GROUP BY segment_name
+                ORDER BY booth_count DESC
+            """), {"ac_id": resolved}).mappings().fetchall()
+            return [dict(r) for r in rows]
+
+        booths = conn.execute(text("""
+            SELECT
+                b.booth_id,
+                b.total_voters,
+                b.male_voters,
+                b.female_voters,
+                bm.digital_lean_label,
+                bm.confidence_label,
+                bm.top_issue
+            FROM booth_master b
+            LEFT JOIN LATERAL (
+                SELECT digital_lean_label, confidence_label, top_issue
+                FROM booth_metrics
+                WHERE booth_id = b.booth_id
+                ORDER BY window_start DESC
+                LIMIT 1
+            ) bm ON TRUE
+            WHERE b.ac_id = :ac_id
+              AND b.booth_id NOT LIKE '%_TOTAL'
+        """), {"ac_id": resolved}).mappings().fetchall()
+
+    booth_rows = [dict(r) for r in booths]
+
+    def _ids(predicate):
+        return [r["booth_id"] for r in booth_rows if predicate(r)]
+
+    def _mk(name: str, description: str, ids: list[str]) -> dict:
+        return {
+            "name": name,
+            "booth_count": len(ids),
+            "description": description,
+            "booth_ids": ids,
+        }
+
+    segments = [
+        _mk(
+            "women_skewed_booths",
+            "Booths where female voters are at least 5% more than male voters.",
+            _ids(lambda r: (r.get("female_voters") or 0) > 1.05 * (r.get("male_voters") or 0)),
+        ),
+        _mk(
+            "high_turnout_potential",
+            "Booths with larger voter base (>= 75th percentile proxy: >= 1200 voters).",
+            _ids(lambda r: (r.get("total_voters") or 0) >= 1200),
+        ),
+        _mk(
+            "strong_opposition_clusters",
+            "Booths currently marked as STRONG_OPP in digital lean label.",
+            _ids(lambda r: str(r.get("digital_lean_label") or "").upper() == "STRONG_OPP"),
+        ),
+        _mk(
+            "low_confidence_priority",
+            "Booths with LOW confidence label requiring extra field validation.",
+            _ids(lambda r: str(r.get("confidence_label") or "").upper() == "LOW"),
+        ),
+        _mk(
+            "water_issue_segments",
+            "Booths where water appears as the dominant issue.",
+            _ids(lambda r: str(r.get("top_issue") or "").lower() == "water"),
+        ),
+    ]
+
+    return [s for s in segments if s["booth_count"] > 0]
+
+
+def get_heatmap_coverage(ac_id: str, target_pct: float = 0.85) -> dict:
+    """Coverage KPI for geospatial heatmap readiness."""
+    resolved = _rac(ac_id)
+    with get_pg_engine().connect() as conn:
+        totals = conn.execute(text("""
+            SELECT
+                COUNT(*) FILTER (WHERE booth_id NOT LIKE '%_TOTAL') AS total_booths,
+                COUNT(*) FILTER (WHERE booth_id NOT LIKE '%_TOTAL' AND lat IS NOT NULL AND lon IS NOT NULL) AS geocoded_booths
+            FROM booth_master
+            WHERE ac_id = :ac_id
+        """), {"ac_id": resolved}).mappings().one()
+
+    total = int(totals["total_booths"] or 0)
+    geocoded = int(totals["geocoded_booths"] or 0)
+    coverage = (geocoded / total) if total else 0.0
+    target_met = coverage >= target_pct
+    needed = max(int((target_pct * total) - geocoded + 0.9999), 0) if total else 0
+
+    return {
+        "ac_id": resolved,
+        "total_booths": total,
+        "geocoded_booths": geocoded,
+        "coverage_pct": round(coverage, 4),
+        "target_pct": round(target_pct, 4),
+        "target_met": target_met,
+        "booths_needed_for_target": needed,
+    }
+
+
+def get_twin_snapshot(ac_id: str) -> dict:
+    """Digital twin snapshot: topology + coverage + demographics + segment signals."""
+    resolved = _rac(ac_id)
+    ontology = get_ontology_status()
+    coverage = get_heatmap_coverage(resolved)
+    demographics = get_ac_demographics_summary(resolved)
+    segments = get_ac_demographic_segments(resolved)
+
+    active_constraints = len(ontology.get("neo4j", {}).get("constraints", []))
+    node_count = int(ontology.get("neo4j", {}).get("total_nodes", 0))
+    edge_count = int(ontology.get("neo4j", {}).get("total_edges", 0))
+
+    return {
+        "ac_id": resolved,
+        "snapshot_generated_at": datetime.now(timezone.utc).isoformat(),
+        "ontology": {
+            "neo4j_online": bool(ontology.get("neo4j", {}).get("online", False)),
+            "postgres_online": bool(ontology.get("postgresql", {}).get("online", False)),
+            "total_nodes": node_count,
+            "total_edges": edge_count,
+            "active_constraints": active_constraints,
+        },
+        "heatmap": coverage,
+        "demographics_summary": demographics,
+        "demographic_segments": segments,
+    }
+
+
 # ── Live ontology status (for Ontology Layer page) ────────────────────────────
 
 _PG_TRACKED_TABLES = [
@@ -1444,3 +1625,534 @@ def get_ac_issue_breakdown(ac_id: str) -> list[dict]:
         })
 
     return result
+
+
+# ── Chat persistence ──────────────────────────────────────────────────────────
+
+import json as _json
+import uuid as _uuid
+
+def init_chat_tables() -> None:
+    """Auto-create reasoning_sessions and reasoning_messages tables on startup."""
+    with get_pg_engine().connect() as conn:
+        conn.execute(text("""
+            CREATE TABLE IF NOT EXISTS reasoning_sessions (
+                session_id    UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+                title         TEXT,
+                created_at    TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+                updated_at    TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+                message_count INT NOT NULL DEFAULT 0
+            )
+        """))
+        conn.execute(text("""
+            CREATE TABLE IF NOT EXISTS reasoning_messages (
+                message_id  UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+                session_id  UUID NOT NULL REFERENCES reasoning_sessions(session_id) ON DELETE CASCADE,
+                role        TEXT NOT NULL CHECK (role IN ('user', 'assistant')),
+                content     TEXT NOT NULL,
+                result_json JSONB,
+                ts          TEXT NOT NULL,
+                created_at  TIMESTAMPTZ NOT NULL DEFAULT NOW()
+            )
+        """))
+        conn.execute(text(
+            "CREATE INDEX IF NOT EXISTS idx_rm_session_created "
+            "ON reasoning_messages(session_id, created_at)"
+        ))
+        conn.commit()
+
+
+def create_session(title: str | None = None) -> dict:
+    with get_pg_engine().connect() as conn:
+        row = conn.execute(
+            text("INSERT INTO reasoning_sessions (title) VALUES (:t) RETURNING session_id, title, created_at, updated_at, message_count"),
+            {"t": title},
+        ).fetchone()
+        conn.commit()
+    return {"session_id": str(row[0]), "title": row[1], "created_at": row[2].isoformat(), "updated_at": row[3].isoformat(), "message_count": row[4]}
+
+
+def get_sessions(limit: int = 50) -> list[dict]:
+    with get_pg_engine().connect() as conn:
+        rows = conn.execute(
+            text("SELECT session_id, title, created_at, updated_at, message_count FROM reasoning_sessions ORDER BY updated_at DESC LIMIT :lim"),
+            {"lim": limit},
+        ).fetchall()
+    return [{"session_id": str(r[0]), "title": r[1], "created_at": r[2].isoformat(), "updated_at": r[3].isoformat(), "message_count": r[4]} for r in rows]
+
+
+def get_session(session_id: str) -> dict | None:
+    with get_pg_engine().connect() as conn:
+        row = conn.execute(
+            text("SELECT session_id, title, created_at, updated_at, message_count FROM reasoning_sessions WHERE session_id = :sid"),
+            {"sid": session_id},
+        ).fetchone()
+    if not row:
+        return None
+    return {"session_id": str(row[0]), "title": row[1], "created_at": row[2].isoformat(), "updated_at": row[3].isoformat(), "message_count": row[4]}
+
+
+def get_session_messages(session_id: str) -> list[dict]:
+    with get_pg_engine().connect() as conn:
+        rows = conn.execute(
+            text("SELECT message_id, role, content, result_json, ts, created_at FROM reasoning_messages WHERE session_id = :sid ORDER BY created_at"),
+            {"sid": session_id},
+        ).fetchall()
+    return [
+        {
+            "message_id": str(r[0]),
+            "role": r[1],
+            "content": r[2],
+            "result": r[3],
+            "ts": r[4],
+            "created_at": r[5].isoformat(),
+        }
+        for r in rows
+    ]
+
+
+def add_message(session_id: str, role: str, content: str, result_data: dict | None, ts: str) -> dict:
+    with get_pg_engine().connect() as conn:
+        row = conn.execute(
+            text("""
+                INSERT INTO reasoning_messages (session_id, role, content, result_json, ts)
+                VALUES (:sid, :role, :content, :result, :ts)
+                RETURNING message_id, role, content, result_json, ts, created_at
+            """),
+            {
+                "sid": session_id,
+                "role": role,
+                "content": content,
+                "result": _json.dumps(result_data) if result_data else None,
+                "ts": ts,
+            },
+        ).fetchone()
+        conn.execute(
+            text("UPDATE reasoning_sessions SET message_count = message_count + 1, updated_at = NOW() WHERE session_id = :sid"),
+            {"sid": session_id},
+        )
+        conn.commit()
+    return {"message_id": str(row[0]), "role": row[1], "content": row[2], "result": row[3], "ts": row[4], "created_at": row[5].isoformat()}
+
+
+def update_session_title(session_id: str, title: str) -> bool:
+    with get_pg_engine().connect() as conn:
+        result = conn.execute(
+            text("UPDATE reasoning_sessions SET title = :t, updated_at = NOW() WHERE session_id = :sid"),
+            {"t": title, "sid": session_id},
+        )
+        conn.commit()
+    return (result.rowcount or 0) > 0
+
+
+def delete_session(session_id: str) -> bool:
+    with get_pg_engine().connect() as conn:
+        result = conn.execute(
+            text("DELETE FROM reasoning_sessions WHERE session_id = :sid"),
+            {"sid": session_id},
+        )
+        conn.commit()
+    return (result.rowcount or 0) > 0
+
+
+# ── Voter Conversion Engine ────────────────────────────────────────────────────
+
+import random as _random
+
+_SCHEME_CATALOG = [
+    ("PM Awas Yojana",          "Housing grant ₹1.20 lakh"),
+    ("PM Kisan Samman Nidhi",   "₹6,000 annual farm support"),
+    ("Ujjwala Yojana",          "Free LPG gas connection"),
+    ("Ayushman Bharat",         "₹5 lakh health insurance cover"),
+    ("Jan Dhan Yojana",         "Zero-balance bank account"),
+    ("Swachh Bharat Mission",   "Toilet construction grant ₹12,000"),
+    ("PM Mudra Yojana",         "Business loan ₹50,000–10 lakh"),
+    ("Kisan Credit Card",       "Crop loan at 4% interest"),
+    ("Sukanya Samriddhi",       "Girl child savings scheme"),
+    ("PM Garib Kalyan Anna",    "Free ration 5 kg/month"),
+]
+
+_WARDS = [
+    "Ward 1 Naka",      "Ward 2 Taramandal", "Ward 3 Betiahata",
+    "Ward 4 Golghar",   "Ward 5 Railway Road", "Ward 6 Purani Line",
+    "Ward 7 Civil Lines", "Ward 8 Alamnagar", "Ward 9 Ashapur",
+    "Ward 10 Gorakhnath",
+]
+
+_FIRST = ["Ram","Shyam","Sunita","Geeta","Ravi","Priya","Anita","Mohan","Sita","Laxmi",
+          "Rajesh","Kavita","Dinesh","Meena","Suresh","Asha","Vijay","Rekha","Anil","Pushpa",
+          "Santosh","Radha","Manoj","Usha","Vinod","Nirmala","Rakesh","Seema","Pramod","Savita"]
+_LAST  = ["Kumar","Singh","Yadav","Gupta","Sharma","Tiwari","Mishra","Patel","Verma","Srivastava",
+          "Dubey","Pandey","Chaudhary","Jaiswal","Maurya","Chauhan","Jha","Tripathi","Shukla","Saxena"]
+
+
+def init_beneficiary_tables() -> None:
+    """Create scheme_beneficiaries table + indices if they don't exist."""
+    with get_pg_engine().connect() as conn:
+        conn.execute(text("""
+            CREATE TABLE IF NOT EXISTS scheme_beneficiaries (
+                beneficiary_id  UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+                voter_id        TEXT,
+                name            TEXT NOT NULL,
+                father_name     TEXT,
+                address         TEXT,
+                ward            TEXT,
+                locality        TEXT,
+                booth_id        TEXT NOT NULL,
+                scheme_name     TEXT NOT NULL,
+                benefit_desc    TEXT,
+                phone           TEXT,
+                party_lean      TEXT NOT NULL DEFAULT 'UNKNOWN'
+                    CHECK (party_lean IN ('BJP','SP','BSP','INC','OTHERS','UNKNOWN')),
+                contacted       BOOLEAN NOT NULL DEFAULT FALSE,
+                contact_date    DATE,
+                contact_notes   TEXT,
+                worker_id       TEXT,
+                created_at      TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+                updated_at      TIMESTAMPTZ NOT NULL DEFAULT NOW()
+            )
+        """))
+        conn.execute(text("CREATE INDEX IF NOT EXISTS idx_sb_booth ON scheme_beneficiaries(booth_id)"))
+        conn.execute(text("CREATE INDEX IF NOT EXISTS idx_sb_lean  ON scheme_beneficiaries(booth_id, party_lean)"))
+        conn.execute(text("CREATE INDEX IF NOT EXISTS idx_sb_ct    ON scheme_beneficiaries(booth_id, contacted)"))
+        conn.commit()
+
+
+def seed_demo_beneficiaries(ac_id: str, per_booth: int = 18) -> int:
+    """Generate synthetic beneficiary records for demo/testing."""
+    rng = _random.Random(42)
+    with get_pg_engine().connect() as conn:
+        booths = conn.execute(
+            text("SELECT booth_id, booth_number, polling_station_name FROM booth_master WHERE ac_id = :ac LIMIT 60"),
+            {"ac": ac_id},
+        ).fetchall()
+        if not booths:
+            return 0
+
+        count = 0
+        for booth_id, booth_num, stn_name in booths:
+            bjp_row = conn.execute(
+                text("""SELECT vote_share FROM booth_results
+                        WHERE booth_id = :bid AND party IN ('BJP','भाजपा')
+                        ORDER BY election_year DESC LIMIT 1"""),
+                {"bid": booth_id},
+            ).fetchone()
+            bjp_share = float(bjp_row[0]) if bjp_row and bjp_row[0] else 45.0
+
+            n = rng.randint(per_booth - 4, per_booth + 6)
+            for _ in range(n):
+                name   = f"{rng.choice(_FIRST)} {rng.choice(_LAST)}"
+                father = f"S/o {rng.choice(_FIRST)} {rng.choice(_LAST)}"
+                ward   = rng.choice(_WARDS)
+                scheme, benefit = rng.choice(_SCHEME_CATALOG)
+                phone  = f"9{rng.randint(100_000_000, 999_999_999)}"
+                house  = rng.randint(1, 250)
+
+                r = rng.random() * 100
+                if r < bjp_share * 0.65:
+                    lean = "BJP"
+                elif r < bjp_share * 0.65 + 20:
+                    lean = "UNKNOWN"
+                elif r < bjp_share * 0.65 + 38:
+                    lean = "SP"
+                elif r < bjp_share * 0.65 + 46:
+                    lean = "BSP"
+                else:
+                    lean = "OTHERS"
+
+                conn.execute(text("""
+                    INSERT INTO scheme_beneficiaries
+                        (name, father_name, address, ward, locality, booth_id,
+                         scheme_name, benefit_desc, phone, party_lean)
+                    VALUES (:name, :father, :addr, :ward, :loc, :bid,
+                            :scheme, :benefit, :phone, :lean)
+                """), {
+                    "name": name, "father": father,
+                    "addr": f"H.No. {house}, {ward}",
+                    "ward": ward,
+                    "loc": ward.split()[-1] if ward.split() else ward,
+                    "bid": booth_id, "scheme": scheme,
+                    "benefit": benefit, "phone": phone, "lean": lean,
+                })
+                count += 1
+
+        conn.commit()
+    return count
+
+
+def get_conversion_overview(ac_id: str) -> list[dict]:
+    """Per-booth beneficiary + conversion stats for the dashboard."""
+    with get_pg_engine().connect() as conn:
+        rows = conn.execute(text("""
+            SELECT
+                bm.booth_id,
+                bm.booth_number,
+                bm.polling_station_name AS booth_name,
+                COUNT(sb.beneficiary_id)                                             AS total,
+                COUNT(sb.beneficiary_id) FILTER (WHERE sb.party_lean = 'BJP')        AS supporters,
+                COUNT(sb.beneficiary_id) FILTER (WHERE sb.party_lean != 'BJP')       AS targets,
+                COUNT(sb.beneficiary_id) FILTER (WHERE sb.party_lean = 'UNKNOWN')    AS unknown_lean,
+                COUNT(sb.beneficiary_id) FILTER (WHERE sb.party_lean IN ('SP','BSP','INC','OTHERS')) AS opp_lean,
+                COUNT(sb.beneficiary_id) FILTER (WHERE sb.contacted = TRUE)          AS contacted,
+                COUNT(sb.beneficiary_id) FILTER (WHERE sb.contacted = TRUE AND sb.party_lean != 'BJP') AS targets_contacted
+            FROM booth_master bm
+            LEFT JOIN scheme_beneficiaries sb ON sb.booth_id = bm.booth_id
+            WHERE bm.ac_id = :ac
+            GROUP BY bm.booth_id, bm.booth_number, bm.polling_station_name
+            HAVING COUNT(sb.beneficiary_id) > 0
+            ORDER BY (COUNT(sb.beneficiary_id) FILTER (WHERE sb.party_lean != 'BJP' AND sb.contacted = FALSE)) DESC
+        """), {"ac": ac_id}).mappings().fetchall()
+    return [dict(r) for r in rows]
+
+
+def get_conversion_targets(booth_id: str, contacted: bool | None = None, limit: int = 200) -> list[dict]:
+    """Ordered list of beneficiaries for a booth's route map."""
+    filters = "WHERE booth_id = :bid"
+    params: dict = {"bid": booth_id, "lim": limit}
+    if contacted is not None:
+        filters += " AND contacted = :ct"
+        params["ct"] = contacted
+    with get_pg_engine().connect() as conn:
+        rows = conn.execute(text(f"""
+            SELECT beneficiary_id::text, voter_id, name, father_name,
+                   address, ward, locality, scheme_name, benefit_desc,
+                   phone, party_lean, contacted, contact_date::text,
+                   contact_notes, worker_id, created_at::text
+            FROM scheme_beneficiaries
+            {filters}
+            ORDER BY
+                CASE party_lean WHEN 'BJP' THEN 3 WHEN 'UNKNOWN' THEN 1 ELSE 0 END,
+                ward, address
+            LIMIT :lim
+        """), params).mappings().fetchall()
+    return [dict(r) for r in rows]
+
+
+def mark_beneficiary_contacted(
+    beneficiary_id: str,
+    notes: str | None,
+    worker_id: str | None,
+) -> bool:
+    with get_pg_engine().connect() as conn:
+        result = conn.execute(text("""
+            UPDATE scheme_beneficiaries
+            SET contacted = TRUE,
+                contact_date = CURRENT_DATE,
+                contact_notes = COALESCE(:notes, contact_notes),
+                worker_id = COALESCE(:wid, worker_id),
+                updated_at = NOW()
+            WHERE beneficiary_id = :bid
+        """), {"bid": beneficiary_id, "notes": notes, "wid": worker_id})
+        conn.commit()
+    return (result.rowcount or 0) > 0
+
+
+def bulk_import_beneficiaries(rows: list[dict]) -> int:
+    """Insert a batch of beneficiary dicts. Returns count inserted."""
+    if not rows:
+        return 0
+    with get_pg_engine().connect() as conn:
+        count = 0
+        for r in rows:
+            conn.execute(text("""
+                INSERT INTO scheme_beneficiaries
+                    (voter_id, name, father_name, address, ward, locality,
+                     booth_id, scheme_name, benefit_desc, phone, party_lean)
+                VALUES (:voter_id, :name, :father_name, :address, :ward, :locality,
+                        :booth_id, :scheme_name, :benefit_desc, :phone,
+                        COALESCE(:party_lean, 'UNKNOWN'))
+                ON CONFLICT DO NOTHING
+            """), {
+                "voter_id":    r.get("voter_id"),
+                "name":        r["name"],
+                "father_name": r.get("father_name"),
+                "address":     r.get("address"),
+                "ward":        r.get("ward"),
+                "locality":    r.get("locality"),
+                "booth_id":    r["booth_id"],
+                "scheme_name": r["scheme_name"],
+                "benefit_desc":r.get("benefit_desc"),
+                "phone":       r.get("phone"),
+                "party_lean":  r.get("party_lean", "UNKNOWN"),
+            })
+            count += 1
+        conn.commit()
+    return count
+
+
+def get_conversion_stats(ac_id: str) -> dict:
+    """AC-level KPI summary for the conversion dashboard."""
+    with get_pg_engine().connect() as conn:
+        row = conn.execute(text("""
+            SELECT
+                COUNT(sb.beneficiary_id)                                                        AS total_beneficiaries,
+                COUNT(sb.beneficiary_id) FILTER (WHERE sb.party_lean = 'BJP')                   AS total_supporters,
+                COUNT(sb.beneficiary_id) FILTER (WHERE sb.party_lean != 'BJP')                  AS total_targets,
+                COUNT(sb.beneficiary_id) FILTER (WHERE sb.contacted = TRUE)                     AS total_contacted,
+                COUNT(sb.beneficiary_id) FILTER (WHERE sb.contacted = TRUE AND sb.party_lean != 'BJP') AS targets_contacted,
+                COUNT(DISTINCT sb.booth_id)                                                     AS booths_with_data
+            FROM booth_master bm
+            JOIN scheme_beneficiaries sb ON sb.booth_id = bm.booth_id
+            WHERE bm.ac_id = :ac
+        """), {"ac": ac_id}).fetchone()
+
+        scheme_rows = conn.execute(text("""
+            SELECT scheme_name, COUNT(*) AS cnt
+            FROM scheme_beneficiaries sb
+            JOIN booth_master bm ON bm.booth_id = sb.booth_id
+            WHERE bm.ac_id = :ac
+            GROUP BY scheme_name
+            ORDER BY cnt DESC
+            LIMIT 8
+        """), {"ac": ac_id}).fetchall()
+
+    if not row or row[0] == 0:
+        return {"total_beneficiaries": 0, "total_targets": 0, "total_contacted": 0,
+                "targets_contacted": 0, "booths_with_data": 0, "top_schemes": []}
+
+    return {
+        "total_beneficiaries": row[0],
+        "total_supporters":    row[1],
+        "total_targets":       row[2],
+        "total_contacted":     row[3],
+        "targets_contacted":   row[4],
+        "booths_with_data":    row[5],
+        "contact_rate_pct":    round(row[3] / row[0] * 100, 1) if row[0] else 0,
+        "target_contact_pct":  round(row[4] / row[2] * 100, 1) if row[2] else 0,
+        "top_schemes": [{"scheme": r[0], "count": r[1]} for r in scheme_rows],
+    }
+
+
+# ── AC-level pulse intelligence (from pulse_events, honest geo attribution) ──
+
+def get_ac_level_pulse(ac_id: str, days: int = 365) -> dict:
+    """
+    Compute BJP/OPP pulse scores from pulse_events at AC level.
+
+    Only uses events where mapped_ac_id matches and final_polarity != 0.
+    Never uses booth_metrics (which would include synthetic rows).
+    Returns attribution_level='ac' to signal no booth-level breakdown is available.
+    """
+    resolved = _rac(ac_id)
+    from datetime import datetime, timedelta, timezone
+    cutoff = datetime.now(timezone.utc) - timedelta(days=days)
+
+    with get_pg_engine().connect() as conn:
+        row = conn.execute(text("""
+            SELECT
+                COUNT(*)                                        AS total_events,
+                COUNT(*) FILTER (WHERE final_polarity != 0)    AS polarity_events,
+                COUNT(*) FILTER (WHERE mapped_booth_id IS NOT NULL
+                                   AND geo_confidence >= 0.75) AS booth_attributed,
+                AVG(geo_confidence) FILTER (WHERE geo_confidence IS NOT NULL) AS avg_geo_conf,
+                SUM(
+                    CASE WHEN entity_type = 'party'
+                              AND entity ILIKE '%bjp%'
+                              AND final_polarity != 0
+                         THEN final_polarity * COALESCE(source_weight, 0.6)
+                         ELSE 0 END
+                ) AS bjp_weighted_sum,
+                SUM(
+                    CASE WHEN entity_type = 'party'
+                              AND entity NOT ILIKE '%bjp%'
+                              AND final_polarity != 0
+                         THEN ABS(final_polarity) * COALESCE(source_weight, 0.6)
+                         ELSE 0 END
+                ) AS opp_weighted_sum,
+                SUM(CASE WHEN entity_type = 'party'
+                              AND entity ILIKE '%bjp%'
+                              AND final_polarity != 0
+                         THEN COALESCE(source_weight, 0.6) ELSE 0 END) AS bjp_weight_total,
+                SUM(CASE WHEN entity_type = 'party'
+                              AND entity NOT ILIKE '%bjp%'
+                              AND final_polarity != 0
+                         THEN COALESCE(source_weight, 0.6) ELSE 0 END) AS opp_weight_total
+            FROM pulse_events
+            WHERE mapped_ac_id = :ac_id
+              AND created_at >= :cutoff
+        """), {"ac_id": resolved, "cutoff": cutoff}).mappings().fetchone()
+
+    r = dict(row) if row else {}
+    total = int(r.get("total_events") or 0)
+    polarity = int(r.get("polarity_events") or 0)
+    booth_attr = int(r.get("booth_attributed") or 0)
+
+    bjp_sum   = float(r.get("bjp_weighted_sum") or 0)
+    opp_sum   = float(r.get("opp_weighted_sum") or 0)
+    bjp_wt    = float(r.get("bjp_weight_total") or 1)
+    opp_wt    = float(r.get("opp_weight_total") or 1)
+
+    bjp_pulse = round(bjp_sum / bjp_wt, 3) if bjp_wt > 0 else 0.0
+    opp_pulse = round(opp_sum / opp_wt, 3) if opp_wt > 0 else 0.0
+
+    diff = bjp_pulse - opp_pulse
+    if diff > 0.15:
+        lean = "Strong BJP"
+    elif diff > 0.05:
+        lean = "Lean BJP"
+    elif diff < -0.15:
+        lean = "Strong Opposition"
+    elif diff < -0.05:
+        lean = "Lean Opposition"
+    else:
+        lean = "Competitive"
+
+    return {
+        "ac_id":             resolved,
+        "attribution_level": "ac",
+        "window_days":       days,
+        "total_events":      total,
+        "polarity_events":   polarity,
+        "booth_attributed":  booth_attr,
+        "avg_geo_confidence": round(float(r.get("avg_geo_conf") or 0), 3),
+        "bjp_pulse":         bjp_pulse,
+        "opp_pulse":         opp_pulse,
+        "lean":              lean,
+        "warning": (
+            None if booth_attr > 0
+            else "No booth-level geo attribution — signals are constituency-wide only"
+        ),
+    }
+
+
+def get_ac_level_issues(ac_id: str, days: int = 365, limit: int = 10) -> list[dict]:
+    """
+    Top issues mentioned in AC-level pulse_events, with polarity breakdown.
+    Only counts events that have a non-empty final_issue.
+    """
+    resolved = _rac(ac_id)
+    from datetime import datetime, timedelta, timezone
+    cutoff = datetime.now(timezone.utc) - timedelta(days=days)
+
+    with get_pg_engine().connect() as conn:
+        rows = conn.execute(text("""
+            SELECT
+                final_issue                                          AS issue,
+                COUNT(*)                                             AS mention_count,
+                AVG(final_polarity)                                  AS avg_polarity,
+                COUNT(*) FILTER (WHERE final_polarity > 0)           AS positive,
+                COUNT(*) FILTER (WHERE final_polarity < 0)           AS negative,
+                COUNT(*) FILTER (WHERE final_polarity = 0)           AS neutral,
+                AVG(final_confidence)                                AS avg_confidence
+            FROM pulse_events
+            WHERE mapped_ac_id = :ac_id
+              AND created_at   >= :cutoff
+              AND final_issue IS NOT NULL
+              AND final_issue  != ''
+            GROUP BY final_issue
+            ORDER BY mention_count DESC
+            LIMIT :lim
+        """), {"ac_id": resolved, "cutoff": cutoff, "lim": limit}).mappings().fetchall()
+
+    return [
+        {
+            "issue":          r["issue"],
+            "mention_count":  int(r["mention_count"]),
+            "avg_polarity":   round(float(r["avg_polarity"] or 0), 3),
+            "positive":       int(r["positive"]),
+            "negative":       int(r["negative"]),
+            "neutral":        int(r["neutral"]),
+            "avg_confidence": round(float(r["avg_confidence"] or 0), 3),
+        }
+        for r in rows
+    ]

@@ -715,6 +715,15 @@ def build_parser() -> argparse.ArgumentParser:
     astart.add_argument("--port", type=int, default=8000)
     astart.add_argument("--reload", action="store_true", help="Enable hot-reload")
 
+    # conversion
+    conv = sub.add_parser("conversion", help="Voter Conversion Engine operations")
+    csub = conv.add_subparsers(dest="conv_cmd", metavar="<subcommand>")
+    csub.required = True
+    cs = csub.add_parser("seed", help="Seed demo beneficiary data for testing")
+    cs.add_argument("--ac", default="GKP_URBAN", metavar="AC_ID", help="AC ID (default: GKP_URBAN)")
+    cs.add_argument("--per-booth", type=int, default=18, metavar="N", help="Beneficiaries per booth (default: 18)")
+    csub.add_parser("stats", help="Show beneficiary + conversion stats")
+
     # etl
     etl_p = sub.add_parser("etl", help="Run individual ETL scripts")
     esub = etl_p.add_subparsers(dest="etl_cmd", metavar="<subcommand>")
@@ -731,12 +740,13 @@ def main() -> None:
     args = parser.parse_args()
 
     dispatch = {
-        "status":   cmd_status,
-        "graph":    _dispatch_graph,
-        "ingest":   cmd_ingest,
-        "ontology": _dispatch_ontology,
-        "api":      _dispatch_api,
-        "etl":      _dispatch_etl,
+        "status":     cmd_status,
+        "graph":      _dispatch_graph,
+        "ingest":     cmd_ingest,
+        "ontology":   _dispatch_ontology,
+        "api":        _dispatch_api,
+        "etl":        _dispatch_etl,
+        "conversion": _dispatch_conversion,
     }
 
     handler = dispatch.get(args.command)
@@ -768,6 +778,42 @@ def _dispatch_api(args: argparse.Namespace) -> None:
 
 def _dispatch_etl(args: argparse.Namespace) -> None:
     {"list": cmd_etl_list, "run": cmd_etl_run}[args.etl_cmd](args)
+
+
+def _dispatch_conversion(args: argparse.Namespace) -> None:
+    {"seed": cmd_conversion_seed, "stats": cmd_conversion_stats}[args.conv_cmd](args)
+
+
+def cmd_conversion_seed(args: argparse.Namespace) -> None:
+    from api.queries import init_beneficiary_tables, seed_demo_beneficiaries, _rac
+    print(info(f"Initialising beneficiary tables…"))
+    init_beneficiary_tables()
+    ac = args.ac
+    n = args.per_booth
+    print(info(f"Seeding demo data for {bold(ac)} ({n} beneficiaries/booth)…"))
+    count = seed_demo_beneficiaries(_rac(ac), per_booth=n)
+    print(ok(f"Seeded {bold(str(count))} beneficiary records."))
+
+
+def cmd_conversion_stats(args: argparse.Namespace) -> None:
+    from api.queries import get_conversion_stats, get_conversion_overview, _rac
+    ac = getattr(args, "ac", "GKP_URBAN")
+    stats = get_conversion_stats(_rac(ac))
+    if not stats["total_beneficiaries"]:
+        print(warn("No beneficiary data found. Run: python manage.py conversion seed"))
+        return
+    print(bold(f"\n=== Conversion Stats: {ac} ==="))
+    print(f"  Total Beneficiaries : {green(str(stats['total_beneficiaries']))}")
+    print(f"  Conversion Targets  : {yellow(str(stats['total_targets']))} (non-BJP)")
+    print(f"  Confirmed Supporters: {cyan(str(stats['total_supporters']))}")
+    print(f"  Contacted           : {green(str(stats['total_contacted']))} ({stats['contact_rate_pct']}%)")
+    print(f"  Target Contact Rate : {green(str(stats['target_contact_pct']) + '%')}")
+    print(f"  Booths With Data    : {stats['booths_with_data']}")
+    if stats["top_schemes"]:
+        print(bold("\n  Top Schemes:"))
+        for s in stats["top_schemes"][:5]:
+            print(f"    {s['scheme']:<35} {cyan(str(s['count']))}")
+    print()
 
 
 if __name__ == "__main__":

@@ -13,10 +13,57 @@ from __future__ import annotations
 import argparse
 import logging
 import os
+from pathlib import Path
 
 import sqlalchemy as sa
 
 logger = logging.getLogger(__name__)
+
+
+def _apply_constraints_v2(session) -> dict[str, int | bool]:
+    """Apply graph/constraints_v2.cypher at runtime (non-destructive IF NOT EXISTS)."""
+    constraints_path = Path(__file__).resolve().parents[2] / "graph" / "constraints_v2.cypher"
+    if not constraints_path.exists():
+        logger.warning("constraints_v2.cypher not found at %s", constraints_path)
+        return {"enabled": False, "statements": 0}
+
+    content = constraints_path.read_text(encoding="utf-8")
+    statements: list[str] = []
+    for raw in content.split(";"):
+        lines = []
+        for line in raw.splitlines():
+            stripped = line.strip()
+            if not stripped or stripped.startswith("//"):
+                continue
+            lines.append(line)
+        stmt = "\n".join(lines).strip()
+        if stmt:
+            statements.append(stmt)
+
+    applied = 0
+    for stmt in statements:
+        session.run(stmt)
+        applied += 1
+
+    logger.info("Applied constraints_v2.cypher statements: %d", applied)
+    return {"enabled": True, "statements": applied}
+
+
+def _run_loader_hardening_checks(session) -> dict[str, int]:
+    """Run non-destructive graph hardening audits after load."""
+    checks = {
+        "pulse_events_without_booth": "MATCH (pe:PulseEvent) WHERE NOT (pe)-[:AT_BOOTH]->(:Booth) RETURN count(pe) AS c",
+        "booths_without_ac": "MATCH (b:Booth) WHERE NOT ()-[:HAS_BOOTH]->(b) RETURN count(b) AS c",
+        "narratives_without_issue": "MATCH (n:Narrative) WHERE NOT (n)-[:ABOUT_ISSUE]->(:Issue) RETURN count(n) AS c",
+        "scheme_gaps_without_scheme": "MATCH (sg:SchemeGap) WHERE NOT (sg)-[:FOR_SCHEME]->(:Scheme) RETURN count(sg) AS c",
+        "contradictions_without_entity": "MATCH (cf:ContradictionFlag) WHERE NOT (cf)-[:ABOUT_ENTITY]->(:Party) AND NOT (cf)-[:ABOUT_ENTITY]->(:Candidate) RETURN count(cf) AS c",
+    }
+    out: dict[str, int] = {}
+    for key, query in checks.items():
+        record = session.run(query).single()
+        out[key] = int(record["c"] if record else 0)
+    logger.info("Graph hardening audit: %s", out)
+    return out
 
 
 def run_etl_stage(_engine: sa.Engine) -> None:
@@ -80,6 +127,8 @@ def run_neo4j_stage() -> None:
     with get_neo4j_session() as session:
         counts = {}
 
+        counts["constraints_v2"] = _apply_constraints_v2(session)
+
         # MUST run first — all other nodes reference State/District/AC/Booth
         counts["structure"] = load_structure(pg, session)
         logger.info("[1/7] Structure loaded: %s", counts["structure"])
@@ -104,6 +153,9 @@ def run_neo4j_stage() -> None:
 
         counts["youtube"] = load_youtube(pg, session)
         logger.info("[8/8] YouTube videos loaded: %s", counts["youtube"])
+
+        counts["hardening"] = _run_loader_hardening_checks(session)
+        logger.info("[H] Hardening checks: %s", counts["hardening"])
 
     logger.info("=== NEO4J LOAD COMPLETE: %s ===", counts)
 
