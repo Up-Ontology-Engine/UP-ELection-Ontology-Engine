@@ -137,12 +137,13 @@ export default function Sidebar() {
             {section.items.map(({ href, icon: Icon, label, labelHi, badge, dot }) => {
               const active = isActive(href);
               const dotColor = DOT_COLORS[dot] ?? "#64748b";
+              const activeColor = "#f97316"; // always orange when active
               return (
                 <Link key={href} href={href}
                   className="flex items-center gap-2.5 px-3.5 py-2 mx-1.5 rounded-md text-xs transition-all"
                   style={{
-                    background: active ? `${dotColor}15` : "transparent",
-                    border: active ? `1px solid ${dotColor}30` : "1px solid transparent",
+                    background: active ? "rgba(249,115,22,0.1)" : "transparent",
+                    border: active ? "1px solid rgba(249,115,22,0.25)" : "1px solid transparent",
                     color: active ? S.text1 : S.text3,
                     textDecoration: "none",
                   }}>
@@ -154,24 +155,24 @@ export default function Sidebar() {
                       width: 6,
                       height: 6,
                       borderRadius: "50%",
-                      background: dotColor,
+                      background: active ? activeColor : dotColor,
                       opacity: active ? 1 : 0.4,
                       flexShrink: 0,
                     }} />
-                  <Icon size={13} style={{ flexShrink: 0, color: active ? dotColor : S.text3, opacity: active ? 1 : 0.7 }} />
+                  <Icon size={13} style={{ flexShrink: 0, color: active ? activeColor : S.text3, opacity: active ? 1 : 0.7 }} />
                   <div className="flex-1 min-w-0">
-                    <p className="leading-none" style={{ fontSize: 12, color: active ? S.text1 : S.text3 }}>{label}</p>
-                    <p className="leading-none mt-0.5 truncate" style={{ fontSize: 9, color: S.text4 }}>{labelHi}</p>
+                    <p className="leading-none" style={{ fontSize: 12, color: active ? activeColor : S.text3 }}>{label}</p>
+                    <p className="leading-none mt-0.5 truncate" style={{ fontSize: 9, color: active ? "rgba(249,115,22,0.6)" : S.text4 }}>{labelHi}</p>
                   </div>
                   {badge && (
                     <span className="mono px-1.5 py-0.5 rounded flex-shrink-0"
                       style={{
-                        background: active ? `${dotColor}25` : S.surface,
-                        color: active ? dotColor : S.text4,
+                        background: active ? "rgba(249,115,22,0.2)" : S.surface,
+                        color: active ? activeColor : S.text4,
                         fontSize: 9,
                         fontWeight: 600,
                         letterSpacing: "0.04em",
-                        border: `1px solid ${active ? `${dotColor}40` : S.border}`,
+                        border: `1px solid ${active ? "rgba(249,115,22,0.35)" : S.border}`,
                       }}>
                       {badge}
                     </span>
