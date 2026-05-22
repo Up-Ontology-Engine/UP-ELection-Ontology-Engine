@@ -21,6 +21,7 @@ from .queries import (
     get_ac_intel_summary, get_ac_election_results, get_ac_demographics_summary,
     get_ac_booth_election_rows, get_ontology_status,
     get_booth_segments, get_booth_conversion,
+    get_ac_level_pulse, get_ac_level_issues,
     get_ac_demographic_segments, get_heatmap_coverage, get_twin_snapshot,
     init_chat_tables, create_session, get_sessions, get_session,
     get_session_messages, add_message, update_session_title, delete_session,
