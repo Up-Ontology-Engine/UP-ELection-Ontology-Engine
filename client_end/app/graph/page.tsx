@@ -437,7 +437,7 @@ export default function GraphPage() {
                   <p className="flex items-center gap-2">
                     <span className="w-4 h-4 rounded flex items-center justify-center flex-shrink-0"
                       style={{ background: "rgba(249,115,22,0.1)", color: S.saffron, fontSize: 9 }}>2</span>
-                    Use &quot;Expand&quot; to load connected subgraph
+                    Use "Expand" to load connected subgraph
                   </p>
                   <p className="flex items-center gap-2">
                     <span className="w-4 h-4 rounded flex items-center justify-center flex-shrink-0"

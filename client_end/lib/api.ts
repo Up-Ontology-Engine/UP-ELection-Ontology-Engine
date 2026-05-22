@@ -118,12 +118,6 @@ export const api = {
   // Intelligence summary (PG voter stats + Neo4j issues/videos/candidates)
   intelSummary: (acId: string) => get<AcIntelSummary>(`/ac/${acId}/intel-summary`),
 
-  // Pain-point engine: per-issue aggregation with booth list + evidence
-  issueBreakdown: (acId: string) => get<IssueBreakdownResponse>(`/ac/${acId}/issue-breakdown`),
-
-  // Booth-level action intelligence
-  boothActions: (boothId: string) => get<BoothActionsResponse>(`/booth/${boothId}/actions`),
-
   // Election results (Form-20 ingested)
   electionResults: (acId: string, year = 2022) => get<AcElectionResults>(`/ac/${acId}/election-results?year=${year}`),
 
@@ -209,34 +203,6 @@ export interface Candidate {
   name: string;
   party: string;
   election_year: number;
-  is_incumbent: boolean | null;
-  is_primary_opp: boolean | null;
-  net_worth_rs: number | null;
-  self_profession: string | null;
-  age: number | null;
-  education: string | null;
-  // Affidavit
-  criminal_cases: number | null;
-  serious_cases: number | null;
-  total_assets: number | null;
-  total_liabilities: number | null;
-  movable_assets_rs: number | null;
-  immovable_assets_rs: number | null;
-  source_affidavit_url: string | null;
-  affidavit_parse_status: string | null;
-  // Election result
-  total_votes: number | null;
-  vote_share_pct: number | null;
-  rank: number | null;
-  is_winner: boolean | null;
-  result_position_label: string | null;
-  victory_margin_votes: number | null;
-  // Campaign expense
-  total_election_expense_rs: number | null;
-  // Live sentiment
-  sentiment_score: number;
-  mention_count: number;
-  // legacy compat
   votes: number | null;
   vote_share: number | null;
   winner_flag: boolean;
@@ -349,37 +315,11 @@ export interface AcQuality {
   quality_distribution: Record<string, number>;
 }
 
-export interface RiskItem {
-  title: string;
-  description: string;
-  level: "high" | "medium" | "low";
-  urgency_score: number;
-}
-
-export interface OpportunityItem {
-  title: string;
-  description: string;
-  impact_score: number;
-  urgency_score: number;
-}
-
-export interface ActionItem {
-  title: string;
-  description: string;
-  priority: "high" | "medium" | "low";
-  target_segment: string;
-}
-
 export interface AcRecommendations {
   ac_id: string;
-  overall_lean: string;
-  confidence: string;
-  top_risk: string;
-  top_opportunity: string;
-  verdict: string;
-  risks: RiskItem[];
-  opportunities: OpportunityItem[];
-  actions: ActionItem[];
+  risks: string[];
+  opportunities: string[];
+  actions: string[];
 }
 
 export interface GraphNode {
@@ -487,23 +427,8 @@ export interface GraphCoverageBooth {
   opp_pulse_score: number | null;
   confidence_label: string | null;
   event_count: number | null;
-  top_issue: string | null;
   in_neo4j: boolean;
   neo4j_degree: number;
-}
-
-export interface BoothActionItem {
-  title: string;
-  description: string;
-  priority: "high" | "medium" | "low";
-  category: "scheme" | "issue" | "narrative" | "mobilisation";
-  rationale: string;
-}
-
-export interface BoothActionsResponse {
-  booth_id: string;
-  count: number;
-  actions: BoothActionItem[];
 }
 
 export interface GraphCoverageResponse {
@@ -511,45 +436,6 @@ export interface GraphCoverageResponse {
   total: number;
   in_neo4j: number;
   booths: GraphCoverageBooth[];
-}
-
-export interface IssueBoothRow {
-  booth_id: string;
-  booth_name: string;
-  locality_hint: string | null;
-  signals: number;
-  avg_polarity: number;
-}
-
-export interface IssueEvidence {
-  text: string;
-  source: string;
-  polarity: number;
-  confidence: number;
-  created_at: string;
-}
-
-export interface IssueBreakdownItem {
-  issue: string;
-  total_signals: number;
-  affected_booth_count: number;
-  avg_polarity: number;
-  avg_confidence: number;
-  negative_count: number;
-  positive_count: number;
-  recent_7d: number;
-  prev_7d: number;
-  severity: "high" | "medium" | "low";
-  trend: "rising" | "falling" | "stable";
-  trend_delta_pct: number | null;
-  top_booths: IssueBoothRow[];
-  evidence: IssueEvidence[];
-}
-
-export interface IssueBreakdownResponse {
-  ac_id: string;
-  count: number;
-  issues: IssueBreakdownItem[];
 }
 
 export interface BoothElectionRow {
