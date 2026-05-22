@@ -23,7 +23,10 @@ import os
 from datetime import datetime, timezone
 
 import sqlalchemy as sa
+from dotenv import load_dotenv
 from sqlalchemy import text
+
+load_dotenv()
 
 logger = logging.getLogger(__name__)
 
@@ -159,17 +162,24 @@ def run_all_booths(engine: sa.Engine) -> int:
                 bm.digital_lean,
                 bm.bjp_pulse_score,
                 bm.opp_pulse_score,
-                -- Last election margin (winner votes - runner-up votes)
+                -- Last election margin (winner votes minus runner-up votes).
+                -- Runner-up = highest non-winner vote count for same booth/year.
                 (
-                    SELECT br1.votes - br2.votes
-                    FROM booth_results br1
-                    JOIN booth_results br2
-                      ON br2.booth_id = br1.booth_id
-                     AND br2.election_year = br1.election_year
-                     AND br2.winner_flag = FALSE
-                    WHERE br1.booth_id = b.booth_id
-                      AND br1.winner_flag = TRUE
-                    ORDER BY br1.election_year DESC
+                    SELECT winner.votes - COALESCE(runner_up.votes, 0)
+                    FROM booth_results winner
+                    LEFT JOIN LATERAL (
+                        SELECT votes FROM booth_results
+                        WHERE booth_id      = winner.booth_id
+                          AND election_year = winner.election_year
+                          AND party NOT IN ('_', '-', 'nan')
+                          AND winner_flag   = FALSE
+                        ORDER BY votes DESC
+                        LIMIT 1
+                    ) runner_up ON TRUE
+                    WHERE winner.booth_id      = b.booth_id
+                      AND winner.party NOT IN ('_', '-', 'nan')
+                      AND winner.winner_flag   = TRUE
+                    ORDER BY winner.election_year DESC
                     LIMIT 1
                 ) AS last_margin,
                 -- Total beneficiaries from scheme activity near booth

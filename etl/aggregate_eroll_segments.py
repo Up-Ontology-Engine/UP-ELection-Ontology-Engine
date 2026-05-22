@@ -26,8 +26,10 @@ import os
 from pathlib import Path
 
 import sqlalchemy as sa
+from dotenv import load_dotenv
 from sqlalchemy import text
 
+load_dotenv()
 logger = logging.getLogger(__name__)
 
 DATA_DIR = Path(__file__).parents[1] / "data" / "PoolBoothData_JSON"
