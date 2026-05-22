@@ -69,7 +69,7 @@ export default function InfraMap({ booths, layer, onSelect }: Props) {
     <MapContainer
       center={center}
       zoom={13}
-      style={{ height: "100%", width: "100%", background: "#0a0e1a" }}>
+      style={{ height: "100%", width: "100%", background: "var(--bg-base)" }}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
@@ -89,25 +89,25 @@ export default function InfraMap({ booths, layer, onSelect }: Props) {
           }}
           eventHandlers={{ click: () => onSelect(b) }}>
           <Popup>
-            <div style={{ color: "#f1f5f9", fontSize: 12, minWidth: 170 }}>
+            <div style={{ color: "var(--text-1)", fontSize: 12, minWidth: 170 }}>
               <p style={{ fontWeight: 600, marginBottom: 4 }}>Booth {b.booth_number}</p>
-              <p style={{ color: "#94a3b8", marginBottom: 6, fontSize: 11 }}>{b.name}</p>
+              <p style={{ color: "var(--text-3)", marginBottom: 6, fontSize: 11 }}>{b.name}</p>
               <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 3 }}>
-                <span style={{ color: "#94a3b8" }}>In KG:</span>
+                <span style={{ color: "var(--text-3)" }}>In KG:</span>
                 <span style={{ color: b.in_neo4j ? "#10b981" : "#ef4444" }}>
                   {b.in_neo4j ? `Yes (deg ${b.neo4j_degree})` : "No"}
                 </span>
               </div>
               <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 3 }}>
-                <span style={{ color: "#94a3b8" }}>Voters:</span>
+                <span style={{ color: "var(--text-3)" }}>Voters:</span>
                 <span>{b.total_voters?.toLocaleString("en-IN") ?? "—"}</span>
               </div>
               <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 3 }}>
-                <span style={{ color: "#94a3b8" }}>BJP pulse:</span>
+                <span style={{ color: "var(--text-3)" }}>BJP pulse:</span>
                 <span style={{ color: "#f97316" }}>{b.bjp_pulse_score?.toFixed(3) ?? "—"}</span>
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <span style={{ color: "#94a3b8" }}>Confidence:</span>
+                <span style={{ color: "var(--text-3)" }}>Confidence:</span>
                 <span>{b.confidence_label ?? "—"}</span>
               </div>
             </div>

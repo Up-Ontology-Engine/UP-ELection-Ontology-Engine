@@ -63,12 +63,10 @@ def load_ac_results(pg_engine: sa.Engine, session: Session) -> int:
                 cph.votes_received  AS votes,
                 cph.vote_share,
                 cph.is_winner       AS winner_flag,
-                cph.valid_votes_total,
                 cm.name             AS candidate_name
             FROM candidate_party_history cph
             JOIN candidate_master cm ON cm.candidate_id = cph.candidate_id
-            WHERE cph.constituency = 'GKP_322'
-              AND cph.votes_received IS NOT NULL
+            WHERE cph.votes_received IS NOT NULL
             ORDER BY cph.election_year, cph.votes_received DESC
         """)).mappings().fetchall()
 

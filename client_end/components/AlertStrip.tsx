@@ -32,7 +32,7 @@ export default function AlertStrip({ alerts }: Props) {
             style={{ background: c.bg, border: `1px solid ${c.border}` }}>
             <AlertTriangle size={12} style={{ color: c.icon, flexShrink: 0 }} />
             <span className="font-semibold mono" style={{ color: c.text }}>{a.level.toUpperCase()}</span>
-            <span style={{ color: "#8ba0bc" }} className="flex-1">{a.message}</span>
+            <span style={{ color: "var(--text-3)" }} className="flex-1">{a.message}</span>
             {a.booth && (
               <a href={`/booths/${a.booth}`} className="flex items-center gap-1 hover:underline"
                 style={{ color: c.text }}>
@@ -41,7 +41,7 @@ export default function AlertStrip({ alerts }: Props) {
             )}
             <button onClick={() => setDismissed((d) => [...d, realIdx])}
               className="p-0.5 rounded hover:bg-white/10 transition-colors">
-              <X size={10} style={{ color: "#4d6480" }} />
+              <X size={10} style={{ color: "var(--text-3)" }} />
             </button>
           </div>
         );

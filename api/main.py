@@ -12,7 +12,7 @@ load_dotenv()
 from .queries import (
     _rac,
     get_booths_for_ac, get_booth_summary, get_booth_history,
-    get_booth_issues, get_booth_pulse, get_booth_comments,
+    get_booth_issues, get_booth_pulse, get_booth_comments, get_booth_source_breakdown,
     get_ac_candidates, get_scheme_gap,
     get_booth_quality, get_booth_narratives, get_booth_contradictions,
     get_ac_schemes, get_ac_narratives, get_ac_events,
@@ -71,7 +71,7 @@ def list_booths(ac_id: str):
 
 
 @app.get("/booth/{booth_id}/summary")
-def booth_summary(booth_id: str, days: int = Query(7, ge=1, le=90)):
+def booth_summary(booth_id: str, days: int = Query(7, ge=1, le=365)):
     """
     Full Booth 223-style summary card:
     historical results + digital pulse + issues + scheme gap + insights.
@@ -80,11 +80,12 @@ def booth_summary(booth_id: str, days: int = Query(7, ge=1, le=90)):
     if not meta:
         raise HTTPException(404, f"Booth '{booth_id}' not found.")
 
-    history   = get_booth_history(booth_id)
-    pulse     = get_booth_pulse(booth_id, days=days)
-    issues    = get_booth_issues(booth_id, limit=5)
-    comments  = get_booth_comments(booth_id, limit=5)
-    scheme_gaps = get_scheme_gap(booth_id)
+    history         = get_booth_history(booth_id)
+    pulse           = get_booth_pulse(booth_id, days=days)
+    issues          = get_booth_issues(booth_id, limit=12)
+    comments        = get_booth_comments(booth_id, limit=5)
+    scheme_gaps     = get_scheme_gap(booth_id)
+    source_breakdown = get_booth_source_breakdown(booth_id)
 
     # Derive BJP historical summary
     bjp_history = [h for h in history if h["party"] in ("BJP", "भाजपा")]
@@ -144,6 +145,8 @@ def booth_summary(booth_id: str, days: int = Query(7, ge=1, le=90)):
         "issue_momentum": dict(top_momentum),
         # Comments (backing evidence)
         "backing_comments": comments,
+        # Source breakdown
+        "source_breakdown": source_breakdown,
         # Scheme gap
         "scheme_analysis": scheme_gaps,
         # Intelligence layer
@@ -211,7 +214,7 @@ def booth_conversion(booth_id: str):
 
 
 @app.get("/booth/{booth_id}/pulse")
-def booth_pulse(booth_id: str, days: int = Query(7, ge=1, le=90)):
+def booth_pulse(booth_id: str, days: int = Query(7, ge=1, le=365)):
     pulse = get_booth_pulse(booth_id, days=days)
     return {"booth_id": booth_id, "window_days": days, "pulse": pulse}
 

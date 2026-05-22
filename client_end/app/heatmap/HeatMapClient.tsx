@@ -6,16 +6,16 @@ import type { GraphCoverageResponse, GraphCoverageBooth } from "@/lib/api";
 import type { HeatLayer, PlottedBooth } from "./LeafletMap";
 import {
   Flame, Layers, BarChart3, X, Users, GitBranch,
-  AlertCircle, Info, TrendingUp
+  AlertCircle, Info, TrendingUp, Network
 } from "lucide-react";
 
 const Map = dynamic(() => import("./LeafletMap"), {
   ssr: false,
   loading: () => (
     <div className="w-full h-full flex flex-col items-center justify-center"
-      style={{ background: "#060b14" }}>
+      style={{ background: "var(--bg-base)" }}>
       <div className="w-8 h-8 border-2 border-orange-500/30 border-t-orange-500 rounded-full animate-spin mb-3" />
-      <p className="text-xs mono" style={{ color: "#4d6480" }}>
+      <p className="text-xs mono" style={{ color: "var(--text-3)" }}>
         Initialising constituency heatmap…
       </p>
     </div>
@@ -92,21 +92,21 @@ const LEGENDS: Record<HeatLayer, { label: string; color: string }[]> = {
   ],
   kg_coverage: [
     { label: "Present in Neo4j",     color: "#10b981" },
-    { label: "Not in graph",         color: "#1e3a5f" },
+    { label: "Not in graph",         color: "var(--text-4)" },
   ],
   bjp_lean: [
     { label: "Strong BJP (+0.3+)",   color: "#f97316" },
     { label: "Lean BJP",             color: "#fb923c" },
-    { label: "Neutral",              color: "#64748b" },
+    { label: "Neutral",              color: "var(--text-3)" },
     { label: "Lean Opp",             color: "#60a5fa" },
     { label: "Strong Opp",           color: "#3b82f6" },
-    { label: "No signal",            color: "#1e3a5f" },
+    { label: "No signal",            color: "var(--text-4)" },
   ],
   confidence: [
     { label: "HIGH",                 color: "#10b981" },
     { label: "MEDIUM",               color: "#f59e0b" },
     { label: "LOW",                  color: "#ef4444" },
-    { label: "Unknown",              color: "#1e3a5f" },
+    { label: "Unknown",              color: "var(--text-4)" },
   ],
 };
 
@@ -140,11 +140,21 @@ export default function HeatMapClient({ coverage }: Props) {
 
         {/* Header */}
         <div className="px-4 py-3.5" style={{ borderBottom: "1px solid var(--border)" }}>
-          <div className="flex items-center gap-2 mb-0.5">
-            <Flame size={13} style={{ color: "var(--saffron)" }} />
-            <h1 className="text-sm font-bold" style={{ color: "var(--text-1)" }}>
-              Constituency Heatmap
-            </h1>
+          <div className="flex items-center justify-between gap-2 mb-0.5">
+            <div className="flex items-center gap-2">
+              <Flame size={13} style={{ color: "var(--saffron)" }} />
+              <h1 className="text-sm font-bold" style={{ color: "var(--text-1)" }}>
+                Constituency Heatmap
+              </h1>
+            </div>
+            <a href="/graph"
+              className="w-6 h-6 rounded flex items-center justify-center transition-all"
+              style={{ background: "transparent", border: "1px solid var(--border)", color: "var(--text-3)" }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(249,115,22,0.1)"; e.currentTarget.style.borderColor = "rgba(249,115,22,0.4)"; e.currentTarget.style.color = "var(--saffron)"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.color = "var(--text-3)"; }}
+              title="Go to Knowledge Graph">
+              <Network size={11} />
+            </a>
           </div>
           <p className="text-xs mono" style={{ color: "var(--text-4)" }}>
             {total} booths · Gorakhpur Urban AC
@@ -306,6 +316,17 @@ export default function HeatMapClient({ coverage }: Props) {
                   }}>
                   Full Intelligence Report →
                 </a>
+                {selected.in_neo4j && (
+                  <a href={`/graph?type=Booth&id=${selected.booth_id}`}
+                    className="mt-2 flex items-center justify-center py-2 rounded-md text-xs mono transition-all hover:opacity-80"
+                    style={{
+                      background: "rgba(16,185,129,0.1)",
+                      color: "#10b981",
+                      border: "1px solid rgba(16,185,129,0.3)",
+                    }}>
+                    <Network size={9} className="mr-1" /> View in Knowledge Graph
+                  </a>
+                )}
               </div>
             </div>
           ) : (

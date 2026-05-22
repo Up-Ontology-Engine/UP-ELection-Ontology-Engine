@@ -13,9 +13,9 @@ const Map = dynamic(() => import("./InfraMap"), {
   ssr: false,
   loading: () => (
     <div className="w-full h-full flex flex-col items-center justify-center"
-      style={{ background: "#060b14" }}>
+      style={{ background: "var(--bg-base)" }}>
       <div className="w-8 h-8 border-2 border-orange-500/30 border-t-orange-500 rounded-full animate-spin mb-3" />
-      <p className="text-xs mono" style={{ color: "#4d6480" }}>Initialising map…</p>
+      <p className="text-xs mono" style={{ color: "var(--text-3)" }}>Initialising map…</p>
     </div>
   )
 });
@@ -99,21 +99,21 @@ export default function InfraClient({ overview, coverage }: Props) {
 
   const COVERAGE_LEGEND = [
     { label: "In Knowledge Graph", color: "#10b981" },
-    { label: "Not in graph",       color: "#1e3a5f" },
+    { label: "Not in graph",       color: "var(--text-4)" },
   ];
   const PULSE_LEGEND = [
     { label: "Strong BJP (+0.3+)",   color: "#f97316" },
     { label: "Lean BJP (+0.1–0.3)",  color: "#fb923c" },
-    { label: "Neutral",              color: "#64748b" },
+    { label: "Neutral",              color: "var(--text-3)" },
     { label: "Lean Opp (−0.1–−0.3)", color: "#60a5fa" },
     { label: "Strong Opp (< −0.3)",  color: "#3b82f6" },
-    { label: "No data",              color: "#1e3a5f" },
+    { label: "No data",              color: "var(--text-4)" },
   ];
   const CONF_LEGEND = [
     { label: "HIGH",    color: "#10b981" },
     { label: "MEDIUM",  color: "#f59e0b" },
     { label: "LOW",     color: "#ef4444" },
-    { label: "Unknown", color: "#1e3a5f" },
+    { label: "Unknown", color: "var(--text-4)" },
   ];
   const legend =
     layer === "graph_coverage" ? COVERAGE_LEGEND :
@@ -128,7 +128,7 @@ export default function InfraClient({ overview, coverage }: Props) {
         style={{ borderBottom: "1px solid var(--border)" }}>
         <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
           style={{ background: "linear-gradient(135deg, #f97316 0%, #dc2626 100%)", boxShadow: "0 2px 8px rgba(249,115,22,0.25)" }}>
-          <Server size={15} className="text-white" />
+          <Server size={15} className="text-[var(--text-1)]" />
         </div>
         <div>
           <h1 className="font-bold text-sm" style={{ color: "var(--text-1)" }}>Data Infrastructure</h1>
@@ -368,7 +368,7 @@ export default function InfraClient({ overview, coverage }: Props) {
                     <p className="mono text-xs" style={{ color: "var(--text-4)" }}>
                       <span style={{ color: "#10b981" }}>●</span>&nbsp;
                       {inKg} in KG &nbsp;/&nbsp;
-                      <span style={{ color: "#374151" }}>●</span>&nbsp;
+                      <span style={{ color: "var(--text-4)" }}>●</span>&nbsp;
                       {total - inKg} not mapped
                     </p>
                   </div>
@@ -403,7 +403,7 @@ export default function InfraClient({ overview, coverage }: Props) {
                   <span className="mono text-xs px-1.5 py-0.5 rounded"
                     style={{
                       background: selected.in_neo4j ? "rgba(16,185,129,0.1)" : "rgba(30,58,95,0.4)",
-                      color: selected.in_neo4j ? "#10b981" : "#4d6480",
+                      color: selected.in_neo4j ? "#10b981" : "var(--text-3)",
                       border: `1px solid ${selected.in_neo4j ? "rgba(16,185,129,0.3)" : "var(--border)"}`,
                       fontSize: 9,
                     }}>

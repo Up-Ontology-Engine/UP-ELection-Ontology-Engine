@@ -125,6 +125,9 @@ def load_narratives(pg_engine: Engine, neo4j_session: Session) -> int:
     for r in rows:
         top_issues   = r["top_issues"]   if isinstance(r["top_issues"],   list) else json.loads(r["top_issues"]   or "[]")
         top_entities = r["top_entities"] if isinstance(r["top_entities"], list) else json.loads(r["top_entities"] or "[]")
+        # Neo4j can't store dicts — serialize to JSON strings
+        top_issues_str   = json.dumps(top_issues,   ensure_ascii=False)
+        top_entities_str = json.dumps(top_entities, ensure_ascii=False)
 
         neo4j_session.run(
             """
@@ -151,15 +154,18 @@ def load_narratives(pg_engine: Engine, neo4j_session: Session) -> int:
                 "narrative_type": r["narrative_type"],
                 "strength":       float(r["strength"] or 0),
                 "description":    r["description"] or "",
-                "top_issues":     top_issues,
-                "top_entities":   top_entities,
+                "top_issues":     top_issues_str,
+                "top_entities":   top_entities_str,
                 "evidence_count": r["evidence_count"],
                 "confidence":     float(r["confidence"] or 0),
             },
         )
 
-        # Wire Narrative → Issue
-        for issue_code in top_issues:
+        # Wire Narrative → Issue (top_issues may be list of dicts or strings)
+        for issue_item in top_issues:
+            issue_code = issue_item["issue"] if isinstance(issue_item, dict) else issue_item
+            if not issue_code:
+                continue
             neo4j_session.run(
                 """
                 MATCH (n:Narrative {
@@ -179,7 +185,8 @@ def load_narratives(pg_engine: Engine, neo4j_session: Session) -> int:
             )
 
         # Wire Narrative → Party (for entities that look like parties)
-        for entity in top_entities:
+        for entity_item in top_entities:
+            entity = entity_item["entity"] if isinstance(entity_item, dict) else entity_item
             neo4j_session.run(
                 """
                 MATCH (n:Narrative {

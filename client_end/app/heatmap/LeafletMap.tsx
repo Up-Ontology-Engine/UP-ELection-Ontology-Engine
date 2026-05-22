@@ -90,7 +90,7 @@ export default function LeafletMap({ booths, layer, onSelect, selected }: Props)
     <MapContainer
       center={center}
       zoom={13}
-      style={{ height: "100%", width: "100%", background: "#060b14" }}>
+      style={{ height: "100%", width: "100%", background: "var(--bg-base)" }}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
@@ -151,11 +151,11 @@ export default function LeafletMap({ booths, layer, onSelect, selected }: Props)
               }}
               eventHandlers={{ click: () => onSelect(b) }}>
               <Popup>
-                <div style={{ color: "#f1f5f9", fontSize: 12, minWidth: 165, padding: "2px 0" }}>
+                <div style={{ color: "var(--text-1)", fontSize: 12, minWidth: 165, padding: "2px 0" }}>
                   <p style={{ fontWeight: 700, marginBottom: 3, color: "#f97316" }}>
                     Booth {b.booth_number}
                   </p>
-                  <p style={{ color: "#94a3b8", marginBottom: 8, fontSize: 11 }}>{b.name}</p>
+                  <p style={{ color: "var(--text-3)", marginBottom: 8, fontSize: 11 }}>{b.name}</p>
                   <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
                     {[
                       ["Voters",    b.total_voters?.toLocaleString("en-IN") ?? "—"],
@@ -164,8 +164,8 @@ export default function LeafletMap({ booths, layer, onSelect, selected }: Props)
                       ["Quality",   b.confidence_label ?? "No data"],
                     ].map(([k, v]) => (
                       <div key={String(k)} style={{ display: "flex", justifyContent: "space-between" }}>
-                        <span style={{ color: "#64748b" }}>{k}</span>
-                        <span style={{ color: "#f0f4fa", fontWeight: 600 }}>{v}</span>
+                        <span style={{ color: "var(--text-3)" }}>{k}</span>
+                        <span style={{ color: "var(--text-1)", fontWeight: 600 }}>{v}</span>
                       </div>
                     ))}
                   </div>

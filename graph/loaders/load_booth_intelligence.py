@@ -52,13 +52,17 @@ def load_booth_metrics(pg_engine: sa.Engine, session: Session) -> int:
 
 
 def load_conversion_scores(pg_engine: sa.Engine, session: Session) -> int:
-    with pg_engine.connect() as conn:
-        rows = conn.execute(text("""
-            SELECT booth_id, overall_conversion_score, recommended_action,
-                   persuasion_room_score, beneficiary_density_score,
-                   turnout_mobilization_score, service_risk_score
-            FROM conversion_opportunity
-        """)).mappings().fetchall()
+    try:
+        with pg_engine.connect() as conn:
+            rows = conn.execute(text("""
+                SELECT booth_id, overall_conversion_score, recommended_action,
+                       persuasion_room_score, beneficiary_density_score,
+                       turnout_mobilization_score, service_risk_score
+                FROM conversion_opportunity
+            """)).mappings().fetchall()
+    except Exception:
+        logger.warning("conversion_opportunity table not found — skipping conversion scores")
+        return 0
 
     count = 0
     BATCH = 500

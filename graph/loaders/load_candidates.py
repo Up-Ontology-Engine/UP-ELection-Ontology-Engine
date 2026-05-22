@@ -132,7 +132,7 @@ def load_election_results(pg_engine: sa.Engine, session: Session) -> int:
                 cph.is_winner,
                 cph.result_position_label,
                 cph.victory_margin_votes,
-                cph.result,
+                cph.results_source  AS result,
                 cph.result_completeness_status,
                 ced.total_election_expense_rs,
                 ced.own_funds_rs,
@@ -141,7 +141,6 @@ def load_election_results(pg_engine: sa.Engine, session: Session) -> int:
             LEFT JOIN candidate_expense_detail ced
                 ON ced.candidate_id = cph.candidate_id
                AND ced.election_year = cph.election_year
-            WHERE cph.constituency = 'GKP_322'
         """)).mappings().fetchall()
 
     count = 0

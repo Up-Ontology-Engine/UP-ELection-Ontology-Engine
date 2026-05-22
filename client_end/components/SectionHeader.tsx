@@ -11,8 +11,8 @@ export default function SectionHeader({ title, sub, accent = "#f97316", right }:
       <div className="flex items-center gap-2">
         <div className="w-0.5 h-4 rounded-full" style={{ background: accent }} />
         <div>
-          <p className="text-xs font-semibold text-white">{title}</p>
-          {sub && <p className="text-xs" style={{ color: "#4d6480" }}>{sub}</p>}
+          <p className="text-xs font-semibold" style={{ color: "var(--text-1)" }}>{title}</p>
+          {sub && <p className="text-xs" style={{ color: "var(--text-3)" }}>{sub}</p>}
         </div>
       </div>
       {right}

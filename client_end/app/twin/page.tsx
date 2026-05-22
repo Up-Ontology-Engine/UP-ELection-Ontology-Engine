@@ -97,71 +97,70 @@ export default async function TwinPage() {
   ];
 
   return (
-    <div className="min-h-screen p-6" style={{ background: "#0a0e1a" }}>
+    <div className="min-h-screen p-6" style={{ background: "var(--bg-base)" }}>
       <div className="mb-6">
         <div className="flex items-center gap-3 mb-1">
           <div className="w-2 h-6 rounded-full" style={{ background: "#f59e0b" }} />
-          <h1 className="text-xl font-bold text-white flex items-center gap-2">
+          <h1 className="text-xl font-bold flex items-center gap-2" style={{ color: "var(--text-1)" }}>
             <Cpu size={20} style={{ color: "#f59e0b" }} /> Gorakhpur Digital Twin
           </h1>
         </div>
-        <p className="text-sm ml-5" style={{ color: "#94a3b8" }}>
+        <p className="text-sm ml-5" style={{ color: "var(--text-3)" }}>
           Constituency state model · {new Date().toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })}
         </p>
       </div>
 
       {/* Twin State KPIs */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-        <div className="rounded-xl p-4" style={{ background: "#111827", border: "1px solid #1e2d45" }}>
-          <p className="text-xs uppercase tracking-wider mb-1" style={{ color: "#94a3b8" }}>Total Voters</p>
-          <p className="text-2xl font-bold text-white">{fmt(totalVoters)}</p>
+        <div className="card rounded-xl p-4">
+          <p className="text-xs uppercase tracking-wider mb-1" style={{ color: "var(--text-3)" }}>Total Voters</p>
+          <p className="text-2xl font-bold" style={{ color: "var(--text-1)" }}>{fmt(totalVoters)}</p>
         </div>
-        <div className="rounded-xl p-4" style={{ background: "#111827", border: "1px solid #f59e0b33" }}>
-          <p className="text-xs uppercase tracking-wider mb-1" style={{ color: "#94a3b8" }}>Volatile Booths</p>
+        <div className="card rounded-xl p-4" style={{ borderColor: "#f59e0b33" }}>
+          <p className="text-xs uppercase tracking-wider mb-1" style={{ color: "var(--text-3)" }}>Volatile Booths</p>
           <p className="text-2xl font-bold" style={{ color: "#f59e0b" }}>{volatileBooths.length}</p>
-          <p className="text-xs mt-1" style={{ color: "#475569" }}>neutral or insufficient lean</p>
+          <p className="text-xs mt-1" style={{ color: "var(--text-4)" }}>neutral or insufficient lean</p>
         </div>
-        <div className="rounded-xl p-4" style={{ background: "#111827", border: "1px solid #ef444433" }}>
-          <p className="text-xs uppercase tracking-wider mb-1" style={{ color: "#94a3b8" }}>High-Priority Gaps</p>
+        <div className="card rounded-xl p-4" style={{ borderColor: "#ef444433" }}>
+          <p className="text-xs uppercase tracking-wider mb-1" style={{ color: "var(--text-3)" }}>High-Priority Gaps</p>
           <p className="text-2xl font-bold" style={{ color: "#ef4444" }}>{highPrioritySchemes.length}</p>
-          <p className="text-xs mt-1" style={{ color: "#475569" }}>scheme delivery gaps</p>
+          <p className="text-xs mt-1" style={{ color: "var(--text-4)" }}>scheme delivery gaps</p>
         </div>
-        <div className="rounded-xl p-4" style={{ background: "#111827", border: "1px solid #8b5cf633" }}>
-          <p className="text-xs uppercase tracking-wider mb-1" style={{ color: "#94a3b8" }}>Swing Booths</p>
+        <div className="card rounded-xl p-4" style={{ borderColor: "#8b5cf633" }}>
+          <p className="text-xs uppercase tracking-wider mb-1" style={{ color: "var(--text-3)" }}>Swing Booths</p>
           <p className="text-2xl font-bold" style={{ color: "#8b5cf6" }}>{leanBooths.length}</p>
-          <p className="text-xs mt-1" style={{ color: "#475569" }}>lean (not strong) lean</p>
+          <p className="text-xs mt-1" style={{ color: "var(--text-4)" }}>lean (not strong) lean</p>
         </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Main column */}
         <div className="lg:col-span-2 flex flex-col gap-6">
-          {/* Charts */}
           <TwinCharts booths={booths} narrativeTypes={narrativeTypes} />
 
           {/* TwinCell State Vectors */}
-          <div className="rounded-xl overflow-hidden" style={{ border: "1px solid #1e2d45" }}>
-            <div className="px-4 py-3" style={{ background: "#090d18", borderBottom: "1px solid #1e2d45" }}>
-              <h3 className="text-sm font-semibold text-white flex items-center gap-2">
+          <div className="card rounded-xl overflow-hidden">
+            <div className="px-4 py-3" style={{ background: "var(--bg-surface)", borderBottom: "1px solid var(--border)" }}>
+              <h3 className="text-sm font-semibold flex items-center gap-2" style={{ color: "var(--text-1)" }}>
                 <Activity size={14} style={{ color: "#f59e0b" }} /> TwinCell State Vectors
               </h3>
             </div>
             <div className="overflow-x-auto max-h-96">
               <table className="w-full text-xs">
                 <thead>
-                  <tr style={{ background: "#0d1525", borderBottom: "1px solid #1e2d45" }}>
+                  <tr style={{ background: "var(--bg-base)", borderBottom: "1px solid var(--border)" }}>
                     {["Booth", "Voters", "Lean", "BJP Pulse", "Volatility", "Top Issue", "Confidence", "Events"].map((h) => (
                       <th key={h} className="px-3 py-2 text-left font-medium uppercase tracking-wider"
-                        style={{ color: "#475569" }}>{h}</th>
+                        style={{ color: "var(--text-4)" }}>{h}</th>
                     ))}
                   </tr>
                 </thead>
                 <tbody>
                   {twinCells.map((c, i) => (
                     <tr key={c.id}
-                      style={{ background: i % 2 === 0 ? "#111827" : "#0d1525", borderBottom: "1px solid #1e2d4520" }}>
-                      <td className="px-3 py-2 font-mono" style={{ color: "#94a3b8" }}>{c.number}</td>
-                      <td className="px-3 py-2 text-white">{fmt(c.voters)}</td>
+                      style={{ background: i % 2 === 0 ? "var(--bg-card)" : "var(--bg-card-2)", borderBottom: "1px solid var(--border)" }}>
+                      <td className="px-3 py-2 font-mono" style={{ color: "var(--text-3)" }}>{c.number}</td>
+                      <td className="px-3 py-2" style={{ color: "var(--text-1)" }}>{fmt(c.voters)}</td>
                       <td className="px-3 py-2" style={{
                         color: c.lean.includes("BJP") ? "#f97316" : c.lean.includes("OPP") ? "#3b82f6" : "#64748b"
                       }}>{c.lean}</td>
@@ -171,13 +170,13 @@ export default async function TwinPage() {
                       <td className="px-3 py-2" style={{
                         color: c.volatility === "HIGH" ? "#ef4444" : c.volatility === "MEDIUM" ? "#f59e0b" : "#10b981"
                       }}>{c.volatility}</td>
-                      <td className="px-3 py-2 capitalize" style={{ color: "#94a3b8" }}>
+                      <td className="px-3 py-2 capitalize" style={{ color: "var(--text-3)" }}>
                         {c.issue?.replace(/_/g, " ") ?? "—"}
                       </td>
                       <td className="px-3 py-2" style={{
                         color: c.confidence === "HIGH" ? "#10b981" : c.confidence === "MEDIUM" ? "#f59e0b" : "#ef4444"
                       }}>{c.confidence}</td>
-                      <td className="px-3 py-2 text-white">{c.eventCount}</td>
+                      <td className="px-3 py-2" style={{ color: "var(--text-1)" }}>{c.eventCount}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -189,26 +188,26 @@ export default async function TwinPage() {
         {/* Right column */}
         <div className="flex flex-col gap-6">
           {/* Scenario Templates */}
-          <div className="rounded-xl p-5" style={{ background: "#111827", border: "1px solid #1e2d45" }}>
-            <h3 className="text-sm font-semibold text-white mb-4 flex items-center gap-2">
+          <div className="card rounded-xl p-5">
+            <h3 className="text-sm font-semibold mb-4 flex items-center gap-2" style={{ color: "var(--text-1)" }}>
               <TrendingUp size={14} style={{ color: "#f59e0b" }} /> Scenario Templates
             </h3>
             <div className="space-y-3">
               {scenarios.map((sc) => (
                 <div key={sc.id} className="rounded-lg p-3"
-                  style={{ background: "#0a0e1a", border: `1px solid ${sc.priority === "HIGH" ? "#ef444433" : "#f59e0b33"}` }}>
+                  style={{ background: "var(--bg-surface)", border: `1px solid ${sc.priority === "HIGH" ? "#ef444433" : "#f59e0b33"}` }}>
                   <div className="flex items-center justify-between mb-1">
-                    <p className="text-xs font-semibold text-white">{sc.name}</p>
+                    <p className="text-xs font-semibold" style={{ color: "var(--text-1)" }}>{sc.name}</p>
                     <span className="text-xs px-2 py-0.5 rounded"
                       style={{
                         background: sc.priority === "HIGH" ? "#ef444422" : "#f59e0b22",
                         color: sc.priority === "HIGH" ? "#ef4444" : "#f59e0b"
                       }}>{sc.priority}</span>
                   </div>
-                  <p className="text-xs mb-2" style={{ color: "#94a3b8" }}>{sc.desc}</p>
+                  <p className="text-xs mb-2" style={{ color: "var(--text-3)" }}>{sc.desc}</p>
                   <div className="flex justify-between text-xs">
-                    <span style={{ color: "#475569" }}>Target booths:</span>
-                    <span className="text-white font-medium">{sc.targetBooths}</span>
+                    <span style={{ color: "var(--text-4)" }}>Target booths:</span>
+                    <span className="font-medium" style={{ color: "var(--text-1)" }}>{sc.targetBooths}</span>
                   </div>
                   <div className="mt-1 px-2 py-1.5 rounded text-xs"
                     style={{ background: "#10b98122", color: "#10b981" }}>
@@ -220,19 +219,19 @@ export default async function TwinPage() {
           </div>
 
           {/* Top Narratives */}
-          <div className="rounded-xl p-5" style={{ background: "#111827", border: "1px solid #1e2d45" }}>
-            <h3 className="text-sm font-semibold text-white mb-4">Dominant Narratives</h3>
+          <div className="card rounded-xl p-5">
+            <h3 className="text-sm font-semibold mb-4" style={{ color: "var(--text-1)" }}>Dominant Narratives</h3>
             {topNarratives.length === 0 ? (
-              <p className="text-sm" style={{ color: "#475569" }}>No narrative data.</p>
+              <p className="text-sm" style={{ color: "var(--text-4)" }}>No narrative data.</p>
             ) : (
               <div className="space-y-2">
                 {topNarratives.map(([type, count]) => (
                   <div key={type}>
                     <div className="flex justify-between text-xs mb-1">
-                      <span className="capitalize text-white">{type.replace(/_/g, " ")}</span>
-                      <span style={{ color: "#94a3b8" }}>{count} booths</span>
+                      <span className="capitalize" style={{ color: "var(--text-1)" }}>{type.replace(/_/g, " ")}</span>
+                      <span style={{ color: "var(--text-3)" }}>{count} booths</span>
                     </div>
-                    <div className="h-1.5 rounded-full" style={{ background: "#1e2d45" }}>
+                    <div className="h-1.5 rounded-full" style={{ background: "var(--border)" }}>
                       <div className="h-1.5 rounded-full" style={{
                         width: `${(count / (topNarratives[0]?.[1] || 1)) * 100}%`,
                         background: "#8b5cf6"
@@ -246,19 +245,19 @@ export default async function TwinPage() {
 
           {/* Candidate results */}
           {candidates.length > 0 && (
-            <div className="rounded-xl p-5" style={{ background: "#111827", border: "1px solid #1e2d45" }}>
-              <h3 className="text-sm font-semibold text-white mb-4">Historical Candidates</h3>
+            <div className="card rounded-xl p-5">
+              <h3 className="text-sm font-semibold mb-4" style={{ color: "var(--text-1)" }}>Historical Candidates</h3>
               <div className="space-y-2 max-h-48 overflow-y-auto">
                 {candidates.map((c, i) => (
                   <div key={i} className="flex items-center justify-between text-xs rounded p-2"
-                    style={{ background: "#0a0e1a", border: "1px solid #1e2d45" }}>
+                    style={{ background: "var(--bg-surface)", border: "1px solid var(--border)" }}>
                     <div>
-                      <p className="font-medium text-white">{c.name}</p>
-                      <p style={{ color: "#475569" }}>{c.party} · {c.election_year}</p>
+                      <p className="font-medium" style={{ color: "var(--text-1)" }}>{c.name}</p>
+                      <p style={{ color: "var(--text-4)" }}>{c.party} · {c.election_year}</p>
                     </div>
                     <div className="text-right">
                       {c.vote_share != null && (
-                        <p style={{ color: "#94a3b8" }}>{c.vote_share.toFixed(1)}%</p>
+                        <p style={{ color: "var(--text-3)" }}>{c.vote_share.toFixed(1)}%</p>
                       )}
                       {c.winner_flag && (
                         <span className="text-xs px-1 py-0.5 rounded" style={{ background: "#10b98122", color: "#10b981" }}>Won</span>

@@ -16,13 +16,13 @@ interface Props {
 export default function MetricCard({ label, value, sub, delta, deltaLabel, accent = "#f97316", icon, mono, size = "md", alert }: Props) {
   const valSize = size === "lg" ? "text-3xl" : size === "sm" ? "text-xl" : "text-2xl";
   return (
-    <div className="card p-4 flex flex-col gap-1.5 relative overflow-hidden transition-all hover:border-[#243552]"
+    <div className="card p-4 flex flex-col gap-1.5 relative overflow-hidden transition-all hover:border-[var(--border-bright)]"
       style={alert ? { borderColor: "#ef444433", boxShadow: "inset 0 0 20px rgba(239,68,68,0.05)" } : {}}>
       {/* Top accent line */}
       <div className="absolute top-0 left-0 right-0 h-px" style={{ background: `linear-gradient(90deg, ${accent}44, transparent)` }} />
 
       <div className="flex items-center justify-between">
-        <span className="label" style={{ color: "#4d6480" }}>{label}</span>
+        <span className="label" style={{ color: "var(--text-3)" }}>{label}</span>
         {icon && <span style={{ color: accent }}>{icon}</span>}
       </div>
 
@@ -39,8 +39,8 @@ export default function MetricCard({ label, value, sub, delta, deltaLabel, accen
             {delta > 0 ? "+" : ""}{delta.toFixed(1)}%
           </span>
         )}
-        {sub && <span className="text-xs" style={{ color: "#4d6480" }}>{sub}</span>}
-        {deltaLabel && <span className="text-xs" style={{ color: "#2e4260" }}>{deltaLabel}</span>}
+        {sub && <span className="text-xs" style={{ color: "var(--text-3)" }}>{sub}</span>}
+        {deltaLabel && <span className="text-xs" style={{ color: "var(--text-4)" }}>{deltaLabel}</span>}
       </div>
     </div>
   );

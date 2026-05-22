@@ -57,6 +57,8 @@ export const api = {
   geo: (acId: string) => get<GeoResponse>(`/ac/${acId}/geo`),
   demographics: (acId: string) => get<DemographicsSummary>(`/ac/${acId}/demographics/summary`).catch(() => null),
   demographicSegments: (acId: string) => get<DemographicSegments>(`/ac/${acId}/demographics/segments`).catch(() => null),
+  twinSnapshot: (acId: string) => get<TwinSnapshot>(`/ac/${acId}/twin-snapshot`).catch(() => null),
+  heatmapCoverage: (acId: string) => get<HeatmapCoverage>(`/ac/${acId}/heatmap-coverage`).catch(() => null),
 
   // Booth-level
   boothSummary: (boothId: string, days = 7) => get<BoothSummary>(`/booth/${boothId}/summary?days=${days}`),
@@ -261,10 +263,20 @@ export interface BoothSummary {
   issue_momentum: Record<string, number>;
   backing_comments: Comment[];
   scheme_analysis: SchemeGap[];
+  source_breakdown: SourceBreakdown[];
   narratives: Narrative[];
   contradictions: ContradictionFlag[];
   key_insight: string;
   recommendation: string;
+}
+
+export interface SourceBreakdown {
+  source_type: string;
+  event_count: number;
+  avg_pulse: number | null;
+  positive: number;
+  negative: number;
+  neutral: number;
 }
 
 export interface QualityMetric {
@@ -274,11 +286,9 @@ export interface QualityMetric {
 }
 
 export interface PulseRow {
-  source: string;
+  entity: string;
+  pulse_score: number | null;
   event_count: number;
-  avg_polarity: number | null;
-  bjp_events: number;
-  opp_events: number;
 }
 
 export interface ContradictionFlag {
@@ -404,6 +414,31 @@ export interface DemographicSegments {
     description: string;
     booth_ids: string[];
   }[];
+}
+
+export interface HeatmapCoverage {
+  ac_id: string;
+  total_booths: number;
+  geocoded_booths: number;
+  coverage_pct: number;
+  target_pct: number;
+  target_met: boolean;
+  booths_needed_for_target: number;
+}
+
+export interface TwinSnapshot {
+  ac_id: string;
+  snapshot_generated_at: string;
+  ontology: {
+    neo4j_online: boolean;
+    postgres_online: boolean;
+    total_nodes: number;
+    total_edges: number;
+    active_constraints: number;
+  };
+  heatmap: HeatmapCoverage;
+  demographics_summary: DemographicsSummary | null;
+  demographic_segments: { name: string; booth_count: number; description: string; booth_ids: string[] }[];
 }
 
 export interface InfraOverview {
