@@ -126,7 +126,9 @@ def load_booth_results(pg_engine: sa.Engine, session: Session) -> int:
                 br.vote_share,
                 br.winner_flag
             FROM booth_results br
-            WHERE br.booth_id NOT LIKE '%_TOTAL'  -- real booths only
+            JOIN booth_master bm ON bm.booth_id = br.booth_id
+            WHERE bm.ac_id = 'GKP_322'
+              AND br.booth_id NOT LIKE '%_TOTAL'
             ORDER BY br.booth_id, br.votes DESC
         """)).mappings().fetchall()
 
@@ -157,6 +159,7 @@ def load_booth_results(pg_engine: sa.Engine, session: Session) -> int:
             UNWIND $rows AS r
             MATCH (b:Booth {booth_id: r.booth_id})
             MERGE (p:Party {party_id: r.party})
+            ON CREATE SET p.name = r.party
             MERGE (p)-[rv:RECEIVED_VOTES_AT {election_year: r.election_year}]->(b)
             SET rv.votes      = r.votes,
                 rv.vote_share = r.vote_share,

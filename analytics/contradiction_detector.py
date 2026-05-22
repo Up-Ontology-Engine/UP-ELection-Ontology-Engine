@@ -219,6 +219,7 @@ def run_all_booths(engine: Engine, window_days: int = 7) -> int:
 
 
 if __name__ == "__main__":
+    from dotenv import load_dotenv; load_dotenv()
     from api.db import get_pg_engine
     eng = get_pg_engine()
     n = run_all_booths(eng)

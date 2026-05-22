@@ -68,7 +68,10 @@ def load_data_quality(pg_engine: Engine, neo4j_session: Session) -> int:
 
         neo4j_session.run(
             """
-            MATCH (b:Booth {booth_id: $booth_id})
+            OPTIONAL MATCH (b:Booth {booth_id: $booth_id})
+            OPTIONAL MATCH (ac:AssemblyConstituency {ac_id: $booth_id})
+            WITH COALESCE(b, ac) AS entity
+            WHERE entity IS NOT NULL
             MERGE (dq:DataQuality {booth_id: $booth_id, computed_at: datetime($computed_at)})
             SET
                 dq.window_days           = $window_days,
@@ -80,7 +83,7 @@ def load_data_quality(pg_engine: Engine, neo4j_session: Session) -> int:
                 dq.source_diversity      = $source_diversity_score,
                 dq.avg_geo_confidence    = $avg_geo_confidence,
                 dq.avg_nlp_confidence    = $avg_nlp_confidence
-            MERGE (b)-[:HAS_QUALITY]->(dq)
+            MERGE (entity)-[:HAS_QUALITY]->(dq)
             """,
             {
                 "booth_id":             r["booth_id"],

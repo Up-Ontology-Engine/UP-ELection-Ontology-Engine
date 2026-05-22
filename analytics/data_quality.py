@@ -277,6 +277,7 @@ def _empty_quality_row(booth_id: str, window_days: int, computed_at: datetime) -
 
 
 if __name__ == "__main__":
+    from dotenv import load_dotenv; load_dotenv()
     from api.db import get_pg_engine
     eng = get_pg_engine()
     n = run_all_booths(eng)
