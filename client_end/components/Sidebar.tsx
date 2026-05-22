@@ -14,7 +14,8 @@ const SECTIONS = [
     label: "Operations",
     labelHi: "संचालन",
     items: [
-      { href: "/",           icon: LayoutDashboard, label: "Command Center",     labelHi: "कमांड सेंटर",      badge: null,  dot: "green"  },
+      { href: "/",           icon: LayoutDashboard, label: "Home",               labelHi: "मुख्य पृष्ठ",       badge: null,  dot: "green"  },
+      { href: "/dashboard",  icon: Activity,        label: "Command Center",     labelHi: "कमांड सेंटर",      badge: null,  dot: "green"  },
       { href: "/booths",     icon: Activity,        label: "Booth Intelligence", labelHi: "बूथ बुद्धिमत्ता",  badge: "30",  dot: "green"  },
       { href: "/conversion", icon: Target,          label: "Voter Conversion",   labelHi: "मतदाता रूपांतरण",   badge: "NEW", dot: "orange" },
     ],
