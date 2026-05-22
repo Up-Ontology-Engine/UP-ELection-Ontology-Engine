@@ -121,7 +121,7 @@ export default function InfraClient({ overview, coverage }: Props) {
                                   CONF_LEGEND;
 
   return (
-    <div className="flex flex-col" style={{ minHeight: "calc(100vh - 44px)", background: "var(--bg-base)" }}>
+    <div className="flex flex-col" style={{ minHeight: "calc(100vh - 56px)", background: "var(--bg-base)" }}>
 
       {/* ── Title strip ── */}
       <div className="px-6 py-4 flex items-center gap-3"

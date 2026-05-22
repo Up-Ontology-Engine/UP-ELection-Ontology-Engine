@@ -1,20 +1,25 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Search, Bell, Wifi, WifiOff, RefreshCw, ChevronRight, Terminal, Sun, Moon } from "lucide-react";
+import { Bell, Wifi, WifiOff, RefreshCw, ChevronRight, Sun, Moon, ShieldCheck } from "lucide-react";
 import { useTheme } from "@/components/ThemeProvider";
 
 interface Props {
   breadcrumbs?: string[];
 }
 
-export default function Header({ breadcrumbs = ["Gorakhpur Urban AC"] }: Props) {
+export default function Header({ breadcrumbs = ["Command Center"] }: Props) {
   const [time, setTime] = useState("");
+  const [date, setDate] = useState("");
   const [apiOk, setApiOk] = useState<boolean | null>(null);
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
-    const tick = () => setTime(new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false }));
+    const tick = () => {
+      const now = new Date();
+      setTime(now.toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit", hour12: false }));
+      setDate(now.toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" }));
+    };
     tick();
     const id = setInterval(tick, 1000);
     return () => clearInterval(id);
@@ -25,80 +30,83 @@ export default function Header({ breadcrumbs = ["Gorakhpur Urban AC"] }: Props) 
   }, []);
 
   return (
-    <header className="header-bar fixed top-0 left-56 right-0 z-40 flex items-center justify-between px-5 h-11">
-      {/* Left — breadcrumb */}
-      <div className="flex items-center gap-1.5 mono text-xs" style={{ color: "var(--text-3)" }}>
-        <Terminal size={11} style={{ color: "var(--saffron)" }} />
-        <span style={{ color: "var(--text-2)" }}>UP-EOM</span>
-        {breadcrumbs.map((b, i) => (
-          <span key={i} className="flex items-center gap-1.5">
-            <ChevronRight size={10} style={{ color: "var(--text-4)" }} />
-            <span style={{ color: i === breadcrumbs.length - 1 ? "var(--text-1)" : "var(--text-2)" }}>{b}</span>
-          </span>
-        ))}
+    <header className="header-bar fixed top-0 left-56 right-0 z-40 flex items-center justify-between px-6 h-14">
+      {/* Left — title + breadcrumb */}
+      <div className="flex items-center gap-3 min-w-0">
+        <div className="flex items-center gap-2.5">
+          <span className="w-2 h-2 rounded-full animate-pulse-dot flex-shrink-0" style={{ background: "var(--green)" }} />
+          <div className="leading-none min-w-0">
+            <div className="flex items-center gap-1.5 text-xs" style={{ color: "var(--text-3)" }}>
+              <span style={{ color: "var(--text-2)", fontWeight: 600 }}>Gorakhpur Urban</span>
+              {breadcrumbs.map((b, i) => (
+                <span key={i} className="flex items-center gap-1.5 truncate">
+                  <ChevronRight size={11} style={{ color: "var(--text-4)" }} />
+                  <span style={{ color: i === breadcrumbs.length - 1 ? "var(--text-1)" : "var(--text-2)" }}>{b}</span>
+                </span>
+              ))}
+            </div>
+            <p className="mt-1.5" style={{ color: "var(--text-4)", fontSize: 10 }}>
+              Booth-Level Political Intelligence Platform
+            </p>
+          </div>
+        </div>
       </div>
 
-      {/* Center — live ticker */}
-      <div className="hidden md:flex items-center gap-3 overflow-hidden max-w-sm">
-        <div className="flex items-center gap-1.5">
+      {/* Center — live feed indicator */}
+      <div className="hidden lg:flex items-center gap-2 absolute left-1/2 -translate-x-1/2">
+        <span className="pill pill-live">
           <span className="w-1.5 h-1.5 rounded-full animate-pulse-dot" style={{ background: "var(--green)" }} />
-          <span className="mono text-xs" style={{ color: "var(--text-3)" }}>LIVE</span>
-        </div>
-        <div className="text-xs mono truncate" style={{ color: "var(--text-3)" }}>
-          Gorakhpur Urban AC · 247 booths · Last sync: {time}
-        </div>
+          LIVE INTELLIGENCE FEED
+        </span>
       </div>
 
       {/* Right — status controls */}
-      <div className="flex items-center gap-3">
-        {/* API status */}
-        <div className="flex items-center gap-1.5">
+      <div className="flex items-center gap-3.5">
+        {/* Date + clock */}
+        <div className="hidden md:flex flex-col items-end leading-none">
+          <span className="mono" style={{ color: "var(--text-1)", fontSize: 12, fontWeight: 600 }}>{time}</span>
+          <span className="mt-1" style={{ color: "var(--text-4)", fontSize: 9.5 }}>{date}</span>
+        </div>
+
+        <div className="w-px h-6" style={{ background: "var(--border)" }} />
+
+        {/* Connection status */}
+        <div className="flex items-center gap-1.5" title="Backend connection">
           {apiOk === null ? (
-            <RefreshCw size={11} className="animate-spin" style={{ color: "var(--text-3)" }} />
+            <RefreshCw size={12} className="animate-spin" style={{ color: "var(--text-3)" }} />
           ) : apiOk ? (
-            <Wifi size={11} style={{ color: "var(--green)" }} />
+            <Wifi size={12} style={{ color: "var(--green)" }} />
           ) : (
-            <WifiOff size={11} style={{ color: "var(--red)" }} />
+            <WifiOff size={12} style={{ color: "var(--text-4)" }} />
           )}
-          <span className="mono text-xs hidden lg:inline"
-            style={{ color: apiOk === null ? "var(--text-3)" : apiOk ? "var(--green)" : "var(--red)" }}>
-            {apiOk === null ? "CHECKING" : apiOk ? "API LIVE" : "API DOWN"}
+          <span className="mono hidden xl:inline" style={{
+            color: apiOk ? "var(--green)" : "var(--text-4)", fontSize: 10, fontWeight: 600,
+          }}>
+            {apiOk === null ? "CONNECTING" : apiOk ? "CONNECTED" : "OFFLINE"}
           </span>
         </div>
 
-        <div className="w-px h-4" style={{ background: "var(--border)" }} />
-
-        {/* Clock */}
-        <span className="mono text-xs hidden lg:inline" style={{ color: "var(--text-3)" }}>{time}</span>
-
-        <div className="w-px h-4" style={{ background: "var(--border)" }} />
-
-        {/* Search hint */}
-        <button className="flex items-center gap-2 px-2 py-1 rounded text-xs mono transition-colors"
-          style={{ color: "var(--text-3)", border: "1px solid var(--border)", background: "transparent" }}
-          onMouseEnter={(e) => (e.currentTarget.style.background = "var(--bg-hover)")}
-          onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}>
-          <Search size={10} />
-          <span className="hidden lg:inline">Search</span>
-          <span className="hidden lg:inline px-1 rounded text-xs mono"
-            style={{ background: "var(--bg-surface)", color: "var(--text-4)" }}>⌘K</span>
-        </button>
-
         {/* Theme toggle */}
         <button onClick={toggleTheme} className="theme-toggle" title={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}>
-          {theme === "dark"
-            ? <Sun size={13} />
-            : <Moon size={13} />}
+          {theme === "dark" ? <Sun size={14} /> : <Moon size={14} />}
         </button>
 
         {/* Alerts */}
-        <button className="relative p-1.5 rounded transition-colors"
+        <button className="relative p-1.5 rounded-md transition-colors"
           style={{ color: "var(--text-3)" }}
           onMouseEnter={(e) => (e.currentTarget.style.background = "var(--bg-hover)")}
           onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}>
-          <Bell size={13} />
-          <span className="absolute top-0.5 right-0.5 w-1.5 h-1.5 rounded-full" style={{ background: "var(--red)" }} />
+          <Bell size={14} />
+          <span className="absolute top-1 right-1 w-1.5 h-1.5 rounded-full" style={{ background: "var(--red)" }} />
         </button>
+
+        <div className="w-px h-6" style={{ background: "var(--border)" }} />
+
+        {/* Verified badge */}
+        <div className="hidden sm:flex items-center gap-1.5 pill" style={{ borderColor: "rgba(16,185,129,0.3)", background: "rgba(16,185,129,0.08)" }}>
+          <ShieldCheck size={11} style={{ color: "var(--green)" }} />
+          <span style={{ color: "var(--green)", fontSize: 10 }}>Verified Data</span>
+        </div>
       </div>
     </header>
   );

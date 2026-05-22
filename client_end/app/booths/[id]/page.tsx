@@ -7,11 +7,7 @@ import BoothDetailCharts from "./BoothDetailCharts";
 import {
   ArrowLeft, Users, Shield, AlertTriangle, BookOpen,
   TrendingUp, ChevronRight, Radio, Eye, Zap, Database,
-<<<<<<< HEAD
   Target, Activity, Wifi
-=======
-  Target, Activity
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
 } from "lucide-react";
 
 function fmt(n: number | null | undefined, dec = 0) {
@@ -23,7 +19,6 @@ interface Props { params: Promise<{ id: string }> }
 
 export default async function BoothDetailPage({ params }: Props) {
   const { id } = await params;
-<<<<<<< HEAD
   const DAYS_WINDOW = 365;
   let summary: Awaited<ReturnType<typeof api.boothSummary>> | null = null;
   try { summary = await api.boothSummary(id, DAYS_WINDOW); } catch {}
@@ -32,24 +27,12 @@ export default async function BoothDetailPage({ params }: Props) {
     api.boothConversion(id),
     api.boothPulse(id, DAYS_WINDOW).catch(() => null),
     api.boothIssues(id).catch(() => null),
-=======
-  let summary: Awaited<ReturnType<typeof api.boothSummary>> | null = null;
-  try { summary = await api.boothSummary(id); } catch {}
-  const [segments, conversion] = await Promise.all([
-    api.boothSegments(id),
-    api.boothConversion(id),
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
   ]);
 
   if (!summary) {
     return (
-<<<<<<< HEAD
       <div className="min-h-screen flex flex-col items-center justify-center" style={{ background: "var(--bg-base)" }}>
         <p className="mb-2" style={{ color: 'var(--text-1)' }}>Booth not found: <span className="mono">{id}</span></p>
-=======
-      <div className="min-h-screen flex flex-col items-center justify-center" style={{ background: "#060b14" }}>
-        <p className="text-white mb-2">Booth not found: <span className="mono">{id}</span></p>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
         <Link href="/booths" className="text-xs hover:underline" style={{ color: "#f97316" }}>← Back</Link>
       </div>
     );
@@ -59,7 +42,6 @@ export default async function BoothDetailPage({ params }: Props) {
     ? ((summary.female_voters / summary.total_voters) * 100).toFixed(1)
     : null;
 
-<<<<<<< HEAD
   const pulseDetail = summary.digital_pulse.pulse_detail.length > 0
     ? summary.digital_pulse.pulse_detail
     : (pulseResp?.pulse ?? []);
@@ -87,25 +69,13 @@ export default async function BoothDetailPage({ params }: Props) {
     <div className="p-5 min-h-screen" style={{ background: "var(--bg-base)" }}>
       {/* Breadcrumb */}
       <div className="flex items-center gap-1.5 mono text-xs mb-4" style={{ color: "var(--text-3)" }}>
-=======
-  return (
-    <div className="p-5 min-h-screen" style={{ background: "#060b14" }}>
-      {/* Breadcrumb */}
-      <div className="flex items-center gap-1.5 mono text-xs mb-4" style={{ color: "#4d6480" }}>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
         <Link href="/booths" className="hover:text-orange-400 transition-colors flex items-center gap-1">
           <ArrowLeft size={10} /> Booth Intelligence
         </Link>
         <ChevronRight size={10} />
-<<<<<<< HEAD
         <span style={{ color: "var(--text-1)" }}>Booth {summary.booth_number}</span>
         <ChevronRight size={10} />
         <span className="truncate max-w-48" style={{ color: "var(--text-3)" }}>{summary.name}</span>
-=======
-        <span style={{ color: "#f0f4fa" }}>Booth {summary.booth_number}</span>
-        <ChevronRight size={10} />
-        <span className="truncate max-w-48" style={{ color: "#8ba0bc" }}>{summary.name}</span>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
       </div>
 
       {/* Header bar */}
@@ -115,21 +85,12 @@ export default async function BoothDetailPage({ params }: Props) {
           <div>
             <div className="flex items-center gap-2.5 mb-1">
               <span className="mono text-xs px-2 py-0.5 rounded"
-<<<<<<< HEAD
                 style={{ background: "var(--bg-surface)", color: "#f97316", border: "1px solid #f9731630" }}>
                 B-{String(summary.booth_number).padStart(3, "0")}
               </span>
               <h1 className="font-bold text-[var(--text-1)]" style={{ fontSize: 16 }}>{summary.name}</h1>
             </div>
             <p className="text-xs mono" style={{ color: "var(--text-3)" }}>
-=======
-                style={{ background: "#0b1220", color: "#f97316", border: "1px solid #f9731630" }}>
-                B-{String(summary.booth_number).padStart(3, "0")}
-              </span>
-              <h1 className="font-bold text-white" style={{ fontSize: 16 }}>{summary.name}</h1>
-            </div>
-            <p className="text-xs mono" style={{ color: "#4d6480" }}>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
               {summary.ac_name} · AC-322 · ID: {id}
             </p>
           </div>
@@ -137,15 +98,9 @@ export default async function BoothDetailPage({ params }: Props) {
             <LeanBadge label={summary.digital_pulse.lean_label} />
             <ConfidenceBadge label={summary.confidence.label} />
             <span className="flex items-center gap-1.5 text-xs mono"
-<<<<<<< HEAD
               style={{ color: "var(--text-3)" }}>
               <Radio size={10} style={{ color: "#10b981" }} />
               {detailSummary.confidence.event_count} events
-=======
-              style={{ color: "#4d6480" }}>
-              <Radio size={10} style={{ color: "#10b981" }} />
-              {summary.confidence.event_count} events
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
             </span>
           </div>
         </div>
@@ -154,32 +109,19 @@ export default async function BoothDetailPage({ params }: Props) {
       {/* KPI strip */}
       <div className="grid grid-cols-4 md:grid-cols-8 gap-3 mb-4">
         {[
-<<<<<<< HEAD
           { label: "Total Voters",   value: fmt(summary.total_voters),   color: "var(--text-1)", sub: null },
-=======
-          { label: "Total Voters",   value: fmt(summary.total_voters),   color: "#f0f4fa", sub: null },
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
           { label: "Male Voters",    value: fmt(summary.male_voters),    color: "#3b82f6", sub: null },
           { label: "Female Voters",  value: fmt(summary.female_voters),  color: "#ec4899", sub: femalePct ? `${femalePct}%` : null },
           { label: "BJP Wins",       value: summary.historical.bjp_won_count, color: "#f97316", sub: "historical" },
           { label: "BJP Pulse",      value: fmt(summary.digital_pulse.bjp_pulse, 3), color: "#f97316", sub: "digital score" },
           { label: "Opp Pulse",      value: fmt(summary.digital_pulse.opp_pulse, 3), color: "#3b82f6", sub: "digital score" },
           { label: "Confidence",     value: fmt(summary.confidence.score, 2), color: summary.confidence.label === "HIGH" ? "#10b981" : summary.confidence.label === "MEDIUM" ? "#f59e0b" : "#ef4444", sub: summary.confidence.label },
-<<<<<<< HEAD
           { label: "Data Events",    value: detailSummary.confidence.event_count, color: "#10b981", sub: "raw signals" },
         ].map(({ label, value, color, sub }) => (
           <div key={label} className="card px-3 py-2.5">
             <p className="label" style={{ color: "var(--text-4)" }}>{label}</p>
             <p className="mono font-bold mt-0.5 text-base" style={{ color }}>{value}</p>
             {sub && <p className="text-xs mt-0.5" style={{ color: "var(--text-4)" }}>{sub}</p>}
-=======
-          { label: "Data Events",    value: summary.confidence.event_count, color: "#10b981", sub: "raw signals" },
-        ].map(({ label, value, color, sub }) => (
-          <div key={label} className="card px-3 py-2.5">
-            <p className="label" style={{ color: "#2e4260" }}>{label}</p>
-            <p className="mono font-bold mt-0.5 text-base" style={{ color }}>{value}</p>
-            {sub && <p className="text-xs mt-0.5" style={{ color: "#2e4260" }}>{sub}</p>}
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
           </div>
         ))}
       </div>
@@ -191,11 +133,7 @@ export default async function BoothDetailPage({ params }: Props) {
           <Shield size={14} className="mt-0.5 flex-shrink-0" style={{ color: "#10b981" }} />
           <div>
             <p className="label mb-1" style={{ color: "#10b981" }}>Key Insight</p>
-<<<<<<< HEAD
             <p className="text-xs" style={{ color: "var(--text-3)" }}>{summary.key_insight}</p>
-=======
-            <p className="text-xs" style={{ color: "#8ba0bc" }}>{summary.key_insight}</p>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
           </div>
         </div>
         <div className="rounded-md px-4 py-3 flex items-start gap-3"
@@ -203,11 +141,7 @@ export default async function BoothDetailPage({ params }: Props) {
           <TrendingUp size={14} className="mt-0.5 flex-shrink-0" style={{ color: "#f97316" }} />
           <div>
             <p className="label mb-1" style={{ color: "#f97316" }}>Recommendation</p>
-<<<<<<< HEAD
             <p className="text-xs" style={{ color: "var(--text-3)" }}>{summary.recommendation}</p>
-=======
-            <p className="text-xs" style={{ color: "#8ba0bc" }}>{summary.recommendation}</p>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
           </div>
         </div>
       </div>
@@ -216,7 +150,6 @@ export default async function BoothDetailPage({ params }: Props) {
       <div className="grid grid-cols-12 gap-4">
         <div className="col-span-12 lg:col-span-8 flex flex-col gap-4">
           {/* Charts */}
-<<<<<<< HEAD
           <BoothDetailCharts summary={detailSummary} />
 
           {/* Issue Analysis */}
@@ -237,83 +170,36 @@ export default async function BoothDetailPage({ params }: Props) {
                   const pct = (iss.mention_count / maxMentions) * 100;
                   const sentiment = iss.avg_polarity ?? 0;
                   const barColor = sentiment < -0.15 ? "#ef4444" : sentiment > 0.15 ? "#10b981" : "#f97316";
-=======
-          <BoothDetailCharts summary={summary} />
-
-          {/* Issues detail */}
-          <div className="card p-4">
-            <SectionHeader title="Issue Analysis" sub={`${summary.top_issues.length} tracked issues`} accent="#ef4444"
-              right={
-                <span className="mono text-xs" style={{ color: "#4d6480" }}>
-                  {summary.top_issues.reduce((s, i) => s + i.mention_count, 0)} total mentions
-                </span>
-              }
-            />
-            {summary.top_issues.length === 0 ? (
-              <p className="text-xs" style={{ color: "#4d6480" }}>No issue data.</p>
-            ) : (
-              <div className="space-y-3">
-                {summary.top_issues.map((iss, i) => {
-                  const maxMentions = summary.top_issues[0].mention_count;
-                  const pct = (iss.mention_count / maxMentions) * 100;
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                   return (
                     <div key={iss.issue}>
                       <div className="flex items-center justify-between mb-1">
                         <div className="flex items-center gap-2">
-<<<<<<< HEAD
                           <span className="mono text-xs w-4" style={{ color: "var(--text-4)" }}>{i + 1}</span>
                           <span className="text-xs font-medium text-[var(--text-1)] capitalize">
-=======
-                          <span className="mono text-xs w-4" style={{ color: "#2e4260" }}>{i + 1}</span>
-                          <span className="text-xs font-medium text-white capitalize">
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                             {iss.issue.replace(/_/g, " ")}
                           </span>
                         </div>
                         <div className="flex items-center gap-3">
-<<<<<<< HEAD
                           <span className="text-xs" style={{ color: "var(--text-3)" }}>
-=======
-                          <span className="text-xs" style={{ color: "#4d6480" }}>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                             {iss.mention_count} mentions
                           </span>
                           {iss.avg_polarity != null && (
                             <span className="mono text-xs px-1.5 py-0.5 rounded"
                               style={{
-<<<<<<< HEAD
                                 background: sentiment < -0.15 ? "#ef444420" : sentiment > 0.15 ? "#10b98120" : "var(--bg-surface)",
                                 color: sentiment < -0.15 ? "#ef4444" : sentiment > 0.15 ? "#10b981" : "var(--text-4)",
                                 fontSize: 9
                               }}>
                               {sentiment > 0 ? "+" : ""}{iss.avg_polarity.toFixed(2)}
-=======
-                                background: iss.avg_polarity < -0.2 ? "#ef444420" : iss.avg_polarity > 0.2 ? "#10b98120" : "#1a2b44",
-                                color: iss.avg_polarity < -0.2 ? "#ef4444" : iss.avg_polarity > 0.2 ? "#10b981" : "#64748b",
-                                fontSize: 9
-                              }}>
-                              avg {iss.avg_polarity.toFixed(2)}
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                             </span>
                           )}
                         </div>
                       </div>
                       <div className="flex items-center gap-2">
-<<<<<<< HEAD
                         <div className="flex-1 h-1.5 rounded-full" style={{ background: "var(--bg-surface)" }}>
                           <div className="h-1.5 rounded-full" style={{ width: `${pct}%`, background: barColor }} />
                         </div>
                         <div className="flex gap-2 mono" style={{ fontSize: 9 }}>
-=======
-                        <div className="flex-1 h-1.5 rounded-full" style={{ background: "#0b1220" }}>
-                          <div className="h-1.5 rounded-full" style={{
-                            width: `${pct}%`,
-                            background: iss.avg_polarity != null && iss.avg_polarity < -0.2 ? "#ef4444" : "#f97316"
-                          }} />
-                        </div>
-                        <div className="flex gap-2 text-xs mono" style={{ fontSize: 9 }}>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                           <span style={{ color: "#ef4444" }}>▼{iss.negative_count}</span>
                           <span style={{ color: "#10b981" }}>▲{iss.positive_count}</span>
                         </div>
@@ -324,7 +210,6 @@ export default async function BoothDetailPage({ params }: Props) {
               </div>
             )}
           </div>
-<<<<<<< HEAD
 
           {/* Digital Pulse by Source */}
           {summary.source_breakdown && summary.source_breakdown.length > 0 && (
@@ -426,8 +311,6 @@ export default async function BoothDetailPage({ params }: Props) {
               </div>
             </div>
           )}
-=======
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
         </div>
 
         {/* Right column */}
@@ -436,21 +319,12 @@ export default async function BoothDetailPage({ params }: Props) {
           <div className="card p-4">
             <SectionHeader title="Narrative Patterns" sub={`${summary.narratives.length} detected`} accent="#8b5cf6" />
             {summary.narratives.length === 0 ? (
-<<<<<<< HEAD
               <p className="text-xs" style={{ color: "var(--text-3)" }}>No narratives detected.</p>
             ) : summary.narratives.map((n, i) => (
               <div key={i} className="mb-2 last:mb-0 rounded-md p-3"
                 style={{ background: "var(--bg-surface)", border: "1px solid var(--border)" }}>
                 <div className="flex items-center justify-between mb-1">
                   <span className="text-xs font-medium text-[var(--text-1)] capitalize">
-=======
-              <p className="text-xs" style={{ color: "#4d6480" }}>No narratives detected.</p>
-            ) : summary.narratives.map((n, i) => (
-              <div key={i} className="mb-2 last:mb-0 rounded-md p-3"
-                style={{ background: "#0b1220", border: "1px solid #1a2b44" }}>
-                <div className="flex items-center justify-between mb-1">
-                  <span className="text-xs font-medium text-white capitalize">
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                     {n.narrative_type?.replace(/_/g, " ")}
                   </span>
                   {n.strength != null && (
@@ -465,19 +339,11 @@ export default async function BoothDetailPage({ params }: Props) {
                   )}
                 </div>
                 {n.strength != null && (
-<<<<<<< HEAD
                   <div className="h-1 rounded-full mb-1.5" style={{ background: "var(--border)" }}>
                     <div className="h-1 rounded-full" style={{ width: `${n.strength * 100}%`, background: "#8b5cf6" }} />
                   </div>
                 )}
                 {n.summary && <p className="text-xs" style={{ color: "var(--text-3)" }}>{n.summary}</p>}
-=======
-                  <div className="h-1 rounded-full mb-1.5" style={{ background: "#1a2b44" }}>
-                    <div className="h-1 rounded-full" style={{ width: `${n.strength * 100}%`, background: "#8b5cf6" }} />
-                  </div>
-                )}
-                {n.summary && <p className="text-xs" style={{ color: "#4d6480" }}>{n.summary}</p>}
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
               </div>
             ))}
           </div>
@@ -490,15 +356,9 @@ export default async function BoothDetailPage({ params }: Props) {
               <div className="space-y-2">
                 {summary.contradictions.map((c, i) => (
                   <div key={i} className="rounded-md p-2.5"
-<<<<<<< HEAD
                     style={{ background: "var(--bg-surface)", border: "1px solid var(--border)" }}>
                     <div className="flex items-center justify-between mb-1">
                       <span className="text-xs font-medium text-[var(--text-1)]">{c.entity}</span>
-=======
-                    style={{ background: "#0b1220", border: "1px solid #1a2b44" }}>
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-xs font-medium text-white">{c.entity}</span>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                       {c.delta != null && (
                         <span className="mono text-xs" style={{ color: "#ef4444", fontSize: 9 }}>
                           Δ {c.delta.toFixed(2)}
@@ -506,11 +366,7 @@ export default async function BoothDetailPage({ params }: Props) {
                       )}
                     </div>
                     <div className="flex items-center justify-between">
-<<<<<<< HEAD
                       <span className="mono text-xs" style={{ color: "var(--text-3)", fontSize: 9 }}>
-=======
-                      <span className="mono text-xs" style={{ color: "#4d6480", fontSize: 9 }}>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                         {c.source_a} vs {c.source_b}
                       </span>
                       <span className="mono text-xs px-1.5 py-0.5 rounded"
@@ -531,21 +387,12 @@ export default async function BoothDetailPage({ params }: Props) {
               <div className="space-y-1.5">
                 {summary.scheme_analysis.map((s, i) => (
                   <div key={i} className="flex items-center gap-2 py-2 px-2.5 rounded-md"
-<<<<<<< HEAD
                     style={{ background: "var(--bg-surface)", border: "1px solid var(--border)" }}>
                     <div className="w-1.5 h-1.5 rounded-full flex-shrink-0"
                       style={{ background: s.priority === "HIGH" ? "#ef4444" : "#f59e0b" }} />
                     <div className="flex-1 min-w-0">
                       <p className="text-xs font-medium text-[var(--text-1)] truncate">{s.scheme_name}</p>
                       <p className="text-xs capitalize" style={{ color: "var(--text-3)", fontSize: 9 }}>
-=======
-                    style={{ background: "#0b1220", border: "1px solid #1a2b44" }}>
-                    <div className="w-1.5 h-1.5 rounded-full flex-shrink-0"
-                      style={{ background: s.priority === "HIGH" ? "#ef4444" : "#f59e0b" }} />
-                    <div className="flex-1 min-w-0">
-                      <p className="text-xs font-medium text-white truncate">{s.scheme_name}</p>
-                      <p className="text-xs capitalize" style={{ color: "#4d6480", fontSize: 9 }}>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                         {s.gap_type?.replace(/_/g, " ")}
                       </p>
                     </div>
@@ -596,7 +443,6 @@ export default async function BoothDetailPage({ params }: Props) {
                       <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: color }} />
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center justify-between mb-0.5">
-<<<<<<< HEAD
                           <span className="text-xs text-[var(--text-1)]">{labels[seg.segment_type] ?? seg.segment_type}</span>
                           <div className="flex items-center gap-2">
                             <span className="mono text-xs" style={{ color, fontSize: 10 }}>{seg.count.toLocaleString("en-IN")}</span>
@@ -605,16 +451,6 @@ export default async function BoothDetailPage({ params }: Props) {
                         </div>
                         {pct && (
                           <div className="h-1 rounded-full" style={{ background: "var(--bg-surface)" }}>
-=======
-                          <span className="text-xs text-white">{labels[seg.segment_type] ?? seg.segment_type}</span>
-                          <div className="flex items-center gap-2">
-                            <span className="mono text-xs" style={{ color, fontSize: 10 }}>{seg.count.toLocaleString("en-IN")}</span>
-                            {pct && <span className="mono text-xs" style={{ color: "#4d6480", fontSize: 9 }}>{pct}%</span>}
-                          </div>
-                        </div>
-                        {pct && (
-                          <div className="h-1 rounded-full" style={{ background: "#0b1220" }}>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                             <div className="h-1 rounded-full" style={{ width: `${Math.min(parseFloat(pct), 100)}%`, background: color, opacity: 0.7 }} />
                           </div>
                         )}
@@ -636,20 +472,12 @@ export default async function BoothDetailPage({ params }: Props) {
               {conversion.overall_conversion_score != null && (
                 <div className="mb-3">
                   <div className="flex items-center justify-between mb-1">
-<<<<<<< HEAD
                     <span className="text-xs" style={{ color: "var(--text-3)" }}>Overall score</span>
-=======
-                    <span className="text-xs" style={{ color: "#4d6480" }}>Overall score</span>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                     <span className="mono text-xs font-bold" style={{ color: "#10b981" }}>
                       {(conversion.overall_conversion_score * 100).toFixed(0)}
                     </span>
                   </div>
-<<<<<<< HEAD
                   <div className="h-2 rounded-full" style={{ background: "var(--bg-surface)" }}>
-=======
-                  <div className="h-2 rounded-full" style={{ background: "#0b1220" }}>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                     <div className="h-2 rounded-full" style={{
                       width: `${conversion.overall_conversion_score * 100}%`,
                       background: "linear-gradient(90deg, #10b981, #3b82f6)"
@@ -665,17 +493,10 @@ export default async function BoothDetailPage({ params }: Props) {
                   { label: "Turnout Mobilization", value: conversion.turnout_mobilization_score, color: "#3b82f6" },
                   { label: "Service Risk", value: conversion.service_risk_score, color: "#ef4444", invert: true },
                 ].map(({ label, value, color, invert }) => (
-<<<<<<< HEAD
                   <div key={label} className="rounded-md p-2" style={{ background: "var(--bg-surface)", border: "1px solid var(--border)" }}>
                     <p className="text-xs mb-1" style={{ color: "var(--text-3)", fontSize: 9 }}>{label}</p>
                     <div className="flex items-center gap-1.5">
                       <div className="flex-1 h-1 rounded-full" style={{ background: "var(--border)" }}>
-=======
-                  <div key={label} className="rounded-md p-2" style={{ background: "#0b1220", border: "1px solid #1a2b44" }}>
-                    <p className="text-xs mb-1" style={{ color: "#4d6480", fontSize: 9 }}>{label}</p>
-                    <div className="flex items-center gap-1.5">
-                      <div className="flex-1 h-1 rounded-full" style={{ background: "#1a2b44" }}>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                         <div className="h-1 rounded-full" style={{
                           width: value != null ? `${value * 100}%` : "0%",
                           background: invert
@@ -699,11 +520,7 @@ export default async function BoothDetailPage({ params }: Props) {
                       {conversion.recommended_action?.replace(/_/g, " ")}
                     </span>
                   </div>
-<<<<<<< HEAD
                   <p className="text-xs" style={{ color: "var(--text-3)" }}>{conversion.action_reason}</p>
-=======
-                  <p className="text-xs" style={{ color: "#8ba0bc" }}>{conversion.action_reason}</p>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                 </div>
               )}
             </div>
@@ -715,19 +532,11 @@ export default async function BoothDetailPage({ params }: Props) {
               <SectionHeader title="Source Evidence" sub={`${summary.backing_comments.length} signals`} accent="#06b6d4" />
               <div className="space-y-2 max-h-56 overflow-y-auto pr-1">
                 {summary.backing_comments.map((c, i) => (
-<<<<<<< HEAD
                   <div key={i} className="rounded-md p-2.5" style={{ background: "var(--bg-surface)", border: "1px solid var(--border)" }}>
                     <p className="text-xs text-[var(--text-1)] line-clamp-2 mb-1.5">{c.content}</p>
                     <div className="flex items-center gap-2 flex-wrap">
                       <span className="mono text-xs px-1.5 py-0.5 rounded"
                         style={{ background: "var(--bg-card)", color: "#3b82f6", border: "1px solid var(--border)", fontSize: 9 }}>
-=======
-                  <div key={i} className="rounded-md p-2.5" style={{ background: "#0b1220", border: "1px solid #1a2b44" }}>
-                    <p className="text-xs text-white line-clamp-2 mb-1.5">{c.content}</p>
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <span className="mono text-xs px-1.5 py-0.5 rounded"
-                        style={{ background: "#0f1929", color: "#3b82f6", border: "1px solid #1a2b44", fontSize: 9 }}>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                         {c.source}
                       </span>
                       {c.final_issue && (

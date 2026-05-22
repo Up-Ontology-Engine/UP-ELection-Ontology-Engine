@@ -6,10 +6,7 @@ import {
   RadialBarChart, RadialBar, LabelList,
 } from "recharts";
 import type { BoothRow } from "@/lib/api";
-<<<<<<< HEAD
 import { useChartColors } from "@/lib/chartTheme";
-=======
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
 
 type BoothChartRow = {
   booth_number: number;
@@ -34,12 +31,7 @@ interface Props {
   turnoutPct: number | null;
 }
 
-<<<<<<< HEAD
 const ACCENT = {
-=======
-// ── Colour palette ────────────────────────────────────────────────────────────
-const C = {
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
   bjp:    "#f97316",
   sp:     "#10b981",
   bsp:    "#3b82f6",
@@ -50,7 +42,6 @@ const C = {
   amber:  "#f59e0b",
   red:    "#ef4444",
   slate:  "#64748b",
-<<<<<<< HEAD
 };
 
 const PARTY_COLORS: Record<string, string> = {
@@ -60,55 +51,14 @@ const PARTY_COLORS: Record<string, string> = {
   INC: ACCENT.inc,
 };
 
-function ChartCard({ title, sub, children, wide, C }: {
+function ChartCard({ title, sub, children, wide }: {
   title: string; sub?: string; children: React.ReactNode; wide?: boolean;
-  C: { t3: string; t4: string; border: string; bgSurf: string; bgCard: string };
 }) {
   return (
     <div className={`card rounded-xl overflow-hidden ${wide ? "md:col-span-2" : ""}`}>
       <div className="px-5 py-3.5" style={{ background: "var(--bg-surface)", borderBottom: "1px solid var(--border)" }}>
         <p className="text-sm font-semibold" style={{ color: "var(--text-1)" }}>{title}</p>
         {sub && <p className="text-xs mt-0.5" style={{ color: "var(--text-4)" }}>{sub}</p>}
-=======
-  surf:   "#111827",
-  border: "#1e2d45",
-  t1:     "#f1f5f9",
-  t3:     "#94a3b8",
-  t4:     "#475569",
-  grid:   "#1e2d4566",
-};
-
-const TOOLTIP: object = {
-  contentStyle: {
-    background: "#0d1525",
-    border: `1px solid ${C.border}`,
-    borderRadius: 8,
-    color: C.t1,
-    fontSize: 11,
-  },
-  labelStyle: { color: C.t3 },
-  cursor: { fill: "rgba(255,255,255,0.03)" },
-};
-
-const PARTY_COLORS: Record<string, string> = {
-  BJP: C.bjp,
-  SP:  C.sp,
-  BSP: C.bsp,
-  INC: C.inc,
-};
-
-function ChartCard({ title, sub, children, wide }: {
-  title: string; sub?: string; children: React.ReactNode; wide?: boolean
-}) {
-  return (
-    <div
-      className={`rounded-xl overflow-hidden ${wide ? "md:col-span-2" : ""}`}
-      style={{ background: C.surf, border: `1px solid ${C.border}` }}
-    >
-      <div className="px-5 py-3.5" style={{ background: "#0d1525", borderBottom: `1px solid ${C.border}` }}>
-        <p className="text-sm font-semibold text-white">{title}</p>
-        {sub && <p className="text-xs mt-0.5" style={{ color: C.t4 }}>{sub}</p>}
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
       </div>
       <div className="p-5">{children}</div>
     </div>
@@ -116,11 +66,11 @@ function ChartCard({ title, sub, children, wide }: {
 }
 
 // Custom donut centre label
-function DonutLabel({ cx, cy, label, sub }: { cx: number; cy: number; label: string; sub: string }) {
+function DonutLabel({ cx, cy, label, sub, t1, t4 }: { cx: number; cy: number; label: string; sub: string; t1: string; t4: string }) {
   return (
     <text x={cx} y={cy} textAnchor="middle" dominantBaseline="middle">
-      <tspan x={cx} dy="-8" fontSize={18} fontWeight={700} fill={C.t1}>{label}</tspan>
-      <tspan x={cx} dy="20" fontSize={11} fill={C.t4}>{sub}</tspan>
+      <tspan x={cx} dy="-8" fontSize={18} fontWeight={700} fill={t1}>{label}</tspan>
+      <tspan x={cx} dy="20" fontSize={11} fill={t4}>{sub}</tspan>
     </text>
   );
 }
@@ -132,7 +82,6 @@ export default function DemographicsCharts({
   totalFemale,
   leanCounts,
 }: Props) {
-<<<<<<< HEAD
   const C = useChartColors();
 
   const TOOLTIP = {
@@ -150,8 +99,6 @@ export default function DemographicsCharts({
     INSUFFICIENT: C.border,
   };
 
-=======
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
   const totalVoters = totalMale + totalFemale;
 
   // ── Gender donut ──────────────────────────────────────────────────────────
@@ -165,57 +112,29 @@ export default function DemographicsCharts({
   const partyData = electionResults.map((r) => ({
     name:  r.party,
     value: r.vote_share_pct,
-<<<<<<< HEAD
     color: PARTY_COLORS[r.party] ?? ACCENT.slate,
-=======
-    color: PARTY_COLORS[r.party] ?? C.slate,
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
     votes: r.total_votes,
     booths_won: r.booths_won,
   }));
   const bjpShare = partyData.find((p) => p.name === "BJP")?.value ?? 0;
 
-<<<<<<< HEAD
-=======
-  // ── Lean radial ───────────────────────────────────────────────────────────
-  const LEAN_COLORS: Record<string, string> = {
-    STRONG_BJP:   C.bjp,
-    LEAN_BJP:     "#fb923c",
-    NEUTRAL:      C.slate,
-    LEAN_OPP:     "#60a5fa",
-    STRONG_OPP:   C.bsp,
-    INSUFFICIENT: "#1e2d45",
-  };
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
   const leanData = Object.entries(leanCounts)
     .map(([key, count]) => ({ name: key.replace(/_/g, " "), value: count, fill: LEAN_COLORS[key] ?? ACCENT.slate }))
     .sort((a, b) => b.value - a.value);
 
   // ── Booth BJP vs SP bar (all 30) ──────────────────────────────────────────
   const partyBarData = boothChartData.map((b) => ({
-<<<<<<< HEAD
     label: b.label,
     BJP:   b.bjp_share,
     SP:    b.sp_share,
     BSP:   b.bsp_share,
     Other: Math.max(0, 100 - b.bjp_share - b.sp_share - b.bsp_share),
-=======
-    label:   b.label,
-    BJP:     b.bjp_share,
-    SP:      b.sp_share,
-    BSP:     b.bsp_share,
-    Other:   Math.max(0, 100 - b.bjp_share - b.sp_share - b.bsp_share),
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
   }));
 
   // ── Female % per booth (sorted desc) ─────────────────────────────────────
   const femaleBarData = [...boothChartData]
     .map((b) => ({
-<<<<<<< HEAD
       label:     b.label,
-=======
-      label:    b.label,
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
       femalePct: b.total > 0 ? parseFloat(((b.female / b.total) * 100).toFixed(1)) : 0,
     }))
     .sort((a, b) => b.femalePct - a.femalePct);
@@ -224,22 +143,13 @@ export default function DemographicsCharts({
   const turnoutData = boothChartData
     .filter((b) => b.turnout_pct != null)
     .map((b) => ({
-<<<<<<< HEAD
       label:   b.label,
       turnout: parseFloat((b.turnout_pct ?? 0).toFixed(1)),
       fill:    (b.turnout_pct ?? 0) > 60 ? ACCENT.green : (b.turnout_pct ?? 0) > 50 ? ACCENT.amber : ACCENT.red,
     }));
 
   const gridStroke = C.border + "66";
-  const cardProps = { C: { ...C, bgSurf: C.bgSurf, bgCard: C.bgCard } };
 
-=======
-      label:      b.label,
-      turnout:    parseFloat((b.turnout_pct ?? 0).toFixed(1)),
-      fill:       (b.turnout_pct ?? 0) > 60 ? C.green : (b.turnout_pct ?? 0) > 50 ? C.amber : C.red,
-    }));
-
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
@@ -247,7 +157,6 @@ export default function DemographicsCharts({
       <ChartCard title="Gender Distribution" sub={`${femPct}% female electorate`}>
         <ResponsiveContainer width="100%" height={240}>
           <PieChart>
-<<<<<<< HEAD
             <Pie data={genderData} dataKey="value" nameKey="name" cx="50%" cy="50%"
               innerRadius={68} outerRadius={95} paddingAngle={3}>
               {genderData.map((d) => <Cell key={d.name} fill={d.color} stroke="none" />)}
@@ -256,25 +165,6 @@ export default function DemographicsCharts({
             <Legend iconType="circle" iconSize={8}
               wrapperStyle={{ fontSize: 12, color: C.t3, paddingTop: 12 }}
               formatter={(val) => {
-=======
-            <Pie
-              data={genderData} dataKey="value" nameKey="name"
-              cx="50%" cy="50%"
-              innerRadius={68} outerRadius={95}
-              paddingAngle={3}
-            >
-              {genderData.map((d) => <Cell key={d.name} fill={d.color} stroke="none" />)}
-            </Pie>
-            <DonutLabel
-              cx={200} cy={120}
-              label={`${femPct}%`}
-              sub="female"
-            />
-            <Legend
-              iconType="circle" iconSize={8}
-              wrapperStyle={{ fontSize: 12, color: C.t3, paddingTop: 12 }}
-              formatter={(val, entry) => {
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                 const item = genderData.find((d) => d.name === val);
                 return `${val} — ${item?.value.toLocaleString("en-IN")}`;
               }}
@@ -288,38 +178,19 @@ export default function DemographicsCharts({
       <ChartCard title="2022 Party Vote Shares" sub={`BJP dominant · ${bjpShare.toFixed(1)}% share`}>
         <ResponsiveContainer width="100%" height={240}>
           <PieChart>
-<<<<<<< HEAD
             <Pie data={partyData} dataKey="value" nameKey="name" cx="50%" cy="50%"
               innerRadius={68} outerRadius={95} paddingAngle={3}>
               {partyData.map((d) => <Cell key={d.name} fill={d.color} stroke="none" />)}
             </Pie>
             <DonutLabel cx={200} cy={120} label={`${bjpShare.toFixed(0)}%`} sub="BJP" t1={C.t1} t4={C.t4} />
             <Legend iconType="circle" iconSize={8}
-=======
-            <Pie
-              data={partyData} dataKey="value" nameKey="name"
-              cx="50%" cy="50%"
-              innerRadius={68} outerRadius={95}
-              paddingAngle={3}
-            >
-              {partyData.map((d) => <Cell key={d.name} fill={d.color} stroke="none" />)}
-            </Pie>
-            <DonutLabel cx={200} cy={120} label={`${bjpShare.toFixed(0)}%`} sub="BJP" />
-            <Legend
-              iconType="circle" iconSize={8}
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
               wrapperStyle={{ fontSize: 12, color: C.t3, paddingTop: 12 }}
               formatter={(val) => {
                 const d = partyData.find((p) => p.name === val);
                 return `${val} — ${d?.value.toFixed(1)}% (${d?.booths_won ?? 0} booths)`;
               }}
             />
-<<<<<<< HEAD
             <Tooltip {...TOOLTIP}
-=======
-            <Tooltip
-              {...TOOLTIP}
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
               formatter={(v: unknown, name: unknown) => {
                 const d = partyData.find((p) => p.name === name);
                 return [`${(v as number).toFixed(1)}% · ${d?.votes.toLocaleString("en-IN")} votes`, String(name)];
@@ -330,34 +201,19 @@ export default function DemographicsCharts({
       </ChartCard>
 
       {/* 3 — Lean distribution radial bars */}
-<<<<<<< HEAD
       <ChartCard title="Political Lean Distribution"
-        sub={`${Object.values(leanCounts).reduce((s, v) => s + v, 0)} total booths classified`} {...cardProps}>
-=======
-      <ChartCard title="Political Lean Distribution" sub={`${Object.values(leanCounts).reduce((s, v) => s + v, 0)} total booths classified`}>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
+        sub={`${Object.values(leanCounts).reduce((s, v) => s + v, 0)} total booths classified`}>
         <ResponsiveContainer width="100%" height={240}>
           <RadialBarChart
             cx="50%" cy="50%"
             innerRadius={20} outerRadius={110}
             data={leanData.map((d) => ({ ...d, max: boothChartData.length }))}
-<<<<<<< HEAD
             startAngle={180} endAngle={0}>
             <RadialBar dataKey="value" background={{ fill: C.border + "40" }} cornerRadius={4}>
               {leanData.map((d) => <Cell key={d.name} fill={d.fill} />)}
               <LabelList dataKey="value" position="insideStart" fill={C.t3} fontSize={10} />
             </RadialBar>
             <Legend iconType="circle" iconSize={8}
-=======
-            startAngle={180} endAngle={0}
-          >
-            <RadialBar dataKey="value" background={{ fill: "#1e2d4540" }} cornerRadius={4}>
-              {leanData.map((d) => <Cell key={d.name} fill={d.fill} />)}
-              <LabelList dataKey="value" position="insideStart" fill={C.t3} fontSize={10} />
-            </RadialBar>
-            <Legend
-              iconType="circle" iconSize={8}
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
               wrapperStyle={{ fontSize: 11, color: C.t3, paddingTop: 8 }}
               formatter={(val) => {
                 const d = leanData.find((x) => x.name === val);
@@ -373,27 +229,11 @@ export default function DemographicsCharts({
       <ChartCard title="Female Voter % by Booth" sub="Sorted high → low · 50% parity line">
         <ResponsiveContainer width="100%" height={240}>
           <BarChart data={femaleBarData} layout="vertical" barCategoryGap="12%">
-<<<<<<< HEAD
             <CartesianGrid strokeDasharray="3 3" stroke={gridStroke} horizontal={false} />
             <XAxis type="number" domain={[40, 55]} tick={{ fill: C.t3, fontSize: 10 }}
               axisLine={false} tickLine={false} tickFormatter={(v) => `${v}%`} />
             <YAxis dataKey="label" type="category" tick={{ fill: C.t4, fontSize: 9 }}
               axisLine={false} tickLine={false} width={28} />
-=======
-            <CartesianGrid strokeDasharray="3 3" stroke={C.grid} horizontal={false} />
-            <XAxis
-              type="number" domain={[40, 55]}
-              tick={{ fill: C.t3, fontSize: 10 }}
-              axisLine={false} tickLine={false}
-              tickFormatter={(v) => `${v}%`}
-            />
-            <YAxis
-              dataKey="label" type="category"
-              tick={{ fill: C.t4, fontSize: 9 }}
-              axisLine={false} tickLine={false}
-              width={28}
-            />
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
             <Tooltip {...TOOLTIP} formatter={(v: unknown) => [`${v as number}%`, "Female %"]} />
             <Bar dataKey="femalePct" name="Female %" radius={[0, 3, 3, 0]}>
               {femaleBarData.map((d) => (
@@ -404,10 +244,9 @@ export default function DemographicsCharts({
         </ResponsiveContainer>
       </ChartCard>
 
-<<<<<<< HEAD
       {/* 5 — BJP / SP / BSP stacked bar per booth */}
       <ChartCard title="Vote Share by Booth — 2022 Results"
-        sub="BJP · SP · BSP stacked; all 30 booths" wide {...cardProps}>
+        sub="BJP · SP · BSP stacked; all 30 booths" wide>
         <ResponsiveContainer width="100%" height={260}>
           <BarChart data={partyBarData} barCategoryGap="6%" stackOffset="none">
             <CartesianGrid strokeDasharray="3 3" stroke={gridStroke} vertical={false} />
@@ -423,41 +262,6 @@ export default function DemographicsCharts({
             <Bar dataKey="SP"    stackId="a" fill={ACCENT.sp}   radius={[0, 0, 0, 0]} />
             <Bar dataKey="BSP"   stackId="a" fill={ACCENT.bsp}  radius={[0, 0, 0, 0]} />
             <Bar dataKey="Other" stackId="a" fill={C.t4}        radius={[2, 2, 0, 0]} />
-=======
-      {/* 5 — BJP / SP / BSP stacked bar per booth (full width) */}
-      <ChartCard
-        title="Vote Share by Booth — 2022 Results"
-        sub="BJP · SP · BSP stacked; all 30 booths"
-        wide
-      >
-        <ResponsiveContainer width="100%" height={260}>
-          <BarChart data={partyBarData} barCategoryGap="6%" stackOffset="none">
-            <CartesianGrid strokeDasharray="3 3" stroke={C.grid} vertical={false} />
-            <XAxis
-              dataKey="label"
-              tick={{ fill: C.t4, fontSize: 8 }}
-              axisLine={false} tickLine={false}
-              interval={0}
-            />
-            <YAxis
-              tick={{ fill: C.t3, fontSize: 10 }}
-              axisLine={false} tickLine={false}
-              tickFormatter={(v) => `${v}%`}
-              domain={[0, 100]}
-            />
-            <Tooltip
-              {...TOOLTIP}
-              formatter={(v: unknown, name: unknown) => [`${(v as number).toFixed(1)}%`, String(name)]}
-            />
-            <Legend
-              iconType="square" iconSize={8}
-              wrapperStyle={{ fontSize: 11, color: C.t3, paddingTop: 8 }}
-            />
-            <Bar dataKey="BJP"   stackId="a" fill={C.bjp}    radius={[0, 0, 0, 0]} />
-            <Bar dataKey="SP"    stackId="a" fill={C.sp}     radius={[0, 0, 0, 0]} />
-            <Bar dataKey="BSP"   stackId="a" fill={C.bsp}    radius={[0, 0, 0, 0]} />
-            <Bar dataKey="Other" stackId="a" fill="#334155"  radius={[2, 2, 0, 0]} />
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
           </BarChart>
         </ResponsiveContainer>
       </ChartCard>
@@ -470,27 +274,11 @@ export default function DemographicsCharts({
       >
         <ResponsiveContainer width="100%" height={220}>
           <BarChart data={turnoutData} barCategoryGap="6%">
-<<<<<<< HEAD
             <CartesianGrid strokeDasharray="3 3" stroke={gridStroke} vertical={false} />
             <XAxis dataKey="label" tick={{ fill: C.t4, fontSize: 8 }}
               axisLine={false} tickLine={false} interval={0} />
             <YAxis tick={{ fill: C.t3, fontSize: 10 }} axisLine={false} tickLine={false}
               tickFormatter={(v) => `${v}%`} domain={[0, 100]} />
-=======
-            <CartesianGrid strokeDasharray="3 3" stroke={C.grid} vertical={false} />
-            <XAxis
-              dataKey="label"
-              tick={{ fill: C.t4, fontSize: 8 }}
-              axisLine={false} tickLine={false}
-              interval={0}
-            />
-            <YAxis
-              tick={{ fill: C.t3, fontSize: 10 }}
-              axisLine={false} tickLine={false}
-              tickFormatter={(v) => `${v}%`}
-              domain={[0, 100]}
-            />
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
             <Tooltip {...TOOLTIP} formatter={(v: unknown) => [`${v as number}%`, "Turnout"]} />
             <Bar dataKey="turnout" radius={[3, 3, 0, 0]}>
               {turnoutData.map((d) => (

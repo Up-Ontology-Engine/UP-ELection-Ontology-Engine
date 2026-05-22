@@ -97,11 +97,7 @@ export default function BoothsClient({ booths }: Props) {
         <div>
           <div className="flex items-center gap-2 mb-0.5">
             <Activity size={15} style={{ color: "#f97316" }} />
-<<<<<<< HEAD
             <h1 className="font-bold text-[var(--text-1)]" style={{ fontSize: 15 }}>Booth Intelligence</h1>
-=======
-            <h1 className="font-bold text-white" style={{ fontSize: 15 }}>Booth Intelligence</h1>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
             <span className="mono text-xs px-2 py-0.5 rounded"
               style={{ background: "#f9731618", color: "#f97316", border: "1px solid #f9731630" }}>
               {filtered.length}/{total}
@@ -123,11 +119,7 @@ export default function BoothsClient({ booths }: Props) {
             Filters {(leanFilter.length + confFilter.length) > 0 ? `(${leanFilter.length + confFilter.length})` : ""}
           </button>
           <button className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs"
-<<<<<<< HEAD
             style={{ border: "1px solid var(--border)", color: "var(--text-3)" }}>
-=======
-            style={{ border: "1px solid #1a2b44", color: "#4d6480" }}>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
             <Download size={11} /> Export
           </button>
         </div>
@@ -143,11 +135,7 @@ export default function BoothsClient({ booths }: Props) {
           { label: "Neutral",       value: booths.filter((b) => b.digital_lean_label?.includes("NEUTRAL")).length, color: "#64748b" },
           { label: "High Conf.",    value: booths.filter((b) => b.confidence_label?.toUpperCase() === "HIGH").length, color: "#10b981" },
           { label: "Low Conf.",     value: booths.filter((b) => b.confidence_label?.toUpperCase() === "LOW").length, color: "#ef4444" },
-<<<<<<< HEAD
           { label: "Total Voters",  value: fmt(totalVoters),           color: "var(--text-3)" },
-=======
-          { label: "Total Voters",  value: fmt(totalVoters),           color: "#8ba0bc" },
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
         ].map(({ label, value, color }) => (
           <div key={label} className="card px-3 py-2.5">
             <p className="label" style={{ color: "#2e4260" }}>{label}</p>
@@ -162,13 +150,8 @@ export default function BoothsClient({ booths }: Props) {
           <Search size={12} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: "#4d6480" }} />
           <input value={search} onChange={(e) => { setSearch(e.target.value); setPage(1); }}
             placeholder="Search booth name, number, locality, issue…"
-<<<<<<< HEAD
             className="w-full pl-8 pr-4 py-2 rounded-md text-xs text-[var(--text-1)] outline-none"
             style={{ background: "var(--bg-card)", border: "1px solid var(--border)" }} />
-=======
-            className="w-full pl-8 pr-4 py-2 rounded-md text-xs text-white outline-none"
-            style={{ background: "#0f1929", border: "1px solid #1a2b44" }} />
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
           {search && (
             <button onClick={() => { setSearch(""); setPage(1); }}
               className="absolute right-3 top-1/2 -translate-y-1/2">
@@ -191,11 +174,7 @@ export default function BoothsClient({ booths }: Props) {
                     style={{
                       background: leanFilter.includes(opt) ? "rgba(249,115,22,0.15)" : "#0b1220",
                       border: leanFilter.includes(opt) ? "1px solid rgba(249,115,22,0.4)" : "1px solid #1a2b44",
-<<<<<<< HEAD
                       color: leanFilter.includes(opt) ? "#f97316" : "var(--text-3)",
-=======
-                      color: leanFilter.includes(opt) ? "#f97316" : "#4d6480",
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                       fontSize: 10
                     }}>
                     {opt}
@@ -212,11 +191,7 @@ export default function BoothsClient({ booths }: Props) {
                     style={{
                       background: confFilter.includes(opt) ? "rgba(16,185,129,0.1)" : "#0b1220",
                       border: confFilter.includes(opt) ? "1px solid rgba(16,185,129,0.3)" : "1px solid #1a2b44",
-<<<<<<< HEAD
                       color: confFilter.includes(opt) ? "#10b981" : "var(--text-3)",
-=======
-                      color: confFilter.includes(opt) ? "#10b981" : "#4d6480",
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                       fontSize: 10
                     }}>
                     {opt}
@@ -268,11 +243,7 @@ export default function BoothsClient({ booths }: Props) {
                 ].map(({ key, label }, i) => (
                   <th key={i}>
                     {key ? (
-<<<<<<< HEAD
                       <button onClick={() => sort(key as SortKey)} className="flex items-center gap-1 hover:text-[var(--text-1)] transition-colors group">
-=======
-                      <button onClick={() => sort(key as SortKey)} className="flex items-center gap-1 hover:text-white transition-colors group">
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                         {label} <SortIcon k={key as SortKey} />
                       </button>
                     ) : label}
@@ -295,18 +266,13 @@ export default function BoothsClient({ booths }: Props) {
                     <td className="mono" style={{ color: "#4d6480" }}>{b.booth_number}</td>
                     <td>
                       <Link href={`/booths/${b.booth_id}`}
-<<<<<<< HEAD
                         className="text-xs font-medium text-[var(--text-1)] hover:text-orange-400 transition-colors line-clamp-1 max-w-40 block">
-=======
-                        className="text-xs font-medium text-white hover:text-orange-400 transition-colors line-clamp-1 max-w-40 block">
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                         {b.name}
                       </Link>
                     </td>
                     <td className="text-xs max-w-28 truncate" style={{ color: "#4d6480" }}>
                       {b.locality_hint ?? "—"}
                     </td>
-<<<<<<< HEAD
                     <td className="mono text-xs" style={{ color: "var(--text-3)" }}>{fmt(b.total_voters)}</td>
                     <td>
                       {femalePct != null ? (
@@ -316,28 +282,13 @@ export default function BoothsClient({ booths }: Props) {
                             <div className="h-full" style={{ width: `${femalePct}%`, background: "#ec4899", display: "inline-block" }} />
                           </div>
                           <span className="mono text-xs" style={{ color: "var(--text-3)", fontSize: 9 }}>{femalePct.toFixed(0)}%F</span>
-=======
-                    <td className="mono text-xs" style={{ color: "#8ba0bc" }}>{fmt(b.total_voters)}</td>
-                    <td>
-                      {femalePct != null ? (
-                        <div className="flex items-center gap-1.5">
-                          <div className="w-14 h-1.5 rounded-full overflow-hidden" style={{ background: "#0b1220" }}>
-                            <div className="h-full" style={{ width: `${100 - femalePct}%`, background: "#3b82f6", display: "inline-block" }} />
-                            <div className="h-full" style={{ width: `${femalePct}%`, background: "#ec4899", display: "inline-block" }} />
-                          </div>
-                          <span className="mono text-xs" style={{ color: "#4d6480", fontSize: 9 }}>{femalePct.toFixed(0)}%F</span>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                         </div>
                       ) : <span style={{ color: "#2e4260" }}>—</span>}
                     </td>
                     <td>
                       {b.bjp_pulse_score != null ? (
                         <div className="flex items-center gap-1.5">
-<<<<<<< HEAD
                           <div className="w-10 h-1 rounded-full" style={{ background: "var(--bg-surface)" }}>
-=======
-                          <div className="w-10 h-1 rounded-full" style={{ background: "#0b1220" }}>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                             <div className="h-1 rounded-full" style={{
                               width: `${Math.round(((b.bjp_pulse_score + 1) / 2) * 100)}%`,
                               background: b.bjp_pulse_score > 0 ? "#f97316" : "#ef4444"
@@ -350,11 +301,7 @@ export default function BoothsClient({ booths }: Props) {
                     <td>
                       {b.opp_pulse_score != null ? (
                         <div className="flex items-center gap-1.5">
-<<<<<<< HEAD
                           <div className="w-10 h-1 rounded-full" style={{ background: "var(--bg-surface)" }}>
-=======
-                          <div className="w-10 h-1 rounded-full" style={{ background: "#0b1220" }}>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                             <div className="h-1 rounded-full" style={{
                               width: `${Math.round(((b.opp_pulse_score + 1) / 2) * 100)}%`,
                               background: "#3b82f6"
@@ -368,20 +315,12 @@ export default function BoothsClient({ booths }: Props) {
                     <td>
                       {b.top_issue ? (
                         <span className="text-xs px-1.5 py-0.5 rounded mono capitalize"
-<<<<<<< HEAD
                           style={{ background: "var(--bg-surface)", color: "var(--text-3)", fontSize: 9 }}>
-=======
-                          style={{ background: "#0b1220", color: "#8ba0bc", fontSize: 9 }}>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                           {b.top_issue.replace(/_/g, " ")}
                         </span>
                       ) : <span style={{ color: "#2e4260" }}>—</span>}
                     </td>
-<<<<<<< HEAD
                     <td className="mono text-xs" style={{ color: "var(--text-3)" }}>
-=======
-                    <td className="mono text-xs" style={{ color: "#8ba0bc" }}>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                       {b.event_count ?? 0}
                     </td>
                     <td><ConfidenceBadge label={b.confidence_label} /></td>
@@ -402,23 +341,14 @@ export default function BoothsClient({ booths }: Props) {
         {/* Pagination */}
         {totalPages > 1 && (
           <div className="flex items-center justify-between px-4 py-3"
-<<<<<<< HEAD
             style={{ borderTop: "1px solid #1a2b44", background: "var(--bg-surface)" }}>
             <p className="mono text-xs" style={{ color: "var(--text-3)" }}>
-=======
-            style={{ borderTop: "1px solid #1a2b44", background: "#0b1220" }}>
-            <p className="mono text-xs" style={{ color: "#4d6480" }}>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
               {((page - 1) * PAGE_SIZE) + 1}–{Math.min(page * PAGE_SIZE, filtered.length)} of {filtered.length} booths
             </p>
             <div className="flex items-center gap-1">
               <button onClick={() => setPage((p) => Math.max(1, p - 1))} disabled={page === 1}
                 className="p-1.5 rounded transition-colors hover:bg-white/5 disabled:opacity-30">
-<<<<<<< HEAD
                 <ChevronLeft size={12} style={{ color: "var(--text-3)" }} />
-=======
-                <ChevronLeft size={12} style={{ color: "#8ba0bc" }} />
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
               </button>
               {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
                 const p = Math.max(1, Math.min(totalPages - 4, page - 2)) + i;
@@ -436,11 +366,7 @@ export default function BoothsClient({ booths }: Props) {
               })}
               <button onClick={() => setPage((p) => Math.min(totalPages, p + 1))} disabled={page === totalPages}
                 className="p-1.5 rounded transition-colors hover:bg-white/5 disabled:opacity-30">
-<<<<<<< HEAD
                 <ChevronRight size={12} style={{ color: "var(--text-3)" }} />
-=======
-                <ChevronRight size={12} style={{ color: "#8ba0bc" }} />
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
               </button>
             </div>
           </div>

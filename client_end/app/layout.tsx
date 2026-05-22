@@ -25,9 +25,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-full flex grid-bg">
         <ThemeProvider>
           <Sidebar />
-          <div className="flex-1 ml-56 flex flex-col min-h-screen">
+          <div className="flex-1 ml-56 flex flex-col min-h-screen relative z-[1]">
             <Header />
-            <main className="flex-1 pt-11 overflow-auto">
+            <main className="flex-1 pt-14 overflow-auto">
               {children}
             </main>
           </div>

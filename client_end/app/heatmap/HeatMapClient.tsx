@@ -106,11 +106,7 @@ const LEGENDS: Record<HeatLayer, { label: string; color: string }[]> = {
     { label: "HIGH",                 color: "#10b981" },
     { label: "MEDIUM",               color: "#f59e0b" },
     { label: "LOW",                  color: "#ef4444" },
-<<<<<<< HEAD
     { label: "Unknown",              color: "var(--text-4)" },
-=======
-    { label: "Unknown",              color: "#1e3a5f" },
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
   ],
 };
 
@@ -136,7 +132,7 @@ export default function HeatMapClient({ coverage }: Props) {
   const usingRealCoords = booths.some((b) => b.lat != null);
 
   return (
-    <div className="flex" style={{ height: "calc(100vh - 44px)", background: "var(--bg-base)" }}>
+    <div className="flex" style={{ height: "calc(100vh - 56px)", background: "var(--bg-base)" }}>
 
       {/* ── Left control panel ── */}
       <div className="w-64 flex-shrink-0 flex flex-col overflow-y-auto"

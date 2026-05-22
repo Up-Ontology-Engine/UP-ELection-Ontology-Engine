@@ -58,7 +58,6 @@ const REQUIRED_CONSTRAINTS = [
   { label: "YouTubeVideo",        prop: "video_id",      type: "UNIQUE" },
   { label: "Channel",             prop: "channel_id",    type: "UNIQUE" },
   { label: "PulseEvent",          prop: "event_id",      type: "UNIQUE" },
-<<<<<<< HEAD
 ];
 
 const V2_CONSTRAINTS = [
@@ -67,8 +66,6 @@ const V2_CONSTRAINTS = [
   { label: "DemographicSegment", prop: "segment_id",  type: "UNIQUE v2" },
   { label: "GovernanceAsset",    prop: "asset_id",    type: "UNIQUE v2" },
   { label: "TwinScenario",       prop: "scenario_id", type: "UNIQUE v2" },
-=======
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
 ];
 
 const ID_FORMAT = [
@@ -89,19 +86,11 @@ const PHASE_ITEMS = [
   { label: "Constraints v1 applied",       done: true },
   { label: "Form-20 election data loaded", done: true },
   { label: "YouTube signal ingestion",     done: true },
-<<<<<<< HEAD
   { label: "Constraint activation (v2)",   done: true },
   { label: "Graph hardening (loaders)",    done: true },
   { label: "HeatMap ≥85% coverage",        done: true },
   { label: "Twin snapshot endpoint",       done: true },
   { label: "Demographic segment API",      done: true },
-=======
-  { label: "Constraint activation (v2)",   done: false },
-  { label: "Graph hardening (loaders)",    done: false },
-  { label: "HeatMap ≥85% coverage",        done: false },
-  { label: "Twin snapshot endpoint",       done: false },
-  { label: "Demographic segment API",      done: false },
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
 ];
 
 // ── Helper ────────────────────────────────────────────────────────────────────
@@ -111,7 +100,6 @@ function fmtNum(n: number | null | undefined) {
   return <span style={{ color: "#10b981" }}>{n.toLocaleString("en-IN")}</span>;
 }
 
-<<<<<<< HEAD
 function Stat({ label, value, sub, color = "#10b981" }: { label: string; value: string | number; sub?: string; color?: string }) {
   return (
     <div className="flex flex-col gap-0.5">
@@ -140,13 +128,6 @@ export default async function OntologyPage() {
     api.heatmapCoverage("GKP_322"),
   ]);
 
-=======
-// ── Page ──────────────────────────────────────────────────────────────────────
-
-export default async function OntologyPage() {
-  const status: OntologyStatus | null = await api.ontologyStatus();
-
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
   const liveNodes   = status?.neo4j.nodes ?? {};
   const liveConstr  = status?.neo4j.constraints ?? [];
   const liveConstrSet = new Set(
@@ -166,11 +147,7 @@ export default async function OntologyPage() {
   return (
     <div className="min-h-screen p-5" style={{ background: "#0a0e1a" }}>
 
-<<<<<<< HEAD
       {/* ── Header ── */}
-=======
-      {/* ── Breadcrumb + Header ── */}
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
       <div className="mb-5">
         <div className="flex items-center gap-2 text-xs mono mb-2" style={{ color: "#475569" }}>
           <span>Gorakhpur Urban</span>
@@ -181,11 +158,7 @@ export default async function OntologyPage() {
           <div className="flex items-center gap-3">
             <div className="w-1.5 h-8 rounded-full" style={{ background: "linear-gradient(180deg,#3b82f6,#8b5cf6)" }} />
             <div>
-<<<<<<< HEAD
               <h1 className="text-xl font-bold text-[var(--text-1)] flex items-center gap-2">
-=======
-              <h1 className="text-xl font-bold text-white flex items-center gap-2">
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                 <BookOpen size={18} style={{ color: "#3b82f6" }} />
                 Ontology Layer
               </h1>
@@ -212,7 +185,6 @@ export default async function OntologyPage() {
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* ── Summary strip ── */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-5">
         {[
@@ -223,44 +195,10 @@ export default async function OntologyPage() {
         ].map(({ label, value, icon: Icon, color, sub, pct }) => (
           <div key={label} className="rounded-xl p-4"
             style={{ background: "var(--bg-card-2)", border: "1px solid var(--border)" }}>
-=======
-      {/* ── Live summary strip ── */}
-      <div className="grid grid-cols-4 gap-3 mb-5">
-        {[
-          {
-            label: "Total Nodes",
-            value: status?.neo4j.total_nodes ?? null,
-            icon:  GitBranch,
-            color: "#10b981",
-          },
-          {
-            label: "Total Edges",
-            value: status?.neo4j.total_edges ?? null,
-            icon:  Link2,
-            color: "#3b82f6",
-          },
-          {
-            label: "Active Constraints",
-            value: liveConstr.length || null,
-            icon:  Activity,
-            color: "#8b5cf6",
-          },
-          {
-            label: "Phase Progress",
-            value: null,
-            icon:  Layers,
-            color: "#f59e0b",
-            pct:   donePct,
-          },
-        ].map(({ label, value, icon: Icon, color, pct }) => (
-          <div key={label} className="rounded-xl p-4"
-            style={{ background: "#111827", border: "1px solid #1e2d45" }}>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
             <div className="flex items-center gap-2 mb-2">
               <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: `${color}18` }}>
                 <Icon size={13} style={{ color }} />
               </div>
-<<<<<<< HEAD
               <span className="text-xs" style={{ color: "var(--text-3)" }}>{label}</span>
             </div>
             {pct != null ? (
@@ -269,34 +207,18 @@ export default async function OntologyPage() {
                 <div className="mt-2 h-1 rounded-full" style={{ background: "var(--border)" }}>
                   <div className="h-1 rounded-full transition-all"
                     style={{ width: `${Math.min(pct, 100)}%`, background: pct >= 85 ? "#10b981" : color }} />
-=======
-              <span className="text-xs" style={{ color: "#64748b" }}>{label}</span>
-            </div>
-            {pct != null ? (
-              <>
-                <p className="text-2xl font-bold text-white">{pct}%</p>
-                <div className="mt-2 h-1 rounded-full" style={{ background: "#1e2d45" }}>
-                  <div className="h-1 rounded-full transition-all"
-                    style={{ width: `${pct}%`, background: color }} />
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                 </div>
                 <p className="text-xs mt-1" style={{ color: "var(--text-4)", fontSize: 9 }}>
                   {coverage?.geocoded_booths ?? 0}/{coverage?.total_booths ?? 0} booths geocoded
                 </p>
               </>
             ) : (
-<<<<<<< HEAD
               <>
                 <p className="text-2xl font-bold" style={{ color: value != null ? "var(--text-1)" : "var(--text-4)" }}>
                   {value != null ? value.toLocaleString("en-IN") : "—"}
                 </p>
                 {sub && <p className="text-xs mt-1" style={{ color: "var(--text-4)", fontSize: 9 }}>{sub}</p>}
               </>
-=======
-              <p className="text-2xl font-bold" style={{ color: value != null ? "#f1f5f9" : "#475569" }}>
-                {value != null ? value.toLocaleString("en-IN") : "—"}
-              </p>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
             )}
           </div>
         ))}
@@ -368,19 +290,11 @@ export default async function OntologyPage() {
         <div className="lg:col-span-2 flex flex-col gap-5">
 
           {/* Entity Classes */}
-<<<<<<< HEAD
           <div className="rounded-xl overflow-hidden" style={{ border: "1px solid var(--border)" }}>
             <div className="px-4 py-3 flex items-center justify-between"
               style={{ background: "var(--bg-base)", borderBottom: "1px solid var(--border)" }}>
               <h2 className="text-sm font-semibold text-[var(--text-1)]">
                 Entity Classes <span className="text-xs font-normal" style={{ color: "var(--text-4)" }}>({ENTITIES.length})</span>
-=======
-          <div className="rounded-xl overflow-hidden" style={{ border: "1px solid #1e2d45" }}>
-            <div className="px-4 py-3 flex items-center justify-between"
-              style={{ background: "#090d18", borderBottom: "1px solid #1e2d45" }}>
-              <h2 className="text-sm font-semibold text-white">
-                Entity Classes <span className="text-xs font-normal" style={{ color: "#475569" }}>({ENTITIES.length})</span>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
               </h2>
               <span className="mono text-xs px-2 py-0.5 rounded"
                 style={{ background: "rgba(59,130,246,0.1)", color: "#3b82f6",
@@ -394,21 +308,13 @@ export default async function OntologyPage() {
                 return (
                   <div key={e.name}
                     className="px-4 py-2.5 flex items-center gap-3 hover:bg-white/[0.015] transition-colors"
-<<<<<<< HEAD
                     style={{ background: "var(--bg-card-2)" }}>
-=======
-                    style={{ background: "#111827" }}>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                     <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: e.color }} />
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 flex-wrap">
                         <span className="font-mono text-xs font-bold" style={{ color: e.color }}>{e.name}</span>
                         <span className="text-xs px-1.5 py-0.5 rounded font-mono"
-<<<<<<< HEAD
                           style={{ background: "var(--border)", color: "var(--text-3)", fontSize: 9 }}>
-=======
-                          style={{ background: "#1e2d45", color: "#64748b", fontSize: 9 }}>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                           {e.id}
                         </span>
                       </div>
@@ -433,19 +339,11 @@ export default async function OntologyPage() {
           </div>
 
           {/* Relationships */}
-<<<<<<< HEAD
           <div className="rounded-xl overflow-hidden" style={{ border: "1px solid var(--border)" }}>
             <div className="px-4 py-3 flex items-center justify-between"
               style={{ background: "var(--bg-base)", borderBottom: "1px solid var(--border)" }}>
               <h2 className="text-sm font-semibold text-[var(--text-1)]">
                 Relationship Taxonomy <span className="text-xs font-normal" style={{ color: "var(--text-4)" }}>({RELATIONSHIPS.length})</span>
-=======
-          <div className="rounded-xl overflow-hidden" style={{ border: "1px solid #1e2d45" }}>
-            <div className="px-4 py-3 flex items-center justify-between"
-              style={{ background: "#090d18", borderBottom: "1px solid #1e2d45" }}>
-              <h2 className="text-sm font-semibold text-white">
-                Relationship Taxonomy <span className="text-xs font-normal" style={{ color: "#475569" }}>({RELATIONSHIPS.length})</span>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
               </h2>
               <span className="mono text-xs" style={{ color: "#475569", fontSize: 10 }}>
                 {status?.neo4j.total_edges.toLocaleString("en-IN") ?? "—"} total edges
@@ -454,17 +352,10 @@ export default async function OntologyPage() {
             <div className="overflow-x-auto">
               <table className="w-full text-xs">
                 <thead>
-<<<<<<< HEAD
                   <tr style={{ background: "var(--bg-surface)", borderBottom: "1px solid var(--border)" }}>
                     {["From", "Type", "To", "Count"].map((h) => (
                       <th key={h} className="px-4 py-2 text-left font-medium uppercase tracking-wider"
                         style={{ color: "var(--text-4)", fontSize: 9 }}>{h}</th>
-=======
-                  <tr style={{ background: "#0d1525", borderBottom: "1px solid #1e2d45" }}>
-                    {["From", "Type", "To", "Count"].map((h) => (
-                      <th key={h} className="px-4 py-2 text-left font-medium uppercase tracking-wider"
-                        style={{ color: "#334155", fontSize: 9 }}>{h}</th>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                     ))}
                   </tr>
                 </thead>
@@ -473,15 +364,9 @@ export default async function OntologyPage() {
                     const cnt = status?.neo4j.relationships[r.type.replace(" (inv)", "")] ?? null;
                     return (
                       <tr key={i}
-<<<<<<< HEAD
                         style={{ background: i % 2 === 0 ? "var(--bg-card)" : "var(--bg-card-2)", borderBottom: "1px solid var(--border)" }}>
                         <td className="px-4 py-2 font-mono font-bold" style={{ color: "#3b82f6", fontSize: 10 }}>{r.from}</td>
                         <td className="px-4 py-2 font-mono text-[var(--text-1)]" style={{ fontSize: 10 }}>[:{r.type}]</td>
-=======
-                        style={{ background: i % 2 === 0 ? "#111827" : "#0d1525", borderBottom: "1px solid #1e2d4514" }}>
-                        <td className="px-4 py-2 font-mono font-bold" style={{ color: "#3b82f6", fontSize: 10 }}>{r.from}</td>
-                        <td className="px-4 py-2 font-mono text-white" style={{ fontSize: 10 }}>[:{r.type}]</td>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                         <td className="px-4 py-2 font-mono font-bold" style={{ color: "#10b981", fontSize: 10 }}>{r.to}</td>
                         <td className="px-4 py-2 mono" style={{ color: cnt != null ? "#64748b" : "#1e3a5f", fontSize: 10 }}>
                           {cnt != null ? cnt.toLocaleString("en-IN") : "—"}
@@ -531,7 +416,6 @@ export default async function OntologyPage() {
         {/* ── Right: Constraints + PG Tables + Phase ── */}
         <div className="flex flex-col gap-5">
 
-<<<<<<< HEAD
           {/* v1 Constraints */}
           <div className="rounded-xl overflow-hidden" style={{ border: "1px solid var(--border)" }}>
             <div className="px-4 py-3 flex items-center gap-2"
@@ -539,16 +423,6 @@ export default async function OntologyPage() {
               <ShieldCheck size={11} style={{ color: "#10b981" }} />
               <h2 className="text-sm font-semibold text-[var(--text-1)]">Constraints v1</h2>
               <span className="ml-auto mono text-xs" style={{ color: "var(--text-4)", fontSize: 9 }}>
-=======
-          {/* Constraints */}
-          <div className="rounded-xl overflow-hidden" style={{ border: "1px solid #1e2d45" }}>
-            <div className="px-4 py-3 flex items-center gap-2"
-              style={{ background: "#090d18", borderBottom: "1px solid #1e2d45" }}>
-              <Activity size={11} style={{ color: "#8b5cf6" }} />
-              <h2 className="text-sm font-semibold text-white">Neo4j Constraints</h2>
-              <span className="ml-auto mono text-xs"
-                style={{ color: "#475569", fontSize: 9 }}>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                 {liveConstr.length} active
               </span>
             </div>
@@ -563,11 +437,7 @@ export default async function OntologyPage() {
                       ? <CheckCircle size={12} style={{ color: "#10b981", marginTop: 1, flexShrink: 0 }} />
                       : <AlertCircle size={12} style={{ color: "#f59e0b", marginTop: 1, flexShrink: 0 }} />}
                     <div>
-<<<<<<< HEAD
                       <p className="text-xs font-mono text-[var(--text-1)]">{c.label}({c.prop})</p>
-=======
-                      <p className="text-xs font-mono text-white">{c.label}({c.prop})</p>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                       <p className="text-xs" style={{ color: active ? "#10b981" : "#f59e0b", fontSize: 9 }}>
                         {c.type} · {active ? "Active" : "Missing"}
                       </p>
@@ -575,7 +445,6 @@ export default async function OntologyPage() {
                   </div>
                 );
               })}
-<<<<<<< HEAD
             </div>
           </div>
 
@@ -599,12 +468,6 @@ export default async function OntologyPage() {
                     <p className="text-xs font-mono text-[var(--text-1)]">{c.label}({c.prop})</p>
                     <p className="text-xs" style={{ color: "#8b5cf6", fontSize: 9 }}>{c.type} · Active</p>
                   </div>
-=======
-              {!neo4jOnline && (
-                <div className="rounded-lg p-2 text-xs"
-                  style={{ background: "#1a1500", border: "1px solid #f59e0b33", color: "#f59e0b" }}>
-                  ! Neo4j offline — constraint status unavailable
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                 </div>
               ))}
               <div className="rounded-lg p-2 text-xs"
@@ -615,19 +478,11 @@ export default async function OntologyPage() {
           </div>
 
           {/* PostgreSQL table counts */}
-<<<<<<< HEAD
           <div className="rounded-xl overflow-hidden" style={{ border: "1px solid var(--border)" }}>
             <div className="px-4 py-3 flex items-center gap-2"
               style={{ background: "var(--bg-base)", borderBottom: "1px solid var(--border)" }}>
               <Database size={11} style={{ color: "#3b82f6" }} />
               <h2 className="text-sm font-semibold text-[var(--text-1)]">PostgreSQL Tables</h2>
-=======
-          <div className="rounded-xl overflow-hidden" style={{ border: "1px solid #1e2d45" }}>
-            <div className="px-4 py-3 flex items-center gap-2"
-              style={{ background: "#090d18", borderBottom: "1px solid #1e2d45" }}>
-              <Database size={11} style={{ color: "#3b82f6" }} />
-              <h2 className="text-sm font-semibold text-white">PostgreSQL Tables</h2>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
             </div>
             <div className="p-3 space-y-1">
               {Object.entries(pgTables).map(([tbl, cnt]) => (
@@ -646,45 +501,26 @@ export default async function OntologyPage() {
           </div>
 
           {/* ID Format */}
-<<<<<<< HEAD
           <div className="rounded-xl overflow-hidden" style={{ border: "1px solid var(--border)" }}>
             <div className="px-4 py-3" style={{ background: "var(--bg-base)", borderBottom: "1px solid var(--border)" }}>
               <h2 className="text-sm font-semibold text-[var(--text-1)]">ID Normalization</h2>
-=======
-          <div className="rounded-xl overflow-hidden" style={{ border: "1px solid #1e2d45" }}>
-            <div className="px-4 py-3" style={{ background: "#090d18", borderBottom: "1px solid #1e2d45" }}>
-              <h2 className="text-sm font-semibold text-white">ID Normalization</h2>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
             </div>
             <div className="p-3 space-y-1.5">
               {ID_FORMAT.map((f) => (
                 <div key={f.entity} className="rounded-lg px-3 py-2"
-<<<<<<< HEAD
                   style={{ background: "var(--bg-base)", border: "1px solid var(--border)" }}>
                   <p className="text-xs font-bold text-[var(--text-1)]">{f.entity}</p>
                   <p className="text-xs font-mono mt-0.5" style={{ color: "var(--text-4)", fontSize: 10 }}>{f.format}</p>
-=======
-                  style={{ background: "#0a0e1a", border: "1px solid #1e2d45" }}>
-                  <p className="text-xs font-bold text-white">{f.entity}</p>
-                  <p className="text-xs font-mono mt-0.5" style={{ color: "#475569", fontSize: 10 }}>{f.format}</p>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                 </div>
               ))}
             </div>
           </div>
 
           {/* Phase Progress */}
-<<<<<<< HEAD
           <div className="rounded-xl overflow-hidden" style={{ border: "1px solid var(--border)" }}>
             <div className="px-4 py-3 flex items-center justify-between"
               style={{ background: "var(--bg-base)", borderBottom: "1px solid var(--border)" }}>
               <h2 className="text-sm font-semibold text-[var(--text-1)]">Phase Progress</h2>
-=======
-          <div className="rounded-xl overflow-hidden" style={{ border: "1px solid #1e2d45" }}>
-            <div className="px-4 py-3 flex items-center justify-between"
-              style={{ background: "#090d18", borderBottom: "1px solid #1e2d45" }}>
-              <h2 className="text-sm font-semibold text-white">Phase Progress</h2>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
               <span className="mono text-xs px-2 py-0.5 rounded"
                 style={{ background: donePct === 100 ? "rgba(16,185,129,0.1)" : "rgba(245,158,11,0.1)",
                          color: donePct === 100 ? "#10b981" : "#f59e0b",
@@ -698,19 +534,11 @@ export default async function OntologyPage() {
                 <div key={i} className="flex items-center gap-2 text-xs">
                   {item.done
                     ? <CheckCircle size={11} style={{ color: "#10b981", flexShrink: 0 }} />
-<<<<<<< HEAD
                     : <Circle     size={11} style={{ color: "var(--text-4)",  flexShrink: 0 }} />}
                   <span style={{ color: item.done ? "var(--text-1)" : "var(--text-4)" }}>{item.label}</span>
                 </div>
               ))}
               <div className="mt-3 h-1.5 rounded-full" style={{ background: "var(--border)" }}>
-=======
-                    : <Circle     size={11} style={{ color: "#334155",  flexShrink: 0 }} />}
-                  <span style={{ color: item.done ? "#cbd5e1" : "#475569" }}>{item.label}</span>
-                </div>
-              ))}
-              <div className="mt-3 h-1.5 rounded-full" style={{ background: "#1e2d45" }}>
->>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                 <div className="h-1.5 rounded-full transition-all"
                   style={{ width: `${donePct}%`, background: donePct === 100 ? "#10b981" : "linear-gradient(90deg,#10b981,#3b82f6)" }} />
               </div>
