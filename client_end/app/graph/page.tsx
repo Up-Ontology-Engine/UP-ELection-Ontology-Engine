@@ -1170,6 +1170,7 @@ export default function GraphPage() {
               <div className="mt-4 pt-3" style={{ borderTop: `1px solid ${S.border}` }}>
                 <p className="label mb-2" style={{ color: S.t4 }}>Navigation</p>
                 <div className="space-y-1.5 text-xs" style={{ color: S.t3 }}>
+<<<<<<< HEAD
                   {[
                     "Click node → opens analysis panel",
                     "Expand → loads 1-hop subgraph",
@@ -1183,6 +1184,33 @@ export default function GraphPage() {
                       {tip}
                     </p>
                   ))}
+=======
+                  <p className="flex items-center gap-2">
+                    <span className="w-4 h-4 rounded flex items-center justify-center flex-shrink-0"
+                      style={{ background: "rgba(249,115,22,0.1)", color: S.saffron, fontSize: 9 }}>1</span>
+                    Click node to inspect properties
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <span className="w-4 h-4 rounded flex items-center justify-center flex-shrink-0"
+                      style={{ background: "rgba(249,115,22,0.1)", color: S.saffron, fontSize: 9 }}>2</span>
+                    Use "Expand" to load connected subgraph
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <span className="w-4 h-4 rounded flex items-center justify-center flex-shrink-0"
+                      style={{ background: "rgba(249,115,22,0.1)", color: S.saffron, fontSize: 9 }}>3</span>
+                    Drag nodes to reposition
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <span className="w-4 h-4 rounded flex items-center justify-center flex-shrink-0"
+                      style={{ background: "rgba(249,115,22,0.1)", color: S.saffron, fontSize: 9 }}>4</span>
+                    Scroll to zoom, drag canvas to pan
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <span className="w-4 h-4 rounded flex items-center justify-center flex-shrink-0"
+                      style={{ background: "rgba(249,115,22,0.1)", color: S.saffron, fontSize: 9 }}>5</span>
+                    Arrows show relationship direction
+                  </p>
+>>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
                 </div>
               </div>
             </div>

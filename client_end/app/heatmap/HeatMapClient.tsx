@@ -13,9 +13,9 @@ const Map = dynamic(() => import("./LeafletMap"), {
   ssr: false,
   loading: () => (
     <div className="w-full h-full flex flex-col items-center justify-center"
-      style={{ background: "var(--bg-base)" }}>
+      style={{ background: "#060b14" }}>
       <div className="w-8 h-8 border-2 border-orange-500/30 border-t-orange-500 rounded-full animate-spin mb-3" />
-      <p className="text-xs mono" style={{ color: "var(--text-3)" }}>
+      <p className="text-xs mono" style={{ color: "#4d6480" }}>
         Initialising constituency heatmap…
       </p>
     </div>
@@ -106,7 +106,11 @@ const LEGENDS: Record<HeatLayer, { label: string; color: string }[]> = {
     { label: "HIGH",                 color: "#10b981" },
     { label: "MEDIUM",               color: "#f59e0b" },
     { label: "LOW",                  color: "#ef4444" },
+<<<<<<< HEAD
     { label: "Unknown",              color: "var(--text-4)" },
+=======
+    { label: "Unknown",              color: "#1e3a5f" },
+>>>>>>> 8048c7b85b6989f4e9cca6f842da79de367504f4
   ],
 };
 
