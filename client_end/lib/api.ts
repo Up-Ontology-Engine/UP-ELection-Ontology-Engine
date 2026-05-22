@@ -67,6 +67,9 @@ export const api = {
   // Pain-point engine: per-issue aggregation with booth list + evidence
   issueBreakdown: (acId: string) => get<IssueBreakdownResponse>(`/ac/${acId}/issue-breakdown`),
 
+  // Booth-level action intelligence
+  boothActions: (boothId: string) => get<BoothActionsResponse>(`/booth/${boothId}/actions`),
+
   // Election results (Form-20 ingested)
   electionResults: (acId: string, year = 2022) => get<AcElectionResults>(`/ac/${acId}/election-results?year=${year}`),
 
@@ -414,8 +417,23 @@ export interface GraphCoverageBooth {
   opp_pulse_score: number | null;
   confidence_label: string | null;
   event_count: number | null;
+  top_issue: string | null;
   in_neo4j: boolean;
   neo4j_degree: number;
+}
+
+export interface BoothActionItem {
+  title: string;
+  description: string;
+  priority: "high" | "medium" | "low";
+  category: "scheme" | "issue" | "narrative" | "mobilisation";
+  rationale: string;
+}
+
+export interface BoothActionsResponse {
+  booth_id: string;
+  count: number;
+  actions: BoothActionItem[];
 }
 
 export interface GraphCoverageResponse {

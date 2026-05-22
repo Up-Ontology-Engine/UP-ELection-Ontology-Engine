@@ -78,6 +78,32 @@ export default function BoothsClient({ booths }: Props) {
     setPage(1);
   }
 
+  function downloadCSV() {
+    const headers = ["Booth No", "Name", "Locality", "Total Voters", "Male", "Female", "BJP Pulse", "Opp Pulse", "Lean", "Confidence", "Top Issue", "Events"];
+    const rows = filtered.map((b) => [
+      b.booth_number,
+      `"${(b.name ?? "").replace(/"/g, '""')}"`,
+      `"${(b.locality_hint ?? "").replace(/"/g, '""')}"`,
+      b.total_voters ?? "",
+      b.male_voters ?? "",
+      b.female_voters ?? "",
+      b.bjp_pulse_score ?? "",
+      b.opp_pulse_score ?? "",
+      b.digital_lean_label ?? "",
+      b.confidence_label ?? "",
+      b.top_issue ?? "",
+      b.event_count ?? "",
+    ]);
+    const csv = [headers, ...rows].map((r) => r.join(",")).join("\n");
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `gkp-booth-data-${new Date().toISOString().slice(0, 10)}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
   const SortIcon = ({ k }: { k: SortKey }) =>
     sortKey !== k ? <ArrowUpDown size={9} style={{ color: "var(--text-4)" }} />
       : sortDir === "asc" ? <ArrowUp size={9} style={{ color: "#f97316" }} />
@@ -116,9 +142,11 @@ export default function BoothsClient({ booths }: Props) {
             <Filter size={11} />
             Filters {(leanFilter.length + confFilter.length) > 0 ? `(${leanFilter.length + confFilter.length})` : ""}
           </button>
-          <button className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs"
-            style={{ border: "1px solid var(--border)", color: "var(--text-3)" }}>
-            <Download size={11} /> Export
+          <button onClick={downloadCSV}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs transition-colors hover:opacity-80"
+            style={{ border: "1px solid var(--border)", color: "var(--text-3)" }}
+            title={`Export ${filtered.length} booths as CSV`}>
+            <Download size={11} /> Export CSV
           </button>
         </div>
       </div>

@@ -14,6 +14,7 @@ from .queries import (
     get_booth_issues, get_booth_pulse, get_booth_comments,
     get_ac_candidates, get_scheme_gap,
     get_booth_quality, get_booth_narratives, get_booth_contradictions,
+    get_booth_actions,
     get_ac_schemes, get_ac_narratives, get_ac_events,
     get_ac_quality, get_ac_recommendations, get_graph_subgraph,
     get_booth_geo, get_infrastructure_overview, get_graph_coverage,
@@ -134,6 +135,13 @@ def booth_summary(booth_id: str, days: int = Query(7, ge=1, le=90)):
         "key_insight": insight,
         "recommendation": recommendation,
     }
+
+
+@app.get("/booth/{booth_id}/actions")
+def booth_actions(booth_id: str):
+    """Prioritised action recommendations derived from issues, narratives, and scheme gaps for a booth."""
+    actions = get_booth_actions(booth_id)
+    return {"booth_id": booth_id, "count": len(actions), "actions": actions}
 
 
 @app.get("/booth/{booth_id}/quality")

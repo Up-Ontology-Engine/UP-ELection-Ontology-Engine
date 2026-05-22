@@ -57,6 +57,7 @@ const LAYER_DEFS: {
   { id: "kg_coverage", label: "KG Coverage",      desc: "Knowledge Graph node presence per booth",        color: "#10b981" },
   { id: "bjp_lean",    label: "Political Lean",   desc: "BJP vs Opposition digital pulse score per booth", color: "#f97316" },
   { id: "confidence",  label: "Data Quality",     desc: "Data confidence label per booth",                color: "#8b5cf6" },
+  { id: "top_issue",   label: "Top Issue",        desc: "Dominant voter issue per booth from pulse data",  color: "#a78bfa" },
 ];
 
 const LEGENDS: Record<HeatLayer, { label: string; color: string }[]> = {
@@ -83,6 +84,16 @@ const LEGENDS: Record<HeatLayer, { label: string; color: string }[]> = {
     { label: "LOW",                  color: "#ef4444" },
     { label: "Unknown",              color: "#1e3a5f" },
   ],
+  top_issue: [
+    { label: "Water",                color: "#3b82f6" },
+    { label: "Roads",                color: "#f59e0b" },
+    { label: "Jobs",                 color: "#10b981" },
+    { label: "Health",               color: "#ec4899" },
+    { label: "Education",            color: "#8b5cf6" },
+    { label: "Law & Order",          color: "#ef4444" },
+    { label: "Corruption",           color: "#f97316" },
+    { label: "No data",              color: "#374151" },
+  ],
 };
 
 interface Props {
@@ -106,13 +117,15 @@ export default function HeatMapClient({ coverage }: Props) {
 
   const usingRealCoords = booths.some((b) => b.lat != null);
 
-  const hasBjpData  = booths.some((b) => b.bjp_pulse_score != null);
-  const hasConfData = booths.some((b) => b.confidence_label != null);
+  const hasBjpData     = booths.some((b) => b.bjp_pulse_score != null);
+  const hasConfData    = booths.some((b) => b.confidence_label != null);
+  const hasTopIssueData = booths.some((b) => b.top_issue != null);
 
   const LAYERS = LAYER_DEFS.map((l) => ({
     ...l,
     hasData: l.id === "bjp_lean"   ? hasBjpData
            : l.id === "confidence" ? hasConfData
+           : l.id === "top_issue"  ? hasTopIssueData
            : true,
   }));
 
@@ -273,6 +286,7 @@ export default function HeatMapClient({ coverage }: Props) {
                     { label: "BJP pulse",  value: selected.bjp_pulse_score?.toFixed(3) ?? "No data", color: "#f97316" },
                     { label: "Opp pulse",  value: selected.opp_pulse_score?.toFixed(3) ?? "No data", color: "#3b82f6" },
                     { label: "Confidence", value: selected.confidence_label ?? "No data",           color: selected.confidence_label === "HIGH" ? "#10b981" : selected.confidence_label === "LOW" ? "#ef4444" : "var(--text-4)" },
+                    { label: "Top issue",  value: selected.top_issue ? selected.top_issue.replace(/_/g, " ") : "No data", color: "#a78bfa" },
                     { label: "KG degree",  value: String(selected.neo4j_degree),                   color: "#10b981" },
                   ].map(({ label, value, color }) => (
                     <div key={label} className="flex justify-between py-0.5"

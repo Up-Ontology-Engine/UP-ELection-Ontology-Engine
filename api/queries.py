@@ -710,19 +710,6 @@ def get_ac_recommendations(ac_id: str) -> dict:
     narratives = [dict(r) for r in narr_rows]
 
     # High-volume issues = voter concern regardless of polarity direction
-    _ISSUE_GUIDANCE: dict[str, str] = {
-        "education":    "Schools, teachers, exam results dominate YouTube discourse — direct voter concern",
-        "water":        "Drinking water access and pipeline complaints are top voter ask",
-        "roads":        "Road quality and pothole complaints signal infrastructure gap",
-        "law_order":    "Law & order narrative active — address crime visibility urgently",
-        "jobs":         "Youth unemployment frustration driving opposition narrative",
-        "price_rise":   "Inflation/petrol prices cited frequently — economic relief messaging needed",
-        "corruption":   "Corruption narrative active — requires proactive transparency response",
-        "farmer":       "Farmer distress signals (MSP, sugarcane) need direct outreach",
-        "health":       "Health and hospital access concerns present in discourse",
-        "women_safety": "Women safety narrative present — highlight scheme delivery",
-        "housing":      "PMAY/housing delivery gap flagged in digital discourse",
-    }
     risks = []
     for iss in issues:
         avg_pol = float(iss.get("avg_pol") or 0)
@@ -980,11 +967,11 @@ def get_graph_coverage(ac_id: str) -> list[dict]:
                 b.polling_station_name AS name,
                 b.lat, b.lon, b.total_voters,
                 bm.bjp_pulse_score, bm.opp_pulse_score,
-                bm.confidence_label, bm.event_count
+                bm.confidence_label, bm.event_count, bm.top_issue
             FROM booth_master b
             LEFT JOIN LATERAL (
                 SELECT bjp_pulse_score, opp_pulse_score,
-                       confidence_label, event_count
+                       confidence_label, event_count, top_issue
                 FROM booth_metrics
                 WHERE booth_id = b.booth_id
                 ORDER BY window_start DESC LIMIT 1

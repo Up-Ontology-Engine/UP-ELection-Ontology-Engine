@@ -1,4 +1,4 @@
-import { api } from "@/lib/api";
+import { api, type BoothActionItem } from "@/lib/api";
 import Link from "next/link";
 import LeanBadge from "@/components/LeanBadge";
 import ConfidenceBadge from "@/components/ConfidenceBadge";
@@ -20,6 +20,12 @@ export default async function BoothDetailPage({ params }: Props) {
   const { id } = await params;
   let summary: Awaited<ReturnType<typeof api.boothSummary>> | null = null;
   try { summary = await api.boothSummary(id); } catch {}
+
+  let boothActions: BoothActionItem[] = [];
+  try {
+    const actResult = await api.boothActions(id);
+    boothActions = actResult.actions;
+  } catch {}
 
   if (!summary) {
     return (
@@ -250,6 +256,69 @@ export default async function BoothDetailPage({ params }: Props) {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          )}
+
+          {/* Recommended Actions */}
+          {boothActions.length > 0 && (
+            <div className="card p-4">
+              <SectionHeader
+                title="Recommended Actions"
+                sub={`${boothActions.length} prioritised items`}
+                accent="#f97316"
+                right={
+                  <span className="mono text-xs" style={{ color: "var(--text-4)" }}>
+                    {boothActions.filter((a) => a.priority === "high").length} high priority
+                  </span>
+                }
+              />
+              <div className="space-y-2">
+                {boothActions.map((action, i) => {
+                  const isHigh = action.priority === "high";
+                  const catColors: Record<string, string> = {
+                    scheme:       "#f59e0b",
+                    issue:        "#cc2200",
+                    narrative:    "#8b5cf6",
+                    mobilisation: "#003380",
+                  };
+                  const accent = catColors[action.category] ?? "#f97316";
+                  return (
+                    <div key={i} className="rounded-md p-3"
+                      style={{
+                        background: "var(--bg-surface)",
+                        border: `1px solid ${isHigh ? `${accent}40` : "var(--border)"}`,
+                        borderLeft: `3px solid ${accent}`,
+                      }}>
+                      <div className="flex items-start justify-between gap-2 mb-1">
+                        <p className="text-xs font-medium" style={{ color: "var(--text-1)" }}>{action.title}</p>
+                        <div className="flex items-center gap-1.5 flex-shrink-0">
+                          <span className="mono text-xs px-1.5 py-0.5 rounded capitalize"
+                            style={{
+                              background: `${accent}18`,
+                              color: accent,
+                              border: `1px solid ${accent}30`,
+                              fontSize: 9,
+                            }}>
+                            {action.category}
+                          </span>
+                          <span className="mono text-xs px-1.5 py-0.5 rounded"
+                            style={{
+                              background: isHigh ? "#ef444420" : "#f9731618",
+                              color: isHigh ? "#ef4444" : "#f97316",
+                              fontSize: 9,
+                            }}>
+                            {action.priority}
+                          </span>
+                        </div>
+                      </div>
+                      <p className="text-xs mb-1.5" style={{ color: "var(--text-3)" }}>{action.description}</p>
+                      <p className="mono text-xs" style={{ color: "var(--text-4)", fontSize: 9 }}>
+                        {action.rationale}
+                      </p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           )}
