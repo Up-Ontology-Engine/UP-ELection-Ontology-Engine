@@ -101,7 +101,7 @@ export default async function DemographicsPage() {
           <div className="flex items-center gap-3 mb-1">
             <div className="w-1.5 h-8 rounded-full" style={{ background: "linear-gradient(180deg,#10b981,#3b82f6)" }} />
             <div>
-              <h1 className="text-xl font-bold text-white">Demographic Intelligence</h1>
+              <h1 className="text-xl font-bold" style={{ color: "var(--text-1)" }}>Demographic Intelligence</h1>
               <p className="text-xs mt-0.5" style={{ color: "#475569" }}>
                 Voter composition · 2022 Election Results · Booth Segmentation · Gorakhpur Urban AC-322
               </p>
@@ -178,10 +178,10 @@ export default async function DemographicsPage() {
       {/* ── Booth Table ── */}
       <div className="card rounded-xl overflow-hidden mt-5">
         <div className="px-5 py-3.5 flex items-center justify-between"
-          style={{ background: "#0d1525", borderBottom: "1px solid #1e2d45" }}>
+          style={{ background: "var(--bg-surface)", borderBottom: "1px solid var(--border)" }}>
           <div className="flex items-center gap-2">
             <Activity size={13} style={{ color: "#10b981" }} />
-            <h3 className="text-sm font-semibold text-white">Booth-Level Voter Composition — 2022</h3>
+            <h3 className="text-sm font-semibold" style={{ color: "var(--text-1)" }}>Booth-Level Voter Composition — 2022</h3>
           </div>
           <span className="mono text-xs px-2 py-0.5 rounded"
             style={{ background: "rgba(16,185,129,0.1)", color: "#10b981", border: "1px solid rgba(16,185,129,0.2)", fontSize: 10 }}>

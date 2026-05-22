@@ -34,10 +34,10 @@ const EXAMPLES = [
 type Mode = "hybrid" | "graph" | "web" | "llm";
 
 const MODE_CONFIG: Record<Mode, { label: string; chip: string; icon: React.ElementType }> = {
-  hybrid: { label: "HYBRID", chip: "border-violet-500/30 bg-violet-500/10 text-violet-300", icon: Zap },
-  graph: { label: "GRAPH", chip: "border-emerald-500/30 bg-emerald-500/10 text-emerald-300", icon: Database },
-  web: { label: "WEB", chip: "border-sky-500/30 bg-sky-500/10 text-sky-300", icon: Globe },
-  llm: { label: "LLM", chip: "border-amber-500/30 bg-amber-500/10 text-amber-300", icon: Brain },
+  hybrid: { label: "HYBRID", chip: "border-violet-500/30 bg-violet-500/10 text-violet-700", icon: Zap },
+  graph: { label: "GRAPH", chip: "border-emerald-500/30 bg-emerald-500/10 text-emerald-700", icon: Database },
+  web: { label: "WEB", chip: "border-sky-500/30 bg-sky-500/10 text-sky-700", icon: Globe },
+  llm: { label: "LLM", chip: "border-amber-500/30 bg-amber-500/10 text-amber-700", icon: Brain },
 };
 
 type ChatMessage = {
@@ -63,17 +63,17 @@ function SourceCard({ r }: { r: WebResult }) {
       href={r.url || "#"}
       target="_blank"
       rel="noopener noreferrer"
-      className="block rounded-lg border border-slate-800 bg-slate-950 p-3 transition-colors hover:bg-slate-900"
+      className="block rounded-lg border border-[var(--border)] bg-[var(--bg-card)] p-3 transition-colors hover:bg-[var(--bg-hover)]"
     >
       <div className="flex items-start justify-between gap-2">
-        <p className="line-clamp-2 flex-1 text-xs font-medium text-slate-100">{r.title}</p>
-        {r.url && <ExternalLink size={10} className="mt-0.5 shrink-0 text-slate-500" />}
+        <p className="line-clamp-2 flex-1 text-xs font-medium text-[var(--text-1)]">{r.title}</p>
+        {r.url && <ExternalLink size={10} className="mt-0.5 shrink-0 text-[var(--text-3)]" />}
       </div>
-      <p className="mt-1 line-clamp-2 text-xs text-slate-400">{r.snippet}</p>
-      <div className="mt-2 flex items-center gap-1 text-[9px] text-slate-500">
+      <p className="mt-1 line-clamp-2 text-xs text-[var(--text-2)]">{r.snippet}</p>
+      <div className="mt-2 flex items-center gap-1 text-[9px] text-[var(--text-3)]">
         <Globe size={8} />
         <span>{host}</span>
-        <span className="ml-1 rounded bg-slate-900 px-1 py-0.5 text-slate-500">{r.source}</span>
+        <span className="ml-1 rounded bg-[var(--bg-surface)] px-1 py-0.5 text-[var(--text-3)]">{r.source}</span>
       </div>
     </a>
   );
@@ -84,19 +84,19 @@ function GraphTable({ results }: { results: Record<string, unknown>[] }) {
   const keys = Object.keys(results[0]);
 
   return (
-    <div className="mt-2 overflow-hidden rounded-lg border border-slate-800">
-      <div className="flex items-center gap-2 border-b border-slate-800 bg-slate-950 px-3 py-2">
-        <Database size={10} className="text-emerald-400" />
-        <span className="mono text-xs text-slate-400">
+    <div className="mt-2 overflow-hidden rounded-lg border border-[var(--border)]">
+      <div className="flex items-center gap-2 border-b border-[var(--border)] bg-[var(--bg-card)] px-3 py-2">
+        <Database size={10} className="text-emerald-600" />
+        <span className="mono text-xs text-[var(--text-2)]">
           {results.length} row{results.length !== 1 ? "s" : ""} from graph
         </span>
       </div>
       <div className="max-h-48 overflow-x-auto">
         <table className="w-full text-xs">
           <thead>
-            <tr className="border-b border-slate-800 bg-slate-950">
+            <tr className="border-b border-[var(--border)] bg-[var(--bg-card)]">
               {keys.map((k) => (
-                <th key={k} className="px-3 py-1.5 text-left text-[9px] uppercase tracking-wide text-slate-500">
+                <th key={k} className="px-3 py-1.5 text-left text-[9px] uppercase tracking-wide text-[var(--text-3)]">
                   {k}
                 </th>
               ))}
@@ -106,10 +106,10 @@ function GraphTable({ results }: { results: Record<string, unknown>[] }) {
             {results.slice(0, 25).map((row, ri) => (
               <tr
                 key={ri}
-                className={ri % 2 === 0 ? "border-b border-slate-800 bg-slate-950/60" : "border-b border-slate-800/50"}
+                className={ri % 2 === 0 ? "border-b border-[var(--border)] bg-[var(--bg-card)]" : "border-b border-[var(--border)]"}
               >
                 {keys.map((k) => (
-                  <td key={k} className="px-3 py-1.5 mono text-slate-300">{String(row[k] ?? "—")}</td>
+                  <td key={k} className="px-3 py-1.5 mono text-[var(--text-2)]">{String(row[k] ?? "—")}</td>
                 ))}
               </tr>
             ))}
@@ -131,31 +131,31 @@ function AssistantMessage({ result }: { result: ReasoningResult }) {
   const hasGraph = (result.graph_results?.length ?? 0) > 0;
 
   return (
-    <div className="overflow-hidden rounded-2xl border border-slate-800 bg-slate-950">
-      <div className="flex items-center gap-2 border-b border-slate-800 bg-slate-900/60 px-4 py-2">
+    <div className="overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--bg-card)]">
+      <div className="flex items-center gap-2 border-b border-[var(--border)] bg-[var(--bg-surface)] px-4 py-2">
         <div className={`flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-[9px] font-bold ${conf.chip}`}>
           <conf.icon size={9} />
           <span>{conf.label}</span>
         </div>
-        {hasGraph && <span className="mono text-[9px] text-slate-500">{result.row_count} graph rows</span>}
-        {hasWeb && <span className="mono flex items-center gap-1 text-[9px] text-slate-500"><Globe size={8} />{result.web_results.length} sources</span>}
-        <span className="ml-auto mono flex items-center gap-1 text-[9px] text-slate-500"><Clock size={8} />{result.elapsed_ms}ms</span>
+        {hasGraph && <span className="mono text-[9px] text-[var(--text-3)]">{result.row_count} graph rows</span>}
+        {hasWeb && <span className="mono flex items-center gap-1 text-[9px] text-[var(--text-3)]"><Globe size={8} />{result.web_results.length} sources</span>}
+        <span className="ml-auto mono flex items-center gap-1 text-[9px] text-[var(--text-3)]"><Clock size={8} />{result.elapsed_ms}ms</span>
       </div>
 
-      <div className="px-4 py-3 text-sm text-slate-200">
+      <div className="px-4 py-3 text-sm text-[var(--text-1)]">
         {result.error && !result.answer && (
-          <div className="mb-3 flex items-start gap-2 rounded-lg border border-red-500/20 bg-red-500/10 p-2 text-xs text-red-200">
+          <div className="mb-3 flex items-start gap-2 rounded-lg border border-red-500/20 bg-red-500/10 p-2 text-xs text-red-700">
             <AlertCircle size={12} className="mt-0.5 shrink-0" />
             <span>{result.error}</span>
           </div>
         )}
-        {result.answer ? <p className="whitespace-pre-wrap leading-6 text-slate-200">{result.answer}</p> : null}
-        {!result.answer && result.summary ? <p className="whitespace-pre-wrap leading-6 text-slate-200">{result.summary}</p> : null}
+        {result.answer ? <p className="whitespace-pre-wrap leading-6 text-[var(--text-1)]">{result.answer}</p> : null}
+        {!result.answer && result.summary ? <p className="whitespace-pre-wrap leading-6 text-[var(--text-1)]">{result.summary}</p> : null}
       </div>
 
       {hasWeb && (
-        <div className="border-t border-slate-800">
-          <button onClick={() => setShowSources((s) => !s)} className="flex w-full items-center gap-2 px-4 py-2 text-xs text-sky-400 transition-colors hover:bg-slate-900">
+        <div className="border-t border-[var(--border)]">
+          <button onClick={() => setShowSources((s) => !s)} className="flex w-full items-center gap-2 px-4 py-2 text-xs text-sky-600 transition-colors hover:bg-[var(--bg-hover)]">
             <Globe size={10} />
             {result.web_results.length} web source{result.web_results.length !== 1 ? "s" : ""}
             {showSources ? <ChevronUp size={10} className="ml-auto" /> : <ChevronDown size={10} className="ml-auto" />}
@@ -169,22 +169,22 @@ function AssistantMessage({ result }: { result: ReasoningResult }) {
       )}
 
       {hasCypher && (
-        <div className="border-t border-slate-800">
-          <button onClick={() => setShowCypher((s) => !s)} className="flex w-full items-center gap-2 px-4 py-2 text-xs text-violet-400 transition-colors hover:bg-slate-900">
+        <div className="border-t border-[var(--border)]">
+          <button onClick={() => setShowCypher((s) => !s)} className="flex w-full items-center gap-2 px-4 py-2 text-xs text-violet-600 transition-colors hover:bg-[var(--bg-hover)]">
             <Code size={10} /> Cypher query
             {showCypher ? <ChevronUp size={10} className="ml-auto" /> : <ChevronDown size={10} className="ml-auto" />}
           </button>
           {showCypher && (
             <div className="px-4 pb-3">
-              <pre className="overflow-x-auto rounded-lg border border-slate-800 bg-slate-950 p-3 text-xs text-violet-300">{result.cypher}</pre>
+              <pre className="overflow-x-auto rounded-lg border border-[var(--border)] bg-[var(--bg-card)] p-3 text-xs text-violet-700">{result.cypher}</pre>
             </div>
           )}
         </div>
       )}
 
       {hasGraph && (
-        <div className="border-t border-slate-800">
-          <button onClick={() => setShowTable((s) => !s)} className="flex w-full items-center gap-2 px-4 py-2 text-xs text-emerald-400 transition-colors hover:bg-slate-900">
+        <div className="border-t border-[var(--border)]">
+          <button onClick={() => setShowTable((s) => !s)} className="flex w-full items-center gap-2 px-4 py-2 text-xs text-emerald-600 transition-colors hover:bg-[var(--bg-hover)]">
             <Database size={10} /> Raw graph data ({result.row_count} rows)
             {showTable ? <ChevronUp size={10} className="ml-auto" /> : <ChevronDown size={10} className="ml-auto" />}
           </button>
@@ -245,35 +245,35 @@ export default function ReasoningPage() {
   }
 
   return (
-    <div className="flex h-screen flex-col bg-[#060b14]">
-      <div className="flex items-center justify-between border-b border-slate-800 bg-[#060b14] px-5 py-3">
+    <div className="flex h-screen flex-col bg-[var(--bg-base)]">
+      <div className="flex items-center justify-between border-b border-[var(--border)] bg-[var(--bg-base)] px-5 py-3">
         <div className="flex items-center gap-3">
           <div className="flex h-7 w-7 items-center justify-center rounded-md border border-fuchsia-500/30 bg-fuchsia-500/10">
-            <Terminal size={13} className="text-fuchsia-400" />
+            <Terminal size={13} className="text-fuchsia-600" />
           </div>
           <div>
-            <h1 className="text-sm font-bold text-slate-100">AI Political Reasoning</h1>
-            <p className="mono text-xs text-slate-500">Natural language → Cypher → Knowledge Graph · Powered by Groq LLM</p>
+            <h1 className="text-sm font-bold text-[var(--text-1)]">AI Political Reasoning</h1>
+            <p className="mono text-xs text-[var(--text-3)]">Natural language → Cypher → Knowledge Graph · Powered by Groq LLM</p>
           </div>
         </div>
-        <div className="hidden items-center gap-1.5 mono text-xs text-slate-500 md:flex">
+        <div className="hidden items-center gap-1.5 mono text-xs text-[var(--text-3)] md:flex">
           <MessageSquare size={11} /> {messages.filter((m) => m.role === "user").length} queries this session
         </div>
       </div>
 
       <div className="flex flex-1 overflow-hidden">
-        <aside className="w-60 shrink-0 overflow-y-auto border-r border-slate-800 bg-[#060b14]">
+        <aside className="w-60 shrink-0 overflow-y-auto border-r border-[var(--border)] bg-[var(--bg-base)]">
           <div className="p-3">
-            <p className="mono mb-3 text-[9px] tracking-widest text-slate-500">EXAMPLES</p>
+            <p className="mono mb-3 text-[9px] tracking-widest text-[var(--text-3)]">EXAMPLES</p>
             {Object.entries(grouped).map(([cat, items]) => (
               <div key={cat} className="mb-3">
-                <p className="mono mb-2 text-[9px] text-slate-500">{cat.toUpperCase()}</p>
+                <p className="mono mb-2 text-[9px] text-[var(--text-3)]">{cat.toUpperCase()}</p>
                 {items.map(({ q }) => (
                   <button
                     key={q}
                     onClick={() => submit(q)}
                     disabled={loading}
-                    className="mb-0.5 flex w-full items-start gap-1.5 rounded px-2 py-1 text-left text-xs text-slate-400 transition-colors hover:bg-slate-900 disabled:opacity-40"
+                    className="mb-0.5 flex w-full items-start gap-1.5 rounded px-2 py-1 text-left text-xs text-[var(--text-2)] transition-colors hover:bg-[var(--bg-hover)] disabled:opacity-40"
                   >
                     <ChevronRight size={8} className="mt-0.5 shrink-0 opacity-50" />
                     <span className="line-clamp-2">{q}</span>
@@ -289,10 +289,10 @@ export default function ReasoningPage() {
             {messages.length === 0 && (
               <div className="flex h-full flex-col items-center justify-center py-20">
                 <div className="mb-5 flex h-20 w-20 items-center justify-center rounded-2xl border border-violet-500/20 bg-violet-500/10">
-                  <Brain size={36} className="text-violet-400" />
+                  <Brain size={36} className="text-violet-600" />
                 </div>
-                <p className="mb-2 text-lg font-bold text-slate-100">Political Intelligence Engine</p>
-                <p className="mb-5 max-w-md text-center text-sm text-slate-500">
+                <p className="mb-2 text-lg font-bold text-[var(--text-1)]">Political Intelligence Engine</p>
+                <p className="mb-5 max-w-md text-center text-sm text-[var(--text-3)]">
                   Ask about booths, candidates, issues, or constituency trends.
                 </p>
                 <div className="flex max-w-3xl flex-wrap items-center justify-center gap-2">
@@ -301,7 +301,7 @@ export default function ReasoningPage() {
                       key={item.q}
                       onClick={() => submit(item.q)}
                       disabled={loading}
-                      className="rounded-full border border-violet-500/25 bg-violet-500/10 px-3 py-1.5 text-xs text-violet-300 transition-opacity hover:opacity-90 disabled:opacity-40"
+                      className="rounded-full border border-violet-500/25 bg-violet-500/10 px-3 py-1.5 text-xs text-violet-700 transition-opacity hover:opacity-90 disabled:opacity-40"
                     >
                       {item.q}
                     </button>
@@ -314,25 +314,25 @@ export default function ReasoningPage() {
               <div key={i} className={`flex gap-3 ${m.role === "user" ? "justify-end" : ""}`}>
                 {m.role === "assistant" && (
                   <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-violet-500/30 bg-violet-500/15">
-                    <Brain size={12} className="text-violet-400" />
+                    <Brain size={12} className="text-violet-600" />
                   </div>
                 )}
 
                 <div className={`flex-1 ${m.role === "user" ? "flex flex-col items-end" : ""}`}>
                   {m.role === "user" ? (
                     <div className="inline-block rounded-xl border border-orange-500/20 bg-orange-500/10 px-4 py-2.5">
-                      <p className="text-sm text-slate-100">{m.content}</p>
+                      <p className="text-sm text-[var(--text-1)]">{m.content}</p>
                     </div>
                   ) : m.result ? (
                     <div className="w-full max-w-3xl">
                       <AssistantMessage result={m.result} />
                     </div>
                   ) : (
-                    <div className="rounded-xl border border-slate-800 bg-slate-950 px-4 py-3">
-                      <p className="text-sm text-red-200">{m.content}</p>
+                    <div className="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] px-4 py-3">
+                      <p className="text-sm text-red-700">{m.content}</p>
                     </div>
                   )}
-                  <p className="mono mt-1 px-1 text-[9px] text-slate-500">{m.ts}</p>
+                  <p className="mono mt-1 px-1 text-[9px] text-[var(--text-3)]">{m.ts}</p>
                 </div>
               </div>
             ))}
@@ -340,14 +340,14 @@ export default function ReasoningPage() {
             {loading && (
               <div className="flex gap-3">
                 <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-violet-500/30 bg-violet-500/15">
-                  <Loader size={12} className="animate-spin text-violet-400" />
+                  <Loader size={12} className="animate-spin text-violet-600" />
                 </div>
-                <div className="rounded-xl border border-slate-800 bg-slate-950 px-4 py-3">
+                <div className="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] px-4 py-3">
                   <div className="flex flex-col gap-1.5">
                     {[
-                      { icon: Database, color: "text-emerald-400", label: "Querying graph..." },
-                      { icon: Globe, color: "text-sky-400", label: "Searching web..." },
-                      { icon: Brain, color: "text-violet-400", label: "Synthesising..." },
+                      { icon: Database, color: "text-emerald-600", label: "Querying graph..." },
+                      { icon: Globe, color: "text-sky-600", label: "Searching web..." },
+                      { icon: Brain, color: "text-violet-600", label: "Synthesising..." },
                     ].map(({ icon: Ic, color, label }, idx) => (
                       <div key={idx} className={`mono flex items-center gap-2 text-[10px] ${color}`}>
                         <Ic size={10} className="animate-pulse" />
@@ -362,8 +362,8 @@ export default function ReasoningPage() {
             <div ref={bottomRef} />
           </div>
 
-          <div className="shrink-0 border-t border-slate-800 p-4">
-            <div className="flex gap-2 rounded-xl border border-slate-800 bg-slate-900 p-1">
+          <div className="shrink-0 border-t border-[var(--border)] p-4">
+            <div className="flex gap-2 rounded-xl border border-[var(--border)] bg-[var(--bg-surface)] p-1">
               <input
                 ref={inputRef}
                 value={input}
@@ -376,18 +376,18 @@ export default function ReasoningPage() {
                 }}
                 placeholder="Ask about booths, candidates, issues, or UP politics…"
                 disabled={loading}
-                className="flex-1 bg-transparent px-3 py-2 text-sm text-slate-100 outline-none disabled:opacity-50"
+                className="flex-1 bg-transparent px-3 py-2 text-sm text-[var(--text-1)] outline-none disabled:opacity-50"
               />
               <button
                 onClick={() => submit()}
                 disabled={loading || !input.trim()}
-                className="flex items-center gap-1.5 rounded-lg border border-violet-500/30 bg-violet-500/15 px-4 py-2 text-xs font-medium text-violet-300 transition-opacity disabled:opacity-40"
+                className="flex items-center gap-1.5 rounded-lg border border-violet-500/30 bg-violet-500/15 px-4 py-2 text-xs font-medium text-violet-700 transition-opacity disabled:opacity-40"
               >
                 {loading ? <Loader size={12} className="animate-spin" /> : <Send size={12} />}
                 {loading ? "…" : "Ask"}
               </button>
             </div>
-            <p className="mono mt-2 text-center text-[9px] text-slate-500">Chats auto-saved · Sessions persist across logins</p>
+            <p className="mono mt-2 text-center text-[9px] text-[var(--text-3)]">Chats auto-saved · Sessions persist across logins</p>
           </div>
         </main>
       </div>

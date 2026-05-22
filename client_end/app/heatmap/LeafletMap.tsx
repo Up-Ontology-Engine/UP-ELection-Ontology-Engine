@@ -40,12 +40,12 @@ function getHeatColor(b: PlottedBooth, layer: HeatLayer): { fill: string; glow: 
   if (layer === "kg_coverage") {
     return b.in_neo4j
       ? { fill: "#10b981", glow: "#10b981" }
-      : { fill: "#1e3a5f", glow: "#1e3a5f" };
+      : { fill: "#94a3b8", glow: "#94a3b8" };
   }
 
   if (layer === "bjp_lean") {
     const s = b.bjp_pulse_score;
-    if (s == null) return { fill: "#1e3a5f", glow: "#1e3a5f" };
+    if (s == null) return { fill: "#94a3b8", glow: "#94a3b8" };
     if (s > 0.3)  return { fill: "#f97316", glow: "#f97316" };
     if (s > 0.1)  return { fill: "#fb923c", glow: "#fb923c" };
     if (s > -0.1) return { fill: "#64748b", glow: "#64748b" };
@@ -58,10 +58,10 @@ function getHeatColor(b: PlottedBooth, layer: HeatLayer): { fill: string; glow: 
     if (l === "HIGH")   return { fill: "#10b981", glow: "#10b981" };
     if (l === "MEDIUM") return { fill: "#f59e0b", glow: "#f59e0b" };
     if (l === "LOW")    return { fill: "#ef4444", glow: "#ef4444" };
-    return { fill: "#1e3a5f", glow: "#1e3a5f" };
+    return { fill: "#94a3b8", glow: "#94a3b8" };
   }
 
-  return { fill: "#1e3a5f", glow: "#1e3a5f" };
+  return { fill: "#94a3b8", glow: "#94a3b8" };
 }
 
 function getCoreRadius(b: PlottedBooth): number {
@@ -93,7 +93,7 @@ export default function LeafletMap({ booths, layer, onSelect, selected }: Props)
       style={{ height: "100%", width: "100%", background: "var(--bg-base)" }}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+        url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
       />
       <FitBounds booths={booths} />
 

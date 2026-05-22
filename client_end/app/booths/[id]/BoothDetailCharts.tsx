@@ -52,7 +52,7 @@ export default function BoothDetailCharts({ summary }: Props) {
       <div className="card rounded-xl p-5">
         <h3 className="text-sm font-semibold mb-4" style={{ color: "var(--text-1)" }}>Historical Vote Share (%)</h3>
         {histRows.length === 0 ? (
-          <p className="text-sm" style={{ color: "#475569" }}>No historical data.</p>
+          <p className="text-sm" style={{ color: "var(--text-3)" }}>No historical data.</p>
         ) : (
           <ResponsiveContainer width="100%" height={200}>
             <BarChart data={histRows} barCategoryGap="20%">
@@ -74,7 +74,7 @@ export default function BoothDetailCharts({ summary }: Props) {
       <div className="card rounded-xl p-5">
         <h3 className="text-sm font-semibold mb-4" style={{ color: "var(--text-1)" }}>Digital Pulse by Source</h3>
         {pulseData.length === 0 ? (
-          <p className="text-sm" style={{ color: "#475569" }}>No pulse events.</p>
+          <p className="text-sm" style={{ color: "var(--text-3)" }}>No pulse events.</p>
         ) : (
           <ResponsiveContainer width="100%" height={200}>
             <BarChart data={pulseData} layout="vertical" barCategoryGap="20%">

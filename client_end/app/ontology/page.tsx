@@ -96,7 +96,7 @@ const PHASE_ITEMS = [
 // ── Helper ────────────────────────────────────────────────────────────────────
 
 function fmtNum(n: number | null | undefined) {
-  if (n == null || n < 0) return <span style={{ color: "#475569" }}>—</span>;
+  if (n == null || n < 0) return <span style={{ color: "var(--text-3)" }}>—</span>;
   return <span style={{ color: "#10b981" }}>{n.toLocaleString("en-IN")}</span>;
 }
 
@@ -145,14 +145,14 @@ export default async function OntologyPage() {
   const segments = twin?.demographic_segments ?? [];
 
   return (
-    <div className="min-h-screen p-5" style={{ background: "#0a0e1a" }}>
+    <div className="min-h-screen p-5" style={{ background: "var(--bg-base)" }}>
 
       {/* ── Header ── */}
       <div className="mb-5">
-        <div className="flex items-center gap-2 text-xs mono mb-2" style={{ color: "#475569" }}>
+        <div className="flex items-center gap-2 text-xs mono mb-2" style={{ color: "var(--text-3)" }}>
           <span>Gorakhpur Urban</span>
           <ChevronRight size={10} />
-          <span style={{ color: "#94a3b8" }}>Ontology Layer</span>
+          <span style={{ color: "var(--text-2)" }}>Ontology Layer</span>
         </div>
         <div className="flex items-start justify-between flex-wrap gap-3">
           <div className="flex items-center gap-3">
@@ -162,7 +162,7 @@ export default async function OntologyPage() {
                 <BookOpen size={18} style={{ color: "#3b82f6" }} />
                 Ontology Layer
               </h1>
-              <p className="text-xs mt-0.5" style={{ color: "#475569" }}>
+              <p className="text-xs mt-0.5" style={{ color: "var(--text-3)" }}>
                 v1.0.0-ontology-phase · Entity classes · Relationships · Live graph stats
               </p>
             </div>
@@ -302,12 +302,12 @@ export default async function OntologyPage() {
                 LIVE COUNTS
               </span>
             </div>
-            <div className="divide-y" style={{ borderColor: "#1e2d4515" }}>
+            <div className="divide-y" style={{ borderColor: "var(--border)" }}>
               {ENTITIES.map((e) => {
                 const count = liveNodes[e.neo4j];
                 return (
                   <div key={e.name}
-                    className="px-4 py-2.5 flex items-center gap-3 hover:bg-white/[0.015] transition-colors"
+                    className="px-4 py-2.5 flex items-center gap-3 hover:bg-[var(--bg-hover)] transition-colors"
                     style={{ background: "var(--bg-card-2)" }}>
                     <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: e.color }} />
                     <div className="flex-1 min-w-0">
@@ -318,7 +318,7 @@ export default async function OntologyPage() {
                           {e.id}
                         </span>
                       </div>
-                      <p className="text-xs mt-0.5 font-mono" style={{ color: "#334155", fontSize: 10 }}>
+                      <p className="text-xs mt-0.5 font-mono" style={{ color: "var(--text-3)", fontSize: 10 }}>
                         e.g. {e.example}
                       </p>
                     </div>
@@ -328,9 +328,9 @@ export default async function OntologyPage() {
                           {count.toLocaleString("en-IN")}
                         </span>
                       ) : (
-                        <span className="mono text-xs" style={{ color: "#1e3a5f" }}>—</span>
+                        <span className="mono text-xs" style={{ color: "var(--text-4)" }}>—</span>
                       )}
-                      <p className="text-xs" style={{ color: "#1e3a5f", fontSize: 9 }}>nodes</p>
+                      <p className="text-xs" style={{ color: "var(--text-4)", fontSize: 9 }}>nodes</p>
                     </div>
                   </div>
                 );
@@ -345,7 +345,7 @@ export default async function OntologyPage() {
               <h2 className="text-sm font-semibold text-[var(--text-1)]">
                 Relationship Taxonomy <span className="text-xs font-normal" style={{ color: "var(--text-4)" }}>({RELATIONSHIPS.length})</span>
               </h2>
-              <span className="mono text-xs" style={{ color: "#475569", fontSize: 10 }}>
+              <span className="mono text-xs" style={{ color: "var(--text-3)", fontSize: 10 }}>
                 {status?.neo4j.total_edges.toLocaleString("en-IN") ?? "—"} total edges
               </span>
             </div>
@@ -368,7 +368,7 @@ export default async function OntologyPage() {
                         <td className="px-4 py-2 font-mono font-bold" style={{ color: "#3b82f6", fontSize: 10 }}>{r.from}</td>
                         <td className="px-4 py-2 font-mono text-[var(--text-1)]" style={{ fontSize: 10 }}>[:{r.type}]</td>
                         <td className="px-4 py-2 font-mono font-bold" style={{ color: "#10b981", fontSize: 10 }}>{r.to}</td>
-                        <td className="px-4 py-2 mono" style={{ color: cnt != null ? "#64748b" : "#1e3a5f", fontSize: 10 }}>
+                        <td className="px-4 py-2 mono" style={{ color: cnt != null ? "#64748b" : "var(--text-4)", fontSize: 10 }}>
                           {cnt != null ? cnt.toLocaleString("en-IN") : "—"}
                         </td>
                       </tr>
@@ -432,7 +432,7 @@ export default async function OntologyPage() {
                 const active = liveConstrSet.has(key);
                 return (
                   <div key={key} className="flex items-start gap-2 rounded-lg p-2"
-                    style={{ background: "#0a0e1a", border: `1px solid ${active ? "#10b98130" : "#1e2d45"}` }}>
+                    style={{ background: "var(--bg-base)", border: `1px solid ${active ? "#10b98130" : "var(--border)"}` }}>
                     {active
                       ? <CheckCircle size={12} style={{ color: "#10b981", marginTop: 1, flexShrink: 0 }} />
                       : <AlertCircle size={12} style={{ color: "#f59e0b", marginTop: 1, flexShrink: 0 }} />}
@@ -487,13 +487,13 @@ export default async function OntologyPage() {
             <div className="p-3 space-y-1">
               {Object.entries(pgTables).map(([tbl, cnt]) => (
                 <div key={tbl} className="flex items-center justify-between py-1 border-b"
-                  style={{ borderColor: "#1e2d4520" }}>
-                  <span className="mono text-xs" style={{ color: "#475569", fontSize: 10 }}>{tbl}</span>
+                  style={{ borderColor: "var(--border)" }}>
+                  <span className="mono text-xs" style={{ color: "var(--text-3)", fontSize: 10 }}>{tbl}</span>
                   {fmtNum(cnt)}
                 </div>
               ))}
               {Object.keys(pgTables).length === 0 && (
-                <p className="text-xs py-2" style={{ color: "#334155" }}>
+                <p className="text-xs py-2" style={{ color: "var(--text-3)" }}>
                   {pgOnline ? "No tables found" : "PostgreSQL offline"}
                 </p>
               )}

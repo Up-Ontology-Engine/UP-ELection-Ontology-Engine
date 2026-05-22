@@ -54,12 +54,12 @@ export default function DashboardCharts({ leanData, issueData, booths }: Props) 
       <div className="card p-4 col-span-2">
         <div className="flex items-center justify-between mb-3">
           <div>
-            <p className="text-xs font-semibold text-white">Issue Distribution Across Booths</p>
-            <p className="text-xs" style={{ color: "#4d6480" }}>Booth count per primary issue</p>
+            <p className="text-xs font-semibold" style={{ color: "var(--text-1)" }}>Issue Distribution Across Booths</p>
+            <p className="text-xs" style={{ color: "var(--text-3)" }}>Booth count per primary issue</p>
           </div>
         </div>
         {issueData.length === 0 ? (
-          <div className="flex items-center justify-center h-36 text-xs" style={{ color: "#4d6480" }}>No issue data available</div>
+          <div className="flex items-center justify-center h-36 text-xs" style={{ color: "var(--text-3)" }}>No issue data available</div>
         ) : (
           <ResponsiveContainer width="100%" height={160}>
             <BarChart data={issueData} barCategoryGap="25%">
@@ -77,8 +77,8 @@ export default function DashboardCharts({ leanData, issueData, booths }: Props) 
 
       {/* Voter bucket distribution */}
       <div className="card p-4">
-        <p className="text-xs font-semibold text-white mb-0.5">Booth Size Distribution</p>
-        <p className="text-xs mb-3" style={{ color: "#4d6480" }}>By voter count range</p>
+        <p className="text-xs font-semibold mb-0.5" style={{ color: "var(--text-1)" }}>Booth Size Distribution</p>
+        <p className="text-xs mb-3" style={{ color: "var(--text-3)" }}>By voter count range</p>
         <ResponsiveContainer width="100%" height={160}>
           <BarChart data={voterBuckets} barCategoryGap="20%">
             <CartesianGrid strokeDasharray="2 4" stroke={C.border} vertical={false} />
@@ -92,10 +92,10 @@ export default function DashboardCharts({ leanData, issueData, booths }: Props) 
 
       {/* BJP vs Opp pulse comparison */}
       <div className="card p-4 col-span-2">
-        <p className="text-xs font-semibold text-white mb-0.5">BJP vs Opposition Pulse — Booth Comparison</p>
-        <p className="text-xs mb-3" style={{ color: "#4d6480" }}>Pulse scores across {pulseData.length} booths with data</p>
+        <p className="text-xs font-semibold mb-0.5" style={{ color: "var(--text-1)" }}>BJP vs Opposition Pulse — Booth Comparison</p>
+        <p className="text-xs mb-3" style={{ color: "var(--text-3)" }}>Pulse scores across {pulseData.length} booths with data</p>
         {pulseData.length === 0 ? (
-          <div className="flex items-center justify-center h-36 text-xs" style={{ color: "#4d6480" }}>No pulse data</div>
+          <div className="flex items-center justify-center h-36 text-xs" style={{ color: "var(--text-3)" }}>No pulse data</div>
         ) : (
           <ResponsiveContainer width="100%" height={160}>
             <LineChart data={pulseData}>
@@ -114,8 +114,8 @@ export default function DashboardCharts({ leanData, issueData, booths }: Props) 
 
       {/* Lean pie compact */}
       <div className="card p-4">
-        <p className="text-xs font-semibold text-white mb-0.5">Lean Split</p>
-        <p className="text-xs mb-2" style={{ color: "#4d6480" }}>All booths</p>
+        <p className="text-xs font-semibold mb-0.5" style={{ color: "var(--text-1)" }}>Lean Split</p>
+        <p className="text-xs mb-2" style={{ color: "var(--text-3)" }}>All booths</p>
         <ResponsiveContainer width="100%" height={160}>
           <PieChart>
             <Pie data={leanData} dataKey="value" cx="50%" cy="50%" outerRadius={60} innerRadius={30}

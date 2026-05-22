@@ -72,13 +72,13 @@ export default function GraphCanvas({ nodes, edges, nodeColors, selectedId, them
 
     // Theme-aware colors
     const isDark = theme === "dark";
-    const bgColor      = isDark ? "#060b14" : "#f4f7fb";
-    const edgeColor    = isDark ? "#1e3050" : "#c8d8e8";
-    const edgeLabelBg  = isDark ? "#060b14" : "#f4f7fb";
-    const edgeLabelFg  = isDark ? "#3d5570" : "#7a9ab8";
-    const nodeLabelFg  = isDark ? "#f0f4fa" : "#0f1f35";
-    const typeTagFg    = isDark ? "#5a7899" : "#7a9ab8";
-    const gridLine     = isDark ? "rgba(26,43,68,0.4)" : "rgba(100,140,180,0.12)";
+    const bgColor      = isDark ? "#060b14" : "#faf8f5";
+    const edgeColor    = isDark ? "#1e3050" : "#dccfbb";
+    const edgeLabelBg  = isDark ? "#060b14" : "#faf8f5";
+    const edgeLabelFg  = isDark ? "#3d5570" : "#aa9f8d";
+    const nodeLabelFg  = isDark ? "#f0f4fa" : "#1f1a14";
+    const typeTagFg    = isDark ? "#5a7899" : "#7c7264";
+    const gridLine     = isDark ? "rgba(26,43,68,0.4)" : "rgba(180,140,90,0.10)";
 
     // Initialize sim nodes with random positions near center
     const simNodes: SimNode[] = nodes.map((n) => ({

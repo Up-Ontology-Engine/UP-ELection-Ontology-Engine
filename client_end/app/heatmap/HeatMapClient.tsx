@@ -13,9 +13,9 @@ const Map = dynamic(() => import("./LeafletMap"), {
   ssr: false,
   loading: () => (
     <div className="w-full h-full flex flex-col items-center justify-center"
-      style={{ background: "#060b14" }}>
+      style={{ background: "var(--bg-base)" }}>
       <div className="w-8 h-8 border-2 border-orange-500/30 border-t-orange-500 rounded-full animate-spin mb-3" />
-      <p className="text-xs mono" style={{ color: "#4d6480" }}>
+      <p className="text-xs mono" style={{ color: "var(--text-3)" }}>
         Initialising constituency heatmap…
       </p>
     </div>

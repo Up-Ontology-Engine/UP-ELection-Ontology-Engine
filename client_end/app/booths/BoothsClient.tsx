@@ -80,7 +80,7 @@ export default function BoothsClient({ booths }: Props) {
   }
 
   const SortIcon = ({ k }: { k: SortKey }) =>
-    sortKey !== k ? <ArrowUpDown size={9} style={{ color: "#2e4260" }} />
+    sortKey !== k ? <ArrowUpDown size={9} style={{ color: "var(--text-4)" }} />
       : sortDir === "asc" ? <ArrowUp size={9} style={{ color: "#f97316" }} />
         : <ArrowDown size={9} style={{ color: "#f97316" }} />;
 
@@ -91,7 +91,7 @@ export default function BoothsClient({ booths }: Props) {
   const totalVoters = booths.reduce((s, b) => s + (b.total_voters ?? 0), 0);
 
   return (
-    <div className="p-5 min-h-screen" style={{ background: "#060b14" }}>
+    <div className="p-5 min-h-screen" style={{ background: "var(--bg-base)" }}>
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
         <div>
@@ -103,7 +103,7 @@ export default function BoothsClient({ booths }: Props) {
               {filtered.length}/{total}
             </span>
           </div>
-          <p className="text-xs mono" style={{ color: "#4d6480" }}>
+          <p className="text-xs mono" style={{ color: "var(--text-3)" }}>
             AC-322 · {fmt(totalVoters)} registered voters · {bjpCount} BJP-leaning · {oppCount} Opp-leaning
           </p>
         </div>
@@ -112,8 +112,8 @@ export default function BoothsClient({ booths }: Props) {
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs transition-all"
             style={{
               background: showFilters ? "rgba(249,115,22,0.1)" : "transparent",
-              border: `1px solid ${showFilters ? "rgba(249,115,22,0.3)" : "#1a2b44"}`,
-              color: showFilters ? "#f97316" : "#8ba0bc"
+              border: `1px solid ${showFilters ? "rgba(249,115,22,0.3)" : "var(--border)"}`,
+              color: showFilters ? "#f97316" : "var(--text-2)"
             }}>
             <Filter size={11} />
             Filters {(leanFilter.length + confFilter.length) > 0 ? `(${leanFilter.length + confFilter.length})` : ""}
@@ -128,7 +128,7 @@ export default function BoothsClient({ booths }: Props) {
       {/* Summary stat cards */}
       <div className="grid grid-cols-4 md:grid-cols-8 gap-3 mb-4">
         {[
-          { label: "Total Booths",  value: total,                      color: "#f0f4fa" },
+          { label: "Total Booths",  value: total,                      color: "var(--text-1)" },
           { label: "With Pulse",    value: booths.filter((b) => b.bjp_pulse_score != null).length, color: "#10b981" },
           { label: "BJP Lean",      value: bjpCount,                   color: "#f97316" },
           { label: "Opp Lean",      value: oppCount,                   color: "#3b82f6" },
@@ -138,7 +138,7 @@ export default function BoothsClient({ booths }: Props) {
           { label: "Total Voters",  value: fmt(totalVoters),           color: "var(--text-3)" },
         ].map(({ label, value, color }) => (
           <div key={label} className="card px-3 py-2.5">
-            <p className="label" style={{ color: "#2e4260" }}>{label}</p>
+            <p className="label" style={{ color: "var(--text-4)" }}>{label}</p>
             <p className="mono font-bold mt-0.5" style={{ color, fontSize: 15 }}>{value}</p>
           </div>
         ))}
@@ -147,7 +147,7 @@ export default function BoothsClient({ booths }: Props) {
       {/* Search + filters row */}
       <div className="flex gap-3 mb-3">
         <div className="flex-1 relative">
-          <Search size={12} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: "#4d6480" }} />
+          <Search size={12} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: "var(--text-3)" }} />
           <input value={search} onChange={(e) => { setSearch(e.target.value); setPage(1); }}
             placeholder="Search booth name, number, locality, issue…"
             className="w-full pl-8 pr-4 py-2 rounded-md text-xs text-[var(--text-1)] outline-none"
@@ -155,7 +155,7 @@ export default function BoothsClient({ booths }: Props) {
           {search && (
             <button onClick={() => { setSearch(""); setPage(1); }}
               className="absolute right-3 top-1/2 -translate-y-1/2">
-              <X size={10} style={{ color: "#4d6480" }} />
+              <X size={10} style={{ color: "var(--text-3)" }} />
             </button>
           )}
         </div>
@@ -166,14 +166,14 @@ export default function BoothsClient({ booths }: Props) {
         <div className="card p-4 mb-3 animate-fade-up">
           <div className="grid grid-cols-3 gap-4">
             <div>
-              <p className="label mb-2" style={{ color: "#4d6480" }}>Political Lean</p>
+              <p className="label mb-2" style={{ color: "var(--text-3)" }}>Political Lean</p>
               <div className="flex flex-wrap gap-1.5">
                 {LEAN_OPTIONS.map((opt) => (
                   <button key={opt} onClick={() => toggleLean(opt)}
                     className="px-2 py-1 rounded text-xs mono transition-all"
                     style={{
-                      background: leanFilter.includes(opt) ? "rgba(249,115,22,0.15)" : "#0b1220",
-                      border: leanFilter.includes(opt) ? "1px solid rgba(249,115,22,0.4)" : "1px solid #1a2b44",
+                      background: leanFilter.includes(opt) ? "rgba(249,115,22,0.15)" : "var(--bg-surface)",
+                      border: leanFilter.includes(opt) ? "1px solid rgba(249,115,22,0.4)" : "1px solid var(--border)",
                       color: leanFilter.includes(opt) ? "#f97316" : "var(--text-3)",
                       fontSize: 10
                     }}>
@@ -183,14 +183,14 @@ export default function BoothsClient({ booths }: Props) {
               </div>
             </div>
             <div>
-              <p className="label mb-2" style={{ color: "#4d6480" }}>Data Confidence</p>
+              <p className="label mb-2" style={{ color: "var(--text-3)" }}>Data Confidence</p>
               <div className="flex flex-wrap gap-1.5">
                 {CONF_OPTIONS.map((opt) => (
                   <button key={opt} onClick={() => toggleConf(opt)}
                     className="px-2 py-1 rounded text-xs mono transition-all"
                     style={{
-                      background: confFilter.includes(opt) ? "rgba(16,185,129,0.1)" : "#0b1220",
-                      border: confFilter.includes(opt) ? "1px solid rgba(16,185,129,0.3)" : "1px solid #1a2b44",
+                      background: confFilter.includes(opt) ? "rgba(16,185,129,0.1)" : "var(--bg-surface)",
+                      border: confFilter.includes(opt) ? "1px solid rgba(16,185,129,0.3)" : "1px solid var(--border)",
                       color: confFilter.includes(opt) ? "#10b981" : "var(--text-3)",
                       fontSize: 10
                     }}>
@@ -200,15 +200,15 @@ export default function BoothsClient({ booths }: Props) {
               </div>
             </div>
             <div>
-              <p className="label mb-2" style={{ color: "#4d6480" }}>Voter Count Range</p>
+              <p className="label mb-2" style={{ color: "var(--text-3)" }}>Voter Count Range</p>
               <div className="flex gap-2">
                 <input value={minVoters} onChange={(e) => { setMin(e.target.value); setPage(1); }}
                   placeholder="Min" className="w-20 px-2 py-1 rounded text-xs mono outline-none"
-                  style={{ background: "#0b1220", border: "1px solid #1a2b44", color: "#f0f4fa" }} />
-                <span className="text-xs" style={{ color: "#4d6480" }}>—</span>
+                  style={{ background: "var(--bg-surface)", border: "1px solid var(--border)", color: "var(--text-1)" }} />
+                <span className="text-xs" style={{ color: "var(--text-3)" }}>—</span>
                 <input value={maxVoters} onChange={(e) => { setMax(e.target.value); setPage(1); }}
                   placeholder="Max" className="w-20 px-2 py-1 rounded text-xs mono outline-none"
-                  style={{ background: "#0b1220", border: "1px solid #1a2b44", color: "#f0f4fa" }} />
+                  style={{ background: "var(--bg-surface)", border: "1px solid var(--border)", color: "var(--text-1)" }} />
               </div>
               {(leanFilter.length > 0 || confFilter.length > 0 || minVoters || maxVoters) && (
                 <button onClick={() => { setLean([]); setConf([]); setMin(""); setMax(""); setPage(1); }}
@@ -254,7 +254,7 @@ export default function BoothsClient({ booths }: Props) {
             <tbody>
               {pageData.length === 0 ? (
                 <tr>
-                  <td colSpan={12} className="text-center py-12 text-xs" style={{ color: "#4d6480" }}>
+                  <td colSpan={12} className="text-center py-12 text-xs" style={{ color: "var(--text-3)" }}>
                     No booths match your filters.
                   </td>
                 </tr>
@@ -263,14 +263,14 @@ export default function BoothsClient({ booths }: Props) {
                   ? (b.female_voters / b.total_voters) * 100 : null;
                 return (
                   <tr key={b.booth_id}>
-                    <td className="mono" style={{ color: "#4d6480" }}>{b.booth_number}</td>
+                    <td className="mono" style={{ color: "var(--text-3)" }}>{b.booth_number}</td>
                     <td>
                       <Link href={`/booths/${b.booth_id}`}
                         className="text-xs font-medium text-[var(--text-1)] hover:text-orange-400 transition-colors line-clamp-1 max-w-40 block">
                         {b.name}
                       </Link>
                     </td>
-                    <td className="text-xs max-w-28 truncate" style={{ color: "#4d6480" }}>
+                    <td className="text-xs max-w-28 truncate" style={{ color: "var(--text-3)" }}>
                       {b.locality_hint ?? "—"}
                     </td>
                     <td className="mono text-xs" style={{ color: "var(--text-3)" }}>{fmt(b.total_voters)}</td>
@@ -283,7 +283,7 @@ export default function BoothsClient({ booths }: Props) {
                           </div>
                           <span className="mono text-xs" style={{ color: "var(--text-3)", fontSize: 9 }}>{femalePct.toFixed(0)}%F</span>
                         </div>
-                      ) : <span style={{ color: "#2e4260" }}>—</span>}
+                      ) : <span style={{ color: "var(--text-4)" }}>—</span>}
                     </td>
                     <td>
                       {b.bjp_pulse_score != null ? (
@@ -296,7 +296,7 @@ export default function BoothsClient({ booths }: Props) {
                           </div>
                           <span className="mono text-xs" style={{ color: "#f97316" }}>{b.bjp_pulse_score.toFixed(2)}</span>
                         </div>
-                      ) : <span className="text-xs" style={{ color: "#2e4260" }}>—</span>}
+                      ) : <span className="text-xs" style={{ color: "var(--text-4)" }}>—</span>}
                     </td>
                     <td>
                       {b.opp_pulse_score != null ? (
@@ -309,7 +309,7 @@ export default function BoothsClient({ booths }: Props) {
                           </div>
                           <span className="mono text-xs" style={{ color: "#3b82f6" }}>{b.opp_pulse_score.toFixed(2)}</span>
                         </div>
-                      ) : <span className="text-xs" style={{ color: "#2e4260" }}>—</span>}
+                      ) : <span className="text-xs" style={{ color: "var(--text-4)" }}>—</span>}
                     </td>
                     <td><LeanBadge label={b.digital_lean_label} compact /></td>
                     <td>
@@ -318,7 +318,7 @@ export default function BoothsClient({ booths }: Props) {
                           style={{ background: "var(--bg-surface)", color: "var(--text-3)", fontSize: 9 }}>
                           {b.top_issue.replace(/_/g, " ")}
                         </span>
-                      ) : <span style={{ color: "#2e4260" }}>—</span>}
+                      ) : <span style={{ color: "var(--text-4)" }}>—</span>}
                     </td>
                     <td className="mono text-xs" style={{ color: "var(--text-3)" }}>
                       {b.event_count ?? 0}
@@ -327,7 +327,7 @@ export default function BoothsClient({ booths }: Props) {
                     <td>
                       <Link href={`/booths/${b.booth_id}`}
                         className="text-xs px-2 py-1 rounded mono transition-all hover:opacity-80"
-                        style={{ background: "#0b1220", color: "#4d6480", border: "1px solid #1a2b44", fontSize: 9 }}>
+                        style={{ background: "var(--bg-surface)", color: "var(--text-3)", border: "1px solid var(--border)", fontSize: 9 }}>
                         DETAIL →
                       </Link>
                     </td>
@@ -341,13 +341,13 @@ export default function BoothsClient({ booths }: Props) {
         {/* Pagination */}
         {totalPages > 1 && (
           <div className="flex items-center justify-between px-4 py-3"
-            style={{ borderTop: "1px solid #1a2b44", background: "var(--bg-surface)" }}>
+            style={{ borderTop: "1px solid var(--border)", background: "var(--bg-surface)" }}>
             <p className="mono text-xs" style={{ color: "var(--text-3)" }}>
               {((page - 1) * PAGE_SIZE) + 1}–{Math.min(page * PAGE_SIZE, filtered.length)} of {filtered.length} booths
             </p>
             <div className="flex items-center gap-1">
               <button onClick={() => setPage((p) => Math.max(1, p - 1))} disabled={page === 1}
-                className="p-1.5 rounded transition-colors hover:bg-white/5 disabled:opacity-30">
+                className="p-1.5 rounded transition-colors hover:bg-[var(--bg-hover)] disabled:opacity-30">
                 <ChevronLeft size={12} style={{ color: "var(--text-3)" }} />
               </button>
               {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
@@ -357,7 +357,7 @@ export default function BoothsClient({ booths }: Props) {
                     className="w-7 h-7 rounded mono text-xs transition-all"
                     style={{
                       background: page === p ? "rgba(249,115,22,0.15)" : "transparent",
-                      color: page === p ? "#f97316" : "#4d6480",
+                      color: page === p ? "#f97316" : "var(--text-3)",
                       border: page === p ? "1px solid rgba(249,115,22,0.3)" : "1px solid transparent",
                     }}>
                     {p}
@@ -365,7 +365,7 @@ export default function BoothsClient({ booths }: Props) {
                 );
               })}
               <button onClick={() => setPage((p) => Math.min(totalPages, p + 1))} disabled={page === totalPages}
-                className="p-1.5 rounded transition-colors hover:bg-white/5 disabled:opacity-30">
+                className="p-1.5 rounded transition-colors hover:bg-[var(--bg-hover)] disabled:opacity-30">
                 <ChevronRight size={12} style={{ color: "var(--text-3)" }} />
               </button>
             </div>

@@ -12,24 +12,24 @@ const SECTIONS = [
   {
     label: "Operations",
     items: [
-      { href: "/",           icon: LayoutDashboard, label: "Command Center",     badge: null,  dot: "green"  },
-      { href: "/booths",     icon: Activity,        label: "Booth Intelligence", badge: "30",  dot: "green"  },
-      { href: "/conversion", icon: Target,          label: "Voter Conversion",   badge: "NEW", dot: "orange" },
+      { href: "/",           icon: LayoutDashboard, label: "Command Center",     dot: "green"  },
+      { href: "/booths",     icon: Activity,        label: "Booth Intelligence", dot: "green"  },
+      { href: "/conversion", icon: Target,          label: "Voter Conversion",   dot: "orange" },
     ],
   },
   {
     label: "Intelligence",
     items: [
-      { href: "/heatmap",   icon: Flame,         label: "Constituency Heatmap", badge: null, dot: "amber" },
-      { href: "/graph",     icon: Network,       label: "Knowledge Graph",      badge: null, dot: "blue"  },
-      { href: "/reasoning", icon: MessageSquare, label: "AI Reasoning",         badge: null, dot: "pink"  },
+      { href: "/heatmap",   icon: Flame,         label: "Constituency Heatmap", dot: "amber" },
+      { href: "/graph",     icon: Network,       label: "Knowledge Graph",      dot: "blue"  },
+      { href: "/reasoning", icon: MessageSquare, label: "AI Reasoning",         dot: "pink"  },
     ],
   },
   {
     label: "Analytics",
     items: [
-      { href: "/demographics", icon: Users,    label: "Demographics",   badge: null, dot: "cyan"  },
-      { href: "/ontology",     icon: BookOpen, label: "Ontology Layer", badge: "v1", dot: "slate" },
+      { href: "/demographics", icon: Users,    label: "Demographics",   dot: "cyan"  },
+      { href: "/ontology",     icon: BookOpen, label: "Ontology Layer", dot: "slate" },
     ],
   },
 ];
@@ -110,7 +110,7 @@ export default function Sidebar() {
               <div className="flex-1 h-px" style={{ background: "var(--border)" }} />
             </div>
 
-            {section.items.map(({ href, icon: Icon, label, badge, dot }) => {
+            {section.items.map(({ href, icon: Icon, label, dot }) => {
               const active = isActive(href);
               return (
                 <Link key={href} href={href} className={`nav-item ${active ? "active" : ""}`}>
@@ -128,19 +128,6 @@ export default function Sidebar() {
                     }} />
                   <Icon size={13} style={{ flexShrink: 0, opacity: active ? 1 : 0.7 }} />
                   <span className="flex-1 leading-none" style={{ fontSize: 12 }}>{label}</span>
-                  {badge && (
-                    <span className="mono px-1.5 py-0.5 rounded"
-                      style={{
-                        background: active ? "rgba(249,115,22,0.2)" : "var(--bg-surface)",
-                        color: active ? "var(--saffron)" : "var(--text-4)",
-                        fontSize: 9,
-                        fontWeight: 600,
-                        letterSpacing: "0.04em",
-                        border: `1px solid ${active ? "rgba(249,115,22,0.3)" : "var(--border)"}`,
-                      }}>
-                      {badge}
-                    </span>
-                  )}
                 </Link>
               );
             })}

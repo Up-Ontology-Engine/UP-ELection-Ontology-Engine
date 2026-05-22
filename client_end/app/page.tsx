@@ -324,8 +324,8 @@ export default async function DashboardPage() {
             </div>
             <div className="mt-3 flex rounded overflow-hidden h-2">
               {[
-                ["STRONG_BJP","#f97316"],["LEAN_BJP","#fb923c"],["NEUTRAL","#374151"],
-                ["LEAN_OPP","#60a5fa"],["STRONG_OPP","#3b82f6"],["INSUFFICIENT","#1a2b44"],
+                ["STRONG_BJP","#f97316"],["LEAN_BJP","#fb923c"],["NEUTRAL","#9ca3af"],
+                ["LEAN_OPP","#60a5fa"],["STRONG_OPP","#3b82f6"],["INSUFFICIENT","#d8cdbb"],
               ].map(([key, color]) => {
                 const p = booths.length > 0 ? ((leanDist[key as string] ?? 0) / booths.length) * 100 : 0;
                 return p > 0 ? <div key={key} style={{ width: `${p}%`, background: color, minWidth: 2 }} /> : null;

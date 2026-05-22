@@ -13,15 +13,11 @@ export const metadata: Metadata = {
   description: "National-grade political intelligence platform — Gorakhpur Urban AC",
 };
 
-const ANTI_FLASH = `(function(){try{var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){}})()`;
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning
+    <html lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full`}>
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: ANTI_FLASH }} />
-      </head>
+      <head />
       <body className="min-h-full flex grid-bg">
         <ThemeProvider>
           <Sidebar />
