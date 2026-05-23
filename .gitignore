@@ -22,6 +22,7 @@ data/labeled/
 data/raw/
 *.csv
 *.txt
+*.pdf
 !data/seeds/*.csv
 
 # Notebooks
