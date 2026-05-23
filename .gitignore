@@ -20,7 +20,6 @@ build/
 data/yt_cache/
 data/labeled/
 data/raw/
-*.pdf
 *.csv
 *.txt
 !data/seeds/*.csv
