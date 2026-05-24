@@ -1,9 +1,26 @@
 "use client";
 
 import { useEffect } from "react";
-import { MapContainer, TileLayer, CircleMarker, Popup, useMap } from "react-leaflet";
+import { MapContainer, TileLayer, WMSTileLayer, CircleMarker, Popup, useMap } from "react-leaflet";
 import type { GraphCoverageBooth } from "@/lib/api";
 import "leaflet/dist/leaflet.css";
+
+// ── BharatMaps (NIC, Govt. of India) WMS basemap ─────────────────────────────
+// BharatMaps is an OGC WMS map service, not a JS map library — it's consumed
+// *through* a renderer (Leaflet here). It is NOT a public/open API: NIC issues
+// the WMS endpoint, layer name and access token only to departments under a
+// formal agreement (see https://mapservice.gov.in). Configure via env so the
+// real layer activates once NIC credentials are in hand; otherwise we fall back
+// to an open basemap so the heatmap keeps working.
+//   NEXT_PUBLIC_BHARATMAPS_WMS_URL     e.g. https://mapservice.gov.in/.../wms
+//   NEXT_PUBLIC_BHARATMAPS_WMS_LAYERS  e.g. bharatmaps:india_base
+//   NEXT_PUBLIC_BHARATMAPS_WMS_FORMAT  default image/png
+//   NEXT_PUBLIC_BHARATMAPS_TOKEN       NIC-issued access token (optional)
+const BHARATMAPS_WMS_URL    = process.env.NEXT_PUBLIC_BHARATMAPS_WMS_URL;
+const BHARATMAPS_WMS_LAYERS = process.env.NEXT_PUBLIC_BHARATMAPS_WMS_LAYERS ?? "";
+const BHARATMAPS_WMS_FORMAT = process.env.NEXT_PUBLIC_BHARATMAPS_WMS_FORMAT ?? "image/png";
+const BHARATMAPS_TOKEN      = process.env.NEXT_PUBLIC_BHARATMAPS_TOKEN;
+export const BHARATMAPS_ACTIVE = Boolean(BHARATMAPS_WMS_URL && BHARATMAPS_WMS_LAYERS);
 
 export type HeatLayer = "voters" | "kg_coverage" | "bjp_lean" | "confidence";
 
@@ -91,10 +108,22 @@ export default function LeafletMap({ booths, layer, onSelect, selected }: Props)
       center={center}
       zoom={13}
       style={{ height: "100%", width: "100%", background: "var(--bg-base)" }}>
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
-      />
+      {BHARATMAPS_ACTIVE ? (
+        <WMSTileLayer
+          url={BHARATMAPS_WMS_URL!}
+          layers={BHARATMAPS_WMS_LAYERS}
+          format={BHARATMAPS_WMS_FORMAT}
+          transparent={false}
+          version="1.3.0"
+          attribution='BharatMaps &copy; NIC, Govt. of India'
+          {...(BHARATMAPS_TOKEN ? { token: BHARATMAPS_TOKEN } : {})}
+        />
+      ) : (
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+        />
+      )}
       <FitBounds booths={booths} />
 
       {booths.map((b) => {

@@ -164,6 +164,54 @@ const CURATED: Record<string, Curated> = {
       myneta: "https://www.myneta.info/uttarpradesh2017/candidate.php?candidate_id=4488",
     },
   },
+
+  DR_CHETNA_PANDEY_2022: {
+    fullName: "Dr. Chetna Pandey",
+    degree: "Ph.D. (Hindi)",
+    institution: "Deen Dayal Upadhyay University, Gorakhpur (2010)",
+    currentSeat: "Gorakhpur Urban (Uttar Pradesh)",
+    election: "2022 · Gorakhpur Urban · Lost (to Yogi Adityanath)",
+    career: "Poet, tabla virtuoso and social activist.",
+    publicPerception: "Handpicked for Congress's 'Ladki Hoon Lad Sakti Hoon' campaign; contested directly against CM Yogi.",
+    sources: {
+      profile: "https://www.outlookindia.com/national/chetna-pandey-a-poet-a-tabla-player-and-yogi-s-challenger-fighting-on-cong-ticket-in-gorakhpur-news-184561",
+      myneta: "https://www.myneta.info/uttarpradesh2022/candidate.php?candidate_id=3809",
+    },
+  },
+
+  VIJAY_KUMAR_SRIVASTAVA_2022: {
+    fullName: "Vijay Kumar Srivastava",
+    currentSeat: "Gorakhpur Urban (Uttar Pradesh)",
+    election: "2022 · Gorakhpur Urban · Lost (to Yogi Adityanath)",
+    career: "Contractor (declared as 'unregistered contractor' in affidavit).",
+    publicPerception: "AAP candidate (party's 5th UP list) against CM Yogi Adityanath.",
+    sources: {
+      news: "https://www.aninews.in/news/national/politics/up-polls-aap-releases-5th-list-of-candidates-fields-vijay-kumar-srivastava-against-yogi-adityanath-from-gorakhpur-urban20220129210226/",
+      myneta: "http://www.myneta.info/uttarpradesh2022/candidate.php?candidate_id=3810",
+    },
+  },
+
+  JAVED_ASHRAF_ALIAS_JAVED_SIMNANI_2024: {
+    fullName: "Javed Ashraf (alias Javed Simnani)",
+    currentSeat: "Gorakhpur (Lok Sabha)",
+    election: "2024 · Gorakhpur (Lok Sabha) · Lost (to Ravi Kishan)",
+    sources: {
+      myneta: "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8787",
+    },
+  },
+};
+
+// Real, shared constituency facts — fills Section 3 for *every* candidate even
+// when no per-candidate curated entry exists.
+const CONSTITUENCY_INFO: Record<string, { currentSeat: string; demographics: string }> = {
+  GKP_322: {
+    currentSeat: "Gorakhpur Urban (Uttar Pradesh)",
+    demographics: "Urban assembly seat; a BJP stronghold retained since 1989, with roughly 4.64 lakh registered voters.",
+  },
+  GKP_LS64: {
+    currentSeat: "Gorakhpur (Lok Sabha, Uttar Pradesh)",
+    demographics: "Eastern-UP Lok Sabha seat with significant Nishad/OBC influence; long held by the BJP / Gorakhnath Math.",
+  },
 };
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
@@ -183,6 +231,7 @@ export default function CandidateDossier({ node, onClose }: {
   const aff = (p.affidavit as Record<string, unknown>) ?? {};
   const cid = p.candidate_id as string;
   const cur = CURATED[cid] ?? {};
+  const constInfo = CONSTITUENCY_INFO[p.ac_id as string] ?? {};
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
@@ -259,8 +308,8 @@ export default function CandidateDossier({ node, onClose }: {
           </Section>
 
           <Section icon={MapPin} title="3 · Constituency Data" S={S}>
-            <Field label="Current Seat" value={cur.currentSeat ?? `${p.ac_name as string} (Uttar Pradesh)`} S={S} />
-            <Field label="Demographics" value={cur.demographics ?? DASH} S={S} />
+            <Field label="Current Seat" value={cur.currentSeat ?? constInfo.currentSeat ?? `${p.ac_name as string} (Uttar Pradesh)`} S={S} />
+            <Field label="Demographics" value={cur.demographics ?? constInfo.demographics ?? DASH} S={S} />
             <Field label="Past Seats" value={cur.pastSeats ?? DASH} S={S} />
           </Section>
 

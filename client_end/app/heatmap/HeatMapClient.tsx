@@ -1,50 +1,20 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import dynamic from "next/dynamic";
 import type { GraphCoverageResponse, GraphCoverageBooth } from "@/lib/api";
-import type { HeatLayer, PlottedBooth } from "./LeafletMap";
 import {
   Flame, Layers, BarChart3, X, Users, GitBranch,
-  AlertCircle, Info, TrendingUp, Network
+  TrendingUp, Network, Search, MapPin
 } from "lucide-react";
 
-const Map = dynamic(() => import("./LeafletMap"), {
-  ssr: false,
-  loading: () => (
-    <div className="w-full h-full flex flex-col items-center justify-center"
-      style={{ background: "var(--bg-base)" }}>
-      <div className="w-8 h-8 border-2 border-orange-500/30 border-t-orange-500 rounded-full animate-spin mb-3" />
-      <p className="text-xs mono" style={{ color: "var(--text-3)" }}>
-        Initialising constituency heatmap…
-      </p>
-    </div>
-  ),
-});
+export type HeatLayer = "voters" | "kg_coverage" | "bjp_lean" | "confidence";
 
-// ── Synthetic coordinate generator ──────────────────────────────────────────
-// Phyllotaxis (golden angle) spiral centred on Gorakhpur Urban
-// Produces a natural, non-gridded scatter within ~2 km radius
+// BharatMaps (NIC, Govt. of India) — embedded official map portal.
+// Gorakhpur Urban centre (used only for context labels; the portal handles its own view).
 const GKP_LAT = 26.7606;
 const GKP_LON = 83.3732;
-const GOLDEN_ANGLE = 2.39996; // radians (~137.5°)
-const MAX_BOOTHS = 30;
-
-function syntheticCoord(boothNum: number): [number, number] {
-  const theta = (boothNum - 1) * GOLDEN_ANGLE;
-  const r = 0.019 * Math.sqrt(boothNum / MAX_BOOTHS);
-  return [
-    GKP_LAT + r * Math.sin(theta),
-    GKP_LON + r * 1.18 * Math.cos(theta), // slight E-W stretch for realistic shape
-  ];
-}
-
-function addCoords(b: GraphCoverageBooth): PlottedBooth {
-  const [lat, lon] = b.lat != null && b.lon != null
-    ? [b.lat, b.lon]
-    : syntheticCoord(b.booth_number);
-  return { ...b, synthLat: lat, synthLon: lon };
-}
+const BHARATMAPS_URL =
+  process.env.NEXT_PUBLIC_BHARATMAPS_URL ?? "https://bharatmaps.gov.in/bharatmaps/";
 
 // ── Layer config ─────────────────────────────────────────────────────────────
 const LAYERS: {
@@ -116,12 +86,10 @@ interface Props {
 
 export default function HeatMapClient({ coverage }: Props) {
   const [layer, setLayer] = useState<HeatLayer>("voters");
-  const [selected, setSelected] = useState<PlottedBooth | null>(null);
+  const [selected, setSelected] = useState<GraphCoverageBooth | null>(null);
+  const [search, setSearch] = useState("");
 
-  const booths: PlottedBooth[] = useMemo(
-    () => (coverage?.booths ?? []).map(addCoords),
-    [coverage]
-  );
+  const booths: GraphCoverageBooth[] = useMemo(() => coverage?.booths ?? [], [coverage]);
 
   const total      = booths.length;
   const inKg       = booths.filter((b) => b.in_neo4j).length;
@@ -129,7 +97,10 @@ export default function HeatMapClient({ coverage }: Props) {
   const maxVoters  = Math.max(...booths.map((b) => b.total_voters ?? 0));
   const minVoters  = Math.min(...booths.map((b) => b.total_voters ?? Infinity));
 
-  const usingRealCoords = booths.some((b) => b.lat != null);
+  const filteredBooths = booths.filter((b) =>
+    !search ||
+    b.name?.toLowerCase().includes(search.toLowerCase()) ||
+    String(b.booth_number).includes(search));
 
   return (
     <div className="flex" style={{ height: "calc(100vh - 56px)", background: "var(--bg-base)" }}>
@@ -159,6 +130,13 @@ export default function HeatMapClient({ coverage }: Props) {
           <p className="text-xs mono" style={{ color: "var(--text-4)" }}>
             {total} booths · Gorakhpur Urban AC
           </p>
+          <div className="mt-1.5 inline-flex items-center gap-1.5 px-2 py-0.5 rounded"
+            style={{ background: "rgba(16,185,129,0.1)", border: "1px solid rgba(16,185,129,0.3)" }}>
+            <span className="w-1.5 h-1.5 rounded-full" style={{ background: "var(--green)" }} />
+            <span className="text-xs" style={{ color: "var(--green)", fontSize: 9.5 }}>
+              Basemap: BharatMaps · NIC
+            </span>
+          </div>
         </div>
 
         {/* Synthetic coords notice */}
@@ -330,12 +308,31 @@ export default function HeatMapClient({ coverage }: Props) {
               </div>
             </div>
           ) : (
-            <div className="flex flex-col items-center justify-center h-24 text-center">
-              <Flame size={20} className="mb-2" style={{ color: "var(--border)" }} />
-              <p className="text-xs" style={{ color: "var(--text-4)" }}>Click any booth marker</p>
-              <p style={{ color: "var(--text-4)", fontSize: 9 }} className="mt-0.5 mono">
-                to inspect intelligence data
-              </p>
+            <div>
+              <p className="label mb-2" style={{ color: "var(--text-4)" }}>Booths ({total})</p>
+              <div className="relative mb-2">
+                <Search size={11} className="absolute left-2 top-1/2 -translate-y-1/2" style={{ color: "var(--text-4)" }} />
+                <input value={search} onChange={(e) => setSearch(e.target.value)}
+                  placeholder="Search booth…"
+                  className="w-full pl-7 pr-2 py-1.5 rounded-md text-xs outline-none"
+                  style={{ background: "var(--bg-surface)", border: "1px solid var(--border)", color: "var(--text-1)" }} />
+              </div>
+              <div className="space-y-1">
+                {filteredBooths.map((b) => (
+                  <button key={b.booth_id} onClick={() => setSelected(b)}
+                    className="w-full text-left flex items-center gap-2 px-2.5 py-1.5 rounded-md text-xs transition-all"
+                    style={{ background: "var(--bg-surface)", border: "1px solid var(--border)" }}
+                    onMouseEnter={(e) => (e.currentTarget.style.background = "var(--bg-hover)")}
+                    onMouseLeave={(e) => (e.currentTarget.style.background = "var(--bg-surface)")}>
+                    <MapPin size={9} style={{ color: "var(--saffron)", flexShrink: 0 }} />
+                    <span className="flex-1 truncate" style={{ color: "var(--text-2)" }}>{b.name}</span>
+                    <span className="mono" style={{ color: "var(--text-4)", fontSize: 9 }}>{b.total_voters?.toLocaleString("en-IN") ?? "—"}</span>
+                  </button>
+                ))}
+                {filteredBooths.length === 0 && (
+                  <p className="text-xs px-1 py-2" style={{ color: "var(--text-4)" }}>No booths match.</p>
+                )}
+              </div>
             </div>
           )}
         </div>
@@ -343,49 +340,36 @@ export default function HeatMapClient({ coverage }: Props) {
         {/* Footer */}
         <div className="px-3 py-2 mono text-xs flex items-center gap-1.5"
           style={{ borderTop: "1px solid var(--border)", color: "var(--text-4)" }}>
-          <AlertCircle size={9} />
-          <span style={{ fontSize: 9 }}>
-            {usingRealCoords ? "Live coordinates" : "Estimated positions"}
-          </span>
+          <MapPin size={9} />
+          <span style={{ fontSize: 9 }}>BharatMaps · NIC, Govt. of India</span>
         </div>
       </div>
 
-      {/* ── Map ── */}
-      <div className="flex-1 relative">
-        {booths.length === 0 ? (
-          <div className="w-full h-full flex flex-col items-center justify-center gap-3"
-            style={{ background: "var(--bg-base)" }}>
-            <Flame size={40} style={{ color: "var(--border)" }} />
-            <p className="text-sm" style={{ color: "var(--text-3)" }}>No booth data available</p>
-            <p className="text-xs" style={{ color: "var(--text-4)" }}>
-              Ensure the API is running at localhost:8000
+      {/* ── BharatMaps embed ── */}
+      <div className="flex-1 relative" style={{ background: "var(--bg-base)" }}>
+        <iframe
+          src={BHARATMAPS_URL}
+          title="BharatMaps — NIC, Govt. of India"
+          className="w-full h-full"
+          style={{ border: "none" }}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          allow="geolocation"
+        />
+
+        {/* Context overlay — Gorakhpur + active layer */}
+        <div className="absolute top-3 right-3 z-10 flex flex-col gap-2 pointer-events-none">
+          <div className="rounded-md px-3 py-2"
+            style={{ background: "var(--bg-card)", border: "1px solid var(--border)", boxShadow: "var(--shadow-md)" }}>
+            <p className="mono text-xs" style={{ color: "var(--text-2)" }}>
+              <span style={{ color: "var(--saffron)" }}>●</span>{" "}
+              Gorakhpur Urban · {total} booths
+            </p>
+            <p className="mono" style={{ color: "var(--text-4)", fontSize: 9, marginTop: 2 }}>
+              {GKP_LAT.toFixed(4)}, {GKP_LON.toFixed(4)} · Layer: {LAYERS.find((l) => l.id === layer)?.label}
             </p>
           </div>
-        ) : (
-          <Map
-            booths={booths}
-            layer={layer}
-            onSelect={setSelected}
-            selected={selected}
-          />
-        )}
-
-        {/* Map overlay — booth count + layer name */}
-        {booths.length > 0 && (
-          <div className="absolute top-3 right-3 z-10 flex flex-col gap-2">
-            <div className="rounded-md px-3 py-2"
-              style={{
-                background: "rgba(6,11,20,0.88)",
-                border: "1px solid var(--border)",
-                backdropFilter: "blur(8px)",
-              }}>
-              <p className="mono text-xs" style={{ color: "var(--text-3)" }}>
-                <span style={{ color: "var(--saffron)" }}>●</span>{" "}
-                {booths.length} booths · {LAYERS.find((l) => l.id === layer)?.label}
-              </p>
-            </div>
-          </div>
-        )}
+        </div>
       </div>
     </div>
   );
