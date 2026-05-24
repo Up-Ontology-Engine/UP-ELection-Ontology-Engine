@@ -4,11 +4,14 @@ import { useEffect, useMemo, useState } from "react";
 import type { GraphNode, GraphEdge } from "@/lib/api";
 import { useTheme } from "@/components/ThemeProvider";
 import GraphCanvas from "../graph/GraphCanvas";
-import CandidateDossier from "./CandidateDossier";
+import CandidateDialogue from "./CandidateDialogue";
+import completeCandidateDataRaw from "./complete_candidate_data.json";
 import {
   ScrollText, Network, Award, AlertTriangle, GraduationCap,
   Wallet, Landmark, Users, ExternalLink, X,
 } from "lucide-react";
+
+const completeCandidateData = completeCandidateDataRaw as Record<string, any>;
 
 interface MyNetaGraph {
   nodes: GraphNode[];
@@ -244,8 +247,19 @@ export default function MyNetaPage() {
         )}
       </div>
 
-      {/* ── Candidate dossier modal ── */}
-      {dossier && <CandidateDossier node={dossier} onClose={() => setDossier(null)} />}
+      {/* ── Candidate dialogue (complete data, no dashes) ── */}
+      {dossier && (
+        <CandidateDialogue
+          candidateId={String(dossier.properties.candidate_id || "")}
+          electionYear={Number(dossier.properties.election_year || new Date().getFullYear())}
+          candidateData={
+            completeCandidateData[
+              `${dossier.properties.candidate_id}_${dossier.properties.election_year}` as keyof typeof completeCandidateData
+            ] as any
+          }
+          onClose={() => setDossier(null)}
+        />
+      )}
     </div>
   );
 }
