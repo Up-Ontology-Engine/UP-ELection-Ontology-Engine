@@ -17,15 +17,14 @@ interface Props {
   selected: PlottedBooth | null;
 }
 
-// Gorakhpur district bounds from stategisportal.nic.in WMS
-const GORAKHPUR_BOUNDS = {
-  north: 27.116212,
-  south: 26.218752,
-  east: 83.671043,
-  west: 83.067767,
+// Gorakhpur Urban AC-322 bounds (city, not full district)
+const GORAKHPUR_URBAN_CENTER: [number, number] = [26.755, 83.375];
+const GORAKHPUR_URBAN_BOUNDS = {
+  north: 26.800,
+  south: 26.705,
+  east:  83.425,
+  west:  83.325,
 };
-
-const GORAKHPUR_CENTER: [number, number] = [26.6675, 83.3694];
 
 const MAX_VOTERS = 3000;
 
@@ -36,6 +35,7 @@ function hsl(h: number, s: number, l: number) {
 function getHeatColor(b: PlottedBooth, layer: Props["layer"]): string {
   if (layer === "voters") {
     const ratio = Math.min((b.total_voters ?? 0) / MAX_VOTERS, 1);
+    // Blue → Orange → Red (cool to hot)
     const h = 220 - ratio * 200;
     const s = 70 + ratio * 25;
     const l = 45 + ratio * 10;
@@ -43,12 +43,19 @@ function getHeatColor(b: PlottedBooth, layer: Props["layer"]): string {
   }
 
   if (layer === "kg_coverage") {
-    return b.in_neo4j ? "#10b981" : "#94a3b8";
+    return b.in_neo4j ? "#10b981" : "#475569";
   }
 
   if (layer === "bjp_lean") {
+    const lbl = b.digital_lean_label?.toUpperCase() ?? "";
+    if (lbl === "STRONG_BJP") return "#f97316";
+    if (lbl === "LEAN_BJP")   return "#fb923c";
+    if (lbl === "NEUTRAL")    return "#64748b";
+    if (lbl === "LEAN_OPP")   return "#60a5fa";
+    if (lbl === "STRONG_OPP") return "#3b82f6";
+    // fallback to pulse score
     const s = b.bjp_pulse_score;
-    if (s == null) return "#94a3b8";
+    if (s == null) return "#475569";
     if (s > 0.3) return "#f97316";
     if (s > 0.1) return "#fb923c";
     if (s > -0.1) return "#64748b";
@@ -58,160 +65,161 @@ function getHeatColor(b: PlottedBooth, layer: Props["layer"]): string {
 
   if (layer === "confidence") {
     const l = b.confidence_label?.toUpperCase() ?? "";
-    if (l === "HIGH") return "#10b981";
+    if (l === "HIGH")   return "#10b981";
     if (l === "MEDIUM") return "#f59e0b";
-    if (l === "LOW") return "#ef4444";
-    return "#94a3b8";
+    if (l === "LOW")    return "#ef4444";
+    return "#475569";
   }
 
-  return "#94a3b8";
+  return "#475569";
 }
 
 function getCoreRadius(b: PlottedBooth): number {
-  const v = b.total_voters ?? 1000;
-  return Math.max(6, Math.min(18, v / 170));
+  const v = b.total_voters ?? 800;
+  return Math.max(7, Math.min(20, v / 140));
 }
 
 export default function LeafletMap({ booths, layer, onSelect, selected }: Props) {
   const mapContainerRef = useRef<HTMLDivElement>(null);
-  const mapRef = useRef<L.Map | null>(null);
-  const markersRef = useRef<L.CircleMarker[]>([]);
+  const mapRef          = useRef<L.Map | null>(null);
+  const markersRef      = useRef<L.Layer[]>([]);
 
   useEffect(() => {
     if (!mapContainerRef.current) return;
 
-    // Initialize map
+    // Initialise map once
     if (!mapRef.current) {
-      mapRef.current = L.map(mapContainerRef.current).setView(GORAKHPUR_CENTER, 11);
+      mapRef.current = L.map(mapContainerRef.current, {
+        zoomControl: true,
+        attributionControl: true,
+      }).setView(GORAKHPUR_URBAN_CENTER, 13);
 
-      // BharatMaps WMS layer (if configured)
-      const wmsUrl = process.env.NEXT_PUBLIC_BHARATMAPS_WMS_URL;
-      const wmsLayers = process.env.NEXT_PUBLIC_BHARATMAPS_WMS_LAYERS;
-      const wmsToken = process.env.NEXT_PUBLIC_BHARATMAPS_TOKEN;
+      // CartoDB Positron — clean light base
+      L.tileLayer(
+        "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+        {
+          attribution:
+            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>',
+          subdomains: "abcd",
+          maxZoom: 19,
+        }
+      ).addTo(mapRef.current);
 
-      if (wmsUrl && wmsLayers) {
-        L.tileLayer.wms(wmsUrl, {
-          layers: wmsLayers,
-          format: "image/png",
-          transparent: true,
-          version: "1.3.0",
-          attribution: "BharatMaps © NIC, Govt. of India",
-          ...(wmsToken ? { token: wmsToken } : {}),
-        }).addTo(mapRef.current);
-      } else {
-        // Fallback to OpenStreetMap
-        L.tileLayer(
-          "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
-          {
-            attribution:
-              '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-          }
-        ).addTo(mapRef.current);
-      }
+      // Gorakhpur Urban boundary box (visual reference)
+      L.rectangle(
+        [
+          [GORAKHPUR_URBAN_BOUNDS.south, GORAKHPUR_URBAN_BOUNDS.west],
+          [GORAKHPUR_URBAN_BOUNDS.north, GORAKHPUR_URBAN_BOUNDS.east],
+        ],
+        {
+          color: "#f97316",
+          weight: 1.5,
+          opacity: 0.35,
+          fillOpacity: 0.03,
+          dashArray: "6 4",
+          interactive: false,
+        }
+      ).addTo(mapRef.current);
     }
 
-    // Clear previous markers
+    // Remove old markers
     markersRef.current.forEach((m) => m.remove());
     markersRef.current = [];
 
-    // Add booth markers
     booths.forEach((b) => {
       if (!b.lat || !b.lon || !mapRef.current) return;
 
-      const fill = getHeatColor(b, layer);
-      const r = getCoreRadius(b);
+      const fill       = getHeatColor(b, layer);
+      const r          = getCoreRadius(b);
       const isSelected = selected?.booth_id === b.booth_id;
       const pos: L.LatLngExpression = [b.lat, b.lon];
 
-      // Outer glow
+      // Glow rings (non-interactive)
       const glow1 = L.circleMarker(pos, {
-        radius: r * 5.5,
+        radius: r * 5,
         color: "transparent",
         fillColor: fill,
-        fillOpacity: 0.04,
+        fillOpacity: 0.05,
         interactive: false,
       }).addTo(mapRef.current);
-      markersRef.current.push(glow1);
 
-      // Middle ring
       const glow2 = L.circleMarker(pos, {
-        radius: r * 3,
+        radius: r * 2.8,
         color: "transparent",
         fillColor: fill,
-        fillOpacity: 0.09,
+        fillOpacity: 0.1,
         interactive: false,
       }).addTo(mapRef.current);
-      markersRef.current.push(glow2);
 
-      // Inner glow
-      const glow3 = L.circleMarker(pos, {
-        radius: r * 1.7,
-        color: "transparent",
-        fillColor: fill,
-        fillOpacity: 0.18,
-        interactive: false,
-      }).addTo(mapRef.current);
-      markersRef.current.push(glow3);
-
-      // Core marker
+      // Core marker — no popup, panel handles display
       const core = L.circleMarker(pos, {
         radius: r,
         color: isSelected ? "#ffffff" : fill,
         fillColor: fill,
-        fillOpacity: isSelected ? 1 : 0.88,
-        weight: isSelected ? 2.5 : 0.8,
-        opacity: isSelected ? 1 : 0.6,
+        fillOpacity: isSelected ? 1 : 0.82,
+        weight: isSelected ? 3 : 1,
+        opacity: isSelected ? 1 : 0.7,
+        bubblingMouseEvents: false,
       })
-        .bindPopup(
-          `
-          <div style="color: var(--text-1); font-size: 12px; min-width: 165px; padding: 2px 0;">
-            <p style="font-weight: 700; margin-bottom: 3px; color: #f97316;">Booth ${b.booth_number}</p>
-            <p style="color: var(--text-3); margin-bottom: 8px; font-size: 11px;">${b.name}</p>
-            <div style="display: flex; flex-direction: column; gap: 4px;">
-              <div style="display: flex; justify-content: space-between;">
-                <span style="color: var(--text-3);">Voters</span>
-                <span style="color: var(--text-1); font-weight: 600;">${(b.total_voters ?? 0).toLocaleString("en-IN")}</span>
-              </div>
-              <div style="display: flex; justify-content: space-between;">
-                <span style="color: var(--text-3);">In KG</span>
-                <span style="color: var(--text-1); font-weight: 600;">${b.in_neo4j ? "Yes" : "No"}</span>
-              </div>
-              <div style="display: flex; justify-content: space-between;">
-                <span style="color: var(--text-3);">BJP signal</span>
-                <span style="color: var(--text-1); font-weight: 600;">${(b.bjp_pulse_score?.toFixed(3) ?? "No data")}</span>
-              </div>
-              <div style="display: flex; justify-content: space-between;">
-                <span style="color: var(--text-3);">Quality</span>
-                <span style="color: var(--text-1); font-weight: 600;">${b.confidence_label ?? "No data"}</span>
-              </div>
-            </div>
-          </div>
-        `
-        )
-        .on("click", () => onSelect(b))
+        .on("click", (e) => {
+          L.DomEvent.stopPropagation(e);
+          onSelect(b);
+        })
+        .on("mouseover", (e) => {
+          const marker = e.target as L.CircleMarker;
+          if (!isSelected) {
+            marker.setStyle({ fillOpacity: 1, weight: 2, opacity: 1 });
+          }
+          marker.bindTooltip(
+            `<strong style="color:#f97316">B-${String(b.booth_number).padStart(3, "0")}</strong>
+             <br/><span style="color:#94a3b8;font-size:11px">${b.name ?? ""}</span>
+             <br/><span style="font-size:11px">${(b.total_voters ?? 0).toLocaleString("en-IN")} voters</span>`,
+            { permanent: false, direction: "top", className: "booth-tooltip" }
+          ).openTooltip();
+        })
+        .on("mouseout", (e) => {
+          const marker = e.target as L.CircleMarker;
+          if (!isSelected) {
+            marker.setStyle({ fillOpacity: 0.82, weight: 1, opacity: 0.7 });
+          }
+          marker.unbindTooltip();
+        })
         .addTo(mapRef.current);
-      markersRef.current.push(core);
+
+      markersRef.current.push(glow1, glow2, core);
     });
 
-    // Fit bounds to booths
-    if (booths.length > 0) {
+    // Fit to booth bounds
+    const validBooths = booths.filter((b) => b.lat && b.lon);
+    if (validBooths.length > 0) {
       const bounds = L.latLngBounds(
-        booths
-          .filter((b) => b.lat && b.lon)
-          .map((b) => [b.lat, b.lon] as L.LatLngTuple)
+        validBooths.map((b) => [b.lat, b.lon] as L.LatLngTuple)
       );
-      mapRef.current.fitBounds(bounds, { padding: [50, 50] });
+      mapRef.current.fitBounds(bounds, { padding: [40, 40], maxZoom: 14 });
     }
   }, [booths, layer, selected, onSelect]);
 
   return (
-    <div
-      ref={mapContainerRef}
-      style={{
-        height: "100%",
-        width: "100%",
-        background: "var(--bg-base)",
-      }}
-    />
+    <>
+      <style>{`
+        .booth-tooltip {
+          background: #0f1c2e;
+          border: 1px solid #1e3a5f;
+          border-radius: 6px;
+          color: #e2e8f0;
+          font-family: monospace;
+          font-size: 12px;
+          padding: 6px 10px;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+          white-space: nowrap;
+        }
+        .booth-tooltip::before { display: none; }
+        .leaflet-tooltip-top.booth-tooltip::before { display: none; }
+      `}</style>
+      <div
+        ref={mapContainerRef}
+        style={{ height: "100%", width: "100%", background: "#0f1c2e" }}
+      />
+    </>
   );
 }

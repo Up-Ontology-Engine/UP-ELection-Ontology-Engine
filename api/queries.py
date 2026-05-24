@@ -1111,13 +1111,18 @@ def get_graph_coverage(ac_id: str) -> list[dict]:
             SELECT
                 b.booth_id, b.booth_number,
                 b.polling_station_name AS name,
-                b.lat, b.lon, b.total_voters,
+                b.locality_hint, b.ward_name,
+                b.lat, b.lon,
+                b.total_voters, b.male_voters, b.female_voters, b.other_voters,
                 bm.bjp_pulse_score, bm.opp_pulse_score,
-                bm.confidence_label, bm.event_count
+                bm.digital_lean, bm.digital_lean_label,
+                bm.confidence_label, bm.event_count,
+                bm.top_issue
             FROM booth_master b
             LEFT JOIN LATERAL (
                 SELECT bjp_pulse_score, opp_pulse_score,
-                       confidence_label, event_count
+                       digital_lean, digital_lean_label,
+                       confidence_label, event_count, top_issue
                 FROM booth_metrics
                 WHERE booth_id = b.booth_id
                 ORDER BY window_start DESC LIMIT 1

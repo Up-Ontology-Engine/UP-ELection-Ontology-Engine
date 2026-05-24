@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { api } from "@/lib/api";
 import type { GraphResult, GraphNode, BoothRow, BoothSummary } from "@/lib/api";
@@ -57,8 +57,8 @@ const LEAN_CONFIG: Record<string, { label: string; color: string }> = {
   STRONG_BJP:   { label: "Strong BJP",  color: "#f97316" },
   LEAN_BJP:     { label: "Lean BJP",    color: "#fb923c" },
   NEUTRAL:      { label: "Neutral",     color: "#64748b" },
-  LEAN_OPP:     { label: "Lean Opp",   color: "#3b82f6" },
-  STRONG_OPP:   { label: "Strong Opp", color: "#2563eb" },
+  LEAN_OPP:     { label: "Lean SP",    color: "#3b82f6" },
+  STRONG_OPP:   { label: "Strong SP",  color: "#2563eb" },
   INSUFFICIENT: { label: "No Signal",  color: "#475569" },
 };
 
@@ -199,7 +199,7 @@ const SOURCE_COLORS: Record<string, string> = {
 
 // ── Component ──────────────────────────────────────────────────────────────────
 
-export default function GraphPage() {
+function GraphPageInner() {
   const { theme } = useTheme();
   const searchParams = useSearchParams();
 
@@ -1578,5 +1578,13 @@ export default function GraphPage() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function GraphPage() {
+  return (
+    <Suspense fallback={<div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100vh", color: "var(--text-3)", fontSize: 13 }}>Loading…</div>}>
+      <GraphPageInner />
+    </Suspense>
   );
 }

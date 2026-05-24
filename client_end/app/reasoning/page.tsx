@@ -21,8 +21,8 @@ import {
 import { api, type ReasoningResult, type WebResult } from "@/lib/api";
 
 const EXAMPLES = [
-  { cat: "Booths", q: "Which booths have the highest BJP pulse score?" },
-  { cat: "Booths", q: "Show me all booths with STRONG_OPP lean" },
+  { cat: "Booths", q: "Which booths have the highest party pulse signal?" },
+  { cat: "Booths", q: "Show me all booths with SP/BSP lean" },
   { cat: "Issues", q: "What are the top 5 issues by booth count?" },
   { cat: "Issues", q: "Which booths have water supply as the top issue?" },
   { cat: "Schemes", q: "Which schemes have the highest delivery gap?" },

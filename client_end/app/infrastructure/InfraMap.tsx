@@ -103,7 +103,7 @@ export default function InfraMap({ booths, layer, onSelect }: Props) {
                 <span>{b.total_voters?.toLocaleString("en-IN") ?? "—"}</span>
               </div>
               <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 3 }}>
-                <span style={{ color: "var(--text-3)" }}>BJP pulse:</span>
+                <span style={{ color: "var(--text-3)" }}>BJP signal:</span>
                 <span style={{ color: "#f97316" }}>{b.bjp_pulse_score?.toFixed(3) ?? "—"}</span>
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>

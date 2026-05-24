@@ -27,7 +27,7 @@ interface Props {
 
 const LAYERS: { id: InfraLayer; label: string; desc: string }[] = [
   { id: "graph_coverage", label: "KG Coverage",   desc: "Which booths are in Neo4j" },
-  { id: "bjp_pulse",      label: "BJP Pulse",      desc: "Digital sentiment score"   },
+  { id: "bjp_pulse",      label: "Party Signal",   desc: "Digital party sentiment score" },
   { id: "confidence",     label: "Confidence",     desc: "Data quality per booth"    },
 ];
 
@@ -105,8 +105,8 @@ export default function InfraClient({ overview, coverage }: Props) {
     { label: "Strong BJP (+0.3+)",   color: "#f97316" },
     { label: "Lean BJP (+0.1–0.3)",  color: "#fb923c" },
     { label: "Neutral",              color: "var(--text-3)" },
-    { label: "Lean Opp (−0.1–−0.3)", color: "#60a5fa" },
-    { label: "Strong Opp (< −0.3)",  color: "#3b82f6" },
+    { label: "Lean SP (−0.1–−0.3)", color: "#60a5fa" },
+    { label: "Strong SP (< −0.3)",  color: "#3b82f6" },
     { label: "No data",              color: "var(--text-4)" },
   ];
   const CONF_LEGEND = [
@@ -420,8 +420,8 @@ export default function InfraClient({ overview, coverage }: Props) {
                     { label: "Booth ID",    value: selected.booth_id,                                      color: "var(--text-3)" },
                     { label: "KG Degree",   value: selected.in_neo4j ? String(selected.neo4j_degree) : "—", color: selected.in_neo4j ? "#10b981" : "var(--text-4)" },
                     { label: "Voters",      value: fmt(selected.total_voters),                              color: "var(--text-2)" },
-                    { label: "BJP pulse",   value: selected.bjp_pulse_score?.toFixed(3) ?? "—",            color: "#f97316" },
-                    { label: "Opp pulse",   value: selected.opp_pulse_score?.toFixed(3) ?? "—",            color: "#3b82f6" },
+                    { label: "BJP signal",  value: selected.bjp_pulse_score?.toFixed(3) ?? "—",            color: "#f97316" },
+                    { label: "SP signal",   value: selected.opp_pulse_score?.toFixed(3) ?? "—",            color: "#3b82f6" },
                     { label: "Confidence",  value: selected.confidence_label ?? "—",                       color: selected.confidence_label === "HIGH" ? "#10b981" : selected.confidence_label === "LOW" ? "#ef4444" : "#f59e0b" },
                     { label: "Events",      value: String(selected.event_count ?? "—"),                     color: "var(--text-3)" },
                   ].map(({ label, value, color }) => (

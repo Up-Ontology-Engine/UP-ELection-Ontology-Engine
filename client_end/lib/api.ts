@@ -455,13 +455,21 @@ export interface GraphCoverageBooth {
   booth_id: string;
   booth_number: number;
   name: string;
+  locality_hint: string | null;
+  ward_name: string | null;
   lat: number | null;
   lon: number | null;
   total_voters: number | null;
+  male_voters: number | null;
+  female_voters: number | null;
+  other_voters: number | null;
   bjp_pulse_score: number | null;
   opp_pulse_score: number | null;
+  digital_lean: number | null;
+  digital_lean_label: string | null;
   confidence_label: string | null;
   event_count: number | null;
+  top_issue: string | null;
   in_neo4j: boolean;
   neo4j_degree: number;
 }

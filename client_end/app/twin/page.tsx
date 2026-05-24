@@ -162,7 +162,7 @@ export default async function TwinPage() {
                       <td className="px-3 py-2 font-mono" style={{ color: "var(--text-3)" }}>{c.number}</td>
                       <td className="px-3 py-2" style={{ color: "var(--text-1)" }}>{fmt(c.voters)}</td>
                       <td className="px-3 py-2" style={{
-                        color: c.lean.includes("BJP") ? "#f97316" : c.lean.includes("OPP") ? "#3b82f6" : "#64748b"
+                        color: c.lean.includes("BJP") ? "#f97316" : c.lean.includes("OPP") ? "#3b82f6" : "#64748b",
                       }}>{c.lean}</td>
                       <td className="px-3 py-2" style={{ color: "#f97316" }}>
                         {c.bjpPulse != null ? c.bjpPulse.toFixed(2) : "—"}
