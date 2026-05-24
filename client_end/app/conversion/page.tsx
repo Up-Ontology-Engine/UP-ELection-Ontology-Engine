@@ -404,9 +404,9 @@ export default function ConversionPage() {
           <KpiCard label="TOTAL BENEFICIARIES" value={stats.total_beneficiaries.toLocaleString()}
             sub={`${stats.booths_with_data} booths mapped`} color="#60a5fa" />
           <KpiCard label="CONVERSION TARGETS" value={stats.total_targets.toLocaleString()}
-            sub="Non-BJP beneficiaries" color="#ef4444" />
+            sub="SP/BSP/INC beneficiaries" color="#ef4444" />
           <KpiCard label="SUPPORTERS MAPPED" value={stats.total_supporters.toLocaleString()}
-            sub="Confirmed BJP lean" color="#f97316" />
+            sub="BJP-leaning" color="#f97316" />
           <KpiCard label="TARGETS CONTACTED" value={`${stats.target_contact_pct}%`}
             sub={`${stats.targets_contacted} of ${stats.total_targets}`} color="#10b981" />
           <div className="rounded-xl px-4 py-3 flex flex-col gap-1 min-w-48"
