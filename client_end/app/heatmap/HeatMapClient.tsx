@@ -1,18 +1,22 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import dynamic from "next/dynamic";
 import type { GraphCoverageResponse, GraphCoverageBooth } from "@/lib/api";
+import { type PlottedBooth } from "./LeafletMap";
 import {
   Flame, Layers, BarChart3, X, Users, GitBranch,
-  TrendingUp, Network, Search, MapPin
+  TrendingUp, Network, Search, MapPin, Info
 } from "lucide-react";
+
+const LeafletMap = dynamic(() => import("./LeafletMap"), { ssr: false });
 
 export type HeatLayer = "voters" | "kg_coverage" | "bjp_lean" | "confidence";
 
 // BharatMaps (NIC, Govt. of India) — embedded official map portal.
-// Gorakhpur Urban centre (used only for context labels; the portal handles its own view).
-const GKP_LAT = 26.7606;
-const GKP_LON = 83.3732;
+// Gorakhpur district bounds (extracted from stategisportal.nic.in WMS).
+const GKP_LAT = 26.6675;
+const GKP_LON = 83.3694;
 const BHARATMAPS_URL =
   process.env.NEXT_PUBLIC_BHARATMAPS_URL ?? "https://bharatmaps.gov.in/bharatmaps/";
 
@@ -24,59 +28,59 @@ const LAYERS: {
   color: string;
   hasData: boolean;
 }[] = [
-  {
-    id: "voters",
-    label: "Voter Density",
-    desc: "Heat intensity by registered voter count",
-    color: "#f97316",
-    hasData: true,
-  },
-  {
-    id: "kg_coverage",
-    label: "KG Coverage",
-    desc: "Knowledge Graph node presence per booth",
-    color: "#10b981",
-    hasData: true,
-  },
-  {
-    id: "bjp_lean",
-    label: "Political Lean",
-    desc: "BJP vs Opposition digital pulse signal",
-    color: "#3b82f6",
-    hasData: false,
-  },
-  {
-    id: "confidence",
-    label: "Data Quality",
-    desc: "Data confidence score per booth",
-    color: "#8b5cf6",
-    hasData: false,
-  },
-];
+    {
+      id: "voters",
+      label: "Voter Density",
+      desc: "Heat intensity by registered voter count",
+      color: "#f97316",
+      hasData: true,
+    },
+    {
+      id: "kg_coverage",
+      label: "KG Coverage",
+      desc: "Knowledge Graph node presence per booth",
+      color: "#10b981",
+      hasData: true,
+    },
+    {
+      id: "bjp_lean",
+      label: "Political Lean",
+      desc: "BJP vs Opposition digital pulse signal",
+      color: "#3b82f6",
+      hasData: false,
+    },
+    {
+      id: "confidence",
+      label: "Data Quality",
+      desc: "Data confidence score per booth",
+      color: "#8b5cf6",
+      hasData: false,
+    },
+  ];
 
 const LEGENDS: Record<HeatLayer, { label: string; color: string }[]> = {
   voters: [
-    { label: "High (2000+ voters)",  color: "#ef4444" },
-    { label: "Medium (1200–2000)",   color: "#f97316" },
-    { label: "Low (< 1200 voters)",  color: "#3b82f6" },
+    { label: "High (2000+ voters)", color: "#ef4444" },
+    { label: "Medium (1200–2000)", color: "#f97316" },
+    { label: "Low (< 1200 voters)", color: "#3b82f6" },
   ],
   kg_coverage: [
-    { label: "Present in Neo4j",     color: "#10b981" },
-    { label: "Not in graph",         color: "var(--text-4)" },
+    { label: "Present in Neo4j", color: "#10b981" },
+    { label: "Not in graph", color: "var(--text-4)" },
   ],
   bjp_lean: [
-    { label: "Strong BJP (+0.3+)",   color: "#f97316" },
-    { label: "Lean BJP",             color: "#fb923c" },
-    { label: "Neutral",              color: "var(--text-3)" },
-    { label: "Lean Opp",             color: "#60a5fa" },
-    { label: "Strong Opp",           color: "#3b82f6" },
-    { label: "No signal",            color: "var(--text-4)" },
+    { label: "Strong BJP (+0.3+)", color: "#f97316" },
+    { label: "Lean BJP", color: "#fb923c" },
+    { label: "Neutral", color: "var(--text-3)" },
+    { label: "Lean Opp", color: "#60a5fa" },
+    { label: "Strong Opp", color: "#3b82f6" },
+    { label: "No signal", color: "var(--text-4)" },
   ],
   confidence: [
-    { label: "HIGH",                 color: "#10b981" },
-    { label: "MEDIUM",               color: "#f59e0b" },
-    { label: "LOW",                  color: "#ef4444" },
-    { label: "Unknown",              color: "var(--text-4)" },
+    { label: "HIGH", color: "#10b981" },
+    { label: "MEDIUM", color: "#f59e0b" },
+    { label: "LOW", color: "#ef4444" },
+    { label: "Unknown", color: "var(--text-4)" },
   ],
 };
 
@@ -86,18 +90,35 @@ interface Props {
 
 export default function HeatMapClient({ coverage }: Props) {
   const [layer, setLayer] = useState<HeatLayer>("voters");
-  const [selected, setSelected] = useState<GraphCoverageBooth | null>(null);
+  const [selected, setSelected] = useState<any>(null);
   const [search, setSearch] = useState("");
 
   const booths: GraphCoverageBooth[] = useMemo(() => coverage?.booths ?? [], [coverage]);
 
-  const total      = booths.length;
-  const inKg       = booths.filter((b) => b.in_neo4j).length;
+  const total = booths.length;
+  const inKg = booths.filter((b) => b.in_neo4j).length;
   const totalVoters = booths.reduce((s, b) => s + (b.total_voters ?? 0), 0);
-  const maxVoters  = Math.max(...booths.map((b) => b.total_voters ?? 0));
-  const minVoters  = Math.min(...booths.map((b) => b.total_voters ?? Infinity));
+  const maxVoters = Math.max(...booths.map((b) => b.total_voters ?? 0));
+  const minVoters = Math.min(...booths.map((b) => b.total_voters ?? Infinity));
+  const usingRealCoords = booths.length > 0 && booths.every((b) => b.lat && b.lon);
 
-  const filteredBooths = booths.filter((b) =>
+  // Add synthetic coordinates if not present (distribute within Gorakhpur bounds)
+  const plotBooths = useMemo(() => {
+    const gorakhpurBounds = {
+      north: 27.116212,
+      south: 26.218752,
+      east: 83.671043,
+      west: 83.067767,
+    };
+
+    return booths.map((b, idx) => ({
+      ...b,
+      lat: b.lat ?? (gorakhpurBounds.south + (idx % 13) * 0.068),
+      lon: b.lon ?? (gorakhpurBounds.west + Math.floor(idx / 13) * 0.085),
+    }));
+  }, [booths]);
+
+  const filteredBooths = plotBooths.filter((b) =>
     !search ||
     b.name?.toLowerCase().includes(search.toLowerCase()) ||
     String(b.booth_number).includes(search));
@@ -154,10 +175,10 @@ export default function HeatMapClient({ coverage }: Props) {
         <div className="px-3 py-3" style={{ borderBottom: "1px solid var(--border)" }}>
           <div className="grid grid-cols-2 gap-2">
             {[
-              { label: "Booths",      value: total,                              color: "var(--saffron)",  icon: Flame   },
-              { label: "In KG",       value: `${inKg}/${total}`,                  color: "#10b981",         icon: GitBranch },
-              { label: "Total voters",value: (totalVoters / 1000).toFixed(1)+"k", color: "var(--blue)",     icon: Users   },
-              { label: "Max booth",   value: `${maxVoters.toLocaleString("en-IN")}`, color: "#8b5cf6",     icon: TrendingUp },
+              { label: "Booths", value: total, color: "var(--saffron)", icon: Flame },
+              { label: "In KG", value: `${inKg}/${total}`, color: "#10b981", icon: GitBranch },
+              { label: "Total voters", value: (totalVoters / 1000).toFixed(1) + "k", color: "var(--blue)", icon: Users },
+              { label: "Max booth", value: `${maxVoters.toLocaleString("en-IN")}`, color: "#8b5cf6", icon: TrendingUp },
             ].map(({ label, value, color, icon: Icon }) => (
               <div key={label} className="rounded-md px-2 py-2"
                 style={{ background: "var(--bg-surface)", border: "1px solid var(--border)" }}>
@@ -271,12 +292,12 @@ export default function HeatMapClient({ coverage }: Props) {
                 </p>
                 <div className="space-y-1.5">
                   {[
-                    { label: "Booth ID",   value: selected.booth_id,                               color: "var(--text-3)" },
-                    { label: "Voters",     value: selected.total_voters?.toLocaleString("en-IN") ?? "—", color: "var(--saffron)" },
-                    { label: "BJP pulse",  value: selected.bjp_pulse_score?.toFixed(3) ?? "No data", color: "#f97316" },
-                    { label: "Opp pulse",  value: selected.opp_pulse_score?.toFixed(3) ?? "No data", color: "#3b82f6" },
-                    { label: "Confidence", value: selected.confidence_label ?? "No data",           color: selected.confidence_label === "HIGH" ? "#10b981" : selected.confidence_label === "LOW" ? "#ef4444" : "var(--text-4)" },
-                    { label: "KG degree",  value: String(selected.neo4j_degree),                   color: "#10b981" },
+                    { label: "Booth ID", value: selected.booth_id, color: "var(--text-3)" },
+                    { label: "Voters", value: selected.total_voters?.toLocaleString("en-IN") ?? "—", color: "var(--saffron)" },
+                    { label: "BJP pulse", value: selected.bjp_pulse_score?.toFixed(3) ?? "No data", color: "#f97316" },
+                    { label: "Opp pulse", value: selected.opp_pulse_score?.toFixed(3) ?? "No data", color: "#3b82f6" },
+                    { label: "Confidence", value: selected.confidence_label ?? "No data", color: selected.confidence_label === "HIGH" ? "#10b981" : selected.confidence_label === "LOW" ? "#ef4444" : "var(--text-4)" },
+                    { label: "KG degree", value: String(selected.neo4j_degree), color: "#10b981" },
                   ].map(({ label, value, color }) => (
                     <div key={label} className="flex justify-between py-0.5"
                       style={{ borderBottom: "1px solid var(--border)" }}>
@@ -345,16 +366,13 @@ export default function HeatMapClient({ coverage }: Props) {
         </div>
       </div>
 
-      {/* ── BharatMaps embed ── */}
+      {/* ── Interactive Leaflet Map ── */}
       <div className="flex-1 relative" style={{ background: "var(--bg-base)" }}>
-        <iframe
-          src={BHARATMAPS_URL}
-          title="BharatMaps — NIC, Govt. of India"
-          className="w-full h-full"
-          style={{ border: "none" }}
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          allow="geolocation"
+        <LeafletMap
+          booths={filteredBooths}
+          layer={layer}
+          onSelect={setSelected}
+          selected={selected}
         />
 
         {/* Context overlay — Gorakhpur + active layer */}
@@ -363,10 +381,10 @@ export default function HeatMapClient({ coverage }: Props) {
             style={{ background: "var(--bg-card)", border: "1px solid var(--border)", boxShadow: "var(--shadow-md)" }}>
             <p className="mono text-xs" style={{ color: "var(--text-2)" }}>
               <span style={{ color: "var(--saffron)" }}>●</span>{" "}
-              Gorakhpur Urban · {total} booths
+              Gorakhpur · {total} booths
             </p>
             <p className="mono" style={{ color: "var(--text-4)", fontSize: 9, marginTop: 2 }}>
-              {GKP_LAT.toFixed(4)}, {GKP_LON.toFixed(4)} · Layer: {LAYERS.find((l) => l.id === layer)?.label}
+              {GKP_LAT.toFixed(4)}, {GKP_LON.toFixed(4)} · {usingRealCoords ? "Real coords" : "Synthetic"} · {LAYERS.find((l) => l.id === layer)?.label}
             </p>
           </div>
         </div>
