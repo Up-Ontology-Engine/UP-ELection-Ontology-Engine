@@ -4,7 +4,7 @@
     "total_pages": 31,
     "state": "Uttar Pradesh",
     "year": 2026,
-    "part_number": 24,
+    "part_number": 21,
     "assembly_constituency": {
       "number": 322,
       "name": "Gorakhpur City",
@@ -21,7 +21,7 @@
   "voter_records": [
     {
       "voter_id": "ISP4348033",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Daya Nan{}da Yadava",
       "relation_type": "Father",
       "relation_name": "Dhanapata",
@@ -32,7 +32,7 @@
     },
     {
       "voter_id": "ISP4859534",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Samdhya Tripathi",
       "relation_type": "Husband",
       "relation_name": "Ashtabhuja Tripathi",
@@ -43,7 +43,7 @@
     },
     {
       "voter_id": "ISP4863643",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Khushabu Pandeya",
       "relation_type": "Father",
       "relation_name": "Ramapratapa",
@@ -54,7 +54,7 @@
     },
     {
       "voter_id": "ISP4594099",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Krshna Patava",
       "house_number": "00",
       "age": 22,
@@ -63,7 +63,7 @@
     },
     {
       "voter_id": "ISP4287496",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Punama",
       "relation_type": "Husband",
       "relation_name": "Veda Prakasha",
@@ -74,7 +74,7 @@
     },
     {
       "voter_id": "ISP368060",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Navina Chandra",
       "relation_type": "Father",
       "relation_name": "Supari Rama",
@@ -85,7 +85,7 @@
     },
     {
       "voter_id": "SP4705422",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Sunita Shrivastava",
       "relation_type": "Husband",
       "relation_name": "Vijaya Kumara Shrivastava",
@@ -96,7 +96,7 @@
     },
     {
       "voter_id": "ISP4434494",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Narendra Kumara",
       "relation_type": "Father",
       "relation_name": "Tirtha Raja",
@@ -107,7 +107,7 @@
     },
     {
       "voter_id": "SP4347985",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Silochana Devi",
       "relation_type": "Husband",
       "relation_name": "Naremdra Kumara Pa",
@@ -118,7 +118,7 @@
     },
     {
       "voter_id": "SP4348077",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Rajesha Kumara",
       "relation_type": "Father",
       "relation_name": "Mohana Prasada Qi",
@@ -129,7 +129,7 @@
     },
     {
       "voter_id": "ISP4347993",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Mamata Sahani",
       "relation_type": "Husband",
       "relation_name": "Rajesha Kumara Ma",
@@ -140,7 +140,7 @@
     },
     {
       "voter_id": "ISP5029996",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Pimki",
       "relation_type": "Husband",
       "relation_name": "Sonu Vishvakarma",
@@ -151,7 +151,7 @@
     },
     {
       "voter_id": "ISP3722337",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Pintu Devi",
       "relation_type": "Husband",
       "relation_name": "Abhaya Mishra",
@@ -162,7 +162,7 @@
     },
     {
       "voter_id": "ISP3722329",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Siddhartha Shamkara",
       "relation_type": "Father",
       "relation_name": "Amaranatha Qi",
@@ -173,7 +173,7 @@
     },
     {
       "voter_id": "ISP4989786",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Dipika Mishra",
       "relation_type": "Father",
       "relation_name": "Raja Kumara Mishra",
@@ -184,7 +184,7 @@
     },
     {
       "voter_id": "ISP3959558",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Ajita Kumara",
       "relation_type": "Father",
       "relation_name": "Rama Navala Chauhana",
@@ -195,7 +195,7 @@
     },
     {
       "voter_id": "SP4434460",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Aditya Kumara Yadava",
       "relation_type": "Father",
       "relation_name": "Dayanamda",
@@ -206,7 +206,7 @@
     },
     {
       "voter_id": "ISP372234",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Abhaya Mishra",
       "relation_type": "Father",
       "relation_name": "Rajeshvara Mishra",
@@ -217,7 +217,7 @@
     },
     {
       "voter_id": "ISP3722360",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Aparna Banarji",
       "relation_type": "Husband",
       "relation_name": "Siddhartha Shamkara",
@@ -228,7 +228,7 @@
     },
     {
       "voter_id": "ISP4778653",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Sudha Pamdeya",
       "relation_type": "Husband",
       "relation_name": "Divakara Pamdeya",
@@ -239,7 +239,7 @@
     },
     {
       "voter_id": "ISP4705406",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Vijaya Kumara Shrivastava",
       "relation_type": "Father",
       "relation_name": "Shripati Lala Shrivastava",
@@ -250,7 +250,7 @@
     },
     {
       "voter_id": "SP4348047",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Rama Bharata Chaurasiya",
       "relation_type": "Father",
       "relation_name": "Shambhu Sharana Chaurasiya",
@@ -261,7 +261,7 @@
     },
     {
       "voter_id": "SP4325767",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Gita",
       "relation_type": "Husband",
       "relation_name": "Bhola",
@@ -272,7 +272,7 @@
     },
     {
       "voter_id": "SP4347902",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Ambike Praja",
       "relation_type": "Father",
       "relation_name": "Rama Bhajana Prajapati",
@@ -283,7 +283,7 @@
     },
     {
       "voter_id": "ISP4268732",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Puja Praja",
       "relation_type": "Father",
       "relation_name": "Sitarama Prajapati",
@@ -294,7 +294,7 @@
     },
     {
       "voter_id": "SP4705474",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Saxi Shrivastava",
       "relation_type": "Father",
       "relation_name": "Vijaya Kumara Shrivastava",
@@ -305,7 +305,7 @@
     },
     {
       "voter_id": "SP426870",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Pragati Pandeya",
       "relation_type": "Father",
       "relation_name": "Vipina Pandeya",
@@ -316,7 +316,7 @@
     },
     {
       "voter_id": "ISP503653",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Kumari Nisha",
       "relation_type": "Father",
       "relation_name": "Gulaba Prajapati",
@@ -327,7 +327,7 @@
     },
     {
       "voter_id": "ISP3580693",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Shashamka Pandeya",
       "relation_type": "Father",
       "relation_name": "Devendra Natha Pandeya",
@@ -338,7 +338,7 @@
     },
     {
       "voter_id": "ISP3580503",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Chanda Pandeya",
       "relation_type": "Father",
       "relation_name": "Kanhaiya Lala Pandeya",
@@ -349,7 +349,7 @@
     },
     {
       "voter_id": "ISP4347936",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Pramoda Kumara",
       "relation_type": "Father",
       "relation_name": "Parasa Prasada",
@@ -360,7 +360,7 @@
     },
     {
       "voter_id": "ISP4347894",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Akasha Gupta",
       "relation_type": "Father",
       "relation_name": "Rama Milana Gupta",
@@ -371,7 +371,7 @@
     },
     {
       "voter_id": "ISP4268090",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Priyamka Praja",
       "relation_type": "Father",
       "relation_name": "Shrikrshna",
@@ -382,7 +382,7 @@
     },
     {
       "voter_id": "ISP426804",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Rimki Praja",
       "relation_type": "Father",
       "relation_name": "Shrikrshna",
@@ -393,7 +393,7 @@
     },
     {
       "voter_id": "ISP486369",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Paramila",
       "relation_type": "Husband",
       "relation_name": "Rama Pratapa",
@@ -404,7 +404,7 @@
     },
     {
       "voter_id": "ISP4776046",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Ramadayala Simga",
       "relation_type": "Father",
       "relation_name": "Omahari Simga",
@@ -415,7 +415,7 @@
     },
     {
       "voter_id": "ISP3580669",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Lakhavira Simha Chauhana",
       "relation_type": "Father",
       "relation_name": "Amarajita Simha Chauhana",
@@ -426,7 +426,7 @@
     },
     {
       "voter_id": "ISP3722345",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Juni Shrivastava",
       "relation_type": "Father",
       "relation_name": "Vinoda Shrivastava",
@@ -437,7 +437,7 @@
     },
     {
       "voter_id": "ISP3580537",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Mendra Sharma",
       "relation_type": "Father",
       "relation_name": "Rajarama Sharma",
@@ -448,7 +448,7 @@
     },
     {
       "voter_id": "ISP434790",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Vishnu Praja",
       "relation_type": "Father",
       "relation_name": "Ghanashyama",
@@ -459,7 +459,7 @@
     },
     {
       "voter_id": "SP4269262",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Astha Praja",
       "relation_type": "Father",
       "relation_name": "Prabhunatha Prajapati",
@@ -470,7 +470,7 @@
     },
     {
       "voter_id": "SP4437059",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Priya Kumari",
       "relation_type": "Father",
       "relation_name": "Narendra Kumara",
@@ -481,7 +481,7 @@
     },
     {
       "voter_id": "ISP3580685",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Abhisheka Dube",
       "relation_type": "Father",
       "relation_name": "Ema. Di. Dube",
@@ -492,7 +492,7 @@
     },
     {
       "voter_id": "ISP3839966",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Dhiremdra Kumara",
       "relation_type": "Father",
       "relation_name": "Amara Jita",
@@ -503,7 +503,7 @@
     },
     {
       "voter_id": "ISP3580529",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Dipu Kumara",
       "relation_type": "Father",
       "relation_name": "Suresha Chauhana",
@@ -514,7 +514,7 @@
     },
     {
       "voter_id": "ISP3722352",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Garima Shrivastava",
       "relation_type": "Father",
       "relation_name": "Vinoda Shrivastava",
@@ -525,7 +525,7 @@
     },
     {
       "voter_id": "SP3722386",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Ravi Shrivastava",
       "relation_type": "Father",
       "relation_name": "Shyama Natha Shrivastava",
@@ -536,7 +536,7 @@
     },
     {
       "voter_id": "ISP4347969",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Kishana Shrivastava",
       "relation_type": "Father",
       "relation_name": "Vinoda Shrivastava",
@@ -547,7 +547,7 @@
     },
     {
       "voter_id": "ISP4434544",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Khushi Pandeya",
       "relation_type": "Husband",
       "relation_name": "Memdra Kumara",
@@ -558,7 +558,7 @@
     },
     {
       "voter_id": "ISP3580792",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Gudiya Devi",
       "relation_type": "Husband",
       "relation_name": "Dipu Chauhana",
@@ -569,7 +569,7 @@
     },
     {
       "voter_id": "SP3722428",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Anita Devi",
       "relation_type": "Husband",
       "relation_name": "Anuruddha",
@@ -580,7 +580,7 @@
     },
     {
       "voter_id": "SP3722394",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Shrirama Chauhana",
       "relation_type": "Father",
       "relation_name": "Radheshyama",
@@ -591,7 +591,7 @@
     },
     {
       "voter_id": "ISP025737",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Nilama Jahana",
       "relation_type": "Father",
       "relation_name": "Shafiula Umama Khana",
@@ -602,7 +602,7 @@
     },
     {
       "voter_id": "DWQ3373798",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Pushpa",
       "relation_type": "Husband",
       "relation_name": "Ramu",
@@ -613,7 +613,7 @@
     },
     {
       "voter_id": "ISP2002786",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Samju Praja",
       "relation_type": "Husband",
       "relation_name": "Chandrakesha Prajapati",
@@ -624,7 +624,7 @@
     },
     {
       "voter_id": "ISP3722378",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Vikasa Shrivastava",
       "relation_type": "Father",
       "relation_name": "Manoja Shrivastava",
@@ -635,7 +635,7 @@
     },
     {
       "voter_id": "ISP3580495",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Monika Simha",
       "relation_type": "Father",
       "relation_name": "Narasimha Simha",
@@ -646,7 +646,7 @@
     },
     {
       "voter_id": "ISP4430997",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Rishu Pandeya",
       "relation_type": "Father",
       "relation_name": "Memdra Kumara",
@@ -657,7 +657,7 @@
     },
     {
       "voter_id": "ISP4348776",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Krtika Chau I",
       "relation_type": "Father",
       "relation_name": "Ramarekha Chau I Qi",
@@ -668,7 +668,7 @@
     },
     {
       "voter_id": "SP3722295",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Ramjana Chauhana",
       "relation_type": "Husband",
       "relation_name": "Pradipa Chauhana",
@@ -679,7 +679,7 @@
     },
     {
       "voter_id": "DWQ2672087",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Ramabelasa",
       "relation_type": "Father",
       "relation_name": "Matabhikha",
@@ -690,7 +690,7 @@
     },
     {
       "voter_id": "ISP7957650",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Kaushilya",
       "relation_type": "Husband",
       "relation_name": "Dipu Chauhana",
@@ -701,7 +701,7 @@
     },
     {
       "voter_id": "ISP0257389",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Chandrashekhara",
       "relation_type": "Father",
       "relation_name": "Ramanevasa Pa",
@@ -712,7 +712,7 @@
     },
     {
       "voter_id": "ISP386724",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Sapana Shrivastava",
       "relation_type": "Father",
       "relation_name": "Manoja Shrivastava",
@@ -723,7 +723,7 @@
     },
     {
       "voter_id": "ISP3580636",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Abhaya Pandeya",
       "relation_type": "Father",
       "relation_name": "Subasha Chanda",
@@ -734,7 +734,7 @@
     },
     {
       "voter_id": "SP5074253",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Viveka Pamdeya",
       "relation_type": "Father",
       "relation_name": "Mukesha Pamdeya",
@@ -745,7 +745,7 @@
     },
     {
       "voter_id": "SP3722287",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Asha Devi",
       "relation_type": "Husband",
       "relation_name": "Rama Vijaya Chauhana",
@@ -756,7 +756,7 @@
     },
     {
       "voter_id": "ISP3580552",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Suraja Chauhana",
       "relation_type": "Father",
       "relation_name": "Sva. Khetahu Chauhana",
@@ -767,7 +767,7 @@
     },
     {
       "voter_id": "DWAQ573302",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Kaushalya",
       "relation_type": "Husband",
       "relation_name": "Ramabelasa",
@@ -778,7 +778,7 @@
     },
     {
       "voter_id": "DWQ3373624",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Tara Devi",
       "relation_type": "Husband",
       "relation_name": "Shambhunatha",
@@ -789,7 +789,7 @@
     },
     {
       "voter_id": "DWQ267287",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Dipu",
       "relation_type": "Father",
       "relation_name": "Suresha",
@@ -800,7 +800,7 @@
     },
     {
       "voter_id": "ISP7489053",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Shipu Chauhana",
       "relation_type": "Father",
       "relation_name": "Suresha Chauhana",
@@ -811,7 +811,7 @@
     },
     {
       "voter_id": "ISP3867058",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Nirmala",
       "relation_type": "Husband",
       "relation_name": "Chamdrashekhara",
@@ -822,7 +822,7 @@
     },
     {
       "voter_id": "SP2894475",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Sonu Chauhana",
       "relation_type": "Father",
       "relation_name": "Rama Nivasa Chauhana",
@@ -833,7 +833,7 @@
     },
     {
       "voter_id": "ISP289475",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Vindravati Devi",
       "relation_type": "Father",
       "relation_name": "Ghure",
@@ -844,7 +844,7 @@
     },
     {
       "voter_id": "ISP3528372",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Durgavati Devi",
       "relation_type": "Husband",
       "relation_name": "Ramesha Prajapati",
@@ -855,7 +855,7 @@
     },
     {
       "voter_id": "ISP229525",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Triloki",
       "relation_type": "Father",
       "relation_name": "Jokhana",
@@ -866,7 +866,7 @@
     },
     {
       "voter_id": "SP2295269",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Sima Praja",
       "relation_type": "Husband",
       "relation_name": "Radheshyama",
@@ -877,7 +877,7 @@
     },
     {
       "voter_id": "ISP3930088",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Chamdani Chauhana",
       "house_number": "47",
       "age": 28,
@@ -886,7 +886,7 @@
     },
     {
       "voter_id": "DWA207382",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Ramavati",
       "relation_type": "Father",
       "relation_name": "Govinda",
@@ -897,7 +897,7 @@
     },
     {
       "voter_id": "DWAQ267206",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Durgavati",
       "relation_type": "Father",
       "relation_name": "Radheshyama Pam",
@@ -908,7 +908,7 @@
     },
     {
       "voter_id": "DWQ333874",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Khemachandra",
       "relation_type": "Father",
       "relation_name": "Rameshvara",
@@ -919,7 +919,7 @@
     },
     {
       "voter_id": "ISP025397",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Ashisha Praja",
       "relation_type": "Father",
       "relation_name": "Radheshyama",
@@ -930,7 +930,7 @@
     },
     {
       "voter_id": "ISP7492453",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Ra La Praja",
       "relation_type": "Father",
       "relation_name": "Ramasarana Prajapati Pam",
@@ -941,7 +941,7 @@
     },
     {
       "voter_id": "DWA2777384",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Ramaphera",
       "relation_type": "Father",
       "relation_name": "Gobinda",
@@ -952,7 +952,7 @@
     },
     {
       "voter_id": "PWAR327840",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Ramasarana",
       "relation_type": "Father",
       "relation_name": "Govinda",
@@ -963,7 +963,7 @@
     },
     {
       "voter_id": "SP7957973",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Jugani",
       "relation_type": "Father",
       "relation_name": "Ghure",
@@ -974,7 +974,7 @@
     },
     {
       "voter_id": "ISP0257405",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Asha Devi",
       "relation_type": "Husband",
       "relation_name": "Bharata",
@@ -985,7 +985,7 @@
     },
     {
       "voter_id": "ISP2295244",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Rajakamala",
       "relation_type": "Father",
       "relation_name": "Jokhana",
@@ -996,7 +996,7 @@
     },
     {
       "voter_id": "ISP325064",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Durgavati Devi",
       "relation_type": "Father",
       "relation_name": "Ra La Prajapati",
@@ -1007,7 +1007,7 @@
     },
     {
       "voter_id": "ISP3250772",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Kranti Devi",
       "relation_type": "Husband",
       "relation_name": "Samtaraja Prajapati",
@@ -1018,7 +1018,7 @@
     },
     {
       "voter_id": "ISP4347928",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Manorama Devi",
       "relation_type": "Father",
       "relation_name": "Rambhoja Prajapati",
@@ -1029,7 +1029,7 @@
     },
     {
       "voter_id": "DWQ2672020",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Sonakali",
       "relation_type": "Husband",
       "relation_name": "Mahendra",
@@ -1040,7 +1040,7 @@
     },
     {
       "voter_id": "SP3250780",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Rima Devi",
       "relation_type": "Husband",
       "relation_name": "Madana Prajapati",
@@ -1051,7 +1051,7 @@
     },
     {
       "voter_id": "DWA3467479",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Virendra",
       "relation_type": "Father",
       "relation_name": "Bog",
@@ -1062,7 +1062,7 @@
     },
     {
       "voter_id": "DWA3467396",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Navami",
       "relation_type": "Father",
       "relation_name": "Achaivara",
@@ -1073,7 +1073,7 @@
     },
     {
       "voter_id": "SP4696035",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Shanideva Praja",
       "relation_type": "Father",
       "relation_name": "Rama Bhoja Prajapati",
@@ -1084,7 +1084,7 @@
     },
     {
       "voter_id": "SP472329",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Rimki Praja",
       "relation_type": "Father",
       "relation_name": "Shri Krshna",
@@ -1095,7 +1095,7 @@
     },
     {
       "voter_id": "ISP3528296",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Sijavati Devi",
       "relation_type": "Father",
       "relation_name": "Achaivara Qi",
@@ -1106,7 +1106,7 @@
     },
     {
       "voter_id": "ISP4723540",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Sanni Praja",
       "relation_type": "Father",
       "relation_name": "Rudala Prajapati |",
@@ -1117,7 +1117,7 @@
     },
     {
       "voter_id": "ISP0679239",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Ganatokha",
       "relation_type": "Father",
       "relation_name": "Guruja Q",
@@ -1128,7 +1128,7 @@
     },
     {
       "voter_id": "DWQ3467230",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Dhurapa Chandra",
       "relation_type": "Father",
       "relation_name": "Ramasare",
@@ -1139,7 +1139,7 @@
     },
     {
       "voter_id": "DWQ3373574",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Vindu",
       "relation_type": "Husband",
       "relation_name": "Gulaba",
@@ -1150,7 +1150,7 @@
     },
     {
       "voter_id": "DWQ3373582",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Radhika",
       "relation_type": "Husband",
       "relation_name": "Samjaya",
@@ -1161,7 +1161,7 @@
     },
     {
       "voter_id": "ISP3580560",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Amita Praja",
       "relation_type": "Father",
       "relation_name": "Ramabhajana",
@@ -1172,7 +1172,7 @@
     },
     {
       "voter_id": "SP4722302",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Sarita Praja",
       "relation_type": "Father",
       "relation_name": "Rama Bhajana",
@@ -1183,7 +1183,7 @@
     },
     {
       "voter_id": "DWA2672998",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Mahendra",
       "relation_type": "Father",
       "relation_name": "Rama Hari",
@@ -1194,7 +1194,7 @@
     },
     {
       "voter_id": "DWA267972",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Jnanadhari",
       "relation_type": "Husband",
       "relation_name": "Makara",
@@ -1205,7 +1205,7 @@
     },
     {
       "voter_id": "ISP0257454",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Madana Praja",
       "relation_type": "Father",
       "relation_name": "Beg",
@@ -1216,7 +1216,7 @@
     },
     {
       "voter_id": "DWAQ328038",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Sudami",
       "relation_type": "Husband",
       "relation_name": "Rama Asera...",
@@ -1227,7 +1227,7 @@
     },
     {
       "voter_id": "DWQ3467354",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Gulaba Lala",
       "relation_type": "Father",
       "relation_name": "Rama Daresha",
@@ -1238,7 +1238,7 @@
     },
     {
       "voter_id": "DWA3467289",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Samjaya",
       "relation_type": "Father",
       "relation_name": "Rama Daresha",
@@ -1249,7 +1249,7 @@
     },
     {
       "voter_id": "ISP0257447",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Babalu Praja",
       "relation_type": "Father",
       "relation_name": "Ganesha",
@@ -1260,7 +1260,7 @@
     },
     {
       "voter_id": "ISP4585840",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Puja Praja",
       "relation_type": "Father",
       "relation_name": "Shivanatha",
@@ -1271,7 +1271,7 @@
     },
     {
       "voter_id": "DWQ3373699",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Shobha",
       "relation_type": "Father",
       "relation_name": "Ramadavana",
@@ -1282,7 +1282,7 @@
     },
     {
       "voter_id": "ISP3930633",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Ro Ta Rasa Bimdu",
       "relation_type": "Father",
       "relation_name": "Viremdra Kumara Sharma",
@@ -1293,7 +1293,7 @@
     },
     {
       "voter_id": "DWQ277228",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Vijaya Narayana",
       "relation_type": "Father",
       "relation_name": "Ramavrxa",
@@ -1304,7 +1304,7 @@
     },
     {
       "voter_id": "DWQ2734069",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Ramasimha",
       "relation_type": "Father",
       "relation_name": "Parasa",
@@ -1315,7 +1315,7 @@
     },
     {
       "voter_id": "DWAQ2677980",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Jhinaku",
       "relation_type": "Father",
       "relation_name": "Molai",
@@ -1326,7 +1326,7 @@
     },
     {
       "voter_id": "DWQ3467305",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Jayahinda",
       "relation_type": "Father",
       "relation_name": "Ramadavana Qi",
@@ -1337,7 +1337,7 @@
     },
     {
       "voter_id": "ISP069205",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Sunita Devi",
       "relation_type": "Husband",
       "relation_name": "Mendra",
@@ -1348,7 +1348,7 @@
     },
     {
       "voter_id": "ISP4953579",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Gayatri",
       "relation_type": "Husband",
       "relation_name": "Guddu Prajapati",
@@ -1359,7 +1359,7 @@
     },
     {
       "voter_id": "DWA2772459",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Kaushilya Devi",
       "relation_type": "Husband",
       "relation_name": "Ramamilana",
@@ -1369,7 +1369,7 @@
     },
     {
       "voter_id": "DWA2027242",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Memdra Kumara Praja",
       "relation_type": "Father",
       "relation_name": "Sirisa Prajapati",
@@ -1380,7 +1380,7 @@
     },
     {
       "voter_id": "SP2053577",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Anita Devi",
       "relation_type": "Husband",
       "relation_name": "Yedra Pa",
@@ -1391,7 +1391,7 @@
     },
     {
       "voter_id": "DWQ7328335",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Subhavati",
       "relation_type": "Husband",
       "relation_name": "Ramadavana",
@@ -1402,7 +1402,7 @@
     },
     {
       "voter_id": "DWQ267733",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Lalasha Devi",
       "relation_type": "Husband",
       "relation_name": "Jhinaku",
@@ -1413,7 +1413,7 @@
     },
     {
       "voter_id": "DWA2672923",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Paramila",
       "relation_type": "Husband",
       "relation_name": "Dilipa",
@@ -1424,7 +1424,7 @@
     },
     {
       "voter_id": "SP393064",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Pratima Vishvakarma",
       "relation_type": "Father",
       "relation_name": "Molai",
@@ -1435,7 +1435,7 @@
     },
     {
       "voter_id": "DWQ2734036",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Paramila",
       "relation_type": "Husband",
       "relation_name": "Rudala",
@@ -1446,7 +1446,7 @@
     },
     {
       "voter_id": "DWA277202",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Prema Narayana",
       "relation_type": "Father",
       "relation_name": "Ramavrxa",
@@ -1456,7 +1456,7 @@
     },
     {
       "voter_id": "ISP325098",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Kabita Devi",
       "relation_type": "Husband",
       "relation_name": "Sunila Prajapati",
@@ -1466,7 +1466,7 @@
     },
     {
       "voter_id": "ISP4348009",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Sonu Kumara Praja",
       "relation_type": "Father",
       "relation_name": "Ramavadha",
@@ -1477,7 +1477,7 @@
     },
     {
       "voter_id": "SP032437",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Nirmala Praja",
       "relation_type": "Father",
       "relation_name": "Shiva Prasada",
@@ -1488,7 +1488,7 @@
     },
     {
       "voter_id": "ISP3250206",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Babita Praja",
       "relation_type": "Husband",
       "relation_name": "Chamdana Prajapati",
@@ -1499,7 +1499,7 @@
     },
     {
       "voter_id": "ISP2894483",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Virendra Praja",
       "relation_type": "Father",
       "relation_name": "Bajaramgi Lala",
@@ -1510,7 +1510,7 @@
     },
     {
       "voter_id": "ISP3580487",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Viveka Prajapati",
       "relation_type": "Father",
       "relation_name": "Ghanashyama Prajapati Pa",
@@ -1520,7 +1520,7 @@
     },
     {
       "voter_id": "DWQ2734028",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Sita",
       "relation_type": "Father",
       "relation_name": "Aed",
@@ -1530,7 +1530,7 @@
     },
     {
       "voter_id": "ISP325024",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Tribhuvana Praja",
       "relation_type": "Father",
       "relation_name": "Ramavadha Prajapati",
@@ -1541,7 +1541,7 @@
     },
     {
       "voter_id": "ISP4348090",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Sunita",
       "relation_type": "Husband",
       "relation_name": "Tribhuvana Prajapati",
@@ -1552,7 +1552,7 @@
     },
     {
       "voter_id": "ISP4783270",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Sumitra",
       "relation_type": "Father",
       "relation_name": "Shiva Prasada",
@@ -1563,7 +1563,7 @@
     },
     {
       "voter_id": "SP0679247",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Dayananda",
       "relation_type": "Father",
       "relation_name": "Svaminatha",
@@ -1573,7 +1573,7 @@
     },
     {
       "voter_id": "ISP3528254",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Durgavati Devi",
       "relation_type": "Father",
       "relation_name": "ares",
@@ -1584,7 +1584,7 @@
     },
     {
       "voter_id": "DWA267252",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Pushpa",
       "relation_type": "Father",
       "relation_name": "Savamre",
@@ -1595,7 +1595,7 @@
     },
     {
       "voter_id": "ISP0679262",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Indrajita",
       "relation_type": "Father",
       "relation_name": "Ramadulare",
@@ -1605,7 +1605,7 @@
     },
     {
       "voter_id": "WAS900747",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Dinanatha",
       "relation_type": "Father",
       "relation_name": "Ramadhana",
@@ -1616,7 +1616,7 @@
     },
     {
       "voter_id": "DWA277533",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Chandravati",
       "relation_type": "Husband",
       "relation_name": "Dinanatha",
@@ -1627,7 +1627,7 @@
     },
     {
       "voter_id": "ISP0679254",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Satisha",
       "relation_type": "Father",
       "relation_name": "Bajaramgilala",
@@ -1638,7 +1638,7 @@
     },
     {
       "voter_id": "DWA2777392",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Premashila",
       "relation_type": "Husband",
       "relation_name": "Jogindra",
@@ -1649,7 +1649,7 @@
     },
     {
       "voter_id": "DWQ277566",
-      "part_number": 24,
+      "part_number": 21,
       "name": "Jayanarayana",
       "relation_type": "Father",
       "relation_name": "Ramavrxa",
@@ -1660,7 +1660,7 @@
     },
     {
       "voter_id": "DWQ3467362",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Raju",
@@ -1673,7 +1673,7 @@
     },
     {
       "voter_id": "DWA207070",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Shambha",
@@ -1686,7 +1686,7 @@
     },
     {
       "voter_id": "DWA2006674",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Atula Kumara",
@@ -1699,7 +1699,7 @@
     },
     {
       "voter_id": "DWQI968494",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Shravana Kumara",
@@ -1712,7 +1712,7 @@
     },
     {
       "voter_id": "ISP7488923",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Ashisha Praja",
@@ -1725,7 +1725,7 @@
     },
     {
       "voter_id": "ISP2053783",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Janmejaya Praja",
@@ -1736,7 +1736,7 @@
     },
     {
       "voter_id": "DWQ3467297",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Ramakanta",
@@ -1749,7 +1749,7 @@
     },
     {
       "voter_id": "ISP0257462",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Punama",
@@ -1762,7 +1762,7 @@
     },
     {
       "voter_id": "ISP0679288",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Prahalada",
@@ -1775,7 +1775,7 @@
     },
     {
       "voter_id": "DWA2772293",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Asha",
@@ -1788,7 +1788,7 @@
     },
     {
       "voter_id": "DWQ2076566",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Samtosha",
@@ -1801,7 +1801,7 @@
     },
     {
       "voter_id": "ISP069452",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Arati",
@@ -1814,7 +1814,7 @@
     },
     {
       "voter_id": "SP027775",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Amgada",
@@ -1827,7 +1827,7 @@
     },
     {
       "voter_id": "ISP7680560",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Shamadeva",
@@ -1840,7 +1840,7 @@
     },
     {
       "voter_id": "BWA204447",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Dasharatha",
@@ -1853,7 +1853,7 @@
     },
     {
       "voter_id": "DWQ206848",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Ramakarana",
@@ -1866,7 +1866,7 @@
     },
     {
       "voter_id": "ISP025496",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Kavita",
@@ -1879,7 +1879,7 @@
     },
     {
       "voter_id": "ISP0225995",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Samtosha Kumara Gau.da",
@@ -1892,7 +1892,7 @@
     },
     {
       "voter_id": "ISP3250222",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "faft",
@@ -1905,7 +1905,7 @@
     },
     {
       "voter_id": "ISP4348066",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Rukamani",
@@ -1918,7 +1918,7 @@
     },
     {
       "voter_id": "ISP3867796",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Jnamti Bhatiya",
@@ -1931,7 +1931,7 @@
     },
     {
       "voter_id": "DWA2777434",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Rajakumara",
@@ -1944,7 +1944,7 @@
     },
     {
       "voter_id": "ISP3250230",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Kirana Devi",
@@ -1957,7 +1957,7 @@
     },
     {
       "voter_id": "ISP0679304",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Amjali",
@@ -1970,7 +1970,7 @@
     },
     {
       "voter_id": "DWQ7326693",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Chauthi",
@@ -1983,7 +1983,7 @@
     },
     {
       "voter_id": "DWQ277343",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Asha",
@@ -1996,7 +1996,7 @@
     },
     {
       "voter_id": "DWAQ2702605",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Rajesha",
@@ -2009,7 +2009,7 @@
     },
     {
       "voter_id": "ISP2295343",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Sarita",
@@ -2022,7 +2022,7 @@
     },
     {
       "voter_id": "ISP4975578",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Ravi Kumara",
@@ -2035,7 +2035,7 @@
     },
     {
       "voter_id": "DWAS3400744",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Indrajita",
@@ -2048,7 +2048,7 @@
     },
     {
       "voter_id": "ISP495534",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Mamata Devi",
@@ -2061,7 +2061,7 @@
     },
     {
       "voter_id": "DWWA340730",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Madhuri",
@@ -2074,7 +2074,7 @@
     },
     {
       "voter_id": "SP025520",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Anila Chauhana",
@@ -2087,7 +2087,7 @@
     },
     {
       "voter_id": "ISP4635232",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Saloni Devi",
@@ -2100,7 +2100,7 @@
     },
     {
       "voter_id": "DWQ328632",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Ramavrxa",
@@ -2113,7 +2113,7 @@
     },
     {
       "voter_id": "WA2777478",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Ramavarana",
@@ -2126,7 +2126,7 @@
     },
     {
       "voter_id": "ISP3580826",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Avinasha Chauhana",
@@ -2139,7 +2139,7 @@
     },
     {
       "voter_id": "ISP025546",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Atula Kumara Pandeya",
@@ -2152,7 +2152,7 @@
     },
     {
       "voter_id": "BWA202768",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Sabaramati",
@@ -2165,7 +2165,7 @@
     },
     {
       "voter_id": "DWQ2672665",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Ramajagana",
@@ -2178,7 +2178,7 @@
     },
     {
       "voter_id": "SP7489244",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Pushpa Chauhana",
@@ -2191,7 +2191,7 @@
     },
     {
       "voter_id": "ISP492537",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Krnna Chauhana",
@@ -2204,7 +2204,7 @@
     },
     {
       "voter_id": "ISP4723300",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Nitisha Kumara Pandeya",
@@ -2217,7 +2217,7 @@
     },
     {
       "voter_id": "ISP748906",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Anita Chauhana",
@@ -2230,7 +2230,7 @@
     },
     {
       "voter_id": "ISP025538",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Ramajna Chauhana",
@@ -2243,7 +2243,7 @@
     },
     {
       "voter_id": "ISP350502",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Suraja Chauhana",
@@ -2256,7 +2256,7 @@
     },
     {
       "voter_id": "ISP4937447",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Puja Chauhana",
@@ -2269,7 +2269,7 @@
     },
     {
       "voter_id": "PWA204223",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Mithilesha Devi",
@@ -2282,7 +2282,7 @@
     },
     {
       "voter_id": "ISP4723268",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Neha Pandeya",
@@ -2295,7 +2295,7 @@
     },
     {
       "voter_id": "ISP7492545",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Ujjavala Pandeya",
@@ -2308,7 +2308,7 @@
     },
     {
       "voter_id": "SP3580727",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Rtvika Kumara",
@@ -2321,7 +2321,7 @@
     },
     {
       "voter_id": "ISP3250248",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Shubhanatha Praja",
@@ -2334,7 +2334,7 @@
     },
     {
       "voter_id": "SP7680578",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Jagadihasha Narayana Sharma",
@@ -2347,7 +2347,7 @@
     },
     {
       "voter_id": "ISP680602",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Abhisheka Sharma",
@@ -2360,7 +2360,7 @@
     },
     {
       "voter_id": "DWQ3323877",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Ramachala",
@@ -2373,7 +2373,7 @@
     },
     {
       "voter_id": "DWQI326834",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Vipinakumara",
@@ -2386,7 +2386,7 @@
     },
     {
       "voter_id": "ISP7492552",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Gumja Devi",
@@ -2399,7 +2399,7 @@
     },
     {
       "voter_id": "ISP4778554",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Minu",
@@ -2412,7 +2412,7 @@
     },
     {
       "voter_id": "ISP7680628",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Gudadana Sharma",
@@ -2425,7 +2425,7 @@
     },
     {
       "voter_id": "ISP7084029",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Akimta Pandeya",
@@ -2438,7 +2438,7 @@
     },
     {
       "voter_id": "DWQI573336",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Vimdyachala",
@@ -2451,7 +2451,7 @@
     },
     {
       "voter_id": "ISP2295350",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Oma Prakasha",
@@ -2464,7 +2464,7 @@
     },
     {
       "voter_id": "ISP3443322",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Pamkaja Sharma",
@@ -2477,7 +2477,7 @@
     },
     {
       "voter_id": "ISP4797946",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Sudhira Gupta",
@@ -2490,7 +2490,7 @@
     },
     {
       "voter_id": "DWQ7326958",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Ramananda",
@@ -2501,7 +2501,7 @@
     },
     {
       "voter_id": "DWA3373400",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Shrimati Kisamati",
@@ -2514,7 +2514,7 @@
     },
     {
       "voter_id": "DWQ2074546",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Kalavati",
@@ -2527,7 +2527,7 @@
     },
     {
       "voter_id": "DWAQ327709",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Vimala",
@@ -2538,7 +2538,7 @@
     },
     {
       "voter_id": "ISP2295368",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Pushpa Devi",
@@ -2551,7 +2551,7 @@
     },
     {
       "voter_id": "ISP325027",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Durgavati Devi Gupta",
@@ -2564,7 +2564,7 @@
     },
     {
       "voter_id": "ISP379476",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Ra La",
@@ -2577,7 +2577,7 @@
     },
     {
       "voter_id": "ISP3580578",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Premasagara Praja",
@@ -2590,7 +2590,7 @@
     },
     {
       "voter_id": "DWQ2733996",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Kanhaiya Lala",
@@ -2603,7 +2603,7 @@
     },
     {
       "voter_id": "SP3250263",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Raju Gupta",
@@ -2616,7 +2616,7 @@
     },
     {
       "voter_id": "SP4838975",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Jyoti Gupta",
@@ -2629,7 +2629,7 @@
     },
     {
       "voter_id": "DWA327782",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Oma Prakasha",
@@ -2642,7 +2642,7 @@
     },
     {
       "voter_id": "ISP0349456",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Brahamadeva Sharma",
@@ -2655,7 +2655,7 @@
     },
     {
       "voter_id": "SP3722436",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Ravindra Kamara",
@@ -2668,7 +2668,7 @@
     },
     {
       "voter_id": "DWO3373665",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Mamju",
@@ -2681,7 +2681,7 @@
     },
     {
       "voter_id": "DWQ7328676",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Ran{}jana",
@@ -2694,7 +2694,7 @@
     },
     {
       "voter_id": "DWQ346732",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Kanamati",
@@ -2707,7 +2707,7 @@
     },
     {
       "voter_id": "ISP0349464",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Samgita Devi 80",
@@ -2719,7 +2719,7 @@
     },
     {
       "voter_id": "SP3867090",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Rana Jita Yadava",
@@ -2732,7 +2732,7 @@
     },
     {
       "voter_id": "DWAQ327063",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Rajarama",
@@ -2745,7 +2745,7 @@
     },
     {
       "voter_id": "DWQ2672368",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Lila",
@@ -2758,7 +2758,7 @@
     },
     {
       "voter_id": "DWA3400876",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Chandra Prakasha",
@@ -2771,7 +2771,7 @@
     },
     {
       "voter_id": "DWAQ3400884",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Vijaya Prakasha",
@@ -2784,7 +2784,7 @@
     },
     {
       "voter_id": "ISP4586996",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Sonama Devi",
@@ -2797,7 +2797,7 @@
     },
     {
       "voter_id": "ISP3396694",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Priti Sharma",
@@ -2810,7 +2810,7 @@
     },
     {
       "voter_id": "ISP325033",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Anamika Mishra",
@@ -2823,7 +2823,7 @@
     },
     {
       "voter_id": "ISP3250289",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Aruna Yadava",
@@ -2836,7 +2836,7 @@
     },
     {
       "voter_id": "SP2894723",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Punama Sharma",
@@ -2849,7 +2849,7 @@
     },
     {
       "voter_id": "ISP3250305",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Dhirendra Mishra",
@@ -2862,7 +2862,7 @@
     },
     {
       "voter_id": "ISP325032",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Priya Mishra",
@@ -2875,7 +2875,7 @@
     },
     {
       "voter_id": "ISP069403",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Ramesha",
@@ -2888,7 +2888,7 @@
     },
     {
       "voter_id": "SP2053775",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Soni Devi",
@@ -2901,7 +2901,7 @@
     },
     {
       "voter_id": "SP3250297",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 2,
       "section_name": "Bargadwa Hindustan Press",
       "name": "Shila Mishra",
@@ -2914,7 +2914,7 @@
     },
     {
       "voter_id": "DWA327857",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Isharavati",
@@ -2927,7 +2927,7 @@
     },
     {
       "voter_id": "DWQ3467495",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Mavoti",
@@ -2940,7 +2940,7 @@
     },
     {
       "voter_id": "ISP0333393",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Rajesha",
@@ -2953,7 +2953,7 @@
     },
     {
       "voter_id": "SP3250347",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Sudha Devi",
@@ -2966,7 +2966,7 @@
     },
     {
       "voter_id": "ISP7488949",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Raju Gupta",
@@ -2979,7 +2979,7 @@
     },
     {
       "voter_id": "ISP2894509",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Sumita Gupta",
@@ -2992,7 +2992,7 @@
     },
     {
       "voter_id": "ISP7680636",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Ramaratana Chauhana",
@@ -3005,7 +3005,7 @@
     },
     {
       "voter_id": "DWQ3467263",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Sunila",
@@ -3018,7 +3018,7 @@
     },
     {
       "voter_id": "SP2295376",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Shila Devi",
@@ -3031,7 +3031,7 @@
     },
     {
       "voter_id": "ISP2894525",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Rina Praja",
@@ -3044,7 +3044,7 @@
     },
     {
       "voter_id": "ISP3250339",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Vinita Devi",
@@ -3057,7 +3057,7 @@
     },
     {
       "voter_id": "ISP289457",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Rajadeva Gupta",
@@ -3070,7 +3070,7 @@
     },
     {
       "voter_id": "DWQ3467404",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Dilipa",
@@ -3083,7 +3083,7 @@
     },
     {
       "voter_id": "SP027768",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Girajesha",
@@ -3096,7 +3096,7 @@
     },
     {
       "voter_id": "ISP3580545",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Vrjesha Kumara Praja",
@@ -3109,7 +3109,7 @@
     },
     {
       "voter_id": "ISP3580586",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Amita Praja",
@@ -3122,7 +3122,7 @@
     },
     {
       "voter_id": "ISP2594505",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Samjaya Kumara Chau I",
@@ -3135,7 +3135,7 @@
     },
     {
       "voter_id": "SP444323",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Gudiya Kumari",
@@ -3146,7 +3146,7 @@
     },
     {
       "voter_id": "ISP2594554",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Raja",
@@ -3159,7 +3159,7 @@
     },
     {
       "voter_id": "DWA3373822",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Hemanta",
@@ -3172,7 +3172,7 @@
     },
     {
       "voter_id": "ISP2594588",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Satyama Yadava",
@@ -3185,7 +3185,7 @@
     },
     {
       "voter_id": "ISP289454",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Jamala",
@@ -3198,7 +3198,7 @@
     },
     {
       "voter_id": "SP4858387",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Puja Kasaudhana",
@@ -3211,7 +3211,7 @@
     },
     {
       "voter_id": "ISP4348025",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Shaktimana Praja",
@@ -3224,7 +3224,7 @@
     },
     {
       "voter_id": "ISP2594539",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Suresha Mahato",
@@ -3237,7 +3237,7 @@
     },
     {
       "voter_id": "ISP2594562",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Kajala Yadava",
@@ -3250,7 +3250,7 @@
     },
     {
       "voter_id": "DWQ3373830",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Kumuda Lata",
@@ -3263,7 +3263,7 @@
     },
     {
       "voter_id": "ISP7488790",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Nilama Mishra",
@@ -3276,7 +3276,7 @@
     },
     {
       "voter_id": "ISP2594596",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Uma Shukla",
@@ -3289,7 +3289,7 @@
     },
     {
       "voter_id": "ISP2594620",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Jnanendra Tripathi",
@@ -3302,7 +3302,7 @@
     },
     {
       "voter_id": "ISP2594646",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Sima Praja",
@@ -3315,7 +3315,7 @@
     },
     {
       "voter_id": "ISP4985925",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Monu Amsari",
@@ -3328,7 +3328,7 @@
     },
     {
       "voter_id": "ISP3867082",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Satyama Yadava",
@@ -3341,7 +3341,7 @@
     },
     {
       "voter_id": "SP259452",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Sarita Devi",
@@ -3354,7 +3354,7 @@
     },
     {
       "voter_id": "ISP4426300",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Manisha Prajapati",
@@ -3367,7 +3367,7 @@
     },
     {
       "voter_id": "DWQ3373848",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Satisha",
@@ -3380,7 +3380,7 @@
     },
     {
       "voter_id": "SP2594604",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Kamini Gauda",
@@ -3393,7 +3393,7 @@
     },
     {
       "voter_id": "ISP2594638",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Shashi Prabha Tripathi",
@@ -3406,7 +3406,7 @@
     },
     {
       "voter_id": "ISP2894533",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Ja Da Ansari",
@@ -3419,7 +3419,7 @@
     },
     {
       "voter_id": "DWQ2672533",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Urmila",
@@ -3432,7 +3432,7 @@
     },
     {
       "voter_id": "SP2295384",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Ramjita",
@@ -3445,7 +3445,7 @@
     },
     {
       "voter_id": "ISP2894566",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Chandrabhana Sahani",
@@ -3458,7 +3458,7 @@
     },
     {
       "voter_id": "ISP2894590",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Bharata Muni Chauhana",
@@ -3471,7 +3471,7 @@
     },
     {
       "voter_id": "ISP386708",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Shani Chauhana",
@@ -3484,7 +3484,7 @@
     },
     {
       "voter_id": "ISP2894608",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Kaushala Kishora",
@@ -3497,7 +3497,7 @@
     },
     {
       "voter_id": "ISP3250354",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Sumana Vishvakarma",
@@ -3510,7 +3510,7 @@
     },
     {
       "voter_id": "ISP3930609",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Sanatana Gupta",
@@ -3523,7 +3523,7 @@
     },
     {
       "voter_id": "ISP3250388",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Subasa Chanda Gupta",
@@ -3536,7 +3536,7 @@
     },
     {
       "voter_id": "SP3898277",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Yogemdra Gupta",
@@ -3549,7 +3549,7 @@
     },
     {
       "voter_id": "SP2894582",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Narada Muni",
@@ -3562,7 +3562,7 @@
     },
     {
       "voter_id": "ISP388570",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Vaibhava Simha Chauhana",
@@ -3575,7 +3575,7 @@
     },
     {
       "voter_id": "ISP4465936",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Akasha Chau I",
@@ -3588,7 +3588,7 @@
     },
     {
       "voter_id": "ISP4846283",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Akhamda Jyoti Mani Chaturvedi",
@@ -3601,7 +3601,7 @@
     },
     {
       "voter_id": "ISP2894632",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Ashvani Kumara Simha",
@@ -3614,7 +3614,7 @@
     },
     {
       "voter_id": "SP2894707",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Aravinda Sharma",
@@ -3627,7 +3627,7 @@
     },
     {
       "voter_id": "ISP393059",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Shobha Gupta",
@@ -3640,7 +3640,7 @@
     },
     {
       "voter_id": "ISP3250404",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Aravinda Gupta",
@@ -3653,7 +3653,7 @@
     },
     {
       "voter_id": "ISP025595",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Sunila Kumara Chau I",
@@ -3666,7 +3666,7 @@
     },
     {
       "voter_id": "SP3897348",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Nilama Kumari",
@@ -3679,7 +3679,7 @@
     },
     {
       "voter_id": "ISP2894574",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Radhika Devi",
@@ -3692,7 +3692,7 @@
     },
     {
       "voter_id": "ISP388562",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Punama Simha Chauhana",
@@ -3705,7 +3705,7 @@
     },
     {
       "voter_id": "ISP4845426",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Sushila Chaturvedi",
@@ -3718,7 +3718,7 @@
     },
     {
       "voter_id": "SP2694640",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Ramanivasa Simha",
@@ -3731,7 +3731,7 @@
     },
     {
       "voter_id": "SP4072807",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Yamini Simha",
@@ -3744,7 +3744,7 @@
     },
     {
       "voter_id": "ISP3897306",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Amkita Chauhana",
@@ -3757,7 +3757,7 @@
     },
     {
       "voter_id": "ISP3250464",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Premalata Simha",
@@ -3770,7 +3770,7 @@
     },
     {
       "voter_id": "ISP3396769",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Mina Vishvakarma",
@@ -3783,7 +3783,7 @@
     },
     {
       "voter_id": "ISP3930286",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Sumana Shrivastava",
@@ -3796,7 +3796,7 @@
     },
     {
       "voter_id": "ISP3580644",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Abhayaraja Vishvakarma",
@@ -3809,7 +3809,7 @@
     },
     {
       "voter_id": "ISP2295400",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Raju",
@@ -3822,7 +3822,7 @@
     },
     {
       "voter_id": "DWA2672202",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Sunaina",
@@ -3835,7 +3835,7 @@
     },
     {
       "voter_id": "ISP957775",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Shashiprabha Mishra",
@@ -3848,7 +3848,7 @@
     },
     {
       "voter_id": "ISP3396868",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Omkara Varma",
@@ -3861,7 +3861,7 @@
     },
     {
       "voter_id": "ISP3396736",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Vikasa Vishvakarma",
@@ -3874,7 +3874,7 @@
     },
     {
       "voter_id": "ISP339675",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Kaushilya Devi",
@@ -3887,7 +3887,7 @@
     },
     {
       "voter_id": "ISP3396686",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Sonu Vishvakarma",
@@ -3900,7 +3900,7 @@
     },
     {
       "voter_id": "ISP372226",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Sarita Pandeya",
@@ -3913,7 +3913,7 @@
     },
     {
       "voter_id": "ISP3930070",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Shivani Shrivastava",
@@ -3926,7 +3926,7 @@
     },
     {
       "voter_id": "ISP3250420",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Ashutosha Kumara Mishra",
@@ -3939,7 +3939,7 @@
     },
     {
       "voter_id": "SP3580677",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Pimki Mishra",
@@ -3952,7 +3952,7 @@
     },
     {
       "voter_id": "ISP4059960",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Shreya Ajita Sariya",
@@ -3965,7 +3965,7 @@
     },
     {
       "voter_id": "ISP3396835",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Anubha Varma",
@@ -3978,7 +3978,7 @@
     },
     {
       "voter_id": "ISP5059092",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Vishala Varma",
@@ -3991,7 +3991,7 @@
     },
     {
       "voter_id": "ISP3396777",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Ravi Vishvakarma",
@@ -4004,7 +4004,7 @@
     },
     {
       "voter_id": "ISP4573382",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Dhiraja Kumara",
@@ -4017,7 +4017,7 @@
     },
     {
       "voter_id": "ISP3722279",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Amita Kumara",
@@ -4030,7 +4030,7 @@
     },
     {
       "voter_id": "ISP358065",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Savita Simha",
@@ -4043,7 +4043,7 @@
     },
     {
       "voter_id": "ISP069502",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Vishnu Prasada",
@@ -4056,7 +4056,7 @@
     },
     {
       "voter_id": "ISP3443298",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Sudhakara Tivari",
@@ -4069,7 +4069,7 @@
     },
     {
       "voter_id": "ISP3443306",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Abhisheka Kumara Tivari",
@@ -4082,7 +4082,7 @@
     },
     {
       "voter_id": "ISP256725",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Ramakesha",
@@ -4095,7 +4095,7 @@
     },
     {
       "voter_id": "SP2894053",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Niraja Kumara",
@@ -4108,7 +4108,7 @@
     },
     {
       "voter_id": "ISP7083765",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Ashoka",
@@ -4121,7 +4121,7 @@
     },
     {
       "voter_id": "ISP2560845",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Dhiraja Kumara",
@@ -4134,7 +4134,7 @@
     },
     {
       "voter_id": "ISP0006098",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Roshana",
@@ -4147,7 +4147,7 @@
     },
     {
       "voter_id": "SP3843372",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Roshana Lala",
@@ -4160,7 +4160,7 @@
     },
     {
       "voter_id": "ISP4844395",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Amjali",
@@ -4173,7 +4173,7 @@
     },
     {
       "voter_id": "SP2567223",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Pushpa Devi",
@@ -4186,7 +4186,7 @@
     },
     {
       "voter_id": "SP2894020",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Ay Devi",
@@ -4199,7 +4199,7 @@
     },
     {
       "voter_id": "ISP2295426",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Lalati",
@@ -4212,7 +4212,7 @@
     },
     {
       "voter_id": "ISP2053809",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Avinasha Praja",
@@ -4225,7 +4225,7 @@
     },
     {
       "voter_id": "SP2295434",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Shamima Khatuna",
@@ -4238,7 +4238,7 @@
     },
     {
       "voter_id": "SP2295467",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Sana",
@@ -4251,7 +4251,7 @@
     },
     {
       "voter_id": "ISP3867066",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Nebulala",
@@ -4264,7 +4264,7 @@
     },
     {
       "voter_id": "ISP3458775",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Nandalala Gupta",
@@ -4277,7 +4277,7 @@
     },
     {
       "voter_id": "ISP3250446",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Vinaya Kumara Chauhana",
@@ -4290,7 +4290,7 @@
     },
     {
       "voter_id": "ISP2894046",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Priti Bharati",
@@ -4303,7 +4303,7 @@
     },
     {
       "voter_id": "SP2295478",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Vijaya",
@@ -4316,7 +4316,7 @@
     },
     {
       "voter_id": "SP4496097",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Ramjana Simha",
@@ -4329,7 +4329,7 @@
     },
     {
       "voter_id": "ISP2043222",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Ra La Kumara Chau I",
@@ -4342,7 +4342,7 @@
     },
     {
       "voter_id": "ISP476896",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Samjaya Kumara",
@@ -4355,7 +4355,7 @@
     },
     {
       "voter_id": "ISP3355435",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Champa Devi",
@@ -4368,7 +4368,7 @@
     },
     {
       "voter_id": "SP3458797",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Mahendra Kumara Gupta",
@@ -4381,7 +4381,7 @@
     },
     {
       "voter_id": "SP3458783",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Mamju Gupta",
@@ -4394,7 +4394,7 @@
     },
     {
       "voter_id": "ISSP3930054",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Sushila Kumara Shrivastava",
@@ -4407,7 +4407,7 @@
     },
     {
       "voter_id": "ISP3930625",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Punita Shrivastava",
@@ -4420,7 +4420,7 @@
     },
     {
       "voter_id": "SP3250438",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Yogendara Gauda",
@@ -4433,7 +4433,7 @@
     },
     {
       "voter_id": "ISP2295475",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Vijaya Prakasa",
@@ -4446,7 +4446,7 @@
     },
     {
       "voter_id": "ISP4863593",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Alaka Simha",
@@ -4459,7 +4459,7 @@
     },
     {
       "voter_id": "ISP3930039",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Chamdani Shrivastava",
@@ -4472,7 +4472,7 @@
     },
     {
       "voter_id": "ISP7488998",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Puja Gauda",
@@ -4485,7 +4485,7 @@
     },
     {
       "voter_id": "ISP757976",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Shashi Devi",
@@ -4498,7 +4498,7 @@
     },
     {
       "voter_id": "ISP757932",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Nirmala Gau.da",
@@ -4511,7 +4511,7 @@
     },
     {
       "voter_id": "ISP757874",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Sonu Mishra",
@@ -4524,7 +4524,7 @@
     },
     {
       "voter_id": "ISP3930047",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Saroja Shrivastava",
@@ -4537,7 +4537,7 @@
     },
     {
       "voter_id": "ISP3930073",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Sumita Shrivastava",
@@ -4550,7 +4550,7 @@
     },
     {
       "voter_id": "ISP7797825",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Dipa Narayana",
@@ -4563,7 +4563,7 @@
     },
     {
       "voter_id": "ISPI957882",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Bharata Mishra",
@@ -4576,7 +4576,7 @@
     },
     {
       "voter_id": "ISP5066576",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Ramayana",
@@ -4589,7 +4589,7 @@
     },
     {
       "voter_id": "ISP4702056",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Sumana Chauhana",
@@ -4602,7 +4602,7 @@
     },
     {
       "voter_id": "SP2052900",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Shiva Kumara Yadava",
@@ -4615,7 +4615,7 @@
     },
     {
       "voter_id": "ISP745903",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Punama Yadava",
@@ -4628,7 +4628,7 @@
     },
     {
       "voter_id": "ISP2052926",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 3,
       "section_name": "banyan tree bengali garden",
       "name": "Shobha Yadava",
@@ -4641,7 +4641,7 @@
     },
     {
       "voter_id": "ISP223076",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Vindravati Devi",
@@ -4654,7 +4654,7 @@
     },
     {
       "voter_id": "SP4982773",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Naitika Yadava",
@@ -4667,7 +4667,7 @@
     },
     {
       "voter_id": "ISP4584736",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Sumita Gupta",
@@ -4680,7 +4680,7 @@
     },
     {
       "voter_id": "ISP4268686",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Priyamshu Gautama",
@@ -4693,7 +4693,7 @@
     },
     {
       "voter_id": "ISP4832556",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Divya Bharati",
@@ -4706,7 +4706,7 @@
     },
     {
       "voter_id": "ISP4442976",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Suraja Dube",
@@ -4719,7 +4719,7 @@
     },
     {
       "voter_id": "ISP223032",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Kailasha Simha",
@@ -4732,7 +4732,7 @@
     },
     {
       "voter_id": "ISP4637800",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Mamjari Rava",
@@ -4743,7 +4743,7 @@
     },
     {
       "voter_id": "SP4574687",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Sagara Praja",
@@ -4756,7 +4756,7 @@
     },
     {
       "voter_id": "SP4347977",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Ayusha Shrivastava",
@@ -4769,7 +4769,7 @@
     },
     {
       "voter_id": "ISP447903",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Mahima Yadava",
@@ -4782,7 +4782,7 @@
     },
     {
       "voter_id": "ISP0678645",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Mrdula Kumara",
@@ -4795,7 +4795,7 @@
     },
     {
       "voter_id": "ISP4970588",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Biremdra Prasada",
@@ -4808,7 +4808,7 @@
     },
     {
       "voter_id": "ISP488972",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Anila Chau I",
@@ -4821,7 +4821,7 @@
     },
     {
       "voter_id": "ISP3960473",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Abhishta Simga",
@@ -4832,7 +4832,7 @@
     },
     {
       "voter_id": "SP4640579",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Tusha Shrivastava",
@@ -4845,7 +4845,7 @@
     },
     {
       "voter_id": "ISP2723024",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Vishala Simha",
@@ -4858,7 +4858,7 @@
     },
     {
       "voter_id": "SP2295483",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Raja Kumari",
@@ -4871,7 +4871,7 @@
     },
     {
       "voter_id": "ISP0679296",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Ramapratapa",
@@ -4884,7 +4884,7 @@
     },
     {
       "voter_id": "ISP3250255",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Urmila Devi",
@@ -4897,7 +4897,7 @@
     },
     {
       "voter_id": "ISP493323",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Tesha Kumara",
@@ -4910,7 +4910,7 @@
     },
     {
       "voter_id": "ISP748902",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Sadhana Devi",
@@ -4923,7 +4923,7 @@
     },
     {
       "voter_id": "ISP4640553",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Axita Shrivastava",
@@ -4936,7 +4936,7 @@
     },
     {
       "voter_id": "SP4723524",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Ravi Praja",
@@ -4949,7 +4949,7 @@
     },
     {
       "voter_id": "ISP4696530",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Mohammada Aizana Ahamada",
@@ -4962,7 +4962,7 @@
     },
     {
       "voter_id": "ISP2232908",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Brjesha Kumara Raya",
@@ -4975,7 +4975,7 @@
     },
     {
       "voter_id": "ISP4896296",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Amkura Kumara",
@@ -4988,7 +4988,7 @@
     },
     {
       "voter_id": "ISP4470266",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Vinoda Shrivastava",
@@ -5001,7 +5001,7 @@
     },
     {
       "voter_id": "ISP4087698",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Saketa Shrivastava",
@@ -5014,7 +5014,7 @@
     },
     {
       "voter_id": "ISP4696076",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Sarasvati Patava",
@@ -5027,7 +5027,7 @@
     },
     {
       "voter_id": "ISP5057765",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Anu Vishvakarma",
@@ -5040,7 +5040,7 @@
     },
     {
       "voter_id": "ISP707530",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Jaya Prakasha Gupta",
@@ -5053,7 +5053,7 @@
     },
     {
       "voter_id": "SP2232890",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Rita Raya",
@@ -5066,7 +5066,7 @@
     },
     {
       "voter_id": "ISP4896304",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Anamta Kumara",
@@ -5079,7 +5079,7 @@
     },
     {
       "voter_id": "ISP2232882",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Sudhira Kumara Raya",
@@ -5092,7 +5092,7 @@
     },
     {
       "voter_id": "ISP467054",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Manisha Sharma",
@@ -5105,7 +5105,7 @@
     },
     {
       "voter_id": "SP4697728",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Shikha Shrivastava",
@@ -5118,7 +5118,7 @@
     },
     {
       "voter_id": "ISP0847285",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Kirana Lala Shri0",
@@ -5131,7 +5131,7 @@
     },
     {
       "voter_id": "ISP4824769",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Arpana Chaube",
@@ -5144,7 +5144,7 @@
     },
     {
       "voter_id": "ISP4696068",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Krshna Patava",
@@ -5157,7 +5157,7 @@
     },
     {
       "voter_id": "ISP4896288",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Amkita Kumara",
@@ -5170,7 +5170,7 @@
     },
     {
       "voter_id": "ISP097487",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Tripurari Sharana Shri0",
@@ -5183,7 +5183,7 @@
     },
     {
       "voter_id": "SP2284495",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Dhana Ji",
@@ -5196,7 +5196,7 @@
     },
     {
       "voter_id": "ISP3959285",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Abhaya Kumara Simga",
@@ -5209,7 +5209,7 @@
     },
     {
       "voter_id": "ISP506532",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Priyamka Pamdeya",
@@ -5222,7 +5222,7 @@
     },
     {
       "voter_id": "SP4978938",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Priyamka Yadava",
@@ -5235,7 +5235,7 @@
     },
     {
       "voter_id": "ISP4449435",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Shreyamsha Gomda",
@@ -5248,7 +5248,7 @@
     },
     {
       "voter_id": "SP449748",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Sne La Tripathi",
@@ -5259,7 +5259,7 @@
     },
     {
       "voter_id": "ISP975200",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Shyama Mishra",
@@ -5272,7 +5272,7 @@
     },
     {
       "voter_id": "ISP7492503",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Sunila",
@@ -5284,7 +5284,7 @@
     },
     {
       "voter_id": "ISP7488824",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Mina Devi",
@@ -5296,7 +5296,7 @@
     },
     {
       "voter_id": "ISP489087",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Lalamati",
@@ -5309,7 +5309,7 @@
     },
     {
       "voter_id": "ISP7488964",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Rajesha Gauda",
@@ -5322,7 +5322,7 @@
     },
     {
       "voter_id": "ISP7489236",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Sonama Devi",
@@ -5334,7 +5334,7 @@
     },
     {
       "voter_id": "SP4487997",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Chaya Devi",
@@ -5347,7 +5347,7 @@
     },
     {
       "voter_id": "ISP7492495",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Rajiya Khatuna",
@@ -5360,7 +5360,7 @@
     },
     {
       "voter_id": "ISP472952",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Manoja Kumara",
@@ -5373,7 +5373,7 @@
     },
     {
       "voter_id": "ISP748893",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Aruna Kumara",
@@ -5386,7 +5386,7 @@
     },
     {
       "voter_id": "ISP200239",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Hamsavasini Praja",
@@ -5398,7 +5398,7 @@
     },
     {
       "voter_id": "ISP229530",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Ramakarana",
@@ -5411,7 +5411,7 @@
     },
     {
       "voter_id": "ISP7489095",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Ramjana Devi",
@@ -5424,7 +5424,7 @@
     },
     {
       "voter_id": "ISP7489038",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Maina Devi",
@@ -5436,7 +5436,7 @@
     },
     {
       "voter_id": "SP3327533",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Shivachanda",
@@ -5449,7 +5449,7 @@
     },
     {
       "voter_id": "ISP5030556",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Amita Kumara Shrivastava",
@@ -5462,7 +5462,7 @@
     },
     {
       "voter_id": "HGV3728854",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Shambhu Sharana Gomda",
@@ -5475,7 +5475,7 @@
     },
     {
       "voter_id": "ISP4684387",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Bamdana Tivari",
@@ -5488,7 +5488,7 @@
     },
     {
       "voter_id": "SP2232874",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Anita Raya",
@@ -5501,7 +5501,7 @@
     },
     {
       "voter_id": "ISP2295285",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Ganesha",
@@ -5514,7 +5514,7 @@
     },
     {
       "voter_id": "ISP2295293",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Ramarati",
@@ -5527,7 +5527,7 @@
     },
     {
       "voter_id": "ISP229539",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Vindu",
@@ -5539,7 +5539,7 @@
     },
     {
       "voter_id": "SP332754",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Kalpana Yadava",
@@ -5552,7 +5552,7 @@
     },
     {
       "voter_id": "ISP4442687",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Dhiraja Kumara Gupta",
@@ -5563,7 +5563,7 @@
     },
     {
       "voter_id": "ISP4458360",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Amju Jha",
@@ -5576,7 +5576,7 @@
     },
     {
       "voter_id": "ISP4443040",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Ruchi Dube",
@@ -5589,7 +5589,7 @@
     },
     {
       "voter_id": "ISP4774709",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Arya Shrivastava",
@@ -5602,7 +5602,7 @@
     },
     {
       "voter_id": "SP4696746",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Ramjita Kumara",
@@ -5615,7 +5615,7 @@
     },
     {
       "voter_id": "ISP4587366",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Gayatri Simha",
@@ -5628,7 +5628,7 @@
     },
     {
       "voter_id": "ISP4486908",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Monu Simga",
@@ -5641,7 +5641,7 @@
     },
     {
       "voter_id": "ISP4702064",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Dharamavati Devi",
@@ -5654,7 +5654,7 @@
     },
     {
       "voter_id": "ISP4924789",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Vijaya Laxmi",
@@ -5667,7 +5667,7 @@
     },
     {
       "voter_id": "SP4470258",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Krisha Shrivastava",
@@ -5680,7 +5680,7 @@
     },
     {
       "voter_id": "ISP5068283",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Nitina Yadava",
@@ -5693,7 +5693,7 @@
     },
     {
       "voter_id": "SP4448767",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Madhuri Vishvakarma",
@@ -5706,7 +5706,7 @@
     },
     {
       "voter_id": "SP4445300",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Kaustuka Dvivedi",
@@ -5719,7 +5719,7 @@
     },
     {
       "voter_id": "SP2223485",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Shveta Pandeya",
@@ -5732,7 +5732,7 @@
     },
     {
       "voter_id": "SP496083",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Bulata",
@@ -5745,7 +5745,7 @@
     },
     {
       "voter_id": "ISP5078624",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Ser der",
@@ -5758,7 +5758,7 @@
     },
     {
       "voter_id": "ISP573749",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Dixa Chauhana",
@@ -5771,7 +5771,7 @@
     },
     {
       "voter_id": "ISP576243",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Satyama Kashaudhana",
@@ -5784,7 +5784,7 @@
     },
     {
       "voter_id": "ISP576847",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Badala Sonakara",
@@ -5797,7 +5797,7 @@
     },
     {
       "voter_id": "ISP5784445",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Amshumana Dvivedi",
@@ -5810,7 +5810,7 @@
     },
     {
       "voter_id": "ISP5785830",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Sumana Mishra",
@@ -5821,7 +5821,7 @@
     },
     {
       "voter_id": "ISP578684",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Brjesha Praja",
@@ -5834,7 +5834,7 @@
     },
     {
       "voter_id": "SP5097977",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Soni",
@@ -5847,7 +5847,7 @@
     },
     {
       "voter_id": "ISP538052",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Kanhaiya Lala Pamdeya",
@@ -5860,7 +5860,7 @@
     },
     {
       "voter_id": "SP577683",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Ayushmana Sonakara",
@@ -5873,7 +5873,7 @@
     },
     {
       "voter_id": "ISP5776862",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Arumdhati Raya",
@@ -5886,7 +5886,7 @@
     },
     {
       "voter_id": "ISP584460",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Siddhi Mishra",
@@ -5899,7 +5899,7 @@
     },
     {
       "voter_id": "ISP5786077",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Amjali Arya",
@@ -5912,7 +5912,7 @@
     },
     {
       "voter_id": "ISP5786200",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Renu Praja",
@@ -5925,7 +5925,7 @@
     },
     {
       "voter_id": "ISP543300",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Shiva Chauhana",
@@ -5938,7 +5938,7 @@
     },
     {
       "voter_id": "ISP577682",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Krti Raya",
@@ -5951,7 +5951,7 @@
     },
     {
       "voter_id": "ISP5785778",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Axendu",
@@ -5964,7 +5964,7 @@
     },
     {
       "voter_id": "ISP5786743",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Shivamsha Pamdeya",
@@ -5977,7 +5977,7 @@
     },
     {
       "voter_id": "ISP5786333",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Kanakalata Dube",
@@ -5990,7 +5990,7 @@
     },
     {
       "voter_id": "ISP5786895",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Shiva Prasada Praja",
@@ -6003,7 +6003,7 @@
     },
     {
       "voter_id": "ISP5787448",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Jitemdara Kumara Gauda",
@@ -6016,7 +6016,7 @@
     },
     {
       "voter_id": "ISP5788925",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Jayavira Gupta",
@@ -6029,7 +6029,7 @@
     },
     {
       "voter_id": "ISP589576",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Ritesha",
@@ -6042,7 +6042,7 @@
     },
     {
       "voter_id": "ISP5257944",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Samgita Prakasha",
@@ -6055,7 +6055,7 @@
     },
     {
       "voter_id": "ISP5307624",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Intayaja",
@@ -6068,7 +6068,7 @@
     },
     {
       "voter_id": "ISP5786952",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Gat Mati Pamdeya",
@@ -6081,7 +6081,7 @@
     },
     {
       "voter_id": "SP5787570",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Dinanatha Praja",
@@ -6094,7 +6094,7 @@
     },
     {
       "voter_id": "ISP588669",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Divyamsha Tivari",
@@ -6107,7 +6107,7 @@
     },
     {
       "voter_id": "ISP5260229",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Kamalesha Kumara Chau I",
@@ -6118,7 +6118,7 @@
     },
     {
       "voter_id": "ISP5290242",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Naremdra Vishvakarma",
@@ -6131,7 +6131,7 @@
     },
     {
       "voter_id": "ISP5307665",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Roja Khatuna",
@@ -6144,7 +6144,7 @@
     },
     {
       "voter_id": "SP5787232",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Shreya Dvivedi",
@@ -6157,7 +6157,7 @@
     },
     {
       "voter_id": "SP5788057",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Bhupesha Kumara",
@@ -6170,7 +6170,7 @@
     },
     {
       "voter_id": "ISP5789568",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Gauri Shamkara Mishra",
@@ -6181,7 +6181,7 @@
     },
     {
       "voter_id": "ISP5789709",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Naitika Yadava Yadava",
@@ -6194,7 +6194,7 @@
     },
     {
       "voter_id": "SP526477",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Gauri Shamkara Mishra",
@@ -6207,7 +6207,7 @@
     },
     {
       "voter_id": "ISP5297502",
-      "part_number": 24,
+      "part_number": 21,
       "section_number": 4,
       "section_name": "Bargadwa Ramleela Maidan",
       "name": "Samgita Prakasha",

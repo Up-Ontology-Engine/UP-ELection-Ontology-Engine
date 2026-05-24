@@ -4,7 +4,7 @@
     "total_pages": 42,
     "state": "Uttar Pradesh",
     "year": 2026,
-    "part_number": 4,
+    "part_number": 41,
     "assembly_constituency": {
       "number": 322,
       "name": "Gorakhpur City",
@@ -21,7 +21,7 @@
   "voter_records": [
     {
       "voter_id": "ISP2922243",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Radheshyama Praja",
@@ -34,7 +34,7 @@
     },
     {
       "voter_id": "SP268908",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Gita Mal{}la",
@@ -47,7 +47,7 @@
     },
     {
       "voter_id": "ISP3947355",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ashoka Kumara",
@@ -60,7 +60,7 @@
     },
     {
       "voter_id": "ISP292387",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Mamata Malaviya",
@@ -73,7 +73,7 @@
     },
     {
       "voter_id": "SP2923027",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Surendara Chauhana",
@@ -86,7 +86,7 @@
     },
     {
       "voter_id": "SP2923878",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Krshna Kumara Malaviya",
@@ -99,7 +99,7 @@
     },
     {
       "voter_id": "SP269344",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Fare Devi",
@@ -112,7 +112,7 @@
     },
     {
       "voter_id": "ISP222859",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Gita Jaisavala",
@@ -125,7 +125,7 @@
     },
     {
       "voter_id": "ISP7690858",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Animesha Shrivastava",
@@ -138,7 +138,7 @@
     },
     {
       "voter_id": "ISP742063",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Phulamati Devi",
@@ -151,7 +151,7 @@
     },
     {
       "voter_id": "ISP2922250",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Shamti Devi",
@@ -164,7 +164,7 @@
     },
     {
       "voter_id": "SP2228609",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Dhruva Prasada Jaisavala",
@@ -177,7 +177,7 @@
     },
     {
       "voter_id": "ISP2068427",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Jashoda Devi",
@@ -190,7 +190,7 @@
     },
     {
       "voter_id": "ISP292369",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ramjana Tripathi",
@@ -203,7 +203,7 @@
     },
     {
       "voter_id": "ISP292362",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Mahendra Kumara",
@@ -216,7 +216,7 @@
     },
     {
       "voter_id": "SP447900",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Sima Chau I",
@@ -229,7 +229,7 @@
     },
     {
       "voter_id": "ISP268759",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Pramodashamkara",
@@ -242,7 +242,7 @@
     },
     {
       "voter_id": "ISP268882",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Tht Shamkara Mal{}la",
@@ -255,7 +255,7 @@
     },
     {
       "voter_id": "SP2923795",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ramesha Chanda Malaviya",
@@ -268,7 +268,7 @@
     },
     {
       "voter_id": "ISP2564565",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Heat Devi",
@@ -281,7 +281,7 @@
     },
     {
       "voter_id": "ISP292393",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Sudhira Tripathi",
@@ -294,7 +294,7 @@
     },
     {
       "voter_id": "ISP2923886",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Madhu Malaviya",
@@ -307,7 +307,7 @@
     },
     {
       "voter_id": "SP2309730",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Shabbhu",
@@ -320,7 +320,7 @@
     },
     {
       "voter_id": "ISP5027776",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Radhika",
@@ -333,7 +333,7 @@
     },
     {
       "voter_id": "SP2309755",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Mira",
@@ -346,7 +346,7 @@
     },
     {
       "voter_id": "ISP0988246",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ay Chauhana",
@@ -359,7 +359,7 @@
     },
     {
       "voter_id": "SP0988253",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Satisha Chauhana",
@@ -372,7 +372,7 @@
     },
     {
       "voter_id": "SP2922276",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Rajakumara Praja",
@@ -385,7 +385,7 @@
     },
     {
       "voter_id": "ISP292383",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Anjali Devi",
@@ -398,7 +398,7 @@
     },
     {
       "voter_id": "SP2922292",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Laxmina Devi",
@@ -411,7 +411,7 @@
     },
     {
       "voter_id": "ISP7742352",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Durgesha",
@@ -424,7 +424,7 @@
     },
     {
       "voter_id": "ISP7747629",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Soni Devi",
@@ -437,7 +437,7 @@
     },
     {
       "voter_id": "SP292263",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Narada Chauhana",
@@ -450,7 +450,7 @@
     },
     {
       "voter_id": "ISP690874",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Vishala Tripathi",
@@ -463,7 +463,7 @@
     },
     {
       "voter_id": "ISP4875304",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Samjila Bharati",
@@ -476,7 +476,7 @@
     },
     {
       "voter_id": "ISP2923480",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Shubhama Yadava",
@@ -489,7 +489,7 @@
     },
     {
       "voter_id": "ISP2922664",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Pratibha Chauhana",
@@ -502,7 +502,7 @@
     },
     {
       "voter_id": "ISP2922839",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Anupama Gupta",
@@ -515,7 +515,7 @@
     },
     {
       "voter_id": "ISP2923498",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Kajala Yadava",
@@ -528,7 +528,7 @@
     },
     {
       "voter_id": "ISP2678833",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Sima",
@@ -541,7 +541,7 @@
     },
     {
       "voter_id": "ISP7747404",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Akhilesha Kumara",
@@ -554,7 +554,7 @@
     },
     {
       "voter_id": "SP2929087",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Anila Chauhana",
@@ -567,7 +567,7 @@
     },
     {
       "voter_id": "ISP3947926",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Amita",
@@ -580,7 +580,7 @@
     },
     {
       "voter_id": "SP098826",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Bhalu Kumara Chauhana",
@@ -593,7 +593,7 @@
     },
     {
       "voter_id": "ISP488255",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Soniya Chauhana",
@@ -606,7 +606,7 @@
     },
     {
       "voter_id": "SP4742048",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ramesha",
@@ -619,7 +619,7 @@
     },
     {
       "voter_id": "SP267850",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Vishala Chauhana",
@@ -632,7 +632,7 @@
     },
     {
       "voter_id": "SP3947397",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Akamxa",
@@ -645,7 +645,7 @@
     },
     {
       "voter_id": "ISP2679328",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Vikasa Chau I",
@@ -658,7 +658,7 @@
     },
     {
       "voter_id": "ISP2678585",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Rajata Chauhana",
@@ -671,7 +671,7 @@
     },
     {
       "voter_id": "SP4993747",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Arati Sharma",
@@ -684,7 +684,7 @@
     },
     {
       "voter_id": "ISP4772649",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Shivama Sharma",
@@ -697,7 +697,7 @@
     },
     {
       "voter_id": "ISP5008867",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Pragati Ramdana Bharati",
@@ -710,7 +710,7 @@
     },
     {
       "voter_id": "ISP747693",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ashisha Chau I",
@@ -723,7 +723,7 @@
     },
     {
       "voter_id": "ISP742394",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Vikki",
@@ -736,7 +736,7 @@
     },
     {
       "voter_id": "ISP268270",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Akasha Jayasavala",
@@ -749,7 +749,7 @@
     },
     {
       "voter_id": "ISP2922649",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Amgada Chauhana",
@@ -762,7 +762,7 @@
     },
     {
       "voter_id": "ISP495596",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Puja Jayasa",
@@ -775,7 +775,7 @@
     },
     {
       "voter_id": "ISP292294",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Kishana Bharati",
@@ -788,7 +788,7 @@
     },
     {
       "voter_id": "ISP4966628",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Kavita Sonakara",
@@ -801,7 +801,7 @@
     },
     {
       "voter_id": "SP4507794",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Saxi Chauhana",
@@ -814,7 +814,7 @@
     },
     {
       "voter_id": "ISPI742436",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Pashpu",
@@ -827,7 +827,7 @@
     },
     {
       "voter_id": "SP2922870",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ravi Chauhana",
@@ -840,7 +840,7 @@
     },
     {
       "voter_id": "ISP5027735",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Jyoti Chauhana",
@@ -853,7 +853,7 @@
     },
     {
       "voter_id": "SP292283",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Harshila Gupta",
@@ -866,7 +866,7 @@
     },
     {
       "voter_id": "SP4798578",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Siddhiqa Raja Simghaniya",
@@ -879,7 +879,7 @@
     },
     {
       "voter_id": "DWAI096890",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Avadhesha",
@@ -892,7 +892,7 @@
     },
     {
       "voter_id": "DWQ403690",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Sushila",
@@ -905,7 +905,7 @@
     },
     {
       "voter_id": "ISP3443348",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Anila Kumara Chau I",
@@ -918,7 +918,7 @@
     },
     {
       "voter_id": "ISP4884482",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Raja Kumara",
@@ -931,7 +931,7 @@
     },
     {
       "voter_id": "ISP7502830",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Pintu Chauhana",
@@ -944,7 +944,7 @@
     },
     {
       "voter_id": "ISP2068393",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Amita Kumara Kannaujiya",
@@ -957,7 +957,7 @@
     },
     {
       "voter_id": "SP4320248",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Sumana",
@@ -970,7 +970,7 @@
     },
     {
       "voter_id": "ISP2309702",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Offer Chauhana",
@@ -983,7 +983,7 @@
     },
     {
       "voter_id": "DWQI096882",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Shanti",
@@ -996,7 +996,7 @@
     },
     {
       "voter_id": "SP4940672",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ayusha Chau I",
@@ -1009,7 +1009,7 @@
     },
     {
       "voter_id": "ISP2068369",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Motilala",
@@ -1022,7 +1022,7 @@
     },
     {
       "voter_id": "ISP2068385",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Da. Suji Kumara",
@@ -1035,7 +1035,7 @@
     },
     {
       "voter_id": "ISP005370",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Oq Chaughari",
@@ -1048,7 +1048,7 @@
     },
     {
       "voter_id": "ISP2003838",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Rajesha Chau I",
@@ -1061,7 +1061,7 @@
     },
     {
       "voter_id": "DWQI096858",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Sharadadevi",
@@ -1074,7 +1074,7 @@
     },
     {
       "voter_id": "SP4884607",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ku Khushabu",
@@ -1087,7 +1087,7 @@
     },
     {
       "voter_id": "ISP2309203",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Rap",
@@ -1100,7 +1100,7 @@
     },
     {
       "voter_id": "SP206849",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Pal{}lavi Chau I",
@@ -1113,7 +1113,7 @@
     },
     {
       "voter_id": "ISP267553",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Bhavana Chau I",
@@ -1126,7 +1126,7 @@
     },
     {
       "voter_id": "ISP4446803",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Adarsha Chau I",
@@ -1139,7 +1139,7 @@
     },
     {
       "voter_id": "ISP292997",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Sima Chau I",
@@ -1152,7 +1152,7 @@
     },
     {
       "voter_id": "SP2004497",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Akita Chau I",
@@ -1165,7 +1165,7 @@
     },
     {
       "voter_id": "DWQI525633",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Jagadisha",
@@ -1178,7 +1178,7 @@
     },
     {
       "voter_id": "SP267775",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Kavita",
@@ -1191,7 +1191,7 @@
     },
     {
       "voter_id": "ISP2679260",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Satisha Sharma",
@@ -1204,7 +1204,7 @@
     },
     {
       "voter_id": "ISP230929",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Pramila Chau I",
@@ -1217,7 +1217,7 @@
     },
     {
       "voter_id": "ISP3582848",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Shila",
@@ -1230,7 +1230,7 @@
     },
     {
       "voter_id": "ISP0930297",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Paradeshi",
@@ -1243,7 +1243,7 @@
     },
     {
       "voter_id": "ISP690965",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Vinoda Kumara Simha",
@@ -1256,7 +1256,7 @@
     },
     {
       "voter_id": "SP4630797",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Arati Sharma",
@@ -1269,7 +1269,7 @@
     },
     {
       "voter_id": "SP2309227",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Shrimati Samju",
@@ -1282,7 +1282,7 @@
     },
     {
       "voter_id": "ISP2004539",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Vaibhava Chau I",
@@ -1295,7 +1295,7 @@
     },
     {
       "voter_id": "ISP267736",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Xitija",
@@ -1308,7 +1308,7 @@
     },
     {
       "voter_id": "ISP0930305",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Janaki Devi",
@@ -1321,7 +1321,7 @@
     },
     {
       "voter_id": "SP2309235",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Minadevi",
@@ -1334,7 +1334,7 @@
     },
     {
       "voter_id": "ISP2679005",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ajita Bharati",
@@ -1347,7 +1347,7 @@
     },
     {
       "voter_id": "ISP4895773",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ramjana Kumari",
@@ -1360,7 +1360,7 @@
     },
     {
       "voter_id": "ISP2068336",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Chandrabhushana",
@@ -1373,7 +1373,7 @@
     },
     {
       "voter_id": "ISP292796",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ret Chauhana",
@@ -1386,7 +1386,7 @@
     },
     {
       "voter_id": "ISP3729365",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Jagadisha Kumara Bharati",
@@ -1399,7 +1399,7 @@
     },
     {
       "voter_id": "ISP3729464",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Shani",
@@ -1412,7 +1412,7 @@
     },
     {
       "voter_id": "ISP4762498",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Neha",
@@ -1425,7 +1425,7 @@
     },
     {
       "voter_id": "ISP4738050",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Raja Kumara",
@@ -1438,7 +1438,7 @@
     },
     {
       "voter_id": "SP2922557",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Vijaya Kumara Upadhyaya",
@@ -1451,7 +1451,7 @@
     },
     {
       "voter_id": "SP4822706",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Anila Chauhana",
@@ -1464,7 +1464,7 @@
     },
     {
       "voter_id": "ISP3729373",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Pimki Devi",
@@ -1477,7 +1477,7 @@
     },
     {
       "voter_id": "ISP4279436",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Kamchana",
@@ -1490,7 +1490,7 @@
     },
     {
       "voter_id": "ISP325536",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Murari Kumara",
@@ -1503,7 +1503,7 @@
     },
     {
       "voter_id": "ISP0930274",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Saroja Devi",
@@ -1516,7 +1516,7 @@
     },
     {
       "voter_id": "ISP4738589",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Monika Chauhana",
@@ -1529,7 +1529,7 @@
     },
     {
       "voter_id": "ISP769084",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Sunita Varma",
@@ -1542,7 +1542,7 @@
     },
     {
       "voter_id": "ISP0232595",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Nirmala Devi",
@@ -1555,7 +1555,7 @@
     },
     {
       "voter_id": "ISP4672875",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Vimalesha Kumara",
@@ -1568,7 +1568,7 @@
     },
     {
       "voter_id": "SP427940",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Juganu",
@@ -1581,7 +1581,7 @@
     },
     {
       "voter_id": "SP4675407",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ra La Chauhana",
@@ -1594,7 +1594,7 @@
     },
     {
       "voter_id": "ISP397689",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Svaprila Gupta",
@@ -1607,7 +1607,7 @@
     },
     {
       "voter_id": "ISP3729480",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ashoka Kumara",
@@ -1620,7 +1620,7 @@
     },
     {
       "voter_id": "ISP4528956",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Nirmala Chau I",
@@ -1633,7 +1633,7 @@
     },
     {
       "voter_id": "SP2309078",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Vinoda Chauhana",
@@ -1646,7 +1646,7 @@
     },
     {
       "voter_id": "ISP358956",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Atula Prakasha Shrivastava",
@@ -1659,7 +1659,7 @@
     },
     {
       "voter_id": "ISP2677504",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Laxmi",
@@ -1672,7 +1672,7 @@
     },
     {
       "voter_id": "ISP3729506",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Raubina Jayavala",
@@ -1685,7 +1685,7 @@
     },
     {
       "voter_id": "ISP3255296",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Aradhana",
@@ -1698,7 +1698,7 @@
     },
     {
       "voter_id": "ISP4728267",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Viveka Chauhana",
@@ -1711,7 +1711,7 @@
     },
     {
       "voter_id": "ISP3976997",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Kishana Kannaujiya",
@@ -1724,7 +1724,7 @@
     },
     {
       "voter_id": "ISP4735635",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Kirana Jayasavala",
@@ -1737,7 +1737,7 @@
     },
     {
       "voter_id": "SP3729472",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Manorama Devi",
@@ -1750,7 +1750,7 @@
     },
     {
       "voter_id": "ISP3976909",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Radhika Chauhana",
@@ -1763,7 +1763,7 @@
     },
     {
       "voter_id": "ISP4692885",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Aniketa",
@@ -1776,7 +1776,7 @@
     },
     {
       "voter_id": "ISP4756383",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Sa La Kumara Bharati",
@@ -1789,7 +1789,7 @@
     },
     {
       "voter_id": "SP4886297",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Samjita Chauhana",
@@ -1802,7 +1802,7 @@
     },
     {
       "voter_id": "SP476257",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Kisana Chamdra",
@@ -1815,7 +1815,7 @@
     },
     {
       "voter_id": "ISP2309052",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Virendra Pandeya",
@@ -1828,7 +1828,7 @@
     },
     {
       "voter_id": "DWAI090570",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Madana",
@@ -1841,7 +1841,7 @@
     },
     {
       "voter_id": "SP4278255",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Rachana Kumari",
@@ -1854,7 +1854,7 @@
     },
     {
       "voter_id": "SP4632972",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Tushara Chauhana",
@@ -1867,7 +1867,7 @@
     },
     {
       "voter_id": "ISP4886289",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Manajita Chauhana",
@@ -1880,7 +1880,7 @@
     },
     {
       "voter_id": "DWA093004",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Durapata",
@@ -1893,7 +1893,7 @@
     },
     {
       "voter_id": "DWQI092436",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Sikandara",
@@ -1906,7 +1906,7 @@
     },
     {
       "voter_id": "DWQI096367",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ramavati Devi",
@@ -1919,7 +1919,7 @@
     },
     {
       "voter_id": "ISP2923084",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Rimku Chauhana",
@@ -1932,7 +1932,7 @@
     },
     {
       "voter_id": "SP2923068",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Amjali Chauhana",
@@ -1945,7 +1945,7 @@
     },
     {
       "voter_id": "ISP372938",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Harishachandra Bharati",
@@ -1958,7 +1958,7 @@
     },
     {
       "voter_id": "SP4762472",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Saroja",
@@ -1971,7 +1971,7 @@
     },
     {
       "voter_id": "DWWA4036950",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Chamdrashekhara",
@@ -1984,7 +1984,7 @@
     },
     {
       "voter_id": "ISP2309268",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Frat Devi",
@@ -1997,7 +1997,7 @@
     },
     {
       "voter_id": "ISP2923209",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Sonu Chauhana",
@@ -2010,7 +2010,7 @@
     },
     {
       "voter_id": "ISP230936",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Urmila",
@@ -2023,7 +2023,7 @@
     },
     {
       "voter_id": "ISP4843058",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Akamxa Chauhana",
@@ -2036,7 +2036,7 @@
     },
     {
       "voter_id": "ISP339835",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Arivanda Kumara Chauhana",
@@ -2049,7 +2049,7 @@
     },
     {
       "voter_id": "ISP489707",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Digvijaya Chauhana",
@@ -2060,7 +2060,7 @@
     },
     {
       "voter_id": "ISP292372",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Digvijaya",
@@ -2073,7 +2073,7 @@
     },
     {
       "voter_id": "DWQI627895",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Manoja",
@@ -2086,7 +2086,7 @@
     },
     {
       "voter_id": "ISP230928",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Shamkara Chauhana",
@@ -2099,7 +2099,7 @@
     },
     {
       "voter_id": "ISP2004679",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Sumera Natha Tivari",
@@ -2112,7 +2112,7 @@
     },
     {
       "voter_id": "SP2004703",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Saroja Tivari",
@@ -2125,7 +2125,7 @@
     },
     {
       "voter_id": "ISP2004638",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Pavana Kumara Tivari",
@@ -2138,7 +2138,7 @@
     },
     {
       "voter_id": "ISP3564235",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Kamala Devi",
@@ -2151,7 +2151,7 @@
     },
     {
       "voter_id": "ISP4879946",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Nagemdra",
@@ -2164,7 +2164,7 @@
     },
     {
       "voter_id": "DWQI095884",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Sona",
@@ -2177,7 +2177,7 @@
     },
     {
       "voter_id": "SP2309284",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Munna",
@@ -2190,7 +2190,7 @@
     },
     {
       "voter_id": "ISP2004653",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Prashamta Tivari",
@@ -2203,7 +2203,7 @@
     },
     {
       "voter_id": "PWAI092074",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Bechana",
@@ -2216,7 +2216,7 @@
     },
     {
       "voter_id": "SP0375762",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Amita",
@@ -2229,7 +2229,7 @@
     },
     {
       "voter_id": "SP2677405",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ajita",
@@ -2242,7 +2242,7 @@
     },
     {
       "voter_id": "ISP3885639",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Sima",
@@ -2255,7 +2255,7 @@
     },
     {
       "voter_id": "ISP4885794",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Rakesha Kumara Praja",
@@ -2268,7 +2268,7 @@
     },
     {
       "voter_id": "ISP2678064",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Samaranatha Chauhana",
@@ -2281,7 +2281,7 @@
     },
     {
       "voter_id": "SP3255387",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Priyatosha Tripathi",
@@ -2294,7 +2294,7 @@
     },
     {
       "voter_id": "ISP0075472",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Rama Bhavana",
@@ -2307,7 +2307,7 @@
     },
     {
       "voter_id": "ISP3255288",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Amara Jita Praja",
@@ -2320,7 +2320,7 @@
     },
     {
       "voter_id": "ISP0075420",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Raju Kumara",
@@ -2333,7 +2333,7 @@
     },
     {
       "voter_id": "SP4885786",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Harikesha Kumara",
@@ -2346,7 +2346,7 @@
     },
     {
       "voter_id": "DWQ2833895",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Salahanti",
@@ -2359,7 +2359,7 @@
     },
     {
       "voter_id": "ISP3255445",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Triloki Praja",
@@ -2372,7 +2372,7 @@
     },
     {
       "voter_id": "ISP502707",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ramu Praja",
@@ -2385,7 +2385,7 @@
     },
     {
       "voter_id": "ISP7502723",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Samjaya",
@@ -2398,7 +2398,7 @@
     },
     {
       "voter_id": "ISP4886024",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Offer Praja",
@@ -2411,7 +2411,7 @@
     },
     {
       "voter_id": "WA4036935",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Archana",
@@ -2424,7 +2424,7 @@
     },
     {
       "voter_id": "SP4278297",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Priti Praja",
@@ -2437,7 +2437,7 @@
     },
     {
       "voter_id": "ISP4526422",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Roshani Praja",
@@ -2450,7 +2450,7 @@
     },
     {
       "voter_id": "ISP2309060",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Surendra Chauhana",
@@ -2463,7 +2463,7 @@
     },
     {
       "voter_id": "ISP292239",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Anju",
@@ -2476,7 +2476,7 @@
     },
     {
       "voter_id": "ISP4350583",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Chamdu Chauhana",
@@ -2489,7 +2489,7 @@
     },
     {
       "voter_id": "SP472828",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Samjana Chauhana",
@@ -2502,7 +2502,7 @@
     },
     {
       "voter_id": "ISP3729233",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Prahalada",
@@ -2515,7 +2515,7 @@
     },
     {
       "voter_id": "ISP4378895",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Radhika Praja",
@@ -2528,7 +2528,7 @@
     },
     {
       "voter_id": "ISP4526474",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Krshna Praja",
@@ -2541,7 +2541,7 @@
     },
     {
       "voter_id": "ISP499320",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Aruna Praja",
@@ -2554,7 +2554,7 @@
     },
     {
       "voter_id": "DWA4036299",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Indravati",
@@ -2567,7 +2567,7 @@
     },
     {
       "voter_id": "SP292229",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Shiva",
@@ -2580,7 +2580,7 @@
     },
     {
       "voter_id": "ISP4350559",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Karishma",
@@ -2593,7 +2593,7 @@
     },
     {
       "voter_id": "ISP774636",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Kirtimana Tripathi",
@@ -2604,7 +2604,7 @@
     },
     {
       "voter_id": "ISP0233957",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Amaranatha",
@@ -2617,7 +2617,7 @@
     },
     {
       "voter_id": "SP4378887",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Vamdana Karana Praja",
@@ -2630,7 +2630,7 @@
     },
     {
       "voter_id": "SP4526380",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Jyoti Praja",
@@ -2643,7 +2643,7 @@
     },
     {
       "voter_id": "ISP2922383",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ajaya Chauhana",
@@ -2656,7 +2656,7 @@
     },
     {
       "voter_id": "ISP4350542",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Gu.diya Devi",
@@ -2669,7 +2669,7 @@
     },
     {
       "voter_id": "ISP4350567",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Rima Chauhana",
@@ -2682,7 +2682,7 @@
     },
     {
       "voter_id": "ISP4350526",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Shalu Chauhana",
@@ -2695,7 +2695,7 @@
     },
     {
       "voter_id": "SP2309300",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Durgavati",
@@ -2708,7 +2708,7 @@
     },
     {
       "voter_id": "ISP2927203",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Sunila Chauhana",
@@ -2721,7 +2721,7 @@
     },
     {
       "voter_id": "SP3976883",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Hardt",
@@ -2734,7 +2734,7 @@
     },
     {
       "voter_id": "ISP0078404",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Umesha",
@@ -2747,7 +2747,7 @@
     },
     {
       "voter_id": "ISP2678825",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Sukaya Mishra",
@@ -2760,7 +2760,7 @@
     },
     {
       "voter_id": "SP267538",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Garima Chau I",
@@ -2773,7 +2773,7 @@
     },
     {
       "voter_id": "SP267793",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Rita",
@@ -2786,7 +2786,7 @@
     },
     {
       "voter_id": "ISP7503093",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ganesha",
@@ -2799,7 +2799,7 @@
     },
     {
       "voter_id": "ISP4993762",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ramakesha Chauhana",
@@ -2812,7 +2812,7 @@
     },
     {
       "voter_id": "ISP4632808",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Krshna Chauhana",
@@ -2825,7 +2825,7 @@
     },
     {
       "voter_id": "SP2678794",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Vibha",
@@ -2838,7 +2838,7 @@
     },
     {
       "voter_id": "ISP372926",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Sibbana Chauhana",
@@ -2851,7 +2851,7 @@
     },
     {
       "voter_id": "SP3729225",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ramanarayana",
@@ -2864,7 +2864,7 @@
     },
     {
       "voter_id": "ISP0075479",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Divakara Chauhana",
@@ -2877,7 +2877,7 @@
     },
     {
       "voter_id": "ISP4979372",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Vivana Tripathi",
@@ -2890,7 +2890,7 @@
     },
     {
       "voter_id": "SP292328",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Mavira Chauhana",
@@ -2903,7 +2903,7 @@
     },
     {
       "voter_id": "SP267777",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Hajani Upadhyaya",
@@ -2914,7 +2914,7 @@
     },
     {
       "voter_id": "SP0374963",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Kusuma",
@@ -2927,7 +2927,7 @@
     },
     {
       "voter_id": "SP267742",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Dite Chauhana",
@@ -2940,7 +2940,7 @@
     },
     {
       "voter_id": "ISP268775",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Rajesha Kumara",
@@ -2953,7 +2953,7 @@
     },
     {
       "voter_id": "ISP0075464",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Dipa Raja Chauhana",
@@ -2966,7 +2966,7 @@
     },
     {
       "voter_id": "ISP2679054",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Shipra Tripathi",
@@ -2979,7 +2979,7 @@
     },
     {
       "voter_id": "ISP4632956",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Vikasa Chauhana",
@@ -2992,7 +2992,7 @@
     },
     {
       "voter_id": "ISP3570330",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Doa. Bade Lala",
@@ -3005,7 +3005,7 @@
     },
     {
       "voter_id": "ISP3570348",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Anita Maurya",
@@ -3018,7 +3018,7 @@
     },
     {
       "voter_id": "ISP5036264",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Anita 52",
@@ -3030,7 +3030,7 @@
     },
     {
       "voter_id": "SP3255437",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Samdipa Kumara",
@@ -3043,7 +3043,7 @@
     },
     {
       "voter_id": "ISP2679047",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Amita Tripathi",
@@ -3056,7 +3056,7 @@
     },
     {
       "voter_id": "ISP4859658",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ramdhya Chauhana",
@@ -3069,7 +3069,7 @@
     },
     {
       "voter_id": "SP4672997",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Gudiya Chauhana",
@@ -3082,7 +3082,7 @@
     },
     {
       "voter_id": "ISP4842894",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ro Ta",
@@ -3095,7 +3095,7 @@
     },
     {
       "voter_id": "ISP498933",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Nikhila Chauhana",
@@ -3108,7 +3108,7 @@
     },
     {
       "voter_id": "ISP469565",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Mani",
@@ -3121,7 +3121,7 @@
     },
     {
       "voter_id": "SP4509477",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Amita Kumara",
@@ -3132,7 +3132,7 @@
     },
     {
       "voter_id": "ISP503699",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Vamdana",
@@ -3145,7 +3145,7 @@
     },
     {
       "voter_id": "ISP268023",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Nisha",
@@ -3158,7 +3158,7 @@
     },
     {
       "voter_id": "ISP3255379",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Puja Simha",
@@ -3171,7 +3171,7 @@
     },
     {
       "voter_id": "ISP3729209",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Kajala Chauhana",
@@ -3184,7 +3184,7 @@
     },
     {
       "voter_id": "SP3977022",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ravimdra Chauhana",
@@ -3197,7 +3197,7 @@
     },
     {
       "voter_id": "ISP4679802",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Gunja Chauhana",
@@ -3210,7 +3210,7 @@
     },
     {
       "voter_id": "SP4846044",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Vishala",
@@ -3223,7 +3223,7 @@
     },
     {
       "voter_id": "ISP4989406",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Nikhila Chauhana",
@@ -3236,7 +3236,7 @@
     },
     {
       "voter_id": "ISP482354",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Abhinava Simha",
@@ -3247,7 +3247,7 @@
     },
     {
       "voter_id": "LGS395635",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ratnesha Kumara",
@@ -3260,7 +3260,7 @@
     },
     {
       "voter_id": "ISP4944484",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Aravinda Gupta",
@@ -3273,7 +3273,7 @@
     },
     {
       "voter_id": "ISP499904",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Da.dinesha Kumara Gupta",
@@ -3286,7 +3286,7 @@
     },
     {
       "voter_id": "ISP5007307",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Pragati Chau I",
@@ -3299,7 +3299,7 @@
     },
     {
       "voter_id": "ISP685809",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Abhisheka Vishvakarma",
@@ -3312,7 +3312,7 @@
     },
     {
       "voter_id": "ISP495736",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ramesha Kumara Shrivastava",
@@ -3323,7 +3323,7 @@
     },
     {
       "voter_id": "ISP3905809",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Amita Kumara Jayasavala",
@@ -3336,7 +3336,7 @@
     },
     {
       "voter_id": "SP497647",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Prakhara Kumara Pamdeya",
@@ -3349,7 +3349,7 @@
     },
     {
       "voter_id": "ISP7807523",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Laxmi Sharma",
@@ -3362,7 +3362,7 @@
     },
     {
       "voter_id": "ISP7499888",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Radheshyama Gupta",
@@ -3375,7 +3375,7 @@
     },
     {
       "voter_id": "ISP3578792",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Da Anila Kumara",
@@ -3388,7 +3388,7 @@
     },
     {
       "voter_id": "SP395272",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ravi Vishvakarma",
@@ -3401,7 +3401,7 @@
     },
     {
       "voter_id": "ISP4876462",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Mukesha Kumara",
@@ -3413,7 +3413,7 @@
     },
     {
       "voter_id": "ISP0274290",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Kishora Jayasavala",
@@ -3426,7 +3426,7 @@
     },
     {
       "voter_id": "ISP3905783",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Aditya Kumara Jayasavala",
@@ -3439,7 +3439,7 @@
     },
     {
       "voter_id": "ISP502423",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Harsha Kumara Raya",
@@ -3452,7 +3452,7 @@
     },
     {
       "voter_id": "ISP379799",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Indu Mishra",
@@ -3465,7 +3465,7 @@
     },
     {
       "voter_id": "ISP7499896",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Prabha Gupta",
@@ -3478,7 +3478,7 @@
     },
     {
       "voter_id": "ISP749992",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Gumja Gupta",
@@ -3491,7 +3491,7 @@
     },
     {
       "voter_id": "ISP4057264",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Vimala Devi",
@@ -3504,7 +3504,7 @@
     },
     {
       "voter_id": "ISP3578800",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Samgita",
@@ -3517,7 +3517,7 @@
     },
     {
       "voter_id": "ISP395204",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Pavana Vishvakarma",
@@ -3530,7 +3530,7 @@
     },
     {
       "voter_id": "ISP5060488",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ashvani Simha",
@@ -3543,7 +3543,7 @@
     },
     {
       "voter_id": "ISP7800762",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Avadhesha Sharma",
@@ -3556,7 +3556,7 @@
     },
     {
       "voter_id": "ISP7499873",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Samyogita",
@@ -3569,7 +3569,7 @@
     },
     {
       "voter_id": "ISP499769",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Parashurama 0\" 49)",
@@ -3581,7 +3581,7 @@
     },
     {
       "voter_id": "ISP230466",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Samjaya Kumara",
@@ -3594,7 +3594,7 @@
     },
     {
       "voter_id": "ISP2304632",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Mahendra Pratapa Simha",
@@ -3607,7 +3607,7 @@
     },
     {
       "voter_id": "SP2268027",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Madhuri Yadava",
@@ -3620,7 +3620,7 @@
     },
     {
       "voter_id": "ISP090802",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Shrimati Priyamka Shrivastava",
@@ -3633,7 +3633,7 @@
     },
     {
       "voter_id": "ISP7090794",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Devashisha Varnaji",
@@ -3646,7 +3646,7 @@
     },
     {
       "voter_id": "SP205967",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Rubi Gupta",
@@ -3659,7 +3659,7 @@
     },
     {
       "voter_id": "ISP7499785",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Vishala Ae 80",
@@ -3671,7 +3671,7 @@
     },
     {
       "voter_id": "ISP226809",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Omaprakasha Yadava",
@@ -3684,7 +3684,7 @@
     },
     {
       "voter_id": "ISP2304699",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Shrimati Vindu Devi",
@@ -3697,7 +3697,7 @@
     },
     {
       "voter_id": "ISP2268050",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Urmila",
@@ -3710,7 +3710,7 @@
     },
     {
       "voter_id": "ISP226800",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Varsha",
@@ -3723,7 +3723,7 @@
     },
     {
       "voter_id": "ISP2304566",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Sudama Vishvakarma",
@@ -3736,7 +3736,7 @@
     },
     {
       "voter_id": "ISP097565",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ashisha Kumara Agravala",
@@ -3749,7 +3749,7 @@
     },
     {
       "voter_id": "SP709080",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Shriprakasha Shrivastava",
@@ -3762,7 +3762,7 @@
     },
     {
       "voter_id": "ISP2304640",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Got Kishora Pandeya",
@@ -3775,7 +3775,7 @@
     },
     {
       "voter_id": "ISP2304624",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Samchita De",
@@ -3788,7 +3788,7 @@
     },
     {
       "voter_id": "SP2304687",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Pramila Sharma",
@@ -3801,7 +3801,7 @@
     },
     {
       "voter_id": "SP2304590",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Gumja Sharma",
@@ -3814,7 +3814,7 @@
     },
     {
       "voter_id": "SP2304574",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Mamata Vishvakarma",
@@ -3827,7 +3827,7 @@
     },
     {
       "voter_id": "ISP2268068",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Gorakha Prasada Gupta",
@@ -3840,7 +3840,7 @@
     },
     {
       "voter_id": "ISP2605806",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Shiva",
@@ -3853,7 +3853,7 @@
     },
     {
       "voter_id": "SP2304467",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ranajita",
@@ -3866,7 +3866,7 @@
     },
     {
       "voter_id": "ISPI685593",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Amita Rastaugi",
@@ -3879,7 +3879,7 @@
     },
     {
       "voter_id": "SP2304442",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ramakanta",
@@ -3892,7 +3892,7 @@
     },
     {
       "voter_id": "SP2253839",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Priti",
@@ -3905,7 +3905,7 @@
     },
     {
       "voter_id": "ISP7685585",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Mrdula Rastaugi",
@@ -3918,7 +3918,7 @@
     },
     {
       "voter_id": "ISP027442",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Praphulla Chatarji",
@@ -3931,7 +3931,7 @@
     },
     {
       "voter_id": "ISP027588",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Hemaraja",
@@ -3944,7 +3944,7 @@
     },
     {
       "voter_id": "ISP745867",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Punita Kumara Tivari",
@@ -3957,7 +3957,7 @@
     },
     {
       "voter_id": "SP2253847",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Jyoti",
@@ -3970,7 +3970,7 @@
     },
     {
       "voter_id": "ISP7685607",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Manoja Rastaugi",
@@ -3983,7 +3983,7 @@
     },
     {
       "voter_id": "ISP0072385",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Rita Lala",
@@ -3996,7 +3996,7 @@
     },
     {
       "voter_id": "ISP0275826",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Kamala Kumara Simha",
@@ -4009,7 +4009,7 @@
     },
     {
       "voter_id": "SP0275842",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Girisha Chandra",
@@ -4022,7 +4022,7 @@
     },
     {
       "voter_id": "ISP0275859",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ambika",
@@ -4035,7 +4035,7 @@
     },
     {
       "voter_id": "SP0275792",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Aloka",
@@ -4048,7 +4048,7 @@
     },
     {
       "voter_id": "SP3397742",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Tripuresha Kumara Shrivastava",
@@ -4061,7 +4061,7 @@
     },
     {
       "voter_id": "ISP4735387",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Anamda Simha",
@@ -4074,7 +4074,7 @@
     },
     {
       "voter_id": "ISSP4749685",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Kamala",
@@ -4087,7 +4087,7 @@
     },
     {
       "voter_id": "DWQ2032548",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Gopendra Chandra Tivari",
@@ -4100,7 +4100,7 @@
     },
     {
       "voter_id": "ISP3549938",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Balabira Kaura",
@@ -4113,7 +4113,7 @@
     },
     {
       "voter_id": "ISP0275909",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Suresha Kumara",
@@ -4126,7 +4126,7 @@
     },
     {
       "voter_id": "ISP3582786",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Pragati Shrivastava",
@@ -4139,7 +4139,7 @@
     },
     {
       "voter_id": "ISP4736245",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Afar Simha",
@@ -4152,7 +4152,7 @@
     },
     {
       "voter_id": "SP474979",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Asha Devi",
@@ -4165,7 +4165,7 @@
     },
     {
       "voter_id": "ISP358294",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ramakanta Mishra",
@@ -4178,7 +4178,7 @@
     },
     {
       "voter_id": "DWQ2032555",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Prabha Tivari",
@@ -4191,7 +4191,7 @@
     },
     {
       "voter_id": "ISP2605236",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Vimala Pandeya",
@@ -4204,7 +4204,7 @@
     },
     {
       "voter_id": "ISP496623",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Amshadipa Simha",
@@ -4217,7 +4217,7 @@
     },
     {
       "voter_id": "SP768523",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Samjaya Kumara",
@@ -4230,7 +4230,7 @@
     },
     {
       "voter_id": "SP027597",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Vijendra Giri",
@@ -4243,7 +4243,7 @@
     },
     {
       "voter_id": "ISP3397759",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Shila Shrivastava",
@@ -4256,7 +4256,7 @@
     },
     {
       "voter_id": "ISP7685445",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Upendra Kumara Simha",
@@ -4269,7 +4269,7 @@
     },
     {
       "voter_id": "SP703597",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Dipika",
@@ -4282,7 +4282,7 @@
     },
     {
       "voter_id": "SP204762",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Priyamka Tivari",
@@ -4295,7 +4295,7 @@
     },
     {
       "voter_id": "ISP2605244",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Kirana Pandeya",
@@ -4308,7 +4308,7 @@
     },
     {
       "voter_id": "ISP7685239",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Jugala Kishori",
@@ -4321,7 +4321,7 @@
     },
     {
       "voter_id": "ISP685205",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Shalu Gupta",
@@ -4334,7 +4334,7 @@
     },
     {
       "voter_id": "ISP2607950",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Mukesha Kumara Pandeya",
@@ -4347,7 +4347,7 @@
     },
     {
       "voter_id": "ISP685403",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Upendra Kumara Simha",
@@ -4360,7 +4360,7 @@
     },
     {
       "voter_id": "ISP4695698",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Puja Kharavara",
@@ -4373,7 +4373,7 @@
     },
     {
       "voter_id": "ISP0799505",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Amita Kumara Shukla",
@@ -4386,7 +4386,7 @@
     },
     {
       "voter_id": "ISP3397767",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Abhinava Tivari",
@@ -4399,7 +4399,7 @@
     },
     {
       "voter_id": "ISP074679",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Samjita Chatarji",
@@ -4412,7 +4412,7 @@
     },
     {
       "voter_id": "ISP7685072",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Nidhi Pandeya",
@@ -4425,7 +4425,7 @@
     },
     {
       "voter_id": "ISP2607885",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Yamuna",
@@ -4438,7 +4438,7 @@
     },
     {
       "voter_id": "ISP2607935",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Priyamka Pandeya",
@@ -4451,7 +4451,7 @@
     },
     {
       "voter_id": "ISP4633072",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Shashi Raja",
@@ -4464,7 +4464,7 @@
     },
     {
       "voter_id": "ISP0799489",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Mina Shukla",
@@ -4477,7 +4477,7 @@
     },
     {
       "voter_id": "ISP7685338",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Josapha I Je",
@@ -4490,7 +4490,7 @@
     },
     {
       "voter_id": "ISP2605285",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Prakasha Shrivastava",
@@ -4503,7 +4503,7 @@
     },
     {
       "voter_id": "ISP0274274",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Sadhava Rama Pamdeya",
@@ -4516,7 +4516,7 @@
     },
     {
       "voter_id": "ISP0274506",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Pradipa Pamdeya",
@@ -4529,7 +4529,7 @@
     },
     {
       "voter_id": "SP2607893",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Pushpa Pandeya",
@@ -4542,7 +4542,7 @@
     },
     {
       "voter_id": "SP2607927",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Puja Pandeya",
@@ -4555,7 +4555,7 @@
     },
     {
       "voter_id": "ISP7685452",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Rcha Simha",
@@ -4568,7 +4568,7 @@
     },
     {
       "voter_id": "ISP3709557",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Jyoti Simha Chauhana",
@@ -4581,7 +4581,7 @@
     },
     {
       "voter_id": "ISP0799497",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Manoja Kumara Shukla",
@@ -4594,7 +4594,7 @@
     },
     {
       "voter_id": "ISP7685320",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Mini Josapha",
@@ -4607,7 +4607,7 @@
     },
     {
       "voter_id": "ISP495709",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Vinoda Kumara Shrivastava",
@@ -4618,7 +4618,7 @@
     },
     {
       "voter_id": "ISP0274282",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Rekha Pandeya",
@@ -4631,7 +4631,7 @@
     },
     {
       "voter_id": "ISP5024229",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Archana Simha",
@@ -4644,7 +4644,7 @@
     },
     {
       "voter_id": "ISP703506",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Bindu Devi",
@@ -4657,7 +4657,7 @@
     },
     {
       "voter_id": "SP4582672",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Shobhita Gupta",
@@ -4670,7 +4670,7 @@
     },
     {
       "voter_id": "ISP7703524",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ajaya Kumara",
@@ -4683,7 +4683,7 @@
     },
     {
       "voter_id": "ISP4854949",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Simarana Vishvakarma",
@@ -4696,7 +4696,7 @@
     },
     {
       "voter_id": "ISP4933685",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Nitisha Gupta",
@@ -4709,7 +4709,7 @@
     },
     {
       "voter_id": "ISP768555",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ramasati Pala",
@@ -4722,7 +4722,7 @@
     },
     {
       "voter_id": "ISP3582797",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Prashamsa",
@@ -4735,7 +4735,7 @@
     },
     {
       "voter_id": "ISP703589",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Madhuri",
@@ -4748,7 +4748,7 @@
     },
     {
       "voter_id": "ISP703530",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Malati Devi",
@@ -4761,7 +4761,7 @@
     },
     {
       "voter_id": "ISP2567899",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Rupa Khare",
@@ -4774,7 +4774,7 @@
     },
     {
       "voter_id": "SP7685270",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Asha Devi",
@@ -4787,7 +4787,7 @@
     },
     {
       "voter_id": "ISP703498",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ramashre",
@@ -4800,7 +4800,7 @@
     },
     {
       "voter_id": "ISP722605",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Vijaya Kumara",
@@ -4813,7 +4813,7 @@
     },
     {
       "voter_id": "ISP7685230",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Go Renu Pala",
@@ -4826,7 +4826,7 @@
     },
     {
       "voter_id": "ISP4696225",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Siddhi Datri Simha",
@@ -4837,7 +4837,7 @@
     },
     {
       "voter_id": "SP2567907",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Satyama Sinha",
@@ -4850,7 +4850,7 @@
     },
     {
       "voter_id": "ISPI685296",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Vijaya Prakasha",
@@ -4863,7 +4863,7 @@
     },
     {
       "voter_id": "ISP4476644",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Shailaja Dvivedi Dvivedi",
@@ -4876,7 +4876,7 @@
     },
     {
       "voter_id": "ISP4706206",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ramanti Devi",
@@ -4889,7 +4889,7 @@
     },
     {
       "voter_id": "ISP4946984",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Krshna Pala Simha",
@@ -4900,7 +4900,7 @@
     },
     {
       "voter_id": "ISP4475653",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Puja Kumari",
@@ -4913,7 +4913,7 @@
     },
     {
       "voter_id": "SP480578",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Laxmi Pasavana",
@@ -4926,7 +4926,7 @@
     },
     {
       "voter_id": "ISP480594",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Gaurava Pasavana",
@@ -4939,7 +4939,7 @@
     },
     {
       "voter_id": "ISP7685372",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Rama Prakasha",
@@ -4952,7 +4952,7 @@
     },
     {
       "voter_id": "SP4685582",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Dinanatha Gupta",
@@ -4965,7 +4965,7 @@
     },
     {
       "voter_id": "ISP7836295",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Asipha Kamara Kham",
@@ -4978,7 +4978,7 @@
     },
     {
       "voter_id": "SP4475638",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Rina Devi",
@@ -4991,7 +4991,7 @@
     },
     {
       "voter_id": "SP4475620",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Nagemdra Chau I",
@@ -5004,7 +5004,7 @@
     },
     {
       "voter_id": "ISP4808275",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Ananya Kumari",
@@ -5017,7 +5017,7 @@
     },
     {
       "voter_id": "ISP480670",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Stet Kumari",
@@ -5030,7 +5030,7 @@
     },
     {
       "voter_id": "SP4435745",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Diptamshu Mishra",
@@ -5043,7 +5043,7 @@
     },
     {
       "voter_id": "ISP5028386",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Pratima Gomda 80",
@@ -5055,7 +5055,7 @@
     },
     {
       "voter_id": "ISP4476636",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Amchalesha Kumara Dvivedi Dvivedi",
@@ -5068,7 +5068,7 @@
     },
     {
       "voter_id": "ISP4475646",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Vishala Kumara",
@@ -5081,7 +5081,7 @@
     },
     {
       "voter_id": "ISP4808309",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Kishana Pasavana",
@@ -5094,7 +5094,7 @@
     },
     {
       "voter_id": "ISP756884",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Mina Garga",
@@ -5107,7 +5107,7 @@
     },
     {
       "voter_id": "ISP4879223",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Samskrti Pandeya",
@@ -5120,7 +5120,7 @@
     },
     {
       "voter_id": "ISP499493",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Rina Devi",
@@ -5133,7 +5133,7 @@
     },
     {
       "voter_id": "ISP7499425",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Nisha Kumari",
@@ -5146,7 +5146,7 @@
     },
     {
       "voter_id": "ISPI499664",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Thulava",
@@ -5159,7 +5159,7 @@
     },
     {
       "voter_id": "ISP4736982",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Nita Garga",
@@ -5172,7 +5172,7 @@
     },
     {
       "voter_id": "SP4849824",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Abhisheka Kumara Kharavara",
@@ -5185,7 +5185,7 @@
     },
     {
       "voter_id": "ISP2064756",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Girajesha Kumara Yadava",
@@ -5198,7 +5198,7 @@
     },
     {
       "voter_id": "ISP4709020",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Nishita Pamde",
@@ -5211,7 +5211,7 @@
     },
     {
       "voter_id": "ISP7499409",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Karmavira Rajaka",
@@ -5224,7 +5224,7 @@
     },
     {
       "voter_id": "ISP2565489",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Mamju Kushavaha",
@@ -5237,7 +5237,7 @@
     },
     {
       "voter_id": "ISP443578",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsewakpur F.",
       "name": "Manisha Patela",
@@ -5250,7 +5250,7 @@
     },
     {
       "voter_id": "ISP3582970",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Chote Lala",
@@ -5263,7 +5263,7 @@
     },
     {
       "voter_id": "ISP4337674",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Samdipa Kumara",
@@ -5276,7 +5276,7 @@
     },
     {
       "voter_id": "ISP230977",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Rambha Devi",
@@ -5289,7 +5289,7 @@
     },
     {
       "voter_id": "DWA2740793",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Shyamakali",
@@ -5302,7 +5302,7 @@
     },
     {
       "voter_id": "ISP503200",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Sadhana",
@@ -5315,7 +5315,7 @@
     },
     {
       "voter_id": "DWQ2740777",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Prabhavati",
@@ -5328,7 +5328,7 @@
     },
     {
       "voter_id": "ISP0988279",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Bablu Kumara",
@@ -5341,7 +5341,7 @@
     },
     {
       "voter_id": "ISP2309094",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Parvati Devi",
@@ -5354,7 +5354,7 @@
     },
     {
       "voter_id": "SP268957",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Satyama Kumara",
@@ -5367,7 +5367,7 @@
     },
     {
       "voter_id": "PWA274075",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Shravana",
@@ -5380,7 +5380,7 @@
     },
     {
       "voter_id": "SP3729423",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Rimki Devi",
@@ -5393,7 +5393,7 @@
     },
     {
       "voter_id": "ISP486762",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Kumari Muskana",
@@ -5406,7 +5406,7 @@
     },
     {
       "voter_id": "ISP0234245",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Ashoka Kumara",
@@ -5419,7 +5419,7 @@
     },
     {
       "voter_id": "ISP0930404",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Riki Kumari",
@@ -5432,7 +5432,7 @@
     },
     {
       "voter_id": "SP4447066",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Shrrshti Sharma",
@@ -5445,7 +5445,7 @@
     },
     {
       "voter_id": "ISP0234336",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Pintu",
@@ -5458,7 +5458,7 @@
     },
     {
       "voter_id": "SP4448338",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Shalini Bharati",
@@ -5471,7 +5471,7 @@
     },
     {
       "voter_id": "ISP3255429",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Sumana Devi",
@@ -5484,7 +5484,7 @@
     },
     {
       "voter_id": "ISP0930263",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Gita",
@@ -5497,7 +5497,7 @@
     },
     {
       "voter_id": "ISP7502764",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Sunila",
@@ -5510,7 +5510,7 @@
     },
     {
       "voter_id": "ISP2923704",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Sharmila",
@@ -5523,7 +5523,7 @@
     },
     {
       "voter_id": "SP267942",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Ashisha Kumara",
@@ -5536,7 +5536,7 @@
     },
     {
       "voter_id": "ISP268262",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Oa Devi",
@@ -5549,7 +5549,7 @@
     },
     {
       "voter_id": "ISP2309342",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Rina Devi",
@@ -5562,7 +5562,7 @@
     },
     {
       "voter_id": "ISP3589488",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Roshana Kumara",
@@ -5575,7 +5575,7 @@
     },
     {
       "voter_id": "ISP267940",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Abhaya Ananda",
@@ -5588,7 +5588,7 @@
     },
     {
       "voter_id": "ISP3589462",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Ajaya Kumara Bharati",
@@ -5601,7 +5601,7 @@
     },
     {
       "voter_id": "ISP503077",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Moni Devi",
@@ -5614,7 +5614,7 @@
     },
     {
       "voter_id": "ISP4752093",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Shivama Bharati",
@@ -5627,7 +5627,7 @@
     },
     {
       "voter_id": "ISP0232496",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Bajaramgi",
@@ -5640,7 +5640,7 @@
     },
     {
       "voter_id": "DWQ2024537",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Jamgilala",
@@ -5653,7 +5653,7 @@
     },
     {
       "voter_id": "ISP267938",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Yashavanta Gautama",
@@ -5666,7 +5666,7 @@
     },
     {
       "voter_id": "ISP2923290",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Nilama Devi",
@@ -5679,7 +5679,7 @@
     },
     {
       "voter_id": "SP470927",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Sachina Gautama",
@@ -5692,7 +5692,7 @@
     },
     {
       "voter_id": "ISP0075438",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Murali",
@@ -5705,7 +5705,7 @@
     },
     {
       "voter_id": "DWQI092675",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Sabitri",
@@ -5718,7 +5718,7 @@
     },
     {
       "voter_id": "DWAQ2740520",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Amarajita",
@@ -5731,7 +5731,7 @@
     },
     {
       "voter_id": "ISP0232454",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Jamjita",
@@ -5744,7 +5744,7 @@
     },
     {
       "voter_id": "SP2923274",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Ravi Kumara",
@@ -5757,7 +5757,7 @@
     },
     {
       "voter_id": "ISP268338",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Bandana Chauhana",
@@ -5770,7 +5770,7 @@
     },
     {
       "voter_id": "ISP7084702",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Ajaya Kumara",
@@ -5783,7 +5783,7 @@
     },
     {
       "voter_id": "ISP7503069",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Sima Devi",
@@ -5796,7 +5796,7 @@
     },
     {
       "voter_id": "DWQ4037834",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Triloki",
@@ -5809,7 +5809,7 @@
     },
     {
       "voter_id": "ISP2309359",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Vindiya",
@@ -5822,7 +5822,7 @@
     },
     {
       "voter_id": "SP4279378",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Anita Devi",
@@ -5835,7 +5835,7 @@
     },
     {
       "voter_id": "ISP292765",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Sima Shrivastava",
@@ -5848,7 +5848,7 @@
     },
     {
       "voter_id": "SP292270",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Da Durgesha Kumara Simha",
@@ -5861,7 +5861,7 @@
     },
     {
       "voter_id": "ISP2068658",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Shashi Tripathi 9 49)",
@@ -5874,7 +5874,7 @@
     },
     {
       "voter_id": "ISP0988287",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Rajamatidevi",
@@ -5887,7 +5887,7 @@
     },
     {
       "voter_id": "ISP267884",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Solina Kumara",
@@ -5900,7 +5900,7 @@
     },
     {
       "voter_id": "SP2923662",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Mohana Kumara",
@@ -5913,7 +5913,7 @@
     },
     {
       "voter_id": "ISP4446902",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Laxmi",
@@ -5926,7 +5926,7 @@
     },
     {
       "voter_id": "ISP0287433",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Amita Kumara",
@@ -5939,7 +5939,7 @@
     },
     {
       "voter_id": "SP292277",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Akasha Pratapa Simha",
@@ -5952,7 +5952,7 @@
     },
     {
       "voter_id": "ISP3589447",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Ka Na Adi Tripathi 802",
@@ -5965,7 +5965,7 @@
     },
     {
       "voter_id": "ISP0975946",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Kirana Devi",
@@ -5978,7 +5978,7 @@
     },
     {
       "voter_id": "ISP7502756",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Sikandara",
@@ -5991,7 +5991,7 @@
     },
     {
       "voter_id": "SP268748",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Samjaya",
@@ -6004,7 +6004,7 @@
     },
     {
       "voter_id": "ISP0975964",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Amjali",
@@ -6017,7 +6017,7 @@
     },
     {
       "voter_id": "ISP3589470",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Shivama Bharati",
@@ -6030,7 +6030,7 @@
     },
     {
       "voter_id": "ISP4447363",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Anila Kumara",
@@ -6043,7 +6043,7 @@
     },
     {
       "voter_id": "ISP292269",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Samgita Simha",
@@ -6056,7 +6056,7 @@
     },
     {
       "voter_id": "SP206864",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Prabhakara Rama Tripathi",
@@ -6069,7 +6069,7 @@
     },
     {
       "voter_id": "ISP3589454",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Kamchana 'dalana 49)",
@@ -6081,7 +6081,7 @@
     },
     {
       "voter_id": "SP2068500",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Chandrika",
@@ -6094,7 +6094,7 @@
     },
     {
       "voter_id": "ISP0930772",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Samtabali",
@@ -6107,7 +6107,7 @@
     },
     {
       "voter_id": "ISP0930255",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Punama Chau I",
@@ -6120,7 +6120,7 @@
     },
     {
       "voter_id": "SP292948",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Niraja Kumara",
@@ -6133,7 +6133,7 @@
     },
     {
       "voter_id": "ISP5052303",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Amana",
@@ -6146,7 +6146,7 @@
     },
     {
       "voter_id": "DWAQ2024909",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Majita",
@@ -6159,7 +6159,7 @@
     },
     {
       "voter_id": "ISP267863",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Samgita",
@@ -6172,7 +6172,7 @@
     },
     {
       "voter_id": "ISP7690866",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Simvi Shrivastava",
@@ -6185,7 +6185,7 @@
     },
     {
       "voter_id": "ISP2678742",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Avadhesha",
@@ -6198,7 +6198,7 @@
     },
     {
       "voter_id": "ISP269088",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Alaka",
@@ -6211,7 +6211,7 @@
     },
     {
       "voter_id": "ISP7690759",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Raja Shrivastava",
@@ -6224,7 +6224,7 @@
     },
     {
       "voter_id": "ISP690775",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Nita Shrivastava",
@@ -6237,7 +6237,7 @@
     },
     {
       "voter_id": "ISP3589520",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Shivi Shrivastava",
@@ -6250,7 +6250,7 @@
     },
     {
       "voter_id": "ISP4973475",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Vinayaka Chauhana",
@@ -6263,7 +6263,7 @@
     },
     {
       "voter_id": "SP098872",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Maraja",
@@ -6276,7 +6276,7 @@
     },
     {
       "voter_id": "ISP0930248",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Prabhu Kumara",
@@ -6289,7 +6289,7 @@
     },
     {
       "voter_id": "DWQ403756",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Kishuni",
@@ -6302,7 +6302,7 @@
     },
     {
       "voter_id": "SP0232504",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Pushpa",
@@ -6315,7 +6315,7 @@
     },
     {
       "voter_id": "SP0232447",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Raja Kapura",
@@ -6328,7 +6328,7 @@
     },
     {
       "voter_id": "SP7690742",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Sandesha Kumara Shrivastava",
@@ -6341,7 +6341,7 @@
     },
     {
       "voter_id": "ISP505990",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Gudadi",
@@ -6354,7 +6354,7 @@
     },
     {
       "voter_id": "ISP5052022",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Shiva Kumara",
@@ -6367,7 +6367,7 @@
     },
     {
       "voter_id": "ISP4973558",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Sadhana Chauhana",
@@ -6380,7 +6380,7 @@
     },
     {
       "voter_id": "ISP325547",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Samgita",
@@ -6393,7 +6393,7 @@
     },
     {
       "voter_id": "SP0234393",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Gautama Kumara",
@@ -6406,7 +6406,7 @@
     },
     {
       "voter_id": "SP269385",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Anita",
@@ -6419,7 +6419,7 @@
     },
     {
       "voter_id": "SP0988220",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Ajaya",
@@ -6432,7 +6432,7 @@
     },
     {
       "voter_id": "WA3005923",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Ramu",
@@ -6445,7 +6445,7 @@
     },
     {
       "voter_id": "ISP4448395",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Vijaya Kumara Simha",
@@ -6458,7 +6458,7 @@
     },
     {
       "voter_id": "ISP0364356",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Chamtaki",
@@ -6471,7 +6471,7 @@
     },
     {
       "voter_id": "ISP2068476",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Samjaya Bharatiya",
@@ -6484,7 +6484,7 @@
     },
     {
       "voter_id": "ISP7503204",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Nilama Devi",
@@ -6497,7 +6497,7 @@
     },
     {
       "voter_id": "SP4858763",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Samtira",
@@ -6510,7 +6510,7 @@
     },
     {
       "voter_id": "DWQ2025765",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Nitu",
@@ -6523,7 +6523,7 @@
     },
     {
       "voter_id": "ISP488248",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Vishala Kumara Bharati",
@@ -6536,7 +6536,7 @@
     },
     {
       "voter_id": "ISP0364372",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Gita",
@@ -6549,7 +6549,7 @@
     },
     {
       "voter_id": "ISP265953",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Suraja",
@@ -6562,7 +6562,7 @@
     },
     {
       "voter_id": "ISP4446985",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Pushpa Bharati",
@@ -6575,7 +6575,7 @@
     },
     {
       "voter_id": "ISP2679369",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Sugriva Chau I",
@@ -6588,7 +6588,7 @@
     },
     {
       "voter_id": "ISP0988238",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Soni",
@@ -6601,7 +6601,7 @@
     },
     {
       "voter_id": "SP0988337",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Gudiya Kumari",
@@ -6614,7 +6614,7 @@
     },
     {
       "voter_id": "DWA2025203",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Shailendra",
@@ -6627,7 +6627,7 @@
     },
     {
       "voter_id": "ISP2068450",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur F.7 Durga Mandir Tola",
       "name": "Ashoka Kumara",
@@ -6640,7 +6640,7 @@
     },
     {
       "voter_id": "ISP4446886",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Nisha",
@@ -6653,7 +6653,7 @@
     },
     {
       "voter_id": "ISP4350534",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Neha Chauhana",
@@ -6666,7 +6666,7 @@
     },
     {
       "voter_id": "SP4350575",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Shivama Chauhana",
@@ -6679,7 +6679,7 @@
     },
     {
       "voter_id": "ISP4507695",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Rubi Chauhana",
@@ -6692,7 +6692,7 @@
     },
     {
       "voter_id": "SP4446878",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 2,
       "section_name": "Harsevakpur no. Durga Mandir Tola",
       "name": "Gulu",
@@ -6705,7 +6705,7 @@
     },
     {
       "voter_id": "DWAI093038",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Dulare",
@@ -6718,7 +6718,7 @@
     },
     {
       "voter_id": "ISP0930396",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Amaranatha",
@@ -6731,7 +6731,7 @@
     },
     {
       "voter_id": "DWAT093566",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Gamgatre",
@@ -6744,7 +6744,7 @@
     },
     {
       "voter_id": "SP2068278",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Samju",
@@ -6757,7 +6757,7 @@
     },
     {
       "voter_id": "SP424485",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Puja",
@@ -6770,7 +6770,7 @@
     },
     {
       "voter_id": "ISP2923258",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Balirama",
@@ -6783,7 +6783,7 @@
     },
     {
       "voter_id": "ISP3982472",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Jokhana",
@@ -6796,7 +6796,7 @@
     },
     {
       "voter_id": "DWQ4036877",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Birendra",
@@ -6809,7 +6809,7 @@
     },
     {
       "voter_id": "SP4993754",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Amgita Devi",
@@ -6822,7 +6822,7 @@
     },
     {
       "voter_id": "DWAI093497",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Sushila",
@@ -6835,7 +6835,7 @@
     },
     {
       "voter_id": "DWAI093590",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Anita",
@@ -6848,7 +6848,7 @@
     },
     {
       "voter_id": "ISP4952323",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Roshana Bharati",
@@ -6861,7 +6861,7 @@
     },
     {
       "voter_id": "DWQ097385",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Komala",
@@ -6874,7 +6874,7 @@
     },
     {
       "voter_id": "ISP0364364",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Sunita",
@@ -6887,7 +6887,7 @@
     },
     {
       "voter_id": "ISP7502855",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Shravana Kumara Chauhana",
@@ -6900,7 +6900,7 @@
     },
     {
       "voter_id": "DWAI097500",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Lachi",
@@ -6913,7 +6913,7 @@
     },
     {
       "voter_id": "ISP2068260",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Girajesha",
@@ -6926,7 +6926,7 @@
     },
     {
       "voter_id": "ISP2068302",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Mamgala",
@@ -6939,7 +6939,7 @@
     },
     {
       "voter_id": "ISP2068559",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Ravi Kumara Gautama",
@@ -6952,7 +6952,7 @@
     },
     {
       "voter_id": "ISP2922854",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Pavana Kumara Varma",
@@ -6965,7 +6965,7 @@
     },
     {
       "voter_id": "SP348770",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Chandravati",
@@ -6978,7 +6978,7 @@
     },
     {
       "voter_id": "ISP3580405",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Arati Vishvakarma",
@@ -6991,7 +6991,7 @@
     },
     {
       "voter_id": "WA4037305",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Ramjita",
@@ -7004,7 +7004,7 @@
     },
     {
       "voter_id": "ISP3883469",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Anuradha Sharma",
@@ -7017,7 +7017,7 @@
     },
     {
       "voter_id": "SP3883477",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Neha Sharma",
@@ -7030,7 +7030,7 @@
     },
     {
       "voter_id": "DWQI096973",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Chandrashekhara",
@@ -7043,7 +7043,7 @@
     },
     {
       "voter_id": "SP4444576",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Vaishno Malaviya",
@@ -7056,7 +7056,7 @@
     },
     {
       "voter_id": "DWQ2032860",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Piyari",
@@ -7069,7 +7069,7 @@
     },
     {
       "voter_id": "DWA2239242",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Subhadra",
@@ -7082,7 +7082,7 @@
     },
     {
       "voter_id": "ISP2309409",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Satisha Sharma",
@@ -7095,7 +7095,7 @@
     },
     {
       "voter_id": "ISP292096",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Khushabu",
@@ -7108,7 +7108,7 @@
     },
     {
       "voter_id": "DWQ2238806",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Sumanashamara",
@@ -7121,7 +7121,7 @@
     },
     {
       "voter_id": "SP4444550",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Sukrti Malaviya",
@@ -7134,7 +7134,7 @@
     },
     {
       "voter_id": "ISP4446993",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Vijaya Kumara Vishvakarma",
@@ -7147,7 +7147,7 @@
     },
     {
       "voter_id": "DWA4037373",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Radha Sharma",
@@ -7160,7 +7160,7 @@
     },
     {
       "voter_id": "ISP292963",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Sima 80",
@@ -7172,7 +7172,7 @@
     },
     {
       "voter_id": "ISP2679294",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Nitina Sharma",
@@ -7185,7 +7185,7 @@
     },
     {
       "voter_id": "SP2679278",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Pimki Sharma",
@@ -7198,7 +7198,7 @@
     },
     {
       "voter_id": "ISP268353",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Bachchi Chauhana",
@@ -7211,7 +7211,7 @@
     },
     {
       "voter_id": "ISP3885647",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Ghanashyama Vishvakarma",
@@ -7224,7 +7224,7 @@
     },
     {
       "voter_id": "ISP3589496",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Manisha",
@@ -7237,7 +7237,7 @@
     },
     {
       "voter_id": "ISP5064076",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Byuti Simha",
@@ -7250,7 +7250,7 @@
     },
     {
       "voter_id": "DWQI096763",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Ramasavara",
@@ -7263,7 +7263,7 @@
     },
     {
       "voter_id": "ISP0930076",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Savita Vishvakarma",
@@ -7276,7 +7276,7 @@
     },
     {
       "voter_id": "SP2922078",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Rima",
@@ -7289,7 +7289,7 @@
     },
     {
       "voter_id": "SP267074",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Kartikeya Kumara",
@@ -7302,7 +7302,7 @@
     },
     {
       "voter_id": "PWAZ247644",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Mina",
@@ -7315,7 +7315,7 @@
     },
     {
       "voter_id": "DWQ4038788",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Dinadayala",
@@ -7328,7 +7328,7 @@
     },
     {
       "voter_id": "ISP352855",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Ujjavala Sharma",
@@ -7341,7 +7341,7 @@
     },
     {
       "voter_id": "DWA4037404",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "San{}taraja",
@@ -7354,7 +7354,7 @@
     },
     {
       "voter_id": "ISP4448353",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Anupama Sharma",
@@ -7367,7 +7367,7 @@
     },
     {
       "voter_id": "ISP482499",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Shani Chau I",
@@ -7380,7 +7380,7 @@
     },
     {
       "voter_id": "DWA3777030",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Sachina",
@@ -7393,7 +7393,7 @@
     },
     {
       "voter_id": "ISP3883444",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Amana Vishvakarma",
@@ -7406,7 +7406,7 @@
     },
     {
       "voter_id": "SP4397378",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Shubhagi Devi",
@@ -7419,7 +7419,7 @@
     },
     {
       "voter_id": "ISP0930420",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Shila Devi",
@@ -7432,7 +7432,7 @@
     },
     {
       "voter_id": "ISP3858800",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Mamju Chauhana",
@@ -7445,7 +7445,7 @@
     },
     {
       "voter_id": "ISP230982",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Raju",
@@ -7458,7 +7458,7 @@
     },
     {
       "voter_id": "ISP424642",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Shravana Chauhana",
@@ -7471,7 +7471,7 @@
     },
     {
       "voter_id": "SP3858792",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Samgama",
@@ -7484,7 +7484,7 @@
     },
     {
       "voter_id": "SP5026778",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Shivanatha Vishvakarma",
@@ -7497,7 +7497,7 @@
     },
     {
       "voter_id": "DWAQ4036745",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Sanan{}tosha",
@@ -7510,7 +7510,7 @@
     },
     {
       "voter_id": "PWA2247446",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Gita",
@@ -7523,7 +7523,7 @@
     },
     {
       "voter_id": "ISP093046",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Sima",
@@ -7536,7 +7536,7 @@
     },
     {
       "voter_id": "ISP2309847",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Yogendra",
@@ -7549,7 +7549,7 @@
     },
     {
       "voter_id": "ISP4458303",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Utkarsha Chau I",
@@ -7562,7 +7562,7 @@
     },
     {
       "voter_id": "ISP334779",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Sunita Vishvakarma",
@@ -7575,7 +7575,7 @@
     },
     {
       "voter_id": "SP339840",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Naresha Chauhana",
@@ -7588,7 +7588,7 @@
     },
     {
       "voter_id": "DWQ2032944",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Indu",
@@ -7601,7 +7601,7 @@
     },
     {
       "voter_id": "ISP2309789",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Vishuna",
@@ -7614,7 +7614,7 @@
     },
     {
       "voter_id": "ISP2068435",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Indravati Devi",
@@ -7627,7 +7627,7 @@
     },
     {
       "voter_id": "SP0930230",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Raja Kumara Chauhana",
@@ -7640,7 +7640,7 @@
     },
     {
       "voter_id": "SP4350594",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Raja Chauhana",
@@ -7653,7 +7653,7 @@
     },
     {
       "voter_id": "ISP4507554",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Akasha Chauhana",
@@ -7666,7 +7666,7 @@
     },
     {
       "voter_id": "ISP4507646",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Gulu Chauhana",
@@ -7679,7 +7679,7 @@
     },
     {
       "voter_id": "ISP4935599",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Viveka Chauhana",
@@ -7692,7 +7692,7 @@
     },
     {
       "voter_id": "ISP4528049",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 3,
       "section_name": "Harsevakpur 4. Harijan Basti",
       "name": "Sapana Chauhana",
@@ -7705,7 +7705,7 @@
     },
     {
       "voter_id": "ISP4279386",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Dixa Bharati",
@@ -7718,7 +7718,7 @@
     },
     {
       "voter_id": "ISP4642674",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Devesha Vishvakarma",
@@ -7731,7 +7731,7 @@
     },
     {
       "voter_id": "SP424667",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Ramjani",
@@ -7744,7 +7744,7 @@
     },
     {
       "voter_id": "SP4242493",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Vamshika Vishvakarma",
@@ -7757,7 +7757,7 @@
     },
     {
       "voter_id": "ISP4955225",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Pratika Kumara Vishvakarma",
@@ -7770,7 +7770,7 @@
     },
     {
       "voter_id": "ISP4507562",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Sumita Sharma",
@@ -7783,7 +7783,7 @@
     },
     {
       "voter_id": "ISP424750",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Phulamati",
@@ -7796,7 +7796,7 @@
     },
     {
       "voter_id": "ISP4692802",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Rajani Kumari",
@@ -7809,7 +7809,7 @@
     },
     {
       "voter_id": "ISP4983972",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Avadhesha Pratapa Simha",
@@ -7820,7 +7820,7 @@
     },
     {
       "voter_id": "SP4770984",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Babita",
@@ -7833,7 +7833,7 @@
     },
     {
       "voter_id": "ISP477344",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Mina Sharma",
@@ -7846,7 +7846,7 @@
     },
     {
       "voter_id": "SP4978334",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Rekha Chauhana",
@@ -7859,7 +7859,7 @@
     },
     {
       "voter_id": "ISP4624378",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Pramila Vishvakarma",
@@ -7872,7 +7872,7 @@
     },
     {
       "voter_id": "ISP388345",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Vipina Kumara Vishvakarma",
@@ -7885,7 +7885,7 @@
     },
     {
       "voter_id": "SP424543",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Punama",
@@ -7898,7 +7898,7 @@
     },
     {
       "voter_id": "SP4983227",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Mayuresha Pratapa Simha Simha",
@@ -7911,7 +7911,7 @@
     },
     {
       "voter_id": "SP2309584",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Sunita",
@@ -7924,7 +7924,7 @@
     },
     {
       "voter_id": "ISP4772664",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Ashutosha Vishvakarma",
@@ -7937,7 +7937,7 @@
     },
     {
       "voter_id": "ISP4247659",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Rakesha Chauhana",
@@ -7950,7 +7950,7 @@
     },
     {
       "voter_id": "ISP4247535",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Samdipika Sharma",
@@ -7963,7 +7963,7 @@
     },
     {
       "voter_id": "ISP4955365",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Ajaya Kumara",
@@ -7976,7 +7976,7 @@
     },
     {
       "voter_id": "ISP4955290",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Dipa Sharma",
@@ -7989,7 +7989,7 @@
     },
     {
       "voter_id": "ISP4983797",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Sunita Simha",
@@ -8000,7 +8000,7 @@
     },
     {
       "voter_id": "ISP399703",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Shri Atula Simha",
@@ -8013,7 +8013,7 @@
     },
     {
       "voter_id": "SP269203",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Bimdu Devi",
@@ -8026,7 +8026,7 @@
     },
     {
       "voter_id": "SP4877635",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Madhulika Mishra",
@@ -8039,7 +8039,7 @@
     },
     {
       "voter_id": "ISP4867605",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Premalata Devi",
@@ -8052,7 +8052,7 @@
     },
     {
       "voter_id": "ISP4666855",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Raju Chau I",
@@ -8065,7 +8065,7 @@
     },
     {
       "voter_id": "ISP4628293",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Akamxa Chauhana",
@@ -8078,7 +8078,7 @@
     },
     {
       "voter_id": "SP504727",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Jyoti Sharma",
@@ -8091,7 +8091,7 @@
     },
     {
       "voter_id": "ISP4866604",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Viveka Kumara Mishra",
@@ -8104,7 +8104,7 @@
     },
     {
       "voter_id": "ISP469878",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Shashvata Mishra",
@@ -8117,7 +8117,7 @@
     },
     {
       "voter_id": "ISP477005",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Ajaya Kumara",
@@ -8130,7 +8130,7 @@
     },
     {
       "voter_id": "ISP4433066",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Rasesha Shrivastava",
@@ -8143,7 +8143,7 @@
     },
     {
       "voter_id": "NMK3867405",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Suraja Dube",
@@ -8156,7 +8156,7 @@
     },
     {
       "voter_id": "ISP4930038",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Prajna Mishra",
@@ -8169,7 +8169,7 @@
     },
     {
       "voter_id": "ISP4668752",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Svati Jayasavala",
@@ -8182,7 +8182,7 @@
     },
     {
       "voter_id": "SP4628285",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Aditya Kumara Chauhana",
@@ -8195,7 +8195,7 @@
     },
     {
       "voter_id": "SP4977575",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Devamsha Mishra",
@@ -8208,7 +8208,7 @@
     },
     {
       "voter_id": "SP4447223",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Sima Kumari",
@@ -8221,7 +8221,7 @@
     },
     {
       "voter_id": "ISP4583274",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Vina Raya",
@@ -8234,7 +8234,7 @@
     },
     {
       "voter_id": "ISP4935656",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Shreya Sharma",
@@ -8247,7 +8247,7 @@
     },
     {
       "voter_id": "ISP2068344",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Vinaya Gautama",
@@ -8260,7 +8260,7 @@
     },
     {
       "voter_id": "ISP4668778",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Vishnu Prakasha",
@@ -8273,7 +8273,7 @@
     },
     {
       "voter_id": "ISP5069075",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Neha Bharati",
@@ -8286,7 +8286,7 @@
     },
     {
       "voter_id": "ISP478204",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Urmila Devi",
@@ -8299,7 +8299,7 @@
     },
     {
       "voter_id": "ISP2068492",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Pappu Bharatiya",
@@ -8312,7 +8312,7 @@
     },
     {
       "voter_id": "ISP269229",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Raja Kumara Sharma",
@@ -8325,7 +8325,7 @@
     },
     {
       "voter_id": "SP4782587",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Jyoti Chauhana",
@@ -8338,7 +8338,7 @@
     },
     {
       "voter_id": "ISP4585295",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Samdipa Sharma",
@@ -8351,7 +8351,7 @@
     },
     {
       "voter_id": "SP4637773",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Ayusha Kumara Patela",
@@ -8364,7 +8364,7 @@
     },
     {
       "voter_id": "ISP4040408",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Sushamta Raya",
@@ -8377,7 +8377,7 @@
     },
     {
       "voter_id": "ISP4879607",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Nilama Chauhana",
@@ -8390,7 +8390,7 @@
     },
     {
       "voter_id": "ISP4984574",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Amshika Pala",
@@ -8403,7 +8403,7 @@
     },
     {
       "voter_id": "SP5076377",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Suhani Chauhana",
@@ -8416,7 +8416,7 @@
     },
     {
       "voter_id": "ISP6080403",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Aditya Kumara",
@@ -8429,7 +8429,7 @@
     },
     {
       "voter_id": "ISP509760",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Shreyamsha Tivari",
@@ -8440,7 +8440,7 @@
     },
     {
       "voter_id": "ISP5094354",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Kumari Priyamsha",
@@ -8453,7 +8453,7 @@
     },
     {
       "voter_id": "ISP574369",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Juganu Simha",
@@ -8464,7 +8464,7 @@
     },
     {
       "voter_id": "ISP5793747",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Adarsha Oe Ey",
@@ -8477,7 +8477,7 @@
     },
     {
       "voter_id": "ISP507890",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Aryana Simha",
@@ -8490,7 +8490,7 @@
     },
     {
       "voter_id": "SP5084074",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Ganesha Mishra",
@@ -8503,7 +8503,7 @@
     },
     {
       "voter_id": "ISP5092408",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Amshula Shrivastava",
@@ -8516,7 +8516,7 @@
     },
     {
       "voter_id": "ISP5709020",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Svati Simha",
@@ -8529,7 +8529,7 @@
     },
     {
       "voter_id": "ISP573477",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Omanita Chau I",
@@ -8542,7 +8542,7 @@
     },
     {
       "voter_id": "ISP543600",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Vishala Shrivastava",
@@ -8555,7 +8555,7 @@
     },
     {
       "voter_id": "SP573808",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Neha Jayasavala",
@@ -8568,7 +8568,7 @@
     },
     {
       "voter_id": "ISP573964",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Ayusha Kumara Jayasavala",
@@ -8581,7 +8581,7 @@
     },
     {
       "voter_id": "ISP5080379",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Aditya Kumara",
@@ -8594,7 +8594,7 @@
     },
     {
       "voter_id": "ISP5090386",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Amana Praja",
@@ -8607,7 +8607,7 @@
     },
     {
       "voter_id": "ISP5093570",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Amchala Kumari",
@@ -8620,7 +8620,7 @@
     },
     {
       "voter_id": "ISP5709376",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Puja Devi",
@@ -8633,7 +8633,7 @@
     },
     {
       "voter_id": "ISP5793725",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Divyamshu Kumara Re",
@@ -8642,7 +8642,7 @@
     },
     {
       "voter_id": "ISP5793832",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Jyoti Simha",
@@ -8655,7 +8655,7 @@
     },
     {
       "voter_id": "ISP574897",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Babita Chauhana",
@@ -8668,7 +8668,7 @@
     },
     {
       "voter_id": "ISP560544",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Samdipa Kumara",
@@ -8681,7 +8681,7 @@
     },
     {
       "voter_id": "ISP5769297",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Nirmala Chau I",
@@ -8694,7 +8694,7 @@
     },
     {
       "voter_id": "ISP5337764",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Nirmala",
@@ -8707,7 +8707,7 @@
     },
     {
       "voter_id": "ISP5758407",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Umesha Chamda Jayasavala Jayasavala",
@@ -8720,7 +8720,7 @@
     },
     {
       "voter_id": "ISP558472",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Abhisheka Jayasavala",
@@ -8733,7 +8733,7 @@
     },
     {
       "voter_id": "ISP565725",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Ramesha Gupta",
@@ -8746,7 +8746,7 @@
     },
     {
       "voter_id": "ISP572903",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Ku. Byuti Vishvakarma",
@@ -8759,7 +8759,7 @@
     },
     {
       "voter_id": "SP577963",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Mina",
@@ -8772,7 +8772,7 @@
     },
     {
       "voter_id": "SP536772",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Kajala Nishada",
@@ -8785,7 +8785,7 @@
     },
     {
       "voter_id": "ISP568000",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Umesha Mara Mishra",
@@ -8796,7 +8796,7 @@
     },
     {
       "voter_id": "ISP579205",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Byuti Simha",
@@ -8809,7 +8809,7 @@
     },
     {
       "voter_id": "ISP532032",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Dipika Patela",
@@ -8822,7 +8822,7 @@
     },
     {
       "voter_id": "ISP5393384",
-      "part_number": 4,
+      "part_number": 41,
       "section_number": 4,
       "section_name": "Harsevakpur no. Sharma ji tola",
       "name": "Yuvaraja Gupta",

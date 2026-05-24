@@ -4,7 +4,7 @@
     "total_pages": 38,
     "state": "Uttar Pradesh",
     "year": 2026,
-    "part_number": 3,
+    "part_number": 31,
     "assembly_constituency": {
       "number": 322,
       "name": "Gorakhpur City",
@@ -21,7 +21,7 @@
   "voter_records": [
     {
       "voter_id": "DWAI093244",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Prema",
       "relation_type": "Father",
       "relation_name": "Mahabala",
@@ -32,7 +32,7 @@
     },
     {
       "voter_id": "ISP0320499",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ard Chauhana",
       "relation_type": "Father",
       "relation_name": "Faef Chauhana",
@@ -43,7 +43,7 @@
     },
     {
       "voter_id": "DWQI096338",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Tiratha Yadava",
       "relation_type": "Father",
       "relation_name": "Rama Prita",
@@ -54,7 +54,7 @@
     },
     {
       "voter_id": "SP447252",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Jamuna",
       "relation_type": "Father",
       "relation_name": "Shyamabarana",
@@ -65,7 +65,7 @@
     },
     {
       "voter_id": "DWQI092774",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Samjaya",
       "relation_type": "Father",
       "relation_name": "Ramachandra",
@@ -76,7 +76,7 @@
     },
     {
       "voter_id": "DWA203893",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Pavana Ku0 Sharma",
       "relation_type": "Father",
       "relation_name": "Harichanda Sharma",
@@ -87,7 +87,7 @@
     },
     {
       "voter_id": "SP3587378",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Divya Sharma",
       "relation_type": "Father",
       "relation_name": "Samjaya Sharma",
@@ -98,7 +98,7 @@
     },
     {
       "voter_id": "ISP7684257",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Tat Shamkara Prasada",
       "relation_type": "Father",
       "relation_name": "Sva0 Hamsi Prasada",
@@ -109,7 +109,7 @@
     },
     {
       "voter_id": "DWQI096346",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Anasuiya",
       "relation_type": "Husband",
       "relation_name": "Jamuna",
@@ -120,7 +120,7 @@
     },
     {
       "voter_id": "BWAR092766",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Babita",
       "relation_type": "Father",
       "relation_name": "Jiuta",
@@ -131,7 +131,7 @@
     },
     {
       "voter_id": "ISP3588456",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Sumita",
       "relation_type": "Father",
       "relation_name": "Siddhanatha",
@@ -142,7 +142,7 @@
     },
     {
       "voter_id": "ISP449506",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Avadhesha",
       "relation_type": "Father",
       "relation_name": "Mahabala",
@@ -153,7 +153,7 @@
     },
     {
       "voter_id": "DWA274379",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Sima",
       "relation_type": "Husband",
       "relation_name": "Avadhesha",
@@ -164,7 +164,7 @@
     },
     {
       "voter_id": "ISP2063436",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Gudadu Chauhana",
       "relation_type": "Father",
       "relation_name": "Tiratha Chauhana",
@@ -175,7 +175,7 @@
     },
     {
       "voter_id": "DWAT092352",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Isaravati",
       "relation_type": "Father",
       "relation_name": "Harishchandra",
@@ -186,7 +186,7 @@
     },
     {
       "voter_id": "DWA287260",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Aveghanatha",
       "relation_type": "Father",
       "relation_name": "Makkhana",
@@ -197,7 +197,7 @@
     },
     {
       "voter_id": "DWWA7096288",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Subhavati",
       "relation_type": "Husband",
       "relation_name": "Sudhirama",
@@ -208,7 +208,7 @@
     },
     {
       "voter_id": "ISP4254058",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Vinita Sharma",
       "relation_type": "Father",
       "relation_name": "Ravimdranatha Sharma",
@@ -219,7 +219,7 @@
     },
     {
       "voter_id": "DWQ3478977",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Omaprakasha",
       "relation_type": "Father",
       "relation_name": "Vishvakarma",
@@ -230,7 +230,7 @@
     },
     {
       "voter_id": "DWQI093467",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ramajana",
       "relation_type": "Father",
       "relation_name": "Vavullaha",
@@ -241,7 +241,7 @@
     },
     {
       "voter_id": "ISP2302362",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Shahajamha",
       "relation_type": "Husband",
       "relation_name": "Phubana Ali",
@@ -252,7 +252,7 @@
     },
     {
       "voter_id": "SP494897",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Aruna",
       "relation_type": "Husband",
       "relation_name": "Govinda",
@@ -263,7 +263,7 @@
     },
     {
       "voter_id": "DWAI096999",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Sitara Begama",
       "relation_type": "Husband",
       "relation_name": "Rainudina",
@@ -274,7 +274,7 @@
     },
     {
       "voter_id": "SP3725900",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Shalu Shrivastava",
       "relation_type": "Husband",
       "relation_name": "Harioma Lala Shrivastava",
@@ -285,7 +285,7 @@
     },
     {
       "voter_id": "DWQ4037966",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Usamana",
       "relation_type": "Father",
       "relation_name": "Vavullaha Pa",
@@ -296,7 +296,7 @@
     },
     {
       "voter_id": "SP0967828",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Radhika",
       "relation_type": "Husband",
       "relation_name": "Rajarama",
@@ -307,7 +307,7 @@
     },
     {
       "voter_id": "ISP768433",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Vinoda Kumara",
       "relation_type": "Father",
       "relation_name": "Shamkara Saha",
@@ -318,7 +318,7 @@
     },
     {
       "voter_id": "DWAI092873",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Rainudina",
       "relation_type": "Father",
       "relation_name": "Shamasera Pa",
@@ -329,7 +329,7 @@
     },
     {
       "voter_id": "ISP494970",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Alaka Shrivastava",
       "relation_type": "Husband",
       "relation_name": "Radheshyama Shrivastava",
@@ -340,7 +340,7 @@
     },
     {
       "voter_id": "ISP467909",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Rohana Kumara Pasavana",
       "relation_type": "Father",
       "relation_name": "Ludura Pasavana",
@@ -351,7 +351,7 @@
     },
     {
       "voter_id": "ISP477698",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Jasavamta Praja",
       "relation_type": "Father",
       "relation_name": "Jayahimda Prajapati",
@@ -362,7 +362,7 @@
     },
     {
       "voter_id": "SP0967794",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Nura Hasana",
       "relation_type": "Father",
       "relation_name": "Sulemana",
@@ -373,7 +373,7 @@
     },
     {
       "voter_id": "ISP494906",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Gaurava Mishra",
       "relation_type": "Father",
       "relation_name": "Dinesha Mishra",
@@ -384,7 +384,7 @@
     },
     {
       "voter_id": "DWA2740827",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Kurbana",
       "relation_type": "Father",
       "relation_name": "Jumarati",
@@ -395,7 +395,7 @@
     },
     {
       "voter_id": "ISP3725892",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Chandravati Devi Ee",
       "relation_type": "Husband",
       "relation_name": "Jagadisha, Shrivastava",
@@ -405,7 +405,7 @@
     },
     {
       "voter_id": "ISP496035",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Archana",
       "relation_type": "Husband",
       "relation_name": "Yogendra",
@@ -416,7 +416,7 @@
     },
     {
       "voter_id": "ISP4254033",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Chaya",
       "relation_type": "Husband",
       "relation_name": "Paradeshi",
@@ -427,7 +427,7 @@
     },
     {
       "voter_id": "SP4672887",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Mukesha Rajabhara",
       "relation_type": "Father",
       "relation_name": "Triloki Rajabhara",
@@ -438,7 +438,7 @@
     },
     {
       "voter_id": "DWAI092535",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Jashodara",
       "relation_type": "Father",
       "relation_name": "Sudarshana",
@@ -449,7 +449,7 @@
     },
     {
       "voter_id": "ISP2302065",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Mahendra Pratapa",
       "relation_type": "Father",
       "relation_name": "Sva Vamshabahadura",
@@ -460,7 +460,7 @@
     },
     {
       "voter_id": "ISP7684232",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Rimki Jayasavala",
       "relation_type": "Husband",
       "relation_name": "Manisha Kumara Jayasavala",
@@ -471,7 +471,7 @@
     },
     {
       "voter_id": "DWAT092303",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Gayatri",
       "relation_type": "Father",
       "relation_name": "Mithai Pa",
@@ -482,7 +482,7 @@
     },
     {
       "voter_id": "ISP768426",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Shubhama Shrivastava",
       "relation_type": "Father",
       "relation_name": "Niramkara Prasada Shrivastava",
@@ -493,7 +493,7 @@
     },
     {
       "voter_id": "SP024227",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Mina Simha",
       "relation_type": "Husband",
       "relation_name": "Mahendra Pratapa",
@@ -504,7 +504,7 @@
     },
     {
       "voter_id": "ISP7495050",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Raghunatha",
       "relation_type": "Father",
       "relation_name": "Bhupata Prasada Pa",
@@ -515,7 +515,7 @@
     },
     {
       "voter_id": "ISP2302370",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Samtosha Kumara",
       "relation_type": "Father",
       "relation_name": "Mahendra Pratapa Qi",
@@ -526,7 +526,7 @@
     },
     {
       "voter_id": "ISP7684265",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Satisha Chandra",
       "relation_type": "Father",
       "relation_name": "Rama Dulare",
@@ -537,7 +537,7 @@
     },
     {
       "voter_id": "ISP7684240",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Manisha Kumara",
       "relation_type": "Father",
       "relation_name": "Satisha Chandra Jayasavala",
@@ -548,7 +548,7 @@
     },
     {
       "voter_id": "ISPI684273",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Svati Jayasavala",
       "relation_type": "Husband",
       "relation_name": "Ashisha Kumara",
@@ -559,7 +559,7 @@
     },
     {
       "voter_id": "DWAT092683",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Malati",
       "relation_type": "Husband",
       "relation_name": "Sudarshana",
@@ -570,7 +570,7 @@
     },
     {
       "voter_id": "ISP0320622",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Rajendra Pratapa",
       "relation_type": "Father",
       "relation_name": "Mahendra",
@@ -581,7 +581,7 @@
     },
     {
       "voter_id": "ISP7495043",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Archendra Kumara",
       "relation_type": "Father",
       "relation_name": "Yogendra",
@@ -592,7 +592,7 @@
     },
     {
       "voter_id": "DWQI095879",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Urmila",
       "relation_type": "Husband",
       "relation_name": "Babulala",
@@ -603,7 +603,7 @@
     },
     {
       "voter_id": "ISP4672796",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Archana Vishvakarma",
       "relation_type": "Father",
       "relation_name": "Satisha Chandra",
@@ -614,7 +614,7 @@
     },
     {
       "voter_id": "ISP4947829",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Irashada Ali",
       "relation_type": "Father",
       "relation_name": "Khadima Saina",
@@ -625,7 +625,7 @@
     },
     {
       "voter_id": "DWQ4035796",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ro Ta",
       "relation_type": "Father",
       "relation_name": "Ramaharakha",
@@ -636,7 +636,7 @@
     },
     {
       "voter_id": "PWA2742262",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Chandrikaprasada",
       "relation_type": "Father",
       "relation_name": "Ramabarana",
@@ -647,7 +647,7 @@
     },
     {
       "voter_id": "SP4047627",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Amkita Mishra",
       "relation_type": "Father",
       "relation_name": "Prabhakara Mishra",
@@ -658,7 +658,7 @@
     },
     {
       "voter_id": "ISP4560765",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Surabhi Dvivedi",
       "relation_type": "Father",
       "relation_name": "Ravimdra Natha Dube",
@@ -669,7 +669,7 @@
     },
     {
       "voter_id": "DWAQ622505",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Dugarvati",
       "relation_type": "Husband",
       "relation_name": "Ro Ta",
@@ -680,7 +680,7 @@
     },
     {
       "voter_id": "DWA2747445",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Shanti",
       "relation_type": "Husband",
       "relation_name": "Jayahinda",
@@ -691,7 +691,7 @@
     },
     {
       "voter_id": "DWWA2747452",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Pamchama",
       "relation_type": "Father",
       "relation_name": "Ramaharakha",
@@ -702,7 +702,7 @@
     },
     {
       "voter_id": "DWA202669",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Simirati",
       "relation_type": "Husband",
       "relation_name": "Ramaasare",
@@ -713,7 +713,7 @@
     },
     {
       "voter_id": "PWA2024040",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Rama Suraja",
       "relation_type": "Father",
       "relation_name": "Sumera",
@@ -724,7 +724,7 @@
     },
     {
       "voter_id": "SP2302388",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Giramaula Devi",
       "relation_type": "Husband",
       "relation_name": "Chandri A",
@@ -735,7 +735,7 @@
     },
     {
       "voter_id": "SP4047742",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Shamti Mishra",
       "relation_type": "Husband",
       "relation_name": "Amkita Mishra",
@@ -746,7 +746,7 @@
     },
     {
       "voter_id": "SP206388",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ra La Dvivedi",
       "relation_type": "Father",
       "relation_name": "Ravindra Natha Pam",
@@ -757,7 +757,7 @@
     },
     {
       "voter_id": "DWAQ622695",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Gulaicha",
       "relation_type": "Husband",
       "relation_name": "Ramaharakha",
@@ -768,7 +768,7 @@
     },
     {
       "voter_id": "DWA274353",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Sukharaja",
       "relation_type": "Father",
       "relation_name": "Nebu Lala",
@@ -779,7 +779,7 @@
     },
     {
       "voter_id": "ISP4699724",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Rima Praja",
       "relation_type": "Father",
       "relation_name": "Jayahimda Prajapati",
@@ -790,7 +790,7 @@
     },
     {
       "voter_id": "DWQ097594",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Samtalala",
       "relation_type": "Father",
       "relation_name": "Baijanatha",
@@ -801,7 +801,7 @@
     },
     {
       "voter_id": "ISP4647734",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Anuradha Simga",
       "relation_type": "Father",
       "relation_name": "Ravimdra Natha Dube",
@@ -812,7 +812,7 @@
     },
     {
       "voter_id": "DWQ3373602",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Najama",
       "relation_type": "Husband",
       "relation_name": "Islama",
@@ -823,7 +823,7 @@
     },
     {
       "voter_id": "SP2302073",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Khurshi Ahamada",
       "relation_type": "Father",
       "relation_name": "Islama Ali",
@@ -834,7 +834,7 @@
     },
     {
       "voter_id": "ISP0320564",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Dilipa Yadava",
       "relation_type": "Father",
       "relation_name": "Ramapata",
@@ -845,7 +845,7 @@
     },
     {
       "voter_id": "ISP487597",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Kalavati",
       "relation_type": "Husband",
       "relation_name": "Gajemdra Yadava",
@@ -856,7 +856,7 @@
     },
     {
       "voter_id": "DWA262069",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Jamala Ahamada",
       "relation_type": "Father",
       "relation_name": "Islama",
@@ -867,7 +867,7 @@
     },
     {
       "voter_id": "ISP3587470",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ashutosha",
       "relation_type": "Father",
       "relation_name": "Ramanaresha Shaha Pa",
@@ -878,7 +878,7 @@
     },
     {
       "voter_id": "SP4672788",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Umesha Yadava",
       "relation_type": "Father",
       "relation_name": "Raje Yadava Qi",
@@ -889,7 +889,7 @@
     },
     {
       "voter_id": "DWQ2620276",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Sarasvati Devi",
       "relation_type": "Husband",
       "relation_name": "Rama Nevala Yadava",
@@ -900,7 +900,7 @@
     },
     {
       "voter_id": "DWQ2620342",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Maya",
       "relation_type": "Husband",
       "relation_name": "Ramakavala",
@@ -911,7 +911,7 @@
     },
     {
       "voter_id": "ISP032055",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Aravinda Kumara Yadava",
       "relation_type": "Father",
       "relation_name": "Rama Achala Yadava",
@@ -922,7 +922,7 @@
     },
     {
       "voter_id": "ISP2302396",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Urmila",
       "relation_type": "Husband",
       "relation_name": "Rajakumara",
@@ -933,7 +933,7 @@
     },
     {
       "voter_id": "PWAI092477",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Rajana",
       "relation_type": "Father",
       "relation_name": "Ramasubhaga",
@@ -944,7 +944,7 @@
     },
     {
       "voter_id": "SP2303048",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Taiyaba Khatuna",
       "relation_type": "Husband",
       "relation_name": "Kamala Ahamada",
@@ -955,7 +955,7 @@
     },
     {
       "voter_id": "SP3587428",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Puja Devi",
       "relation_type": "Father",
       "relation_name": "Ramamurata",
@@ -966,7 +966,7 @@
     },
     {
       "voter_id": "DWA262020",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ramabhavana",
       "relation_type": "Father",
       "relation_name": "Ramamurata",
@@ -977,7 +977,7 @@
     },
     {
       "voter_id": "DWWA2620284",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Mira",
       "relation_type": "Father",
       "relation_name": "Ramaratana",
@@ -988,7 +988,7 @@
     },
     {
       "voter_id": "WA2620268",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Asha",
       "relation_type": "Father",
       "relation_name": "Bhavanatha Yadava",
@@ -999,7 +999,7 @@
     },
     {
       "voter_id": "ISP3587402",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Snehalata Yadava",
       "relation_type": "Father",
       "relation_name": "Indrasena Yadava",
@@ -1010,7 +1010,7 @@
     },
     {
       "voter_id": "ISP702763",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Aniruddha Yadava",
       "relation_type": "Father",
       "relation_name": "San{}talala",
@@ -1021,7 +1021,7 @@
     },
     {
       "voter_id": "ISP4784883",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Najavina .khatuna",
       "relation_type": "Husband",
       "relation_name": "Rahamatulla Amsari",
@@ -1032,7 +1032,7 @@
     },
     {
       "voter_id": "ISP3936903",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ruchamda Pasavana",
       "relation_type": "Father",
       "relation_name": "Siddhu",
@@ -1043,7 +1043,7 @@
     },
     {
       "voter_id": "ISSP4680096",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Manisha Yadava",
       "relation_type": "Father",
       "relation_name": "Ganesha Yadava",
@@ -1054,7 +1054,7 @@
     },
     {
       "voter_id": "DWA3776974",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Uta",
       "relation_type": "Father",
       "relation_name": "Suvasha",
@@ -1065,7 +1065,7 @@
     },
     {
       "voter_id": "ISP3587386",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Vishala Yadava",
       "relation_type": "Father",
       "relation_name": "Indrasena Yadava",
@@ -1076,7 +1076,7 @@
     },
     {
       "voter_id": "DWQI096557",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Radhika",
       "relation_type": "Husband",
       "relation_name": "Abhimanyu",
@@ -1087,7 +1087,7 @@
     },
     {
       "voter_id": "PWAI092048",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Indravati",
       "relation_type": "Husband",
       "relation_name": "Achchelala Pam",
@@ -1098,7 +1098,7 @@
     },
     {
       "voter_id": "DWAT092006",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Mulachanda",
       "relation_type": "Father",
       "relation_name": "Siddhu",
@@ -1109,7 +1109,7 @@
     },
     {
       "voter_id": "ISP372605",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Anuja Yadava 80",
       "relation_type": "Father",
       "relation_name": "me",
@@ -1120,7 +1120,7 @@
     },
     {
       "voter_id": "ISP403299",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Devanti",
       "relation_type": "Husband",
       "relation_name": "Imdrasena",
@@ -1131,7 +1131,7 @@
     },
     {
       "voter_id": "SP3587394",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Virata Yadava",
       "relation_type": "Father",
       "relation_name": "Indrasena Yadava",
@@ -1142,7 +1142,7 @@
     },
     {
       "voter_id": "ISP099574",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Vilavatidevi",
       "relation_type": "Husband",
       "relation_name": "Chavilala",
@@ -1153,7 +1153,7 @@
     },
     {
       "voter_id": "ISP7494582",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Vinaya Simha",
       "relation_type": "Father",
       "relation_name": "Shivabahadura Simha",
@@ -1164,7 +1164,7 @@
     },
     {
       "voter_id": "ISP099670",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Mukesha Pandeya",
       "relation_type": "Father",
       "relation_name": "Jaga Bahadura",
@@ -1175,7 +1175,7 @@
     },
     {
       "voter_id": "ISP3940822",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Shashikala",
       "relation_type": "Husband",
       "relation_name": "Ganesha Pasavana",
@@ -1186,7 +1186,7 @@
     },
     {
       "voter_id": "WA2620300",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Phulesara",
       "relation_type": "Father",
       "relation_name": "Deva",
@@ -1197,7 +1197,7 @@
     },
     {
       "voter_id": "ISP7400395",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ganesha Shaha",
       "relation_type": "Father",
       "relation_name": "Chandra Deva Saha",
@@ -1208,7 +1208,7 @@
     },
     {
       "voter_id": "ISP3936945",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Samjaya Kumara Shaha",
       "relation_type": "Father",
       "relation_name": "Ganesha Shaha",
@@ -1219,7 +1219,7 @@
     },
     {
       "voter_id": "ISP4433686",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Vimalesha Praja",
       "relation_type": "Father",
       "relation_name": "Narada Muni Prajapati",
@@ -1230,7 +1230,7 @@
     },
     {
       "voter_id": "SP4677429",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Harinatha",
       "relation_type": "Father",
       "relation_name": "Siddhu",
@@ -1241,7 +1241,7 @@
     },
     {
       "voter_id": "ISP099688",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Tulasi Devi",
       "relation_type": "Father",
       "relation_name": "Rupachamdra",
@@ -1252,7 +1252,7 @@
     },
     {
       "voter_id": "SP4254042",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Isaravati Devi",
       "relation_type": "Husband",
       "relation_name": "Dayarama Pasavana",
@@ -1263,7 +1263,7 @@
     },
     {
       "voter_id": "ISP700403",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Chandravati Devi",
       "relation_type": "Father",
       "relation_name": "Sukhadeva",
@@ -1274,7 +1274,7 @@
     },
     {
       "voter_id": "DWA2025393",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Sharadadevi",
       "relation_type": "Husband",
       "relation_name": "Pappu",
@@ -1285,7 +1285,7 @@
     },
     {
       "voter_id": "ISP4433736",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Nilama Praja",
       "relation_type": "Father",
       "relation_name": "Narada Muni Prajapati",
@@ -1296,7 +1296,7 @@
     },
     {
       "voter_id": "SP4677452",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Rita Devi",
       "relation_type": "Husband",
       "relation_name": "Harinatha",
@@ -1307,7 +1307,7 @@
     },
     {
       "voter_id": "ISP3936929",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ganesha Pasavana",
       "relation_type": "Father",
       "relation_name": "Rupachamda",
@@ -1318,7 +1318,7 @@
     },
     {
       "voter_id": "SP230264",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ravi Shamkara Lala",
       "relation_type": "Father",
       "relation_name": "Shri Samta Lala",
@@ -1329,7 +1329,7 @@
     },
     {
       "voter_id": "ISP3936952",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Sujata Shaha",
       "relation_type": "Father",
       "relation_name": "Ganesha Shaha",
@@ -1340,7 +1340,7 @@
     },
     {
       "voter_id": "SP0320937",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Basuki Natha",
       "relation_type": "Father",
       "relation_name": "Vinoda Kumara Simha",
@@ -1351,7 +1351,7 @@
     },
     {
       "voter_id": "ISP7095769",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Krshna Mohana Lala",
       "relation_type": "Father",
       "relation_name": "Hiralala",
@@ -1362,7 +1362,7 @@
     },
     {
       "voter_id": "PWAT092394",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Chandravati",
       "relation_type": "Husband",
       "relation_name": "Asharaphi",
@@ -1373,7 +1373,7 @@
     },
     {
       "voter_id": "SP7683382",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Samtosha Kumara Shrivastava",
       "relation_type": "Father",
       "relation_name": "Sva0 Kanhaiya Lala Shrivastava",
@@ -1384,7 +1384,7 @@
     },
     {
       "voter_id": "ISP357099",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Anuradha Tivari",
       "relation_type": "Father",
       "relation_name": "Girijesha",
@@ -1395,7 +1395,7 @@
     },
     {
       "voter_id": "DWQI092543",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Usha",
       "relation_type": "Father",
       "relation_name": "Jamuna",
@@ -1406,7 +1406,7 @@
     },
     {
       "voter_id": "ISP3860302",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Anita Sharma",
       "relation_type": "Husband",
       "relation_name": "Ajita Sharma",
@@ -1417,7 +1417,7 @@
     },
     {
       "voter_id": "DWA2024974",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Piyare",
       "relation_type": "Father",
       "relation_name": "Siri",
@@ -1428,7 +1428,7 @@
     },
     {
       "voter_id": "ISP095785",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Aloka Kumara Shrivastava",
       "relation_type": "Father",
       "relation_name": "Krshnamohana Lala",
@@ -1439,7 +1439,7 @@
     },
     {
       "voter_id": "DWAI092089",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Isaravati",
       "relation_type": "Husband",
       "relation_name": "Dudhanatha Pa",
@@ -1450,7 +1450,7 @@
     },
     {
       "voter_id": "DWAT092378",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Beli",
       "relation_type": "Husband",
       "relation_name": "Khaderu",
@@ -1461,7 +1461,7 @@
     },
     {
       "voter_id": "SP2879526",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Smita Shrivatastava",
       "relation_type": "Husband",
       "relation_name": "Sva0 Braja Vihari Lala Shrivastava",
@@ -1472,7 +1472,7 @@
     },
     {
       "voter_id": "SP3570207",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Anupriya Tivari",
       "relation_type": "Father",
       "relation_name": "Girijesha",
@@ -1483,7 +1483,7 @@
     },
     {
       "voter_id": "ISP0320945",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Baijanatha Simha",
       "relation_type": "Father",
       "relation_name": "Vinoda Kumara Simha Pa",
@@ -1494,7 +1494,7 @@
     },
     {
       "voter_id": "ISP230208",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Rina Vishvakarma",
       "relation_type": "Father",
       "relation_name": "Amita Sharma",
@@ -1505,7 +1505,7 @@
     },
     {
       "voter_id": "ISP0320523",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Satya Vira Kumara Sharma",
       "relation_type": "Father",
       "relation_name": "Shiva Sharma",
@@ -1516,7 +1516,7 @@
     },
     {
       "voter_id": "ISP749492",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Mamju",
       "relation_type": "Husband",
       "relation_name": "Vijaya Kumara",
@@ -1527,7 +1527,7 @@
     },
     {
       "voter_id": "ISP7095793",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Anuraga Shrivastava",
       "relation_type": "Father",
       "relation_name": "Krshnamohana Lala",
@@ -1538,7 +1538,7 @@
     },
     {
       "voter_id": "ISP0320598",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Kamala Ahamada",
       "relation_type": "Father",
       "relation_name": "Islama Ali",
@@ -1549,7 +1549,7 @@
     },
     {
       "voter_id": "ISP4673059",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Vijaya Sharma",
       "relation_type": "Father",
       "relation_name": "Baijanatha",
@@ -1560,7 +1560,7 @@
     },
     {
       "voter_id": "ISP700379",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Indrajita Sharma",
       "relation_type": "Father",
       "relation_name": "Jamuna Sharma",
@@ -1571,7 +1571,7 @@
     },
     {
       "voter_id": "ISP700387",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Sunila Kumara Sharma",
       "relation_type": "Father",
       "relation_name": "Shiva Sharma",
@@ -1582,7 +1582,7 @@
     },
     {
       "voter_id": "SP2303097",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Sudama",
       "relation_type": "Father",
       "relation_name": "Chedi",
@@ -1593,7 +1593,7 @@
     },
     {
       "voter_id": "ISP0378352",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Asha",
       "relation_type": "Husband",
       "relation_name": "Sudama",
@@ -1604,7 +1604,7 @@
     },
     {
       "voter_id": "ISP7095884",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Manoja Gupta",
       "relation_type": "Father",
       "relation_name": "Kedara Gupta",
@@ -1615,7 +1615,7 @@
     },
     {
       "voter_id": "DWAR092493",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Subhagi",
       "relation_type": "Father",
       "relation_name": "Brjalala",
@@ -1626,7 +1626,7 @@
     },
     {
       "voter_id": "ISP485205",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Vikasa Yadava",
       "relation_type": "Father",
       "relation_name": "Ganesha Yadava",
@@ -1637,7 +1637,7 @@
     },
     {
       "voter_id": "ISP5046842",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Shailesha Kumara",
       "relation_type": "Father",
       "relation_name": "Amarajita Prasada",
@@ -1648,7 +1648,7 @@
     },
     {
       "voter_id": "ISP7683796",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Abhisheka Kumara Simha",
       "relation_type": "Father",
       "relation_name": "Anali Kumara Simha",
@@ -1659,7 +1659,7 @@
     },
     {
       "voter_id": "ISP702748",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Kalavati Devi",
       "relation_type": "Husband",
       "relation_name": "Umesha Yadava",
@@ -1670,7 +1670,7 @@
     },
     {
       "voter_id": "DWAT092600",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Yogendara",
       "relation_type": "Father",
       "relation_name": "Chedi",
@@ -1681,7 +1681,7 @@
     },
     {
       "voter_id": "ISP0070264",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Vandana",
       "relation_type": "Husband",
       "relation_name": "Yogendra Pa",
@@ -1692,7 +1692,7 @@
     },
     {
       "voter_id": "DWQ403666",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Samjaya Kumara",
       "relation_type": "Father",
       "relation_name": "Brjalala",
@@ -1703,7 +1703,7 @@
     },
     {
       "voter_id": "ISP0320705",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Kalavati Devi",
       "relation_type": "Husband",
       "relation_name": "Shamkara Upadhyaya",
@@ -1714,7 +1714,7 @@
     },
     {
       "voter_id": "ISP749526",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Purendra Sarakara",
       "relation_type": "Father",
       "relation_name": "Bejanatha",
@@ -1725,7 +1725,7 @@
     },
     {
       "voter_id": "ISP099647",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Kirana Shrivastava",
       "relation_type": "Husband",
       "relation_name": "Pradipa Narayana Shrivasvata Ma",
@@ -1736,7 +1736,7 @@
     },
     {
       "voter_id": "ISP7095892",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Anilakumara Simha",
       "relation_type": "Father",
       "relation_name": "Ramaratana Simha Qi",
@@ -1747,7 +1747,7 @@
     },
     {
       "voter_id": "ISP700460",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Nivedita Mani",
       "relation_type": "Husband",
       "relation_name": "Sheshamani Pa",
@@ -1758,7 +1758,7 @@
     },
     {
       "voter_id": "SP0320473",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Fe Devi",
       "relation_type": "Husband",
       "relation_name": "Manoja Gupta",
@@ -1769,7 +1769,7 @@
     },
     {
       "voter_id": "ISP7494863",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Amjali Gupta",
       "relation_type": "Husband",
       "relation_name": "Pindu Gautama",
@@ -1780,7 +1780,7 @@
     },
     {
       "voter_id": "BWAT092485",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Urmila",
       "relation_type": "Husband",
       "relation_name": "Shyama",
@@ -1791,7 +1791,7 @@
     },
     {
       "voter_id": "ISP0242750",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Navina Kumara Praja",
       "relation_type": "Father",
       "relation_name": "Shyama Prasada",
@@ -1802,7 +1802,7 @@
     },
     {
       "voter_id": "ISP702789",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ramjana Sharma",
       "relation_type": "Father",
       "relation_name": "Ganesha Yadava",
@@ -1813,7 +1813,7 @@
     },
     {
       "voter_id": "ISP4254066",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Sudha Devi",
       "relation_type": "Husband",
       "relation_name": "Ganesha Yadava",
@@ -1824,7 +1824,7 @@
     },
     {
       "voter_id": "ISP702755",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Sindu Devi",
       "relation_type": "Husband",
       "relation_name": "Dilipa Yadava",
@@ -1835,7 +1835,7 @@
     },
     {
       "voter_id": "SP4672697",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ajaya Praja",
       "relation_type": "Father",
       "relation_name": "Pyare",
@@ -1846,7 +1846,7 @@
     },
     {
       "voter_id": "ISP7494699",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Jitendra",
       "relation_type": "Father",
       "relation_name": "Ramanayana",
@@ -1857,7 +1857,7 @@
     },
     {
       "voter_id": "ISP7494707",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Mira Devi",
       "relation_type": "Husband",
       "relation_name": "Ramanaresha Shaha",
@@ -1868,7 +1868,7 @@
     },
     {
       "voter_id": "ISP749487",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ibaraka Khana A’ 80",
       "relation_type": "Father",
       "relation_name": "Amira Hama",
@@ -1879,7 +1879,7 @@
     },
     {
       "voter_id": "ISP4256624",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Salama .khatuna",
       "relation_type": "Father",
       "relation_name": "Rainudadina Khana",
@@ -1890,7 +1890,7 @@
     },
     {
       "voter_id": "ISP4254025",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Khursheda Khana",
       "relation_type": "Father",
       "relation_name": "Raisa Khana",
@@ -1901,7 +1901,7 @@
     },
     {
       "voter_id": "ISP7900650",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ro Tasha Simha",
       "relation_type": "Father",
       "relation_name": "Suryanatha Simha",
@@ -1912,7 +1912,7 @@
     },
     {
       "voter_id": "ISP0320853",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Mendra Kumara",
       "relation_type": "Father",
       "relation_name": "Rama Asare",
@@ -1923,7 +1923,7 @@
     },
     {
       "voter_id": "ISP7494772",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Shavini",
       "relation_type": "Husband",
       "relation_name": "Aloka",
@@ -1934,7 +1934,7 @@
     },
     {
       "voter_id": "ISP7494889",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Amkita",
       "relation_type": "Father",
       "relation_name": "Govinda Kushna Pa",
@@ -1945,7 +1945,7 @@
     },
     {
       "voter_id": "ISP466096",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Gaurava Kumara Mishra",
       "relation_type": "Father",
       "relation_name": "Sheshanatha Mishra Pam",
@@ -1956,7 +1956,7 @@
     },
     {
       "voter_id": "ISP494988",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Priyamshu",
       "relation_type": "Father",
       "relation_name": "Purendra Sarakara",
@@ -1967,7 +1967,7 @@
     },
     {
       "voter_id": "ISP7494676",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Aruna Kumara",
       "relation_type": "Father",
       "relation_name": "Chandrika Simha",
@@ -1978,7 +1978,7 @@
     },
     {
       "voter_id": "SP0975367",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Omaprakasha",
       "relation_type": "Father",
       "relation_name": "Siddhu",
@@ -1989,7 +1989,7 @@
     },
     {
       "voter_id": "ISP7095645",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ajaya Kumara",
       "relation_type": "Father",
       "relation_name": "Vashishtha",
@@ -2000,7 +2000,7 @@
     },
     {
       "voter_id": "ISP0320838",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Gunja Devi",
       "relation_type": "Father",
       "relation_name": "Mendra Kumara",
@@ -2011,7 +2011,7 @@
     },
     {
       "voter_id": "ISP7494624",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Shveta Simha",
       "relation_type": "Husband",
       "relation_name": "Ranajita Simha",
@@ -2022,7 +2022,7 @@
     },
     {
       "voter_id": "ISP749500",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Punama Sarakara",
       "relation_type": "Husband",
       "relation_name": "Purendra Sarakara",
@@ -2033,7 +2033,7 @@
     },
     {
       "voter_id": "ISP4256582",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Maijuddina Khana",
       "relation_type": "Father",
       "relation_name": "Rainudadina Khana",
@@ -2044,7 +2044,7 @@
     },
     {
       "voter_id": "SP425407",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Anisha Khana",
       "relation_type": "Father",
       "relation_name": "Raisa Khana",
@@ -2055,7 +2055,7 @@
     },
     {
       "voter_id": "ISP7494665",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Mamsh‌ Sahaya",
       "relation_type": "Father",
       "relation_name": "Dhuvakishora",
@@ -2066,7 +2066,7 @@
     },
     {
       "voter_id": "ISP494749",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Rina",
       "relation_type": "Husband",
       "relation_name": "Devendra",
@@ -2077,7 +2077,7 @@
     },
     {
       "voter_id": "ISP7684463",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Brjabhana Simha",
       "relation_type": "Father",
       "relation_name": "Sva0 Vindhyachala Simha Rathaura",
@@ -2088,7 +2088,7 @@
     },
     {
       "voter_id": "ISP684067",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Urmila Jayasavala",
       "relation_type": "Husband",
       "relation_name": "Ramesha Kumara Jayasavala",
@@ -2099,7 +2099,7 @@
     },
     {
       "voter_id": "ISP478497",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Nidhi Gupta",
       "relation_type": "Father",
       "relation_name": "Purnamasi Lala Gupta",
@@ -2110,7 +2110,7 @@
     },
     {
       "voter_id": "SP3770340",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Vikasa Kumara Gupta",
       "relation_type": "Father",
       "relation_name": "Jagadisha Prasada Gupta",
@@ -2121,7 +2121,7 @@
     },
     {
       "voter_id": "WA2833739",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Surendra Bhagata",
       "relation_type": "Father",
       "relation_name": "Shiva Mohara",
@@ -2132,7 +2132,7 @@
     },
     {
       "voter_id": "ISP494996",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ishamka Sarakara",
       "relation_type": "Father",
       "relation_name": "Purendra Sarakara",
@@ -2143,7 +2143,7 @@
     },
     {
       "voter_id": "ISP945549",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Parashurama Simha",
       "relation_type": "Father",
       "relation_name": "Shri Ramadasa Simha Qi",
@@ -2154,7 +2154,7 @@
     },
     {
       "voter_id": "ISP7099696",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Vashishta Narayana Shrivasvata",
       "relation_type": "Father",
       "relation_name": "Mukesha Pandeya",
@@ -2165,7 +2165,7 @@
     },
     {
       "voter_id": "ISPI684398",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Garima Jayasavala",
       "relation_type": "Father",
       "relation_name": "Ramesha Kumara Jayasavala",
@@ -2176,7 +2176,7 @@
     },
     {
       "voter_id": "DWQ2833788",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Mira",
       "relation_type": "Husband",
       "relation_name": "Rajakumara Pam",
@@ -2187,7 +2187,7 @@
     },
     {
       "voter_id": "ISP099852",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Vighika",
       "relation_type": "Husband",
       "relation_name": "Yogendra Kumara",
@@ -2198,7 +2198,7 @@
     },
     {
       "voter_id": "DWA283372",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Mashila Devi",
       "relation_type": "Husband",
       "relation_name": "Surendra Bhagata Pa",
@@ -2209,7 +2209,7 @@
     },
     {
       "voter_id": "ISP7494905",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Usha",
       "relation_type": "Husband",
       "relation_name": "Sugriva Pa",
@@ -2220,7 +2220,7 @@
     },
     {
       "voter_id": "ISP0320986",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Durgavati Devi",
       "relation_type": "Husband",
       "relation_name": "Amara Jita Mishra",
@@ -2231,7 +2231,7 @@
     },
     {
       "voter_id": "ISP7494723",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Manoja Shukala",
       "relation_type": "Father",
       "relation_name": "Shiva Prasada Shukala",
@@ -2242,7 +2242,7 @@
     },
     {
       "voter_id": "ISPI683872",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ramesha Kumara Jayasavala",
       "relation_type": "Father",
       "relation_name": "Sva0 Hari Prasada Jayasavala",
@@ -2253,7 +2253,7 @@
     },
     {
       "voter_id": "ISP7684356",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Mamshu Shekhara",
       "relation_type": "Father",
       "relation_name": "Ramesha Kumara Jayasavala",
@@ -2264,7 +2264,7 @@
     },
     {
       "voter_id": "DWQ5933700",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Niraja",
       "relation_type": "Father",
       "relation_name": "Bi. Ena. Pala",
@@ -2275,7 +2275,7 @@
     },
     {
       "voter_id": "ISP7494640",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Anjana Sharma",
       "relation_type": "Husband",
       "relation_name": "Vishvanatha Sharma",
@@ -2286,7 +2286,7 @@
     },
     {
       "voter_id": "ISP749500",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Shiva Prasada Shukla",
       "relation_type": "Father",
       "relation_name": "Ramabachana",
@@ -2297,7 +2297,7 @@
     },
     {
       "voter_id": "ISP749578",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Vindu Shukla",
       "relation_type": "Husband",
       "relation_name": "Shiva Prasada Shukla",
@@ -2308,7 +2308,7 @@
     },
     {
       "voter_id": "DWWA403780",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Pratibha",
       "relation_type": "Husband",
       "relation_name": "Purushottama",
@@ -2319,7 +2319,7 @@
     },
     {
       "voter_id": "DWA283409",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Aruna Go Mishra",
       "relation_type": "Father",
       "relation_name": "Rama Lala",
@@ -2330,7 +2330,7 @@
     },
     {
       "voter_id": "DWQ3776800",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Sudha",
       "relation_type": "Father",
       "relation_name": "Gajendra Prasada",
@@ -2341,7 +2341,7 @@
     },
     {
       "voter_id": "PWA4038204",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Hematala",
       "relation_type": "Husband",
       "relation_name": "Achyutananda",
@@ -2352,7 +2352,7 @@
     },
     {
       "voter_id": "DWQ2238988",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Anila Chauthari",
       "relation_type": "Father",
       "relation_name": "Kailasha Prasada",
@@ -2363,7 +2363,7 @@
     },
     {
       "voter_id": "DWQ2833689",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Vidyavati Devi",
       "relation_type": "Husband",
       "relation_name": "Shashi Kanta Shri0",
@@ -2374,7 +2374,7 @@
     },
     {
       "voter_id": "DWQ2833754",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Madhusudana Mishra",
       "relation_type": "Father",
       "relation_name": "Sva.thakura Prasada Mishra",
@@ -2385,7 +2385,7 @@
     },
     {
       "voter_id": "DWA5933778",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Rama Lala Mishra",
       "relation_type": "Father",
       "relation_name": "Hari Prasada Mishra Qi",
@@ -2396,7 +2396,7 @@
     },
     {
       "voter_id": "DWQ2834733",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ajaya",
       "relation_type": "Father",
       "relation_name": "Rama Lala Qi",
@@ -2407,7 +2407,7 @@
     },
     {
       "voter_id": "DWQ2834075",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Anupa",
       "relation_type": "Father",
       "relation_name": "Rama Lala",
@@ -2418,7 +2418,7 @@
     },
     {
       "voter_id": "DWA2834078",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Sima",
       "relation_type": "Husband",
       "relation_name": "Vijaya Prakasha",
@@ -2429,7 +2429,7 @@
     },
     {
       "voter_id": "ISP684000",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Kirana Pandeya",
       "relation_type": "Husband",
       "relation_name": "Akhilesha",
@@ -2440,7 +2440,7 @@
     },
     {
       "voter_id": "ISP0320689",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Anila Kumara",
       "relation_type": "Father",
       "relation_name": "Shrivastava",
@@ -2451,7 +2451,7 @@
     },
     {
       "voter_id": "DWA2238889",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Sunila",
       "relation_type": "Father",
       "relation_name": "Kailasha Prasada",
@@ -2462,7 +2462,7 @@
     },
     {
       "voter_id": "DWQ2833697",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Dite Kumara Shrivastava",
       "relation_type": "Father",
       "relation_name": "Shashikanta Shrivastava Pam",
@@ -2473,7 +2473,7 @@
     },
     {
       "voter_id": "DWQ2833762",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Dipaka",
       "relation_type": "Father",
       "relation_name": "Madhu Sudana",
@@ -2484,7 +2484,7 @@
     },
     {
       "voter_id": "DWQ5933726",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Savitri Devi",
       "relation_type": "Husband",
       "relation_name": "Rama Lala",
@@ -2495,7 +2495,7 @@
     },
     {
       "voter_id": "DWA2834059",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Pushpa Mishra",
       "relation_type": "Husband",
       "relation_name": "Ajaya Kumara Mishra",
@@ -2506,7 +2506,7 @@
     },
     {
       "voter_id": "DWA2834067",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Anila",
       "relation_type": "Father",
       "relation_name": "Rama Lala",
@@ -2517,7 +2517,7 @@
     },
     {
       "voter_id": "ISP0600205",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Vishala",
       "relation_type": "Father",
       "relation_name": "Devendrakumara",
@@ -2528,7 +2528,7 @@
     },
     {
       "voter_id": "DWA2238996",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ranajita",
       "relation_type": "Father",
       "relation_name": "Kailasha Prasada",
@@ -2539,7 +2539,7 @@
     },
     {
       "voter_id": "ISP2553493",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Priti Shrivastava",
       "house_number": "775",
       "age": 53,
@@ -2548,7 +2548,7 @@
     },
     {
       "voter_id": "SP0337330",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Akhilesha",
       "relation_type": "Father",
       "relation_name": "Madhusudana",
@@ -2559,7 +2559,7 @@
     },
     {
       "voter_id": "ISP7683630",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Nilu Simha",
       "relation_type": "Husband",
       "relation_name": "Vijaya Kumara Simha",
@@ -2570,7 +2570,7 @@
     },
     {
       "voter_id": "DWQ5933734",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ashoka Kumara",
       "relation_type": "Father",
       "relation_name": "Arati",
@@ -2581,7 +2581,7 @@
     },
     {
       "voter_id": "ISP4720448",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Samdhya Sharma",
       "relation_type": "Father",
       "relation_name": "Mahendra Natha",
@@ -2592,7 +2592,7 @@
     },
     {
       "voter_id": "DWA2679807",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Pramoda Ku0 Nayaka",
       "relation_type": "Father",
       "relation_name": "Radhe Krshna Nayaka",
@@ -2603,7 +2603,7 @@
     },
     {
       "voter_id": "PWA202840",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Arati",
       "relation_type": "Father",
       "relation_name": "Rama Manohara Dube Pa",
@@ -2614,7 +2614,7 @@
     },
     {
       "voter_id": "DWA2634042",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Mahendra Natha Pandeya",
       "relation_type": "Father",
       "relation_name": "Charana Pandeya Pa",
@@ -2625,7 +2625,7 @@
     },
     {
       "voter_id": "DWQ2740538",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Aravinda",
       "relation_type": "Husband",
       "relation_name": "Bi.ke. Simha",
@@ -2636,7 +2636,7 @@
     },
     {
       "voter_id": "ISP7099720",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Saroja Tivari",
       "relation_type": "Husband",
       "relation_name": "Jiuta Tivari",
@@ -2647,7 +2647,7 @@
     },
     {
       "voter_id": "ISP7096023",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Radheshyama Chau I",
       "relation_type": "Father",
       "relation_name": "Chotelala Chau I",
@@ -2658,7 +2658,7 @@
     },
     {
       "voter_id": "ISP3570223",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Asha Devi",
       "relation_type": "Husband",
       "relation_name": "Ramayana Bhagata",
@@ -2669,7 +2669,7 @@
     },
     {
       "voter_id": "DWO2834766",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Devadatta Maurya",
       "relation_type": "Father",
       "relation_name": "Mahesha Prasada",
@@ -2680,7 +2680,7 @@
     },
     {
       "voter_id": "ISP4327649",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Manoja Kumara Sharma",
       "relation_type": "Father",
       "relation_name": "Teja Bahadura Sharma",
@@ -2691,7 +2691,7 @@
     },
     {
       "voter_id": "DWQ2834034",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Jayantri Devi",
       "relation_type": "Husband",
       "relation_name": "Mahendra Natha",
@@ -2702,7 +2702,7 @@
     },
     {
       "voter_id": "ISP7200635",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Mamata Simha",
       "relation_type": "Husband",
       "relation_name": "Rupesha Kumara Simha",
@@ -2713,7 +2713,7 @@
     },
     {
       "voter_id": "ISP768458",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Saumitra",
       "relation_type": "Father",
       "relation_name": "Anila Simha",
@@ -2724,7 +2724,7 @@
     },
     {
       "voter_id": "DWA283367",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Sarita Jaikaba",
       "relation_type": "Husband",
       "relation_name": "Echa.esa. Jaikaba",
@@ -2735,7 +2735,7 @@
     },
     {
       "voter_id": "DWQ2833648",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Sudarshana",
       "relation_type": "Father",
       "relation_name": "Muneshvara",
@@ -2746,7 +2746,7 @@
     },
     {
       "voter_id": "SP230246",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Prashanta Kumara",
       "relation_type": "Father",
       "relation_name": "Ajaya Kumara Varma",
@@ -2757,7 +2757,7 @@
     },
     {
       "voter_id": "WA2032837",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Rakesha",
       "relation_type": "Father",
       "relation_name": "Rama Avadha",
@@ -2768,7 +2768,7 @@
     },
     {
       "voter_id": "ISP099746",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Kamalesha Chandra Tivari",
       "relation_type": "Father",
       "relation_name": "Jiuta Tivari",
@@ -2779,7 +2779,7 @@
     },
     {
       "voter_id": "ISP024242",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Dinesha",
       "relation_type": "Father",
       "relation_name": "Vidya Qi",
@@ -2790,7 +2790,7 @@
     },
     {
       "voter_id": "DWQ2833655",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Lalamati",
       "relation_type": "Husband",
       "relation_name": "Sudarshana",
@@ -2801,7 +2801,7 @@
     },
     {
       "voter_id": "ISP7684349",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ravi Pratapa Yadava",
       "relation_type": "Father",
       "relation_name": "Rama Raja Yadava",
@@ -2812,7 +2812,7 @@
     },
     {
       "voter_id": "ISP097539",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Vindu Varma",
       "relation_type": "Husband",
       "relation_name": "Ajaya Kumara Varma",
@@ -2823,7 +2823,7 @@
     },
     {
       "voter_id": "DWWA223887",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ishvara",
       "relation_type": "Father",
       "relation_name": "Rama Avadha",
@@ -2834,7 +2834,7 @@
     },
     {
       "voter_id": "DWQ2238962",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Saroja",
       "relation_type": "Husband",
       "relation_name": "Ishvara Prasada",
@@ -2845,7 +2845,7 @@
     },
     {
       "voter_id": "ISP4349635",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Khushahala Adila",
       "relation_type": "Father",
       "relation_name": "Adila Salima",
@@ -2856,7 +2856,7 @@
     },
     {
       "voter_id": "ISP099753",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Savita Tivari",
       "relation_type": "Husband",
       "relation_name": "Satishachandra Tivari",
@@ -2867,7 +2867,7 @@
     },
     {
       "voter_id": "SP7494608",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Samgita Simha",
       "relation_type": "Husband",
       "relation_name": "Aruna Kumara",
@@ -2878,7 +2878,7 @@
     },
     {
       "voter_id": "DWQ5933759",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ashoka Dube",
       "relation_type": "Father",
       "relation_name": "Raja Kishora Dube",
@@ -2889,7 +2889,7 @@
     },
     {
       "voter_id": "SP0242404",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Indu",
       "relation_type": "Husband",
       "relation_name": "Dinesha",
@@ -2900,7 +2900,7 @@
     },
     {
       "voter_id": "ISP230298",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Samtosha Kumara",
       "relation_type": "Father",
       "relation_name": "Surdashana Prasada",
@@ -2911,7 +2911,7 @@
     },
     {
       "voter_id": "ISP768490",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Kusuma Yadava",
       "relation_type": "Husband",
       "relation_name": "Ravi Pratapa Yadava",
@@ -2922,7 +2922,7 @@
     },
     {
       "voter_id": "ISP5056098",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Pari",
       "relation_type": "Father",
       "relation_name": "Ratnakara Chauhana",
@@ -2933,7 +2933,7 @@
     },
     {
       "voter_id": "DWA2238954",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Rajesha",
       "relation_type": "Father",
       "relation_name": "Rama Krpala",
@@ -2944,7 +2944,7 @@
     },
     {
       "voter_id": "ISP7683879",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Avadhesha Chau I",
       "relation_type": "Father",
       "relation_name": "Indara Prasada",
@@ -2955,7 +2955,7 @@
     },
     {
       "voter_id": "ISP000959",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Sudhira Ae",
       "relation_type": "Father",
       "relation_name": "Suvasha",
@@ -2966,7 +2966,7 @@
     },
     {
       "voter_id": "ISP0070967",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Mamju",
       "relation_type": "Father",
       "relation_name": "Kaushala Kumara",
@@ -2977,7 +2977,7 @@
     },
     {
       "voter_id": "SP007080",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Kamalachanda Shrivastava",
       "relation_type": "Father",
       "relation_name": "Pi Si Shri",
@@ -2988,7 +2988,7 @@
     },
     {
       "voter_id": "ISP4567593",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Abhisheka Bhattacharya",
       "relation_type": "Father",
       "relation_name": "Aera Bhattacharya",
@@ -2999,7 +2999,7 @@
     },
     {
       "voter_id": "SP0967927",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Gorakha Simha",
       "relation_type": "Father",
       "relation_name": "Avadhesha Simha",
@@ -3010,7 +3010,7 @@
     },
     {
       "voter_id": "ISP746067",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Rama Krshna Tripathi",
       "relation_type": "Father",
       "relation_name": "Rajeshvara Prasada Tripathi",
@@ -3021,7 +3021,7 @@
     },
     {
       "voter_id": "ISP0967885",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Amkana Chatarji",
       "relation_type": "Father",
       "relation_name": "Pradipa Kumara Chatarji",
@@ -3032,7 +3032,7 @@
     },
     {
       "voter_id": "SP3252970",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ashutosha Kumara Tivari",
       "relation_type": "Father",
       "relation_name": "Hira Lala Tivari",
@@ -3043,7 +3043,7 @@
     },
     {
       "voter_id": "SP007320",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Channadavati Pandeya 80",
       "relation_type": "Husband",
       "relation_name": "Chandra Ae Photo",
@@ -3053,7 +3053,7 @@
     },
     {
       "voter_id": "ISP0079778",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Archana Bharati",
       "relation_type": "Father",
       "relation_name": "Ramananda",
@@ -3064,7 +3064,7 @@
     },
     {
       "voter_id": "SP3487454",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Avadhesha Simha",
       "relation_type": "Father",
       "relation_name": "Parameshvara Simha",
@@ -3075,7 +3075,7 @@
     },
     {
       "voter_id": "ISP0967943",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Amara Simha",
       "relation_type": "Father",
       "relation_name": "Avadhesha Kumara Pam",
@@ -3086,7 +3086,7 @@
     },
     {
       "voter_id": "ISP0967869",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Pradipa Kumara Chatarji",
       "relation_type": "Father",
       "relation_name": "Sva0 Prabhashachanda Chatarji",
@@ -3097,7 +3097,7 @@
     },
     {
       "voter_id": "ISP0967893",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Priya Chatarji",
       "relation_type": "Father",
       "relation_name": "Pradipa Kumara Chatarji",
@@ -3108,7 +3108,7 @@
     },
     {
       "voter_id": "SP0077205",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Mohani Shrivastava",
       "relation_type": "Husband",
       "relation_name": "Kamala We Shrivasta",
@@ -3119,7 +3119,7 @@
     },
     {
       "voter_id": "ISP3726304",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Prakhara Raya",
       "relation_type": "Father",
       "relation_name": "Ay Arta Raya",
@@ -3130,7 +3130,7 @@
     },
     {
       "voter_id": "ISP0077372",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Anudrita Chandra",
       "relation_type": "Father",
       "relation_name": "Chandramohana",
@@ -3141,7 +3141,7 @@
     },
     {
       "voter_id": "ISP096799",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Urmila Simha",
       "relation_type": "Husband",
       "relation_name": "Avadhesha Simha",
@@ -3152,7 +3152,7 @@
     },
     {
       "voter_id": "ISP0967935",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Priya Simha",
       "relation_type": "Husband",
       "relation_name": "Gorakha Simha",
@@ -3163,7 +3163,7 @@
     },
     {
       "voter_id": "ISP4660544",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Gaurava Shekhara",
       "house_number": "जी",
       "age": 25,
@@ -3172,7 +3172,7 @@
     },
     {
       "voter_id": "SP3352309",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Jyotisha Narayana Pandeya",
       "relation_type": "Father",
       "relation_name": "Bachcha Prasada Pandeya",
@@ -3183,7 +3183,7 @@
     },
     {
       "voter_id": "ISP3352267",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Pushpalata",
       "relation_type": "Husband",
       "relation_name": "Manisha Kumara Ra La",
@@ -3194,7 +3194,7 @@
     },
     {
       "voter_id": "ISP335237",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Sindhuja Bharati",
       "relation_type": "Husband",
       "relation_name": "Mithilesha Kumara",
@@ -3205,7 +3205,7 @@
     },
     {
       "voter_id": "SP2908630",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Aloka Chaurasiya",
       "relation_type": "Father",
       "relation_name": "Dudhanatha Chaurasiya",
@@ -3216,7 +3216,7 @@
     },
     {
       "voter_id": "SP0274324",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Indira 80",
       "relation_type": "Husband",
       "relation_name": "Virendra A",
@@ -3226,7 +3226,7 @@
     },
     {
       "voter_id": "DWQ3650728",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ajita Pratapa Simha",
       "relation_type": "Father",
       "relation_name": "Triyuginarayana",
@@ -3237,7 +3237,7 @@
     },
     {
       "voter_id": "ISP062083",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Kirana Raya",
       "relation_type": "Husband",
       "relation_name": "Rama Chandra Raya",
@@ -3248,7 +3248,7 @@
     },
     {
       "voter_id": "DWA4037958",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Manisha Kumara Ra La",
       "relation_type": "Father",
       "relation_name": "Rajendra Prasada Pa",
@@ -3259,7 +3259,7 @@
     },
     {
       "voter_id": "ISP3352275",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Jyoti",
       "relation_type": "Husband",
       "relation_name": "Pravina Kumara Ra La",
@@ -3270,7 +3270,7 @@
     },
     {
       "voter_id": "ISP2605004",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Chamchala Sonakara",
       "relation_type": "Father",
       "relation_name": "Teja Bahadura Sonakara",
@@ -3281,7 +3281,7 @@
     },
     {
       "voter_id": "SP260479",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Shubho Shri Chau I",
       "relation_type": "Father",
       "relation_name": "Mrnala Kamta Chau I",
@@ -3292,7 +3292,7 @@
     },
     {
       "voter_id": "ISP3709037",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Shivamgi Mishra",
       "relation_type": "Husband",
       "relation_name": "Chinmaya Mishra",
@@ -3303,7 +3303,7 @@
     },
     {
       "voter_id": "ISP729964",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Nasima Anavara",
       "relation_type": "Father",
       "relation_name": "Anavara Ali Kha.n",
@@ -3314,7 +3314,7 @@
     },
     {
       "voter_id": "ISP0274340",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Amana Pratapa Simha",
       "relation_type": "Father",
       "relation_name": "Ravindra",
@@ -3325,7 +3325,7 @@
     },
     {
       "voter_id": "SP0620823",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Rama Chandra Raya",
       "relation_type": "Father",
       "relation_name": "Vishunadeva Raya",
@@ -3336,7 +3336,7 @@
     },
     {
       "voter_id": "ISP0967950",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ajita Kumara 80",
       "relation_type": "Father",
       "relation_name": "Sharata Ru",
@@ -3346,7 +3346,7 @@
     },
     {
       "voter_id": "ISP3352294",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Minu Pandeya",
       "relation_type": "Husband",
       "relation_name": "Jyotisha Narayana Pandeya",
@@ -3357,7 +3357,7 @@
     },
     {
       "voter_id": "SP4479887",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Zoha Phatima",
       "relation_type": "Father",
       "relation_name": "Jiyauddina Siddiki",
@@ -3368,7 +3368,7 @@
     },
     {
       "voter_id": "SP290487",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Amaren{}dra Bahadura Shrivastava",
       "relation_type": "Father",
       "relation_name": "Jitendra Kumara Shrivastava",
@@ -3379,7 +3379,7 @@
     },
     {
       "voter_id": "ISP260506",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ikabala",
       "relation_type": "Father",
       "relation_name": "Gpranavara Gpratni Kha",
@@ -3390,7 +3390,7 @@
     },
     {
       "voter_id": "SP0274376",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Birendra Simha",
       "relation_type": "Father",
       "relation_name": "Rajadhari Simha",
@@ -3401,7 +3401,7 @@
     },
     {
       "voter_id": "SP2605087",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Sabina Shahina",
       "relation_type": "Husband",
       "relation_name": "Gpranavara Gprali Kha",
@@ -3412,7 +3412,7 @@
     },
     {
       "voter_id": "ISP0620849",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Suyasa Raya",
       "relation_type": "Father",
       "relation_name": "Rama Chandra Raya",
@@ -3423,7 +3423,7 @@
     },
     {
       "voter_id": "ISP7684554",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Mrnala Kanta Chau I",
       "relation_type": "Father",
       "relation_name": "Dinesha Chanda Chau I",
@@ -3434,7 +3434,7 @@
     },
     {
       "voter_id": "ISP0967968",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ritarani Chau I 80",
       "relation_type": "Husband",
       "relation_name": "Ajita Sara",
@@ -3445,7 +3445,7 @@
     },
     {
       "voter_id": "ISP4009395",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Mitali Chau I",
       "relation_type": "Husband",
       "relation_name": "Sujita Kumara Chau I",
@@ -3456,7 +3456,7 @@
     },
     {
       "voter_id": "SP2605079",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Nilama Lata",
       "relation_type": "Father",
       "relation_name": "Lalabahadura",
@@ -3467,7 +3467,7 @@
     },
     {
       "voter_id": "ISP463909",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Vinoda Kumara",
       "relation_type": "Father",
       "relation_name": "Sva0 Moti Lala",
@@ -3478,7 +3478,7 @@
     },
     {
       "voter_id": "SP2908978",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Bindu Shrivastava",
       "relation_type": "Husband",
       "relation_name": "Sva0 Pande Ramesha Chandra Shrivastava",
@@ -3489,7 +3489,7 @@
     },
     {
       "voter_id": "ISP3348380",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Mamju Nigama",
       "relation_type": "Husband",
       "relation_name": "Rajesha Nigama",
@@ -3500,7 +3500,7 @@
     },
     {
       "voter_id": "ISP4667507",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Sonama Simha",
       "relation_type": "Father",
       "relation_name": "Digvijaya Simha",
@@ -3511,7 +3511,7 @@
     },
     {
       "voter_id": "ISP4597506",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Anushila Priyama",
       "relation_type": "Father",
       "relation_name": "Amara Kamta Dvivedi",
@@ -3522,7 +3522,7 @@
     },
     {
       "voter_id": "ISP4977688",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Pratika Kumara",
       "relation_type": "Father",
       "relation_name": "Ashoka Kumara Pamdeya",
@@ -3533,7 +3533,7 @@
     },
     {
       "voter_id": "ISP0967976",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Sujita Kumara 80",
       "relation_type": "Father",
       "relation_name": "220 Photo A",
@@ -3543,7 +3543,7 @@
     },
     {
       "voter_id": "ISP7684547",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Garima Chau I",
       "relation_type": "Husband",
       "relation_name": "Mrnala Gara Chau I",
@@ -3554,7 +3554,7 @@
     },
     {
       "voter_id": "ISP7684539",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Saurabha Chau I",
       "relation_type": "Father",
       "relation_name": "Munala Wat Chau I",
@@ -3565,7 +3565,7 @@
     },
     {
       "voter_id": "ISP2605046",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Punama Lata",
       "relation_type": "Father",
       "relation_name": "Lalabahadura Pa",
@@ -3576,7 +3576,7 @@
     },
     {
       "voter_id": "ISP4599650",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Mayamka Raja",
       "relation_type": "Father",
       "relation_name": "Vinoda Kumara",
@@ -3587,7 +3587,7 @@
     },
     {
       "voter_id": "ISP2908960",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Monika Shrivastava",
       "relation_type": "Husband",
       "relation_name": "Samdipa Kumara Shrivastava",
@@ -3598,7 +3598,7 @@
     },
     {
       "voter_id": "ISP3348398",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Smita Nigama",
       "relation_type": "Husband",
       "relation_name": "Rajesha Nigama",
@@ -3609,7 +3609,7 @@
     },
     {
       "voter_id": "ISP4597498",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Harshita Raja",
       "relation_type": "Father",
       "relation_name": "Amara Kamta Dvivedi",
@@ -3620,7 +3620,7 @@
     },
     {
       "voter_id": "SP4970295",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ashisha Kumara Sinha",
       "relation_type": "Father",
       "relation_name": "Subodha Kumara Ma",
@@ -3631,7 +3631,7 @@
     },
     {
       "voter_id": "ISP4009452",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ajita Kumara",
       "relation_type": "Father",
       "relation_name": "Sharatachamdra Kumara",
@@ -3642,7 +3642,7 @@
     },
     {
       "voter_id": "ISP4009403",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Sujita Chau I",
       "relation_type": "Father",
       "relation_name": "Ajita Kumara",
@@ -3653,7 +3653,7 @@
     },
     {
       "voter_id": "SP355679",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Ayushi Khetana",
       "relation_type": "Father",
       "relation_name": "Anila Khetana",
@@ -3664,7 +3664,7 @@
     },
     {
       "voter_id": "ISP4948507",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Avanisha Kumara",
       "relation_type": "Father",
       "relation_name": "Rajadeva Sumana",
@@ -3675,7 +3675,7 @@
     },
     {
       "voter_id": "SP4743373",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Abhisheka Kumara Yadava",
       "relation_type": "Father",
       "relation_name": "Narabdeshvara Yadava",
@@ -3686,7 +3686,7 @@
     },
     {
       "voter_id": "ISP4925673",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Srshti Chau I",
       "house_number": "हाऊस",
       "age": 2,
@@ -3695,7 +3695,7 @@
     },
     {
       "voter_id": "ISP5057669",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Harshika Sharma 80",
       "relation_type": "Father",
       "relation_name": "Samjiva “a",
@@ -3706,7 +3706,7 @@
     },
     {
       "voter_id": "SP230460",
-      "part_number": 3,
+      "part_number": 31,
       "name": "Sarita Devi",
       "relation_type": "Husband",
       "relation_name": "Shri Ramachandra",
@@ -3717,7 +3717,7 @@
     },
     {
       "voter_id": "ISP0070322",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Pimki",
@@ -3730,7 +3730,7 @@
     },
     {
       "voter_id": "ISP700429",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Rimki Gupta",
@@ -3743,7 +3743,7 @@
     },
     {
       "voter_id": "ISP0374823",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Avadha Kishora",
@@ -3756,7 +3756,7 @@
     },
     {
       "voter_id": "DWQ5933775",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Deshabandhu",
@@ -3769,7 +3769,7 @@
     },
     {
       "voter_id": "ISP736324",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Saurabha Shukla",
@@ -3782,7 +3782,7 @@
     },
     {
       "voter_id": "ISP2302255",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Aruna",
@@ -3795,7 +3795,7 @@
     },
     {
       "voter_id": "ISPI684588",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Satya Prakasha Maurya",
@@ -3808,7 +3808,7 @@
     },
     {
       "voter_id": "ISP7494806",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Dhruva Kishora",
@@ -3821,7 +3821,7 @@
     },
     {
       "voter_id": "ISP7684422",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Abhinava Mishra",
@@ -3834,7 +3834,7 @@
     },
     {
       "voter_id": "ISP037485",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Dayavanti",
@@ -3847,7 +3847,7 @@
     },
     {
       "voter_id": "ISP4784834",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Brja Mohana Pamde",
@@ -3860,7 +3860,7 @@
     },
     {
       "voter_id": "ISP2063345",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Jayanta Chanda Kaushika",
@@ -3873,7 +3873,7 @@
     },
     {
       "voter_id": "SP206478",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Vimala Mishra",
@@ -3886,7 +3886,7 @@
     },
     {
       "voter_id": "SP7096007",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Amita Kumara Chau I",
@@ -3899,7 +3899,7 @@
     },
     {
       "voter_id": "ISP7700502",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Samjaya Kumara",
@@ -3912,7 +3912,7 @@
     },
     {
       "voter_id": "ISP7684406",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Pratibha Mishra",
@@ -3925,7 +3925,7 @@
     },
     {
       "voter_id": "ISP4397485",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Amchala Kaushika",
@@ -3938,7 +3938,7 @@
     },
     {
       "voter_id": "ISP736340",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Gaurava Shukla",
@@ -3951,7 +3951,7 @@
     },
     {
       "voter_id": "ISP024067",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Girisha",
@@ -3964,7 +3964,7 @@
     },
     {
       "voter_id": "ISP0240689",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Samjaya Mishra",
@@ -3977,7 +3977,7 @@
     },
     {
       "voter_id": "SP0320788",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Bhajurama Gosvami",
@@ -3990,7 +3990,7 @@
     },
     {
       "voter_id": "SP2302479",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shravana",
@@ -4003,7 +4003,7 @@
     },
     {
       "voter_id": "ISP3588464",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ashvina Simha",
@@ -4016,7 +4016,7 @@
     },
     {
       "voter_id": "ISP2302289",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Sirajavati",
@@ -4029,7 +4029,7 @@
     },
     {
       "voter_id": "ISP0009969",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Pradipa",
@@ -4042,7 +4042,7 @@
     },
     {
       "voter_id": "ISPI684075",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Sam",
@@ -4055,7 +4055,7 @@
     },
     {
       "voter_id": "DWQ2833705",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shakuntala",
@@ -4068,7 +4068,7 @@
     },
     {
       "voter_id": "SP0240697",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ramjita",
@@ -4081,7 +4081,7 @@
     },
     {
       "voter_id": "ISP0320630",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Mahendra",
@@ -4094,7 +4094,7 @@
     },
     {
       "voter_id": "ISP700372",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Anugraha Rovisana",
@@ -4107,7 +4107,7 @@
     },
     {
       "voter_id": "SP700437",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Vinoda Kumara",
@@ -4120,7 +4120,7 @@
     },
     {
       "voter_id": "ISP2302222",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Vimala Devi",
@@ -4133,7 +4133,7 @@
     },
     {
       "voter_id": "ISP0009944",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Darshana Devi",
@@ -4146,7 +4146,7 @@
     },
     {
       "voter_id": "ISP000995",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Samdipa",
@@ -4159,7 +4159,7 @@
     },
     {
       "voter_id": "ISP7684083",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Harishchandra",
@@ -4172,7 +4172,7 @@
     },
     {
       "voter_id": "ISP7684097",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Sushila Kumara Shrivastava",
@@ -4185,7 +4185,7 @@
     },
     {
       "voter_id": "ISP4454690",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Dipali Mishra",
@@ -4196,7 +4196,7 @@
     },
     {
       "voter_id": "DWQ2239093",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Umesha",
@@ -4209,7 +4209,7 @@
     },
     {
       "voter_id": "ISP0320960",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Inara Devi",
@@ -4222,7 +4222,7 @@
     },
     {
       "voter_id": "ISP700452",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Pramoda Kumara",
@@ -4235,7 +4235,7 @@
     },
     {
       "voter_id": "ISP2302487",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Rajani Aia Tivari",
@@ -4248,7 +4248,7 @@
     },
     {
       "voter_id": "ISP5006796",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Amrta Simha",
@@ -4261,7 +4261,7 @@
     },
     {
       "voter_id": "DWAQ3777006",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ramakanta",
@@ -4274,7 +4274,7 @@
     },
     {
       "voter_id": "ISP7900593",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Punama Pandeya",
@@ -4287,7 +4287,7 @@
     },
     {
       "voter_id": "ISP494939",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Vijaya Kumara",
@@ -4300,7 +4300,7 @@
     },
     {
       "voter_id": "ISP7683986",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Samdhya Devi",
@@ -4313,7 +4313,7 @@
     },
     {
       "voter_id": "ISP3860384",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Prachi Priyama",
@@ -4326,7 +4326,7 @@
     },
     {
       "voter_id": "ISP024208",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Rajakumara Yadava",
@@ -4339,7 +4339,7 @@
     },
     {
       "voter_id": "SP7494954",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Samdhya Yadava",
@@ -4352,7 +4352,7 @@
     },
     {
       "voter_id": "SP3726007",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Mahesha Chandra Jha",
@@ -4365,7 +4365,7 @@
     },
     {
       "voter_id": "ISP3725975",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ragani Jha",
@@ -4378,7 +4378,7 @@
     },
     {
       "voter_id": "ISP458989",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Sudha Mishra",
@@ -4391,7 +4391,7 @@
     },
     {
       "voter_id": "ISP3968492",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Simmi Simha",
@@ -4404,7 +4404,7 @@
     },
     {
       "voter_id": "ISP2063949",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Bimala Upadhyaya",
@@ -4417,7 +4417,7 @@
     },
     {
       "voter_id": "ISP768466",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Satya Bhana Mal{}la",
@@ -4430,7 +4430,7 @@
     },
     {
       "voter_id": "SP4672804",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Manati Devi",
@@ -4443,7 +4443,7 @@
     },
     {
       "voter_id": "ISP7494798",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Asharani",
@@ -4456,7 +4456,7 @@
     },
     {
       "voter_id": "ISP7494962",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Abha Patela",
@@ -4469,7 +4469,7 @@
     },
     {
       "voter_id": "ISP372599",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Renuka",
@@ -4482,7 +4482,7 @@
     },
     {
       "voter_id": "ISP4397452",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Sudha Rani Mishra",
@@ -4495,7 +4495,7 @@
     },
     {
       "voter_id": "ISP3968526",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shivani Simha",
@@ -4508,7 +4508,7 @@
     },
     {
       "voter_id": "SP7684034",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Samarendra",
@@ -4521,7 +4521,7 @@
     },
     {
       "voter_id": "ISP768425",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shailendra Kumara Ojha",
@@ -4534,7 +4534,7 @@
     },
     {
       "voter_id": "ISP3860376",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shashamka Shekhara",
@@ -4547,7 +4547,7 @@
     },
     {
       "voter_id": "ISP7494673",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Niharika",
@@ -4560,7 +4560,7 @@
     },
     {
       "voter_id": "ISP3725983",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Kundana Kumara Jha",
@@ -4573,7 +4573,7 @@
     },
     {
       "voter_id": "ISP4589875",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Abhisheka",
@@ -4586,7 +4586,7 @@
     },
     {
       "voter_id": "ISP3968500",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ayushi Simha",
@@ -4599,7 +4599,7 @@
     },
     {
       "voter_id": "ISP4733070",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ran{}ju",
@@ -4612,7 +4612,7 @@
     },
     {
       "voter_id": "ISP2063626",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Dipaka Tivari",
@@ -4625,7 +4625,7 @@
     },
     {
       "voter_id": "SP2063873",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ekata Raya",
@@ -4638,7 +4638,7 @@
     },
     {
       "voter_id": "SP024289",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Prema Shila",
@@ -4651,7 +4651,7 @@
     },
     {
       "voter_id": "ISP0242289",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ramananda",
@@ -4664,7 +4664,7 @@
     },
     {
       "voter_id": "ISP0242703",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Dhurava",
@@ -4677,7 +4677,7 @@
     },
     {
       "voter_id": "ISP4672895",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Brija Madhuri Ojha",
@@ -4690,7 +4690,7 @@
     },
     {
       "voter_id": "SP4776902",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Govimda Krshna Tripathi",
@@ -4703,7 +4703,7 @@
     },
     {
       "voter_id": "ISP2063543",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Amrta Tivari",
@@ -4716,7 +4716,7 @@
     },
     {
       "voter_id": "SP2063832",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Samdhya Raya",
@@ -4729,7 +4729,7 @@
     },
     {
       "voter_id": "ISP2063600",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Vikasa Chandra Raya",
@@ -4742,7 +4742,7 @@
     },
     {
       "voter_id": "ISP0242040",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Suresha Chanda",
@@ -4755,7 +4755,7 @@
     },
     {
       "voter_id": "ISP0242396",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Kamchana 4",
@@ -4768,7 +4768,7 @@
     },
     {
       "voter_id": "ISP0349845",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ajaya Kumara",
@@ -4781,7 +4781,7 @@
     },
     {
       "voter_id": "SP0242560",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Munni Devi",
@@ -4794,7 +4794,7 @@
     },
     {
       "voter_id": "ISP4776373",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Abhilasha Tripathi",
@@ -4807,7 +4807,7 @@
     },
     {
       "voter_id": "ISP2063568",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Tejabahadura Tivari",
@@ -4820,7 +4820,7 @@
     },
     {
       "voter_id": "SP2063782",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Subedara Raya",
@@ -4833,7 +4833,7 @@
     },
     {
       "voter_id": "ISP230227",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shalini",
@@ -4846,7 +4846,7 @@
     },
     {
       "voter_id": "ISP0242636",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Dipaka",
@@ -4859,7 +4859,7 @@
     },
     {
       "voter_id": "ISP035036",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Jitendra Kumara Pandeya",
@@ -4872,7 +4872,7 @@
     },
     {
       "voter_id": "ISP0349852",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shri Mati Archana",
@@ -4885,7 +4885,7 @@
     },
     {
       "voter_id": "SP0242230",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ashoka Kumara",
@@ -4898,7 +4898,7 @@
     },
     {
       "voter_id": "SP0242354",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Mina",
@@ -4911,7 +4911,7 @@
     },
     {
       "voter_id": "SP0242362",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ranadhira Kumara Shrivastava",
@@ -4924,7 +4924,7 @@
     },
     {
       "voter_id": "SP0242727",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Gaurava",
@@ -4937,7 +4937,7 @@
     },
     {
       "voter_id": "ISP0009993",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Bimalakara Pandeya",
@@ -4950,7 +4950,7 @@
     },
     {
       "voter_id": "ISP3725769",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Kishana Sharma",
@@ -4963,7 +4963,7 @@
     },
     {
       "voter_id": "ISP3725926",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Mira Devi",
@@ -4976,7 +4976,7 @@
     },
     {
       "voter_id": "SP3725876",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Surendra Shrivastava",
@@ -4989,7 +4989,7 @@
     },
     {
       "voter_id": "SP3725843",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Vinita Mishra",
@@ -5002,7 +5002,7 @@
     },
     {
       "voter_id": "ISP3725835",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ramananda Mishra",
@@ -5015,7 +5015,7 @@
     },
     {
       "voter_id": "ISP023092",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Amana",
@@ -5028,7 +5028,7 @@
     },
     {
       "voter_id": "ISP0242875",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ravi Kumara Yadava",
@@ -5041,7 +5041,7 @@
     },
     {
       "voter_id": "ISP0320408",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Chamana",
@@ -5054,7 +5054,7 @@
     },
     {
       "voter_id": "ISP4963005",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ta Simha",
@@ -5067,7 +5067,7 @@
     },
     {
       "voter_id": "ISP4962890",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Manya Shahi",
@@ -5080,7 +5080,7 @@
     },
     {
       "voter_id": "ISP3725959",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Kimga Shrivastava",
@@ -5093,7 +5093,7 @@
     },
     {
       "voter_id": "ISP467075",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Sulaxana",
@@ -5106,7 +5106,7 @@
     },
     {
       "voter_id": "ISP3725884",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Soni Shrivastava",
@@ -5119,7 +5119,7 @@
     },
     {
       "voter_id": "SP3725827",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Divakara Mishra",
@@ -5132,7 +5132,7 @@
     },
     {
       "voter_id": "ISP2064293",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Sumitra Devi",
@@ -5145,7 +5145,7 @@
     },
     {
       "voter_id": "ISP0242743",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Amina",
@@ -5158,7 +5158,7 @@
     },
     {
       "voter_id": "SP0242586",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Jyoti",
@@ -5171,7 +5171,7 @@
     },
     {
       "voter_id": "ISP4954632",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Abhisheka Shahi",
@@ -5184,7 +5184,7 @@
     },
     {
       "voter_id": "ISP3725934",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shanti Devi",
@@ -5197,7 +5197,7 @@
     },
     {
       "voter_id": "ISP3725942",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Svati Mishra",
@@ -5210,7 +5210,7 @@
     },
     {
       "voter_id": "ISP372589",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Sudhakara Mishra",
@@ -5223,7 +5223,7 @@
     },
     {
       "voter_id": "ISP736290",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Maruta Nan{}dana Pathaka",
@@ -5236,7 +5236,7 @@
     },
     {
       "voter_id": "SP7494822",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Krshna Kumara Yadava",
@@ -5249,7 +5249,7 @@
     },
     {
       "voter_id": "ISP4776233",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Riya Pamdeya",
@@ -5262,7 +5262,7 @@
     },
     {
       "voter_id": "ISP2064752",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Punama Pandeya",
@@ -5275,7 +5275,7 @@
     },
     {
       "voter_id": "ISP3588555",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Aditya Chau I",
@@ -5288,7 +5288,7 @@
     },
     {
       "voter_id": "ISP4576492",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Kavya Tripathi",
@@ -5301,7 +5301,7 @@
     },
     {
       "voter_id": "ISP484909",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Dipika Sharma",
@@ -5314,7 +5314,7 @@
     },
     {
       "voter_id": "ISP2064095",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Vidyavati Devi",
@@ -5327,7 +5327,7 @@
     },
     {
       "voter_id": "ISP0320440",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Akhilesha Mishra",
@@ -5340,7 +5340,7 @@
     },
     {
       "voter_id": "ISP684562",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Avinasha Kumara Tripathi",
@@ -5353,7 +5353,7 @@
     },
     {
       "voter_id": "ISP3778665",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Amjani Pala",
@@ -5366,7 +5366,7 @@
     },
     {
       "voter_id": "ISP477676",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Rtika Pamdeya",
@@ -5379,7 +5379,7 @@
     },
     {
       "voter_id": "SP3725967",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ajaya Pandeya",
@@ -5392,7 +5392,7 @@
     },
     {
       "voter_id": "SP0337374",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ashvani Upadhyaya",
@@ -5405,7 +5405,7 @@
     },
     {
       "voter_id": "ISP3588480",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Navanita Kumara Tripathi",
@@ -5418,7 +5418,7 @@
     },
     {
       "voter_id": "ISP3968435",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Naremdra Kumara Raya",
@@ -5431,7 +5431,7 @@
     },
     {
       "voter_id": "ISP0320457",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Manju Devi",
@@ -5444,7 +5444,7 @@
     },
     {
       "voter_id": "ISP4253574",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Vazida .khatuna",
@@ -5457,7 +5457,7 @@
     },
     {
       "voter_id": "ISP020059",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Aloka Kumara Pala",
@@ -5470,7 +5470,7 @@
     },
     {
       "voter_id": "SP2064079",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Pradipa Kumara Pandeya",
@@ -5483,7 +5483,7 @@
     },
     {
       "voter_id": "ISP3588563",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Aravinda Kannaujiya",
@@ -5496,7 +5496,7 @@
     },
     {
       "voter_id": "SP3588574",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Kishana Deva Tripathi",
@@ -5509,7 +5509,7 @@
     },
     {
       "voter_id": "ISP3588472",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Amkita Tripathi",
@@ -5521,7 +5521,7 @@
     },
     {
       "voter_id": "ISP206393",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Sushama Simha",
@@ -5534,7 +5534,7 @@
     },
     {
       "voter_id": "SP3968427",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Imdrabala Raya",
@@ -5547,7 +5547,7 @@
     },
     {
       "voter_id": "DWA2032787",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Kirana Tivari",
@@ -5560,7 +5560,7 @@
     },
     {
       "voter_id": "ISP7700528",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Uma",
@@ -5573,7 +5573,7 @@
     },
     {
       "voter_id": "SP3806726",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Viremdra Kumara Simha",
@@ -5586,7 +5586,7 @@
     },
     {
       "voter_id": "ISP206486",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Prashamta Mishra",
@@ -5599,7 +5599,7 @@
     },
     {
       "voter_id": "ISP0009894",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Anjana",
@@ -5612,7 +5612,7 @@
     },
     {
       "voter_id": "ISP0009845",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Vinitachanda",
@@ -5625,7 +5625,7 @@
     },
     {
       "voter_id": "ISP2569598",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Guru Sharana Simha",
@@ -5638,7 +5638,7 @@
     },
     {
       "voter_id": "ISP4672083",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Siddhartha Kumara Tripathi",
@@ -5651,7 +5651,7 @@
     },
     {
       "voter_id": "ISP4666863",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Saurabha Maurya",
@@ -5664,7 +5664,7 @@
     },
     {
       "voter_id": "ISP2064269",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Svati Mishra",
@@ -5677,7 +5677,7 @@
     },
     {
       "voter_id": "ISP256462",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Satisha Kumara Kashyapa",
@@ -5690,7 +5690,7 @@
     },
     {
       "voter_id": "ISP3587469",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shveta",
@@ -5703,7 +5703,7 @@
     },
     {
       "voter_id": "ISP4967360",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Rakesha Kumara Shrivastava",
@@ -5714,7 +5714,7 @@
     },
     {
       "voter_id": "SP0009852",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Saurabhachanda",
@@ -5727,7 +5727,7 @@
     },
     {
       "voter_id": "ISP2569580",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Yogiraja Simha",
@@ -5740,7 +5740,7 @@
     },
     {
       "voter_id": "ISP2064245",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Indu Mishra",
@@ -5753,7 +5753,7 @@
     },
     {
       "voter_id": "ISP0070009",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Krshna Devi",
@@ -5766,7 +5766,7 @@
     },
     {
       "voter_id": "ISP497282",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Sumitra Gomda",
@@ -5779,7 +5779,7 @@
     },
     {
       "voter_id": "ISP0070058",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Anita Simha",
@@ -5792,7 +5792,7 @@
     },
     {
       "voter_id": "ISP496737",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Amshumana",
@@ -5803,7 +5803,7 @@
     },
     {
       "voter_id": "ISP3968534",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Amchala Vaishya",
@@ -5816,7 +5816,7 @@
     },
     {
       "voter_id": "ISP3968542",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Karana Vaishya",
@@ -5829,7 +5829,7 @@
     },
     {
       "voter_id": "ISP5035464",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Avamtika Shrivastava",
@@ -5840,7 +5840,7 @@
     },
     {
       "voter_id": "ISP0070724",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Pratima Devi",
@@ -5853,7 +5853,7 @@
     },
     {
       "voter_id": "ISP4776449",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shephali",
@@ -5866,7 +5866,7 @@
     },
     {
       "voter_id": "SP448759",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Kumara Rajata Saha",
@@ -5879,7 +5879,7 @@
     },
     {
       "voter_id": "ISP2003036",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Rajiva Ramjana",
@@ -5892,7 +5892,7 @@
     },
     {
       "voter_id": "SP3725777",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ramavati Devi",
@@ -5905,7 +5905,7 @@
     },
     {
       "voter_id": "SP2063337",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Amana Kumara Sharma",
@@ -5918,7 +5918,7 @@
     },
     {
       "voter_id": "ISP3968328",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shashi Prabha Simha",
@@ -5931,7 +5931,7 @@
     },
     {
       "voter_id": "ISP5035472",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Krshna Kumara Shrivastava",
@@ -5942,7 +5942,7 @@
     },
     {
       "voter_id": "ISP4784878",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Aruna Patela",
@@ -5955,7 +5955,7 @@
     },
     {
       "voter_id": "ISP206406",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Dinesha Kumara Shrivastava",
@@ -5968,7 +5968,7 @@
     },
     {
       "voter_id": "ISP768452",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shubho Shri Chau I",
@@ -5981,7 +5981,7 @@
     },
     {
       "voter_id": "ISP2003002",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Mamju Chaube",
@@ -5993,7 +5993,7 @@
     },
     {
       "voter_id": "ISP3505203",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Makara Natha Pandeya",
@@ -6006,7 +6006,7 @@
     },
     {
       "voter_id": "ISP465728",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Sarindhri Pandeya",
@@ -6019,7 +6019,7 @@
     },
     {
       "voter_id": "SP3725793",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Samjaya Simha",
@@ -6032,7 +6032,7 @@
     },
     {
       "voter_id": "ISP2063469",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Madhuri Devi",
@@ -6045,7 +6045,7 @@
     },
     {
       "voter_id": "SP2064053",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Punama Shrivastava",
@@ -6058,7 +6058,7 @@
     },
     {
       "voter_id": "ISP3587436",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Samgita",
@@ -6071,7 +6071,7 @@
     },
     {
       "voter_id": "SP4776572",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Kaveri Simha",
@@ -6084,7 +6084,7 @@
     },
     {
       "voter_id": "ISP206460",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Bijaya Kumara Gupta",
@@ -6097,7 +6097,7 @@
     },
     {
       "voter_id": "ISP4679958",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ramjana",
@@ -6110,7 +6110,7 @@
     },
     {
       "voter_id": "ISP2002947",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Prema Kumara Sinha",
@@ -6123,7 +6123,7 @@
     },
     {
       "voter_id": "SP0226779",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Mina Pandeya",
@@ -6136,7 +6136,7 @@
     },
     {
       "voter_id": "SP2036432",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Prakhara Shukla",
@@ -6149,7 +6149,7 @@
     },
     {
       "voter_id": "ISP3725785",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Kavita Yadava",
@@ -6162,7 +6162,7 @@
     },
     {
       "voter_id": "ISP206359",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Bharata Bhushana Pandeya",
@@ -6175,7 +6175,7 @@
     },
     {
       "voter_id": "ISP2063394",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Girija Devi",
@@ -6188,7 +6188,7 @@
     },
     {
       "voter_id": "ISP2063485",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Sonu Jayasavala",
@@ -6201,7 +6201,7 @@
     },
     {
       "voter_id": "ISP2063659",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Nitu Shrivastava",
@@ -6214,7 +6214,7 @@
     },
     {
       "voter_id": "SP2257798",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ravindra Narayana Mishra",
@@ -6227,7 +6227,7 @@
     },
     {
       "voter_id": "ISP683374",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Puja",
@@ -6240,7 +6240,7 @@
     },
     {
       "voter_id": "ISP2063576",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Avadhesha Nayaka",
@@ -6253,7 +6253,7 @@
     },
     {
       "voter_id": "ISP683705",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Prema Natha Shrivastava Ae, 49)",
@@ -6265,7 +6265,7 @@
     },
     {
       "voter_id": "ISP206345",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Nisha Chau I",
@@ -6278,7 +6278,7 @@
     },
     {
       "voter_id": "ISP2302628",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ashoka",
@@ -6291,7 +6291,7 @@
     },
     {
       "voter_id": "ISP230265",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shamkara",
@@ -6304,7 +6304,7 @@
     },
     {
       "voter_id": "ISP206340",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Samjaya Jayasavala",
@@ -6317,7 +6317,7 @@
     },
     {
       "voter_id": "SP2063980",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Radheshyama Simha",
@@ -6330,7 +6330,7 @@
     },
     {
       "voter_id": "ISP2063634",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Arjuna Kumara",
@@ -6343,7 +6343,7 @@
     },
     {
       "voter_id": "ISP7683440",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ravindra Kumara Pamkaja",
@@ -6356,7 +6356,7 @@
     },
     {
       "voter_id": "ISP7683390",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Vinaya Kumara Vishvakarma",
@@ -6369,7 +6369,7 @@
     },
     {
       "voter_id": "ISP2063678",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Rambha Nayaka",
@@ -6382,7 +6382,7 @@
     },
     {
       "voter_id": "ISP683674",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Mamju Shrivastava",
@@ -6395,7 +6395,7 @@
     },
     {
       "voter_id": "ISP2302636",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Dayashamkara Simha",
@@ -6408,7 +6408,7 @@
     },
     {
       "voter_id": "ISP2302669",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Brja Bihari Mishra",
@@ -6421,7 +6421,7 @@
     },
     {
       "voter_id": "SP2063527",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Gita Jayasavala",
@@ -6434,7 +6434,7 @@
     },
     {
       "voter_id": "ISP2063683",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Navina Chamdra",
@@ -6447,7 +6447,7 @@
     },
     {
       "voter_id": "SP2257772",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Pashu",
@@ -6460,7 +6460,7 @@
     },
     {
       "voter_id": "SP768372",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Gayatri Kumari",
@@ -6473,7 +6473,7 @@
     },
     {
       "voter_id": "ISP7683333",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ramjana Vishvakarma",
@@ -6486,7 +6486,7 @@
     },
     {
       "voter_id": "SP2063675",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Sadhana Praja",
@@ -6499,7 +6499,7 @@
     },
     {
       "voter_id": "ISP2302644",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ramavelasa",
@@ -6512,7 +6512,7 @@
     },
     {
       "voter_id": "ISP2302545",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shrimati Sumana Pandeya",
@@ -6525,7 +6525,7 @@
     },
     {
       "voter_id": "SP230279",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Punama",
@@ -6538,7 +6538,7 @@
     },
     {
       "voter_id": "SP2302743",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Harishachanda",
@@ -6551,7 +6551,7 @@
     },
     {
       "voter_id": "SP2302750",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ramasurata",
@@ -6564,7 +6564,7 @@
     },
     {
       "voter_id": "SP2302800",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Sumana Patela",
@@ -6577,7 +6577,7 @@
     },
     {
       "voter_id": "ISP2302859",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Rajiva Kumara Shrivastava",
@@ -6590,7 +6590,7 @@
     },
     {
       "voter_id": "ISP2302883",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Rahamatullaha",
@@ -6603,7 +6603,7 @@
     },
     {
       "voter_id": "SP4427228",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shardula Sisodiya",
@@ -6614,7 +6614,7 @@
     },
     {
       "voter_id": "ISP7684497",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Vinaya Varma",
@@ -6627,7 +6627,7 @@
     },
     {
       "voter_id": "SP2302727",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shashi Mishra",
@@ -6640,7 +6640,7 @@
     },
     {
       "voter_id": "SP2302537",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shrimati Sapana Devi",
@@ -6653,7 +6653,7 @@
     },
     {
       "voter_id": "ISP2302768",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shashi Shrivastava",
@@ -6666,7 +6666,7 @@
     },
     {
       "voter_id": "ISP2302826",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Vimala",
@@ -6679,7 +6679,7 @@
     },
     {
       "voter_id": "ISP2302842",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shri Mati Samgita",
@@ -6692,7 +6692,7 @@
     },
     {
       "voter_id": "ISP2302909",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Rajata Kumara",
@@ -6705,7 +6705,7 @@
     },
     {
       "voter_id": "ISP2302933",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ra La",
@@ -6718,7 +6718,7 @@
     },
     {
       "voter_id": "SP357023",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Kali Prasada",
@@ -6731,7 +6731,7 @@
     },
     {
       "voter_id": "ISPI684505",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ramavrxa Varma",
@@ -6744,7 +6744,7 @@
     },
     {
       "voter_id": "ISP4052783",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Amkura Saksena",
@@ -6757,7 +6757,7 @@
     },
     {
       "voter_id": "SP2302552",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Surendra Kumara",
@@ -6770,7 +6770,7 @@
     },
     {
       "voter_id": "SP2302792",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Narayani Mishra",
@@ -6783,7 +6783,7 @@
     },
     {
       "voter_id": "SP2302834",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Munna",
@@ -6796,7 +6796,7 @@
     },
     {
       "voter_id": "ISP460969",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Pratibha Tripathi",
@@ -6809,7 +6809,7 @@
     },
     {
       "voter_id": "ISP7684573",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shrimati Vishuna Devi",
@@ -6822,7 +6822,7 @@
     },
     {
       "voter_id": "SP225427",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Rakesha Kumara",
@@ -6835,7 +6835,7 @@
     },
     {
       "voter_id": "SP225424",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Aravinda",
@@ -6848,7 +6848,7 @@
     },
     {
       "voter_id": "SP2254274",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ruchi",
@@ -6861,7 +6861,7 @@
     },
     {
       "voter_id": "ISP390560",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Brajemdra Kumara Tivari",
@@ -6874,7 +6874,7 @@
     },
     {
       "voter_id": "ISP2909463",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shanti Sharma",
@@ -6887,7 +6887,7 @@
     },
     {
       "voter_id": "SP2908937",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Sushma Gupta",
@@ -6900,7 +6900,7 @@
     },
     {
       "voter_id": "SP3720745",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Abhisheka Pandeya",
@@ -6913,7 +6913,7 @@
     },
     {
       "voter_id": "SP2063378",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Aruna Kaushika",
@@ -6926,7 +6926,7 @@
     },
     {
       "voter_id": "SP2304343",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Santosha Mishra",
@@ -6939,7 +6939,7 @@
     },
     {
       "voter_id": "ISP2254225",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Mahatama Gupta",
@@ -6952,7 +6952,7 @@
     },
     {
       "voter_id": "ISP2254258",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Punama",
@@ -6965,7 +6965,7 @@
     },
     {
       "voter_id": "SP226783",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Surendra",
@@ -6978,7 +6978,7 @@
     },
     {
       "voter_id": "ISP2909588",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Amana Simha",
@@ -6991,7 +6991,7 @@
     },
     {
       "voter_id": "SP2909448",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Rashmi Sharma",
@@ -7004,7 +7004,7 @@
     },
     {
       "voter_id": "ISP2909356",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Sumana Devi",
@@ -7017,7 +7017,7 @@
     },
     {
       "voter_id": "SP3805793",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Bhavana Pamdeya",
@@ -7028,7 +7028,7 @@
     },
     {
       "voter_id": "SP2063774",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ramasajivana",
@@ -7041,7 +7041,7 @@
     },
     {
       "voter_id": "ISP2254233",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Mavati Devi",
@@ -7054,7 +7054,7 @@
     },
     {
       "voter_id": "ISP2254266",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Samjaya Gupta",
@@ -7067,7 +7067,7 @@
     },
     {
       "voter_id": "WL0279325",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Hari Oma Mal{}la",
@@ -7080,7 +7080,7 @@
     },
     {
       "voter_id": "ISP2908945",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Sushma Gupta",
@@ -7093,7 +7093,7 @@
     },
     {
       "voter_id": "SP258075",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Sushmita Shrivastava",
@@ -7106,7 +7106,7 @@
     },
     {
       "voter_id": "SP290867",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Renu Lata",
@@ -7119,7 +7119,7 @@
     },
     {
       "voter_id": "ISP4670792",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Pratima Sharma",
@@ -7132,7 +7132,7 @@
     },
     {
       "voter_id": "ISP4487385",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Imdu Devi",
@@ -7143,7 +7143,7 @@
     },
     {
       "voter_id": "ISP4893046",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ragini Pamdeya",
@@ -7156,7 +7156,7 @@
     },
     {
       "voter_id": "SP2908879",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Mamata Kumari",
@@ -7169,7 +7169,7 @@
     },
     {
       "voter_id": "ISP3709052",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Pramoda Kumara Gau.da",
@@ -7182,7 +7182,7 @@
     },
     {
       "voter_id": "ISP4892097",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Amkita Gaura",
@@ -7195,7 +7195,7 @@
     },
     {
       "voter_id": "ISP343700",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Abha Shrivastava",
@@ -7208,7 +7208,7 @@
     },
     {
       "voter_id": "ISP4942074",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Baija Natha Pamdeya 80",
@@ -7220,7 +7220,7 @@
     },
     {
       "voter_id": "ISP4435368",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Rupa Simha",
@@ -7233,7 +7233,7 @@
     },
     {
       "voter_id": "ISP325350",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Rama Jiyavana",
@@ -7246,7 +7246,7 @@
     },
     {
       "voter_id": "ISP260552",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Roshani Sharana",
@@ -7259,7 +7259,7 @@
     },
     {
       "voter_id": "DWAI993757",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Devajita Senagupta",
@@ -7272,7 +7272,7 @@
     },
     {
       "voter_id": "ISP2604726",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Aparna Tripathi",
@@ -7283,7 +7283,7 @@
     },
     {
       "voter_id": "ISP290886",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Rajani Kumari",
@@ -7296,7 +7296,7 @@
     },
     {
       "voter_id": "ISP3709060",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shila Gau.da",
@@ -7309,7 +7309,7 @@
     },
     {
       "voter_id": "ISP3587956",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Harinarayana Lala",
@@ -7322,7 +7322,7 @@
     },
     {
       "voter_id": "SP3570272",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Vijeta",
@@ -7335,7 +7335,7 @@
     },
     {
       "voter_id": "SP494287",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Pushpa Pamdeya",
@@ -7348,7 +7348,7 @@
     },
     {
       "voter_id": "ISP4435053",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Aniketa Simha",
@@ -7361,7 +7361,7 @@
     },
     {
       "voter_id": "ISP3253784",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Kailashi Devi",
@@ -7374,7 +7374,7 @@
     },
     {
       "voter_id": "ISP4487666",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Naresha Chamdra Dasa",
@@ -7385,7 +7385,7 @@
     },
     {
       "voter_id": "ISP3253776",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Anuraga Senagupta",
@@ -7398,7 +7398,7 @@
     },
     {
       "voter_id": "ISP2908853",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Rina Ravata",
@@ -7411,7 +7411,7 @@
     },
     {
       "voter_id": "ISP3709029",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Pratibha Simha",
@@ -7424,7 +7424,7 @@
     },
     {
       "voter_id": "ISP3253234",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Nikhila Gau.da",
@@ -7437,7 +7437,7 @@
     },
     {
       "voter_id": "ISP4435392",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Nitu Devi",
@@ -7450,7 +7450,7 @@
     },
     {
       "voter_id": "ISP2909380",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Lata Shrivastava",
@@ -7463,7 +7463,7 @@
     },
     {
       "voter_id": "ISP2909547",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Pamkaja Shrivastava",
@@ -7476,7 +7476,7 @@
     },
     {
       "voter_id": "SP452704",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shubham‌ Mishra",
@@ -7489,7 +7489,7 @@
     },
     {
       "voter_id": "ISP3253226",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Vichitra Narayana Tripathi",
@@ -7502,7 +7502,7 @@
     },
     {
       "voter_id": "ISP290958",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shailaja Shukla",
@@ -7515,7 +7515,7 @@
     },
     {
       "voter_id": "SP2908903",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Sagarika Chakravarti",
@@ -7528,7 +7528,7 @@
     },
     {
       "voter_id": "ISP4777652",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Akhila Rastogi",
@@ -7541,7 +7541,7 @@
     },
     {
       "voter_id": "ISP2909422",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Vaishali Shrivastava",
@@ -7554,7 +7554,7 @@
     },
     {
       "voter_id": "ISP489868",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Rama Kishora Mishra",
@@ -7567,7 +7567,7 @@
     },
     {
       "voter_id": "ISP452738",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Priya Mishra",
@@ -7580,7 +7580,7 @@
     },
     {
       "voter_id": "SP3582053",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Deva Shisha Tripathi",
@@ -7593,7 +7593,7 @@
     },
     {
       "voter_id": "ISP2909208",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Pratibha Shukla",
@@ -7606,7 +7606,7 @@
     },
     {
       "voter_id": "ISP4703203",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Anuradha Sharma",
@@ -7619,7 +7619,7 @@
     },
     {
       "voter_id": "SP502242",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ishamta Simha",
@@ -7632,7 +7632,7 @@
     },
     {
       "voter_id": "ISP4777553",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Samjiva Sharma",
@@ -7645,7 +7645,7 @@
     },
     {
       "voter_id": "ISP3253259",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Nilama Pandeya",
@@ -7658,7 +7658,7 @@
     },
     {
       "voter_id": "ISP4879850",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shila Mishra",
@@ -7671,7 +7671,7 @@
     },
     {
       "voter_id": "ISP3253768",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Damayanti Tripathi",
@@ -7684,7 +7684,7 @@
     },
     {
       "voter_id": "SP445928",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Vijaya Kumara",
@@ -7697,7 +7697,7 @@
     },
     {
       "voter_id": "ISP3253200",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Navanita Kumara Shukla",
@@ -7710,7 +7710,7 @@
     },
     {
       "voter_id": "ISP4703245",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Axata Sharma Sharma",
@@ -7723,7 +7723,7 @@
     },
     {
       "voter_id": "ISP503840",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Jyoti Simghaniya",
@@ -7736,7 +7736,7 @@
     },
     {
       "voter_id": "SP4778528",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Yasha Rastogi",
@@ -7749,7 +7749,7 @@
     },
     {
       "voter_id": "SP4777587",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Vimmi Sharma",
@@ -7762,7 +7762,7 @@
     },
     {
       "voter_id": "SP4777629",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Yashavika Sharma",
@@ -7775,7 +7775,7 @@
     },
     {
       "voter_id": "SP482987",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Babali Pamdeya",
@@ -7788,7 +7788,7 @@
     },
     {
       "voter_id": "ISP4476024",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Pimnaki Namdana Sena Gupta",
@@ -7801,7 +7801,7 @@
     },
     {
       "voter_id": "ISP4643763",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Rohana Kumara",
@@ -7814,7 +7814,7 @@
     },
     {
       "voter_id": "SP4070088",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shilvi Tivari",
@@ -7827,7 +7827,7 @@
     },
     {
       "voter_id": "ISP4686895",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shraddha Prakasha Prakasha",
@@ -7838,7 +7838,7 @@
     },
     {
       "voter_id": "ISP260469",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Jhigai",
@@ -7851,7 +7851,7 @@
     },
     {
       "voter_id": "ISP2580694",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Elija Sushama Surina",
@@ -7864,7 +7864,7 @@
     },
     {
       "voter_id": "ISP3903792",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Mira Tivari",
@@ -7877,7 +7877,7 @@
     },
     {
       "voter_id": "ISP4009379",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Rakesha Chamda Sharma",
@@ -7890,7 +7890,7 @@
     },
     {
       "voter_id": "ISP4006268",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Alaka Gupta",
@@ -7903,7 +7903,7 @@
     },
     {
       "voter_id": "SP2267755",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Rudra Kumara Pandeya",
@@ -7916,7 +7916,7 @@
     },
     {
       "voter_id": "ISP2604999",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Bindu Sonakara",
@@ -7929,7 +7929,7 @@
     },
     {
       "voter_id": "ISP4073900",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Pal{}lavi Tivari",
@@ -7942,7 +7942,7 @@
     },
     {
       "voter_id": "ISP4778494",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Harshika Shara",
@@ -7955,7 +7955,7 @@
     },
     {
       "voter_id": "SP2304368",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Triyuginarayana",
@@ -7968,7 +7968,7 @@
     },
     {
       "voter_id": "SP260460",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Viveka Charlsa",
@@ -7981,7 +7981,7 @@
     },
     {
       "voter_id": "ISP4608694",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ambara Saksena",
@@ -7994,7 +7994,7 @@
     },
     {
       "voter_id": "ISP4006250",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ratnesha Kumara Sharma",
@@ -8007,7 +8007,7 @@
     },
     {
       "voter_id": "ISP5067890",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Sumana Lata",
@@ -8020,7 +8020,7 @@
     },
     {
       "voter_id": "SP4523767",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shashamka Pandeya",
@@ -8033,7 +8033,7 @@
     },
     {
       "voter_id": "ISP4648028",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Roshana Kumara",
@@ -8046,7 +8046,7 @@
     },
     {
       "voter_id": "SP4073827",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ghanashyama Tivari",
@@ -8059,7 +8059,7 @@
     },
     {
       "voter_id": "ISP4778882",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Avadhesha Kumara",
@@ -8072,7 +8072,7 @@
     },
     {
       "voter_id": "ISP5078308",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Aruna Kumara Gautama",
@@ -8085,7 +8085,7 @@
     },
     {
       "voter_id": "ISP529325",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Raja Kumara Bharati",
@@ -8098,7 +8098,7 @@
     },
     {
       "voter_id": "ISP5736288",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ramashamkara Gupta",
@@ -8111,7 +8111,7 @@
     },
     {
       "voter_id": "ISP5760940",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Vamdana Chauhana",
@@ -8122,7 +8122,7 @@
     },
     {
       "voter_id": "ISP5764473",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Puja Yadava",
@@ -8135,7 +8135,7 @@
     },
     {
       "voter_id": "ISP5079843",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Drshti Sharma",
@@ -8148,7 +8148,7 @@
     },
     {
       "voter_id": "ISP537404",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Jyoti Simghaniya",
@@ -8161,7 +8161,7 @@
     },
     {
       "voter_id": "ISP576746",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Rajiva Kumara",
@@ -8174,7 +8174,7 @@
     },
     {
       "voter_id": "ISP573042",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Amjali Tivari",
@@ -8187,7 +8187,7 @@
     },
     {
       "voter_id": "ISP573356",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Samgama Yadava",
@@ -8200,7 +8200,7 @@
     },
     {
       "voter_id": "ISP5773489",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Samjaya Kumara Pandeya",
@@ -8213,7 +8213,7 @@
     },
     {
       "voter_id": "ISP570745",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Jaya",
@@ -8226,7 +8226,7 @@
     },
     {
       "voter_id": "ISP5703999",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Harsha Mishra",
@@ -8239,7 +8239,7 @@
     },
     {
       "voter_id": "ISP572842",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Manasvi Tivari",
@@ -8252,7 +8252,7 @@
     },
     {
       "voter_id": "ISP5764256",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Kusuma Gautama",
@@ -8265,7 +8265,7 @@
     },
     {
       "voter_id": "ISP573059",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shivama Shrivastava",
@@ -8278,7 +8278,7 @@
     },
     {
       "voter_id": "ISP5773380",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shobhita",
@@ -8291,7 +8291,7 @@
     },
     {
       "voter_id": "ISP5773596",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Pragati Simghaniya",
@@ -8304,7 +8304,7 @@
     },
     {
       "voter_id": "SP5774677",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Annu Yadava",
@@ -8317,7 +8317,7 @@
     },
     {
       "voter_id": "ISP5782589",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shahina .khatuna",
@@ -8330,7 +8330,7 @@
     },
     {
       "voter_id": "ISP5374083",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Salamana Amsari",
@@ -8343,7 +8343,7 @@
     },
     {
       "voter_id": "ISP534802",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Jubi",
@@ -8356,7 +8356,7 @@
     },
     {
       "voter_id": "SP5397260",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Vijaya Kumara Yadava",
@@ -8369,7 +8369,7 @@
     },
     {
       "voter_id": "ISP574974",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Ramakarana Yadava",
@@ -8382,7 +8382,7 @@
     },
     {
       "voter_id": "ISP575039",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Sarita",
@@ -8395,7 +8395,7 @@
     },
     {
       "voter_id": "ISP5286299",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Suhela Ahamada",
@@ -8408,7 +8408,7 @@
     },
     {
       "voter_id": "ISP5374356",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Kumari Shabina .khatuna",
@@ -8421,7 +8421,7 @@
     },
     {
       "voter_id": "ISP5333474",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Moinuddina Khana",
@@ -8434,7 +8434,7 @@
     },
     {
       "voter_id": "ISP5774990",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Samdipa Kumara Yadava",
@@ -8447,7 +8447,7 @@
     },
     {
       "voter_id": "SP5775047",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Pradipa Kumara Yadava",
@@ -8460,7 +8460,7 @@
     },
     {
       "voter_id": "ISP5290390",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Omkara Shukla",
@@ -8473,7 +8473,7 @@
     },
     {
       "voter_id": "ISP5374364",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Irashada Ahamada",
@@ -8486,7 +8486,7 @@
     },
     {
       "voter_id": "ISP533446",
-      "part_number": 3,
+      "part_number": 31,
       "section_number": 2,
       "section_name": "Jungle Mahuva alias Muhammadpur Spo",
       "name": "Shama Paravina Khana",

@@ -4,7 +4,7 @@
     "total_pages": 46,
     "state": "Uttar Pradesh",
     "year": 2026,
-    "part_number": 9,
+    "part_number": 19,
     "assembly_constituency": {
       "number": 322,
       "name": "Gorakhpur City",
@@ -21,7 +21,7 @@
   "voter_records": [
     {
       "voter_id": "SP4438768",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Priyamka Chauhana",
@@ -34,7 +34,7 @@
     },
     {
       "voter_id": "ISP506908",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Savamta Jayasavala",
@@ -47,7 +47,7 @@
     },
     {
       "voter_id": "SP4347092",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Rakesha Kumara Praja",
@@ -60,7 +60,7 @@
     },
     {
       "voter_id": "SP022897",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Mukesha Maurya",
@@ -73,7 +73,7 @@
     },
     {
       "voter_id": "ISP3480574",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Aravinda Jayasavala",
@@ -86,7 +86,7 @@
     },
     {
       "voter_id": "ISP463556",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Radheshyama Yadava",
@@ -99,7 +99,7 @@
     },
     {
       "voter_id": "ISP4583852",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Paraveza",
@@ -112,7 +112,7 @@
     },
     {
       "voter_id": "ISP4400065",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ragani Pandeya",
@@ -125,7 +125,7 @@
     },
     {
       "voter_id": "ISP4583886",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Saddama Saina",
@@ -138,7 +138,7 @@
     },
     {
       "voter_id": "SP4438784",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Amita Chauhana",
@@ -151,7 +151,7 @@
     },
     {
       "voter_id": "ISP452497",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Laxmi",
@@ -163,7 +163,7 @@
     },
     {
       "voter_id": "ISP5063482",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Amshika Vdivedi",
@@ -176,7 +176,7 @@
     },
     {
       "voter_id": "ISP3480498",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Anila Kumara Jayasavala",
@@ -189,7 +189,7 @@
     },
     {
       "voter_id": "ISP3504545",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Prahalada Maurya",
@@ -202,7 +202,7 @@
     },
     {
       "voter_id": "ISP4635579",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Kusuma Yadava",
@@ -215,7 +215,7 @@
     },
     {
       "voter_id": "ISP4602702",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Rakesha",
@@ -228,7 +228,7 @@
     },
     {
       "voter_id": "ISP452028",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Sharmila Devi",
@@ -241,7 +241,7 @@
     },
     {
       "voter_id": "ISP4332029",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Pramila Devi",
@@ -254,7 +254,7 @@
     },
     {
       "voter_id": "SP4543567",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Samdhya Nishada",
@@ -267,7 +267,7 @@
     },
     {
       "voter_id": "SP452299",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Nidhi Gupta",
@@ -280,7 +280,7 @@
     },
     {
       "voter_id": "ISP0890343",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Shanti Devi",
@@ -293,7 +293,7 @@
     },
     {
       "voter_id": "ISP3480522",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Surajadipa Jayasavala",
@@ -306,7 +306,7 @@
     },
     {
       "voter_id": "ISP4572038",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Upanesha Yadava",
@@ -319,7 +319,7 @@
     },
     {
       "voter_id": "ISP4347376",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Kirana Mishra",
@@ -332,7 +332,7 @@
     },
     {
       "voter_id": "ISP4602496",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Laxmina Devi",
@@ -345,7 +345,7 @@
     },
     {
       "voter_id": "SP452057",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Chanda Devi",
@@ -358,7 +358,7 @@
     },
     {
       "voter_id": "ISP4583845",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Bebi",
@@ -371,7 +371,7 @@
     },
     {
       "voter_id": "SP4583878",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Mo Asipha",
@@ -384,7 +384,7 @@
     },
     {
       "voter_id": "ISP4334868",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Babita",
@@ -397,7 +397,7 @@
     },
     {
       "voter_id": "SP4334884",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Bebi",
@@ -410,7 +410,7 @@
     },
     {
       "voter_id": "ISP3504966",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Balarama Tripathi",
@@ -423,7 +423,7 @@
     },
     {
       "voter_id": "ISP7488678",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Shanti Devi",
@@ -436,7 +436,7 @@
     },
     {
       "voter_id": "ISP488626",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Manati Devi",
@@ -449,7 +449,7 @@
     },
     {
       "voter_id": "ISP5063979",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Jayati Devi",
@@ -462,7 +462,7 @@
     },
     {
       "voter_id": "ISP4772026",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Roshana Nishada",
@@ -475,7 +475,7 @@
     },
     {
       "voter_id": "ISP4347775",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ravindra Mishra",
@@ -488,7 +488,7 @@
     },
     {
       "voter_id": "ISP4890869",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Samju Devi",
@@ -501,7 +501,7 @@
     },
     {
       "voter_id": "SP4222543",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Sunila",
@@ -514,7 +514,7 @@
     },
     {
       "voter_id": "SP4347572",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Vijaya Kumara Nishada",
@@ -527,7 +527,7 @@
     },
     {
       "voter_id": "SP3504974",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Shrikanta Tripathi",
@@ -540,7 +540,7 @@
     },
     {
       "voter_id": "ISP7488634",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Indravati",
@@ -553,7 +553,7 @@
     },
     {
       "voter_id": "ISP3480530",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Lalita Maurya",
@@ -566,7 +566,7 @@
     },
     {
       "voter_id": "ISP4347209",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Vinesha Kumara Mishra",
@@ -579,7 +579,7 @@
     },
     {
       "voter_id": "ISP434783",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Yasha Mishra",
@@ -592,7 +592,7 @@
     },
     {
       "voter_id": "ISP4347726",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Pushpa Yadava",
@@ -605,7 +605,7 @@
     },
     {
       "voter_id": "ISP4332052",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Bhagiratha Nishada",
@@ -618,7 +618,7 @@
     },
     {
       "voter_id": "ISP7488600",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Tara Devi",
@@ -631,7 +631,7 @@
     },
     {
       "voter_id": "ISP4596839",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ashoka Kumara",
@@ -644,7 +644,7 @@
     },
     {
       "voter_id": "ISP4768495",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Madhubala",
@@ -657,7 +657,7 @@
     },
     {
       "voter_id": "ISP4347233",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Sunita Mishra",
@@ -670,7 +670,7 @@
     },
     {
       "voter_id": "SP4347225",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Adarsha Mishra",
@@ -683,7 +683,7 @@
     },
     {
       "voter_id": "SP4347742",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Rambha",
@@ -696,7 +696,7 @@
     },
     {
       "voter_id": "ISP3357046",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Lilavati Devi",
@@ -709,7 +709,7 @@
     },
     {
       "voter_id": "ISP022829",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Saroja Simha",
@@ -722,7 +722,7 @@
     },
     {
       "voter_id": "ISP464828",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Jyoti Sahani",
@@ -735,7 +735,7 @@
     },
     {
       "voter_id": "ISP3580420",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Nitina Nishada",
@@ -748,7 +748,7 @@
     },
     {
       "voter_id": "ISP3480555",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Amaranatha Nishada",
@@ -761,7 +761,7 @@
     },
     {
       "voter_id": "ISP2594067",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Agaranatha Kumara",
@@ -774,7 +774,7 @@
     },
     {
       "voter_id": "ISP4844494",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Dinesha Bharati",
@@ -787,7 +787,7 @@
     },
     {
       "voter_id": "ISP4573093",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Akhilesha Dube",
@@ -800,7 +800,7 @@
     },
     {
       "voter_id": "SP3542727",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Amita Chauhana",
@@ -813,7 +813,7 @@
     },
     {
       "voter_id": "SP4347407",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Siddhamta Yadava",
@@ -826,7 +826,7 @@
     },
     {
       "voter_id": "ISP4663308",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Manisha",
@@ -839,7 +839,7 @@
     },
     {
       "voter_id": "ISP372443",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Sudha",
@@ -852,7 +852,7 @@
     },
     {
       "voter_id": "SP680297",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Samjaya",
@@ -865,7 +865,7 @@
     },
     {
       "voter_id": "ISP0228304",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Nikalesha Nishada",
@@ -878,7 +878,7 @@
     },
     {
       "voter_id": "ISP3480563",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Sunita Devi",
@@ -891,7 +891,7 @@
     },
     {
       "voter_id": "SP4847307",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Svati Bharati",
@@ -904,7 +904,7 @@
     },
     {
       "voter_id": "ISP3542799",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Kusuma Devi",
@@ -917,7 +917,7 @@
     },
     {
       "voter_id": "ISP335053",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Mamju Devi",
@@ -930,7 +930,7 @@
     },
     {
       "voter_id": "ISP3504776",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Rajesha Kumara Simha",
@@ -943,7 +943,7 @@
     },
     {
       "voter_id": "ISP4347308",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Dipaka Kumara",
@@ -956,7 +956,7 @@
     },
     {
       "voter_id": "ISP455045",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Soni Devi",
@@ -969,7 +969,7 @@
     },
     {
       "voter_id": "ISP3480548",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Vindu Devi",
@@ -982,7 +982,7 @@
     },
     {
       "voter_id": "ISP3728789",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Kusuma Devi",
@@ -995,7 +995,7 @@
     },
     {
       "voter_id": "SP4332037",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ramakumara Nishada",
@@ -1008,7 +1008,7 @@
     },
     {
       "voter_id": "ISP3542735",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Umesha Chauhana",
@@ -1021,7 +1021,7 @@
     },
     {
       "voter_id": "SP4574972",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Priya Agrahari",
@@ -1034,7 +1034,7 @@
     },
     {
       "voter_id": "ISP3504878",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ritu Chau I",
@@ -1047,7 +1047,7 @@
     },
     {
       "voter_id": "SP3454337",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Kirana Chauhana",
@@ -1060,7 +1060,7 @@
     },
     {
       "voter_id": "ISP4439436",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Pradyumna Chauhana",
@@ -1073,7 +1073,7 @@
     },
     {
       "voter_id": "SP7488642",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Gayatri",
@@ -1086,7 +1086,7 @@
     },
     {
       "voter_id": "ISP0358374",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Gayatri Devi",
@@ -1099,7 +1099,7 @@
     },
     {
       "voter_id": "ISP7057083",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Gudiya Devi",
@@ -1112,7 +1112,7 @@
     },
     {
       "voter_id": "ISP022832",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Shashiraja Vishvakarma",
@@ -1125,7 +1125,7 @@
     },
     {
       "voter_id": "ISP428979",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Nilama Vishvakarma",
@@ -1138,7 +1138,7 @@
     },
     {
       "voter_id": "ISP3504784",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Manoja Chau I",
@@ -1149,7 +1149,7 @@
     },
     {
       "voter_id": "ISP3504800",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Kundana Chau I",
@@ -1162,7 +1162,7 @@
     },
     {
       "voter_id": "ISP4438644",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Shivani Chauhana",
@@ -1175,7 +1175,7 @@
     },
     {
       "voter_id": "ISP4225033",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Laxamina Devi",
@@ -1188,7 +1188,7 @@
     },
     {
       "voter_id": "ISP0359752",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Pavana Kumara",
@@ -1201,7 +1201,7 @@
     },
     {
       "voter_id": "ISP3504826",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Vindhyachala Maurya",
@@ -1214,7 +1214,7 @@
     },
     {
       "voter_id": "ISP379720",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Puja Jayasavala",
@@ -1227,7 +1227,7 @@
     },
     {
       "voter_id": "ISP289393",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Nilama Vishvakarma",
@@ -1240,7 +1240,7 @@
     },
     {
       "voter_id": "ISP3804792",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Vishala Chau I",
@@ -1253,7 +1253,7 @@
     },
     {
       "voter_id": "SP2594075",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Soni Chau I",
@@ -1266,7 +1266,7 @@
     },
     {
       "voter_id": "ISP4222642",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Krshna",
@@ -1279,7 +1279,7 @@
     },
     {
       "voter_id": "ISP0358382",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Dinesha Kumara",
@@ -1292,7 +1292,7 @@
     },
     {
       "voter_id": "ISP0359760",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Mamata Devi",
@@ -1305,7 +1305,7 @@
     },
     {
       "voter_id": "ISP0359778",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Vavulala",
@@ -1318,7 +1318,7 @@
     },
     {
       "voter_id": "SP428976",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Rshi Raja Vishvakarma",
@@ -1331,7 +1331,7 @@
     },
     {
       "voter_id": "ISP3504842",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Sunita Maurya",
@@ -1344,7 +1344,7 @@
     },
     {
       "voter_id": "ISP4572489",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Gudiya Sharma",
@@ -1357,7 +1357,7 @@
     },
     {
       "voter_id": "SP3873763",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Gumja Devi",
@@ -1370,7 +1370,7 @@
     },
     {
       "voter_id": "ISP454359",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Jyoti Chauhana",
@@ -1383,7 +1383,7 @@
     },
     {
       "voter_id": "DWA266654",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Sandhya",
@@ -1396,7 +1396,7 @@
     },
     {
       "voter_id": "ISP4987890",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Pravina Chauhana",
@@ -1409,7 +1409,7 @@
     },
     {
       "voter_id": "ISP3766667",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Panamati",
@@ -1422,7 +1422,7 @@
     },
     {
       "voter_id": "SP0228544",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Kanhaiya Maurya",
@@ -1435,7 +1435,7 @@
     },
     {
       "voter_id": "ISP4572349",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Tanu Sharma",
@@ -1448,7 +1448,7 @@
     },
     {
       "voter_id": "ISP2594083",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Sadananda Kumara",
@@ -1461,7 +1461,7 @@
     },
     {
       "voter_id": "DWA4086294",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ger Chauhana",
@@ -1474,7 +1474,7 @@
     },
     {
       "voter_id": "ISP0005942",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Shakti 4",
@@ -1487,7 +1487,7 @@
     },
     {
       "voter_id": "ISP500790",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Nisha",
@@ -1500,7 +1500,7 @@
     },
     {
       "voter_id": "DWA2772982",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Anuja Jalana",
@@ -1513,7 +1513,7 @@
     },
     {
       "voter_id": "ISP4823233",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Jaya Jalana",
@@ -1526,7 +1526,7 @@
     },
     {
       "voter_id": "ISP4572463",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Satyabhama",
@@ -1539,7 +1539,7 @@
     },
     {
       "voter_id": "ISP0228635",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Anita Maurya",
@@ -1552,7 +1552,7 @@
     },
     {
       "voter_id": "ISP4546388",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Nitu Chauhana",
@@ -1565,7 +1565,7 @@
     },
     {
       "voter_id": "SP0005967",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Kamala",
@@ -1578,7 +1578,7 @@
     },
     {
       "voter_id": "ISP5076437",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Shakti Chauhana",
@@ -1591,7 +1591,7 @@
     },
     {
       "voter_id": "DWQ2722966",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Oma Prakasha Jalana",
@@ -1604,7 +1604,7 @@
     },
     {
       "voter_id": "DWA272974",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Tanuja Jalana",
@@ -1617,7 +1617,7 @@
     },
     {
       "voter_id": "ISP3340874",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Isaravati Devi",
@@ -1630,7 +1630,7 @@
     },
     {
       "voter_id": "ISP488659",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Nan{}dani Chauhana",
@@ -1643,7 +1643,7 @@
     },
     {
       "voter_id": "DWQ4084695",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Adaya",
@@ -1656,7 +1656,7 @@
     },
     {
       "voter_id": "DWWA4086404",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Dayarama",
@@ -1669,7 +1669,7 @@
     },
     {
       "voter_id": "DWQ3377229",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "et",
@@ -1682,7 +1682,7 @@
     },
     {
       "voter_id": "ISP4439452",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Renu Chauhana",
@@ -1695,7 +1695,7 @@
     },
     {
       "voter_id": "ISP3357244",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Suraja Kumara Chauhana",
@@ -1708,7 +1708,7 @@
     },
     {
       "voter_id": "DWA2975858",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Shyama",
@@ -1721,7 +1721,7 @@
     },
     {
       "voter_id": "DWA4085882",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Jairama",
@@ -1734,7 +1734,7 @@
     },
     {
       "voter_id": "ISP4607399",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ramanaresha",
@@ -1747,7 +1747,7 @@
     },
     {
       "voter_id": "SP4077525",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Kishana Chauhana",
@@ -1760,7 +1760,7 @@
     },
     {
       "voter_id": "DWQ4086666",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Punama",
@@ -1773,7 +1773,7 @@
     },
     {
       "voter_id": "DWQ295833",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Babita",
@@ -1786,7 +1786,7 @@
     },
     {
       "voter_id": "ISP0358408",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Bat",
@@ -1799,7 +1799,7 @@
     },
     {
       "voter_id": "ISP7680438",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Sumitara Devi",
@@ -1812,7 +1812,7 @@
     },
     {
       "voter_id": "SP4222634",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Dablu Chauhana",
@@ -1825,7 +1825,7 @@
     },
     {
       "voter_id": "ISP0890558",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Gulaichi",
@@ -1838,7 +1838,7 @@
     },
     {
       "voter_id": "DWA5934534",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Muniba",
@@ -1851,7 +1851,7 @@
     },
     {
       "voter_id": "WA4086344",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Samgita Devi",
@@ -1864,7 +1864,7 @@
     },
     {
       "voter_id": "SP4539300",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Anita Chauhana",
@@ -1877,7 +1877,7 @@
     },
     {
       "voter_id": "ISP464908",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Jagamohana",
@@ -1890,7 +1890,7 @@
     },
     {
       "voter_id": "ISP4439493",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Rajana Chauhana",
@@ -1903,7 +1903,7 @@
     },
     {
       "voter_id": "DWQ2673234",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Lilavati",
@@ -1916,7 +1916,7 @@
     },
     {
       "voter_id": "ISP7933982",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Chandrakala",
@@ -1929,7 +1929,7 @@
     },
     {
       "voter_id": "SP4225025",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Rimku Chauhana",
@@ -1942,7 +1942,7 @@
     },
     {
       "voter_id": "ISP4438750",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ramjana Kannaujiya",
@@ -1955,7 +1955,7 @@
     },
     {
       "voter_id": "SP4222576",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Pimki Chauhana",
@@ -1968,7 +1968,7 @@
     },
     {
       "voter_id": "ISP4439477",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Anuradha Chauhana",
@@ -1981,7 +1981,7 @@
     },
     {
       "voter_id": "ISP0358424",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Babalu",
@@ -1994,7 +1994,7 @@
     },
     {
       "voter_id": "ISP3580438",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Tara Devi",
@@ -2007,7 +2007,7 @@
     },
     {
       "voter_id": "SP3504867",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Samgita Devi",
@@ -2020,7 +2020,7 @@
     },
     {
       "voter_id": "DWAQ580455",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Shamkara",
@@ -2033,7 +2033,7 @@
     },
     {
       "voter_id": "ISP2230589",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Lalita Devi",
@@ -2046,7 +2046,7 @@
     },
     {
       "voter_id": "ISP0890478",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Manoja Chauhana",
@@ -2059,7 +2059,7 @@
     },
     {
       "voter_id": "DWQ5935267",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Samdhya",
@@ -2072,7 +2072,7 @@
     },
     {
       "voter_id": "ISP0890392",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Parashurama",
@@ -2085,7 +2085,7 @@
     },
     {
       "voter_id": "ISP3504875",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Raju Kumara Vishvakarma",
@@ -2098,7 +2098,7 @@
     },
     {
       "voter_id": "ISP0890665",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Jitendra",
@@ -2111,7 +2111,7 @@
     },
     {
       "voter_id": "ISP4572505",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Vandana",
@@ -2124,7 +2124,7 @@
     },
     {
       "voter_id": "ISP0358476",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Anila",
@@ -2137,7 +2137,7 @@
     },
     {
       "voter_id": "ISP4294237",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Laxmi",
@@ -2150,7 +2150,7 @@
     },
     {
       "voter_id": "SP4222600",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Kushahara Chauhana",
@@ -2163,7 +2163,7 @@
     },
     {
       "voter_id": "ISP7488667",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Jayahinda Chauhana",
@@ -2176,7 +2176,7 @@
     },
     {
       "voter_id": "DWAS935242",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ae Chauhana",
@@ -2189,7 +2189,7 @@
     },
     {
       "voter_id": "ISP0228320",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Mandra Kumara Nishada",
@@ -2202,7 +2202,7 @@
     },
     {
       "voter_id": "ISP7052779",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Lalati Chauhana",
@@ -2215,7 +2215,7 @@
     },
     {
       "voter_id": "ISP443879",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Durgavati Devi",
@@ -2228,7 +2228,7 @@
     },
     {
       "voter_id": "SP4465200",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Parla Kayastha",
@@ -2241,7 +2241,7 @@
     },
     {
       "voter_id": "SP3873064",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Rama Nivasa Chauhana",
@@ -2254,7 +2254,7 @@
     },
     {
       "voter_id": "DWWA4085437",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Samjira",
@@ -2267,7 +2267,7 @@
     },
     {
       "voter_id": "DWA2667954",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Lavakusha",
@@ -2280,7 +2280,7 @@
     },
     {
       "voter_id": "ISP205966",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Pritama Chauhana",
@@ -2293,7 +2293,7 @@
     },
     {
       "voter_id": "ISP4687763",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Shraddha Nishada",
@@ -2306,7 +2306,7 @@
     },
     {
       "voter_id": "DWQ5934575",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Keshari",
@@ -2319,7 +2319,7 @@
     },
     {
       "voter_id": "DWQ5935432",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Gopala",
@@ -2332,7 +2332,7 @@
     },
     {
       "voter_id": "ISP452069",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Chanda Devi",
@@ -2345,7 +2345,7 @@
     },
     {
       "voter_id": "DWA4085445",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Narasimha",
@@ -2358,7 +2358,7 @@
     },
     {
       "voter_id": "ISP3873049",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Rita Devi",
@@ -2371,7 +2371,7 @@
     },
     {
       "voter_id": "BWA408620",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Bhuala",
@@ -2384,7 +2384,7 @@
     },
     {
       "voter_id": "PWA2008422",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Udayaraja",
@@ -2397,7 +2397,7 @@
     },
     {
       "voter_id": "DWA295924",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Avadhesha",
@@ -2410,7 +2410,7 @@
     },
     {
       "voter_id": "ISP3396595",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ra La Chauhana",
@@ -2423,7 +2423,7 @@
     },
     {
       "voter_id": "ISP492053",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Jaya Nishada",
@@ -2436,7 +2436,7 @@
     },
     {
       "voter_id": "DWA4085692",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Jnanamati",
@@ -2449,7 +2449,7 @@
     },
     {
       "voter_id": "ISP4222504",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Vamdana Devi",
@@ -2462,7 +2462,7 @@
     },
     {
       "voter_id": "ISP3580446",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Puja Devi",
@@ -2475,7 +2475,7 @@
     },
     {
       "voter_id": "ISP7952768",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Vijayamana Chauhana",
@@ -2488,7 +2488,7 @@
     },
     {
       "voter_id": "SP3504883",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ramasadana Vishvakarma",
@@ -2499,7 +2499,7 @@
     },
     {
       "voter_id": "ISP752784",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Rina Devi",
@@ -2512,7 +2512,7 @@
     },
     {
       "voter_id": "ISP7952792",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Shivashamkara Chauhana",
@@ -2525,7 +2525,7 @@
     },
     {
       "voter_id": "ISP7680373",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Mahesha",
@@ -2538,7 +2538,7 @@
     },
     {
       "voter_id": "SP4264727",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Rimki Devi",
@@ -2551,7 +2551,7 @@
     },
     {
       "voter_id": "SP0358432",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Rama Autara",
@@ -2564,7 +2564,7 @@
     },
     {
       "voter_id": "ISP4238366",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Sajana",
@@ -2577,7 +2577,7 @@
     },
     {
       "voter_id": "ISP0890335",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Kesari Devi",
@@ -2590,7 +2590,7 @@
     },
     {
       "voter_id": "ISP035834",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Sharada",
@@ -2603,7 +2603,7 @@
     },
     {
       "voter_id": "DWQ4085288",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Mohana",
@@ -2616,7 +2616,7 @@
     },
     {
       "voter_id": "ISP0006007",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ganesha",
@@ -2629,7 +2629,7 @@
     },
     {
       "voter_id": "ISP3504894",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ramesha Vishvakarma",
@@ -2640,7 +2640,7 @@
     },
     {
       "voter_id": "ISP4263703",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Madhuri",
@@ -2653,7 +2653,7 @@
     },
     {
       "voter_id": "DWQ4085387",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ramadhari",
@@ -2666,7 +2666,7 @@
     },
     {
       "voter_id": "ISP3542743",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Reshama Devi",
@@ -2679,7 +2679,7 @@
     },
     {
       "voter_id": "SP4227930",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Bindu Devi",
@@ -2692,7 +2692,7 @@
     },
     {
       "voter_id": "ISP3504909",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Dinesha Vishvakarma",
@@ -2705,7 +2705,7 @@
     },
     {
       "voter_id": "ISP3396603",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ramalakhana",
@@ -2718,7 +2718,7 @@
     },
     {
       "voter_id": "PWA2008562",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Anita",
@@ -2731,7 +2731,7 @@
     },
     {
       "voter_id": "SP465907",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ro Ta",
@@ -2744,7 +2744,7 @@
     },
     {
       "voter_id": "SP4575037",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Savita Chauhana",
@@ -2757,7 +2757,7 @@
     },
     {
       "voter_id": "SP0005975",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Kal{}pu",
@@ -2770,7 +2770,7 @@
     },
     {
       "voter_id": "DWQ2667830",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Bablu Kumara",
@@ -2783,7 +2783,7 @@
     },
     {
       "voter_id": "ISP3834900",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Vishala Jayasavala",
@@ -2796,7 +2796,7 @@
     },
     {
       "voter_id": "ISP4539292",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Saroja Chauhana",
@@ -2809,7 +2809,7 @@
     },
     {
       "voter_id": "ISP0358333",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ramavachana",
@@ -2822,7 +2822,7 @@
     },
     {
       "voter_id": "ISP0358358",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Virendrara",
@@ -2835,7 +2835,7 @@
     },
     {
       "voter_id": "ISP4574998",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Lali Chauhana",
@@ -2848,7 +2848,7 @@
     },
     {
       "voter_id": "ISP0005983",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Bhagavanti Devi",
@@ -2861,7 +2861,7 @@
     },
     {
       "voter_id": "DWA295932",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ghanashyama",
@@ -2874,7 +2874,7 @@
     },
     {
       "voter_id": "DWQI580364",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Avadhesha",
@@ -2887,7 +2887,7 @@
     },
     {
       "voter_id": "DWQ2666675",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ashisha",
@@ -2900,7 +2900,7 @@
     },
     {
       "voter_id": "ISP4572380",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Soni Chauhana",
@@ -2913,7 +2913,7 @@
     },
     {
       "voter_id": "ISP452430",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Kushmajnjali Chaube",
@@ -2926,7 +2926,7 @@
     },
     {
       "voter_id": "ISP4546396",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Durgavati Devi",
@@ -2939,7 +2939,7 @@
     },
     {
       "voter_id": "DWA4086393",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Rimki",
@@ -2952,7 +2952,7 @@
     },
     {
       "voter_id": "SP4874707",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Raja Narayana Jayasavala",
@@ -2965,7 +2965,7 @@
     },
     {
       "voter_id": "SP372450",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Rita Devi",
@@ -2978,7 +2978,7 @@
     },
     {
       "voter_id": "SP0890574",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Rudravati",
@@ -2991,7 +2991,7 @@
     },
     {
       "voter_id": "ISP4546472",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Rina",
@@ -3004,7 +3004,7 @@
     },
     {
       "voter_id": "DWAS934724",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Subhavati",
@@ -3017,7 +3017,7 @@
     },
     {
       "voter_id": "DWQ4086385",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Santosha Kumara",
@@ -3030,7 +3030,7 @@
     },
     {
       "voter_id": "SP4546404",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Chamda Devi",
@@ -3043,7 +3043,7 @@
     },
     {
       "voter_id": "ISP4634739",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ramesha Kumara Praja",
@@ -3056,7 +3056,7 @@
     },
     {
       "voter_id": "ISP434759",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Dipaka Chauhana",
@@ -3069,7 +3069,7 @@
     },
     {
       "voter_id": "DWQ3402395",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Arati",
@@ -3082,7 +3082,7 @@
     },
     {
       "voter_id": "SP000599",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Mamju",
@@ -3095,7 +3095,7 @@
     },
     {
       "voter_id": "DWA337484",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Dhannajaya",
@@ -3108,7 +3108,7 @@
     },
     {
       "voter_id": "ISP259482",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Devendra Nishada",
@@ -3121,7 +3121,7 @@
     },
     {
       "voter_id": "ISP3542750",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Sarita",
@@ -3134,7 +3134,7 @@
     },
     {
       "voter_id": "DWA4085072",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Mira Devi",
@@ -3147,7 +3147,7 @@
     },
     {
       "voter_id": "ISP3396629",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Priti Tivari",
@@ -3160,7 +3160,7 @@
     },
     {
       "voter_id": "SP035837",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Amita",
@@ -3173,7 +3173,7 @@
     },
     {
       "voter_id": "ISP259490",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Dinesha Nishada",
@@ -3186,7 +3186,7 @@
     },
     {
       "voter_id": "ISP0358325",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Vinoda Kumara",
@@ -3199,7 +3199,7 @@
     },
     {
       "voter_id": "ISP259474",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Bandana Sahani",
@@ -3212,7 +3212,7 @@
     },
     {
       "voter_id": "DWQ2708659",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Virendara",
@@ -3223,7 +3223,7 @@
     },
     {
       "voter_id": "SP3724768",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Chaya Devi",
@@ -3236,7 +3236,7 @@
     },
     {
       "voter_id": "ISP2594208",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Samdipa Kumara Nishada",
@@ -3249,7 +3249,7 @@
     },
     {
       "voter_id": "ISP0890533",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Chote Lala",
@@ -3262,7 +3262,7 @@
     },
     {
       "voter_id": "ISP0890582",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Virendra Tivari",
@@ -3275,7 +3275,7 @@
     },
     {
       "voter_id": "DWQ2666899",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Kishori",
@@ -3288,7 +3288,7 @@
     },
     {
       "voter_id": "ISP7680388",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Shrirama",
@@ -3301,7 +3301,7 @@
     },
     {
       "voter_id": "ISP7952842",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Hari Rama Tripathi",
@@ -3314,7 +3314,7 @@
     },
     {
       "voter_id": "ISP477253",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Samdipa Tripathi",
@@ -3327,7 +3327,7 @@
     },
     {
       "voter_id": "DWQ2666949",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Chandarekha",
@@ -3340,7 +3340,7 @@
     },
     {
       "voter_id": "SP7488709",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Pushpa Demvi",
@@ -3353,7 +3353,7 @@
     },
     {
       "voter_id": "ISP752834",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Lilavati",
@@ -3366,7 +3366,7 @@
     },
     {
       "voter_id": "ISP3396637",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Jyoti Tripathi",
@@ -3379,7 +3379,7 @@
     },
     {
       "voter_id": "ISP3797696",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Arati Nishada",
@@ -3392,7 +3392,7 @@
     },
     {
       "voter_id": "ISP476059",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Shubhama Tripathi",
@@ -3405,7 +3405,7 @@
     },
     {
       "voter_id": "ISP422268",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Amkita Chauhana",
@@ -3418,7 +3418,7 @@
     },
     {
       "voter_id": "ISP752859",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Balarama",
@@ -3431,7 +3431,7 @@
     },
     {
       "voter_id": "ISP7680396",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Manorama",
@@ -3444,7 +3444,7 @@
     },
     {
       "voter_id": "ISP4760658",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Lalita Tripathi",
@@ -3457,7 +3457,7 @@
     },
     {
       "voter_id": "DWQ2666790",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Shivaratana",
@@ -3470,7 +3470,7 @@
     },
     {
       "voter_id": "ISP425976",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Bhanamati",
@@ -3483,7 +3483,7 @@
     },
     {
       "voter_id": "DWA4085593",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Sonamati",
@@ -3496,7 +3496,7 @@
     },
     {
       "voter_id": "DWQ2708550",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Rama Nagina",
@@ -3509,7 +3509,7 @@
     },
     {
       "voter_id": "ISP0890285",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Vamsharaja",
@@ -3522,7 +3522,7 @@
     },
     {
       "voter_id": "DWQ408659",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ghanashyama",
@@ -3535,7 +3535,7 @@
     },
     {
       "voter_id": "DWA4084760",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Khubalala",
@@ -3548,7 +3548,7 @@
     },
     {
       "voter_id": "DWA3407304",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Kalindi",
@@ -3561,7 +3561,7 @@
     },
     {
       "voter_id": "DWQ5934989",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ramachai",
@@ -3574,7 +3574,7 @@
     },
     {
       "voter_id": "ISP2594232",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Jayatri Devi",
@@ -3587,7 +3587,7 @@
     },
     {
       "voter_id": "DWA4086658",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Indravati",
@@ -3600,7 +3600,7 @@
     },
     {
       "voter_id": "ISP757208",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Samgita",
@@ -3613,7 +3613,7 @@
     },
     {
       "voter_id": "ISP7957224",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Anila Kumara",
@@ -3626,7 +3626,7 @@
     },
     {
       "voter_id": "DWA4084752",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Kailasi",
@@ -3639,7 +3639,7 @@
     },
     {
       "voter_id": "WA2793487",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Durgesha",
@@ -3652,7 +3652,7 @@
     },
     {
       "voter_id": "DWQ3407494",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Sunila",
@@ -3665,7 +3665,7 @@
     },
     {
       "voter_id": "DWQ2666378",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Govinda",
@@ -3678,7 +3678,7 @@
     },
     {
       "voter_id": "SP2294833",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ramu",
@@ -3691,7 +3691,7 @@
     },
     {
       "voter_id": "ISP0305854",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Shambhu",
@@ -3704,7 +3704,7 @@
     },
     {
       "voter_id": "DWQ4086260",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Vijaya",
@@ -3717,7 +3717,7 @@
     },
     {
       "voter_id": "ISP3542776",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Sadhana Devi",
@@ -3730,7 +3730,7 @@
     },
     {
       "voter_id": "ISP4773533",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Suhani Yadava",
@@ -3741,7 +3741,7 @@
     },
     {
       "voter_id": "DWA266729",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Jaganarayana",
@@ -3754,7 +3754,7 @@
     },
     {
       "voter_id": "DWQ5935077",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Sonu",
@@ -3767,7 +3767,7 @@
     },
     {
       "voter_id": "DWA4086286",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Rajesha",
@@ -3780,7 +3780,7 @@
     },
     {
       "voter_id": "DWQ337393",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Vimdhyavasini",
@@ -3793,7 +3793,7 @@
     },
     {
       "voter_id": "ISP3873296",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Manisha Sahani",
@@ -3806,7 +3806,7 @@
     },
     {
       "voter_id": "ISP2059590",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Radheshyama",
@@ -3819,7 +3819,7 @@
     },
     {
       "voter_id": "ISP0305847",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Dhannajaya",
@@ -3832,7 +3832,7 @@
     },
     {
       "voter_id": "ISP2594265",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Rina",
@@ -3845,7 +3845,7 @@
     },
     {
       "voter_id": "DWQ2673275",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Sirapata",
@@ -3858,7 +3858,7 @@
     },
     {
       "voter_id": "DWWA4086765",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Gudadu",
@@ -3871,7 +3871,7 @@
     },
     {
       "voter_id": "ISP229484",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Sachina",
@@ -3884,7 +3884,7 @@
     },
     {
       "voter_id": "ISP2059608",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Sundara",
@@ -3897,7 +3897,7 @@
     },
     {
       "voter_id": "ISP0359802",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Vijaya Kumara",
@@ -3910,7 +3910,7 @@
     },
     {
       "voter_id": "ISP3396645",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Suresha",
@@ -3923,7 +3923,7 @@
     },
     {
       "voter_id": "ISP680289",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Nisha 4",
@@ -3936,7 +3936,7 @@
     },
     {
       "voter_id": "SP2059574",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Vishala Jayasavala",
@@ -3949,7 +3949,7 @@
     },
     {
       "voter_id": "ISP2294049",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Rita Raya",
@@ -3962,7 +3962,7 @@
     },
     {
       "voter_id": "DWAT580950",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Baburama",
@@ -3975,7 +3975,7 @@
     },
     {
       "voter_id": "DWQ5935358",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Manoja",
@@ -3988,7 +3988,7 @@
     },
     {
       "voter_id": "DWAQ3378037",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Krshnamurari",
@@ -4001,7 +4001,7 @@
     },
     {
       "voter_id": "ISP680339",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ajaya",
@@ -4014,7 +4014,7 @@
     },
     {
       "voter_id": "ISP4823244",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Rimki Devi",
@@ -4027,7 +4027,7 @@
     },
     {
       "voter_id": "ISP2294056",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Umeshachandra Raya",
@@ -4040,7 +4040,7 @@
     },
     {
       "voter_id": "ISP2243400",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Sitaru Nisha",
@@ -4053,7 +4053,7 @@
     },
     {
       "voter_id": "ISP2294064",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Prashamta Raya",
@@ -4066,7 +4066,7 @@
     },
     {
       "voter_id": "ISP229474",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Pradipa Kumara Shrivastava",
@@ -4079,7 +4079,7 @@
     },
     {
       "voter_id": "ISP205954",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Sunila Kumara Sahani",
@@ -4092,7 +4092,7 @@
     },
     {
       "voter_id": "ISP2294700",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Saroja",
@@ -4105,7 +4105,7 @@
     },
     {
       "voter_id": "SP229478",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Sundara",
@@ -4118,7 +4118,7 @@
     },
     {
       "voter_id": "SP2243384",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Nasimabegama",
@@ -4131,7 +4131,7 @@
     },
     {
       "voter_id": "ISP2294023",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Lata Ahuja",
@@ -4144,7 +4144,7 @@
     },
     {
       "voter_id": "SP2294262",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ramaprakasha Shukla",
@@ -4157,7 +4157,7 @@
     },
     {
       "voter_id": "SP457275",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Abhisheka Maurya",
@@ -4170,7 +4170,7 @@
     },
     {
       "voter_id": "ISP2059327",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Manajita Kumara",
@@ -4183,7 +4183,7 @@
     },
     {
       "voter_id": "ISP2059459",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Mithilesha",
@@ -4196,7 +4196,7 @@
     },
     {
       "voter_id": "DWQ3376679",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Sushila",
@@ -4209,7 +4209,7 @@
     },
     {
       "voter_id": "ISP2059434",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Gautama Kumara Buddha",
@@ -4222,7 +4222,7 @@
     },
     {
       "voter_id": "ISP2059426",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ashvani Kumara Sagara",
@@ -4235,7 +4235,7 @@
     },
     {
       "voter_id": "SP2294098",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Yasha Ahuja",
@@ -4248,7 +4248,7 @@
     },
     {
       "voter_id": "ISP5046749",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Suraja Kumara",
@@ -4261,7 +4261,7 @@
     },
     {
       "voter_id": "ISP2059558",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Sachina Kumara",
@@ -4274,7 +4274,7 @@
     },
     {
       "voter_id": "ISP229469",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Vinoda",
@@ -4287,7 +4287,7 @@
     },
     {
       "voter_id": "ISP749992",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Govinda Kumara",
@@ -4300,7 +4300,7 @@
     },
     {
       "voter_id": "ISP4890364",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Samjaya",
@@ -4313,7 +4313,7 @@
     },
     {
       "voter_id": "SP2293708",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Subodha Vishvakarma",
@@ -4326,7 +4326,7 @@
     },
     {
       "voter_id": "SP2597824",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Avadhesha Kumara Shukla",
@@ -4339,7 +4339,7 @@
     },
     {
       "voter_id": "SP259774",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Shubhama Shrivastava",
@@ -4352,7 +4352,7 @@
     },
     {
       "voter_id": "SP3892007",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Pramoda Prasada",
@@ -4365,7 +4365,7 @@
     },
     {
       "voter_id": "ISP4207364",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ayushi Yadava",
@@ -4378,7 +4378,7 @@
     },
     {
       "voter_id": "ISP0243980",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Mamju Devi",
@@ -4391,7 +4391,7 @@
     },
     {
       "voter_id": "ZRA622323",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Puja Gupta",
@@ -4404,7 +4404,7 @@
     },
     {
       "voter_id": "ISP2597832",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Amjali Shukla",
@@ -4417,7 +4417,7 @@
     },
     {
       "voter_id": "ISP259758",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Jogendra Shrivastava",
@@ -4430,7 +4430,7 @@
     },
     {
       "voter_id": "ISP2592004",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ramapratapa Simha",
@@ -4443,7 +4443,7 @@
     },
     {
       "voter_id": "ISP2897844",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Navina Mishra",
@@ -4456,7 +4456,7 @@
     },
     {
       "voter_id": "ISP2293074",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Prabha Nishanta",
@@ -4469,7 +4469,7 @@
     },
     {
       "voter_id": "ISP7972044",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Vittana Shrivastava",
@@ -4482,7 +4482,7 @@
     },
     {
       "voter_id": "ISP0243964",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Matsyendra",
@@ -4495,7 +4495,7 @@
     },
     {
       "voter_id": "ISP5028667",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Abhisheka Varma",
@@ -4508,7 +4508,7 @@
     },
     {
       "voter_id": "ISP259766",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Rajana Shrivastava",
@@ -4521,7 +4521,7 @@
     },
     {
       "voter_id": "SP2892057",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Abhijita Shrivastava",
@@ -4534,7 +4534,7 @@
     },
     {
       "voter_id": "ISP3580076",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Sudha Mishra",
@@ -4547,7 +4547,7 @@
     },
     {
       "voter_id": "ISP2892032",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Vinoda Kumara",
@@ -4560,7 +4560,7 @@
     },
     {
       "voter_id": "ISP0243972",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Abhilasha",
@@ -4573,7 +4573,7 @@
     },
     {
       "voter_id": "ISP7944005",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Brijalata Simha",
@@ -4586,7 +4586,7 @@
     },
     {
       "voter_id": "ISP678002",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Rimku Jha",
@@ -4599,7 +4599,7 @@
     },
     {
       "voter_id": "SP4458238",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ajaya Kumara Meharotra",
@@ -4612,7 +4612,7 @@
     },
     {
       "voter_id": "ISP5030689",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Raja Varma",
@@ -4625,7 +4625,7 @@
     },
     {
       "voter_id": "ISP743973",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 4,
       "section_name": "Jungle Nakaha No.2 Bhagwanpur Chauhan",
       "name": "Ravindra Natha",
@@ -4638,7 +4638,7 @@
     },
     {
       "voter_id": "PWAS935002",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Sonamati",
@@ -4651,7 +4651,7 @@
     },
     {
       "voter_id": "DWQ5934765",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Subasachanda",
@@ -4664,7 +4664,7 @@
     },
     {
       "voter_id": "ISP3457538",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Lalamohana",
@@ -4677,7 +4677,7 @@
     },
     {
       "voter_id": "DWQ207828",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Ramanaresha",
@@ -4688,7 +4688,7 @@
     },
     {
       "voter_id": "ISP3454329",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "A",
@@ -4701,7 +4701,7 @@
     },
     {
       "voter_id": "DWQ5934997",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Rajesha",
@@ -4714,7 +4714,7 @@
     },
     {
       "voter_id": "DWA4085908",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Ramu",
@@ -4727,7 +4727,7 @@
     },
     {
       "voter_id": "ISP4773982",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Nisha Nishada",
@@ -4740,7 +4740,7 @@
     },
     {
       "voter_id": "ISP000603",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Vinoda",
@@ -4753,7 +4753,7 @@
     },
     {
       "voter_id": "DWA5934963",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Narvada",
@@ -4766,7 +4766,7 @@
     },
     {
       "voter_id": "DWQ5935085",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Kusuma",
@@ -4779,7 +4779,7 @@
     },
     {
       "voter_id": "DWA4085296",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Rajarama",
@@ -4792,7 +4792,7 @@
     },
     {
       "voter_id": "ISP0006064",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Vishvanatha",
@@ -4805,7 +4805,7 @@
     },
     {
       "voter_id": "ISP0890475",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Sarasvati Devi",
@@ -4818,7 +4818,7 @@
     },
     {
       "voter_id": "ISP0006049",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Santosha",
@@ -4831,7 +4831,7 @@
     },
     {
       "voter_id": "ISP2893964",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Dinesha",
@@ -4844,7 +4844,7 @@
     },
     {
       "voter_id": "SP744487",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Sanan{}ju",
@@ -4857,7 +4857,7 @@
     },
     {
       "voter_id": "SP0890467",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Vasamati",
@@ -4870,7 +4870,7 @@
     },
     {
       "voter_id": "ISP0890442",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Mahendra",
@@ -4883,7 +4883,7 @@
     },
     {
       "voter_id": "SP3728847",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Rima Devi",
@@ -4896,7 +4896,7 @@
     },
     {
       "voter_id": "ISP3728805",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Dipaka Nishada",
@@ -4909,7 +4909,7 @@
     },
     {
       "voter_id": "ISP4797406",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Gita Nishada",
@@ -4922,7 +4922,7 @@
     },
     {
       "voter_id": "SP3728873",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Kabuli",
@@ -4935,7 +4935,7 @@
     },
     {
       "voter_id": "DWO3376877",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Indala",
@@ -4948,7 +4948,7 @@
     },
     {
       "voter_id": "DWO336627",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Shambhu",
@@ -4961,7 +4961,7 @@
     },
     {
       "voter_id": "ISP0890459",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Surendra",
@@ -4974,7 +4974,7 @@
     },
     {
       "voter_id": "SP0890657",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Mina Devi",
@@ -4987,7 +4987,7 @@
     },
     {
       "voter_id": "ISP7994503",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Ravindra Kumara",
@@ -5000,7 +5000,7 @@
     },
     {
       "voter_id": "ISP4797430",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Kumari Rekha Nishada",
@@ -5013,7 +5013,7 @@
     },
     {
       "voter_id": "SP3728797",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Sumana Devi",
@@ -5026,7 +5026,7 @@
     },
     {
       "voter_id": "ISP476334",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Amjani",
@@ -5039,7 +5039,7 @@
     },
     {
       "voter_id": "ISP4773990",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Narita Nishada",
@@ -5052,7 +5052,7 @@
     },
     {
       "voter_id": "SP372882",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Kirana Devi",
@@ -5065,7 +5065,7 @@
     },
     {
       "voter_id": "SP3604925",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Kalinda",
@@ -5078,7 +5078,7 @@
     },
     {
       "voter_id": "ISP794495",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Shashikala",
@@ -5091,7 +5091,7 @@
     },
     {
       "voter_id": "ISP3542784",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Anuradha",
@@ -5104,7 +5104,7 @@
     },
     {
       "voter_id": "ISP7680305",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Sushila Kumara Nishada",
@@ -5117,7 +5117,7 @@
     },
     {
       "voter_id": "ISP4577433",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Sonu Kumari",
@@ -5128,7 +5128,7 @@
     },
     {
       "voter_id": "SP4077597",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Raja",
@@ -5141,7 +5141,7 @@
     },
     {
       "voter_id": "SP4773974",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Ajaya Nishada",
@@ -5154,7 +5154,7 @@
     },
     {
       "voter_id": "ISP994578",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Sunila",
@@ -5167,7 +5167,7 @@
     },
     {
       "voter_id": "ISP499329",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Payala Sena",
@@ -5180,7 +5180,7 @@
     },
     {
       "voter_id": "DWA4086476",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Molahu",
@@ -5193,7 +5193,7 @@
     },
     {
       "voter_id": "ISP0890676",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Chinta Devi",
@@ -5206,7 +5206,7 @@
     },
     {
       "voter_id": "DWQ2665966",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Bechu",
@@ -5219,7 +5219,7 @@
     },
     {
       "voter_id": "DWQ2667962",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Sunita",
@@ -5232,7 +5232,7 @@
     },
     {
       "voter_id": "ISP3728839",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Pushpa Devi",
@@ -5245,7 +5245,7 @@
     },
     {
       "voter_id": "SP5064779",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Kusuma Lata",
@@ -5258,7 +5258,7 @@
     },
     {
       "voter_id": "ISP5054309",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Payala Sena",
@@ -5271,7 +5271,7 @@
     },
     {
       "voter_id": "DWA5935070",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Sarita",
@@ -5284,7 +5284,7 @@
     },
     {
       "voter_id": "ISP7952875",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Gita",
@@ -5297,7 +5297,7 @@
     },
     {
       "voter_id": "ISP089030",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Per Devi",
@@ -5310,7 +5310,7 @@
     },
     {
       "voter_id": "ISP5046578",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Shitala",
@@ -5323,7 +5323,7 @@
     },
     {
       "voter_id": "DWQ3376809",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "edt",
@@ -5336,7 +5336,7 @@
     },
     {
       "voter_id": "ISP0358309",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Sumitra Devi",
@@ -5349,7 +5349,7 @@
     },
     {
       "voter_id": "ISP7952883",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Shivachanda",
@@ -5362,7 +5362,7 @@
     },
     {
       "voter_id": "ISP2594307",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Suvasha",
@@ -5375,7 +5375,7 @@
     },
     {
       "voter_id": "SP4772455",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Sushama Simha",
@@ -5388,7 +5388,7 @@
     },
     {
       "voter_id": "ISP0359844",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Ramashisha",
@@ -5401,7 +5401,7 @@
     },
     {
       "voter_id": "ISP259428",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Bhola Kumara",
@@ -5414,7 +5414,7 @@
     },
     {
       "voter_id": "ISP4793089",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Raju Kumara Gautama",
@@ -5427,7 +5427,7 @@
     },
     {
       "voter_id": "ISP0890566",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Ate",
@@ -5440,7 +5440,7 @@
     },
     {
       "voter_id": "ISP7488758",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Shashi Kala Devi",
@@ -5453,7 +5453,7 @@
     },
     {
       "voter_id": "SP3468527",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Punama Devi",
@@ -5466,7 +5466,7 @@
     },
     {
       "voter_id": "ISP3504958",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Rita Nishada",
@@ -5479,7 +5479,7 @@
     },
     {
       "voter_id": "ISP2294825",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "San{}tu Kumara",
@@ -5492,7 +5492,7 @@
     },
     {
       "voter_id": "DWQ3376403",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Rupa Narayana Jayasavala",
@@ -5505,7 +5505,7 @@
     },
     {
       "voter_id": "DWQ5934906",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Vijaya Kumara Gautama",
@@ -5518,7 +5518,7 @@
     },
     {
       "voter_id": "ISP475987",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Rimki Lata Bharati",
@@ -5531,7 +5531,7 @@
     },
     {
       "voter_id": "ISP2594299",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Mumshi Kumara",
@@ -5544,7 +5544,7 @@
     },
     {
       "voter_id": "ISP3580453",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Samdipa Sharma",
@@ -5557,7 +5557,7 @@
     },
     {
       "voter_id": "ISP3468579",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Radheshyama",
@@ -5570,7 +5570,7 @@
     },
     {
       "voter_id": "ISP4768529",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Lalati",
@@ -5583,7 +5583,7 @@
     },
     {
       "voter_id": "ISP0359836",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Ku. Runa",
@@ -5596,7 +5596,7 @@
     },
     {
       "voter_id": "DWQ5935069",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Garima",
@@ -5609,7 +5609,7 @@
     },
     {
       "voter_id": "ISP0250464",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Anila Kumara",
@@ -5622,7 +5622,7 @@
     },
     {
       "voter_id": "SP3475563",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Rita Devi",
@@ -5635,7 +5635,7 @@
     },
     {
       "voter_id": "SP259435",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Ramachandara Nishada",
@@ -5648,7 +5648,7 @@
     },
     {
       "voter_id": "ISP3728862",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Ashoka",
@@ -5661,7 +5661,7 @@
     },
     {
       "voter_id": "ISP4793063",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Krti Pala",
@@ -5674,7 +5674,7 @@
     },
     {
       "voter_id": "ISP3988805",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Mamjita",
@@ -5687,7 +5687,7 @@
     },
     {
       "voter_id": "ISP4768503",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Samdhya Nishada",
@@ -5700,7 +5700,7 @@
     },
     {
       "voter_id": "ISP2893998",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Amjali Pathaka",
@@ -5712,7 +5712,7 @@
     },
     {
       "voter_id": "ISP0890368",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Satisha Kumara",
@@ -5725,7 +5725,7 @@
     },
     {
       "voter_id": "SP4347357",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Anuraga Pathaka 59)",
@@ -5737,7 +5737,7 @@
     },
     {
       "voter_id": "ISP4773396",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Sunita Devi",
@@ -5750,7 +5750,7 @@
     },
     {
       "voter_id": "ISP477356",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Narvada",
@@ -5763,7 +5763,7 @@
     },
     {
       "voter_id": "ISP4768545",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Rubi Nishada",
@@ -5776,7 +5776,7 @@
     },
     {
       "voter_id": "ISP4772992",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Annu",
@@ -5789,7 +5789,7 @@
     },
     {
       "voter_id": "ISP7488766",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Raghavendra Pathaka",
@@ -5802,7 +5802,7 @@
     },
     {
       "voter_id": "SP0890376",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Ashisha Kumara",
@@ -5815,7 +5815,7 @@
     },
     {
       "voter_id": "SP0890426",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Vinoda",
@@ -5828,7 +5828,7 @@
     },
     {
       "voter_id": "ISP3728854",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Ramjana Devi",
@@ -5841,7 +5841,7 @@
     },
     {
       "voter_id": "SP4768537",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Vijaya Kumara Nishada",
@@ -5854,7 +5854,7 @@
     },
     {
       "voter_id": "ISP4744769",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Durgavati",
@@ -5867,7 +5867,7 @@
     },
     {
       "voter_id": "ISP4793097",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Chamda Devi",
@@ -5880,7 +5880,7 @@
     },
     {
       "voter_id": "SP477266",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Reshama Gautama",
@@ -5893,7 +5893,7 @@
     },
     {
       "voter_id": "ISP0890350",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Nilama",
@@ -5906,7 +5906,7 @@
     },
     {
       "voter_id": "ISP3766683",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Prabhavati Devi",
@@ -5919,7 +5919,7 @@
     },
     {
       "voter_id": "ISP752925",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Buddha",
@@ -5932,7 +5932,7 @@
     },
     {
       "voter_id": "DWA02666832",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Gautama",
@@ -5945,7 +5945,7 @@
     },
     {
       "voter_id": "DWQ2666923",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Sunita",
@@ -5958,7 +5958,7 @@
     },
     {
       "voter_id": "ISP4797554",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Nitu",
@@ -5971,7 +5971,7 @@
     },
     {
       "voter_id": "DWQ3376908",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Virendra",
@@ -5984,7 +5984,7 @@
     },
     {
       "voter_id": "DWQ2665982",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Ramavarana",
@@ -5997,7 +5997,7 @@
     },
     {
       "voter_id": "DWQ2666576",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Ramakarana",
@@ -6010,7 +6010,7 @@
     },
     {
       "voter_id": "DWQ2793628",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Lalapari",
@@ -6023,7 +6023,7 @@
     },
     {
       "voter_id": "DWQ2665826",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Sudhira",
@@ -6036,7 +6036,7 @@
     },
     {
       "voter_id": "ISP4793253",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Roshani",
@@ -6049,7 +6049,7 @@
     },
     {
       "voter_id": "ISP0890590",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Sarita Devi",
@@ -6062,7 +6062,7 @@
     },
     {
       "voter_id": "ISP0890525",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Anita Devi",
@@ -6075,7 +6075,7 @@
     },
     {
       "voter_id": "ISP479752",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Akasha",
@@ -6088,7 +6088,7 @@
     },
     {
       "voter_id": "ISP3570090",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Amgada",
@@ -6101,7 +6101,7 @@
     },
     {
       "voter_id": "SP3570074",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Chandravana",
@@ -6114,7 +6114,7 @@
     },
     {
       "voter_id": "ISP3340882",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Priyamka Chau I",
@@ -6127,7 +6127,7 @@
     },
     {
       "voter_id": "DWQ3377948",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Lauhara",
@@ -6140,7 +6140,7 @@
     },
     {
       "voter_id": "ISP357096",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Jhinaku Nishada",
@@ -6153,7 +6153,7 @@
     },
     {
       "voter_id": "ISP3570082",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Shimdravarti",
@@ -6166,7 +6166,7 @@
     },
     {
       "voter_id": "DWWA408532",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Dvarika",
@@ -6179,7 +6179,7 @@
     },
     {
       "voter_id": "ISPA767326",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Nitu Bharati",
@@ -6192,7 +6192,7 @@
     },
     {
       "voter_id": "SP357008",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Gita Devi",
@@ -6205,7 +6205,7 @@
     },
     {
       "voter_id": "DWA266778",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Nita",
@@ -6218,7 +6218,7 @@
     },
     {
       "voter_id": "DWQ2667699",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Samgita",
@@ -6231,7 +6231,7 @@
     },
     {
       "voter_id": "DWQ3376778",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "ares",
@@ -6244,7 +6244,7 @@
     },
     {
       "voter_id": "ISP0890509",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Garima Devi",
@@ -6257,7 +6257,7 @@
     },
     {
       "voter_id": "ISP2894004",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Sonu Kumara Sahani",
@@ -6269,7 +6269,7 @@
     },
     {
       "voter_id": "SP097979",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Jagata Narayana",
@@ -6282,7 +6282,7 @@
     },
     {
       "voter_id": "SP200229",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Balaji Gosvami A 80",
@@ -6292,7 +6292,7 @@
     },
     {
       "voter_id": "SP4777843",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Yuvaraja Kumara Chauhana",
@@ -6305,7 +6305,7 @@
     },
     {
       "voter_id": "DWQ5934864",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Nilama",
@@ -6318,7 +6318,7 @@
     },
     {
       "voter_id": "ISP078798",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Niramjana",
@@ -6331,7 +6331,7 @@
     },
     {
       "voter_id": "SP089057",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Sahevamilana",
@@ -6344,7 +6344,7 @@
     },
     {
       "voter_id": "ISP0890483",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Shahamshaha",
@@ -6357,7 +6357,7 @@
     },
     {
       "voter_id": "ISP752997",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Ramahita",
@@ -6370,7 +6370,7 @@
     },
     {
       "voter_id": "ISP4583894",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Madina Khatuna",
@@ -6383,7 +6383,7 @@
     },
     {
       "voter_id": "ISP4777900",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Mamata Chauhana",
@@ -6396,7 +6396,7 @@
     },
     {
       "voter_id": "DWA262609",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Bhagavana Nishada",
@@ -6409,7 +6409,7 @@
     },
     {
       "voter_id": "DWQ340736",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Kirana",
@@ -6422,7 +6422,7 @@
     },
     {
       "voter_id": "ISP0787206",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Dipaka",
@@ -6435,7 +6435,7 @@
     },
     {
       "voter_id": "SP089049",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Gayatri Devi",
@@ -6448,7 +6448,7 @@
     },
     {
       "voter_id": "SP442579",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Rimajhima Gupta",
@@ -6461,7 +6461,7 @@
     },
     {
       "voter_id": "ISP4789376",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Savita Chauhana",
@@ -6474,7 +6474,7 @@
     },
     {
       "voter_id": "DWA340247",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Balirama Nishada",
@@ -6487,7 +6487,7 @@
     },
     {
       "voter_id": "DWA2793586",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Brjesha",
@@ -6500,7 +6500,7 @@
     },
     {
       "voter_id": "ISP259433",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Ananda Kumara Gupta",
@@ -6513,7 +6513,7 @@
     },
     {
       "voter_id": "ISP7680362",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "San{}tosha Kumara",
@@ -6526,7 +6526,7 @@
     },
     {
       "voter_id": "ISP434700",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Akasha Saurabha",
@@ -6539,7 +6539,7 @@
     },
     {
       "voter_id": "SP4347332",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Chamdani",
@@ -6552,7 +6552,7 @@
     },
     {
       "voter_id": "ISP4347365",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Manoja Kumara",
@@ -6565,7 +6565,7 @@
     },
     {
       "voter_id": "ISP680347",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Dayarama",
@@ -6578,7 +6578,7 @@
     },
     {
       "voter_id": "ISP7680370",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Bimala Devi",
@@ -6591,7 +6591,7 @@
     },
     {
       "voter_id": "ISP035985",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Sunila",
@@ -6604,7 +6604,7 @@
     },
     {
       "voter_id": "ISP4347324",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Ravi Simha",
@@ -6617,7 +6617,7 @@
     },
     {
       "voter_id": "ISP4347298",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Prabhata Sagara",
@@ -6630,7 +6630,7 @@
     },
     {
       "voter_id": "SP4400057",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Sani Gau.da",
@@ -6643,7 +6643,7 @@
     },
     {
       "voter_id": "ISP334084",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Vikasa Shrivastava",
@@ -6656,7 +6656,7 @@
     },
     {
       "voter_id": "ISP2594323",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Anita Sahani",
@@ -6669,7 +6669,7 @@
     },
     {
       "voter_id": "DWWA337278",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Kiseri",
@@ -6682,7 +6682,7 @@
     },
     {
       "voter_id": "ISP7680354",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Jnanamati Devi",
@@ -6695,7 +6695,7 @@
     },
     {
       "voter_id": "ISP4438800",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Bulabula",
@@ -6708,7 +6708,7 @@
     },
     {
       "voter_id": "ISP467333",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Rizavana Khana",
@@ -6721,7 +6721,7 @@
     },
     {
       "voter_id": "ISP4400040",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Khushabu Gau.da",
@@ -6734,7 +6734,7 @@
     },
     {
       "voter_id": "SP3340858",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Rima Shrivastava",
@@ -6747,7 +6747,7 @@
     },
     {
       "voter_id": "ISP3340833",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Shikhara Kumara",
@@ -6760,7 +6760,7 @@
     },
     {
       "voter_id": "SP4074357",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Gautama Mishra",
@@ -6773,7 +6773,7 @@
     },
     {
       "voter_id": "ISP3340825",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Shloka Shrivastava",
@@ -6786,7 +6786,7 @@
     },
     {
       "voter_id": "ISP3906393",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Samira Kumara",
@@ -6799,7 +6799,7 @@
     },
     {
       "voter_id": "SP3327778",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Shubhama Pandeya",
@@ -6812,7 +6812,7 @@
     },
     {
       "voter_id": "ISP3906369",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Koilahwa Tola",
       "name": "Raja",
@@ -6825,7 +6825,7 @@
     },
     {
       "voter_id": "ISP4673539",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Rajesha Kumara Shrivastava",
@@ -6838,7 +6838,7 @@
     },
     {
       "voter_id": "ISP4229266",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Ananda Prakasha Tripathi",
@@ -6851,7 +6851,7 @@
     },
     {
       "voter_id": "SP4347373",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Amita Kumara",
@@ -6864,7 +6864,7 @@
     },
     {
       "voter_id": "SP3579737",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Rajesha Madhdeshiya",
@@ -6877,7 +6877,7 @@
     },
     {
       "voter_id": "SP2592293",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Raviduve",
@@ -6890,7 +6890,7 @@
     },
     {
       "voter_id": "ISP4674826",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Babita Shrivastava",
@@ -6903,7 +6903,7 @@
     },
     {
       "voter_id": "ISP3579745",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Ajaya Tivari",
@@ -6916,7 +6916,7 @@
     },
     {
       "voter_id": "ISP7678093",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Kajala Devi",
@@ -6929,7 +6929,7 @@
     },
     {
       "voter_id": "SP4229274",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Mrdula Tripathi",
@@ -6942,7 +6942,7 @@
     },
     {
       "voter_id": "ISP4434338",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Aloka Kumara",
@@ -6955,7 +6955,7 @@
     },
     {
       "voter_id": "SP774404",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Gopala Krshna",
@@ -6968,7 +6968,7 @@
     },
     {
       "voter_id": "ISP792333",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Harishachandra Pandeya",
@@ -6981,7 +6981,7 @@
     },
     {
       "voter_id": "ISP2592327",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Ajashri Devi",
@@ -6994,7 +6994,7 @@
     },
     {
       "voter_id": "SP3579979",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Pushpa Tivari",
@@ -7007,7 +7007,7 @@
     },
     {
       "voter_id": "SP744720",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Vishnu Kumara Chau I",
@@ -7020,7 +7020,7 @@
     },
     {
       "voter_id": "ISP702358",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Narvada Devi Pandeya",
@@ -7033,7 +7033,7 @@
     },
     {
       "voter_id": "ISP792382",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Rajesha Sharma",
@@ -7046,7 +7046,7 @@
     },
     {
       "voter_id": "SP259237",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Balavanta Duve",
@@ -7059,7 +7059,7 @@
     },
     {
       "voter_id": "ISP259230",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Archana Duve",
@@ -7072,7 +7072,7 @@
     },
     {
       "voter_id": "ISP2592350",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Rajana Dube",
@@ -7085,7 +7085,7 @@
     },
     {
       "voter_id": "ISP972440",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Amara Natha Varma",
@@ -7098,7 +7098,7 @@
     },
     {
       "voter_id": "ISP972556",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Kanti Devi",
@@ -7111,7 +7111,7 @@
     },
     {
       "voter_id": "ISP772564",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Avanisha Kumara Pandeya",
@@ -7124,7 +7124,7 @@
     },
     {
       "voter_id": "ISP259239",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Abhaya Duve",
@@ -7137,7 +7137,7 @@
     },
     {
       "voter_id": "ISP792689",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Durgavati Pandeya",
@@ -7150,7 +7150,7 @@
     },
     {
       "voter_id": "ISPI992465",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Sharada Varma",
@@ -7163,7 +7163,7 @@
     },
     {
       "voter_id": "ISP0206094",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Gamga Prasada",
@@ -7176,7 +7176,7 @@
     },
     {
       "voter_id": "ISP792580",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Pratima Pandeya",
@@ -7189,7 +7189,7 @@
     },
     {
       "voter_id": "ISP992655",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Bharati Devi",
@@ -7202,7 +7202,7 @@
     },
     {
       "voter_id": "ISP3480365",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Akhilesha Kumara Pandeya",
@@ -7215,7 +7215,7 @@
     },
     {
       "voter_id": "ISP7992846",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Jagadisha Prasada",
@@ -7228,7 +7228,7 @@
     },
     {
       "voter_id": "ISP772069",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Rajakamala",
@@ -7241,7 +7241,7 @@
     },
     {
       "voter_id": "ISP7992093",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Ravindra Kumara Chau I",
@@ -7254,7 +7254,7 @@
     },
     {
       "voter_id": "ISP490764",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Jyoti Kirana Pamdeya",
@@ -7267,7 +7267,7 @@
     },
     {
       "voter_id": "ISP7992929",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Abhilasha Kumara",
@@ -7280,7 +7280,7 @@
     },
     {
       "voter_id": "ISP3546702",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Abhisheka Shrivastava",
@@ -7293,7 +7293,7 @@
     },
     {
       "voter_id": "SP2592244",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Aloka Kumara",
@@ -7306,7 +7306,7 @@
     },
     {
       "voter_id": "ISP4579736",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Medhansha Tripathi",
@@ -7319,7 +7319,7 @@
     },
     {
       "voter_id": "ISP2293082",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Kaushala Prasada Shukla",
@@ -7332,7 +7332,7 @@
     },
     {
       "voter_id": "ISP5053673",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Neha Sahani",
@@ -7345,7 +7345,7 @@
     },
     {
       "voter_id": "ISP2597678",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Sunila Mishra",
@@ -7358,7 +7358,7 @@
     },
     {
       "voter_id": "ISP2293249",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Lalachanda Sharma",
@@ -7371,7 +7371,7 @@
     },
     {
       "voter_id": "ISP2293280",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Sunila Kumara",
@@ -7384,7 +7384,7 @@
     },
     {
       "voter_id": "SP2058279",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Sarika Yadava",
@@ -7397,7 +7397,7 @@
     },
     {
       "voter_id": "SP2243376",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Rajendra Shrivastava",
@@ -7410,7 +7410,7 @@
     },
     {
       "voter_id": "ISP2293322",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Anisha Kumari",
@@ -7423,7 +7423,7 @@
     },
     {
       "voter_id": "ISP2293090",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Vandana",
@@ -7436,7 +7436,7 @@
     },
     {
       "voter_id": "ISP2594059",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Ramesha Thakura",
@@ -7449,7 +7449,7 @@
     },
     {
       "voter_id": "ISP2597600",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Bina Mishra",
@@ -7462,7 +7462,7 @@
     },
     {
       "voter_id": "ISP2597659",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Saurabha Saksena",
@@ -7475,7 +7475,7 @@
     },
     {
       "voter_id": "ISP2293256",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Premalata Sharma",
@@ -7488,7 +7488,7 @@
     },
     {
       "voter_id": "ISP2293298",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Sudha Gauda",
@@ -7501,7 +7501,7 @@
     },
     {
       "voter_id": "SP2058287",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Afar Yadava",
@@ -7514,7 +7514,7 @@
     },
     {
       "voter_id": "ISP2293306",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Anju Tripathi",
@@ -7527,7 +7527,7 @@
     },
     {
       "voter_id": "ISP4666434",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Savitri Devi",
@@ -7540,7 +7540,7 @@
     },
     {
       "voter_id": "SP4778748",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Rituraja Chauhana",
@@ -7553,7 +7553,7 @@
     },
     {
       "voter_id": "ISP2597642",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Satyaprakasha Saksena",
@@ -7566,7 +7566,7 @@
     },
     {
       "voter_id": "ISP2293272",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Ritesha Sharma",
@@ -7579,7 +7579,7 @@
     },
     {
       "voter_id": "ISP2058253",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Vishvanatha Yadava",
@@ -7592,7 +7592,7 @@
     },
     {
       "voter_id": "SP4207974",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Radha Yadava",
@@ -7605,7 +7605,7 @@
     },
     {
       "voter_id": "ISP420766",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Gaurava Simha",
@@ -7618,7 +7618,7 @@
     },
     {
       "voter_id": "ISP7744054",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Mamata Baruna",
@@ -7631,7 +7631,7 @@
     },
     {
       "voter_id": "ISP3800067",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Shubhama Shrivastava",
@@ -7644,7 +7644,7 @@
     },
     {
       "voter_id": "ISP3893294",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Parvati Devi",
@@ -7657,7 +7657,7 @@
     },
     {
       "voter_id": "ISP389330",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Sunita Devi",
@@ -7670,7 +7670,7 @@
     },
     {
       "voter_id": "ISP259257",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Krshna Murari Tivari",
@@ -7683,7 +7683,7 @@
     },
     {
       "voter_id": "SP2592087",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Supriya Shrivastava",
@@ -7696,7 +7696,7 @@
     },
     {
       "voter_id": "ISP4720546",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Vaibhavi Shrivastava",
@@ -7707,7 +7707,7 @@
     },
     {
       "voter_id": "ISP4009570",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Sima Shrivastava",
@@ -7720,7 +7720,7 @@
     },
     {
       "voter_id": "SP389203",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Sudama Prasada Chauhana",
@@ -7733,7 +7733,7 @@
     },
     {
       "voter_id": "ISP3893328",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Rajesha Chauhana",
@@ -7746,7 +7746,7 @@
     },
     {
       "voter_id": "ISP4579622",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Shakti Pratapa Simha",
@@ -7759,7 +7759,7 @@
     },
     {
       "voter_id": "ISP4347274",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Niraja Bhagavani",
@@ -7772,7 +7772,7 @@
     },
     {
       "voter_id": "SP2592079",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Shailesha Kumara Shrivastava",
@@ -7785,7 +7785,7 @@
     },
     {
       "voter_id": "ISP4347076",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Memdra Simga",
@@ -7798,7 +7798,7 @@
     },
     {
       "voter_id": "SP2599873",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Madhuri Shukla",
@@ -7811,7 +7811,7 @@
     },
     {
       "voter_id": "ISP389205",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Mukesha Kumara Chauhana",
@@ -7824,7 +7824,7 @@
     },
     {
       "voter_id": "SP3893278",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Brjesha Kumara Chauhana",
@@ -7837,7 +7837,7 @@
     },
     {
       "voter_id": "ISP2592558",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Shipra Tivari",
@@ -7850,7 +7850,7 @@
     },
     {
       "voter_id": "ISP259206",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Faga Shrivastava",
@@ -7863,7 +7863,7 @@
     },
     {
       "voter_id": "ISP4094322",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Kumuda Shrivastava",
@@ -7876,7 +7876,7 @@
     },
     {
       "voter_id": "ISP4347084",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Rina Simha",
@@ -7889,7 +7889,7 @@
     },
     {
       "voter_id": "ISP259466",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Mun{}ni Devi",
@@ -7902,7 +7902,7 @@
     },
     {
       "voter_id": "ISP2293942",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Umashamkara Pandeya",
@@ -7915,7 +7915,7 @@
     },
     {
       "voter_id": "SP2293975",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Urmila Pathaka",
@@ -7928,7 +7928,7 @@
     },
     {
       "voter_id": "ISP2293934",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Pakamja",
@@ -7941,7 +7941,7 @@
     },
     {
       "voter_id": "ISP4558045",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Vimala Kumara Gupta",
@@ -7954,7 +7954,7 @@
     },
     {
       "voter_id": "SP4638744",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Akhilesha Kumara Pandeya",
@@ -7967,7 +7967,7 @@
     },
     {
       "voter_id": "ISP7488683",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Sonu",
@@ -7980,7 +7980,7 @@
     },
     {
       "voter_id": "ISP4653002",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Devesha Mirapuri",
@@ -7991,7 +7991,7 @@
     },
     {
       "voter_id": "ISP259426",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Balarama",
@@ -8004,7 +8004,7 @@
     },
     {
       "voter_id": "ISP2293959",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Sunila Kumara",
@@ -8017,7 +8017,7 @@
     },
     {
       "voter_id": "ISP2293983",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Sudhira Kumara Pathaka",
@@ -8030,7 +8030,7 @@
     },
     {
       "voter_id": "ISP4533705",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Simarana Varayani",
@@ -8043,7 +8043,7 @@
     },
     {
       "voter_id": "ISP4558052",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Vinita Gupta",
@@ -8056,7 +8056,7 @@
     },
     {
       "voter_id": "ISP4702726",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Karana Lakhamani",
@@ -8069,7 +8069,7 @@
     },
     {
       "voter_id": "ISP463836",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Aradhana Pandeya",
@@ -8082,7 +8082,7 @@
     },
     {
       "voter_id": "ISP7488697",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Indravati",
@@ -8095,7 +8095,7 @@
     },
     {
       "voter_id": "ISP4442299",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Jnana Prakasha Chura Riya",
@@ -8106,7 +8106,7 @@
     },
     {
       "voter_id": "SP2293967",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Anupama",
@@ -8119,7 +8119,7 @@
     },
     {
       "voter_id": "ISP229399",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Matsthendra Pathaka",
@@ -8132,7 +8132,7 @@
     },
     {
       "voter_id": "ISP0206052",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Bhushna Kumara",
@@ -8145,7 +8145,7 @@
     },
     {
       "voter_id": "ISP4548566",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Vaishnavi Shrivastava",
@@ -8158,7 +8158,7 @@
     },
     {
       "voter_id": "ISP4454849",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Siddhartha Shukla",
@@ -8171,7 +8171,7 @@
     },
     {
       "voter_id": "ISP457899",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Amjali Hasani",
@@ -8184,7 +8184,7 @@
     },
     {
       "voter_id": "ISP2594224",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Guda.du",
@@ -8197,7 +8197,7 @@
     },
     {
       "voter_id": "ISP2243459",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Phiramgi",
@@ -8210,7 +8210,7 @@
     },
     {
       "voter_id": "ISP2294809",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Sarita",
@@ -8223,7 +8223,7 @@
     },
     {
       "voter_id": "ISP2594725",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Rimki Devi",
@@ -8236,7 +8236,7 @@
     },
     {
       "voter_id": "ISP259409",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Lauhara Chauhana",
@@ -8249,7 +8249,7 @@
     },
     {
       "voter_id": "DWA2079008",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Oma Prakasha",
@@ -8262,7 +8262,7 @@
     },
     {
       "voter_id": "DWA2078927",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Ramavati",
@@ -8275,7 +8275,7 @@
     },
     {
       "voter_id": "ISP200832",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Surekha Sharma",
@@ -8288,7 +8288,7 @@
     },
     {
       "voter_id": "ISP5059886",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Tanu Varma",
@@ -8301,7 +8301,7 @@
     },
     {
       "voter_id": "ISP259458",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Rimki",
@@ -8314,7 +8314,7 @@
     },
     {
       "voter_id": "ISP259433",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Samjaya",
@@ -8327,7 +8327,7 @@
     },
     {
       "voter_id": "DWA2028885",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Ro Ta Tivari",
@@ -8340,7 +8340,7 @@
     },
     {
       "voter_id": "DWQ2028984",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Subhashachanda",
@@ -8353,7 +8353,7 @@
     },
     {
       "voter_id": "DWQ2078604",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Bamkelala",
@@ -8366,7 +8366,7 @@
     },
     {
       "voter_id": "ISP348000",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Pavana Kumara Vishvakarma",
@@ -8379,7 +8379,7 @@
     },
     {
       "voter_id": "ISP679067",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Renu Gupta",
@@ -8392,7 +8392,7 @@
     },
     {
       "voter_id": "ISP3458742",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Khushbu Devi",
@@ -8405,7 +8405,7 @@
     },
     {
       "voter_id": "SP3327236",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Manisha Shrivastava",
@@ -8418,7 +8418,7 @@
     },
     {
       "voter_id": "ISP440008",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Samdhya Dvivedi",
@@ -8431,7 +8431,7 @@
     },
     {
       "voter_id": "ISP2594273",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Manoja Nishada",
@@ -8444,7 +8444,7 @@
     },
     {
       "voter_id": "ISP2059582",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Satyanarayana Jayasavala",
@@ -8457,7 +8457,7 @@
     },
     {
       "voter_id": "PWA2079024",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Kamala Kumara",
@@ -8470,7 +8470,7 @@
     },
     {
       "voter_id": "DWQ2078224",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Babina Devi",
@@ -8483,7 +8483,7 @@
     },
     {
       "voter_id": "ISP2293926",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Keshava Sharma",
@@ -8496,7 +8496,7 @@
     },
     {
       "voter_id": "ISP4347340",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Shesha Narayana Jha",
@@ -8509,7 +8509,7 @@
     },
     {
       "voter_id": "ISP5059878",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Akasha Varma",
@@ -8522,7 +8522,7 @@
     },
     {
       "voter_id": "ISP4347258",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Supriya Dvivedi",
@@ -8535,7 +8535,7 @@
     },
     {
       "voter_id": "SP4400073",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Divya Dvivedi",
@@ -8548,7 +8548,7 @@
     },
     {
       "voter_id": "ISP4200309",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Neha Mishra",
@@ -8561,7 +8561,7 @@
     },
     {
       "voter_id": "ISP2592676",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Hamshula Kumara",
@@ -8574,7 +8574,7 @@
     },
     {
       "voter_id": "ISP259260",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Gaurava Shrivastava",
@@ -8587,7 +8587,7 @@
     },
     {
       "voter_id": "ISP2592533",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Harishchandra",
@@ -8600,7 +8600,7 @@
     },
     {
       "voter_id": "ISP2592574",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Ruchika",
@@ -8613,7 +8613,7 @@
     },
     {
       "voter_id": "ISP7678028",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Shambhu Varma",
@@ -8626,7 +8626,7 @@
     },
     {
       "voter_id": "ISP767805",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Nilama Varma",
@@ -8639,7 +8639,7 @@
     },
     {
       "voter_id": "ISP2592020",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Punama Agrahari",
@@ -8652,7 +8652,7 @@
     },
     {
       "voter_id": "ISP332720",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Nan{}dani Shrivastava",
@@ -8665,7 +8665,7 @@
     },
     {
       "voter_id": "SP2592582",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Kishana Lala",
@@ -8678,7 +8678,7 @@
     },
     {
       "voter_id": "ISP3884079",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Saxi Tripathi",
@@ -8691,7 +8691,7 @@
     },
     {
       "voter_id": "SP2592673",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Annapurna Shrivastava",
@@ -8704,7 +8704,7 @@
     },
     {
       "voter_id": "ISP259229",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Madhu Shrivastava",
@@ -8717,7 +8717,7 @@
     },
     {
       "voter_id": "ISP2592038",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Puvapa Gau.da",
@@ -8730,7 +8730,7 @@
     },
     {
       "voter_id": "ISP502987",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Krtika Shrivastava",
@@ -8741,7 +8741,7 @@
     },
     {
       "voter_id": "ISP7488428",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Kamalesha Shrivastava",
@@ -8754,7 +8754,7 @@
     },
     {
       "voter_id": "SP497828",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Aditya Mishra",
@@ -8767,7 +8767,7 @@
     },
     {
       "voter_id": "ISP2592608",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Madhu Mamhayona",
@@ -8779,7 +8779,7 @@
     },
     {
       "voter_id": "SP3876794",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Ashisha Kumara Tripathi",
@@ -8792,7 +8792,7 @@
     },
     {
       "voter_id": "ISP2592665",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Ravindra Prasada",
@@ -8805,7 +8805,7 @@
     },
     {
       "voter_id": "ISP2592566",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Mamata",
@@ -8818,7 +8818,7 @@
     },
     {
       "voter_id": "ISP7678044",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Samjaya",
@@ -8831,7 +8831,7 @@
     },
     {
       "voter_id": "ISP743932",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Rajani Agrahari",
@@ -8844,7 +8844,7 @@
     },
     {
       "voter_id": "ISP7488436",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Shveta Shrivastava",
@@ -8857,7 +8857,7 @@
     },
     {
       "voter_id": "ISP2293330",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Virendra",
@@ -8870,7 +8870,7 @@
     },
     {
       "voter_id": "ISP2293348",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Sumanalata",
@@ -8883,7 +8883,7 @@
     },
     {
       "voter_id": "ISP748840",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Sudhira Shrivastava",
@@ -8896,7 +8896,7 @@
     },
     {
       "voter_id": "DW05934856",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Ke. Ke. Sharma",
@@ -8909,7 +8909,7 @@
     },
     {
       "voter_id": "ISP259576",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Brjendra Simha",
@@ -8922,7 +8922,7 @@
     },
     {
       "voter_id": "DWQ5934807",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Prabhavati",
@@ -8935,7 +8935,7 @@
     },
     {
       "voter_id": "SP5075270",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Sagara Maurya",
@@ -8948,7 +8948,7 @@
     },
     {
       "voter_id": "SP5082623",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Priyamka",
@@ -8961,7 +8961,7 @@
     },
     {
       "voter_id": "ISP5088430",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Suhashini Simha",
@@ -8974,7 +8974,7 @@
     },
     {
       "voter_id": "ISP5794046",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Sima Devi",
@@ -8987,7 +8987,7 @@
     },
     {
       "voter_id": "ISP573073",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Shila Rani",
@@ -9000,7 +9000,7 @@
     },
     {
       "voter_id": "ISP5075320",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Abhisheka Maurya",
@@ -9013,7 +9013,7 @@
     },
     {
       "voter_id": "ISP5075452",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Priyamka Vishvakarma",
@@ -9026,7 +9026,7 @@
     },
     {
       "voter_id": "ISP5075833",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Abhayaraja Maurya",
@@ -9039,7 +9039,7 @@
     },
     {
       "voter_id": "ISP5082995",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Radheshyama Nishada",
@@ -9052,7 +9052,7 @@
     },
     {
       "voter_id": "ISP5083928",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Saurabha Kumara",
@@ -9065,7 +9065,7 @@
     },
     {
       "voter_id": "ISP5096094",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Malati Devi",
@@ -9078,7 +9078,7 @@
     },
     {
       "voter_id": "ISP5778864",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Raja",
@@ -9091,7 +9091,7 @@
     },
     {
       "voter_id": "ISP573087",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Satyemdra Prasada",
@@ -9104,7 +9104,7 @@
     },
     {
       "voter_id": "ISP5075353",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Samdhya Maurya",
@@ -9117,7 +9117,7 @@
     },
     {
       "voter_id": "ISP5075460",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Sanya Maurya",
@@ -9130,7 +9130,7 @@
     },
     {
       "voter_id": "ISP508220",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Sani Kumara",
@@ -9143,7 +9143,7 @@
     },
     {
       "voter_id": "ISP5083266",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Nitu Devi",
@@ -9156,7 +9156,7 @@
     },
     {
       "voter_id": "ISP5087630",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Gitika",
@@ -9169,7 +9169,7 @@
     },
     {
       "voter_id": "ISP5799243",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Aditya Simha",
@@ -9182,7 +9182,7 @@
     },
     {
       "voter_id": "ISP5733053",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Amkita Kumara Jayasavala",
@@ -9195,7 +9195,7 @@
     },
     {
       "voter_id": "ISP573337",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Shalini Jayasavala",
@@ -9208,7 +9208,7 @@
     },
     {
       "voter_id": "ISP548226",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Ramakevala Maurya",
@@ -9221,7 +9221,7 @@
     },
     {
       "voter_id": "ISP575466",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Sima Pasavana",
@@ -9234,7 +9234,7 @@
     },
     {
       "voter_id": "ISP579270",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Tribhuvana Prasada",
@@ -9247,7 +9247,7 @@
     },
     {
       "voter_id": "ISP522007",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Ashisha Chauhana",
@@ -9260,7 +9260,7 @@
     },
     {
       "voter_id": "ISP5734648",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Nidhi Kumari",
@@ -9273,7 +9273,7 @@
     },
     {
       "voter_id": "ISP574892",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Bimdu Devi",
@@ -9286,7 +9286,7 @@
     },
     {
       "voter_id": "ISP548309",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Laxmi Devi",
@@ -9299,7 +9299,7 @@
     },
     {
       "voter_id": "ISP557980",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Chanda Devi",
@@ -9312,7 +9312,7 @@
     },
     {
       "voter_id": "ISP5754679",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Ashisha Kumara",
@@ -9325,7 +9325,7 @@
     },
     {
       "voter_id": "ISP5754885",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Shitala Maurya",
@@ -9338,7 +9338,7 @@
     },
     {
       "voter_id": "SP5762987",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Raja Chauhana",
@@ -9351,7 +9351,7 @@
     },
     {
       "voter_id": "ISP5775955",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Sumana Sharma",
@@ -9364,7 +9364,7 @@
     },
     {
       "voter_id": "ISP585368",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Manasi Tripathi",
@@ -9377,7 +9377,7 @@
     },
     {
       "voter_id": "ISP5220330",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Dat Simha",
@@ -9390,7 +9390,7 @@
     },
     {
       "voter_id": "ISP5748374",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Kirana",
@@ -9403,7 +9403,7 @@
     },
     {
       "voter_id": "ISP5752020",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Shri Devi",
@@ -9416,7 +9416,7 @@
     },
     {
       "voter_id": "ISP578905",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Malati Devi",
@@ -9429,7 +9429,7 @@
     },
     {
       "voter_id": "ISP5220355",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Abhisheka Sharma",
@@ -9440,7 +9440,7 @@
     },
     {
       "voter_id": "ISP5220470",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Amita Kumara",
@@ -9453,7 +9453,7 @@
     },
     {
       "voter_id": "SP5220504",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Babu Rama",
@@ -9466,7 +9466,7 @@
     },
     {
       "voter_id": "ISP5220538",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Hani Gau.da",
@@ -9477,7 +9477,7 @@
     },
     {
       "voter_id": "SP5220652",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Priti",
@@ -9490,7 +9490,7 @@
     },
     {
       "voter_id": "ISP5220702",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Samdhya Kashyapa",
@@ -9503,7 +9503,7 @@
     },
     {
       "voter_id": "SP5224043",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Sonu Nishada",
@@ -9516,7 +9516,7 @@
     },
     {
       "voter_id": "ISP5224290",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Ra La Kumara",
@@ -9529,7 +9529,7 @@
     },
     {
       "voter_id": "ISP5224373",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Sa La Sahani",
@@ -9542,7 +9542,7 @@
     },
     {
       "voter_id": "ISP5226386",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Anila Kumara",
@@ -9555,7 +9555,7 @@
     },
     {
       "voter_id": "ISP5220454",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Pamkaja Sahani",
@@ -9568,7 +9568,7 @@
     },
     {
       "voter_id": "ISP5220488",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Devamti Devi",
@@ -9581,7 +9581,7 @@
     },
     {
       "voter_id": "ISP522052",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Durgesha Nishada",
@@ -9594,7 +9594,7 @@
     },
     {
       "voter_id": "ISP5220546",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Nileshvara Nishada Na!",
@@ -9607,7 +9607,7 @@
     },
     {
       "voter_id": "ISP5220686",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Shaxi Simha",
@@ -9620,7 +9620,7 @@
     },
     {
       "voter_id": "ISP5220720",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Ritesha Sharma",
@@ -9633,7 +9633,7 @@
     },
     {
       "voter_id": "ISP522426",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Puja",
@@ -9646,7 +9646,7 @@
     },
     {
       "voter_id": "ISP5224324",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Reshama Sahani",
@@ -9659,7 +9659,7 @@
     },
     {
       "voter_id": "ISP522443",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Sunita Devi",
@@ -9672,7 +9672,7 @@
     },
     {
       "voter_id": "ISP5226394",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Neha Nishada",
@@ -9685,7 +9685,7 @@
     },
     {
       "voter_id": "ISP5220462",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Anamta Lala",
@@ -9698,7 +9698,7 @@
     },
     {
       "voter_id": "ISP5220496",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Ramjana Nishada",
@@ -9711,7 +9711,7 @@
     },
     {
       "voter_id": "ISP5220520",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Vikasa Sahani",
@@ -9724,7 +9724,7 @@
     },
     {
       "voter_id": "SP5220637",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Kajala Nishada",
@@ -9737,7 +9737,7 @@
     },
     {
       "voter_id": "ISP5220694",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Puja Kashyapa",
@@ -9750,7 +9750,7 @@
     },
     {
       "voter_id": "SP5223557",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Simarana Pasavana",
@@ -9763,7 +9763,7 @@
     },
     {
       "voter_id": "ISP5224742",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Pappu",
@@ -9776,7 +9776,7 @@
     },
     {
       "voter_id": "ISP5224357",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Divya Nishada",
@@ -9789,7 +9789,7 @@
     },
     {
       "voter_id": "ISP5226352",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Jitendra",
@@ -9802,7 +9802,7 @@
     },
     {
       "voter_id": "ISP5226402",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Monu Sahani",
@@ -9815,7 +9815,7 @@
     },
     {
       "voter_id": "ISP5226469",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Vishala",
@@ -9828,7 +9828,7 @@
     },
     {
       "voter_id": "ISP5269832",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Rajesha Gau.da",
@@ -9839,7 +9839,7 @@
     },
     {
       "voter_id": "ISP5294863",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Ashoka Kumara Poddara",
@@ -9852,7 +9852,7 @@
     },
     {
       "voter_id": "ISP5226436",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Pratima Nishada",
@@ -9865,7 +9865,7 @@
     },
     {
       "voter_id": "SP5226477",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Aig Nishada",
@@ -9878,7 +9878,7 @@
     },
     {
       "voter_id": "ISP5275995",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Samdhya Nishada",
@@ -9891,7 +9891,7 @@
     },
     {
       "voter_id": "ISP529487",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Chamchala Poddara",
@@ -9904,7 +9904,7 @@
     },
     {
       "voter_id": "ISP5226444",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Amjani Devi",
@@ -9917,7 +9917,7 @@
     },
     {
       "voter_id": "ISP527600",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Shabanama",
@@ -9930,7 +9930,7 @@
     },
     {
       "voter_id": "ISP5306857",
-      "part_number": 9,
+      "part_number": 19,
       "section_number": 3,
       "section_name": "Jungla Nakaha No.2 Bhagwanpur Koi:",
       "name": "Safaruddina",

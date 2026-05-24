@@ -4,7 +4,7 @@
     "total_pages": 45,
     "state": "Uttar Pradesh",
     "year": 2026,
-    "part_number": 6,
+    "part_number": 16,
     "assembly_constituency": {
       "number": 322,
       "name": "Gorakhpur City",
@@ -21,7 +21,7 @@
   "voter_records": [
     {
       "voter_id": "ISP2059087",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Chandrika Prasada Rama",
       "relation_type": "Father",
       "relation_name": "Svargiya Shobha Rama",
@@ -32,7 +32,7 @@
     },
     {
       "voter_id": "ISP205903",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Muhammada Shalima",
       "relation_type": "Father",
       "relation_name": "Svargiya Niyamata",
@@ -43,7 +43,7 @@
     },
     {
       "voter_id": "SP205877",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Hy Devi",
       "relation_type": "Husband",
       "relation_name": "Yogendra Barnavala",
@@ -54,7 +54,7 @@
     },
     {
       "voter_id": "ISP2058568",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Sarita Chauhana",
       "relation_type": "Husband",
       "relation_name": "Bala Govinda Chauhana",
@@ -65,7 +65,7 @@
     },
     {
       "voter_id": "SP2058808",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Shyamasundara Prasada Bharati",
       "relation_type": "Father",
       "relation_name": "Si Pi Rama",
@@ -76,7 +76,7 @@
     },
     {
       "voter_id": "SP3828076",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Khushabu Devi",
       "relation_type": "Husband",
       "relation_name": "Oma Prakasha Sahani",
@@ -87,7 +87,7 @@
     },
     {
       "voter_id": "ISP4524203",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Babita",
       "relation_type": "Husband",
       "relation_name": "Dilipa Simha",
@@ -98,7 +98,7 @@
     },
     {
       "voter_id": "ISP4863452",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Shivamgi Yadava",
       "relation_type": "Father",
       "relation_name": "Rakesha Yadava",
@@ -109,7 +109,7 @@
     },
     {
       "voter_id": "ISP4863437",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Ra La Yadava",
       "relation_type": "Father",
       "relation_name": "Radheshyama Yadava",
@@ -120,7 +120,7 @@
     },
     {
       "voter_id": "SP205978",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Vinoda",
       "relation_type": "Father",
       "relation_name": "Shyamalala Pam",
@@ -131,7 +131,7 @@
     },
     {
       "voter_id": "ISP205929",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Dinanatha Shukla",
       "relation_type": "Father",
       "relation_name": "Ambika Prasada Shukla Pa",
@@ -142,7 +142,7 @@
     },
     {
       "voter_id": "ISP205893",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Omanatha Vishvakarma",
       "relation_type": "Father",
       "relation_name": "Purana Chandra Shrivastava",
@@ -153,7 +153,7 @@
     },
     {
       "voter_id": "ISP398066",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Rakesha Kumara Sharma",
       "relation_type": "Father",
       "relation_name": "Chamdrika Sharma",
@@ -164,7 +164,7 @@
     },
     {
       "voter_id": "ISP2058980",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Shubhaga Mishra",
       "relation_type": "Father",
       "relation_name": "Dinesha Mishra",
@@ -175,7 +175,7 @@
     },
     {
       "voter_id": "ISP3980687",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Puja Sharma",
       "relation_type": "Father",
       "relation_name": "Chamdrama Sharma",
@@ -186,7 +186,7 @@
     },
     {
       "voter_id": "ISP4540084",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Priyamka Sahani",
       "relation_type": "Father",
       "relation_name": "Abhiraja Prasada",
@@ -197,7 +197,7 @@
     },
     {
       "voter_id": "ISP474484",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Medha Patela",
       "relation_type": "Father",
       "relation_name": "Madhava Patela",
@@ -208,7 +208,7 @@
     },
     {
       "voter_id": "ISP4485629",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Virpati Pathaka",
       "relation_type": "Husband",
       "relation_name": "Vijaya Pratapa Narayana Pathaka Pa",
@@ -219,7 +219,7 @@
     },
     {
       "voter_id": "ISP2058766",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Kanti Devi",
       "relation_type": "Husband",
       "relation_name": "Chandrika Prasada Rama",
@@ -230,7 +230,7 @@
     },
     {
       "voter_id": "ISP2058949",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Niraja Kumara Shrivastava",
       "relation_type": "Father",
       "relation_name": "Ramesha Lala Shrivastava",
@@ -241,7 +241,7 @@
     },
     {
       "voter_id": "ISP3980653",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Manajita Vishvakarma",
       "relation_type": "Husband",
       "relation_name": "Rakesha Kumara Sharma",
@@ -252,7 +252,7 @@
     },
     {
       "voter_id": "SP2058402",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Rita Nishada",
       "relation_type": "Husband",
       "relation_name": "Surata",
@@ -263,7 +263,7 @@
     },
     {
       "voter_id": "ISP2059460",
-      "part_number": 6,
+      "part_number": 16,
       "name": "E0 Kumara Ashisha",
       "relation_type": "Father",
       "relation_name": "Vinoda",
@@ -274,7 +274,7 @@
     },
     {
       "voter_id": "SP4938429",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Dipaka Kumara",
       "relation_type": "Father",
       "relation_name": "Sitarama",
@@ -285,7 +285,7 @@
     },
     {
       "voter_id": "ISP4540076",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Sapana Pandeya",
       "relation_type": "Father",
       "relation_name": "Samtosha Kumara Pandeya",
@@ -296,7 +296,7 @@
     },
     {
       "voter_id": "ISP486347",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Rimki Yadava 80",
       "relation_type": "Father",
       "relation_name": "anne",
@@ -307,7 +307,7 @@
     },
     {
       "voter_id": "ISP2058550",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Hoshila Devi",
       "relation_type": "Husband",
       "relation_name": "Svargiya Manoja Kumara",
@@ -318,7 +318,7 @@
     },
     {
       "voter_id": "ISP5062690",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Golu",
       "relation_type": "Father",
       "relation_name": "Baburama",
@@ -329,7 +329,7 @@
     },
     {
       "voter_id": "SP2592478",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Gulama Mohammada",
       "relation_type": "Father",
       "relation_name": "Alagu",
@@ -340,7 +340,7 @@
     },
     {
       "voter_id": "ISP2592384",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Tavareja Ahamada",
       "relation_type": "Father",
       "relation_name": "Gulama Mohammada",
@@ -351,7 +351,7 @@
     },
     {
       "voter_id": "DWQ2673735",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Tauhida",
       "relation_type": "Father",
       "relation_name": "Jamina",
@@ -362,7 +362,7 @@
     },
     {
       "voter_id": "ISP4094330",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Dhanamjaya Kumara Shrivastava",
       "relation_type": "Father",
       "relation_name": "Aditya Narayana Lala",
@@ -373,7 +373,7 @@
     },
     {
       "voter_id": "SP2058535",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Kumari Gita Chauhana",
       "relation_type": "Father",
       "relation_name": "Radheshyama Chauhana",
@@ -383,7 +383,7 @@
     },
     {
       "voter_id": "DWQ2626059",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Asalama",
       "relation_type": "Father",
       "relation_name": "Akabara Ali",
@@ -394,7 +394,7 @@
     },
     {
       "voter_id": "DWQ2626026",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Gupharana",
       "relation_type": "Father",
       "relation_name": "Asagarali",
@@ -405,7 +405,7 @@
     },
     {
       "voter_id": "DWQ5934658",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Tajudadina",
       "relation_type": "Father",
       "relation_name": "Subhanali",
@@ -416,7 +416,7 @@
     },
     {
       "voter_id": "ISP2592426",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Sun{}nala Nisha",
       "relation_type": "Husband",
       "relation_name": "Gulama Mohammada",
@@ -427,7 +427,7 @@
     },
     {
       "voter_id": "DWQ337823",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Shabara",
       "relation_type": "Husband",
       "relation_name": "Jamina Ali Pa",
@@ -438,7 +438,7 @@
     },
     {
       "voter_id": "DWQ2626075",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Sarajaham Khatuna",
       "relation_type": "Husband",
       "relation_name": "Asalama",
@@ -449,7 +449,7 @@
     },
     {
       "voter_id": "DWQ2626042",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Jahida",
       "relation_type": "Father",
       "relation_name": "Shahadata Pa",
@@ -460,7 +460,7 @@
     },
     {
       "voter_id": "DWQ267334",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Akrama",
       "relation_type": "Father",
       "relation_name": "Akabara Ali",
@@ -471,7 +471,7 @@
     },
     {
       "voter_id": "SP2058873",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Ashisha Kumara Shrivastava",
       "relation_type": "Father",
       "relation_name": "Satisha Chandra",
@@ -482,7 +482,7 @@
     },
     {
       "voter_id": "SP3980679",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Dipti Sharma",
       "relation_type": "Father",
       "relation_name": "Chamdrama Sharma",
@@ -493,7 +493,7 @@
     },
     {
       "voter_id": "DWQ2626078",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Asaphaka Ahamada 776?",
       "relation_type": "Father",
       "relation_name": "Asagara;",
@@ -504,7 +504,7 @@
     },
     {
       "voter_id": "DWAD085940",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Shahanaja",
       "relation_type": "Husband",
       "relation_name": "Ja Da Ali",
@@ -515,7 +515,7 @@
     },
     {
       "voter_id": "ISP2592400",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Lavareja Alama",
       "relation_type": "Father",
       "relation_name": "Gulama Mohammada",
@@ -526,7 +526,7 @@
     },
     {
       "voter_id": "DWA2626034",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Guphashidina",
       "relation_type": "Husband",
       "relation_name": "Asaphaka Ahamada",
@@ -537,7 +537,7 @@
     },
     {
       "voter_id": "DWA4085932",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Bahida",
       "relation_type": "Father",
       "relation_name": "Shahadata",
@@ -548,7 +548,7 @@
     },
     {
       "voter_id": "WAS336460",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Ibarara",
       "relation_type": "Father",
       "relation_name": "Asagara Ali",
@@ -559,7 +559,7 @@
     },
     {
       "voter_id": "DWQ593483",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Snaara",
       "relation_type": "Father",
       "relation_name": "Ramanaresha Maurya",
@@ -570,7 +570,7 @@
     },
     {
       "voter_id": "SP4937272",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Kumdana Namda",
       "relation_type": "Father",
       "relation_name": "Jhinakana Namda",
@@ -581,7 +581,7 @@
     },
     {
       "voter_id": "SP2058788",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Manisha Sahani",
       "relation_type": "Father",
       "relation_name": "Oma Prakasha Sahani",
@@ -592,7 +592,7 @@
     },
     {
       "voter_id": "ISP3463957",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Dayashamkara Yadava",
       "relation_type": "Father",
       "relation_name": "Baladeva Yadava",
@@ -603,7 +603,7 @@
     },
     {
       "voter_id": "ISP3469434",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Abha Tivari",
       "relation_type": "Husband",
       "relation_name": "Jayanarayana Tivari",
@@ -614,7 +614,7 @@
     },
     {
       "voter_id": "SP3440977",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Madhava Patela",
       "relation_type": "Father",
       "relation_name": "Namda Kishora",
@@ -625,7 +625,7 @@
     },
     {
       "voter_id": "ISP4540574",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Rita",
       "relation_type": "Husband",
       "relation_name": "Surata",
@@ -636,7 +636,7 @@
     },
     {
       "voter_id": "DWA2708678",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Tausira",
       "relation_type": "Father",
       "relation_name": "Jamina",
@@ -647,7 +647,7 @@
     },
     {
       "voter_id": "DWA4086746",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Pratapanatha",
       "relation_type": "Father",
       "relation_name": "Hiramanatha Qi",
@@ -658,7 +658,7 @@
     },
     {
       "voter_id": "DWQ2666725",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Oma Prakasha",
       "relation_type": "Father",
       "relation_name": "Kashi",
@@ -669,7 +669,7 @@
     },
     {
       "voter_id": "ISP3463940",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Kusuma Devi",
       "relation_type": "Husband",
       "relation_name": "Dayashamkara Yadava",
@@ -680,7 +680,7 @@
     },
     {
       "voter_id": "ISP678275",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Lilavati Devi",
       "relation_type": "Husband",
       "relation_name": "Ramashamkara Yadava",
@@ -691,7 +691,7 @@
     },
     {
       "voter_id": "ISP3440963",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Samgita Patela",
       "relation_type": "Husband",
       "relation_name": "Madhava Patela",
@@ -702,7 +702,7 @@
     },
     {
       "voter_id": "ISP3580065",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Kusahara",
       "relation_type": "Father",
       "relation_name": "Triveni Ma",
@@ -713,7 +713,7 @@
     },
     {
       "voter_id": "SP3580057",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Lauhara",
       "relation_type": "Father",
       "relation_name": "Triveni Pam",
@@ -724,7 +724,7 @@
     },
     {
       "voter_id": "DWQ2708568",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Shamashada",
       "relation_type": "Father",
       "relation_name": "Akabara Ali",
@@ -735,7 +735,7 @@
     },
     {
       "voter_id": "SP7678804",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Usha Pandeya",
       "relation_type": "Husband",
       "relation_name": "Rudranarayana Pandeya",
@@ -746,7 +746,7 @@
     },
     {
       "voter_id": "ISP205896",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Bholu Sahani",
       "relation_type": "Father",
       "relation_name": "Oma Prakasha Sahani",
@@ -757,7 +757,7 @@
     },
     {
       "voter_id": "ISP3728730",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Akhilesha Kumara",
       "relation_type": "Father",
       "relation_name": "Dayashamkara Yadava",
@@ -768,7 +768,7 @@
     },
     {
       "voter_id": "ISP3980703",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Chamdrama Sharma",
       "relation_type": "Father",
       "relation_name": "Asharafi Sharma",
@@ -779,7 +779,7 @@
     },
     {
       "voter_id": "ISP3462553",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Shabana Khatuna",
       "relation_type": "Husband",
       "relation_name": "Azada Ali",
@@ -790,7 +790,7 @@
     },
     {
       "voter_id": "ISP3472396",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Sudhashu Prakasha Tivari",
       "house_number": "02",
       "age": 40,
@@ -799,7 +799,7 @@
     },
     {
       "voter_id": "ISP0933234",
-      "part_number": 6,
+      "part_number": 16,
       "name": "Arati",
       "relation_type": "Husband",
       "relation_name": "Lauhara",
@@ -810,7 +810,7 @@
     },
     {
       "voter_id": "ISP678564",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Durgesha Kumara Yadava",
@@ -823,7 +823,7 @@
     },
     {
       "voter_id": "SP4633863",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Indrapala Simha",
@@ -836,7 +836,7 @@
     },
     {
       "voter_id": "ISP4572935",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sima Vishvakarma",
@@ -849,7 +849,7 @@
     },
     {
       "voter_id": "SP4702528",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Gu.diya",
@@ -862,7 +862,7 @@
     },
     {
       "voter_id": "ISP4529699",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Amjali Chauhana",
@@ -875,7 +875,7 @@
     },
     {
       "voter_id": "ISP455086",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Man{}ju",
@@ -888,7 +888,7 @@
     },
     {
       "voter_id": "SP4420907",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Puja Nishada",
@@ -901,7 +901,7 @@
     },
     {
       "voter_id": "ISP3723889",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Saniya Bhatiya",
@@ -914,7 +914,7 @@
     },
     {
       "voter_id": "SP3472388",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Ashutosha Kumara",
@@ -925,7 +925,7 @@
     },
     {
       "voter_id": "ISP386758",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Savitri",
@@ -938,7 +938,7 @@
     },
     {
       "voter_id": "ISP3967858",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Pimki Yadava",
@@ -951,7 +951,7 @@
     },
     {
       "voter_id": "ISP455268",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Simpala Nishada",
@@ -964,7 +964,7 @@
     },
     {
       "voter_id": "ISP3440989",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Shveta Patela",
@@ -977,7 +977,7 @@
     },
     {
       "voter_id": "ISP4277885",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Isaravati Devi",
@@ -990,7 +990,7 @@
     },
     {
       "voter_id": "ISP3820834",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Harshitagupata",
@@ -1003,7 +1003,7 @@
     },
     {
       "voter_id": "ISP4525202",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Madhuri",
@@ -1016,7 +1016,7 @@
     },
     {
       "voter_id": "ISP452943",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Jyoti",
@@ -1029,7 +1029,7 @@
     },
     {
       "voter_id": "ISP3723855",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Gurashara Kaura Bhatiya",
@@ -1042,7 +1042,7 @@
     },
     {
       "voter_id": "ISP4633855",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Amjani Simha",
@@ -1055,7 +1055,7 @@
     },
     {
       "voter_id": "ISP3579794",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Pushpa Devi",
@@ -1068,7 +1068,7 @@
     },
     {
       "voter_id": "ISP455094",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Anuradha",
@@ -1081,7 +1081,7 @@
     },
     {
       "voter_id": "SP4347434",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Pimki Sahani",
@@ -1094,7 +1094,7 @@
     },
     {
       "voter_id": "SP4347449",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Rimki",
@@ -1107,7 +1107,7 @@
     },
     {
       "voter_id": "ISP452984",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Renu Nishada",
@@ -1120,7 +1120,7 @@
     },
     {
       "voter_id": "ISP3723863",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Manajita Simha Bhatiya",
@@ -1133,7 +1133,7 @@
     },
     {
       "voter_id": "ISP372387",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Karanavira Simha Bhatiya",
@@ -1146,7 +1146,7 @@
     },
     {
       "voter_id": "ISP678432",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Madhuri Devi",
@@ -1159,7 +1159,7 @@
     },
     {
       "voter_id": "SP4372468",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Kalavati Devi",
@@ -1172,7 +1172,7 @@
     },
     {
       "voter_id": "ISP4466629",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Rina Devi",
@@ -1185,7 +1185,7 @@
     },
     {
       "voter_id": "ISP259287",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Rinu Devi",
@@ -1198,7 +1198,7 @@
     },
     {
       "voter_id": "SP2058386",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sunila Kumara",
@@ -1211,7 +1211,7 @@
     },
     {
       "voter_id": "ISP2592863",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Gayatri Devi",
@@ -1224,7 +1224,7 @@
     },
     {
       "voter_id": "SP3723848",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sarabajita Kaura",
@@ -1237,7 +1237,7 @@
     },
     {
       "voter_id": "ISP4703062",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Amita Sahani",
@@ -1250,7 +1250,7 @@
     },
     {
       "voter_id": "ISP3876984",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Samju Yadava",
@@ -1263,7 +1263,7 @@
     },
     {
       "voter_id": "ISP3579968",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Ratna Yadava",
@@ -1276,7 +1276,7 @@
     },
     {
       "voter_id": "ISP2058360",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Omaprakasha Patela",
@@ -1289,7 +1289,7 @@
     },
     {
       "voter_id": "DWQ3376965",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Anupa Kumara",
@@ -1302,7 +1302,7 @@
     },
     {
       "voter_id": "DWA3407520",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Aloka Kumara",
@@ -1315,7 +1315,7 @@
     },
     {
       "voter_id": "ISP0359455",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Samjaya Kumara",
@@ -1328,7 +1328,7 @@
     },
     {
       "voter_id": "ISP2293746",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Menaka Shrivastava",
@@ -1341,7 +1341,7 @@
     },
     {
       "voter_id": "SP229398",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Manoja",
@@ -1354,7 +1354,7 @@
     },
     {
       "voter_id": "ISP7678424",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Chavilala Yadava",
@@ -1367,7 +1367,7 @@
     },
     {
       "voter_id": "ISP432482",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Priti Yadava",
@@ -1380,7 +1380,7 @@
     },
     {
       "voter_id": "ISP000523",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Mina",
@@ -1393,7 +1393,7 @@
     },
     {
       "voter_id": "ISP2058378",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Maya Patela",
@@ -1406,7 +1406,7 @@
     },
     {
       "voter_id": "ISP2058352",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Pradipa Patela",
@@ -1419,7 +1419,7 @@
     },
     {
       "voter_id": "DWQ3407262",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Chandraprakasha",
@@ -1432,7 +1432,7 @@
     },
     {
       "voter_id": "ISP0359463",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Dinesha Kumara",
@@ -1445,7 +1445,7 @@
     },
     {
       "voter_id": "DWA4085748",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Dilipa Kumara",
@@ -1458,7 +1458,7 @@
     },
     {
       "voter_id": "PWA340452",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sarita",
@@ -1471,7 +1471,7 @@
     },
     {
       "voter_id": "SP289370",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sumana",
@@ -1484,7 +1484,7 @@
     },
     {
       "voter_id": "ISP0986870",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Soni",
@@ -1497,7 +1497,7 @@
     },
     {
       "voter_id": "DWQ2673476",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Kaushilya",
@@ -1510,7 +1510,7 @@
     },
     {
       "voter_id": "ISP3546660",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Girisha Chanda Pathaka",
@@ -1523,7 +1523,7 @@
     },
     {
       "voter_id": "ISP3327244",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sudha",
@@ -1536,7 +1536,7 @@
     },
     {
       "voter_id": "ISP2593226",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Aradhana",
@@ -1549,7 +1549,7 @@
     },
     {
       "voter_id": "DWA4085809",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Prema Kumara",
@@ -1562,7 +1562,7 @@
     },
     {
       "voter_id": "ISP4582896",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Laxmi Devi",
@@ -1575,7 +1575,7 @@
     },
     {
       "voter_id": "SP0005280",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Samjaya",
@@ -1588,7 +1588,7 @@
     },
     {
       "voter_id": "DWQ2667723",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Mishra Bharati Ee",
@@ -1601,7 +1601,7 @@
     },
     {
       "voter_id": "ISP4702034",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Anupama Pathaka",
@@ -1614,7 +1614,7 @@
     },
     {
       "voter_id": "ISP2593234",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Kamalesha Kumara",
@@ -1627,7 +1627,7 @@
     },
     {
       "voter_id": "ISP0359885",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Manoja Kumara",
@@ -1640,7 +1640,7 @@
     },
     {
       "voter_id": "ISP3697854",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Vikasa Chaturvedi",
@@ -1653,7 +1653,7 @@
     },
     {
       "voter_id": "ISP289354",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Jitendra Pasavana",
@@ -1666,7 +1666,7 @@
     },
     {
       "voter_id": "ISP0986794",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Abhimanyu",
@@ -1679,7 +1679,7 @@
     },
     {
       "voter_id": "ISP387549",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Rajarama",
@@ -1692,7 +1692,7 @@
     },
     {
       "voter_id": "DWQ2667478",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Akhilesha",
@@ -1705,7 +1705,7 @@
     },
     {
       "voter_id": "ISP4540530",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Samdhya",
@@ -1718,7 +1718,7 @@
     },
     {
       "voter_id": "ISP2593333",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Vanita",
@@ -1731,7 +1731,7 @@
     },
     {
       "voter_id": "ISP2059079",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Samjaya Nishada",
@@ -1744,7 +1744,7 @@
     },
     {
       "voter_id": "ISP743858",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Umesha Kumara Mishra",
@@ -1757,7 +1757,7 @@
     },
     {
       "voter_id": "ISP3327285",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Dinesha Kumara Mishra",
@@ -1770,7 +1770,7 @@
     },
     {
       "voter_id": "DWA2029099",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Shashamka Kumara Mishra",
@@ -1783,7 +1783,7 @@
     },
     {
       "voter_id": "ISP0005355",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Punama",
@@ -1796,7 +1796,7 @@
     },
     {
       "voter_id": "ISP7086065",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Mendra Yadava",
@@ -1809,7 +1809,7 @@
     },
     {
       "voter_id": "ISP2059053",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Jayarama Nishada",
@@ -1822,7 +1822,7 @@
     },
     {
       "voter_id": "ISP743866",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Man{}ju",
@@ -1835,7 +1835,7 @@
     },
     {
       "voter_id": "ISP0960286",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Rupashri",
@@ -1848,7 +1848,7 @@
     },
     {
       "voter_id": "ISP3799996",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Abhisheka Mishra",
@@ -1861,7 +1861,7 @@
     },
     {
       "voter_id": "ISP0005374",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Shila",
@@ -1874,7 +1874,7 @@
     },
     {
       "voter_id": "SP0005330",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Munnu",
@@ -1887,7 +1887,7 @@
     },
     {
       "voter_id": "SP743882",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Shakuntala",
@@ -1900,7 +1900,7 @@
     },
     {
       "voter_id": "ISP458773",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Isaravati",
@@ -1913,7 +1913,7 @@
     },
     {
       "voter_id": "ISP2059072",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Dinesha Mishra",
@@ -1926,7 +1926,7 @@
     },
     {
       "voter_id": "DWQ7580836",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Suchita",
@@ -1939,7 +1939,7 @@
     },
     {
       "voter_id": "ISP3327343",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Jnanti Mishra",
@@ -1952,7 +1952,7 @@
     },
     {
       "voter_id": "SP3327350",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Adesha Kumara Mishra",
@@ -1965,7 +1965,7 @@
     },
     {
       "voter_id": "ISP0005397",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sunila",
@@ -1978,7 +1978,7 @@
     },
     {
       "voter_id": "ISP0005389",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sukhadeva",
@@ -1991,7 +1991,7 @@
     },
     {
       "voter_id": "SP332794",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Bavita",
@@ -2004,7 +2004,7 @@
     },
     {
       "voter_id": "SP027833",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sureshamani,,",
@@ -2017,7 +2017,7 @@
     },
     {
       "voter_id": "ISP4283495",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sushila Mishra",
@@ -2030,7 +2030,7 @@
     },
     {
       "voter_id": "SP229332",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Ratnesha",
@@ -2043,7 +2043,7 @@
     },
     {
       "voter_id": "ISP3723939",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Satti Devi",
@@ -2056,7 +2056,7 @@
     },
     {
       "voter_id": "SP229357",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Samtosha",
@@ -2069,7 +2069,7 @@
     },
     {
       "voter_id": "ISP678580",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Vindravati Devi",
@@ -2082,7 +2082,7 @@
     },
     {
       "voter_id": "ISP678994",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Prthvipala Yadava",
@@ -2095,7 +2095,7 @@
     },
     {
       "voter_id": "DWQ2078547",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Rajesha Kumara Mishra",
@@ -2108,7 +2108,7 @@
     },
     {
       "voter_id": "ISP2592269",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Samtavali Yadava",
@@ -2121,7 +2121,7 @@
     },
     {
       "voter_id": "ISP7678986",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Satyapala Yadava",
@@ -2134,7 +2134,7 @@
     },
     {
       "voter_id": "ISP2293765",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sunita",
@@ -2147,7 +2147,7 @@
     },
     {
       "voter_id": "SP229373",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Samju",
@@ -2160,7 +2160,7 @@
     },
     {
       "voter_id": "ISP678226",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sonu Yadava",
@@ -2173,7 +2173,7 @@
     },
     {
       "voter_id": "ISP432426",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Mukesha Yadava",
@@ -2186,7 +2186,7 @@
     },
     {
       "voter_id": "ISP3579943",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Gita Yadava",
@@ -2199,7 +2199,7 @@
     },
     {
       "voter_id": "SP5043070",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Savitri Mishra",
@@ -2212,7 +2212,7 @@
     },
     {
       "voter_id": "SP332745",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Giraja Devi",
@@ -2225,7 +2225,7 @@
     },
     {
       "voter_id": "ISP2293740",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Umesha",
@@ -2238,7 +2238,7 @@
     },
     {
       "voter_id": "ISP7678200",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Vijaya Yadava",
@@ -2251,7 +2251,7 @@
     },
     {
       "voter_id": "ISP678572",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Jagadisha Yadava",
@@ -2264,7 +2264,7 @@
     },
     {
       "voter_id": "ISP4795837",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Nitesha Yadava",
@@ -2277,7 +2277,7 @@
     },
     {
       "voter_id": "SP3480027",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Anila Yadava",
@@ -2290,7 +2290,7 @@
     },
     {
       "voter_id": "WA2625929",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Lalalanda",
@@ -2303,7 +2303,7 @@
     },
     {
       "voter_id": "SP4324257",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Jnani Devi",
@@ -2316,7 +2316,7 @@
     },
     {
       "voter_id": "ISP0348474",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Bebi",
@@ -2329,7 +2329,7 @@
     },
     {
       "voter_id": "DWA2078034",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Raja Kumara",
@@ -2342,7 +2342,7 @@
     },
     {
       "voter_id": "DWQ2078679",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Balirama",
@@ -2355,7 +2355,7 @@
     },
     {
       "voter_id": "ISP4796033",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Madhu Yadava",
@@ -2368,7 +2368,7 @@
     },
     {
       "voter_id": "DWQ2625937",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Kailashi",
@@ -2381,7 +2381,7 @@
     },
     {
       "voter_id": "DWQ2625887",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Virendra Yadava",
@@ -2394,7 +2394,7 @@
     },
     {
       "voter_id": "DWQ2793693",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Jhinaki",
@@ -2407,7 +2407,7 @@
     },
     {
       "voter_id": "ISP0359224",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Rakesha",
@@ -2420,7 +2420,7 @@
     },
     {
       "voter_id": "DWQ3376502",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Avadhesha",
@@ -2433,7 +2433,7 @@
     },
     {
       "voter_id": "SP2892099",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Shanti Devi",
@@ -2446,7 +2446,7 @@
     },
     {
       "voter_id": "DWQ207846",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Bat",
@@ -2459,7 +2459,7 @@
     },
     {
       "voter_id": "DWQ2625960",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Ramaprita",
@@ -2472,7 +2472,7 @@
     },
     {
       "voter_id": "DWQ2793560",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Rajadeva",
@@ -2485,7 +2485,7 @@
     },
     {
       "voter_id": "WA2793529",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Subhavati",
@@ -2498,7 +2498,7 @@
     },
     {
       "voter_id": "WA2793370",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Paravati",
@@ -2511,7 +2511,7 @@
     },
     {
       "voter_id": "DWQ4085486",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Mahesha",
@@ -2524,7 +2524,7 @@
     },
     {
       "voter_id": "DWQ2793420",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Demvendra",
@@ -2537,7 +2537,7 @@
     },
     {
       "voter_id": "DWQ2793339",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Vrjavala",
@@ -2550,7 +2550,7 @@
     },
     {
       "voter_id": "DWQ2625903",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Rudala",
@@ -2563,7 +2563,7 @@
     },
     {
       "voter_id": "DWQ2625978",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Nandalala",
@@ -2576,7 +2576,7 @@
     },
     {
       "voter_id": "DWQ2793362",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Pramila",
@@ -2589,7 +2589,7 @@
     },
     {
       "voter_id": "DWA2976070",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Bhola",
@@ -2602,7 +2602,7 @@
     },
     {
       "voter_id": "DWQ2793347",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Rajamati",
@@ -2615,7 +2615,7 @@
     },
     {
       "voter_id": "DWQ2793545",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sunita",
@@ -2628,7 +2628,7 @@
     },
     {
       "voter_id": "DWQ2793677",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Rita",
@@ -2641,7 +2641,7 @@
     },
     {
       "voter_id": "DWQ2625895",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Ashoka",
@@ -2654,7 +2654,7 @@
     },
     {
       "voter_id": "DWA279346",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sushila",
@@ -2667,7 +2667,7 @@
     },
     {
       "voter_id": "DWQ2793537",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Prabhavati",
@@ -2680,7 +2680,7 @@
     },
     {
       "voter_id": "DWQ2793669",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Rajendra",
@@ -2693,7 +2693,7 @@
     },
     {
       "voter_id": "DWAQ2078782",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Ramjana",
@@ -2706,7 +2706,7 @@
     },
     {
       "voter_id": "DWQ593543",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Kalavati",
@@ -2719,7 +2719,7 @@
     },
     {
       "voter_id": "DWQ2793685",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Savita",
@@ -2732,7 +2732,7 @@
     },
     {
       "voter_id": "DWA279332",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Subhasha",
@@ -2745,7 +2745,7 @@
     },
     {
       "voter_id": "DWQ2625879",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Rajesha",
@@ -2758,7 +2758,7 @@
     },
     {
       "voter_id": "ISP2592202",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Mamata Yadava",
@@ -2771,7 +2771,7 @@
     },
     {
       "voter_id": "ISP3723798",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Ramu Yadava",
@@ -2784,7 +2784,7 @@
     },
     {
       "voter_id": "SP3723780",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Shyamu Yadava",
@@ -2797,7 +2797,7 @@
     },
     {
       "voter_id": "SP0348482",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Janardana",
@@ -2810,7 +2810,7 @@
     },
     {
       "voter_id": "DWA2626232",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Brndavati",
@@ -2823,7 +2823,7 @@
     },
     {
       "voter_id": "PWA2027674",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Rajesha",
@@ -2836,7 +2836,7 @@
     },
     {
       "voter_id": "DWAQ2708725",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Usha Mishra",
@@ -2849,7 +2849,7 @@
     },
     {
       "voter_id": "ISP259220",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Anupama Devi",
@@ -2862,7 +2862,7 @@
     },
     {
       "voter_id": "ISP4324588",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sadhana Yadava",
@@ -2875,7 +2875,7 @@
     },
     {
       "voter_id": "ISP372384",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Chandrakali Yadava",
@@ -2888,7 +2888,7 @@
     },
     {
       "voter_id": "SP3723897",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Jitendra Yadava",
@@ -2901,7 +2901,7 @@
     },
     {
       "voter_id": "ISP087253",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Pushpa",
@@ -2914,7 +2914,7 @@
     },
     {
       "voter_id": "DWQ2793446",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Kapiladeva",
@@ -2927,7 +2927,7 @@
     },
     {
       "voter_id": "DWQ266850",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Murali Mishra",
@@ -2940,7 +2940,7 @@
     },
     {
       "voter_id": "ISP0986828",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Siddhartha",
@@ -2953,7 +2953,7 @@
     },
     {
       "voter_id": "ISP4324240",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sumdarama Yadava",
@@ -2966,7 +2966,7 @@
     },
     {
       "voter_id": "ISP3723954",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Mina Devi",
@@ -2979,7 +2979,7 @@
     },
     {
       "voter_id": "ISP3723806",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sunila Yadava",
@@ -2992,7 +2992,7 @@
     },
     {
       "voter_id": "ISP479028",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Divya",
@@ -3005,7 +3005,7 @@
     },
     {
       "voter_id": "SP4790374",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Durgesha Yadava",
@@ -3018,7 +3018,7 @@
     },
     {
       "voter_id": "ISP3565066",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Samjaya Kumara Yadava",
@@ -3031,7 +3031,7 @@
     },
     {
       "voter_id": "ISP772002",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Usha Yadava",
@@ -3044,7 +3044,7 @@
     },
     {
       "voter_id": "ISP357985",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sima Yadava",
@@ -3057,7 +3057,7 @@
     },
     {
       "voter_id": "SP4282422",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Rina Mishra",
@@ -3070,7 +3070,7 @@
     },
     {
       "voter_id": "SP3728748",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Ra La Yadava",
@@ -3083,7 +3083,7 @@
     },
     {
       "voter_id": "ISP344399",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Oma Prakasha Yadava",
@@ -3096,7 +3096,7 @@
     },
     {
       "voter_id": "ISP3565058",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sandhya Yadava",
@@ -3109,7 +3109,7 @@
     },
     {
       "voter_id": "ISP2897828",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Ramavati Devi",
@@ -3122,7 +3122,7 @@
     },
     {
       "voter_id": "ISP3327228",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Punita Yadava",
@@ -3135,7 +3135,7 @@
     },
     {
       "voter_id": "ISP4282455",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Babita Mishra",
@@ -3148,7 +3148,7 @@
     },
     {
       "voter_id": "ISP428346",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Punama Mishra",
@@ -3161,7 +3161,7 @@
     },
     {
       "voter_id": "SP3579828",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sadhana Yadava",
@@ -3174,7 +3174,7 @@
     },
     {
       "voter_id": "ISP3728755",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Oma Prakasha Yadava",
@@ -3187,7 +3187,7 @@
     },
     {
       "voter_id": "ISP3443256",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Virendra Yadava",
@@ -3200,7 +3200,7 @@
     },
     {
       "voter_id": "ISP3665033",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Khushabu Yadava",
@@ -3213,7 +3213,7 @@
     },
     {
       "voter_id": "ISP289280",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sarasvati Yadava",
@@ -3226,7 +3226,7 @@
     },
     {
       "voter_id": "ISP289802",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Ramju Mishra",
@@ -3239,7 +3239,7 @@
     },
     {
       "voter_id": "ISP332725",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Govinda Yadava",
@@ -3252,7 +3252,7 @@
     },
     {
       "voter_id": "ISP3579836",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Punita Yadava",
@@ -3265,7 +3265,7 @@
     },
     {
       "voter_id": "ISP3579950",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Amaranatha Yadava",
@@ -3278,7 +3278,7 @@
     },
     {
       "voter_id": "ISP3579976",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Archana Devi",
@@ -3291,7 +3291,7 @@
     },
     {
       "voter_id": "ISP3580008",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Rambha Yadava",
@@ -3304,7 +3304,7 @@
     },
     {
       "voter_id": "SP3579786",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Monu Yadava",
@@ -3317,7 +3317,7 @@
     },
     {
       "voter_id": "ISP3579984",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Dhiraja Yadava",
@@ -3330,7 +3330,7 @@
     },
     {
       "voter_id": "SP3480035",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Harikishana",
@@ -3343,7 +3343,7 @@
     },
     {
       "voter_id": "ISP2058907",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Pamchama Kashyapa",
@@ -3356,7 +3356,7 @@
     },
     {
       "voter_id": "ISP4567947",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Ran{}ju Devi",
@@ -3369,7 +3369,7 @@
     },
     {
       "voter_id": "ISP0359893",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Gudiya",
@@ -3382,7 +3382,7 @@
     },
     {
       "voter_id": "ISP0932939",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Manoja",
@@ -3395,7 +3395,7 @@
     },
     {
       "voter_id": "ISP0932954",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Suresha",
@@ -3408,7 +3408,7 @@
     },
     {
       "voter_id": "ISP3579802",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Samdipa Kumara Yadava",
@@ -3421,7 +3421,7 @@
     },
     {
       "voter_id": "ISP3579927",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Puja Yadava",
@@ -3434,7 +3434,7 @@
     },
     {
       "voter_id": "SP4282406",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Anamika Mishra",
@@ -3447,7 +3447,7 @@
     },
     {
       "voter_id": "ISP2058543",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Samgita Devi",
@@ -3460,7 +3460,7 @@
     },
     {
       "voter_id": "ISP3436854",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Ganesha",
@@ -3473,7 +3473,7 @@
     },
     {
       "voter_id": "ISP2294593",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Ramjana",
@@ -3486,7 +3486,7 @@
     },
     {
       "voter_id": "ISP0932947",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Basanta",
@@ -3499,7 +3499,7 @@
     },
     {
       "voter_id": "ISP3579992",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Puja Yadava",
@@ -3512,7 +3512,7 @@
     },
     {
       "voter_id": "ISP3579935",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sumita Kumara Yadava",
@@ -3525,7 +3525,7 @@
     },
     {
       "voter_id": "ISP4283780",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Arunima Mishra",
@@ -3538,7 +3538,7 @@
     },
     {
       "voter_id": "SP4452744",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Dilipa Chauhana",
@@ -3549,7 +3549,7 @@
     },
     {
       "voter_id": "ISP205906",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Nikhilesha Kashyapa",
@@ -3562,7 +3562,7 @@
     },
     {
       "voter_id": "SP0305765",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sunila",
@@ -3575,7 +3575,7 @@
     },
     {
       "voter_id": "ISP3436888",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Khushabu",
@@ -3588,7 +3588,7 @@
     },
     {
       "voter_id": "ISP455243",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Anita Devi",
@@ -3601,7 +3601,7 @@
     },
     {
       "voter_id": "ISP080836",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Ramashamkara",
@@ -3612,7 +3612,7 @@
     },
     {
       "voter_id": "ISP0005702",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Karana Nishada",
@@ -3625,7 +3625,7 @@
     },
     {
       "voter_id": "SP289322",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Rubi",
@@ -3638,7 +3638,7 @@
     },
     {
       "voter_id": "SP2592749",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Gopala Nishada",
@@ -3651,7 +3651,7 @@
     },
     {
       "voter_id": "SP4773388",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Shiya Chauhana",
@@ -3664,7 +3664,7 @@
     },
     {
       "voter_id": "ISP433270",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Shamkara Prasada",
@@ -3677,7 +3677,7 @@
     },
     {
       "voter_id": "SP2570067",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Ramalakhana 80",
@@ -3689,7 +3689,7 @@
     },
     {
       "voter_id": "SP474476",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Akhilesha Dube",
@@ -3702,7 +3702,7 @@
     },
     {
       "voter_id": "SP4772422",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Amana Jitemdra Chauhana",
@@ -3715,7 +3715,7 @@
     },
     {
       "voter_id": "ISP4772463",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Kirana Chauhana",
@@ -3728,7 +3728,7 @@
     },
     {
       "voter_id": "ISP7679224",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Urmila",
@@ -3741,7 +3741,7 @@
     },
     {
       "voter_id": "ISP4776558",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Aloka Patela",
@@ -3754,7 +3754,7 @@
     },
     {
       "voter_id": "SP4772984",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Guda.du Chauhana",
@@ -3767,7 +3767,7 @@
     },
     {
       "voter_id": "SP477327",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Samdhya Chauhana",
@@ -3780,7 +3780,7 @@
     },
     {
       "voter_id": "ISP2593242",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sonu",
@@ -3793,7 +3793,7 @@
     },
     {
       "voter_id": "SP2570075",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Muguni Devi",
@@ -3806,7 +3806,7 @@
     },
     {
       "voter_id": "SP4772729",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Jitemdra Chauhana",
@@ -3819,7 +3819,7 @@
     },
     {
       "voter_id": "ISP4774832",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Rubi",
@@ -3832,7 +3832,7 @@
     },
     {
       "voter_id": "SP4772588",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Rekha Chauhana",
@@ -3845,7 +3845,7 @@
     },
     {
       "voter_id": "ISP000570",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Rajesha Jayasavala",
@@ -3858,7 +3858,7 @@
     },
     {
       "voter_id": "ISP4332736",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Ramjana Jayasavala",
@@ -3871,7 +3871,7 @@
     },
     {
       "voter_id": "ISP2059046",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Bala Govinda Chauhana",
@@ -3884,7 +3884,7 @@
     },
     {
       "voter_id": "ISP4773749",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Ra La Chauhana",
@@ -3897,7 +3897,7 @@
     },
     {
       "voter_id": "ISP425720",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Govimda Nishada",
@@ -3910,7 +3910,7 @@
     },
     {
       "voter_id": "ISP2570083",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Durgesha",
@@ -3923,7 +3923,7 @@
     },
     {
       "voter_id": "SP4772448",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Minatara Devi",
@@ -3936,7 +3936,7 @@
     },
     {
       "voter_id": "ISP4772430",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sudhira",
@@ -3949,7 +3949,7 @@
     },
     {
       "voter_id": "ISP4703088",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sushila Chau I",
@@ -3962,7 +3962,7 @@
     },
     {
       "voter_id": "ISP452464",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sunita",
@@ -3975,7 +3975,7 @@
     },
     {
       "voter_id": "WA2673028",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Bhorai",
@@ -3988,7 +3988,7 @@
     },
     {
       "voter_id": "DWQ2667822",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Manita",
@@ -4001,7 +4001,7 @@
     },
     {
       "voter_id": "ISP0933070",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Patiraja",
@@ -4014,7 +4014,7 @@
     },
     {
       "voter_id": "ISP259305",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Govinda Vishvakarma",
@@ -4027,7 +4027,7 @@
     },
     {
       "voter_id": "SP4277844",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Tejasvini Patela",
@@ -4040,7 +4040,7 @@
     },
     {
       "voter_id": "SP452757",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Jyoti Nishada",
@@ -4053,7 +4053,7 @@
     },
     {
       "voter_id": "DWQ266807",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Alha",
@@ -4066,7 +4066,7 @@
     },
     {
       "voter_id": "ISP5067957",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Nirama",
@@ -4079,7 +4079,7 @@
     },
     {
       "voter_id": "ISP346870",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Bindu Devi",
@@ -4092,7 +4092,7 @@
     },
     {
       "voter_id": "ISP2592954",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Siddhu",
@@ -4105,7 +4105,7 @@
     },
     {
       "voter_id": "ISP4347464",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sulochana Devi",
@@ -4118,7 +4118,7 @@
     },
     {
       "voter_id": "ISP2892867",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Kirana",
@@ -4131,7 +4131,7 @@
     },
     {
       "voter_id": "ISP2560346",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Bhikhari",
@@ -4144,7 +4144,7 @@
     },
     {
       "voter_id": "ISP2563658",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Kamalesha Kumara",
@@ -4157,7 +4157,7 @@
     },
     {
       "voter_id": "SP452950",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Prabhavati Devi",
@@ -4170,7 +4170,7 @@
     },
     {
       "voter_id": "ISP3468788",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sikandara Sahani",
@@ -4183,7 +4183,7 @@
     },
     {
       "voter_id": "ISP0932988",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Ritesha",
@@ -4196,7 +4196,7 @@
     },
     {
       "voter_id": "ISP4347456",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Mahesha Nishada",
@@ -4209,7 +4209,7 @@
     },
     {
       "voter_id": "ISP2058899",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Pamkaja Kumara Shrivastava",
@@ -4222,7 +4222,7 @@
     },
     {
       "voter_id": "ISP5068689",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Gopala Kumara",
@@ -4235,7 +4235,7 @@
     },
     {
       "voter_id": "ISP0933028",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Nita",
@@ -4248,7 +4248,7 @@
     },
     {
       "voter_id": "ISP487680",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Raushani Pathaka",
@@ -4261,7 +4261,7 @@
     },
     {
       "voter_id": "ISP5053745",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Golu Sahani",
@@ -4274,7 +4274,7 @@
     },
     {
       "voter_id": "ISP259343",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Amshu",
@@ -4287,7 +4287,7 @@
     },
     {
       "voter_id": "ISP0932962",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Ganesha",
@@ -4300,7 +4300,7 @@
     },
     {
       "voter_id": "SP3724077",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sunila Nishada",
@@ -4313,7 +4313,7 @@
     },
     {
       "voter_id": "ISP205888",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Ramesha Lala Shrivastava",
@@ -4326,7 +4326,7 @@
     },
     {
       "voter_id": "DWQ2625872",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Shanti",
@@ -4339,7 +4339,7 @@
     },
     {
       "voter_id": "ISP746885",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Surendra",
@@ -4352,7 +4352,7 @@
     },
     {
       "voter_id": "ISP4768644",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Devendra Chauhana",
@@ -4365,7 +4365,7 @@
     },
     {
       "voter_id": "DWQ2666386",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Jetu",
@@ -4378,7 +4378,7 @@
     },
     {
       "voter_id": "DWQ266805",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Kismati",
@@ -4391,7 +4391,7 @@
     },
     {
       "voter_id": "ISP7946927",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sudama",
@@ -4404,7 +4404,7 @@
     },
     {
       "voter_id": "SP2892990",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Amita Kumara Gupta",
@@ -4417,7 +4417,7 @@
     },
     {
       "voter_id": "ISP408503",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Satisha Kumara Gupta",
@@ -4430,7 +4430,7 @@
     },
     {
       "voter_id": "ISP3853645",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Ajaya Gupta",
@@ -4443,7 +4443,7 @@
     },
     {
       "voter_id": "DWQ2666568",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Maina",
@@ -4456,7 +4456,7 @@
     },
     {
       "voter_id": "SP2566537",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sugriva Gupta",
@@ -4469,7 +4469,7 @@
     },
     {
       "voter_id": "DWQ2625853",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Omaprakasha",
@@ -4482,7 +4482,7 @@
     },
     {
       "voter_id": "ISP746760",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Monika Gupta",
@@ -4495,7 +4495,7 @@
     },
     {
       "voter_id": "SP2893074",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sumita Kumara Gupta",
@@ -4508,7 +4508,7 @@
     },
     {
       "voter_id": "ISP746703",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Punama Gupta",
@@ -4521,7 +4521,7 @@
     },
     {
       "voter_id": "ISP3853637",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Dipaka Gupta",
@@ -4534,7 +4534,7 @@
     },
     {
       "voter_id": "DWWA2667400",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Rama Nivasa",
@@ -4547,7 +4547,7 @@
     },
     {
       "voter_id": "SP3680040",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Raju Gupta",
@@ -4560,7 +4560,7 @@
     },
     {
       "voter_id": "ISP4863570",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sukanya Gupta",
@@ -4573,7 +4573,7 @@
     },
     {
       "voter_id": "SP3327467",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Lalita",
@@ -4586,7 +4586,7 @@
     },
     {
       "voter_id": "ISP3327459",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Roshani",
@@ -4599,7 +4599,7 @@
     },
     {
       "voter_id": "ISP3836574",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Manisha Gupta",
@@ -4612,7 +4612,7 @@
     },
     {
       "voter_id": "ISP746752",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Isaravati Devi",
@@ -4625,7 +4625,7 @@
     },
     {
       "voter_id": "WA2666840",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Rajadei",
@@ -4638,7 +4638,7 @@
     },
     {
       "voter_id": "ISP2892925",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Chandramani Gupta",
@@ -4651,7 +4651,7 @@
     },
     {
       "voter_id": "DWQ2667095",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Mira",
@@ -4664,7 +4664,7 @@
     },
     {
       "voter_id": "SP4602074",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Samdhya Bharati",
@@ -4677,7 +4677,7 @@
     },
     {
       "voter_id": "DWQ2666253",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Hari",
@@ -4690,7 +4690,7 @@
     },
     {
       "voter_id": "ISP3327376",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Babalu Gupta",
@@ -4703,7 +4703,7 @@
     },
     {
       "voter_id": "SP4887744",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Yogesha Nishada",
@@ -4716,7 +4716,7 @@
     },
     {
       "voter_id": "ISP4767409",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Nikita Chauhana",
@@ -4729,7 +4729,7 @@
     },
     {
       "voter_id": "DWA4086369",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Ragudadi",
@@ -4742,7 +4742,7 @@
     },
     {
       "voter_id": "WA2667376",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Bechana",
@@ -4755,7 +4755,7 @@
     },
     {
       "voter_id": "ISP7679208",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Chandravati Devi",
@@ -4768,7 +4768,7 @@
     },
     {
       "voter_id": "ISP3908548",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sikamdara",
@@ -4781,7 +4781,7 @@
     },
     {
       "voter_id": "ISP4257953",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Ekadashi",
@@ -4794,7 +4794,7 @@
     },
     {
       "voter_id": "ISP0359935",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Lakhana",
@@ -4807,7 +4807,7 @@
     },
     {
       "voter_id": "DWQ2666352",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Vijaya",
@@ -4820,7 +4820,7 @@
     },
     {
       "voter_id": "ISP259337",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Sarita Devi",
@@ -4833,7 +4833,7 @@
     },
     {
       "voter_id": "ISP356995",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Jitendra Kumara",
@@ -4846,7 +4846,7 @@
     },
     {
       "voter_id": "DWQ2665875",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Kaushilya",
@@ -4859,7 +4859,7 @@
     },
     {
       "voter_id": "ISP3908563",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Ajora Devi",
@@ -4872,7 +4872,7 @@
     },
     {
       "voter_id": "DWQ266688",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Punama",
@@ -4885,7 +4885,7 @@
     },
     {
       "voter_id": "ISP7497950",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Renu",
@@ -4898,7 +4898,7 @@
     },
     {
       "voter_id": "ISP3908555",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 4,
       "section_name": "GhTet Nakaha No.2 Gidhwa Tola",
       "name": "Urmila Devi",
@@ -4911,7 +4911,7 @@
     },
     {
       "voter_id": "DWO2666600",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sirataji",
@@ -4924,7 +4924,7 @@
     },
     {
       "voter_id": "SP0933292",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Chandana",
@@ -4937,7 +4937,7 @@
     },
     {
       "voter_id": "ISP2058485",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Manoja Kumara",
@@ -4950,7 +4950,7 @@
     },
     {
       "voter_id": "ISP3569936",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Urmila",
@@ -4963,7 +4963,7 @@
     },
     {
       "voter_id": "SPI679372",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Bhullura",
@@ -4976,7 +4976,7 @@
     },
     {
       "voter_id": "ISP028594",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Chavilala",
@@ -4989,7 +4989,7 @@
     },
     {
       "voter_id": "ISP093376",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Panne Lala",
@@ -5002,7 +5002,7 @@
     },
     {
       "voter_id": "DWQ266605",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Paravatiya",
@@ -5015,7 +5015,7 @@
     },
     {
       "voter_id": "ISP746950",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Bhajju",
@@ -5028,7 +5028,7 @@
     },
     {
       "voter_id": "DWA4084943",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Shivashamkara",
@@ -5041,7 +5041,7 @@
     },
     {
       "voter_id": "ISP0359943",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Mathunni",
@@ -5054,7 +5054,7 @@
     },
     {
       "voter_id": "ISP0005496",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Pushpa Devi",
@@ -5067,7 +5067,7 @@
     },
     {
       "voter_id": "ISP0933784",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Mina Devi",
@@ -5080,7 +5080,7 @@
     },
     {
       "voter_id": "ISP2058493",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Samtosha",
@@ -5093,7 +5093,7 @@
     },
     {
       "voter_id": "DWQ266622",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Madana",
@@ -5106,7 +5106,7 @@
     },
     {
       "voter_id": "DWA2668002",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Lilavati",
@@ -5119,7 +5119,7 @@
     },
     {
       "voter_id": "ISP0780844",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Surajabhana",
@@ -5132,7 +5132,7 @@
     },
     {
       "voter_id": "DWQ408563",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Chandrabhana",
@@ -5145,7 +5145,7 @@
     },
     {
       "voter_id": "ISP3724044",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ra La Nishada",
@@ -5158,7 +5158,7 @@
     },
     {
       "voter_id": "ISP7679273",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Samtosha Nishada",
@@ -5171,7 +5171,7 @@
     },
     {
       "voter_id": "DWA4085395",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Runa",
@@ -5184,7 +5184,7 @@
     },
     {
       "voter_id": "ISP3569928",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Du.daja Sahani",
@@ -5197,7 +5197,7 @@
     },
     {
       "voter_id": "DWA2673044",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Afr",
@@ -5210,7 +5210,7 @@
     },
     {
       "voter_id": "ISP2593069",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Hag Devi",
@@ -5223,7 +5223,7 @@
     },
     {
       "voter_id": "ISP4078487",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Suchita Nishada",
@@ -5236,7 +5236,7 @@
     },
     {
       "voter_id": "DWQ207835",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Omaprakasha",
@@ -5249,7 +5249,7 @@
     },
     {
       "voter_id": "DWQ2666634",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Raju",
@@ -5262,7 +5262,7 @@
     },
     {
       "voter_id": "ISP3569944",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sharada Devi",
@@ -5275,7 +5275,7 @@
     },
     {
       "voter_id": "SP4372658",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Gudiya Chauhana",
@@ -5288,7 +5288,7 @@
     },
     {
       "voter_id": "ISP408495",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Puja Sahani",
@@ -5301,7 +5301,7 @@
     },
     {
       "voter_id": "BWA2074900",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Viraju",
@@ -5314,7 +5314,7 @@
     },
     {
       "voter_id": "DWQ2625762",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Samgita",
@@ -5327,7 +5327,7 @@
     },
     {
       "voter_id": "SP2592897",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ramaphala",
@@ -5340,7 +5340,7 @@
     },
     {
       "voter_id": "SP679307",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Jayashri",
@@ -5353,7 +5353,7 @@
     },
     {
       "voter_id": "ISP4792339",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ra La Nishada",
@@ -5366,7 +5366,7 @@
     },
     {
       "voter_id": "ISP2592764",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Shravana Sahani",
@@ -5379,7 +5379,7 @@
     },
     {
       "voter_id": "DWQI967298",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Arati",
@@ -5392,7 +5392,7 @@
     },
     {
       "voter_id": "ISP767935",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Lalita Devi",
@@ -5405,7 +5405,7 @@
     },
     {
       "voter_id": "ISP2592772",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Radhika Devi",
@@ -5418,7 +5418,7 @@
     },
     {
       "voter_id": "DWAS978008",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Kamchana",
@@ -5431,7 +5431,7 @@
     },
     {
       "voter_id": "DWQ2667244",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Saroja",
@@ -5444,7 +5444,7 @@
     },
     {
       "voter_id": "ISP7746992",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Vishnu Kumara",
@@ -5457,7 +5457,7 @@
     },
     {
       "voter_id": "ISP7497877",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Gabbara",
@@ -5470,7 +5470,7 @@
     },
     {
       "voter_id": "SP3724085",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ro Ta Nishada",
@@ -5483,7 +5483,7 @@
     },
     {
       "voter_id": "SP0348573",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Dasharatha",
@@ -5496,7 +5496,7 @@
     },
     {
       "voter_id": "SP3724093",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Samjita Nishada",
@@ -5509,7 +5509,7 @@
     },
     {
       "voter_id": "DWQ2667020",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Purnavasi",
@@ -5522,7 +5522,7 @@
     },
     {
       "voter_id": "SP372405",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Durgesha Kumara Nishada",
@@ -5535,7 +5535,7 @@
     },
     {
       "voter_id": "DWA3407270",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Mannulala",
@@ -5548,7 +5548,7 @@
     },
     {
       "voter_id": "ISP0005504",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Maya Devi",
@@ -5561,7 +5561,7 @@
     },
     {
       "voter_id": "DWA4085429",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Chandana",
@@ -5574,7 +5574,7 @@
     },
     {
       "voter_id": "WAQ2667368",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Barakhu",
@@ -5587,7 +5587,7 @@
     },
     {
       "voter_id": "ISP3436839",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Chamdamati Nishada",
@@ -5600,7 +5600,7 @@
     },
     {
       "voter_id": "ISP5063268",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Dipaka Nishada",
@@ -5613,7 +5613,7 @@
     },
     {
       "voter_id": "ISP383654",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Satya Chauhana",
@@ -5626,7 +5626,7 @@
     },
     {
       "voter_id": "DWA4086674",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ritesha",
@@ -5639,7 +5639,7 @@
     },
     {
       "voter_id": "SP2294528",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Urmila",
@@ -5652,7 +5652,7 @@
     },
     {
       "voter_id": "SP2892974",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Durgavati",
@@ -5665,7 +5665,7 @@
     },
     {
       "voter_id": "DWQ208725",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ramesha",
@@ -5678,7 +5678,7 @@
     },
     {
       "voter_id": "ISP679356",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Shukula",
@@ -5691,7 +5691,7 @@
     },
     {
       "voter_id": "ISP747099",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Hema",
@@ -5704,7 +5704,7 @@
     },
     {
       "voter_id": "ISP3836533",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Anila Kumara Chauhana",
@@ -5717,7 +5717,7 @@
     },
     {
       "voter_id": "ISP507057",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Gumjana Chauhana Chauhana",
@@ -5730,7 +5730,7 @@
     },
     {
       "voter_id": "ISP0933226",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Amsu Ya",
@@ -5743,7 +5743,7 @@
     },
     {
       "voter_id": "ISP679323",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ina Devi",
@@ -5756,7 +5756,7 @@
     },
     {
       "voter_id": "ISP5032636",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Gita Chau I",
@@ -5769,7 +5769,7 @@
     },
     {
       "voter_id": "ISP0348524",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Komala",
@@ -5782,7 +5782,7 @@
     },
     {
       "voter_id": "ISP747024",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Asha",
@@ -5795,7 +5795,7 @@
     },
     {
       "voter_id": "ISP3563830",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ravi Chauhana",
@@ -5808,7 +5808,7 @@
     },
     {
       "voter_id": "SP497776",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Samjita Kumara Nishada",
@@ -5821,7 +5821,7 @@
     },
     {
       "voter_id": "ISP7757893",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Prthvi Pala Chauhana",
@@ -5834,7 +5834,7 @@
     },
     {
       "voter_id": "SP224348",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Gudadi Devi",
@@ -5847,7 +5847,7 @@
     },
     {
       "voter_id": "SP3724002",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Bechu Lala",
@@ -5860,7 +5860,7 @@
     },
     {
       "voter_id": "SP3472354",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Jitendara",
@@ -5873,7 +5873,7 @@
     },
     {
       "voter_id": "ISP4230546",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Umesha Chauhana",
@@ -5886,7 +5886,7 @@
     },
     {
       "voter_id": "ISP4230520",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Umesha Chauhana Pa",
@@ -5899,7 +5899,7 @@
     },
     {
       "voter_id": "ISP4798955",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Manorama Devi",
@@ -5912,7 +5912,7 @@
     },
     {
       "voter_id": "DWQ2673283",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Bachchana",
@@ -5925,7 +5925,7 @@
     },
     {
       "voter_id": "SP7679380",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Jaya Prakasha Chauhana",
@@ -5938,7 +5938,7 @@
     },
     {
       "voter_id": "ISP747032",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rakesha",
@@ -5951,7 +5951,7 @@
     },
     {
       "voter_id": "ISP7497857",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sonu",
@@ -5964,7 +5964,7 @@
     },
     {
       "voter_id": "SP4607449",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Pramila Devi",
@@ -5977,7 +5977,7 @@
     },
     {
       "voter_id": "ISP4277869",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sunita Chauhana",
@@ -5990,7 +5990,7 @@
     },
     {
       "voter_id": "ISP259292",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Amarajita Chauhana",
@@ -6003,7 +6003,7 @@
     },
     {
       "voter_id": "ISP2243426",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Dhanushadhari",
@@ -6016,7 +6016,7 @@
     },
     {
       "voter_id": "ISP4702494",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sumana Devi",
@@ -6029,7 +6029,7 @@
     },
     {
       "voter_id": "ISP4702486",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Mendra Chauhana",
@@ -6042,7 +6042,7 @@
     },
     {
       "voter_id": "ISP2592848",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Manoja Chauhana",
@@ -6055,7 +6055,7 @@
     },
     {
       "voter_id": "ISP2294569",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sarasvati",
@@ -6068,7 +6068,7 @@
     },
     {
       "voter_id": "ISP3436904",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Jagavanti Devi",
@@ -6081,7 +6081,7 @@
     },
     {
       "voter_id": "ISP752024",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Jayasimha Chauhana",
@@ -6094,7 +6094,7 @@
     },
     {
       "voter_id": "ISP4228904",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rina Chauhana",
@@ -6107,7 +6107,7 @@
     },
     {
       "voter_id": "ISP3436896",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Vandana Chauhana",
@@ -6120,7 +6120,7 @@
     },
     {
       "voter_id": "ISP752026",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ravindra",
@@ -6133,7 +6133,7 @@
     },
     {
       "voter_id": "ISP2592830",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sumana Chauhana",
@@ -6146,7 +6146,7 @@
     },
     {
       "voter_id": "SP0206276",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ramaphala",
@@ -6159,7 +6159,7 @@
     },
     {
       "voter_id": "ISP0933002",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Vijaya",
@@ -6172,7 +6172,7 @@
     },
     {
       "voter_id": "ISP2592855",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Uttama Chauhana",
@@ -6185,7 +6185,7 @@
     },
     {
       "voter_id": "ISP3503646",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Suraja Chauhana",
@@ -6198,7 +6198,7 @@
     },
     {
       "voter_id": "SP752008",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Suryapratapa Chauhana",
@@ -6211,7 +6211,7 @@
     },
     {
       "voter_id": "ISP3884577",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Amjali Devi",
@@ -6224,7 +6224,7 @@
     },
     {
       "voter_id": "ISP476433",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Mamdipa Chauhana",
@@ -6237,7 +6237,7 @@
     },
     {
       "voter_id": "ISP7952040",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rajani",
@@ -6250,7 +6250,7 @@
     },
     {
       "voter_id": "ISP358008",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Babita Devi",
@@ -6263,7 +6263,7 @@
     },
     {
       "voter_id": "ISP4702536",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Vimala Devi",
@@ -6276,7 +6276,7 @@
     },
     {
       "voter_id": "ISP798208",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Mohana Chauhana",
@@ -6289,7 +6289,7 @@
     },
     {
       "voter_id": "SP4648234",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Monu",
@@ -6302,7 +6302,7 @@
     },
     {
       "voter_id": "SP3580073",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sapana Chauhana",
@@ -6315,7 +6315,7 @@
     },
     {
       "voter_id": "ISP3884509",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Samtosha Kumara",
@@ -6328,7 +6328,7 @@
     },
     {
       "voter_id": "SP4767425",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Saurabha Chauhana",
@@ -6341,7 +6341,7 @@
     },
     {
       "voter_id": "ISP952943",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ravindra",
@@ -6354,7 +6354,7 @@
     },
     {
       "voter_id": "ISP3436847",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Pratibha Chauhana",
@@ -6367,7 +6367,7 @@
     },
     {
       "voter_id": "SP465782",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Savita Chauhana",
@@ -6380,7 +6380,7 @@
     },
     {
       "voter_id": "ISP4773966",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Kalyani Chauhana",
@@ -6393,7 +6393,7 @@
     },
     {
       "voter_id": "DWA7967587",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Kamalesha",
@@ -6406,7 +6406,7 @@
     },
     {
       "voter_id": "ISP0005694",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rikki Kumara",
@@ -6419,7 +6419,7 @@
     },
     {
       "voter_id": "ISP0933768",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rajendra",
@@ -6432,7 +6432,7 @@
     },
     {
       "voter_id": "ISP3569894",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Anuradha Varma",
@@ -6445,7 +6445,7 @@
     },
     {
       "voter_id": "ISP0278586",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Shila",
@@ -6458,7 +6458,7 @@
     },
     {
       "voter_id": "DWAQ273055",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Jhinaki",
@@ -6471,7 +6471,7 @@
     },
     {
       "voter_id": "ISP3662048",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Anila Sahani",
@@ -6484,7 +6484,7 @@
     },
     {
       "voter_id": "ISP3327509",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Amjali Sahani",
@@ -6497,7 +6497,7 @@
     },
     {
       "voter_id": "ISP3569902",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ajaya Kumara Sharma",
@@ -6510,7 +6510,7 @@
     },
     {
       "voter_id": "SP4773958",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Devika Chauhana",
@@ -6523,7 +6523,7 @@
     },
     {
       "voter_id": "ISP0278602",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Bhagavani",
@@ -6536,7 +6536,7 @@
     },
     {
       "voter_id": "SP2059745",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Muhammada Aripha",
@@ -6549,7 +6549,7 @@
     },
     {
       "voter_id": "ISP259376",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rajakumari",
@@ -6562,7 +6562,7 @@
     },
     {
       "voter_id": "ISP205937",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Phiroja Ahamada",
@@ -6575,7 +6575,7 @@
     },
     {
       "voter_id": "ISP0933743",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Vindresha",
@@ -6588,7 +6588,7 @@
     },
     {
       "voter_id": "ISP505525",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Amita Chauhana",
@@ -6601,7 +6601,7 @@
     },
     {
       "voter_id": "ISP2593093",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Raju Chauhana",
@@ -6614,7 +6614,7 @@
     },
     {
       "voter_id": "ISP0933036",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rajesha",
@@ -6627,7 +6627,7 @@
     },
     {
       "voter_id": "SP3327384",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Samdhya Sharma",
@@ -6640,7 +6640,7 @@
     },
     {
       "voter_id": "ISP3836525",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rajamati Devi",
@@ -6653,7 +6653,7 @@
     },
     {
       "voter_id": "DWQ3377526",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Tara Devi",
@@ -6666,7 +6666,7 @@
     },
     {
       "voter_id": "DWA4085239",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Manoja",
@@ -6679,7 +6679,7 @@
     },
     {
       "voter_id": "DWA4085304",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Lal{}lu",
@@ -6692,7 +6692,7 @@
     },
     {
       "voter_id": "ISP5038864",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Monika",
@@ -6705,7 +6705,7 @@
     },
     {
       "voter_id": "DWAQ337542",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Shivapujana",
@@ -6718,7 +6718,7 @@
     },
     {
       "voter_id": "SP2892883",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Shashikala Sharma",
@@ -6731,7 +6731,7 @@
     },
     {
       "voter_id": "ISP0933077",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Pammi",
@@ -6744,7 +6744,7 @@
     },
     {
       "voter_id": "DWA4086054",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Pammi",
@@ -6757,7 +6757,7 @@
     },
     {
       "voter_id": "DWQ3377435",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Kamalesha",
@@ -6770,7 +6770,7 @@
     },
     {
       "voter_id": "DWQ4086096",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Kishana",
@@ -6783,7 +6783,7 @@
     },
     {
       "voter_id": "DWA4086633",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Mina",
@@ -6796,7 +6796,7 @@
     },
     {
       "voter_id": "ISP093293",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Umesha",
@@ -6809,7 +6809,7 @@
     },
     {
       "voter_id": "ISP4863486",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Devamshu Chauhana",
@@ -6822,7 +6822,7 @@
     },
     {
       "voter_id": "ISP3443264",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Vijaya Laxmi Simha",
@@ -6835,7 +6835,7 @@
     },
     {
       "voter_id": "ISP332748",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Kapila Pasavana",
@@ -6848,7 +6848,7 @@
     },
     {
       "voter_id": "ISP4796082",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Pushpa Yadava",
@@ -6861,7 +6861,7 @@
     },
     {
       "voter_id": "ISP4639068",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rita Devi",
@@ -6874,7 +6874,7 @@
     },
     {
       "voter_id": "SP332757",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Jyoti Kharavara",
@@ -6887,7 +6887,7 @@
     },
     {
       "voter_id": "DWQ337740",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Jitendra",
@@ -6900,7 +6900,7 @@
     },
     {
       "voter_id": "DWQ337765",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Jhinaka",
@@ -6913,7 +6913,7 @@
     },
     {
       "voter_id": "DWQ2078695",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Be",
@@ -6926,7 +6926,7 @@
     },
     {
       "voter_id": "SP2592970",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Gopi Chauhana",
@@ -6939,7 +6939,7 @@
     },
     {
       "voter_id": "ISP3327400",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rimki Pasavana",
@@ -6952,7 +6952,7 @@
     },
     {
       "voter_id": "SP4797809",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Vimdravati Devi",
@@ -6965,7 +6965,7 @@
     },
     {
       "voter_id": "ISP4799524",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rajesha Yadava",
@@ -6978,7 +6978,7 @@
     },
     {
       "voter_id": "ISP3327525",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Aditya Raja Kharavara",
@@ -6991,7 +6991,7 @@
     },
     {
       "voter_id": "DWA3303864",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Viga.dhi",
@@ -7004,7 +7004,7 @@
     },
     {
       "voter_id": "ISP5055785",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Shrimati Manna Devi",
@@ -7017,7 +7017,7 @@
     },
     {
       "voter_id": "ISP3327434",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Tapasvi Pasavana",
@@ -7030,7 +7030,7 @@
     },
     {
       "voter_id": "PWA4086302",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rambhadevi",
@@ -7043,7 +7043,7 @@
     },
     {
       "voter_id": "ISP747065",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Khushabu",
@@ -7056,7 +7056,7 @@
     },
     {
       "voter_id": "SP0005447",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Aravinda",
@@ -7069,7 +7069,7 @@
     },
     {
       "voter_id": "ISP259300",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Nilama Pasavana",
@@ -7082,7 +7082,7 @@
     },
     {
       "voter_id": "ISP3327368",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sunila Pasavana",
@@ -7095,7 +7095,7 @@
     },
     {
       "voter_id": "SP2893246",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Raja Kapura",
@@ -7108,7 +7108,7 @@
     },
     {
       "voter_id": "DWQ5935390",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rajesha Kumara",
@@ -7121,7 +7121,7 @@
     },
     {
       "voter_id": "DWA266749",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Subhavati",
@@ -7134,7 +7134,7 @@
     },
     {
       "voter_id": "DWQ2667533",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ramaratana",
@@ -7147,7 +7147,7 @@
     },
     {
       "voter_id": "SP4797072",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ramarupa",
@@ -7160,7 +7160,7 @@
     },
     {
       "voter_id": "ISP2593366",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Raviraja Gupta",
@@ -7173,7 +7173,7 @@
     },
     {
       "voter_id": "SP000542",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rajesha",
@@ -7186,7 +7186,7 @@
     },
     {
       "voter_id": "ISP0278560",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Punama",
@@ -7199,7 +7199,7 @@
     },
     {
       "voter_id": "DWQ4086336",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Aravinda",
@@ -7212,7 +7212,7 @@
     },
     {
       "voter_id": "ISP4804225",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sudha",
@@ -7225,7 +7225,7 @@
     },
     {
       "voter_id": "ISP480426",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Gamgesha Yadava",
@@ -7238,7 +7238,7 @@
     },
     {
       "voter_id": "SP4804423",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Neha",
@@ -7250,7 +7250,7 @@
     },
     {
       "voter_id": "PWA2074942",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "eet",
@@ -7263,7 +7263,7 @@
     },
     {
       "voter_id": "BWAR967223",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Kalasi",
@@ -7276,7 +7276,7 @@
     },
     {
       "voter_id": "DWAI967272",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Gita",
@@ -7289,7 +7289,7 @@
     },
     {
       "voter_id": "WA2074934",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Dinesha",
@@ -7301,7 +7301,7 @@
     },
     {
       "voter_id": "ISP4997763",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Nikita",
@@ -7314,7 +7314,7 @@
     },
     {
       "voter_id": "DWA5935374",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Mamgaru",
@@ -7327,7 +7327,7 @@
     },
     {
       "voter_id": "SP4804233",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rajiva Kumara",
@@ -7340,7 +7340,7 @@
     },
     {
       "voter_id": "ISP4804734",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ritu Devi",
@@ -7353,7 +7353,7 @@
     },
     {
       "voter_id": "SP480358",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Priyamka Yadava",
@@ -7366,7 +7366,7 @@
     },
     {
       "voter_id": "DWQI967256",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ravinda",
@@ -7379,7 +7379,7 @@
     },
     {
       "voter_id": "ISP679257",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Balirama",
@@ -7392,7 +7392,7 @@
     },
     {
       "voter_id": "DWQI967249",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Alaka",
@@ -7405,7 +7405,7 @@
     },
     {
       "voter_id": "ISP093350",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rar",
@@ -7418,7 +7418,7 @@
     },
     {
       "voter_id": "SP4803557",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Divya Devi",
@@ -7431,7 +7431,7 @@
     },
     {
       "voter_id": "SP4804432",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Laxmina Devi",
@@ -7444,7 +7444,7 @@
     },
     {
       "voter_id": "DWQI967447",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Bhola",
@@ -7457,7 +7457,7 @@
     },
     {
       "voter_id": "DWAQ2078078",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Manoja",
@@ -7470,7 +7470,7 @@
     },
     {
       "voter_id": "ISP2593325",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sima Nishada",
@@ -7483,7 +7483,7 @@
     },
     {
       "voter_id": "DWQ967454",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Veda Prakasha",
@@ -7496,7 +7496,7 @@
     },
     {
       "voter_id": "ISP3580024",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Lauhara Nishada",
@@ -7509,7 +7509,7 @@
     },
     {
       "voter_id": "ISP3504743",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sarasvati",
@@ -7522,7 +7522,7 @@
     },
     {
       "voter_id": "SP0005579",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sumana Jayasavala",
@@ -7535,7 +7535,7 @@
     },
     {
       "voter_id": "WA4085007",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Prmila",
@@ -7548,7 +7548,7 @@
     },
     {
       "voter_id": "ISP2592889",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rajana Chauhana",
@@ -7561,7 +7561,7 @@
     },
     {
       "voter_id": "ISP4594966",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rina",
@@ -7574,7 +7574,7 @@
     },
     {
       "voter_id": "DWAQ2078273",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ananta",
@@ -7587,7 +7587,7 @@
     },
     {
       "voter_id": "ISP0278529",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ro Ta",
@@ -7600,7 +7600,7 @@
     },
     {
       "voter_id": "ISP0206250",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Biraju",
@@ -7613,7 +7613,7 @@
     },
     {
       "voter_id": "SP4237368",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Anita",
@@ -7626,7 +7626,7 @@
     },
     {
       "voter_id": "ISP3724036",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Nisha Jayasavala",
@@ -7639,7 +7639,7 @@
     },
     {
       "voter_id": "PWA2078477",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Somai",
@@ -7652,7 +7652,7 @@
     },
     {
       "voter_id": "ISP3327392",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Janaki",
@@ -7665,7 +7665,7 @@
     },
     {
       "voter_id": "ISP3504768",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Vindhyavasini",
@@ -7678,7 +7678,7 @@
     },
     {
       "voter_id": "ISP0348599",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rakesha Chauhana",
@@ -7691,7 +7691,7 @@
     },
     {
       "voter_id": "ISP2892958",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Avinasha Jayasavala",
@@ -7704,7 +7704,7 @@
     },
     {
       "voter_id": "ISP4228896",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ra La Chauhana",
@@ -7717,7 +7717,7 @@
     },
     {
       "voter_id": "PWA2078489",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sukhadedaya",
@@ -7730,7 +7730,7 @@
     },
     {
       "voter_id": "ISP0005645",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Timala",
@@ -7743,7 +7743,7 @@
     },
     {
       "voter_id": "ISP0933069",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Mamata",
@@ -7756,7 +7756,7 @@
     },
     {
       "voter_id": "ISP3327475",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sagara",
@@ -7769,7 +7769,7 @@
     },
     {
       "voter_id": "ISP5043476",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rama Surata",
@@ -7782,7 +7782,7 @@
     },
     {
       "voter_id": "SP2892784",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Puja",
@@ -7795,7 +7795,7 @@
     },
     {
       "voter_id": "DWA4084976",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rohana",
@@ -7808,7 +7808,7 @@
     },
     {
       "voter_id": "ISP093305",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Samtola",
@@ -7821,7 +7821,7 @@
     },
     {
       "voter_id": "ISP3327483",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Samjana Nishada",
@@ -7834,7 +7834,7 @@
     },
     {
       "voter_id": "ISP4332086",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Nita",
@@ -7847,7 +7847,7 @@
     },
     {
       "voter_id": "ISP4334926",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Pal{}lavi",
@@ -7860,7 +7860,7 @@
     },
     {
       "voter_id": "ISP4595906",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Mamshi Kumari",
@@ -7873,7 +7873,7 @@
     },
     {
       "voter_id": "ISP2593358",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Jnanamati",
@@ -7886,7 +7886,7 @@
     },
     {
       "voter_id": "ISP0005652",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Jyoti",
@@ -7899,7 +7899,7 @@
     },
     {
       "voter_id": "ISP7679364",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Govinda Kumara",
@@ -7912,7 +7912,7 @@
     },
     {
       "voter_id": "SP4347423",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Munna Sahani",
@@ -7925,7 +7925,7 @@
     },
     {
       "voter_id": "PWAR967260",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Makkhana",
@@ -7938,7 +7938,7 @@
     },
     {
       "voter_id": "ISP2593200",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "San{}tosha Sahani",
@@ -7951,7 +7951,7 @@
     },
     {
       "voter_id": "ISP4420964",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Satyama Sahani",
@@ -7964,7 +7964,7 @@
     },
     {
       "voter_id": "ISP2892800",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ashutosha Kumara",
@@ -7977,7 +7977,7 @@
     },
     {
       "voter_id": "ISP0005637",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Phula Devi",
@@ -7990,7 +7990,7 @@
     },
     {
       "voter_id": "ISP2058394",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sima Devi",
@@ -8003,7 +8003,7 @@
     },
     {
       "voter_id": "SP2058428",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Nan{}da Lala",
@@ -8016,7 +8016,7 @@
     },
     {
       "voter_id": "SP425704",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ramabelasa Nishada",
@@ -8029,7 +8029,7 @@
     },
     {
       "voter_id": "DWQ2667079",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Gita Chau I",
@@ -8042,7 +8042,7 @@
     },
     {
       "voter_id": "ISP205840",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rimki Sahani",
@@ -8055,7 +8055,7 @@
     },
     {
       "voter_id": "ISP425792",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Krshna",
@@ -8068,7 +8068,7 @@
     },
     {
       "voter_id": "ISP0005629",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Amiraka",
@@ -8081,7 +8081,7 @@
     },
     {
       "voter_id": "SP0005678",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rimki Devi",
@@ -8094,7 +8094,7 @@
     },
     {
       "voter_id": "ISP2058436",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Gudiya",
@@ -8107,7 +8107,7 @@
     },
     {
       "voter_id": "ISP4249355",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Shila Sahani",
@@ -8120,7 +8120,7 @@
     },
     {
       "voter_id": "ISP3836566",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Divya Sahani",
@@ -8133,7 +8133,7 @@
     },
     {
       "voter_id": "ISP000575",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sumana Sahani",
@@ -8146,7 +8146,7 @@
     },
     {
       "voter_id": "DWQ2666579",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Munna",
@@ -8159,7 +8159,7 @@
     },
     {
       "voter_id": "ISP747073",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Kavita",
@@ -8172,7 +8172,7 @@
     },
     {
       "voter_id": "ISP2058444",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Santa Lala",
@@ -8185,7 +8185,7 @@
     },
     {
       "voter_id": "ISP3462785",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Karuna Kumara Chau I",
@@ -8198,7 +8198,7 @@
     },
     {
       "voter_id": "ISP3836558",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rajakamala Sahani",
@@ -8211,7 +8211,7 @@
     },
     {
       "voter_id": "SP2592962",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ramasarana Nishada",
@@ -8224,7 +8224,7 @@
     },
     {
       "voter_id": "SP277286",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Gita Saksena",
@@ -8237,7 +8237,7 @@
     },
     {
       "voter_id": "ISP000556",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Punama Sahani",
@@ -8250,7 +8250,7 @@
     },
     {
       "voter_id": "DWA4086073",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Manti",
@@ -8263,7 +8263,7 @@
     },
     {
       "voter_id": "DWQI967074",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Baburama",
@@ -8276,7 +8276,7 @@
     },
     {
       "voter_id": "DWA2666956",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Pappu",
@@ -8289,7 +8289,7 @@
     },
     {
       "voter_id": "ISP4040333",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Tara Devi",
@@ -8302,7 +8302,7 @@
     },
     {
       "voter_id": "ISP074086",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rakesha",
@@ -8315,7 +8315,7 @@
     },
     {
       "voter_id": "SP2593002",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sunita",
@@ -8328,7 +8328,7 @@
     },
     {
       "voter_id": "ISP2772333",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Mamshu Saksena",
@@ -8341,7 +8341,7 @@
     },
     {
       "voter_id": "SP0005553",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Keshava",
@@ -8354,7 +8354,7 @@
     },
     {
       "voter_id": "DWQI967567",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Kailasha",
@@ -8367,7 +8367,7 @@
     },
     {
       "voter_id": "DWA2666444",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Budvirama",
@@ -8380,7 +8380,7 @@
     },
     {
       "voter_id": "ISP2593267",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Chinta Mani",
@@ -8393,7 +8393,7 @@
     },
     {
       "voter_id": "DWQ580687",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Kanti",
@@ -8406,7 +8406,7 @@
     },
     {
       "voter_id": "ISP0359976",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Dilipa",
@@ -8419,7 +8419,7 @@
     },
     {
       "voter_id": "ISP2058469",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Anupa",
@@ -8432,7 +8432,7 @@
     },
     {
       "voter_id": "ISP3340866",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Mina",
@@ -8445,7 +8445,7 @@
     },
     {
       "voter_id": "ISP749943",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Mahesha",
@@ -8458,7 +8458,7 @@
     },
     {
       "voter_id": "ISP4790820",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Puja Devi",
@@ -8471,7 +8471,7 @@
     },
     {
       "voter_id": "SP2893097",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Duija",
@@ -8484,7 +8484,7 @@
     },
     {
       "voter_id": "ISP2893238",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sonu",
@@ -8496,7 +8496,7 @@
     },
     {
       "voter_id": "ISP3723996",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Kavita Devi",
@@ -8509,7 +8509,7 @@
     },
     {
       "voter_id": "DWAT967603",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rama Bhavana",
@@ -8522,7 +8522,7 @@
     },
     {
       "voter_id": "ISP2593309",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Arjuna",
@@ -8535,7 +8535,7 @@
     },
     {
       "voter_id": "ISP2593259",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Bhima",
@@ -8548,7 +8548,7 @@
     },
     {
       "voter_id": "ISP5032024",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sudha",
@@ -8561,7 +8561,7 @@
     },
     {
       "voter_id": "ISP2563666",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Gamala",
@@ -8574,7 +8574,7 @@
     },
     {
       "voter_id": "ISP4525250",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Isaravati",
@@ -8587,7 +8587,7 @@
     },
     {
       "voter_id": "ISP3724020",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sikandara Sahani",
@@ -8600,7 +8600,7 @@
     },
     {
       "voter_id": "ISP259329",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sushila",
@@ -8613,7 +8613,7 @@
     },
     {
       "voter_id": "SP2058477",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Shri Rama Nishada",
@@ -8626,7 +8626,7 @@
     },
     {
       "voter_id": "SP2893089",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Gita",
@@ -8638,7 +8638,7 @@
     },
     {
       "voter_id": "SP4572968",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Bebi Gupta",
@@ -8651,7 +8651,7 @@
     },
     {
       "voter_id": "SP3327426",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rina Pasavana",
@@ -8664,7 +8664,7 @@
     },
     {
       "voter_id": "ISP5080270",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Savita Devi",
@@ -8677,7 +8677,7 @@
     },
     {
       "voter_id": "ISP5089966",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rimki Devi",
@@ -8690,7 +8690,7 @@
     },
     {
       "voter_id": "ISP502769",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Shivamgi Shrivastava",
@@ -8703,7 +8703,7 @@
     },
     {
       "voter_id": "ISP525232",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Khushabu Kumari",
@@ -8716,7 +8716,7 @@
     },
     {
       "voter_id": "ISP5725596",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Bebi Pasavana",
@@ -8729,7 +8729,7 @@
     },
     {
       "voter_id": "ISP5737286",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Mendra",
@@ -8742,7 +8742,7 @@
     },
     {
       "voter_id": "ISP5765394",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Yasha Mohana",
@@ -8755,7 +8755,7 @@
     },
     {
       "voter_id": "ISP508302",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Pintu Nishada",
@@ -8768,7 +8768,7 @@
     },
     {
       "voter_id": "ISP5094743",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Abhisheka",
@@ -8781,7 +8781,7 @@
     },
     {
       "voter_id": "SP5720597",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Shashi Prabha Chau I",
@@ -8794,7 +8794,7 @@
     },
     {
       "voter_id": "ISP5725257",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Mrtyumjaya Pathaka",
@@ -8807,7 +8807,7 @@
     },
     {
       "voter_id": "SP5727337",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Samdhya Sharma",
@@ -8820,7 +8820,7 @@
     },
     {
       "voter_id": "ISP5745404",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Jyoti Yadava",
@@ -8833,7 +8833,7 @@
     },
     {
       "voter_id": "ISP5755775",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Nebulala",
@@ -8846,7 +8846,7 @@
     },
     {
       "voter_id": "ISP5765470",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sunita Devi",
@@ -8859,7 +8859,7 @@
     },
     {
       "voter_id": "ISP5703224",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Juhi Pasavana",
@@ -8872,7 +8872,7 @@
     },
     {
       "voter_id": "ISP5724565",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Adarsha Mishra",
@@ -8885,7 +8885,7 @@
     },
     {
       "voter_id": "ISP525273",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Kajala Mishra",
@@ -8898,7 +8898,7 @@
     },
     {
       "voter_id": "ISP527345",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Roji Chauhana",
@@ -8911,7 +8911,7 @@
     },
     {
       "voter_id": "ISP5753358",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Bebi Pasavana",
@@ -8924,7 +8924,7 @@
     },
     {
       "voter_id": "ISP5765337",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ragini Shrivastava",
@@ -8937,7 +8937,7 @@
     },
     {
       "voter_id": "ISP5774826",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ra La Kumara Yadava",
@@ -8948,7 +8948,7 @@
     },
     {
       "voter_id": "ISP5275223",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Saroja Yadava",
@@ -8961,7 +8961,7 @@
     },
     {
       "voter_id": "ISP5223987",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Videshi Nishada",
@@ -8974,7 +8974,7 @@
     },
     {
       "voter_id": "ISP5224084",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Bikki",
@@ -8987,7 +8987,7 @@
     },
     {
       "voter_id": "ISP5224506",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Shumari",
@@ -9000,7 +9000,7 @@
     },
     {
       "voter_id": "ISP5224563",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Arati Sharma",
@@ -9012,7 +9012,7 @@
     },
     {
       "voter_id": "ISP5224936",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Asmita",
@@ -9025,7 +9025,7 @@
     },
     {
       "voter_id": "ISP5775450",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Bavita Yadava",
@@ -9038,7 +9038,7 @@
     },
     {
       "voter_id": "ISP5776359",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Gumja Nishada",
@@ -9051,7 +9051,7 @@
     },
     {
       "voter_id": "ISP6220082",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ma Deva Yadava Na!",
@@ -9064,7 +9064,7 @@
     },
     {
       "voter_id": "SP522400",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Org Sharma",
@@ -9077,7 +9077,7 @@
     },
     {
       "voter_id": "ISP522400",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Anarakali",
@@ -9090,7 +9090,7 @@
     },
     {
       "voter_id": "ISP5224266",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Jyoti Yadava",
@@ -9103,7 +9103,7 @@
     },
     {
       "voter_id": "ISP5224530",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Samgita Devi",
@@ -9116,7 +9116,7 @@
     },
     {
       "voter_id": "SP522457",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Anushka Nishada",
@@ -9129,7 +9129,7 @@
     },
     {
       "voter_id": "ISP5224944",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ramjita Kumara Pasavana",
@@ -9142,7 +9142,7 @@
     },
     {
       "voter_id": "ISP575708",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sitarama",
@@ -9155,7 +9155,7 @@
     },
     {
       "voter_id": "ISP590582",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Yasha Mohana",
@@ -9168,7 +9168,7 @@
     },
     {
       "voter_id": "ISP5223433",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Akhila",
@@ -9181,7 +9181,7 @@
     },
     {
       "voter_id": "ISP5224027",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ramesha Kumara Sharma",
@@ -9194,7 +9194,7 @@
     },
     {
       "voter_id": "ISP522478",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Lak{}ki Nishada",
@@ -9207,7 +9207,7 @@
     },
     {
       "voter_id": "ISP5224480",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Samgita",
@@ -9220,7 +9220,7 @@
     },
     {
       "voter_id": "ISP5224555",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Oma Prakasha Sharma",
@@ -9233,7 +9233,7 @@
     },
     {
       "voter_id": "ISP5224878",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Abhisheka Nishada",
@@ -9246,7 +9246,7 @@
     },
     {
       "voter_id": "ISP5224969",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Shera",
@@ -9259,7 +9259,7 @@
     },
     {
       "voter_id": "ISP5224993",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Gopala Kumara Sahani",
@@ -9272,7 +9272,7 @@
     },
     {
       "voter_id": "ISP5225040",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sarita Pasavana",
@@ -9285,7 +9285,7 @@
     },
     {
       "voter_id": "SP5226006",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ro Ta Sharma",
@@ -9298,7 +9298,7 @@
     },
     {
       "voter_id": "SP5226097",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ratana",
@@ -9311,7 +9311,7 @@
     },
     {
       "voter_id": "ISP522672",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Priya Nishada",
@@ -9324,7 +9324,7 @@
     },
     {
       "voter_id": "ISP522670",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rajamati",
@@ -9337,7 +9337,7 @@
     },
     {
       "voter_id": "ISP5226287",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Disha Sahani",
@@ -9350,7 +9350,7 @@
     },
     {
       "voter_id": "ISP5226360",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Balavamta",
@@ -9363,7 +9363,7 @@
     },
     {
       "voter_id": "ISP522695",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rimki Maurya",
@@ -9376,7 +9376,7 @@
     },
     {
       "voter_id": "ISP5225076",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Nirmala",
@@ -9389,7 +9389,7 @@
     },
     {
       "voter_id": "SP5225057",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Saroja Devi",
@@ -9402,7 +9402,7 @@
     },
     {
       "voter_id": "ISP522564",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ayusha Shrivastava",
@@ -9415,7 +9415,7 @@
     },
     {
       "voter_id": "ISP5226048",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rajakamala Nishada",
@@ -9428,7 +9428,7 @@
     },
     {
       "voter_id": "ISP522605",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Aloka Nishada",
@@ -9441,7 +9441,7 @@
     },
     {
       "voter_id": "ISP5226739",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Shiva Kumara Nishada",
@@ -9454,7 +9454,7 @@
     },
     {
       "voter_id": "ISP5226246",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Kan{}ti",
@@ -9467,7 +9467,7 @@
     },
     {
       "voter_id": "SP5226303",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Durgavati Devi",
@@ -9480,7 +9480,7 @@
     },
     {
       "voter_id": "ISP5226378",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Karana Pasavana",
@@ -9493,7 +9493,7 @@
     },
     {
       "voter_id": "ISP5226949",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Shanti Devi",
@@ -9506,7 +9506,7 @@
     },
     {
       "voter_id": "ISP5225024",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Jayati Devi",
@@ -9519,7 +9519,7 @@
     },
     {
       "voter_id": "SP5225073",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Krshna Pasavana",
@@ -9532,7 +9532,7 @@
     },
     {
       "voter_id": "ISP5225990",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Lilavati",
@@ -9545,7 +9545,7 @@
     },
     {
       "voter_id": "ISP5226089",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Mira Devi",
@@ -9558,7 +9558,7 @@
     },
     {
       "voter_id": "ISP522626",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Punita Nishada",
@@ -9571,7 +9571,7 @@
     },
     {
       "voter_id": "ISP5226345",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Trivani",
@@ -9584,7 +9584,7 @@
     },
     {
       "voter_id": "ISP522688",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Pimki Maurya",
@@ -9597,7 +9597,7 @@
     },
     {
       "voter_id": "ISP5226964",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Samdipa Maurya",
@@ -9610,7 +9610,7 @@
     },
     {
       "voter_id": "SP5227590",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Neha",
@@ -9623,7 +9623,7 @@
     },
     {
       "voter_id": "ISP5227699",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Shveta Sahani",
@@ -9634,7 +9634,7 @@
     },
     {
       "voter_id": "ISP5266465",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Usha Devi",
@@ -9647,7 +9647,7 @@
     },
     {
       "voter_id": "SP5274733",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Rajarama",
@@ -9660,7 +9660,7 @@
     },
     {
       "voter_id": "SP5274782",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Anamda Maurya",
@@ -9673,7 +9673,7 @@
     },
     {
       "voter_id": "SP5275375",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Pushpa Yadava",
@@ -9686,7 +9686,7 @@
     },
     {
       "voter_id": "SP5276274",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Srshti",
@@ -9699,7 +9699,7 @@
     },
     {
       "voter_id": "SP5277892",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Panamati Devi",
@@ -9712,7 +9712,7 @@
     },
     {
       "voter_id": "SP5227632",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Riki Sharma",
@@ -9725,7 +9725,7 @@
     },
     {
       "voter_id": "ISP5227764",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Samdhya Nishada",
@@ -9738,7 +9738,7 @@
     },
     {
       "voter_id": "ISP5266929",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Satisha",
@@ -9751,7 +9751,7 @@
     },
     {
       "voter_id": "SP527477",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Kumari Puja",
@@ -9764,7 +9764,7 @@
     },
     {
       "voter_id": "ISP5274758",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Khushabu Chauhana",
@@ -9777,7 +9777,7 @@
     },
     {
       "voter_id": "ISP527486",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Duja Devi",
@@ -9790,7 +9790,7 @@
     },
     {
       "voter_id": "ISP527539",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Abhaya Pratapa Gupta",
@@ -9803,7 +9803,7 @@
     },
     {
       "voter_id": "SP5276282",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Priti",
@@ -9816,7 +9816,7 @@
     },
     {
       "voter_id": "ISP5277660",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Janaki Devi",
@@ -9829,7 +9829,7 @@
     },
     {
       "voter_id": "ISP5290283",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ravi Yadava",
@@ -9842,7 +9842,7 @@
     },
     {
       "voter_id": "SP522768",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Basamati",
@@ -9855,7 +9855,7 @@
     },
     {
       "voter_id": "SP5228432",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Samdipa Nishada",
@@ -9868,7 +9868,7 @@
     },
     {
       "voter_id": "ISP5274683",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Samdipa Chauhana",
@@ -9881,7 +9881,7 @@
     },
     {
       "voter_id": "SP5274725",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Dhupa Maurya",
@@ -9894,7 +9894,7 @@
     },
     {
       "voter_id": "SP5274774",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Gita Maurya",
@@ -9906,7 +9906,7 @@
     },
     {
       "voter_id": "ISP5274824",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sobha Gupta",
@@ -9919,7 +9919,7 @@
     },
     {
       "voter_id": "ISP5276258",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Aryana Sahani",
@@ -9932,7 +9932,7 @@
     },
     {
       "voter_id": "SP5276308",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Divya",
@@ -9945,7 +9945,7 @@
     },
     {
       "voter_id": "ISP5277678",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Amjani Simha",
@@ -9958,7 +9958,7 @@
     },
     {
       "voter_id": "ISP5293469",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Nisha Yadava",
@@ -9971,7 +9971,7 @@
     },
     {
       "voter_id": "ISP5294889",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Abhisheka Yadava",
@@ -9984,7 +9984,7 @@
     },
     {
       "voter_id": "ISP530363",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Imdrapala Simha",
@@ -9997,7 +9997,7 @@
     },
     {
       "voter_id": "ISP5307855",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sakiruna Nisha",
@@ -10010,7 +10010,7 @@
     },
     {
       "voter_id": "ISP5393327",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Kusuma Devi",
@@ -10021,7 +10021,7 @@
     },
     {
       "voter_id": "ISP5307593",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sarataja Ahamada",
@@ -10034,7 +10034,7 @@
     },
     {
       "voter_id": "SP5303292",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Basunadhara Kushavaha",
@@ -10047,7 +10047,7 @@
     },
     {
       "voter_id": "ISP5303953",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Sudha Shrivastava",
@@ -10060,7 +10060,7 @@
     },
     {
       "voter_id": "ISP5304423",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Amita",
@@ -10073,7 +10073,7 @@
     },
     {
       "voter_id": "ISP535748",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Somakisuna",
@@ -10086,7 +10086,7 @@
     },
     {
       "voter_id": "ISP5308276",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Mavira",
@@ -10099,7 +10099,7 @@
     },
     {
       "voter_id": "ISP5303300",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Raju Bharati",
@@ -10112,7 +10112,7 @@
     },
     {
       "voter_id": "ISP5304357",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Ramanatha",
@@ -10125,7 +10125,7 @@
     },
     {
       "voter_id": "ISP530688",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Jamala Ahamada",
@@ -10138,7 +10138,7 @@
     },
     {
       "voter_id": "ISP5376579",
-      "part_number": 6,
+      "part_number": 16,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vichapur Tola",
       "name": "Bibha Shrivastava",

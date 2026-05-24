@@ -4,7 +4,7 @@
     "total_pages": 37,
     "state": "Uttar Pradesh",
     "year": 2026,
-    "part_number": 3,
+    "part_number": 13,
     "assembly_constituency": {
       "number": 322,
       "name": "Gorakhpur City",
@@ -21,7 +21,7 @@
   "voter_records": [
     {
       "voter_id": "ISP488303",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Haf Devi",
       "relation_type": "Husband",
       "relation_name": "Mahendra Yadava",
@@ -32,7 +32,7 @@
     },
     {
       "voter_id": "ISP3980760",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Dhanamjaya Yadava",
       "relation_type": "Father",
       "relation_name": "Vikrama Yadava",
@@ -43,7 +43,7 @@
     },
     {
       "voter_id": "ISP3249653",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Navina Kumara Shrivastava",
       "relation_type": "Father",
       "relation_name": "Suresha Kumara Shrivastava",
@@ -54,7 +54,7 @@
     },
     {
       "voter_id": "ISP3249638",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Priyamka Tripathi",
       "relation_type": "Husband",
       "relation_name": "Nrpendra Mani Tripathi",
@@ -65,7 +65,7 @@
     },
     {
       "voter_id": "ISP3249703",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Prajna Shrivastava",
       "relation_type": "Father",
       "relation_name": "Samjaya Kumara Shrivastava",
@@ -76,7 +76,7 @@
     },
     {
       "voter_id": "ISP748765",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Paramahamsha Sharma",
       "relation_type": "Father",
       "relation_name": "Mamgaru Prasada",
@@ -87,7 +87,7 @@
     },
     {
       "voter_id": "ISP7676788",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Niraja Simha",
       "relation_type": "Father",
       "relation_name": "Sarala Simha",
@@ -98,7 +98,7 @@
     },
     {
       "voter_id": "ISP677202",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Rita Pasavana",
       "relation_type": "Husband",
       "relation_name": "Gamga Prasada",
@@ -109,7 +109,7 @@
     },
     {
       "voter_id": "ISP3249620",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Aishvarya Mishra",
       "relation_type": "Father",
       "relation_name": "Brajesha Mishra",
@@ -120,7 +120,7 @@
     },
     {
       "voter_id": "ISP709360",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Naresha Kumara",
       "relation_type": "Father",
       "relation_name": "Vishvanatha",
@@ -131,7 +131,7 @@
     },
     {
       "voter_id": "ISP5039920",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Manorama",
       "relation_type": "Father",
       "relation_name": "Jamgi",
@@ -142,7 +142,7 @@
     },
     {
       "voter_id": "ISP2590669",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Phulavamti Sharma",
       "relation_type": "Husband",
       "relation_name": "Rajakishora Sharma",
@@ -153,7 +153,7 @@
     },
     {
       "voter_id": "ISP3249687",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Sujata Shrivastava",
       "relation_type": "Father",
       "relation_name": "Chotelala",
@@ -164,7 +164,7 @@
     },
     {
       "voter_id": "SP2292027",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ramapratapa",
       "relation_type": "Father",
       "relation_name": "Sva0 Bhaggu",
@@ -175,7 +175,7 @@
     },
     {
       "voter_id": "ISP677566",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Pradipa Kumara",
       "relation_type": "Father",
       "relation_name": "Jagadisha Prasada",
@@ -186,7 +186,7 @@
     },
     {
       "voter_id": "SP0004457",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Rama Ji Lala",
       "relation_type": "Father",
       "relation_name": "Sva. Jagadisha Prasada Pa",
@@ -197,7 +197,7 @@
     },
     {
       "voter_id": "ISP324966",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Sunita Shrivastava",
       "relation_type": "Husband",
       "relation_name": "Samjaya Kumara Shrivastava",
@@ -208,7 +208,7 @@
     },
     {
       "voter_id": "SP3249679",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Samjaya Kumara Shrivastava",
       "relation_type": "Father",
       "relation_name": "Suresha Kumara Shrivastava",
@@ -219,7 +219,7 @@
     },
     {
       "voter_id": "ISP3249646",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Nupemdra Mani Tripathi",
       "relation_type": "Father",
       "relation_name": "Xitindra Mohana Mani Tripathi",
@@ -230,7 +230,7 @@
     },
     {
       "voter_id": "ISP3395993",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Dhanya Kumara",
       "relation_type": "Father",
       "relation_name": "Vishnu Bahadura",
@@ -241,7 +241,7 @@
     },
     {
       "voter_id": "ISP4948634",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ra La Vishvakarma",
       "relation_type": "Father",
       "relation_name": "Avadhesha Sharma",
@@ -252,7 +252,7 @@
     },
     {
       "voter_id": "ISP677608",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ananava",
       "relation_type": "Father",
       "relation_name": "Pradipa Kumara",
@@ -263,7 +263,7 @@
     },
     {
       "voter_id": "ISP0004440",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Asha Shri0",
       "relation_type": "Husband",
       "relation_name": "Rama Ji Lala",
@@ -274,7 +274,7 @@
     },
     {
       "voter_id": "ISP279473",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Santosha Kumara Shrivastava",
       "relation_type": "Father",
       "relation_name": "Girija Shamkara Shrivastava",
@@ -285,7 +285,7 @@
     },
     {
       "voter_id": "ISP4453692",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Saroja Yadava",
       "relation_type": "Husband",
       "relation_name": "Rajendra Yadava",
@@ -296,7 +296,7 @@
     },
     {
       "voter_id": "ISP2597074",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Manisha Kumara Simha",
       "relation_type": "Father",
       "relation_name": "Sudishta Narayana Simha",
@@ -307,7 +307,7 @@
     },
     {
       "voter_id": "ISP2292076",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Vishvakamendra",
       "relation_type": "Father",
       "relation_name": "Ranajita",
@@ -318,7 +318,7 @@
     },
     {
       "voter_id": "ISP0004994",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Rajavala Devi",
       "relation_type": "Husband",
       "relation_name": "Gopichandra Bhatta",
@@ -329,7 +329,7 @@
     },
     {
       "voter_id": "ISP7677973",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Shiva Kumara",
       "relation_type": "Father",
       "relation_name": "Radheshyama",
@@ -340,7 +340,7 @@
     },
     {
       "voter_id": "ISPI677947",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Samtosha Kumara Gupta",
       "relation_type": "Father",
       "relation_name": "Radheshyama",
@@ -351,7 +351,7 @@
     },
     {
       "voter_id": "ISPI676683",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Bindumati Mishra",
       "relation_type": "Husband",
       "relation_name": "Keshava Prasada",
@@ -362,7 +362,7 @@
     },
     {
       "voter_id": "SP372537",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Viveka Kumara Jayasavala",
       "relation_type": "Father",
       "relation_name": "Dilipa Kumara Pa",
@@ -373,7 +373,7 @@
     },
     {
       "voter_id": "DWO3474665",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Surendra",
       "relation_type": "Father",
       "relation_name": "Shiva Shamkara Lala",
@@ -384,7 +384,7 @@
     },
     {
       "voter_id": "ISP767637",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Sita Shrivastava",
       "relation_type": "Husband",
       "relation_name": "Sunila Kumara Qi",
@@ -395,7 +395,7 @@
     },
     {
       "voter_id": "ISP7677020",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ramavati Devi",
       "relation_type": "Husband",
       "relation_name": "Lalaji Simha",
@@ -406,7 +406,7 @@
     },
     {
       "voter_id": "ISP7677962",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Savitri Devi",
       "relation_type": "Husband",
       "relation_name": "Radheshyama",
@@ -417,7 +417,7 @@
     },
     {
       "voter_id": "ISP0005009",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Mrdula Bhatta",
       "relation_type": "Husband",
       "relation_name": "Pramoda Bhatta",
@@ -428,7 +428,7 @@
     },
     {
       "voter_id": "ISPI677905",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Samjaya Kumara Gupta",
       "relation_type": "Father",
       "relation_name": "Radheshyama Gupta",
@@ -439,7 +439,7 @@
     },
     {
       "voter_id": "ISP7676667",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Brjendra",
       "relation_type": "Father",
       "relation_name": "Keshava Prasada",
@@ -450,7 +450,7 @@
     },
     {
       "voter_id": "SP7488048",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Anita Devi",
       "relation_type": "Husband",
       "relation_name": "Nebulala",
@@ -461,7 +461,7 @@
     },
     {
       "voter_id": "ISP3393386",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Namnata Simha",
       "relation_type": "Husband",
       "relation_name": "Sva. Manoja Simha",
@@ -472,7 +472,7 @@
     },
     {
       "voter_id": "ISP2292068",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ranajita Sharma",
       "relation_type": "Father",
       "relation_name": "Sva0 Haz",
@@ -483,7 +483,7 @@
     },
     {
       "voter_id": "SP7084972",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Anupriya",
       "relation_type": "Husband",
       "relation_name": "Ranajita",
@@ -494,7 +494,7 @@
     },
     {
       "voter_id": "SP0004788",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Gopichandra Bhatta",
       "relation_type": "Father",
       "relation_name": "Sva. Rama Ji",
@@ -505,7 +505,7 @@
     },
     {
       "voter_id": "ISP7677954",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Shravana Kumara Gupta",
       "relation_type": "Father",
       "relation_name": "Radheshyama Gupta",
@@ -516,7 +516,7 @@
     },
     {
       "voter_id": "ISPI677939",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Bharati Devi",
       "relation_type": "Husband",
       "relation_name": "Samtosha Kumara",
@@ -527,7 +527,7 @@
     },
     {
       "voter_id": "ISPI676790",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Samghamitra",
       "relation_type": "Father",
       "relation_name": "Vinayashila Trisharana",
@@ -538,7 +538,7 @@
     },
     {
       "voter_id": "ISP676824",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Sarvendra Kumara Shukla",
       "relation_type": "Father",
       "relation_name": "Sheshadanta Shukla",
@@ -549,7 +549,7 @@
     },
     {
       "voter_id": "DWA2244978",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ramamilana",
       "relation_type": "Father",
       "relation_name": "Mannu",
@@ -560,7 +560,7 @@
     },
     {
       "voter_id": "DWQ307286",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Anju",
       "relation_type": "Husband",
       "relation_name": "Lalaji",
@@ -571,7 +571,7 @@
     },
     {
       "voter_id": "ISP0004374",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Prabhakara Simha",
       "relation_type": "Father",
       "relation_name": "Vijaya Vahadura",
@@ -582,7 +582,7 @@
     },
     {
       "voter_id": "ISP3249752",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Samjaya Kumara",
       "relation_type": "Father",
       "relation_name": "Rama Lala",
@@ -593,7 +593,7 @@
     },
     {
       "voter_id": "ISP677335",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Samgita",
       "relation_type": "Husband",
       "relation_name": "Akhileshvara",
@@ -604,7 +604,7 @@
     },
     {
       "voter_id": "ISP7677350",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Anuradha Dube",
       "relation_type": "Father",
       "relation_name": "Akhileshvara",
@@ -615,7 +615,7 @@
     },
     {
       "voter_id": "ISP2890978",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ary Shrivastava",
       "relation_type": "Father",
       "relation_name": "Dilipa Kumara Shrivastava",
@@ -626,7 +626,7 @@
     },
     {
       "voter_id": "ISP4668646",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Supriya Simha",
       "relation_type": "Husband",
       "relation_name": "Nilesha Simha",
@@ -637,7 +637,7 @@
     },
     {
       "voter_id": "SP7676808",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Vikasha Kumara Shrivastava",
       "relation_type": "Father",
       "relation_name": "Brjabihari",
@@ -648,7 +648,7 @@
     },
     {
       "voter_id": "ISP7676832",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Puja Shukla",
       "relation_type": "Father",
       "relation_name": "Krshnananda Shukla Pam",
@@ -659,7 +659,7 @@
     },
     {
       "voter_id": "DWQ3023349",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Dabana",
       "relation_type": "Father",
       "relation_name": "Munni",
@@ -670,7 +670,7 @@
     },
     {
       "voter_id": "SPI677467",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Pushpa Gauda",
       "relation_type": "Husband",
       "relation_name": "Samjaya Bharati |",
@@ -681,7 +681,7 @@
     },
     {
       "voter_id": "ISP0004362",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Nilama Simha",
       "relation_type": "Husband",
       "relation_name": "Prabhakara Simha",
@@ -692,7 +692,7 @@
     },
     {
       "voter_id": "ISP3249786",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Sudha Shrivastava",
       "relation_type": "Husband",
       "relation_name": "Samjaya Kumara",
@@ -703,7 +703,7 @@
     },
     {
       "voter_id": "ISP3249836",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Dilipa Kumara Shrivastava",
       "relation_type": "Father",
       "relation_name": "Bamke Vihari Lala",
@@ -714,7 +714,7 @@
     },
     {
       "voter_id": "ISP676907",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Umesha Pathaka",
       "relation_type": "Father",
       "relation_name": "Umesha Pathaka Pam",
@@ -725,7 +725,7 @@
     },
     {
       "voter_id": "DWA2248466",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Manoja Gupta",
       "relation_type": "Father",
       "relation_name": "Prabhu Gupta",
@@ -736,7 +736,7 @@
     },
     {
       "voter_id": "ISP3353349",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Axaya Kumara",
       "relation_type": "Father",
       "relation_name": "Shri Dinesha Pasavana",
@@ -747,7 +747,7 @@
     },
     {
       "voter_id": "BWA224877",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Devantara",
       "relation_type": "Husband",
       "relation_name": "Ramaugraha",
@@ -758,7 +758,7 @@
     },
     {
       "voter_id": "DWAI088582",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Subasha",
       "relation_type": "Father",
       "relation_name": "Birabala",
@@ -769,7 +769,7 @@
     },
     {
       "voter_id": "DWQ2356822",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ramjita Kumara",
       "relation_type": "Father",
       "relation_name": "Svaminatha Rajabhara",
@@ -780,7 +780,7 @@
     },
     {
       "voter_id": "ISP748896",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ashutosha Upadhyaya",
       "relation_type": "Father",
       "relation_name": "Brajamohana Upadhyaya",
@@ -791,7 +791,7 @@
     },
     {
       "voter_id": "SP3249737",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Manoja Kumara Shrivastava",
       "relation_type": "Father",
       "relation_name": "Bamke Vihari",
@@ -802,7 +802,7 @@
     },
     {
       "voter_id": "PWA224448",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Samu",
       "relation_type": "Father",
       "relation_name": "Moti",
@@ -813,7 +813,7 @@
     },
     {
       "voter_id": "ISPI677749",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ravindranatha Tripathi",
       "relation_type": "Father",
       "relation_name": "Sva0 Ramakanta Tripathi",
@@ -824,7 +824,7 @@
     },
     {
       "voter_id": "SP7677822",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Khushabu Tripathi",
       "relation_type": "Father",
       "relation_name": "Ravindra Natha Tripathi",
@@ -835,7 +835,7 @@
     },
     {
       "voter_id": "ISP706277",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Vinoda Yadava",
       "relation_type": "Father",
       "relation_name": "Ramaraja Yadava",
@@ -846,7 +846,7 @@
     },
     {
       "voter_id": "ISP3249828",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Sudha Yadava",
       "relation_type": "Father",
       "relation_name": "Vinoda Yadava",
@@ -857,7 +857,7 @@
     },
     {
       "voter_id": "ISP0874073",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Vinoda Kumara",
       "relation_type": "Father",
       "relation_name": "Baija Natha",
@@ -868,7 +868,7 @@
     },
     {
       "voter_id": "SP4798427",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Navodita Gupta",
       "relation_type": "Father",
       "relation_name": "Pashupati Natha",
@@ -879,7 +879,7 @@
     },
     {
       "voter_id": "DWQ2248326",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Koila",
       "relation_type": "Father",
       "relation_name": "Mannu",
@@ -890,7 +890,7 @@
     },
     {
       "voter_id": "SP0837559",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Pramoda Kumara Mishra",
       "relation_type": "Father",
       "relation_name": "Jaya Shamkara Mishra",
@@ -901,7 +901,7 @@
     },
     {
       "voter_id": "SP0004705",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Harishamkara Mishra",
       "relation_type": "Father",
       "relation_name": "Dayashakara Mishra Qi",
@@ -912,7 +912,7 @@
     },
     {
       "voter_id": "SP467478",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Chotu Yadava",
       "relation_type": "Father",
       "relation_name": "Vinoda Yadava Pa",
@@ -923,7 +923,7 @@
     },
     {
       "voter_id": "ISP4797783",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Shipra Gupta",
       "relation_type": "Husband",
       "relation_name": "Navodita Gupta Pa",
@@ -934,7 +934,7 @@
     },
     {
       "voter_id": "ISP4799078",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Pashu",
       "relation_type": "Father",
       "relation_name": "Ramachamdara Ramachamdara Q",
@@ -945,7 +945,7 @@
     },
     {
       "voter_id": "ISP677798",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Satyavati Devi",
       "relation_type": "Husband",
       "relation_name": "Ravindra Natha Tripathi",
@@ -956,7 +956,7 @@
     },
     {
       "voter_id": "ISP706269",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Premalata Yadava",
       "relation_type": "Husband",
       "relation_name": "Ramaraja Yadava",
@@ -967,7 +967,7 @@
     },
     {
       "voter_id": "ISP0874065",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Sima Devi",
       "relation_type": "Husband",
       "relation_name": "Manoja Kumara",
@@ -978,7 +978,7 @@
     },
     {
       "voter_id": "ISP4797874",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Anita Gupta Pashu",
       "relation_type": "Husband",
       "relation_name": "Pashupati Natha Pashupati Natha",
@@ -989,7 +989,7 @@
     },
     {
       "voter_id": "DWA2248342",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Manju",
       "relation_type": "Husband",
       "relation_name": "Haravamsha",
@@ -1000,7 +1000,7 @@
     },
     {
       "voter_id": "DWQ307326",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Chandana",
       "relation_type": "Father",
       "relation_name": "Radhe",
@@ -1011,7 +1011,7 @@
     },
     {
       "voter_id": "ISP2545070",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Dipaka Kumara Ravata",
       "relation_type": "Father",
       "relation_name": "Sva. Ganesha Prasada Ravata",
@@ -1022,7 +1022,7 @@
     },
     {
       "voter_id": "SP3249729",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Mamju Devi",
       "relation_type": "Father",
       "relation_name": "Girishachandra Shri0",
@@ -1033,7 +1033,7 @@
     },
     {
       "voter_id": "ISP706236",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Avadhesha Kumara Yadava",
       "relation_type": "Father",
       "relation_name": "Shrirama Yadava",
@@ -1044,7 +1044,7 @@
     },
     {
       "voter_id": "ISP259079",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Anita Devi",
       "relation_type": "Husband",
       "relation_name": "Aravinda Kumara",
@@ -1055,7 +1055,7 @@
     },
     {
       "voter_id": "ISP0004259",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Laxmiasthana",
       "relation_type": "Husband",
       "relation_name": "Vrjendra Kishora",
@@ -1066,7 +1066,7 @@
     },
     {
       "voter_id": "ISP0004556",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Kalpana Devi",
       "relation_type": "Husband",
       "relation_name": "Kapila Deva Simha",
@@ -1077,7 +1077,7 @@
     },
     {
       "voter_id": "ISPI677665",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Sadhana Dube",
       "relation_type": "Husband",
       "relation_name": "Krshna Chandra Dube",
@@ -1088,7 +1088,7 @@
     },
     {
       "voter_id": "ISP748888",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Bina Upadhyaya",
       "relation_type": "Husband",
       "relation_name": "Raghavemdra Chaube",
@@ -1099,7 +1099,7 @@
     },
     {
       "voter_id": "SP676337",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Kamala Prasada Barnavala",
       "relation_type": "Father",
       "relation_name": "Gaurishamkara",
@@ -1110,7 +1110,7 @@
     },
     {
       "voter_id": "ISP487644",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Narendra Prasada",
       "relation_type": "Father",
       "relation_name": "Rajendra Prasada",
@@ -1121,7 +1121,7 @@
     },
     {
       "voter_id": "SP2292084",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Sonu Yadava",
       "relation_type": "Father",
       "relation_name": "Sugriva Yadava",
@@ -1132,7 +1132,7 @@
     },
     {
       "voter_id": "ISP7487586",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Samjaya Kumara Kannaujiya",
       "relation_type": "Father",
       "relation_name": "Sva. Mevalala",
@@ -1143,7 +1143,7 @@
     },
     {
       "voter_id": "ISP0004674",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Nirmala Simha",
       "relation_type": "Husband",
       "relation_name": "Girijesha Simha",
@@ -1154,7 +1154,7 @@
     },
     {
       "voter_id": "SP0004267",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Manoja Kumara",
       "relation_type": "Father",
       "relation_name": "Sva. Satyaprakasha",
@@ -1165,7 +1165,7 @@
     },
     {
       "voter_id": "SP000453",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ravi Kumara Simha",
       "relation_type": "Father",
       "relation_name": "Shri0kapila Deva Simha",
@@ -1176,7 +1176,7 @@
     },
     {
       "voter_id": "ISPI676592",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Mamju Shrivastava",
       "relation_type": "Husband",
       "relation_name": "Pramoda Kumara Shrivastava",
@@ -1187,7 +1187,7 @@
     },
     {
       "voter_id": "DWQ3072689",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Gita",
       "relation_type": "Father",
       "relation_name": "Nauramga",
@@ -1198,7 +1198,7 @@
     },
     {
       "voter_id": "ISP676378",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Nilama Barnavala",
       "relation_type": "Husband",
       "relation_name": "Kamalaprasada",
@@ -1209,7 +1209,7 @@
     },
     {
       "voter_id": "ISP487628",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Vinoda Kumara",
       "relation_type": "Father",
       "relation_name": "Rama Sharma",
@@ -1220,7 +1220,7 @@
     },
     {
       "voter_id": "SP2873057",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Jnanamati Devi",
       "relation_type": "Husband",
       "relation_name": "Sva, Rajendra Prasada Dvivedi",
@@ -1230,7 +1230,7 @@
     },
     {
       "voter_id": "ISPI677079",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Mukesha Kumara",
       "relation_type": "Father",
       "relation_name": "Babulala",
@@ -1241,7 +1241,7 @@
     },
     {
       "voter_id": "ISP0004283",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Vrjendra Kishora",
       "relation_type": "Father",
       "relation_name": "Avadhavihari",
@@ -1252,7 +1252,7 @@
     },
     {
       "voter_id": "ISP0004549",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Kapila Deva Simha",
       "relation_type": "Father",
       "relation_name": "Shrirama Lakhana",
@@ -1263,7 +1263,7 @@
     },
     {
       "voter_id": "ISPI677228",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Hemanta",
       "relation_type": "Father",
       "relation_name": "Sundara Prasada",
@@ -1274,7 +1274,7 @@
     },
     {
       "voter_id": "ISP0004895",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Dhiraja Kumara",
       "relation_type": "Father",
       "relation_name": "Pramoda Kumara",
@@ -1285,7 +1285,7 @@
     },
     {
       "voter_id": "SP0004325",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Jaya Prakasha",
       "relation_type": "Father",
       "relation_name": "Prayaga Mishra",
@@ -1296,7 +1296,7 @@
     },
     {
       "voter_id": "ISP7676550",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Laxmi Aa Mishra",
       "relation_type": "Father",
       "relation_name": "Vrsha Bhaddhaja Mishra",
@@ -1307,7 +1307,7 @@
     },
     {
       "voter_id": "ISP7487883",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Niraja Kumara Agravala",
       "relation_type": "Father",
       "relation_name": "Krshna Kanhaiya",
@@ -1318,7 +1318,7 @@
     },
     {
       "voter_id": "ISP7676956",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Shalini Simha",
       "relation_type": "Father",
       "relation_name": "Dinesha Kumara Siham",
@@ -1329,7 +1329,7 @@
     },
     {
       "voter_id": "ISP7676675",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Amita Kumara",
       "relation_type": "Father",
       "relation_name": "Satya Prakasha Simha",
@@ -1340,7 +1340,7 @@
     },
     {
       "voter_id": "SP2057404",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Prabhakara Simha",
       "relation_type": "Father",
       "relation_name": "Janardana Simha",
@@ -1351,7 +1351,7 @@
     },
     {
       "voter_id": "ISP460868",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Mamjita Vishvakarma",
       "relation_type": "Husband",
       "relation_name": "Rakesha",
@@ -1362,7 +1362,7 @@
     },
     {
       "voter_id": "ISP706343",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Mila Yadava",
       "relation_type": "Husband",
       "relation_name": "Moti Lala Yadava",
@@ -1373,7 +1373,7 @@
     },
     {
       "voter_id": "SP0004473",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Sunila Kumara Shrivastava",
       "relation_type": "Father",
       "relation_name": "Sva. Sachchidananda Shrivastava",
@@ -1384,7 +1384,7 @@
     },
     {
       "voter_id": "ISP7676568",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Minaxi Mishra",
       "relation_type": "Husband",
       "relation_name": "Laxmi Carat Mishra",
@@ -1395,7 +1395,7 @@
     },
     {
       "voter_id": "ISP0004960",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Vijaya Kumara",
       "relation_type": "Father",
       "relation_name": "Sva. Lalachandra Qi",
@@ -1406,7 +1406,7 @@
     },
     {
       "voter_id": "ISP450945",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Jagadisha Yadava",
       "relation_type": "Father",
       "relation_name": "Dalsimgara Yadava",
@@ -1417,7 +1417,7 @@
     },
     {
       "voter_id": "ISP2057420",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Janardana Simha",
       "relation_type": "Father",
       "relation_name": "Jiuta Simha",
@@ -1428,7 +1428,7 @@
     },
     {
       "voter_id": "ISP7676303",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Indradeva Yadava",
       "relation_type": "Father",
       "relation_name": "Radheshyama",
@@ -1439,7 +1439,7 @@
     },
     {
       "voter_id": "ISP504887",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Manoja",
       "relation_type": "Father",
       "relation_name": "Ramachala",
@@ -1450,7 +1450,7 @@
     },
     {
       "voter_id": "ISP767668",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Indu Upadhyaya",
       "relation_type": "Husband",
       "relation_name": "Ramaprakasha",
@@ -1461,7 +1461,7 @@
     },
     {
       "voter_id": "ISP0004465",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Kirana Shrivastava",
       "relation_type": "Husband",
       "relation_name": "Sunila Kumara Shrivastava",
@@ -1472,7 +1472,7 @@
     },
     {
       "voter_id": "ISP4426839",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Akasha Yadava",
       "relation_type": "Father",
       "relation_name": "Umesha Chandra Yadava",
@@ -1483,7 +1483,7 @@
     },
     {
       "voter_id": "ISP0004952",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Gayatri Devi",
       "relation_type": "Husband",
       "relation_name": "Vijaya Kumara",
@@ -1494,7 +1494,7 @@
     },
     {
       "voter_id": "ISP7487878",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Shishira Agravala",
       "relation_type": "Father",
       "relation_name": "Niraja Kumara",
@@ -1505,7 +1505,7 @@
     },
     {
       "voter_id": "ISP4509584",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Priyamshi Yadava",
       "relation_type": "Father",
       "relation_name": "Jagadisha Yadava",
@@ -1516,7 +1516,7 @@
     },
     {
       "voter_id": "ISP2057453",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Divakara Simha",
       "relation_type": "Father",
       "relation_name": "Janardana Simha",
@@ -1527,7 +1527,7 @@
     },
     {
       "voter_id": "ISP7676279",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Indrasana Yadava",
       "relation_type": "Father",
       "relation_name": "Radheshyama",
@@ -1538,7 +1538,7 @@
     },
     {
       "voter_id": "ISP7488204",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Avadhesha",
       "relation_type": "Father",
       "relation_name": "Ramasamujha Prasada",
@@ -1549,7 +1549,7 @@
     },
     {
       "voter_id": "ISP7488220",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Puja",
       "relation_type": "Father",
       "relation_name": "Muniba Prasada",
@@ -1560,7 +1560,7 @@
     },
     {
       "voter_id": "ISP677509",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Amjali Shukla",
       "relation_type": "Husband",
       "relation_name": "Avadhesha Kumara Shukla",
@@ -1571,7 +1571,7 @@
     },
     {
       "voter_id": "ISP7676543",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ramakirti Katiyara",
       "relation_type": "Father",
       "relation_name": "Bhikhari",
@@ -1582,7 +1582,7 @@
     },
     {
       "voter_id": "SP0837542",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Virendra Kumara",
       "relation_type": "Father",
       "relation_name": "Rama Sahaya",
@@ -1593,7 +1593,7 @@
     },
     {
       "voter_id": "ISP7487636",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Gopala",
       "relation_type": "Father",
       "relation_name": "Santa Kumara",
@@ -1604,7 +1604,7 @@
     },
     {
       "voter_id": "ISP7677095",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Kamalavati Devi",
       "relation_type": "Husband",
       "relation_name": "Hadayanarayana",
@@ -1615,7 +1615,7 @@
     },
     {
       "voter_id": "SP2058089",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Shashi Kumara",
       "relation_type": "Father",
       "relation_name": "Muniba Prasada",
@@ -1626,7 +1626,7 @@
     },
     {
       "voter_id": "ISP5045869",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Satyakama Simha Chauhana",
       "relation_type": "Father",
       "relation_name": "Ramanamda Chauhana Pa",
@@ -1637,7 +1637,7 @@
     },
     {
       "voter_id": "ISP676428",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Kanti Shrivastava",
       "relation_type": "Husband",
       "relation_name": "Ragramahaya Lala",
@@ -1648,7 +1648,7 @@
     },
     {
       "voter_id": "ISP000557",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Kusuma Devi Shri0",
       "relation_type": "Husband",
       "relation_name": "Omaprakasha Shri0",
@@ -1659,7 +1659,7 @@
     },
     {
       "voter_id": "ISP229226",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Vinita Pandeya",
       "relation_type": "Father",
       "relation_name": "Manika Lala",
@@ -1670,7 +1670,7 @@
     },
     {
       "voter_id": "SP000429",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Amshika Rani",
       "relation_type": "Father",
       "relation_name": "Hiralala",
@@ -1681,7 +1681,7 @@
     },
     {
       "voter_id": "ISP2057883",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Laxmi Devi",
       "relation_type": "Husband",
       "relation_name": "Shashi Kumara",
@@ -1692,7 +1692,7 @@
     },
     {
       "voter_id": "ISP490642",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ramakali",
       "relation_type": "Husband",
       "relation_name": "Panne Chauhana",
@@ -1703,7 +1703,7 @@
     },
     {
       "voter_id": "ISP3249802",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Rajeshvara Pathaka",
       "relation_type": "Father",
       "relation_name": "Kedara Natha Pathaka",
@@ -1714,7 +1714,7 @@
     },
     {
       "voter_id": "ISP7982529",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Krshna Chau I",
       "relation_type": "Father",
       "relation_name": "Bachchulala Chau I",
@@ -1725,7 +1725,7 @@
     },
     {
       "voter_id": "SP7676436",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Aloka Chau I",
       "relation_type": "Father",
       "relation_name": "Ramakirti",
@@ -1736,7 +1736,7 @@
     },
     {
       "voter_id": "SP205797",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Samju Sharma",
       "relation_type": "Husband",
       "relation_name": "Krashna Sharma",
@@ -1747,7 +1747,7 @@
     },
     {
       "voter_id": "ISP0004507",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Hari Rama Prasada",
       "relation_type": "Father",
       "relation_name": "Sva. Shri0 Kauleshvara",
@@ -1758,7 +1758,7 @@
     },
     {
       "voter_id": "ISP0004523",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Pravina Kumara",
       "relation_type": "Father",
       "relation_name": "Harirama Prasada",
@@ -1769,7 +1769,7 @@
     },
     {
       "voter_id": "SP4447374",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Amjani Vishvakarma",
       "relation_type": "Father",
       "relation_name": "Rajakishora Sharma",
@@ -1780,7 +1780,7 @@
     },
     {
       "voter_id": "ISP7487826",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Shila Devi",
       "relation_type": "Husband",
       "relation_name": "Ramjita Chauhana",
@@ -1791,7 +1791,7 @@
     },
     {
       "voter_id": "SP2590933",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Sukha Yadava",
       "relation_type": "Husband",
       "relation_name": "Sva Narasimha Yadava",
@@ -1802,7 +1802,7 @@
     },
     {
       "voter_id": "ISP7487685",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Sarita Simha",
       "relation_type": "Husband",
       "relation_name": "Aravinda Kumara Simha",
@@ -1813,7 +1813,7 @@
     },
     {
       "voter_id": "ISP2057958",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Shila Simha",
       "relation_type": "Father",
       "relation_name": "Santaprasada",
@@ -1824,7 +1824,7 @@
     },
     {
       "voter_id": "ISP4585709",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Urmila Devi",
       "relation_type": "Husband",
       "relation_name": "Shakti",
@@ -1835,7 +1835,7 @@
     },
     {
       "voter_id": "ISP2058055",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Devendra Kumara Simha",
       "relation_type": "Father",
       "relation_name": "Omkara Simha",
@@ -1846,7 +1846,7 @@
     },
     {
       "voter_id": "SP2057982",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Hrdaya Narayana Shukla",
       "relation_type": "Father",
       "relation_name": "Leta Jagaranatha Shukla",
@@ -1857,7 +1857,7 @@
     },
     {
       "voter_id": "SP259722",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Punama Yadava",
       "relation_type": "Husband",
       "relation_name": "Gorakha Yadava",
@@ -1868,7 +1868,7 @@
     },
     {
       "voter_id": "ISP0004580",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Oft Mati Samgita Devi",
       "relation_type": "Husband",
       "relation_name": "Sva. Ravindra Simha",
@@ -1879,7 +1879,7 @@
     },
     {
       "voter_id": "ISP2057560",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Brajesha Simha",
       "relation_type": "Father",
       "relation_name": "Rama Samujha Simha",
@@ -1890,7 +1890,7 @@
     },
     {
       "voter_id": "ISP0004887",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Amita Kumara",
       "relation_type": "Father",
       "relation_name": "Omaprakasha",
@@ -1901,7 +1901,7 @@
     },
     {
       "voter_id": "ISP4905972",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Archita Vishvakarma",
       "relation_type": "Father",
       "relation_name": "Ramesha Vishvakarma",
@@ -1912,7 +1912,7 @@
     },
     {
       "voter_id": "ISPI677269",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Mahendra Natha Pathaka",
       "relation_type": "Father",
       "relation_name": "Parameshvara Pathaka Pam",
@@ -1923,7 +1923,7 @@
     },
     {
       "voter_id": "ISP748797",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Digvijaya Chauhana",
       "relation_type": "Father",
       "relation_name": "Radheshyama Chauhana",
@@ -1934,7 +1934,7 @@
     },
     {
       "voter_id": "ISP0004598",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Girijesha Kumara",
       "relation_type": "Father",
       "relation_name": "Sva, Ravindra Simha",
@@ -1945,7 +1945,7 @@
     },
     {
       "voter_id": "ISP5046933",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Shani",
       "relation_type": "Father",
       "relation_name": "Saravana",
@@ -1956,7 +1956,7 @@
     },
     {
       "voter_id": "ISP2058705",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Devamsha Kumara Simha",
       "relation_type": "Father",
       "relation_name": "Omkara Simha",
@@ -1967,7 +1967,7 @@
     },
     {
       "voter_id": "ISPI677236",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Sneha Lata Pandeya",
       "relation_type": "Husband",
       "relation_name": "Ashoka Kumara Pandeya",
@@ -1978,7 +1978,7 @@
     },
     {
       "voter_id": "ISP5032867",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Jainemdra Kumara Shivani",
       "relation_type": "Father",
       "relation_name": "Wale Gupta",
@@ -1989,7 +1989,7 @@
     },
     {
       "voter_id": "ISP5036652",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Archana Modanavala",
       "relation_type": "Husband",
       "relation_name": "Amrta Shivani",
@@ -2000,7 +2000,7 @@
     },
     {
       "voter_id": "ISPI676782",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Saumya",
       "relation_type": "Father",
       "relation_name": "Narendra Pratapa",
@@ -2011,7 +2011,7 @@
     },
     {
       "voter_id": "ISP4798237",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Aditya Chaturvedi",
       "relation_type": "Father",
       "relation_name": "Viremdra Chaturvedi",
@@ -2022,7 +2022,7 @@
     },
     {
       "voter_id": "ISP7487594",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Samdipa Kumara",
       "relation_type": "Father",
       "relation_name": "Mevalala",
@@ -2033,7 +2033,7 @@
     },
     {
       "voter_id": "ISP2057669",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Satyadeva Sharana Shrivastava",
       "relation_type": "Father",
       "relation_name": "Hari Prasada Shrivastava Qi",
@@ -2044,7 +2044,7 @@
     },
     {
       "voter_id": "ISP5032909",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Girija Devi",
       "relation_type": "Husband",
       "relation_name": "Prahnada Gupta Pam",
@@ -2055,7 +2055,7 @@
     },
     {
       "voter_id": "ISP503289",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Amrta Shivani",
       "relation_type": "Father",
       "relation_name": "Pralhada Gupta Qi",
@@ -2066,7 +2066,7 @@
     },
     {
       "voter_id": "ISP676733",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Amshika",
       "relation_type": "Father",
       "relation_name": "Narendra Pratapa",
@@ -2077,7 +2077,7 @@
     },
     {
       "voter_id": "ISP4798047",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Kamala Devi",
       "relation_type": "Father",
       "relation_name": "Bhima Shamkara",
@@ -2088,7 +2088,7 @@
     },
     {
       "voter_id": "ISP7677590",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Premalata Shrivastava",
       "relation_type": "Father",
       "relation_name": "Shailendra Kumara Shrivastava",
@@ -2099,7 +2099,7 @@
     },
     {
       "voter_id": "SP7487248",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Shashipratha",
       "relation_type": "Husband",
       "relation_name": "Raju Mishra",
@@ -2110,7 +2110,7 @@
     },
     {
       "voter_id": "SP4509600",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Savita Gupta",
       "relation_type": "Husband",
       "relation_name": "Sarvesha Kumara",
@@ -2121,7 +2121,7 @@
     },
     {
       "voter_id": "ISP503265",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ramjana Modanavala",
       "relation_type": "Husband",
       "relation_name": "Jainemdra Kumara Shivani",
@@ -2132,7 +2132,7 @@
     },
     {
       "voter_id": "ISP7676766",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Usha Devi",
       "relation_type": "Father",
       "relation_name": "Anila Kumara",
@@ -2143,7 +2143,7 @@
     },
     {
       "voter_id": "ISP677038",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ra La Kumara Siham",
       "relation_type": "Father",
       "relation_name": "Radheramana Simha",
@@ -2154,7 +2154,7 @@
     },
     {
       "voter_id": "ISP4797999",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Nitu Chaturvedi",
       "relation_type": "Father",
       "relation_name": "Viremdra Natha Chaturvedi",
@@ -2165,7 +2165,7 @@
     },
     {
       "voter_id": "ISPI677699",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Shveta",
       "relation_type": "Husband",
       "relation_name": "Uttama Kumara Shri.",
@@ -2176,7 +2176,7 @@
     },
     {
       "voter_id": "ISP7483730",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Devendra Natha Simha",
       "relation_type": "Father",
       "relation_name": "Janamejaya Simha",
@@ -2187,7 +2187,7 @@
     },
     {
       "voter_id": "SP7483748",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Aruna Simha",
       "relation_type": "Husband",
       "relation_name": "Devendra Natha Simha",
@@ -2198,7 +2198,7 @@
     },
     {
       "voter_id": "ISP2058048",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Krashna Gopala Mishra",
       "relation_type": "Father",
       "relation_name": "Sabhapati Mishra",
@@ -2209,7 +2209,7 @@
     },
     {
       "voter_id": "ISP677376",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Devamani Shukla",
       "relation_type": "Father",
       "relation_name": "Jagadamba Prasada",
@@ -2220,7 +2220,7 @@
     },
     {
       "voter_id": "ISP0004804",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Bachchi Devi Gau.da",
       "relation_type": "Father",
       "relation_name": "Rajendra Prasada",
@@ -2231,7 +2231,7 @@
     },
     {
       "voter_id": "ISP7676485",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Kirana Lata Shrivastava",
       "relation_type": "Husband",
       "relation_name": "Rajendra Prasada",
@@ -2242,7 +2242,7 @@
     },
     {
       "voter_id": "ISP0005066",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ramanaresha Gupta",
       "relation_type": "Father",
       "relation_name": "Hatiyara Prasada",
@@ -2253,7 +2253,7 @@
     },
     {
       "voter_id": "ISP205788",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Samtosha Kumara Shrivastava",
       "relation_type": "Father",
       "relation_name": "Rama Naresha Lala Shrivastava",
@@ -2264,7 +2264,7 @@
     },
     {
       "voter_id": "ISP2057826",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Anita Gupta",
       "relation_type": "Husband",
       "relation_name": "Vishvanatha Gupta",
@@ -2275,7 +2275,7 @@
     },
     {
       "voter_id": "SP2057586",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Vimala Mishra",
       "relation_type": "Husband",
       "relation_name": "Krashna Gopala Mishra",
@@ -2286,7 +2286,7 @@
     },
     {
       "voter_id": "ISP677673",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Krshna Chanda Dube",
       "relation_type": "Father",
       "relation_name": "Sva0 Rama Raja Dube",
@@ -2297,7 +2297,7 @@
     },
     {
       "voter_id": "ISP0004622",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Vijaya Simha",
       "relation_type": "Father",
       "relation_name": "Sva. Rama Narayana",
@@ -2308,7 +2308,7 @@
     },
     {
       "voter_id": "ISP4447389",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Desha Dipa Shrivastava",
       "relation_type": "Father",
       "relation_name": "Pamkaja Shrivastava",
@@ -2319,7 +2319,7 @@
     },
     {
       "voter_id": "ISP676527",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Priyadarshini Shrivastava",
       "relation_type": "Husband",
       "relation_name": "Shri Pamkaja Shrivastava Pa",
@@ -2330,7 +2330,7 @@
     },
     {
       "voter_id": "ISP0005074",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ravi Gupta",
       "relation_type": "Father",
       "relation_name": "Ramanaresha",
@@ -2341,7 +2341,7 @@
     },
     {
       "voter_id": "SP0004333",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Punama Shri0",
       "relation_type": "Husband",
       "relation_name": "Rajesha Shri0",
@@ -2352,7 +2352,7 @@
     },
     {
       "voter_id": "ISP0004242",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Priyamka Shrivastava",
       "relation_type": "Husband",
       "relation_name": "Samjiva Shri0",
@@ -2363,7 +2363,7 @@
     },
     {
       "voter_id": "SP2057776",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ramjita Saha",
       "relation_type": "Father",
       "relation_name": "Vishvanatha Prasada Saha",
@@ -2374,7 +2374,7 @@
     },
     {
       "voter_id": "SP2057834",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ravindra Mishra",
       "relation_type": "Father",
       "relation_name": "Krashna Gopala Mishra",
@@ -2385,7 +2385,7 @@
     },
     {
       "voter_id": "ISP3249695",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Adarsha Shrivastava",
       "relation_type": "Father",
       "relation_name": "Sarasvati Chanda",
@@ -2396,7 +2396,7 @@
     },
     {
       "voter_id": "ISP0004648",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Sudhira Simha",
       "relation_type": "Father",
       "relation_name": "Vijaya Simha",
@@ -2407,7 +2407,7 @@
     },
     {
       "voter_id": "ISP0005082",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Pakamja Kumara",
       "relation_type": "Father",
       "relation_name": "Ramanaresha",
@@ -2418,7 +2418,7 @@
     },
     {
       "voter_id": "SP0004820",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Usha Devi",
       "relation_type": "Husband",
       "relation_name": "Seay Kumara",
@@ -2429,7 +2429,7 @@
     },
     {
       "voter_id": "ISP0004234",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Samjiva Shrivastava",
       "relation_type": "Father",
       "relation_name": "Raghava Sharana",
@@ -2440,7 +2440,7 @@
     },
     {
       "voter_id": "SP2057768",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Vijaya Prakasha Shrivastava",
       "relation_type": "Father",
       "relation_name": "Naresha Lala Shrivastava",
@@ -2451,7 +2451,7 @@
     },
     {
       "voter_id": "ISP2057792",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Satisha Chandra Shrivastava",
       "relation_type": "Father",
       "relation_name": "Rama Naresha Shrivastava",
@@ -2462,7 +2462,7 @@
     },
     {
       "voter_id": "ISP4967493",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Maya",
       "relation_type": "Husband",
       "relation_name": "Abhinava Chaube",
@@ -2473,7 +2473,7 @@
     },
     {
       "voter_id": "ISP676493",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Shivendra Pratapa Simha",
       "relation_type": "Father",
       "relation_name": "Lalakesha Simha",
@@ -2484,7 +2484,7 @@
     },
     {
       "voter_id": "SP4875084",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Susmita Mishra",
       "relation_type": "Husband",
       "relation_name": "Vinaya Kumara Mishra",
@@ -2495,7 +2495,7 @@
     },
     {
       "voter_id": "ISP2890655",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Bindu Devi",
       "relation_type": "Father",
       "relation_name": "Ananda Prakasha Dixita",
@@ -2506,7 +2506,7 @@
     },
     {
       "voter_id": "ISP4346995",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Amaravati Devi",
       "relation_type": "Husband",
       "relation_name": "Jayanatha Yadava",
@@ -2517,7 +2517,7 @@
     },
     {
       "voter_id": "SP4346987",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ra La Yadava",
       "relation_type": "Father",
       "relation_name": "Jayanatha Yadava",
@@ -2528,7 +2528,7 @@
     },
     {
       "voter_id": "ISP3396740",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Anita Chauhana",
       "relation_type": "Husband",
       "relation_name": "Munna Lala Chauhana",
@@ -2539,7 +2539,7 @@
     },
     {
       "voter_id": "SP2057487",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Vinita Shrivastava",
       "relation_type": "Husband",
       "relation_name": "Vijaya Prakasha Shrivastava",
@@ -2550,7 +2550,7 @@
     },
     {
       "voter_id": "ISP4897289",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Abhisheka Chaube",
       "relation_type": "Father",
       "relation_name": "Rama Sagara Chaube",
@@ -2561,7 +2561,7 @@
     },
     {
       "voter_id": "ISP3980752",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Kamti Devi",
       "relation_type": "Husband",
       "relation_name": "Vikrama Yadava",
@@ -2572,7 +2572,7 @@
     },
     {
       "voter_id": "ISP487567",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Vinamra Kumara Mishra",
       "relation_type": "Father",
       "relation_name": "Vinaya Kumara Mishra Qi",
@@ -2583,7 +2583,7 @@
     },
     {
       "voter_id": "ISP3980745",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Vikrama Prasada Yadava",
       "relation_type": "Father",
       "relation_name": "Mohana Yadava",
@@ -2594,7 +2594,7 @@
     },
     {
       "voter_id": "ISPI677434",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Diptabhana Dube",
       "relation_type": "Father",
       "relation_name": "Bhrgunatha Dube",
@@ -2605,7 +2605,7 @@
     },
     {
       "voter_id": "ISP3396355",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Samjaya Kumara Simha",
       "relation_type": "Father",
       "relation_name": "Sva Kedara Natha Simha Qi",
@@ -2616,7 +2616,7 @@
     },
     {
       "voter_id": "SP434700",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Vipina Yadava",
       "relation_type": "Father",
       "relation_name": "Jayanatha Yadava",
@@ -2627,7 +2627,7 @@
     },
     {
       "voter_id": "ISP3249794",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Mamsha Chauhana",
       "relation_type": "Father",
       "relation_name": "Kedara Pa",
@@ -2638,7 +2638,7 @@
     },
     {
       "voter_id": "SP2057974",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Savita Gupta",
       "relation_type": "Father",
       "relation_name": "Sva Trayambaka Prasada Mishra",
@@ -2649,7 +2649,7 @@
     },
     {
       "voter_id": "ISP677392",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Jyoti Shukla Baan Be)",
       "relation_type": "Father",
       "relation_name": "Sva0 Dugadhira Dube",
@@ -2660,7 +2660,7 @@
     },
     {
       "voter_id": "ISP3396732",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Munna Lala Chauhana",
       "relation_type": "Father",
       "relation_name": "Kedara Natha",
@@ -2671,7 +2671,7 @@
     },
     {
       "voter_id": "SP332737",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Shveta Jayasavala",
       "relation_type": "Husband",
       "relation_name": "Jaya Dipaka Jayasavala",
@@ -2682,7 +2682,7 @@
     },
     {
       "voter_id": "ISP3725272",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Alamkrta Gau.da",
       "relation_type": "Father",
       "relation_name": "Chandana Gauda",
@@ -2693,7 +2693,7 @@
     },
     {
       "voter_id": "DWA2354868",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Shitala",
       "relation_type": "Father",
       "relation_name": "Rama",
@@ -2704,7 +2704,7 @@
     },
     {
       "voter_id": "ISP3355336",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Mukesha Shukla",
       "relation_type": "Father",
       "relation_name": "Ambika Shukla",
@@ -2715,7 +2715,7 @@
     },
     {
       "voter_id": "SP3355377",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Mo0 Yakuba Javeda",
       "relation_type": "Father",
       "relation_name": "Mahamuda Ali",
@@ -2726,7 +2726,7 @@
     },
     {
       "voter_id": "ISP7487256",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ananda Shukla",
       "relation_type": "Father",
       "relation_name": "Ramavadha Shukla",
@@ -2737,7 +2737,7 @@
     },
     {
       "voter_id": "ISP7488097",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ory Cho I",
       "relation_type": "Father",
       "relation_name": "Amgada Chau I",
@@ -2748,7 +2748,7 @@
     },
     {
       "voter_id": "ISP2597469",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Bindu Simha",
       "relation_type": "Husband",
       "relation_name": "Sva Kedara Natha Simha",
@@ -2759,7 +2759,7 @@
     },
     {
       "voter_id": "SP7676287",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Pravesha Kumara Chauhana",
       "relation_type": "Father",
       "relation_name": "Kailasha Chauhana Pa",
@@ -2770,7 +2770,7 @@
     },
     {
       "voter_id": "SP0005207",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Shrirama",
       "relation_type": "Father",
       "relation_name": "Sva. Rama Samujha Pa",
@@ -2781,7 +2781,7 @@
     },
     {
       "voter_id": "ISP469763",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Shiya Yadava",
       "relation_type": "Father",
       "relation_name": "Umesha Chamda Yadava Pa",
@@ -2792,7 +2792,7 @@
     },
     {
       "voter_id": "SP7487677",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Prabhakara Tivari",
       "relation_type": "Father",
       "relation_name": "Sva. Bhola Tivari",
@@ -2803,7 +2803,7 @@
     },
     {
       "voter_id": "ISP748805",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Mala Chau I",
       "relation_type": "Husband",
       "relation_name": "Amgada Chau I",
@@ -2814,7 +2814,7 @@
     },
     {
       "voter_id": "SP2590735",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Dinesha Kumara",
       "relation_type": "Father",
       "relation_name": "Bamshi",
@@ -2825,7 +2825,7 @@
     },
     {
       "voter_id": "ISP3725306",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Vidyavati Shukla",
       "relation_type": "Husband",
       "relation_name": "Vishvanatha Shukla",
@@ -2836,7 +2836,7 @@
     },
     {
       "voter_id": "ISP3355328",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Vishvanatha Shukla",
       "relation_type": "Father",
       "relation_name": "Ambika Shukla",
@@ -2847,7 +2847,7 @@
     },
     {
       "voter_id": "ISP000525",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Mamjulata",
       "relation_type": "Husband",
       "relation_name": "Shri Rama",
@@ -2858,7 +2858,7 @@
     },
     {
       "voter_id": "ISP465957",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Vimalavati Yadava",
       "relation_type": "Husband",
       "relation_name": "Ramesha Chamda Yadava",
@@ -2869,7 +2869,7 @@
     },
     {
       "voter_id": "ISP7488022",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Kamini",
       "relation_type": "Father",
       "relation_name": "Prabhakara Tivari",
@@ -2880,7 +2880,7 @@
     },
     {
       "voter_id": "ISP748807",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Sushama Chau I",
       "relation_type": "Father",
       "relation_name": "Amgada Chau I",
@@ -2891,7 +2891,7 @@
     },
     {
       "voter_id": "SP2590727",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Bindu",
       "relation_type": "Husband",
       "relation_name": "Dinesha Kumara",
@@ -2902,7 +2902,7 @@
     },
     {
       "voter_id": "ISP0004655",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Vishnu Pratapa",
       "relation_type": "Father",
       "relation_name": "Raghuvara Dayala Chau I",
@@ -2913,7 +2913,7 @@
     },
     {
       "voter_id": "ISP677806",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Mahendra Prakasha Kashyapa",
       "relation_type": "Father",
       "relation_name": "Sva0 Ramaprasada",
@@ -2924,7 +2924,7 @@
     },
     {
       "voter_id": "ISP7487909",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Rajana Chauhana",
       "relation_type": "Father",
       "relation_name": "Madeva",
@@ -2935,7 +2935,7 @@
     },
     {
       "voter_id": "ISP0004846",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Champa Devi",
       "relation_type": "Husband",
       "relation_name": "Mahipala Varma",
@@ -2946,7 +2946,7 @@
     },
     {
       "voter_id": "ISP205804",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Riku Varma",
       "relation_type": "Father",
       "relation_name": "Mohana Varma",
@@ -2957,7 +2957,7 @@
     },
     {
       "voter_id": "ISP0005090",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Rajukumara",
       "relation_type": "Father",
       "relation_name": "Sva. Rama Lakhana",
@@ -2968,7 +2968,7 @@
     },
     {
       "voter_id": "ISP677889",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Madhu Kashyapa",
       "relation_type": "Husband",
       "relation_name": "Mahendra Prakasha Kashyapa",
@@ -2979,7 +2979,7 @@
     },
     {
       "voter_id": "ISPI676659",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Punita Pandeya",
       "relation_type": "Father",
       "relation_name": "Pramoda Kumara Pandeya Pa",
@@ -2990,7 +2990,7 @@
     },
     {
       "voter_id": "ISP3663384",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Puja",
       "relation_type": "Father",
       "relation_name": "Madeva",
@@ -3001,7 +3001,7 @@
     },
     {
       "voter_id": "ISP426066",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Radhika Devi",
       "relation_type": "Husband",
       "relation_name": "Kanhaiya Lala Yadava Qi",
@@ -3012,7 +3012,7 @@
     },
     {
       "voter_id": "ISP205789",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Krshna Devi",
       "relation_type": "Husband",
       "relation_name": "Chamdra Prakasha",
@@ -3023,7 +3023,7 @@
     },
     {
       "voter_id": "ISP7982362",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Uma Shamkara",
       "relation_type": "Father",
       "relation_name": "Ramasamujha Yadava",
@@ -3034,7 +3034,7 @@
     },
     {
       "voter_id": "ISP982552",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ra La Yadava",
       "relation_type": "Father",
       "relation_name": "Umashamkara Yadava",
@@ -3045,7 +3045,7 @@
     },
     {
       "voter_id": "ISP677632",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Pal{}lavi Tivari",
       "relation_type": "Husband",
       "relation_name": "Vinoda Chandra Tivari",
@@ -3056,7 +3056,7 @@
     },
     {
       "voter_id": "ISP259204",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Savita Yadava",
       "relation_type": "Husband",
       "relation_name": "Vivekananda Yadava",
@@ -3067,7 +3067,7 @@
     },
     {
       "voter_id": "ISP0005724",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Renu Devi",
       "relation_type": "Husband",
       "relation_name": "Rajesha Kumara",
@@ -3078,7 +3078,7 @@
     },
     {
       "voter_id": "ISP7676584",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Pramoda Kumara Pandeya",
       "relation_type": "Father",
       "relation_name": "Shri Ramashamkara",
@@ -3089,7 +3089,7 @@
     },
     {
       "voter_id": "SP7487743",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Shashi Devi",
       "relation_type": "Father",
       "relation_name": "Suraja Dina Pala",
@@ -3100,7 +3100,7 @@
     },
     {
       "voter_id": "ISP2057396",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Chandraprakasha Pandeya",
       "relation_type": "Father",
       "relation_name": "Baijanatha Pandeya",
@@ -3111,7 +3111,7 @@
     },
     {
       "voter_id": "SP0004853",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Mohana Varma",
       "relation_type": "Father",
       "relation_name": "Mahipala Varma",
@@ -3122,7 +3122,7 @@
     },
     {
       "voter_id": "ISP3325974",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Aruna Raya",
       "relation_type": "Father",
       "relation_name": "Lala Raya",
@@ -3133,7 +3133,7 @@
     },
     {
       "voter_id": "ISP3547932",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Puja Mishra",
       "relation_type": "Father",
       "relation_name": "Abhiraja Mishra",
@@ -3144,7 +3144,7 @@
     },
     {
       "voter_id": "ISP2585263",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ka Taka Eg Simha 80",
       "relation_type": "Father",
       "relation_name": "Regi",
@@ -3154,7 +3154,7 @@
     },
     {
       "voter_id": "ISP3325750",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Sushmita Simha",
       "relation_type": "Father",
       "relation_name": "Brjanandana Simha",
@@ -3165,7 +3165,7 @@
     },
     {
       "voter_id": "ISP2585878",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Rupa Kumari Sharma",
       "relation_type": "Husband",
       "relation_name": "Bechana Lala Sharma",
@@ -3176,7 +3176,7 @@
     },
     {
       "voter_id": "SP2585883",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Sachina Sharma",
       "relation_type": "Father",
       "relation_name": "Bechana Lala Sharma",
@@ -3187,7 +3187,7 @@
     },
     {
       "voter_id": "ISP982339",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ramgilala Yadava",
       "relation_type": "Father",
       "relation_name": "Dulana Yadava",
@@ -3198,7 +3198,7 @@
     },
     {
       "voter_id": "ISP0004903",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Sunila Kumara",
       "relation_type": "Father",
       "relation_name": "Fg Prasada",
@@ -3209,7 +3209,7 @@
     },
     {
       "voter_id": "ISP0229658",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Bimala Pandeya",
       "relation_type": "Husband",
       "relation_name": "Chandrabhushana Pandeya",
@@ -3220,7 +3220,7 @@
     },
     {
       "voter_id": "ISP3547965",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ramaraxa Chauhana",
       "relation_type": "Father",
       "relation_name": "Khubalala Chauhana",
@@ -3231,7 +3231,7 @@
     },
     {
       "voter_id": "ISP3547999",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Babalu Chauhana",
       "relation_type": "Father",
       "relation_name": "Khuba Lala Chauhana",
@@ -3242,7 +3242,7 @@
     },
     {
       "voter_id": "SP5024948",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Kirana Devi",
       "relation_type": "Husband",
       "relation_name": "Rama Achala Yadava",
@@ -3253,7 +3253,7 @@
     },
     {
       "voter_id": "SP2585875",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Sagara Sharma",
       "relation_type": "Father",
       "relation_name": "Bechanalala Sharma Qi",
@@ -3264,7 +3264,7 @@
     },
     {
       "voter_id": "SP000467",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Shila Devi",
       "relation_type": "Husband",
       "relation_name": "Gorakhanatha Mi0",
@@ -3275,7 +3275,7 @@
     },
     {
       "voter_id": "ISP7926487",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Rajesha Yadava",
       "relation_type": "Father",
       "relation_name": "Shrirama Yadava Pa",
@@ -3286,7 +3286,7 @@
     },
     {
       "voter_id": "ISP7982495",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Saten{}dra Yadava",
       "relation_type": "Father",
       "relation_name": "Ramgilala Pam",
@@ -3297,7 +3297,7 @@
     },
     {
       "voter_id": "ISP0229435",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Dipaka Kumara Rajapala",
       "relation_type": "Father",
       "relation_name": "Bikachandra Rajapala",
@@ -3308,7 +3308,7 @@
     },
     {
       "voter_id": "SP670374",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Shivendu Krshna",
       "relation_type": "Father",
       "relation_name": "Surendra Natha Pa",
@@ -3319,7 +3319,7 @@
     },
     {
       "voter_id": "ISP0229740",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Jitendra Kumara Gau.da",
       "relation_type": "Father",
       "relation_name": "Kamala Prasada",
@@ -3330,7 +3330,7 @@
     },
     {
       "voter_id": "ISP2585230",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Manisha Simha",
       "relation_type": "Father",
       "relation_name": "Brjanandana Siha",
@@ -3341,7 +3341,7 @@
     },
     {
       "voter_id": "SP2287704",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Omkara Lala",
       "relation_type": "Father",
       "relation_name": "Rama Sheya Lala",
@@ -3352,7 +3352,7 @@
     },
     {
       "voter_id": "ISP2585370",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Bechana Lala Sharma",
       "relation_type": "Father",
       "relation_name": "Sva Kanhaiyalala",
@@ -3363,7 +3363,7 @@
     },
     {
       "voter_id": "SP2586022",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Pushpalata Sharma",
       "relation_type": "Husband",
       "relation_name": "Rakesha Sharma",
@@ -3374,7 +3374,7 @@
     },
     {
       "voter_id": "SP0004697",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Jayarama Mishra",
       "relation_type": "Father",
       "relation_name": "Ramajita Mishra",
@@ -3385,7 +3385,7 @@
     },
     {
       "voter_id": "ISP022935",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Phulamati Devi",
       "relation_type": "Husband",
       "relation_name": "Sva. Niramjana",
@@ -3396,7 +3396,7 @@
     },
     {
       "voter_id": "SP0229567",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Bina Devi",
       "relation_type": "Husband",
       "relation_name": "Surendra Natha Yadava",
@@ -3407,7 +3407,7 @@
     },
     {
       "voter_id": "ISP0229484",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Prakashachandra Lakhamani",
       "relation_type": "Father",
       "relation_name": "Sva. Pahumala Lakhamani",
@@ -3418,7 +3418,7 @@
     },
     {
       "voter_id": "ISP0229492",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Asha Lakhamani",
       "relation_type": "Husband",
       "relation_name": "Prakashachandra Lakhamani",
@@ -3429,7 +3429,7 @@
     },
     {
       "voter_id": "ISP3348364",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Vinoda",
       "relation_type": "Father",
       "relation_name": "Bhagavana Dasa",
@@ -3440,7 +3440,7 @@
     },
     {
       "voter_id": "SP429284",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Arati Devi",
       "relation_type": "Father",
       "relation_name": "Punanara Yadava",
@@ -3451,7 +3451,7 @@
     },
     {
       "voter_id": "SP3458734",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Sugriva Kumara",
       "relation_type": "Father",
       "relation_name": "Shri Ramananda",
@@ -3462,7 +3462,7 @@
     },
     {
       "voter_id": "ISP3325693",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Mina Jayasavala",
       "relation_type": "Husband",
       "relation_name": "Ramakhelavana Gupta",
@@ -3473,7 +3473,7 @@
     },
     {
       "voter_id": "ISP3325792",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Tara Devi",
       "relation_type": "Husband",
       "relation_name": "Madhu Sudana Lala",
@@ -3484,7 +3484,7 @@
     },
     {
       "voter_id": "ISP0229500",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Niraja Lakhamani",
       "relation_type": "Father",
       "relation_name": "Prakashachandra Lakhamani",
@@ -3495,7 +3495,7 @@
     },
     {
       "voter_id": "SP3348323",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Bhagavana Dasa",
       "relation_type": "Father",
       "relation_name": "Sva. Teju Rama",
@@ -3506,7 +3506,7 @@
     },
     {
       "voter_id": "SP3348372",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Arati Devi",
       "relation_type": "Father",
       "relation_name": "Bhagavana Dasa Qi",
@@ -3517,7 +3517,7 @@
     },
     {
       "voter_id": "ISPI670496",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Sumana",
       "relation_type": "Father",
       "relation_name": "Dadri Prasada Tripathi",
@@ -3528,7 +3528,7 @@
     },
     {
       "voter_id": "ISP670389",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Gumjana Prasada",
       "relation_type": "Father",
       "relation_name": "Tas",
@@ -3539,7 +3539,7 @@
     },
     {
       "voter_id": "ISP0229583",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Indra Dube",
       "relation_type": "Husband",
       "relation_name": "Radheshyama Dube",
@@ -3550,7 +3550,7 @@
     },
     {
       "voter_id": "ISP3325685",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ku Jyoti",
       "relation_type": "Father",
       "relation_name": "Rama Khelavana",
@@ -3561,7 +3561,7 @@
     },
     {
       "voter_id": "SP7426622",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Janaka Aref Devi",
       "relation_type": "Husband",
       "relation_name": "Sva. Adya Prasada Pandeya",
@@ -3572,7 +3572,7 @@
     },
     {
       "voter_id": "ISP3479769",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ra La Lakhamani",
       "relation_type": "Father",
       "relation_name": "Prakashachandra Lakhamani",
@@ -3583,7 +3583,7 @@
     },
     {
       "voter_id": "SP7670488",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Skanda Kumara",
       "relation_type": "Father",
       "relation_name": "Adha Prasada",
@@ -3594,7 +3594,7 @@
     },
     {
       "voter_id": "SP7670470",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Saumya Tripathi",
       "relation_type": "Father",
       "relation_name": "Vadri Prasada",
@@ -3605,7 +3605,7 @@
     },
     {
       "voter_id": "SP3394302",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Rama Khelavana Gupta",
       "relation_type": "Father",
       "relation_name": "Sva Shyama Lala",
@@ -3616,7 +3616,7 @@
     },
     {
       "voter_id": "ISP3325867",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Madhu Sudana Lala",
       "relation_type": "Father",
       "relation_name": "Sva. Kanhaiya Lala",
@@ -3627,7 +3627,7 @@
     },
     {
       "voter_id": "ISP726630",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Rita Pandeya",
       "relation_type": "Husband",
       "relation_name": "Ashisha Kumara Pandeya",
@@ -3638,7 +3638,7 @@
     },
     {
       "voter_id": "SP378799",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Shivani Agravala",
       "relation_type": "Father",
       "relation_name": "Shyama Sumdara Agravala",
@@ -3649,7 +3649,7 @@
     },
     {
       "voter_id": "SP2264463",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Sachina Simha",
       "relation_type": "Father",
       "relation_name": "Dinesha Kumara Simha",
@@ -3660,7 +3660,7 @@
     },
     {
       "voter_id": "ISP335530",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Sarvajita Pandeya",
       "relation_type": "Father",
       "relation_name": "Kamala Pandeya",
@@ -3671,7 +3671,7 @@
     },
     {
       "voter_id": "SP3249778",
-      "part_number": 3,
+      "part_number": 13,
       "name": "A Jayasavala",
       "relation_type": "Husband",
       "relation_name": "Vijaya Jayasavala",
@@ -3682,7 +3682,7 @@
     },
     {
       "voter_id": "SP2885739",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ravindra Gupta",
       "relation_type": "Father",
       "relation_name": "Weer Prasada Gupta",
@@ -3693,7 +3693,7 @@
     },
     {
       "voter_id": "ISP000599",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Aishvarya Kumara Praja",
       "relation_type": "Father",
       "relation_name": "Sva, Janardana",
@@ -3704,7 +3704,7 @@
     },
     {
       "voter_id": "ISP7670553",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Indu Pandeya",
       "relation_type": "Husband",
       "relation_name": "Aruna Ku. Pandeya",
@@ -3715,7 +3715,7 @@
     },
     {
       "voter_id": "ISP0229682",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ashoka Kumara Agravala",
       "relation_type": "Father",
       "relation_name": "Bishvanatha Agravala",
@@ -3726,7 +3726,7 @@
     },
     {
       "voter_id": "SP383372",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Muskana Agravala",
       "relation_type": "Father",
       "relation_name": "Shyama Agravala Ma",
@@ -3737,7 +3737,7 @@
     },
     {
       "voter_id": "SP798207",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Munni Devi",
       "relation_type": "Husband",
       "relation_name": "Rama Ajna Yadava Pam",
@@ -3748,7 +3748,7 @@
     },
     {
       "voter_id": "ISP3394566",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Vinaya Kumara Mishra",
       "relation_type": "Father",
       "relation_name": "Murali Mishra Qi",
@@ -3759,7 +3759,7 @@
     },
     {
       "voter_id": "ISP4898250",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Rimka Pandeya",
       "relation_type": "Father",
       "relation_name": "Sarvajita Pandeya",
@@ -3770,7 +3770,7 @@
     },
     {
       "voter_id": "ISP288550",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ratnesha Kumara",
       "relation_type": "Father",
       "relation_name": "Sureshachandra Gupta Pa",
@@ -3781,7 +3781,7 @@
     },
     {
       "voter_id": "ISP2885069",
-      "part_number": 3,
+      "part_number": 13,
       "name": "San{}tosha Kumara",
       "relation_type": "Father",
       "relation_name": "Baijana<",
@@ -3792,7 +3792,7 @@
     },
     {
       "voter_id": "ISPI670546",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ra La Ku. Pandeya",
       "relation_type": "Father",
       "relation_name": "Aruna Ku. Pandeya",
@@ -3803,7 +3803,7 @@
     },
     {
       "voter_id": "ISP0229708",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ashisha Agravala",
       "relation_type": "Father",
       "relation_name": "Ashoka Kumara Agravala",
@@ -3814,7 +3814,7 @@
     },
     {
       "voter_id": "ISP798242",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ramajna",
       "house_number": "539",
       "age": 56,
@@ -3823,7 +3823,7 @@
     },
     {
       "voter_id": "ISP7488246",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Anita Devi",
       "relation_type": "Husband",
       "relation_name": "Ramajna Yadava",
@@ -3834,7 +3834,7 @@
     },
     {
       "voter_id": "SP4898078",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Sunita Pandeya",
       "relation_type": "Husband",
       "relation_name": "Sarvajita Pandeya",
@@ -3845,7 +3845,7 @@
     },
     {
       "voter_id": "ISP3249760",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Vijaya Jayasavala",
       "relation_type": "Father",
       "relation_name": "Ramakishuna",
@@ -3856,7 +3856,7 @@
     },
     {
       "voter_id": "SP3325743",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Saroja Chanda",
       "relation_type": "Father",
       "relation_name": "Shri Rama Prasada Varma",
@@ -3867,7 +3867,7 @@
     },
     {
       "voter_id": "ISP7670538",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Aruna Ku. Pandeya",
       "relation_type": "Father",
       "relation_name": "Chandra Badana Pandeya",
@@ -3878,7 +3878,7 @@
     },
     {
       "voter_id": "ISP7670572",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Shobhavati Mishra",
       "relation_type": "Husband",
       "relation_name": "Shivanatha Mishra",
@@ -3889,7 +3889,7 @@
     },
     {
       "voter_id": "ISP2585780",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ajaya",
       "relation_type": "Father",
       "relation_name": "Harilala",
@@ -3900,7 +3900,7 @@
     },
     {
       "voter_id": "ISP0253767",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Anuraga",
       "relation_type": "Father",
       "relation_name": "Shiva Raja",
@@ -3911,7 +3911,7 @@
     },
     {
       "voter_id": "SP2585776",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Brjesha Kumara",
       "relation_type": "Father",
       "relation_name": "Shri Ganesha Prasada",
@@ -3922,7 +3922,7 @@
     },
     {
       "voter_id": "ISP3325842",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Suresha Sharma",
       "relation_type": "Father",
       "relation_name": "Sva. Rama Ji Lala Sharma",
@@ -3933,7 +3933,7 @@
     },
     {
       "voter_id": "ISP332589",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Akasha Sharma",
       "relation_type": "Father",
       "relation_name": "Suresha Sharma",
@@ -3944,7 +3944,7 @@
     },
     {
       "voter_id": "ISP676873",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Rimku Kumara Shrivastava",
       "relation_type": "Father",
       "relation_name": "Gita Shrivastava",
@@ -3955,7 +3955,7 @@
     },
     {
       "voter_id": "SP200535",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Vinoda",
       "relation_type": "Father",
       "relation_name": "Sva0 Ramavadha",
@@ -3966,7 +3966,7 @@
     },
     {
       "voter_id": "ISP487446",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Pragati Sahaya",
       "relation_type": "Husband",
       "relation_name": "Raghunandana Sahaya Pam",
@@ -3977,7 +3977,7 @@
     },
     {
       "voter_id": "ISP2585784",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Ganesha Prasada",
       "relation_type": "Father",
       "relation_name": "Sva0 Jiyata Prasada Qi",
@@ -3988,7 +3988,7 @@
     },
     {
       "voter_id": "ISP3325883",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Shyama Sundara Joshi",
       "relation_type": "Father",
       "relation_name": "Sva. Kanhaiya Lala Joshi",
@@ -3999,7 +3999,7 @@
     },
     {
       "voter_id": "ISP3325768",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Anuradha Sharma",
       "relation_type": "Husband",
       "relation_name": "Shyama Sundara Joshi",
@@ -4010,7 +4010,7 @@
     },
     {
       "voter_id": "ISP3346533",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Vidya Devi",
       "relation_type": "Husband",
       "relation_name": "Sva; Indrajita Yadava",
@@ -4021,7 +4021,7 @@
     },
     {
       "voter_id": "DWA2244754",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Umesha",
       "relation_type": "Father",
       "relation_name": "Harisha Chanda",
@@ -4032,7 +4032,7 @@
     },
     {
       "voter_id": "SP2885768",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Akimta Mishra",
       "relation_type": "Father",
       "relation_name": "Shiva Natha Mishra",
@@ -4043,7 +4043,7 @@
     },
     {
       "voter_id": "SP2585274",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Samjaya Yadava",
       "relation_type": "Father",
       "relation_name": "Harilala Yadava",
@@ -4054,7 +4054,7 @@
     },
     {
       "voter_id": "ISP087456",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Mithalesha Kumari",
       "relation_type": "Husband",
       "relation_name": "Shiva Prasada",
@@ -4065,7 +4065,7 @@
     },
     {
       "voter_id": "ISP2585792",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Saroja Devi",
       "relation_type": "Husband",
       "relation_name": "Shri Ganesha Prasada",
@@ -4076,7 +4076,7 @@
     },
     {
       "voter_id": "ISP3325776",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Pushpa Devi Joshi",
       "relation_type": "Husband",
       "relation_name": "Shyama Sundara Joshi",
@@ -4087,7 +4087,7 @@
     },
     {
       "voter_id": "ISP3325859",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Mukesha Kumara",
       "relation_type": "Father",
       "relation_name": "Shyama Sundara Joshi",
@@ -4098,7 +4098,7 @@
     },
     {
       "voter_id": "DWA2360550",
-      "part_number": 3,
+      "part_number": 13,
       "name": "Dugesha",
       "relation_type": "Father",
       "relation_name": "Jayahinda",
@@ -4109,7 +4109,7 @@
     },
     {
       "voter_id": "ISP0350496",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Madhuri",
@@ -4122,7 +4122,7 @@
     },
     {
       "voter_id": "DWAS620078",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Nityananda Mishra",
@@ -4134,7 +4134,7 @@
     },
     {
       "voter_id": "WAS425048",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Rama Bheja",
@@ -4147,7 +4147,7 @@
     },
     {
       "voter_id": "ISP7670652",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Gaurava Shrivastava",
@@ -4160,7 +4160,7 @@
     },
     {
       "voter_id": "ISP3394509",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Amita Kumara Chauhana",
@@ -4173,7 +4173,7 @@
     },
     {
       "voter_id": "ISP259745",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Rina Simha",
@@ -4186,7 +4186,7 @@
     },
     {
       "voter_id": "DWQ225262",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Kamalesha",
@@ -4199,7 +4199,7 @@
     },
     {
       "voter_id": "SP3533973",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Pratika",
@@ -4212,7 +4212,7 @@
     },
     {
       "voter_id": "ISP470483",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Priti Kumari",
@@ -4225,7 +4225,7 @@
     },
     {
       "voter_id": "DWAQ552348",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Viyusha Kumara",
@@ -4238,7 +4238,7 @@
     },
     {
       "voter_id": "ISP0004476",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Sonali Shri0",
@@ -4251,7 +4251,7 @@
     },
     {
       "voter_id": "ISP2058022",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Chandravati Simha",
@@ -4264,7 +4264,7 @@
     },
     {
       "voter_id": "SP2287753",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Surendra Natha",
@@ -4277,7 +4277,7 @@
     },
     {
       "voter_id": "ISP0870865",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Dipaka Kumara Sinha",
@@ -4290,7 +4290,7 @@
     },
     {
       "voter_id": "DWQ5620000",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Maya Mishra",
@@ -4302,7 +4302,7 @@
     },
     {
       "voter_id": "SP3779835",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Kirtirani",
@@ -4315,7 +4315,7 @@
     },
     {
       "voter_id": "ISP2885044",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Prashamta Dipaka",
@@ -4328,7 +4328,7 @@
     },
     {
       "voter_id": "SP4893236",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Lalita Kyala",
@@ -4341,7 +4341,7 @@
     },
     {
       "voter_id": "ISP205584",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Rajiva Kumara Sharma",
@@ -4354,7 +4354,7 @@
     },
     {
       "voter_id": "ISP4347027",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Umesha",
@@ -4367,7 +4367,7 @@
     },
     {
       "voter_id": "ISP0870873",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Sumana Sinha",
@@ -4380,7 +4380,7 @@
     },
     {
       "voter_id": "WA267838",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Vrjesha",
@@ -4393,7 +4393,7 @@
     },
     {
       "voter_id": "SP3327004",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Hemanta Shrivastava",
@@ -4406,7 +4406,7 @@
     },
     {
       "voter_id": "ISP3394293",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Lalli Devi Shrivastava",
@@ -4419,7 +4419,7 @@
     },
     {
       "voter_id": "SP7487842",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Pramshaka Kumara Simha",
@@ -4432,7 +4432,7 @@
     },
     {
       "voter_id": "ISP487249",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Anita Sharma",
@@ -4445,7 +4445,7 @@
     },
     {
       "voter_id": "SP0873950",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Kamata Prasada",
@@ -4458,7 +4458,7 @@
     },
     {
       "voter_id": "ISP0873943",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Anupa Kumara",
@@ -4471,7 +4471,7 @@
     },
     {
       "voter_id": "ISP3828589",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Sunita Khatri",
@@ -4484,7 +4484,7 @@
     },
     {
       "voter_id": "ISP3326345",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Usha Shrivastava",
@@ -4497,7 +4497,7 @@
     },
     {
       "voter_id": "ISP332659",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Anila Kumara Yadava",
@@ -4510,7 +4510,7 @@
     },
     {
       "voter_id": "SP748723",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Jaya Prakasha Dube",
@@ -4523,7 +4523,7 @@
     },
     {
       "voter_id": "ISP502975",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Priyamka Chau I",
@@ -4536,7 +4536,7 @@
     },
     {
       "voter_id": "ISP4673659",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Lala Kesha",
@@ -4549,7 +4549,7 @@
     },
     {
       "voter_id": "ISP205779",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Anila Chauhana",
@@ -4562,7 +4562,7 @@
     },
     {
       "voter_id": "ISP0873984",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Rama Prasada",
@@ -4575,7 +4575,7 @@
     },
     {
       "voter_id": "ISP3828563",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Manisha Khatri",
@@ -4586,7 +4586,7 @@
     },
     {
       "voter_id": "ISP3394327",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ashoka Kumara Shrivastava",
@@ -4599,7 +4599,7 @@
     },
     {
       "voter_id": "SP0870972",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Nilama Devi",
@@ -4612,7 +4612,7 @@
     },
     {
       "voter_id": "ISPI676386",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Sudhira Kumara Dube",
@@ -4625,7 +4625,7 @@
     },
     {
       "voter_id": "SP289273",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Pratibha Pathaka",
@@ -4638,7 +4638,7 @@
     },
     {
       "voter_id": "ISP087236",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Satyendra Tivari",
@@ -4651,7 +4651,7 @@
     },
     {
       "voter_id": "SP3723745",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Shivama Jayasavala",
@@ -4664,7 +4664,7 @@
     },
     {
       "voter_id": "DWQ3253432",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Umesha Kumara",
@@ -4677,7 +4677,7 @@
     },
     {
       "voter_id": "ISP087745",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Hakima Ali",
@@ -4690,7 +4690,7 @@
     },
     {
       "voter_id": "ISP345775",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Sadhana Shrivastava",
@@ -4703,7 +4703,7 @@
     },
     {
       "voter_id": "DWWA2257379",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Samjaya",
@@ -4716,7 +4716,7 @@
     },
     {
       "voter_id": "SP4877429",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Shveta Dube",
@@ -4729,7 +4729,7 @@
     },
     {
       "voter_id": "ISP332605",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ar",
@@ -4742,7 +4742,7 @@
     },
     {
       "voter_id": "ISP353420",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Kusuma Tivari",
@@ -4755,7 +4755,7 @@
     },
     {
       "voter_id": "ISP0877202",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Pratima Devi",
@@ -4768,7 +4768,7 @@
     },
     {
       "voter_id": "ISP3723723",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Satyama Jayasavala",
@@ -4781,7 +4781,7 @@
     },
     {
       "voter_id": "ISP4582862",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ayusha Jayasavala",
@@ -4794,7 +4794,7 @@
     },
     {
       "voter_id": "ISP4569766",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Pramoda Kumara Mamjhi",
@@ -4807,7 +4807,7 @@
     },
     {
       "voter_id": "SP087778",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ruhi Begama",
@@ -4820,7 +4820,7 @@
     },
     {
       "voter_id": "ISP3457769",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Yogendra Kumara",
@@ -4833,7 +4833,7 @@
     },
     {
       "voter_id": "ISP0237834",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Anamika Shrivastava",
@@ -4846,7 +4846,7 @@
     },
     {
       "voter_id": "ISP087285",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Nirmala Devi",
@@ -4859,7 +4859,7 @@
     },
     {
       "voter_id": "SP3634772",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Shilpi Tivari",
@@ -4872,7 +4872,7 @@
     },
     {
       "voter_id": "WAS253440",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Pushpa Devi",
@@ -4885,7 +4885,7 @@
     },
     {
       "voter_id": "ISP456958",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Bebi Devi",
@@ -4898,7 +4898,7 @@
     },
     {
       "voter_id": "SP0877952",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Achche Lala Maurya",
@@ -4911,7 +4911,7 @@
     },
     {
       "voter_id": "ISP4950275",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Shaukata Ali",
@@ -4924,7 +4924,7 @@
     },
     {
       "voter_id": "SP229275",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Vijaya Bahadura Yadava",
@@ -4937,7 +4937,7 @@
     },
     {
       "voter_id": "SP087376",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "AES,",
@@ -4950,7 +4950,7 @@
     },
     {
       "voter_id": "ISP087368",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Mina Shrivastava",
@@ -4963,7 +4963,7 @@
     },
     {
       "voter_id": "ISP2292399",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Gita Raya",
@@ -4976,7 +4976,7 @@
     },
     {
       "voter_id": "ISP982784",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ra La Shukla",
@@ -4989,7 +4989,7 @@
     },
     {
       "voter_id": "ISP7982958",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Raju Yadava",
@@ -5000,7 +5000,7 @@
     },
     {
       "voter_id": "ISP676074",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Dhiraja Kumara Mishra",
@@ -5013,7 +5013,7 @@
     },
     {
       "voter_id": "SPI677368",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Abhijita Kumara Dvivedi",
@@ -5026,7 +5026,7 @@
     },
     {
       "voter_id": "ISP0350405",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Pradyumna Raya",
@@ -5039,7 +5039,7 @@
     },
     {
       "voter_id": "ISP087384",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Indu Devi",
@@ -5052,7 +5052,7 @@
     },
     {
       "voter_id": "ISP087350",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Pradipa Kumara Shrivastava",
@@ -5065,7 +5065,7 @@
     },
     {
       "voter_id": "SP2292662",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Devendra Pratapa",
@@ -5078,7 +5078,7 @@
     },
     {
       "voter_id": "SP229243",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Kusuma Gupta",
@@ -5091,7 +5091,7 @@
     },
     {
       "voter_id": "ISP2292365",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Vinoda Kumara Sharma",
@@ -5104,7 +5104,7 @@
     },
     {
       "voter_id": "ISP675966",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Urmila Devi",
@@ -5117,7 +5117,7 @@
     },
     {
       "voter_id": "ISP7982909",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ajaya Yadava",
@@ -5128,7 +5128,7 @@
     },
     {
       "voter_id": "ISPI676063",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Rajanisha Prakasha Simha",
@@ -5141,7 +5141,7 @@
     },
     {
       "voter_id": "ISP0350397",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Sudha Raya",
@@ -5154,7 +5154,7 @@
     },
     {
       "voter_id": "DWAS907749",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Shrimati Mamsa Devi",
@@ -5167,7 +5167,7 @@
     },
     {
       "voter_id": "SP229236",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Vinoda Kumara",
@@ -5180,7 +5180,7 @@
     },
     {
       "voter_id": "ISP2292233",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Sudha Simha",
@@ -5193,7 +5193,7 @@
     },
     {
       "voter_id": "ISP7676055",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Saroja Mishra",
@@ -5206,7 +5206,7 @@
     },
     {
       "voter_id": "SP228790",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Kavitri Devi",
@@ -5219,7 +5219,7 @@
     },
     {
       "voter_id": "ISP2287886",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar Uf",
       "name": "Sharada Kumara",
@@ -5232,7 +5232,7 @@
     },
     {
       "voter_id": "SP2292673",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar Uf",
       "name": "Vinaya Shila Trisharana",
@@ -5245,7 +5245,7 @@
     },
     {
       "voter_id": "SP229224",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar Uf",
       "name": "Prakasha Bajapei",
@@ -5258,7 +5258,7 @@
     },
     {
       "voter_id": "ISP2292654",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar Uf",
       "name": "Janaki Devi",
@@ -5271,7 +5271,7 @@
     },
     {
       "voter_id": "ISP2395390",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar Uf",
       "name": "Ramajna Vishvakarma",
@@ -5284,7 +5284,7 @@
     },
     {
       "voter_id": "ISPI675958",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar Uf",
       "name": "Vindravati Devi",
@@ -5297,7 +5297,7 @@
     },
     {
       "voter_id": "ISP7675933",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar Uf",
       "name": "Pushpa Shukla",
@@ -5310,7 +5310,7 @@
     },
     {
       "voter_id": "ISP2287696",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar Uf",
       "name": "Pamkaja Kumara",
@@ -5323,7 +5323,7 @@
     },
     {
       "voter_id": "DWO3955036",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar Uf",
       "name": "Basadei Devi",
@@ -5336,7 +5336,7 @@
     },
     {
       "voter_id": "SP2292274",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar Uf",
       "name": "Vinita",
@@ -5349,7 +5349,7 @@
     },
     {
       "voter_id": "ISP2292696",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar Uf",
       "name": "Viveka Kumara",
@@ -5362,7 +5362,7 @@
     },
     {
       "voter_id": "ISP7982982",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar Uf",
       "name": "Laxmi Narayana",
@@ -5375,7 +5375,7 @@
     },
     {
       "voter_id": "ISP7982644",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar Uf",
       "name": "Krshna Kumara Jayasavala",
@@ -5388,7 +5388,7 @@
     },
     {
       "voter_id": "ISP982677",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar Uf",
       "name": "Omkara Chau I",
@@ -5401,7 +5401,7 @@
     },
     {
       "voter_id": "SP229257",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar Uf",
       "name": "Sushila Kumara",
@@ -5414,7 +5414,7 @@
     },
     {
       "voter_id": "ISP2395382",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar Uf",
       "name": "Gita Devi",
@@ -5427,7 +5427,7 @@
     },
     {
       "voter_id": "ISP675974",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar Uf",
       "name": "Grija Jayasavala",
@@ -5440,7 +5440,7 @@
     },
     {
       "voter_id": "ISP7982933",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar Uf",
       "name": "Devakumara Simha",
@@ -5453,7 +5453,7 @@
     },
     {
       "voter_id": "SP0874723",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Sunita Devi",
@@ -5466,7 +5466,7 @@
     },
     {
       "voter_id": "SP2057842",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Rakesha Kumara Gupta",
@@ -5479,7 +5479,7 @@
     },
     {
       "voter_id": "SP3352523",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Vidyavati Devi",
@@ -5492,7 +5492,7 @@
     },
     {
       "voter_id": "ISP334055",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Gayatri Devi Yadava",
@@ -5505,7 +5505,7 @@
     },
     {
       "voter_id": "ISP3340536",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Rajakumara",
@@ -5518,7 +5518,7 @@
     },
     {
       "voter_id": "ISP3838588",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Sarasvati Shrivastava",
@@ -5531,7 +5531,7 @@
     },
     {
       "voter_id": "SP3579620",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Abhinamdana Shrivastava",
@@ -5544,7 +5544,7 @@
     },
     {
       "voter_id": "SP4426292",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Nisha Yadava",
@@ -5557,7 +5557,7 @@
     },
     {
       "voter_id": "SP2057743",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Kanhaiya Yadava",
@@ -5568,7 +5568,7 @@
     },
     {
       "voter_id": "ISP3393394",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Isaravati Devi",
@@ -5581,7 +5581,7 @@
     },
     {
       "voter_id": "ISP2890697",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Shveta Maddheshiya",
@@ -5594,7 +5594,7 @@
     },
     {
       "voter_id": "ISP0004768",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ramesha Chandra",
@@ -5607,7 +5607,7 @@
     },
     {
       "voter_id": "ISP353438",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Kalpataru La Di",
@@ -5620,7 +5620,7 @@
     },
     {
       "voter_id": "ISP3396256",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Rshi Kumara Gupta",
@@ -5633,7 +5633,7 @@
     },
     {
       "voter_id": "SP4463808",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Puja Dvivedi",
@@ -5646,7 +5646,7 @@
     },
     {
       "voter_id": "SP0874099",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Manoja Kumara",
@@ -5659,7 +5659,7 @@
     },
     {
       "voter_id": "SP087408",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Vinni Devi",
@@ -5672,7 +5672,7 @@
     },
     {
       "voter_id": "PWAR442029",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Radheshyama",
@@ -5685,7 +5685,7 @@
     },
     {
       "voter_id": "ISP2897604",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ramachandara Simha",
@@ -5698,7 +5698,7 @@
     },
     {
       "voter_id": "ISP404570",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Abhinava Pamde",
@@ -5711,7 +5711,7 @@
     },
     {
       "voter_id": "ISP3534746",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Chandana",
@@ -5724,7 +5724,7 @@
     },
     {
       "voter_id": "ISP3579638",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Akarshika Gau.da",
@@ -5737,7 +5737,7 @@
     },
     {
       "voter_id": "ISP4739630",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ajaya Nishada",
@@ -5750,7 +5750,7 @@
     },
     {
       "voter_id": "ISP424743",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Gaurava Simha",
@@ -5763,7 +5763,7 @@
     },
     {
       "voter_id": "ISP3579596",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Nainsi Sharma",
@@ -5776,7 +5776,7 @@
     },
     {
       "voter_id": "ISP3534787",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ajada Chandrashekhara Simha",
@@ -5789,7 +5789,7 @@
     },
     {
       "voter_id": "ISP3396439",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Pramoda Kumara Shrivastava",
@@ -5802,7 +5802,7 @@
     },
     {
       "voter_id": "ISP3396447",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ajaya Kumara Shrivastava",
@@ -5815,7 +5815,7 @@
     },
     {
       "voter_id": "ISP0004226",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Samchita Asthana",
@@ -5828,7 +5828,7 @@
     },
     {
       "voter_id": "ISP7483098",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Satya Simha",
@@ -5841,7 +5841,7 @@
     },
     {
       "voter_id": "SP3392297",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Mamata Shrivastava",
@@ -5854,7 +5854,7 @@
     },
     {
       "voter_id": "ISP4958674",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Rima Chau I",
@@ -5867,7 +5867,7 @@
     },
     {
       "voter_id": "ISP3579604",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Shivama Sharma",
@@ -5880,7 +5880,7 @@
     },
     {
       "voter_id": "ISP3534295",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Satya Simha",
@@ -5893,7 +5893,7 @@
     },
     {
       "voter_id": "ISP3396462",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Punama Devi",
@@ -5906,7 +5906,7 @@
     },
     {
       "voter_id": "SP000428",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Kirana Sharma",
@@ -5919,7 +5919,7 @@
     },
     {
       "voter_id": "ISP0870980",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Sarita",
@@ -5932,7 +5932,7 @@
     },
     {
       "voter_id": "ISP483080",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Sarita Simha",
@@ -5945,7 +5945,7 @@
     },
     {
       "voter_id": "ISP488378",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Satyapala Mishra",
@@ -5958,7 +5958,7 @@
     },
     {
       "voter_id": "ISP4958526",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Puja Chau I",
@@ -5971,7 +5971,7 @@
     },
     {
       "voter_id": "ISP7488055",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Sumana Sharma",
@@ -5984,7 +5984,7 @@
     },
     {
       "voter_id": "SP087327",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Sudama Devi",
@@ -5997,7 +5997,7 @@
     },
     {
       "voter_id": "ISP3396454",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Vijaya Kumara Shrivastava",
@@ -6010,7 +6010,7 @@
     },
     {
       "voter_id": "ISP087498",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Urmila Devi",
@@ -6023,7 +6023,7 @@
     },
     {
       "voter_id": "SP3392289",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Atma Prasada",
@@ -6036,7 +6036,7 @@
     },
     {
       "voter_id": "ISP7488386",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Vindhya Vasini Mishra",
@@ -6049,7 +6049,7 @@
     },
     {
       "voter_id": "ISP3838638",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Amalesha Kumara Shrivastava",
@@ -6062,7 +6062,7 @@
     },
     {
       "voter_id": "ISP4980603",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Vaibhava Shrivastava",
@@ -6075,7 +6075,7 @@
     },
     {
       "voter_id": "ISP4347035",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Dipaka Shrivastava",
@@ -6088,7 +6088,7 @@
     },
     {
       "voter_id": "ISP4894622",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Shilpa Pandeya",
@@ -6101,7 +6101,7 @@
     },
     {
       "voter_id": "ISP289349",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Balmika",
@@ -6114,7 +6114,7 @@
     },
     {
       "voter_id": "ISP289067",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Sumana Devi",
@@ -6127,7 +6127,7 @@
     },
     {
       "voter_id": "SP2890937",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Shanti Devi",
@@ -6140,7 +6140,7 @@
     },
     {
       "voter_id": "ISP3396298",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Shashiprabha",
@@ -6153,7 +6153,7 @@
     },
     {
       "voter_id": "ISP3396496",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Dipaka Kumara Shrivastava",
@@ -6166,7 +6166,7 @@
     },
     {
       "voter_id": "ISP3838646",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Vibha Shrivastava",
@@ -6179,7 +6179,7 @@
     },
     {
       "voter_id": "SP3838620",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Kamalesha Kumara Shrivastava",
@@ -6192,7 +6192,7 @@
     },
     {
       "voter_id": "ISP727364",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ratnesha Kumara Pandeya",
@@ -6205,7 +6205,7 @@
     },
     {
       "voter_id": "ISP3579703",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Kamini Shrivastava",
@@ -6218,7 +6218,7 @@
     },
     {
       "voter_id": "ISP3396504",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ar",
@@ -6231,7 +6231,7 @@
     },
     {
       "voter_id": "ISP3838653",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Vishala Shrivastava",
@@ -6244,7 +6244,7 @@
     },
     {
       "voter_id": "ISP4894606",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Saurabha Pandeya",
@@ -6257,7 +6257,7 @@
     },
     {
       "voter_id": "SP2897554",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ramayana",
@@ -6270,7 +6270,7 @@
     },
     {
       "voter_id": "ISP4965968",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Nitesha Sharma",
@@ -6283,7 +6283,7 @@
     },
     {
       "voter_id": "ISP3396488",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Usha Shrivastava",
@@ -6296,7 +6296,7 @@
     },
     {
       "voter_id": "ISP7488074",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Radhika",
@@ -6309,7 +6309,7 @@
     },
     {
       "voter_id": "SP339637",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Puja Varma",
@@ -6322,7 +6322,7 @@
     },
     {
       "voter_id": "ISP4796447",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Shyama Lala",
@@ -6333,7 +6333,7 @@
     },
     {
       "voter_id": "ISP259097",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Nisha Sharma",
@@ -6346,7 +6346,7 @@
     },
     {
       "voter_id": "ISP4057964",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Prashamta Kumara",
@@ -6357,7 +6357,7 @@
     },
     {
       "voter_id": "ISP259303",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Satyama",
@@ -6370,7 +6370,7 @@
     },
     {
       "voter_id": "ISP794483",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ashoka Kumara Sharma",
@@ -6383,7 +6383,7 @@
     },
     {
       "voter_id": "ISP744823",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Devavrata Sharma",
@@ -6396,7 +6396,7 @@
     },
     {
       "voter_id": "ISP3569803",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Sumana Mishra",
@@ -6409,7 +6409,7 @@
     },
     {
       "voter_id": "SP4726207",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Dhiraja Shukla",
@@ -6422,7 +6422,7 @@
     },
     {
       "voter_id": "SP2597402",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Rita Varma",
@@ -6435,7 +6435,7 @@
     },
     {
       "voter_id": "ISP335535",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Madhu Varma",
@@ -6448,7 +6448,7 @@
     },
     {
       "voter_id": "ISP4798690",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Pintu Shyama Lala",
@@ -6461,7 +6461,7 @@
     },
     {
       "voter_id": "ISP404524",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Vinita Kumara Shrivastava",
@@ -6474,7 +6474,7 @@
     },
     {
       "voter_id": "SP2897497",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Pratika Kumara Sharma",
@@ -6487,7 +6487,7 @@
     },
     {
       "voter_id": "SP745085",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Tara Devi",
@@ -6500,7 +6500,7 @@
     },
     {
       "voter_id": "ISP2057784",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Amarajita Gupta",
@@ -6513,7 +6513,7 @@
     },
     {
       "voter_id": "ISP259352",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Jayaprakasha",
@@ -6526,7 +6526,7 @@
     },
     {
       "voter_id": "ISP2597436",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Munni Devi",
@@ -6539,7 +6539,7 @@
     },
     {
       "voter_id": "SP387438",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Srjana Krshna Pratapa",
@@ -6552,7 +6552,7 @@
     },
     {
       "voter_id": "SP4798773",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Madhuri Pintu",
@@ -6565,7 +6565,7 @@
     },
     {
       "voter_id": "ISP2597089",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Tara Devi",
@@ -6578,7 +6578,7 @@
     },
     {
       "voter_id": "ISP4795928",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Kirana Kumari Sharma Sharma",
@@ -6591,7 +6591,7 @@
     },
     {
       "voter_id": "ISP745093",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Nitesha Kumara Sharma",
@@ -6604,7 +6604,7 @@
     },
     {
       "voter_id": "ISP2590966",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ganesha Prasada",
@@ -6617,7 +6617,7 @@
     },
     {
       "voter_id": "ISP3396223",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Vandana",
@@ -6630,7 +6630,7 @@
     },
     {
       "voter_id": "ISP3396082",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Rajakumara Varma",
@@ -6643,7 +6643,7 @@
     },
     {
       "voter_id": "ISP2590792",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Bandana Shrivastava",
@@ -6656,7 +6656,7 @@
     },
     {
       "voter_id": "ISP3340544",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Vidyavati Devi",
@@ -6669,7 +6669,7 @@
     },
     {
       "voter_id": "SP404207",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Kumvara Aditya",
@@ -6682,7 +6682,7 @@
     },
     {
       "voter_id": "ISP0257444",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ashisha Kumara",
@@ -6695,7 +6695,7 @@
     },
     {
       "voter_id": "SP3723764",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Parula Shrivastava",
@@ -6708,7 +6708,7 @@
     },
     {
       "voter_id": "SP3787934",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Vishala Simha",
@@ -6721,7 +6721,7 @@
     },
     {
       "voter_id": "ISP3355393",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Rashmi Tripathi",
@@ -6734,7 +6734,7 @@
     },
     {
       "voter_id": "ISP4648283",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Mina Tripathi",
@@ -6747,7 +6747,7 @@
     },
     {
       "voter_id": "ISP3396090",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Nilama Varma",
@@ -6760,7 +6760,7 @@
     },
     {
       "voter_id": "ISP2590842",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Mamata Shrivastava",
@@ -6773,7 +6773,7 @@
     },
     {
       "voter_id": "ISP289709",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Suresha Kumara",
@@ -6786,7 +6786,7 @@
     },
     {
       "voter_id": "ISP3340569",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Samju Agrahari",
@@ -6799,7 +6799,7 @@
     },
     {
       "voter_id": "SP200402",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Akasha",
@@ -6812,7 +6812,7 @@
     },
     {
       "voter_id": "SP229283",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Devendra Pratapa Simha",
@@ -6825,7 +6825,7 @@
     },
     {
       "voter_id": "ISP7483037",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Tuga Natha Mishra",
@@ -6838,7 +6838,7 @@
     },
     {
       "voter_id": "ISP4572760",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Anamola Raja Varma",
@@ -6849,7 +6849,7 @@
     },
     {
       "voter_id": "ISP2590784",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Rajesha Kumara Shrivastava",
@@ -6862,7 +6862,7 @@
     },
     {
       "voter_id": "ISP2897083",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Shila Devi",
@@ -6875,7 +6875,7 @@
     },
     {
       "voter_id": "ISP3569837",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Dixa Simha",
@@ -6888,7 +6888,7 @@
     },
     {
       "voter_id": "ISP3355385",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Dipti Tripathi",
@@ -6901,7 +6901,7 @@
     },
     {
       "voter_id": "SP4648275",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Oma Prakasha Tripathi",
@@ -6914,7 +6914,7 @@
     },
     {
       "voter_id": "ISP2890853",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Punama Nishada",
@@ -6927,7 +6927,7 @@
     },
     {
       "voter_id": "SP3569787",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Pavana Kumara Simha",
@@ -6940,7 +6940,7 @@
     },
     {
       "voter_id": "ISP3325826",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Rupesha Kumara",
@@ -6953,7 +6953,7 @@
     },
     {
       "voter_id": "SP2007295",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Punama",
@@ -6966,7 +6966,7 @@
     },
     {
       "voter_id": "SP2055070",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Moni Saroja",
@@ -6979,7 +6979,7 @@
     },
     {
       "voter_id": "ISP2292506",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Munni Simha",
@@ -6992,7 +6992,7 @@
     },
     {
       "voter_id": "ISP0870964",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ashoka Kumara Sharma",
@@ -7005,7 +7005,7 @@
     },
     {
       "voter_id": "ISP353476",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Abhisheka Kumara Raya",
@@ -7018,7 +7018,7 @@
     },
     {
       "voter_id": "ISP7488329",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Sadhana Keshari",
@@ -7031,7 +7031,7 @@
     },
     {
       "voter_id": "ISP2590693",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Satyama Tripathi",
@@ -7044,7 +7044,7 @@
     },
     {
       "voter_id": "ISP2055085",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ramesha Kumara Tivari",
@@ -7057,7 +7057,7 @@
     },
     {
       "voter_id": "SP2292647",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Kamalesha Pandeya",
@@ -7070,7 +7070,7 @@
     },
     {
       "voter_id": "ISP3569779",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Lilavati Simha",
@@ -7083,7 +7083,7 @@
     },
     {
       "voter_id": "ISP982859",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Raju Mishra",
@@ -7096,7 +7096,7 @@
     },
     {
       "voter_id": "ISP2007088",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Rajakumara",
@@ -7109,7 +7109,7 @@
     },
     {
       "voter_id": "SP0870840",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ghanashyama Sharma",
@@ -7122,7 +7122,7 @@
     },
     {
       "voter_id": "SP0257436",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Niraja Kumara",
@@ -7135,7 +7135,7 @@
     },
     {
       "voter_id": "SP2057875",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Kumuda Pathaka",
@@ -7148,7 +7148,7 @@
     },
     {
       "voter_id": "ISP2055069",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Sandhya Tivari",
@@ -7161,7 +7161,7 @@
     },
     {
       "voter_id": "ISP706350",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Motilala Yadava",
@@ -7174,7 +7174,7 @@
     },
     {
       "voter_id": "ISP706202",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Mukhtara Ahamada",
@@ -7187,7 +7187,7 @@
     },
     {
       "voter_id": "SP2057685",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Devendra Pandeya",
@@ -7200,7 +7200,7 @@
     },
     {
       "voter_id": "ISP205770",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Shrimati Sima Shrivastava",
@@ -7213,7 +7213,7 @@
     },
     {
       "voter_id": "ISP2057362",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Shobha Devi Dixita",
@@ -7226,7 +7226,7 @@
     },
     {
       "voter_id": "SP205742",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Vinoda Chandra Tivari",
@@ -7239,7 +7239,7 @@
     },
     {
       "voter_id": "ISP2057545",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Rajana Mishra",
@@ -7252,7 +7252,7 @@
     },
     {
       "voter_id": "ISP706794",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Jayagamguli",
@@ -7265,7 +7265,7 @@
     },
     {
       "voter_id": "SP087392",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Kirana Jayasavala",
@@ -7278,7 +7278,7 @@
     },
     {
       "voter_id": "SP2057800",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Manoja Kumara Shrivastava",
@@ -7291,7 +7291,7 @@
     },
     {
       "voter_id": "ISP2058030",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Dipa Bhattacharya",
@@ -7304,7 +7304,7 @@
     },
     {
       "voter_id": "ISP2057446",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Kumari Shalvi",
@@ -7317,7 +7317,7 @@
     },
     {
       "voter_id": "SP2057503",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Namnata Dixita",
@@ -7330,7 +7330,7 @@
     },
     {
       "voter_id": "ISP205760",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Gorakhanatha Mishra",
@@ -7343,7 +7343,7 @@
     },
     {
       "voter_id": "SP2057909",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Shrimati Supriya Praja",
@@ -7356,7 +7356,7 @@
     },
     {
       "voter_id": "ISP7093752",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Laleshvara Vishvakarma",
@@ -7369,7 +7369,7 @@
     },
     {
       "voter_id": "ISP7906228",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Saliya Khatuna",
@@ -7382,7 +7382,7 @@
     },
     {
       "voter_id": "ISP205765",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ra La Pandeya",
@@ -7395,7 +7395,7 @@
     },
     {
       "voter_id": "ISP2058006",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Surabhi Mishra",
@@ -7408,7 +7408,7 @@
     },
     {
       "voter_id": "ISP205872",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Sitarama Yadava",
@@ -7421,7 +7421,7 @@
     },
     {
       "voter_id": "ISP289042",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Jayamani Tripathi",
@@ -7434,7 +7434,7 @@
     },
     {
       "voter_id": "ISP0366435",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Amita Kumara",
@@ -7447,7 +7447,7 @@
     },
     {
       "voter_id": "ISP4626883",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Anuradha Gupta",
@@ -7460,7 +7460,7 @@
     },
     {
       "voter_id": "ISP4855789",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Anila Kumara Pandeya",
@@ -7473,7 +7473,7 @@
     },
     {
       "voter_id": "SP4855722",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Puja",
@@ -7486,7 +7486,7 @@
     },
     {
       "voter_id": "ISP4807643",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Khushabu Yadava",
@@ -7498,7 +7498,7 @@
     },
     {
       "voter_id": "ISP0004978",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Samjaya Kumara Bhatta",
@@ -7511,7 +7511,7 @@
     },
     {
       "voter_id": "ISP7676089",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Narendra Yadava",
@@ -7524,7 +7524,7 @@
     },
     {
       "voter_id": "ISP2890838",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Anubhava Yadava",
@@ -7537,7 +7537,7 @@
     },
     {
       "voter_id": "SP0257378",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Renu Simha",
@@ -7550,7 +7550,7 @@
     },
     {
       "voter_id": "ISP3968039",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Aruna Kumara Shrivastava",
@@ -7563,7 +7563,7 @@
     },
     {
       "voter_id": "ISP676264",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Durga Simha",
@@ -7576,7 +7576,7 @@
     },
     {
       "voter_id": "SP2002452",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Vijendra Kumara Raya",
@@ -7589,7 +7589,7 @@
     },
     {
       "voter_id": "ISP3396264",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Surendra Kumara Shrivastava",
@@ -7602,7 +7602,7 @@
     },
     {
       "voter_id": "ISP2058063",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Kunti",
@@ -7615,7 +7615,7 @@
     },
     {
       "voter_id": "ISP0004986",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Urmila Bhatta",
@@ -7628,7 +7628,7 @@
     },
     {
       "voter_id": "ISP3968047",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Shri Mati Punama Shrivastava",
@@ -7641,7 +7641,7 @@
     },
     {
       "voter_id": "SP2002477",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Kusuma",
@@ -7654,7 +7654,7 @@
     },
     {
       "voter_id": "ISP4855896",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ambesha Kumara Pandeya",
@@ -7667,7 +7667,7 @@
     },
     {
       "voter_id": "ISP4642922",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Raja Kumari Devi",
@@ -7680,7 +7680,7 @@
     },
     {
       "voter_id": "ISP2890796",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Sunila Kumara Jha",
@@ -7693,7 +7693,7 @@
     },
     {
       "voter_id": "ISP2550952",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ajaya Kumara Shrivastava",
@@ -7706,7 +7706,7 @@
     },
     {
       "voter_id": "ISP2550903",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Tulika Shrivastava",
@@ -7719,7 +7719,7 @@
     },
     {
       "voter_id": "ISP289356",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Satisha Kumara Simha",
@@ -7732,7 +7732,7 @@
     },
     {
       "voter_id": "SP2897474",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Urmila Simha",
@@ -7745,7 +7745,7 @@
     },
     {
       "voter_id": "ISP468628",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Varnita Tripathi",
@@ -7758,7 +7758,7 @@
     },
     {
       "voter_id": "ISP766785",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Echa Ela Shrivastava",
@@ -7771,7 +7771,7 @@
     },
     {
       "voter_id": "SP2550937",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Atula Ananda",
@@ -7784,7 +7784,7 @@
     },
     {
       "voter_id": "ISP2550960",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Mrdula Chitramshi",
@@ -7797,7 +7797,7 @@
     },
     {
       "voter_id": "ISP2897364",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Bhanu Pratapa Simha",
@@ -7810,7 +7810,7 @@
     },
     {
       "voter_id": "ISP2897265",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ward Simha",
@@ -7823,7 +7823,7 @@
     },
     {
       "voter_id": "ISP2597428",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Kalavati Devi",
@@ -7836,7 +7836,7 @@
     },
     {
       "voter_id": "ISP667807",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Nandini Shrivastava",
@@ -7849,7 +7849,7 @@
     },
     {
       "voter_id": "ISP259337",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Niraja Kumara Mishra",
@@ -7862,7 +7862,7 @@
     },
     {
       "voter_id": "ISP3396773",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ramjana Lala Sharma",
@@ -7875,7 +7875,7 @@
     },
     {
       "voter_id": "ISP442629",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Asmita Shrivastava",
@@ -7888,7 +7888,7 @@
     },
     {
       "voter_id": "ISP289726",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "San{}tosha",
@@ -7901,7 +7901,7 @@
     },
     {
       "voter_id": "SP487530",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Prakhara Simha",
@@ -7914,7 +7914,7 @@
     },
     {
       "voter_id": "ISP4596987",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Abhisheka Simha",
@@ -7927,7 +7927,7 @@
     },
     {
       "voter_id": "ISP2597947",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Sunita Mishra",
@@ -7940,7 +7940,7 @@
     },
     {
       "voter_id": "ISP339665",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ramjita Sharma",
@@ -7953,7 +7953,7 @@
     },
     {
       "voter_id": "ISP3396397",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Kusuma Shukla",
@@ -7966,7 +7966,7 @@
     },
     {
       "voter_id": "ISP3396405",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Satisha Shukla",
@@ -7979,7 +7979,7 @@
     },
     {
       "voter_id": "SP0005223",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Vina Devi",
@@ -7992,7 +7992,7 @@
     },
     {
       "voter_id": "ISP339642",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Shivadeva Shukla",
@@ -8005,7 +8005,7 @@
     },
     {
       "voter_id": "ISP4426953",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Nidhi Shrivastava",
@@ -8018,7 +8018,7 @@
     },
     {
       "voter_id": "ISP396802",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Sunidhi Shrivastava",
@@ -8031,7 +8031,7 @@
     },
     {
       "voter_id": "ISP3396473",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Shveta Shukla",
@@ -8044,7 +8044,7 @@
     },
     {
       "voter_id": "SP5083738",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Pratima Simha",
@@ -8057,7 +8057,7 @@
     },
     {
       "voter_id": "ISP5089065",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Raja Namdini Varma",
@@ -8070,7 +8070,7 @@
     },
     {
       "voter_id": "ISP5098074",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Satyama Simha",
@@ -8083,7 +8083,7 @@
     },
     {
       "voter_id": "ISP5703460",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Nagendra Shrivastava",
@@ -8096,7 +8096,7 @@
     },
     {
       "voter_id": "ISP5728830",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Asmita Shrivastava",
@@ -8109,7 +8109,7 @@
     },
     {
       "voter_id": "ISP5729085",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Siddhartha Krshna",
@@ -8122,7 +8122,7 @@
     },
     {
       "voter_id": "ISP5733822",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Shobha",
@@ -8135,7 +8135,7 @@
     },
     {
       "voter_id": "ISP5079504",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Amana Samani",
@@ -8148,7 +8148,7 @@
     },
     {
       "voter_id": "ISP5097027",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Sne Ta Chauhana",
@@ -8161,7 +8161,7 @@
     },
     {
       "voter_id": "ISP5724250",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Dhammamitra",
@@ -8174,7 +8174,7 @@
     },
     {
       "voter_id": "ISP5725299",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Chanda Kumari",
@@ -8187,7 +8187,7 @@
     },
     {
       "voter_id": "ISP5728855",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Suryasha Shrivastava",
@@ -8198,7 +8198,7 @@
     },
     {
       "voter_id": "SP572927",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Shreyamsha Shrivastava",
@@ -8211,7 +8211,7 @@
     },
     {
       "voter_id": "ISP5734784",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Vikasha Kumara Gupta",
@@ -8224,7 +8224,7 @@
     },
     {
       "voter_id": "ISP5080684",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Rudraxa",
@@ -8237,7 +8237,7 @@
     },
     {
       "voter_id": "ISP5084256",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Harshita Tripathi",
@@ -8250,7 +8250,7 @@
     },
     {
       "voter_id": "ISP5097399",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Bhavana Lakhamani",
@@ -8263,7 +8263,7 @@
     },
     {
       "voter_id": "ISP5725026",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ayusha Shrivastava",
@@ -8276,7 +8276,7 @@
     },
     {
       "voter_id": "ISP5726462",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Anupama Mishra",
@@ -8289,7 +8289,7 @@
     },
     {
       "voter_id": "ISP5729358",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Shalini Chauhana",
@@ -8302,7 +8302,7 @@
     },
     {
       "voter_id": "ISP5225206",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ramjana",
@@ -8315,7 +8315,7 @@
     },
     {
       "voter_id": "ISP523266",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Priya Varma",
@@ -8328,7 +8328,7 @@
     },
     {
       "voter_id": "ISP5264346",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Amkita Kumara",
@@ -8340,7 +8340,7 @@
     },
     {
       "voter_id": "ISP5264387",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Malati Devi",
@@ -8353,7 +8353,7 @@
     },
     {
       "voter_id": "ISP5264429",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Saumya Viramsha",
@@ -8366,7 +8366,7 @@
     },
     {
       "voter_id": "ISP5265780",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Maya",
@@ -8379,7 +8379,7 @@
     },
     {
       "voter_id": "SP5269808",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Rajesha Gau.da",
@@ -8390,7 +8390,7 @@
     },
     {
       "voter_id": "ISP529493",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Jagrti Shrivastava",
@@ -8403,7 +8403,7 @@
     },
     {
       "voter_id": "ISP522607",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Viveka Kumara",
@@ -8414,7 +8414,7 @@
     },
     {
       "voter_id": "ISP5259387",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Akasha Gupta",
@@ -8427,7 +8427,7 @@
     },
     {
       "voter_id": "ISP5264353",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Sima",
@@ -8440,7 +8440,7 @@
     },
     {
       "voter_id": "ISP5264395",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Shveta Rani",
@@ -8452,7 +8452,7 @@
     },
     {
       "voter_id": "ISP5264502",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Balavanta Prasada",
@@ -8464,7 +8464,7 @@
     },
     {
       "voter_id": "ISP5267646",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Rajesha Gau.da",
@@ -8477,7 +8477,7 @@
     },
     {
       "voter_id": "ISP5272869",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Anita Saini",
@@ -8490,7 +8490,7 @@
     },
     {
       "voter_id": "ISP533093",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ruqasara Khanama",
@@ -8503,7 +8503,7 @@
     },
     {
       "voter_id": "SP5774529",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Dipa Shikha",
@@ -8516,7 +8516,7 @@
     },
     {
       "voter_id": "ISP5226758",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ragini",
@@ -8527,7 +8527,7 @@
     },
     {
       "voter_id": "ISP5264320",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Shila Mishra",
@@ -8540,7 +8540,7 @@
     },
     {
       "voter_id": "SP526436",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Vinaya Kumara",
@@ -8553,7 +8553,7 @@
     },
     {
       "voter_id": "ISP526447",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Vinita Kumara",
@@ -8566,7 +8566,7 @@
     },
     {
       "voter_id": "ISP5265053",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Jnanamati Shrivastava",
@@ -8577,7 +8577,7 @@
     },
     {
       "voter_id": "ISP5268594",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Priyamshu Mishra",
@@ -8590,7 +8590,7 @@
     },
     {
       "voter_id": "ISP5272885",
-      "part_number": 3,
+      "part_number": 13,
       "section_number": 2,
       "section_name": "Jungle Nakaha No.2 Vikas Nagar af",
       "name": "Ritesha Chamdra Gupta",

@@ -4,7 +4,7 @@
     "total_pages": 43,
     "state": "Uttar Pradesh",
     "year": 2026,
-    "part_number": 44,
+    "part_number": 11,
     "assembly_constituency": {
       "number": 322,
       "name": "Gorakhpur City",
@@ -21,7 +21,7 @@
   "voter_records": [
     {
       "voter_id": "ISP7980952",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Surendra Tripathi",
@@ -34,7 +34,7 @@
     },
     {
       "voter_id": "ISP7486075",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Anuja Shrivastava",
@@ -47,7 +47,7 @@
     },
     {
       "voter_id": "ISP4458205",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Shivama Tripathi Tripathi",
@@ -60,7 +60,7 @@
     },
     {
       "voter_id": "ISP767264",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Oma Prakasha Mishra",
@@ -73,7 +73,7 @@
     },
     {
       "voter_id": "ISP7486307",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Usha Kumari",
@@ -86,7 +86,7 @@
     },
     {
       "voter_id": "ISP798744",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Punama Pandeya",
@@ -99,7 +99,7 @@
     },
     {
       "voter_id": "SP7484757",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Sita Yadava",
@@ -112,7 +112,7 @@
     },
     {
       "voter_id": "ISP7486240",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Sajaya Yadava",
@@ -125,7 +125,7 @@
     },
     {
       "voter_id": "ISP4037480",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Sachina Kumara Anamda",
@@ -138,7 +138,7 @@
     },
     {
       "voter_id": "ISP2053536",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Champa Devi",
@@ -151,7 +151,7 @@
     },
     {
       "voter_id": "ISP672633",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Aruna Tivari",
@@ -164,7 +164,7 @@
     },
     {
       "voter_id": "ISP672872",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Bhara Dvaja Muni",
@@ -177,7 +177,7 @@
     },
     {
       "voter_id": "ISP7674084",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Sunila Kumara Shrivastava",
@@ -190,7 +190,7 @@
     },
     {
       "voter_id": "ISPI672443",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Oma Prakasha Dube",
@@ -203,7 +203,7 @@
     },
     {
       "voter_id": "ISP486960",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Gaurava Nigama",
@@ -216,7 +216,7 @@
     },
     {
       "voter_id": "ISP7486282",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Shivadayala",
@@ -229,7 +229,7 @@
     },
     {
       "voter_id": "ISP4929840",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Ashisha Simha",
@@ -242,7 +242,7 @@
     },
     {
       "voter_id": "ISP7484534",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Munni Mishra",
@@ -255,7 +255,7 @@
     },
     {
       "voter_id": "ISPI672393",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Ashisha Shrivastava",
@@ -268,7 +268,7 @@
     },
     {
       "voter_id": "ISP672492",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Manju Varma",
@@ -281,7 +281,7 @@
     },
     {
       "voter_id": "ISP3340528",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Shailesha Sharma",
@@ -294,7 +294,7 @@
     },
     {
       "voter_id": "ISP7672583",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Ramananda",
@@ -307,7 +307,7 @@
     },
     {
       "voter_id": "ISP7672963",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Maya Devi",
@@ -320,7 +320,7 @@
     },
     {
       "voter_id": "SP205724",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Rina Sinha",
@@ -333,7 +333,7 @@
     },
     {
       "voter_id": "ISP748609",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Shiva Kumara",
@@ -346,7 +346,7 @@
     },
     {
       "voter_id": "ISP7484708",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Kushamavati Devi",
@@ -359,7 +359,7 @@
     },
     {
       "voter_id": "ISP7675800",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Kumuda",
@@ -372,7 +372,7 @@
     },
     {
       "voter_id": "ISP7672526",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Shri Shyama Devi",
@@ -385,7 +385,7 @@
     },
     {
       "voter_id": "ISP5037999",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Rama Rupa Maurya",
@@ -398,7 +398,7 @@
     },
     {
       "voter_id": "ISP767259",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Jnanamati Devi",
@@ -411,7 +411,7 @@
     },
     {
       "voter_id": "ISP7672690",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Ravi Kumara Nigama",
@@ -424,7 +424,7 @@
     },
     {
       "voter_id": "ISP672856",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Mamjula Sharma",
@@ -437,7 +437,7 @@
     },
     {
       "voter_id": "ISP7486893",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Shashibala Mishra",
@@ -449,7 +449,7 @@
     },
     {
       "voter_id": "ISP7486885",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Shivama Kumara Mishra",
@@ -461,7 +461,7 @@
     },
     {
       "voter_id": "SP2056877",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Pushpa Devi",
@@ -474,7 +474,7 @@
     },
     {
       "voter_id": "ISP7672578",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Ashoka Varma",
@@ -487,7 +487,7 @@
     },
     {
       "voter_id": "ISP7486695",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Ananda Tripathi",
@@ -500,7 +500,7 @@
     },
     {
       "voter_id": "ISP7672724",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Dipa Nigama",
@@ -513,7 +513,7 @@
     },
     {
       "voter_id": "ISP672799",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Jagadamba Devi",
@@ -526,7 +526,7 @@
     },
     {
       "voter_id": "ISP7672864",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Prema Lata Sharma",
@@ -539,7 +539,7 @@
     },
     {
       "voter_id": "ISP7484658",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Amjali",
@@ -552,7 +552,7 @@
     },
     {
       "voter_id": "ISP486208",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Rama",
@@ -565,7 +565,7 @@
     },
     {
       "voter_id": "SPI675878",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Kaushala Kishora",
@@ -578,7 +578,7 @@
     },
     {
       "voter_id": "ISP7675354",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Manasa Shrivastava",
@@ -591,7 +591,7 @@
     },
     {
       "voter_id": "ISP748550",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Shri Rajendra Prasada",
@@ -604,7 +604,7 @@
     },
     {
       "voter_id": "ISP748592",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Pritisa Ku0 Chaube",
@@ -617,7 +617,7 @@
     },
     {
       "voter_id": "ISP205860",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Pavana Kumara Pandeya",
@@ -630,7 +630,7 @@
     },
     {
       "voter_id": "ISP7485978",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Viveka Kumara Mal{}la",
@@ -643,7 +643,7 @@
     },
     {
       "voter_id": "ISP357933",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Sima Chauhana",
@@ -656,7 +656,7 @@
     },
     {
       "voter_id": "ISP675255",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Rita",
@@ -669,7 +669,7 @@
     },
     {
       "voter_id": "SP2234904",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Rakesha Rama",
@@ -682,7 +682,7 @@
     },
     {
       "voter_id": "ISP484690",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Ragini Shrivastava",
@@ -695,7 +695,7 @@
     },
     {
       "voter_id": "ISP7675859",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Mesha Kumara Shrivastava",
@@ -708,7 +708,7 @@
     },
     {
       "voter_id": "ISP748546",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Akasha Simha",
@@ -721,7 +721,7 @@
     },
     {
       "voter_id": "ISP7484559",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Ku0 Garima Bharati",
@@ -734,7 +734,7 @@
     },
     {
       "voter_id": "ISP2057878",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Shrimati Nilama Pamdeya",
@@ -747,7 +747,7 @@
     },
     {
       "voter_id": "ISP4623393",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Shivapujana Simha Yadava",
@@ -760,7 +760,7 @@
     },
     {
       "voter_id": "ISP4583993",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Imdumati Chauhana",
@@ -773,7 +773,7 @@
     },
     {
       "voter_id": "SP2057206",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Rani Kumari",
@@ -786,7 +786,7 @@
     },
     {
       "voter_id": "SP2234920",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Arati",
@@ -799,7 +799,7 @@
     },
     {
       "voter_id": "ISP7999347",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Anila Kumara",
@@ -812,7 +812,7 @@
     },
     {
       "voter_id": "ISP7675362",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Navina Kumara Shrivastava",
@@ -825,7 +825,7 @@
     },
     {
       "voter_id": "ISP2057099",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Saurabha",
@@ -838,7 +838,7 @@
     },
     {
       "voter_id": "ISP7484575",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Soni Devi",
@@ -851,7 +851,7 @@
     },
     {
       "voter_id": "ISP7999648",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Dvarika Prasada Simha",
@@ -864,7 +864,7 @@
     },
     {
       "voter_id": "ISP7485986",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Vijaya Bahadura Mal{}la",
@@ -877,7 +877,7 @@
     },
     {
       "voter_id": "ISP7675552",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Babita Devi",
@@ -890,7 +890,7 @@
     },
     {
       "voter_id": "SP205780",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Jyoti Simha",
@@ -903,7 +903,7 @@
     },
     {
       "voter_id": "SP2240406",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Chamdani Gautama",
@@ -916,7 +916,7 @@
     },
     {
       "voter_id": "ISP748505",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Shrimati Sumana Devi",
@@ -929,7 +929,7 @@
     },
     {
       "voter_id": "ISP999036",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Devanti",
@@ -942,7 +942,7 @@
     },
     {
       "voter_id": "ISP7485200",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Shri Nandalala Simha",
@@ -955,7 +955,7 @@
     },
     {
       "voter_id": "ISP7486604",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Raunita Kumara Pathaka",
@@ -968,7 +968,7 @@
     },
     {
       "voter_id": "ISPI999549",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Anupa Vishvakarma",
@@ -981,7 +981,7 @@
     },
     {
       "voter_id": "ISP673763",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Pavana",
@@ -994,7 +994,7 @@
     },
     {
       "voter_id": "ISP7486786",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Dilipa Kumara Shrivastava",
@@ -1007,7 +1007,7 @@
     },
     {
       "voter_id": "SP2000008",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Sugriva",
@@ -1020,7 +1020,7 @@
     },
     {
       "voter_id": "ISP229995",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Archana",
@@ -1033,7 +1033,7 @@
     },
     {
       "voter_id": "ISP2057289",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Nitu Jaya Savala",
@@ -1046,7 +1046,7 @@
     },
     {
       "voter_id": "ISP7485838",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Rina Devi",
@@ -1059,7 +1059,7 @@
     },
     {
       "voter_id": "ISP7486596",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Pradipa Kumara Shrivasatava",
@@ -1072,7 +1072,7 @@
     },
     {
       "voter_id": "ISP7999572",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Mamju Vishvakarma",
@@ -1085,7 +1085,7 @@
     },
     {
       "voter_id": "ISP2056950",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Aravimda Pathaka",
@@ -1098,7 +1098,7 @@
     },
     {
       "voter_id": "ISP7485945",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Anila Kumara Shrivastava",
@@ -1111,7 +1111,7 @@
     },
     {
       "voter_id": "ISP7999853",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Ramu",
@@ -1124,7 +1124,7 @@
     },
     {
       "voter_id": "ISP7999986",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Sarvesha",
@@ -1137,7 +1137,7 @@
     },
     {
       "voter_id": "ISP7486760",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Pramoda Dube",
@@ -1150,7 +1150,7 @@
     },
     {
       "voter_id": "ISP7485739",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Kanaka Lata Shrivastava",
@@ -1163,7 +1163,7 @@
     },
     {
       "voter_id": "ISP673755",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Sonu",
@@ -1176,7 +1176,7 @@
     },
     {
       "voter_id": "ISP3869506",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Adityana",
@@ -1189,7 +1189,7 @@
     },
     {
       "voter_id": "ISP486299",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Amju Shrivastava",
@@ -1202,7 +1202,7 @@
     },
     {
       "voter_id": "ISP7999952",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Mushila",
@@ -1215,7 +1215,7 @@
     },
     {
       "voter_id": "ISPI999937",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Sunita",
@@ -1228,7 +1228,7 @@
     },
     {
       "voter_id": "ISP7999002",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Pratima",
@@ -1241,7 +1241,7 @@
     },
     {
       "voter_id": "ISP748464",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Shrimati Lavati Shrivastava",
@@ -1254,7 +1254,7 @@
     },
     {
       "voter_id": "ISP999747",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Nilama Simha",
@@ -1267,7 +1267,7 @@
     },
     {
       "voter_id": "ISP2056786",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Amju Shrivastava",
@@ -1280,7 +1280,7 @@
     },
     {
       "voter_id": "ISP205680",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Namaharata",
@@ -1293,7 +1293,7 @@
     },
     {
       "voter_id": "ISP486455",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Raju Tripathi",
@@ -1306,7 +1306,7 @@
     },
     {
       "voter_id": "ISP3579725",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Raja Kumara Keshari",
@@ -1319,7 +1319,7 @@
     },
     {
       "voter_id": "SP3579782",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Baijamti Pathaka",
@@ -1332,7 +1332,7 @@
     },
     {
       "voter_id": "ISPI675479",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Sunila Tivari",
@@ -1345,7 +1345,7 @@
     },
     {
       "voter_id": "SP7484724",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Usha Devi",
@@ -1358,7 +1358,7 @@
     },
     {
       "voter_id": "ISP7485347",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Nirmala Simha",
@@ -1371,7 +1371,7 @@
     },
     {
       "voter_id": "ISP2056794",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Sushila",
@@ -1384,7 +1384,7 @@
     },
     {
       "voter_id": "ISP7486463",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Vishvanatha Tripathi",
@@ -1397,7 +1397,7 @@
     },
     {
       "voter_id": "ISP357933",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Ritesha Kumara Keshari",
@@ -1410,7 +1410,7 @@
     },
     {
       "voter_id": "ISP7675420",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Maya Devi",
@@ -1423,7 +1423,7 @@
     },
     {
       "voter_id": "ISP7486232",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Indramani",
@@ -1436,7 +1436,7 @@
     },
     {
       "voter_id": "ISPI675503",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Ajita Tripathi",
@@ -1449,7 +1449,7 @@
     },
     {
       "voter_id": "ISP999770",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Ramarupa",
@@ -1462,7 +1462,7 @@
     },
     {
       "voter_id": "SP2056778",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Aruna Kumara Shrivastava",
@@ -1475,7 +1475,7 @@
     },
     {
       "voter_id": "ISP999242",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Ashutosha Shrivastava",
@@ -1488,7 +1488,7 @@
     },
     {
       "voter_id": "SP7485689",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "ear ee 59)",
@@ -1500,7 +1500,7 @@
     },
     {
       "voter_id": "ISP7485872",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Premalata Tripathi",
@@ -1513,7 +1513,7 @@
     },
     {
       "voter_id": "ISP7486224",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Shashi Prakasha Tipathi",
@@ -1526,7 +1526,7 @@
     },
     {
       "voter_id": "ISP7484732",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Sudha",
@@ -1539,7 +1539,7 @@
     },
     {
       "voter_id": "ISP7486745",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Ananda Kumara Gupta",
@@ -1552,7 +1552,7 @@
     },
     {
       "voter_id": "ISP7485556",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Lakhmi Gupta",
@@ -1565,7 +1565,7 @@
     },
     {
       "voter_id": "ISP748666",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Ramere",
@@ -1578,7 +1578,7 @@
     },
     {
       "voter_id": "ISP7485820",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Gitanjali Shrivastava",
@@ -1591,7 +1591,7 @@
     },
     {
       "voter_id": "ISP748658",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Kaju",
@@ -1604,7 +1604,7 @@
     },
     {
       "voter_id": "ISP486372",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Alaka Shrivastava",
@@ -1617,7 +1617,7 @@
     },
     {
       "voter_id": "ISP3569530",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Madana Mohana Gupta",
@@ -1630,7 +1630,7 @@
     },
     {
       "voter_id": "SP7485572",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Saroja",
@@ -1643,7 +1643,7 @@
     },
     {
       "voter_id": "ISP356954",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Dinesha Kumara Shrivastava",
@@ -1656,7 +1656,7 @@
     },
     {
       "voter_id": "SP7484583",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Sona Devi",
@@ -1669,7 +1669,7 @@
     },
     {
       "voter_id": "ISP7674332",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Amita Kumara Simha",
@@ -1682,7 +1682,7 @@
     },
     {
       "voter_id": "ISP7486554",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "San{}tosha Kumara Shrivastava",
@@ -1695,7 +1695,7 @@
     },
     {
       "voter_id": "ISP7486562",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Vijaya Kumara Shrivastava",
@@ -1708,7 +1708,7 @@
     },
     {
       "voter_id": "ISP2056729",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Pa.nkaja",
@@ -1721,7 +1721,7 @@
     },
     {
       "voter_id": "ISP7486334",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Manisha Shrivastava",
@@ -1734,7 +1734,7 @@
     },
     {
       "voter_id": "ISP7485580",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Kamala Devi",
@@ -1747,7 +1747,7 @@
     },
     {
       "voter_id": "SP748478",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Sunita Devi",
@@ -1760,7 +1760,7 @@
     },
     {
       "voter_id": "ISP3569498",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Jagrti Shrivastava",
@@ -1773,7 +1773,7 @@
     },
     {
       "voter_id": "ISP486737",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Dilipa Kumara Gupta",
@@ -1786,7 +1786,7 @@
     },
     {
       "voter_id": "ISP7674050",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Shreya Simha",
@@ -1799,7 +1799,7 @@
     },
     {
       "voter_id": "ISP7486588",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Shivama Asthana",
@@ -1812,7 +1812,7 @@
     },
     {
       "voter_id": "ISP7486570",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Ajaya Kumara Shrivastava",
@@ -1825,7 +1825,7 @@
     },
     {
       "voter_id": "ISP7486380",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Mamju Devi",
@@ -1838,7 +1838,7 @@
     },
     {
       "voter_id": "ISP7486638",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Ambresha Chauhana",
@@ -1851,7 +1851,7 @@
     },
     {
       "voter_id": "SP7485705",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Rina Shrivastava",
@@ -1864,7 +1864,7 @@
     },
     {
       "voter_id": "SP7675487",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Ajaya Yadava",
@@ -1877,7 +1877,7 @@
     },
     {
       "voter_id": "SP2057248",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Gyana Mati",
@@ -1890,7 +1890,7 @@
     },
     {
       "voter_id": "ISP2056695",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Sailendra Shrivastava",
@@ -1903,7 +1903,7 @@
     },
     {
       "voter_id": "ISP675677",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Pushpa Gupta",
@@ -1916,7 +1916,7 @@
     },
     {
       "voter_id": "DWQ2356368",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Sushila Mi.",
@@ -1929,7 +1929,7 @@
     },
     {
       "voter_id": "ISP7486406",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Yagendra Narayana Shrivastava",
@@ -1942,7 +1942,7 @@
     },
     {
       "voter_id": "ISP205658",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Pramoda Kumara Nagavamshi",
@@ -1955,7 +1955,7 @@
     },
     {
       "voter_id": "ISP2056992",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Sanara Vano",
@@ -1968,7 +1968,7 @@
     },
     {
       "voter_id": "SP2057745",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Jaya Prakasha Narayana",
@@ -1981,7 +1981,7 @@
     },
     {
       "voter_id": "SP2057073",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Vishvajita Prakasha Shrivastava",
@@ -1994,7 +1994,7 @@
     },
     {
       "voter_id": "ISP673896",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Rakesha Dvivedi",
@@ -2007,7 +2007,7 @@
     },
     {
       "voter_id": "ISP675693",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Jaya Prakasha Gupta",
@@ -2020,7 +2020,7 @@
     },
     {
       "voter_id": "ISP7675685",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Indu Gupta",
@@ -2033,7 +2033,7 @@
     },
     {
       "voter_id": "SP282594",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Sushama Mishra",
@@ -2046,7 +2046,7 @@
     },
     {
       "voter_id": "ISP7675495",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Abhyudaya Shrivastava",
@@ -2059,7 +2059,7 @@
     },
     {
       "voter_id": "ISP7486323",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Ashutosha Chau I",
@@ -2072,7 +2072,7 @@
     },
     {
       "voter_id": "ISP2056976",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Asipha",
@@ -2085,7 +2085,7 @@
     },
     {
       "voter_id": "SP205764",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Sa.ngita Shrivastava",
@@ -2098,7 +2098,7 @@
     },
     {
       "voter_id": "SP2057057",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Abhijita Prakasha Shrivastava",
@@ -2111,7 +2111,7 @@
     },
     {
       "voter_id": "ISP673953",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Sarita Dvivedi",
@@ -2124,7 +2124,7 @@
     },
     {
       "voter_id": "ISP675704",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Premashila",
@@ -2137,7 +2137,7 @@
     },
     {
       "voter_id": "ISP675735",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Rajesha Gupta",
@@ -2150,7 +2150,7 @@
     },
     {
       "voter_id": "DWA2356475",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Madhusudana Prasada Mishra",
@@ -2163,7 +2163,7 @@
     },
     {
       "voter_id": "SP2825776",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Mahesha Mishra",
@@ -2176,7 +2176,7 @@
     },
     {
       "voter_id": "SP2825867",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Mana Mohana Mishra",
@@ -2189,7 +2189,7 @@
     },
     {
       "voter_id": "ISPI674886",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Samtoshi Jayasavala",
@@ -2202,7 +2202,7 @@
     },
     {
       "voter_id": "ISP357909",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Priyamka",
@@ -2215,7 +2215,7 @@
     },
     {
       "voter_id": "ISP7675636",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "& Simha",
@@ -2228,7 +2228,7 @@
     },
     {
       "voter_id": "SP4037464",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Ara Samjiva",
@@ -2241,7 +2241,7 @@
     },
     {
       "voter_id": "ISP7487024",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Harishamkara Kushavaha",
@@ -2254,7 +2254,7 @@
     },
     {
       "voter_id": "SP3788007",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Japti Tola",
       "name": "Dipaka",
@@ -2267,7 +2267,7 @@
     },
     {
       "voter_id": "ISP4452330",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Ruchi Simha",
@@ -2280,7 +2280,7 @@
     },
     {
       "voter_id": "DWQ3325776",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Lalachanda",
@@ -2293,7 +2293,7 @@
     },
     {
       "voter_id": "ISP7484633",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Sarita Shrivastava",
@@ -2306,7 +2306,7 @@
     },
     {
       "voter_id": "DWQ2352987",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Mevati",
@@ -2319,7 +2319,7 @@
     },
     {
       "voter_id": "ISP2558484",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Nitu Devi",
@@ -2332,7 +2332,7 @@
     },
     {
       "voter_id": "ISP2057024",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Amara Mani Upadhyaya",
@@ -2345,7 +2345,7 @@
     },
     {
       "voter_id": "SP3897587",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Amita Kumara Simha",
@@ -2358,7 +2358,7 @@
     },
     {
       "voter_id": "DWQ2354579",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Radheshyama",
@@ -2371,7 +2371,7 @@
     },
     {
       "voter_id": "DWQ3506060",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Urmila",
@@ -2384,7 +2384,7 @@
     },
     {
       "voter_id": "DWWA3506078",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Punama",
@@ -2397,7 +2397,7 @@
     },
     {
       "voter_id": "DWQ2673826",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Rakesha",
@@ -2410,7 +2410,7 @@
     },
     {
       "voter_id": "ISP7675084",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Vikasha Simha",
@@ -2423,7 +2423,7 @@
     },
     {
       "voter_id": "SP2558468",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Anupa Kumara",
@@ -2436,7 +2436,7 @@
     },
     {
       "voter_id": "ISP2558476",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Vishnu Kumara",
@@ -2449,7 +2449,7 @@
     },
     {
       "voter_id": "ISP2056430",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Nilama Shrivastava",
@@ -2462,7 +2462,7 @@
     },
     {
       "voter_id": "SP087480",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Manira Kumara",
@@ -2475,7 +2475,7 @@
     },
     {
       "voter_id": "ISP2055727",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Rama Simha",
@@ -2488,7 +2488,7 @@
     },
     {
       "voter_id": "ISP205644",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Madhuri Shrivastava",
@@ -2501,7 +2501,7 @@
     },
     {
       "voter_id": "ISP2056463",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Savitri Shrivastava",
@@ -2514,7 +2514,7 @@
     },
     {
       "voter_id": "ISP998252",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Kirana Devi",
@@ -2527,7 +2527,7 @@
     },
     {
       "voter_id": "ISP998335",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Pravina Kumara",
@@ -2540,7 +2540,7 @@
     },
     {
       "voter_id": "ISP2885564",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Rajesha Kumara",
@@ -2553,7 +2553,7 @@
     },
     {
       "voter_id": "ISP7675743",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Sharmila Yadava",
@@ -2566,7 +2566,7 @@
     },
     {
       "voter_id": "ISP4748745",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Umesha Chamdra Pathaka",
@@ -2579,7 +2579,7 @@
     },
     {
       "voter_id": "ISP000792",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Brjesha Siha",
@@ -2592,7 +2592,7 @@
     },
     {
       "voter_id": "ISP2056455",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Pa.nkaja Shrivastava",
@@ -2605,7 +2605,7 @@
     },
     {
       "voter_id": "ISP2585947",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Savitri",
@@ -2618,7 +2618,7 @@
     },
     {
       "voter_id": "ISP7673722",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Niraja",
@@ -2631,7 +2631,7 @@
     },
     {
       "voter_id": "ISP000768",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Jitendra Pratapa",
@@ -2644,7 +2644,7 @@
     },
     {
       "voter_id": "ISP675792",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Aed Devi",
@@ -2657,7 +2657,7 @@
     },
     {
       "voter_id": "ISP482504",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Premashila Chauhana",
@@ -2670,7 +2670,7 @@
     },
     {
       "voter_id": "ISP748252",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Sima Devi",
@@ -2683,7 +2683,7 @@
     },
     {
       "voter_id": "ISP0007878",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Amrta Siha",
@@ -2696,7 +2696,7 @@
     },
     {
       "voter_id": "ISP5055769",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Krisha Chauhana",
@@ -2709,7 +2709,7 @@
     },
     {
       "voter_id": "SP4452488",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Kumara Manoramjana Simha",
@@ -2722,7 +2722,7 @@
     },
     {
       "voter_id": "ISP486497",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Mahesha",
@@ -2733,7 +2733,7 @@
     },
     {
       "voter_id": "SP204724",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Urmila Mishra",
@@ -2746,7 +2746,7 @@
     },
     {
       "voter_id": "DWA2244432",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Tilaki",
@@ -2759,7 +2759,7 @@
     },
     {
       "voter_id": "ISP748653",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Shakira Ali",
@@ -2772,7 +2772,7 @@
     },
     {
       "voter_id": "ISP4720945",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Mamata Simha",
@@ -2785,7 +2785,7 @@
     },
     {
       "voter_id": "SP7670207",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Nimma Yadava",
@@ -2798,7 +2798,7 @@
     },
     {
       "voter_id": "ISP3793403",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Akrti Pasavana",
@@ -2811,7 +2811,7 @@
     },
     {
       "voter_id": "SP2287597",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Prasunna Mishra",
@@ -2824,7 +2824,7 @@
     },
     {
       "voter_id": "ISP2585990",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Samgita Siha",
@@ -2837,7 +2837,7 @@
     },
     {
       "voter_id": "DWA2248060",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Jhinaki",
@@ -2850,7 +2850,7 @@
     },
     {
       "voter_id": "PWA254979",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Mochu",
@@ -2863,7 +2863,7 @@
     },
     {
       "voter_id": "ISP7482520",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Abhisheka Chauhana",
@@ -2876,7 +2876,7 @@
     },
     {
       "voter_id": "ISP7482553",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Sarasati Devi",
@@ -2889,7 +2889,7 @@
     },
     {
       "voter_id": "SP2047932",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Radheshyama Mishra",
@@ -2902,7 +2902,7 @@
     },
     {
       "voter_id": "ISP4728062",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Nitu Varayani",
@@ -2914,7 +2914,7 @@
     },
     {
       "voter_id": "ISP7482652",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Shrimati Samju Devi",
@@ -2927,7 +2927,7 @@
     },
     {
       "voter_id": "ISP7673250",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Shivendra Shrivastava",
@@ -2940,7 +2940,7 @@
     },
     {
       "voter_id": "DWQ254995",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Koila",
@@ -2953,7 +2953,7 @@
     },
     {
       "voter_id": "ISP3967356",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Abhisheka Kumara Shrivastava",
@@ -2966,7 +2966,7 @@
     },
     {
       "voter_id": "ISP3392578",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Rita Shrivastava",
@@ -2979,7 +2979,7 @@
     },
     {
       "voter_id": "ISP2585076",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Da. Archana Shahi",
@@ -2992,7 +2992,7 @@
     },
     {
       "voter_id": "ISP670629",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Samjaya Kumara",
@@ -3005,7 +3005,7 @@
     },
     {
       "voter_id": "ISP5074808",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Svarnalata Sharma",
@@ -3018,7 +3018,7 @@
     },
     {
       "voter_id": "ISP0237605",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Pramoda Kumara Raya",
@@ -3031,7 +3031,7 @@
     },
     {
       "voter_id": "PWA2244440",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Niramala",
@@ -3044,7 +3044,7 @@
     },
     {
       "voter_id": "ISP0329763",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Okara",
@@ -3057,7 +3057,7 @@
     },
     {
       "voter_id": "ISP396227",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Amkita Shrivastava",
@@ -3070,7 +3070,7 @@
     },
     {
       "voter_id": "SP2585024",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Kamala Devi",
@@ -3083,7 +3083,7 @@
     },
     {
       "voter_id": "ISP335074",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Ishita Shahi",
@@ -3096,7 +3096,7 @@
     },
     {
       "voter_id": "ISP7674704",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Satisha Chandra Sharma",
@@ -3109,7 +3109,7 @@
     },
     {
       "voter_id": "ISP5064837",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Prakhara Shrivastava",
@@ -3122,7 +3122,7 @@
     },
     {
       "voter_id": "SP748270",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Anita Chauhana",
@@ -3135,7 +3135,7 @@
     },
     {
       "voter_id": "DWA2354280",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Moti",
@@ -3148,7 +3148,7 @@
     },
     {
       "voter_id": "DWQ2353035",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Vimala",
@@ -3161,7 +3161,7 @@
     },
     {
       "voter_id": "ISP3392560",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Ramesha Chandra Shrivastava",
@@ -3174,7 +3174,7 @@
     },
     {
       "voter_id": "ISP2585008",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Da. E. Pi. Shahi",
@@ -3187,7 +3187,7 @@
     },
     {
       "voter_id": "ISP3528080",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Nishtha Shahi",
@@ -3200,7 +3200,7 @@
     },
     {
       "voter_id": "ISP674670",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Sharmila Sharma",
@@ -3213,7 +3213,7 @@
     },
     {
       "voter_id": "ISP2287605",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Punama Raya",
@@ -3226,7 +3226,7 @@
     },
     {
       "voter_id": "SP482728",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Niraja Chauhana",
@@ -3239,7 +3239,7 @@
     },
     {
       "voter_id": "ISP205723",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Mamki Devi Simha",
@@ -3252,7 +3252,7 @@
     },
     {
       "voter_id": "SP0874354",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Rama Narayana Pamdeya",
@@ -3265,7 +3265,7 @@
     },
     {
       "voter_id": "ISP485226",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Sunila Kumara",
@@ -3278,7 +3278,7 @@
     },
     {
       "voter_id": "SP2056927",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Sunita Simha",
@@ -3291,7 +3291,7 @@
     },
     {
       "voter_id": "ISP485622",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Lali Devi",
@@ -3304,7 +3304,7 @@
     },
     {
       "voter_id": "SP3722923",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Rashmi Mandhani",
@@ -3317,7 +3317,7 @@
     },
     {
       "voter_id": "ISP7672757",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Asha Tripathi",
@@ -3330,7 +3330,7 @@
     },
     {
       "voter_id": "ISP485028",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Sadhana",
@@ -3343,7 +3343,7 @@
     },
     {
       "voter_id": "ISP672732",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Yajnadatta Tripathi",
@@ -3356,7 +3356,7 @@
     },
     {
       "voter_id": "ISPI673433",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Shilpi Bharati",
@@ -3369,7 +3369,7 @@
     },
     {
       "voter_id": "SP205727",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Sa.ndipa",
@@ -3382,7 +3382,7 @@
     },
     {
       "voter_id": "ISP7482736",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Tamshu Chauhana",
@@ -3395,7 +3395,7 @@
     },
     {
       "voter_id": "ISP3723072",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Komala Mandhani",
@@ -3408,7 +3408,7 @@
     },
     {
       "voter_id": "ISPI670256",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Rajarama Gupta",
@@ -3421,7 +3421,7 @@
     },
     {
       "voter_id": "ISP7670272",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Samdipa",
@@ -3434,7 +3434,7 @@
     },
     {
       "voter_id": "ISPI672765",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Rama Prakasha Tripathi",
@@ -3447,7 +3447,7 @@
     },
     {
       "voter_id": "ISP2282630",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Jitendra Prasada Mishra",
@@ -3460,7 +3460,7 @@
     },
     {
       "voter_id": "SP2282648",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Punama Mishra",
@@ -3473,7 +3473,7 @@
     },
     {
       "voter_id": "ISP7673326",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Khushabu Simha",
@@ -3486,7 +3486,7 @@
     },
     {
       "voter_id": "ISP670306",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Anita Pandeya",
@@ -3499,7 +3499,7 @@
     },
     {
       "voter_id": "ISP7675024",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Kumundra Shrivastava",
@@ -3512,7 +3512,7 @@
     },
     {
       "voter_id": "ISP2585339",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Rakesha",
@@ -3525,7 +3525,7 @@
     },
     {
       "voter_id": "ISP7674242",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Rakesha Kumara Shrivastava",
@@ -3538,7 +3538,7 @@
     },
     {
       "voter_id": "SP3922952",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Umaravati Ramjana",
@@ -3551,7 +3551,7 @@
     },
     {
       "voter_id": "ISP673383",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Sudha Simha",
@@ -3564,7 +3564,7 @@
     },
     {
       "voter_id": "ISP7673744",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Upama Shrivastava",
@@ -3577,7 +3577,7 @@
     },
     {
       "voter_id": "SP2885572",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Niraja Sharma",
@@ -3590,7 +3590,7 @@
     },
     {
       "voter_id": "ISP4057394",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Aryana Raja Giri Giri",
@@ -3603,7 +3603,7 @@
     },
     {
       "voter_id": "ISP3579257",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Pratika Chaurasiya",
@@ -3616,7 +3616,7 @@
     },
     {
       "voter_id": "ISP2585362",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Shashi",
@@ -3629,7 +3629,7 @@
     },
     {
       "voter_id": "ISP258565",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Virendra Kumara Chau I",
@@ -3642,7 +3642,7 @@
     },
     {
       "voter_id": "SP2585677",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Ritesha Chau I",
@@ -3655,7 +3655,7 @@
     },
     {
       "voter_id": "ISP675305",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Bavita Devi",
@@ -3668,7 +3668,7 @@
     },
     {
       "voter_id": "ISPI675032",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Pradipa Kumara Shrivastava",
@@ -3681,7 +3681,7 @@
     },
     {
       "voter_id": "ISP2585347",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Durgavati Devi",
@@ -3694,7 +3694,7 @@
     },
     {
       "voter_id": "ISPR674043",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Nisha Shrivastava",
@@ -3707,7 +3707,7 @@
     },
     {
       "voter_id": "ISP2585669",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Shrimati Dhanamaya Devi",
@@ -3720,7 +3720,7 @@
     },
     {
       "voter_id": "ISP3922945",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Memdra Natha Ramjana",
@@ -3733,7 +3733,7 @@
     },
     {
       "voter_id": "SP2287589",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Shikha Simha",
@@ -3746,7 +3746,7 @@
     },
     {
       "voter_id": "ISP0237639",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Divyamshu Simha",
@@ -3759,7 +3759,7 @@
     },
     {
       "voter_id": "ISP2585768",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Manisha Tripathi",
@@ -3772,7 +3772,7 @@
     },
     {
       "voter_id": "ISP2585620",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Sima Devi",
@@ -3785,7 +3785,7 @@
     },
     {
       "voter_id": "ISP7675223",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Jaya Prakasha Pathaka",
@@ -3798,7 +3798,7 @@
     },
     {
       "voter_id": "ISP258537",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 2,
       "section_name": "Vikas Nagar",
       "name": "Ramakrshna Tripathi",
@@ -3811,7 +3811,7 @@
     },
     {
       "voter_id": "ISP2585594",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Nahani Devi",
@@ -3824,7 +3824,7 @@
     },
     {
       "voter_id": "ISP2585552",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Omaprakasha",
@@ -3837,7 +3837,7 @@
     },
     {
       "voter_id": "ISP2585073",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Durgesha",
@@ -3850,7 +3850,7 @@
     },
     {
       "voter_id": "SP2585503",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Manoja Kumara Chau I",
@@ -3863,7 +3863,7 @@
     },
     {
       "voter_id": "SP2282572",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Gaurava Kumara",
@@ -3876,7 +3876,7 @@
     },
     {
       "voter_id": "ISP3325958",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Vinaya Chau I",
@@ -3889,7 +3889,7 @@
     },
     {
       "voter_id": "SP2287662",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Binoda Kumara Dixita",
@@ -3902,7 +3902,7 @@
     },
     {
       "voter_id": "SP2287993",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Shipra Dixita",
@@ -3915,7 +3915,7 @@
     },
     {
       "voter_id": "ISP2585065",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Dinesha",
@@ -3928,7 +3928,7 @@
     },
     {
       "voter_id": "SP7670322",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Usha Rani",
@@ -3941,7 +3941,7 @@
     },
     {
       "voter_id": "ISP2585560",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Kamala",
@@ -3954,7 +3954,7 @@
     },
     {
       "voter_id": "ISP3325990",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Amita Chau I",
@@ -3967,7 +3967,7 @@
     },
     {
       "voter_id": "ISP2282556",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Shveta Sinha",
@@ -3980,7 +3980,7 @@
     },
     {
       "voter_id": "ISP2585479",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Puja Chau I",
@@ -3993,7 +3993,7 @@
     },
     {
       "voter_id": "ISP2045394",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Gaurava Kumara Sharma",
@@ -4006,7 +4006,7 @@
     },
     {
       "voter_id": "SP0306878",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Mamju Dixita",
@@ -4019,7 +4019,7 @@
     },
     {
       "voter_id": "SP0306886",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Abhisheka Kumara Dixita",
@@ -4032,7 +4032,7 @@
     },
     {
       "voter_id": "ISP490378",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Ashisha Kushavaha",
@@ -4045,7 +4045,7 @@
     },
     {
       "voter_id": "ISP670330",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Surindara",
@@ -4058,7 +4058,7 @@
     },
     {
       "voter_id": "ISP258508",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Divakara",
@@ -4071,7 +4071,7 @@
     },
     {
       "voter_id": "ISP2282549",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Amita Sinha",
@@ -4084,7 +4084,7 @@
     },
     {
       "voter_id": "ISP2282564",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Saurabha Kumara",
@@ -4097,7 +4097,7 @@
     },
     {
       "voter_id": "ISP0376078",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Anila Kumara",
@@ -4110,7 +4110,7 @@
     },
     {
       "voter_id": "SP228757",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Nilima Dixita",
@@ -4123,7 +4123,7 @@
     },
     {
       "voter_id": "SP027267",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Axaya Kumara Dixita",
@@ -4136,7 +4136,7 @@
     },
     {
       "voter_id": "SP7482752",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Ramanuja",
@@ -4149,7 +4149,7 @@
     },
     {
       "voter_id": "ISP7487073",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Amita Vishvakarma",
@@ -4162,7 +4162,7 @@
     },
     {
       "voter_id": "ISP3578705",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Akamxa Triguna",
@@ -4175,7 +4175,7 @@
     },
     {
       "voter_id": "HWK3520533",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Ramjana",
@@ -4188,7 +4188,7 @@
     },
     {
       "voter_id": "ISP7674829",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Ajaya Kumara Simha",
@@ -4201,7 +4201,7 @@
     },
     {
       "voter_id": "ISP7673394",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Sima Rati",
@@ -4214,7 +4214,7 @@
     },
     {
       "voter_id": "ISP7673664",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Punama Shrivastava",
@@ -4227,7 +4227,7 @@
     },
     {
       "voter_id": "ISPI674068",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Avantika Simha",
@@ -4240,7 +4240,7 @@
     },
     {
       "voter_id": "ISP7486968",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Ramanuja Upadhyaya",
@@ -4253,7 +4253,7 @@
     },
     {
       "voter_id": "ISP748707",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Vinita Vishvakarma",
@@ -4266,7 +4266,7 @@
     },
     {
       "voter_id": "ISP7672302",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Oma Prakasha Ge 80",
@@ -4278,7 +4278,7 @@
     },
     {
       "voter_id": "SP767476",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Sunita Simha",
@@ -4291,7 +4291,7 @@
     },
     {
       "voter_id": "ISP672559",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Oma Prakasha Shrivastava",
@@ -4304,7 +4304,7 @@
     },
     {
       "voter_id": "ISP7485333",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Kanti Devi",
@@ -4317,7 +4317,7 @@
     },
     {
       "voter_id": "ISP7482587",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Ananda Kumara",
@@ -4330,7 +4330,7 @@
     },
     {
       "voter_id": "ISP460534",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Khushabu",
@@ -4343,7 +4343,7 @@
     },
     {
       "voter_id": "ISP672369",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Prabhata Pala",
@@ -4356,7 +4356,7 @@
     },
     {
       "voter_id": "ISP673367",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Ghanashyama Tivari",
@@ -4369,7 +4369,7 @@
     },
     {
       "voter_id": "ISP7486097",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Ashisha Dube",
@@ -4382,7 +4382,7 @@
     },
     {
       "voter_id": "ISPI674605",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Durgesha Nan{}dani",
@@ -4395,7 +4395,7 @@
     },
     {
       "voter_id": "ISP484609",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Ruvi Simha",
@@ -4408,7 +4408,7 @@
     },
     {
       "voter_id": "ISP377785",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Anamika Shrivastava",
@@ -4421,7 +4421,7 @@
     },
     {
       "voter_id": "ISP3579265",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Shveta Bharati",
@@ -4434,7 +4434,7 @@
     },
     {
       "voter_id": "SP3579273",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Harishchandra",
@@ -4447,7 +4447,7 @@
     },
     {
       "voter_id": "ISP3579307",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Puja Kumari Dube",
@@ -4460,7 +4460,7 @@
     },
     {
       "voter_id": "ISP2057065",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Fag Pandeya",
@@ -4473,7 +4473,7 @@
     },
     {
       "voter_id": "ISP674092",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Ag Shri",
@@ -4486,7 +4486,7 @@
     },
     {
       "voter_id": "ISP4336576",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Aditya Chauhana",
@@ -4499,7 +4499,7 @@
     },
     {
       "voter_id": "SP675750",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Ramakrshna Tripathi",
@@ -4512,7 +4512,7 @@
     },
     {
       "voter_id": "ISPI674928",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Asha Devi",
@@ -4525,7 +4525,7 @@
     },
     {
       "voter_id": "ISP3569464",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Sunila Kumara Sharma",
@@ -4538,7 +4538,7 @@
     },
     {
       "voter_id": "ISP2057263",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Dipaka",
@@ -4551,7 +4551,7 @@
     },
     {
       "voter_id": "ISP357928",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Chunamuna Divedi",
@@ -4564,7 +4564,7 @@
     },
     {
       "voter_id": "ISP675594",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Sunita",
@@ -4577,7 +4577,7 @@
     },
     {
       "voter_id": "ISP2056893",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Ritu Tripathi",
@@ -4590,7 +4590,7 @@
     },
     {
       "voter_id": "ISP7675768",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Omamati Tivari",
@@ -4603,7 +4603,7 @@
     },
     {
       "voter_id": "ISP7998426",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Ra La Yadava",
@@ -4616,7 +4616,7 @@
     },
     {
       "voter_id": "ISP434692",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Sita Devi",
@@ -4629,7 +4629,7 @@
     },
     {
       "voter_id": "ISP7675297",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Mirisha Kumara",
@@ -4642,7 +4642,7 @@
     },
     {
       "voter_id": "SP3848744",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Sumana",
@@ -4655,7 +4655,7 @@
     },
     {
       "voter_id": "ISP7673425",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Shivamgi Mohana",
@@ -4668,7 +4668,7 @@
     },
     {
       "voter_id": "SP3722832",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Pushpa Devi Sharma",
@@ -4681,7 +4681,7 @@
     },
     {
       "voter_id": "ISP4692596",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Mukesha Sharma",
@@ -4692,7 +4692,7 @@
     },
     {
       "voter_id": "ISP767445",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Ramabhavana Chau I",
@@ -4705,7 +4705,7 @@
     },
     {
       "voter_id": "SP674282",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Rajani Chau I",
@@ -4718,7 +4718,7 @@
     },
     {
       "voter_id": "ISPI674506",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Sushila Chau I",
@@ -4731,7 +4731,7 @@
     },
     {
       "voter_id": "ISP384875",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Parashurama",
@@ -4744,7 +4744,7 @@
     },
     {
       "voter_id": "SP3848777",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Rakesha",
@@ -4757,7 +4757,7 @@
     },
     {
       "voter_id": "ISP486474",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Ro Ta Gupta",
@@ -4770,7 +4770,7 @@
     },
     {
       "voter_id": "SP3722873",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Jagata Svarupa Sharma",
@@ -4783,7 +4783,7 @@
     },
     {
       "voter_id": "ISP7674340",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Phaujadara Chau I",
@@ -4796,7 +4796,7 @@
     },
     {
       "voter_id": "SP7674274",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Abhinendra Chau I",
@@ -4809,7 +4809,7 @@
     },
     {
       "voter_id": "ISP674290",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Chandrakirana Chau I",
@@ -4822,7 +4822,7 @@
     },
     {
       "voter_id": "ISPI674498",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Sharmila Chau I",
@@ -4835,7 +4835,7 @@
     },
     {
       "voter_id": "ISP479327",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Neha Chau I",
@@ -4848,7 +4848,7 @@
     },
     {
       "voter_id": "SP3848736",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Samjaya",
@@ -4861,7 +4861,7 @@
     },
     {
       "voter_id": "ISP675388",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Rajesha Kumara Saksena",
@@ -4874,7 +4874,7 @@
     },
     {
       "voter_id": "ISP3722865",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Ramashraya Prasada Sharma",
@@ -4887,7 +4887,7 @@
     },
     {
       "voter_id": "ISP3722840",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Renu Sharma",
@@ -4900,7 +4900,7 @@
     },
     {
       "voter_id": "ISP674574",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Mira Devi",
@@ -4913,7 +4913,7 @@
     },
     {
       "voter_id": "ISP393464",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Gaurava Chau I",
@@ -4926,7 +4926,7 @@
     },
     {
       "voter_id": "ISP2056547",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Kusuma Yadava",
@@ -4939,7 +4939,7 @@
     },
     {
       "voter_id": "ISP2056604",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Ravi Sla Vishvakarma",
@@ -4952,7 +4952,7 @@
     },
     {
       "voter_id": "ISP2056588",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Anamika Shrivastava",
@@ -4965,7 +4965,7 @@
     },
     {
       "voter_id": "ISP205662",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Ramesha Kumara Shrivastava",
@@ -4978,7 +4978,7 @@
     },
     {
       "voter_id": "ISPI674399",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Renu Chau I",
@@ -4991,7 +4991,7 @@
     },
     {
       "voter_id": "ISP7486679",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Deva Narayana Lala",
@@ -5004,7 +5004,7 @@
     },
     {
       "voter_id": "ISP205647",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "A.nkita Shrivastava",
@@ -5017,7 +5017,7 @@
     },
     {
       "voter_id": "ISP205652",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Ma.nshi Shrivastava",
@@ -5030,7 +5030,7 @@
     },
     {
       "voter_id": "SP2056679",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Avadhesha Kumara",
@@ -5043,7 +5043,7 @@
     },
     {
       "voter_id": "ISP2056638",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Sunila Kumara Shrivastava",
@@ -5056,7 +5056,7 @@
     },
     {
       "voter_id": "ISP2056570",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Mamata Shrivastava",
@@ -5069,7 +5069,7 @@
     },
     {
       "voter_id": "ISP7674225",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Janardana Chau I",
@@ -5082,7 +5082,7 @@
     },
     {
       "voter_id": "ISPI674423",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Mina Devi",
@@ -5095,7 +5095,7 @@
     },
     {
       "voter_id": "ISP3907006",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Shreshtha Chau I",
@@ -5108,7 +5108,7 @@
     },
     {
       "voter_id": "ISP484989",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Kirana Shrivastava",
@@ -5121,7 +5121,7 @@
     },
     {
       "voter_id": "ISP2056653",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Nagina Devi",
@@ -5134,7 +5134,7 @@
     },
     {
       "voter_id": "ISP2056489",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Amita Shrivastava",
@@ -5147,7 +5147,7 @@
     },
     {
       "voter_id": "ISP2056596",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Navina Kumara Shrivastava",
@@ -5160,7 +5160,7 @@
     },
     {
       "voter_id": "ISPI674449",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Ajaya Chau I",
@@ -5173,7 +5173,7 @@
     },
     {
       "voter_id": "ISP674555",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Bhupendra Kumara",
@@ -5186,7 +5186,7 @@
     },
     {
       "voter_id": "ISP7674266",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Manoja Chau I",
@@ -5199,7 +5199,7 @@
     },
     {
       "voter_id": "ISP3973456",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Rajata Chau I",
@@ -5212,7 +5212,7 @@
     },
     {
       "voter_id": "ISP748652",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Ra La Are Shrivastava",
@@ -5225,7 +5225,7 @@
     },
     {
       "voter_id": "SP7484526",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Kunti Devi",
@@ -5238,7 +5238,7 @@
     },
     {
       "voter_id": "SP2056737",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Mana Simha Pamdeya",
@@ -5251,7 +5251,7 @@
     },
     {
       "voter_id": "ISP999432",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Amkita Kumara Mal{}la",
@@ -5264,7 +5264,7 @@
     },
     {
       "voter_id": "ISP2000099",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Pushpa Devi",
@@ -5277,7 +5277,7 @@
     },
     {
       "voter_id": "ISP2000780",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Sneha Mani",
@@ -5290,7 +5290,7 @@
     },
     {
       "voter_id": "ISP3723004",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Anita Ailani",
@@ -5303,7 +5303,7 @@
     },
     {
       "voter_id": "ISP3722949",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Garima Ailani",
@@ -5316,7 +5316,7 @@
     },
     {
       "voter_id": "SP3723020",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Arati Chauhana",
@@ -5329,7 +5329,7 @@
     },
     {
       "voter_id": "ISP674902",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Puja Jayasavala",
@@ -5342,7 +5342,7 @@
     },
     {
       "voter_id": "ISP7999382",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Kanti Devi",
@@ -5355,7 +5355,7 @@
     },
     {
       "voter_id": "ISP2000249",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Aparna",
@@ -5368,7 +5368,7 @@
     },
     {
       "voter_id": "ISPI675749",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Anuradha Simha",
@@ -5381,7 +5381,7 @@
     },
     {
       "voter_id": "ISP7675065",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Rama Jatana Goda",
@@ -5393,7 +5393,7 @@
     },
     {
       "voter_id": "SP3723053",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Lalita Alani",
@@ -5406,7 +5406,7 @@
     },
     {
       "voter_id": "ISP7999069",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Samgita",
@@ -5419,7 +5419,7 @@
     },
     {
       "voter_id": "ISP389725",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Viveka Kumara Rava",
@@ -5432,7 +5432,7 @@
     },
     {
       "voter_id": "ISP7674894",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Nashapati Devi",
@@ -5445,7 +5445,7 @@
     },
     {
       "voter_id": "ISP3569662",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Sima Yadava",
@@ -5458,7 +5458,7 @@
     },
     {
       "voter_id": "ISP2000065",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Umesha Mani",
@@ -5471,7 +5471,7 @@
     },
     {
       "voter_id": "ISP200023",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Devesha Mani",
@@ -5484,7 +5484,7 @@
     },
     {
       "voter_id": "ISP4335678",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Lavakusha Yadava",
@@ -5497,7 +5497,7 @@
     },
     {
       "voter_id": "ISP3723038",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Anila Ailani",
@@ -5510,7 +5510,7 @@
     },
     {
       "voter_id": "ISP372293",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Sonali Ailani",
@@ -5523,7 +5523,7 @@
     },
     {
       "voter_id": "ISPI675602",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Shanti Devi",
@@ -5536,7 +5536,7 @@
     },
     {
       "voter_id": "ISP675644",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Chanda Madveshiyam",
@@ -5549,7 +5549,7 @@
     },
     {
       "voter_id": "ISP7998590",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Ashutosha",
@@ -5562,7 +5562,7 @@
     },
     {
       "voter_id": "ISP7673284",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Gita Devi",
@@ -5575,7 +5575,7 @@
     },
     {
       "voter_id": "ISP4846846",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Samskara Tripathi",
@@ -5588,7 +5588,7 @@
     },
     {
       "voter_id": "ISP2057008",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Muraji Sharma",
@@ -5601,7 +5601,7 @@
     },
     {
       "voter_id": "ISP707009",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Amrta Pandeya",
@@ -5614,7 +5614,7 @@
     },
     {
       "voter_id": "ISP672807",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Sunila Sharma",
@@ -5627,7 +5627,7 @@
     },
     {
       "voter_id": "ISP7672336",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Savitri Devi",
@@ -5640,7 +5640,7 @@
     },
     {
       "voter_id": "SP4623435",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Srshti Bhatta",
@@ -5653,7 +5653,7 @@
     },
     {
       "voter_id": "ISP3790744",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Bebi Devi",
@@ -5666,7 +5666,7 @@
     },
     {
       "voter_id": "ISP2056968",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Rajesha Kumara Simha",
@@ -5679,7 +5679,7 @@
     },
     {
       "voter_id": "ISP2550655",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Ganesha Chanda",
@@ -5692,7 +5692,7 @@
     },
     {
       "voter_id": "SP7673292",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Shakuntala Devi",
@@ -5705,7 +5705,7 @@
     },
     {
       "voter_id": "ISP2057076",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Parasanatha Sharma",
@@ -5718,7 +5718,7 @@
     },
     {
       "voter_id": "ISP706738",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Krshna Shamkara Pandeya",
@@ -5731,7 +5731,7 @@
     },
     {
       "voter_id": "ISP7707066",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Dipaka Pandeya",
@@ -5744,7 +5744,7 @@
     },
     {
       "voter_id": "ISP7673243",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Laxminiya Devi",
@@ -5757,7 +5757,7 @@
     },
     {
       "voter_id": "ISP7998624",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Punama",
@@ -5770,7 +5770,7 @@
     },
     {
       "voter_id": "ISP767565",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Rajesha Madveshiyam",
@@ -5783,7 +5783,7 @@
     },
     {
       "voter_id": "ISP7673268",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Phiroja Ahamada",
@@ -5796,7 +5796,7 @@
     },
     {
       "voter_id": "ISP673276",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Mendra Tripathi",
@@ -5809,7 +5809,7 @@
     },
     {
       "voter_id": "ISP2057032",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Malati Sharma",
@@ -5822,7 +5822,7 @@
     },
     {
       "voter_id": "ISP770687",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Urmila Pandeya",
@@ -5835,7 +5835,7 @@
     },
     {
       "voter_id": "ISP672823",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Sheshanatha Sharma",
@@ -5848,7 +5848,7 @@
     },
     {
       "voter_id": "ISP7672849",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Renu Sharma",
@@ -5861,7 +5861,7 @@
     },
     {
       "voter_id": "ISPI672575",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Pushpa Tripathi",
@@ -5874,7 +5874,7 @@
     },
     {
       "voter_id": "ISP4509386",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Ramjana Gupta",
@@ -5887,7 +5887,7 @@
     },
     {
       "voter_id": "ISP7673409",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Mithuna Banarji",
@@ -5900,7 +5900,7 @@
     },
     {
       "voter_id": "ISP5028873",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Pradipa Kumara Mehata",
@@ -5913,7 +5913,7 @@
     },
     {
       "voter_id": "SP2056984",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Sarita Shrivastava",
@@ -5926,7 +5926,7 @@
     },
     {
       "voter_id": "ISP3973472",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Amaravati Devi",
@@ -5939,7 +5939,7 @@
     },
     {
       "voter_id": "ISP3900974",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Vinamrata Chau I",
@@ -5952,7 +5952,7 @@
     },
     {
       "voter_id": "ISP674944",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Shashiprabha",
@@ -5965,7 +5965,7 @@
     },
     {
       "voter_id": "ISP000386",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Sarita Devi",
@@ -5978,7 +5978,7 @@
     },
     {
       "voter_id": "ISP4496923",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Nikumja Pandeya",
@@ -5991,7 +5991,7 @@
     },
     {
       "voter_id": "ISP4988523",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Khushi Chauhana",
@@ -6004,7 +6004,7 @@
     },
     {
       "voter_id": "ISP2056943",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Sudipa",
@@ -6017,7 +6017,7 @@
     },
     {
       "voter_id": "ISP2547792",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Shruti Rani",
@@ -6030,7 +6030,7 @@
     },
     {
       "voter_id": "ISP2056703",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Priti Dvivedi",
@@ -6043,7 +6043,7 @@
     },
     {
       "voter_id": "ISP7674985",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Rajendra Prasada",
@@ -6056,7 +6056,7 @@
     },
     {
       "voter_id": "SPI674977",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Dixa Yadava",
@@ -6069,7 +6069,7 @@
     },
     {
       "voter_id": "SP4824777",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Samtvana Dvivedi",
@@ -6082,7 +6082,7 @@
     },
     {
       "voter_id": "SP4972077",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Amita Kumara Sharma",
@@ -6095,7 +6095,7 @@
     },
     {
       "voter_id": "ISPI675396",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Ajaya Kumara Shrivastava",
@@ -6108,7 +6108,7 @@
     },
     {
       "voter_id": "ISP675867",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Munna Lala",
@@ -6121,7 +6121,7 @@
     },
     {
       "voter_id": "ISP205685",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Padama",
@@ -6134,7 +6134,7 @@
     },
     {
       "voter_id": "ISP393480",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Suremdra Kumara",
@@ -6147,7 +6147,7 @@
     },
     {
       "voter_id": "ISP7674969",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Amita Kumara",
@@ -6160,7 +6160,7 @@
     },
     {
       "voter_id": "ISP7482629",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Shrimati Rima Devi",
@@ -6173,7 +6173,7 @@
     },
     {
       "voter_id": "WWC2802056",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Svati",
@@ -6186,7 +6186,7 @@
     },
     {
       "voter_id": "SP4692638",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Amjana Shrivastava",
@@ -6199,7 +6199,7 @@
     },
     {
       "voter_id": "ISP7482538",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Sunila Kumara Chauhana",
@@ -6212,7 +6212,7 @@
     },
     {
       "voter_id": "ISP0873653",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Dipa Yadava",
@@ -6225,7 +6225,7 @@
     },
     {
       "voter_id": "ISP4996443",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Priyambada Pamdeya",
@@ -6238,7 +6238,7 @@
     },
     {
       "voter_id": "SP3725256",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Nitesha Sharma",
@@ -6251,7 +6251,7 @@
     },
     {
       "voter_id": "ISP673672",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Lala Bahadura",
@@ -6264,7 +6264,7 @@
     },
     {
       "voter_id": "ISP7482546",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Shrimati Renu Devi",
@@ -6277,7 +6277,7 @@
     },
     {
       "voter_id": "ISP383284",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Rama Darasha Yadava",
@@ -6290,7 +6290,7 @@
     },
     {
       "voter_id": "ISP2886782",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Mo Yunusa",
@@ -6303,7 +6303,7 @@
     },
     {
       "voter_id": "ISP673656",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Rajesha Bahadura",
@@ -6316,7 +6316,7 @@
     },
     {
       "voter_id": "SP3804275",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Amjali Yadava",
@@ -6329,7 +6329,7 @@
     },
     {
       "voter_id": "ISP3804283",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 3,
       "section_name": "Vikas Nagar Extension Nagar Colony",
       "name": "Mahima Yadava",
@@ -6342,7 +6342,7 @@
     },
     {
       "voter_id": "SP7485754",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Rashmi Shrivastava",
@@ -6355,7 +6355,7 @@
     },
     {
       "voter_id": "ISP7485259",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Ananda Upadhyaya",
@@ -6368,7 +6368,7 @@
     },
     {
       "voter_id": "ISP999200",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Divakara",
@@ -6381,7 +6381,7 @@
     },
     {
       "voter_id": "ISP3728383",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Shailesha Shrivastava",
@@ -6394,7 +6394,7 @@
     },
     {
       "voter_id": "ISP748586",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Sumana Pandeya",
@@ -6407,7 +6407,7 @@
     },
     {
       "voter_id": "SP3728573",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Anuradha Gomda",
@@ -6420,7 +6420,7 @@
     },
     {
       "voter_id": "ISP7485432",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Pradipa Kumara Simha",
@@ -6433,7 +6433,7 @@
     },
     {
       "voter_id": "ISP357926",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Rajendra Prasada",
@@ -6446,7 +6446,7 @@
     },
     {
       "voter_id": "ISP7484930",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Sudhira Kumara Sharma",
@@ -6459,7 +6459,7 @@
     },
     {
       "voter_id": "ISP7484955",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Harivamsha Vishvakarma",
@@ -6472,7 +6472,7 @@
     },
     {
       "voter_id": "SP2043370",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Saroja Shukla",
@@ -6485,7 +6485,7 @@
     },
     {
       "voter_id": "ISP485242",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Amita Kumara Upadhyaya",
@@ -6498,7 +6498,7 @@
     },
     {
       "voter_id": "ISP3728532",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Ishvara Sharana Shrivastava",
@@ -6511,7 +6511,7 @@
     },
     {
       "voter_id": "ISP489660",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Vashishtha Chau I",
@@ -6524,7 +6524,7 @@
     },
     {
       "voter_id": "ISP3889854",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Madana Simha",
@@ -6537,7 +6537,7 @@
     },
     {
       "voter_id": "SP3889805",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Susmita Simha",
@@ -6550,7 +6550,7 @@
     },
     {
       "voter_id": "ISP7485929",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Sarita Sharma",
@@ -6563,7 +6563,7 @@
     },
     {
       "voter_id": "ISP7484578",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Jyoti Shrivastava",
@@ -6576,7 +6576,7 @@
     },
     {
       "voter_id": "ISP4346847",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Nidhi Gupta",
@@ -6589,7 +6589,7 @@
     },
     {
       "voter_id": "ISP748568",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Pravina Kumara",
@@ -6602,7 +6602,7 @@
     },
     {
       "voter_id": "ISP4879926",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Laxmi Chau I",
@@ -6615,7 +6615,7 @@
     },
     {
       "voter_id": "ISP7485879",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Shrimati Vindu Devi",
@@ -6628,7 +6628,7 @@
     },
     {
       "voter_id": "ISP3889839",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Mina Simha",
@@ -6641,7 +6641,7 @@
     },
     {
       "voter_id": "ISP4673949",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Amchala Simha",
@@ -6654,7 +6654,7 @@
     },
     {
       "voter_id": "ISP7485804",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Nilama Tivari",
@@ -6667,7 +6667,7 @@
     },
     {
       "voter_id": "ISP357990",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Rajesha Pathaka",
@@ -6680,7 +6680,7 @@
     },
     {
       "voter_id": "ISP748555",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Savini Devi Gupta",
@@ -6693,7 +6693,7 @@
     },
     {
       "voter_id": "ISP7485507",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Raja Mamgala Gupta",
@@ -6706,7 +6706,7 @@
     },
     {
       "voter_id": "ISP748553",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Mo Ni Sharma",
@@ -6719,7 +6719,7 @@
     },
     {
       "voter_id": "ISP476865",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Neha Maurya",
@@ -6732,7 +6732,7 @@
     },
     {
       "voter_id": "SP7485773",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Shalini Shrivastava",
@@ -6743,7 +6743,7 @@
     },
     {
       "voter_id": "ISP4575643",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Anuradha Shrivastava",
@@ -6756,7 +6756,7 @@
     },
     {
       "voter_id": "ISP0967748",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Vinoda Kumara",
@@ -6769,7 +6769,7 @@
     },
     {
       "voter_id": "ISP4707678",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Babita Devi",
@@ -6782,7 +6782,7 @@
     },
     {
       "voter_id": "ISP4927656",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Harshita Shrivastava",
@@ -6795,7 +6795,7 @@
     },
     {
       "voter_id": "ISP7485655",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Kamaruna Nisha",
@@ -6808,7 +6808,7 @@
     },
     {
       "voter_id": "ISP7485549",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Pratixa Gupta",
@@ -6821,7 +6821,7 @@
     },
     {
       "voter_id": "ISP4956473",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Amana Kumara Gupta",
@@ -6834,7 +6834,7 @@
     },
     {
       "voter_id": "ISP3569670",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Sumana Sharma",
@@ -6847,7 +6847,7 @@
     },
     {
       "voter_id": "ISP7485903",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Girija Shamkara",
@@ -6860,7 +6860,7 @@
     },
     {
       "voter_id": "ISP4876645",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Shanti Devi",
@@ -6873,7 +6873,7 @@
     },
     {
       "voter_id": "ISP096763",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Ruvi Shri0",
@@ -6886,7 +6886,7 @@
     },
     {
       "voter_id": "ISP469228",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Ajaya Kumara Sharma",
@@ -6899,7 +6899,7 @@
     },
     {
       "voter_id": "ISP3728664",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Shivama Kumara Sharma",
@@ -6912,7 +6912,7 @@
     },
     {
       "voter_id": "ISP7485663",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Indu Yadava",
@@ -6925,7 +6925,7 @@
     },
     {
       "voter_id": "ISP7485523",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Sumana Gupta",
@@ -6938,7 +6938,7 @@
     },
     {
       "voter_id": "ISP7486794",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Kamalesha Maurya",
@@ -6951,7 +6951,7 @@
     },
     {
       "voter_id": "ISP3728656",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Shubhama Kumara Sharma",
@@ -6964,7 +6964,7 @@
     },
     {
       "voter_id": "ISP7485648",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Nima Yadava",
@@ -6977,7 +6977,7 @@
     },
     {
       "voter_id": "ISP3728565",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Mina Shrivastava",
@@ -6990,7 +6990,7 @@
     },
     {
       "voter_id": "ISP3824489",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Saurabha Kumara Shrivastava",
@@ -7003,7 +7003,7 @@
     },
     {
       "voter_id": "ISP493554",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Dhiraja Shukla",
@@ -7016,7 +7016,7 @@
     },
     {
       "voter_id": "ISP4335634",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Ramu Simha Chauhana",
@@ -7029,7 +7029,7 @@
     },
     {
       "voter_id": "ISP486782",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Ratnesha Shrivastaya",
@@ -7042,7 +7042,7 @@
     },
     {
       "voter_id": "SP4942793",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Priyamka Kumari",
@@ -7055,7 +7055,7 @@
     },
     {
       "voter_id": "ISP4637294",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Sudhira Kumara Pamde",
@@ -7068,7 +7068,7 @@
     },
     {
       "voter_id": "ISP748564",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Ramachandra Tivari",
@@ -7081,7 +7081,7 @@
     },
     {
       "voter_id": "ISP3970704",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Anamda Kumara Chau I",
@@ -7094,7 +7094,7 @@
     },
     {
       "voter_id": "ISP288573",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Vijaya Kumara Shrivastava",
@@ -7107,7 +7107,7 @@
     },
     {
       "voter_id": "ISP2000248",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Pa Ke Shrivastava",
@@ -7120,7 +7120,7 @@
     },
     {
       "voter_id": "SP4869228",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Isharavati Devi",
@@ -7133,7 +7133,7 @@
     },
     {
       "voter_id": "ISP4335568",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Jyoti Chauhana",
@@ -7146,7 +7146,7 @@
     },
     {
       "voter_id": "ISP673375",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Samtosha Kumara",
@@ -7159,7 +7159,7 @@
     },
     {
       "voter_id": "ISPI673904",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Premalata Mishra",
@@ -7172,7 +7172,7 @@
     },
     {
       "voter_id": "ISP4905923",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Manisha Yadava",
@@ -7185,7 +7185,7 @@
     },
     {
       "voter_id": "SP2287639",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Lalita Devi",
@@ -7198,7 +7198,7 @@
     },
     {
       "voter_id": "ISP4653259",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Kushala Tripathi",
@@ -7211,7 +7211,7 @@
     },
     {
       "voter_id": "ISP4645339",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Karmachamda Mani Pandeya",
@@ -7224,7 +7224,7 @@
     },
     {
       "voter_id": "ISP2885499",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Neha Shrivastava",
@@ -7237,7 +7237,7 @@
     },
     {
       "voter_id": "ISP2056935",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Rimki Devi",
@@ -7250,7 +7250,7 @@
     },
     {
       "voter_id": "ISP4894564",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Sunita Devi",
@@ -7263,7 +7263,7 @@
     },
     {
       "voter_id": "ISP3999356",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Samjaya Lakhamani",
@@ -7276,7 +7276,7 @@
     },
     {
       "voter_id": "ISP4928875",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Vishesha Upadhyaya",
@@ -7289,7 +7289,7 @@
     },
     {
       "voter_id": "ISP4452579",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Babita Gomda",
@@ -7302,7 +7302,7 @@
     },
     {
       "voter_id": "ISP7485473",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Ramadasa",
@@ -7315,7 +7315,7 @@
     },
     {
       "voter_id": "ISP7486398",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Nilama Shrivastava",
@@ -7328,7 +7328,7 @@
     },
     {
       "voter_id": "SP7484880",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Pushpa Kara Pathaka",
@@ -7341,7 +7341,7 @@
     },
     {
       "voter_id": "ISP450940",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Raja Kumara Gaumda",
@@ -7354,7 +7354,7 @@
     },
     {
       "voter_id": "ISP3805629",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Udaya Pratapa Chau I",
@@ -7367,7 +7367,7 @@
     },
     {
       "voter_id": "SP4880274",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Kumari Aditi Shrivastava Shrivastava",
@@ -7380,7 +7380,7 @@
     },
     {
       "voter_id": "ISP4703435",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Raja Rama Simha",
@@ -7393,7 +7393,7 @@
     },
     {
       "voter_id": "SP7484823",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Viramndra Kumara Rava",
@@ -7406,7 +7406,7 @@
     },
     {
       "voter_id": "ISP4452595",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Hemamta Kumara Gomda",
@@ -7419,7 +7419,7 @@
     },
     {
       "voter_id": "ISP3794849",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Jyoti Devi",
@@ -7432,7 +7432,7 @@
     },
     {
       "voter_id": "ISP7485457",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Brjesha Kumara",
@@ -7445,7 +7445,7 @@
     },
     {
       "voter_id": "ISP492064",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Satyemdra Kumara",
@@ -7456,7 +7456,7 @@
     },
     {
       "voter_id": "ISP4509428",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Ramadarasha",
@@ -7469,7 +7469,7 @@
     },
     {
       "voter_id": "ISP4509394",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Savita Gaumda",
@@ -7482,7 +7482,7 @@
     },
     {
       "voter_id": "ZDD787402",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Sima Sharma",
@@ -7495,7 +7495,7 @@
     },
     {
       "voter_id": "ISP464023",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Ra La Chaturvedi",
@@ -7508,7 +7508,7 @@
     },
     {
       "voter_id": "ISP3794823",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Durga Chau I",
@@ -7521,7 +7521,7 @@
     },
     {
       "voter_id": "ISP4703450",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Usha Simha",
@@ -7534,7 +7534,7 @@
     },
     {
       "voter_id": "ISP486505",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Amaranatha Kara Pathaka",
@@ -7547,7 +7547,7 @@
     },
     {
       "voter_id": "SP470533",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Nilu Bharati",
@@ -7560,7 +7560,7 @@
     },
     {
       "voter_id": "ISP205582",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Sunita Tripathi",
@@ -7573,7 +7573,7 @@
     },
     {
       "voter_id": "ISP7673888",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Punama Shrivastava",
@@ -7586,7 +7586,7 @@
     },
     {
       "voter_id": "ISPI673748",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Nitisha Pandeya",
@@ -7599,7 +7599,7 @@
     },
     {
       "voter_id": "ISP2055788",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Urmila Devi",
@@ -7612,7 +7612,7 @@
     },
     {
       "voter_id": "ISP2055853",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Ku0 Puja Sharma",
@@ -7625,7 +7625,7 @@
     },
     {
       "voter_id": "ISP2055960",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Anaradha Raya",
@@ -7638,7 +7638,7 @@
     },
     {
       "voter_id": "ISP229250",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Bandana Simha",
@@ -7651,7 +7651,7 @@
     },
     {
       "voter_id": "ISP673037",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Samgita Nibhani",
@@ -7664,7 +7664,7 @@
     },
     {
       "voter_id": "SP2056398",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Surendra Shrivastava",
@@ -7677,7 +7677,7 @@
     },
     {
       "voter_id": "SP2057305",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Simpi Tripathi",
@@ -7690,7 +7690,7 @@
     },
     {
       "voter_id": "ISP673706",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Ragini Pandeya",
@@ -7703,7 +7703,7 @@
     },
     {
       "voter_id": "ISP2056209",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Amulya Chandra Shrivastava",
@@ -7716,7 +7716,7 @@
     },
     {
       "voter_id": "ISP2055705",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Sima Tripathi",
@@ -7729,7 +7729,7 @@
     },
     {
       "voter_id": "ISP2055804",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Kamalavati Devi",
@@ -7742,7 +7742,7 @@
     },
     {
       "voter_id": "SP2056075",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Rama Kamala Sharma",
@@ -7755,7 +7755,7 @@
     },
     {
       "voter_id": "ISP2056356",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Satyama Shrivastava",
@@ -7768,7 +7768,7 @@
     },
     {
       "voter_id": "SP767377",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Mamju Bharati",
@@ -7781,7 +7781,7 @@
     },
     {
       "voter_id": "ISP2055754",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Manorama Devi",
@@ -7794,7 +7794,7 @@
     },
     {
       "voter_id": "SP2055887",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Pushpendra Kumara Raya",
@@ -7807,7 +7807,7 @@
     },
     {
       "voter_id": "ISP229235",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Navala Kishora",
@@ -7820,7 +7820,7 @@
     },
     {
       "voter_id": "ISP7673623",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Oma Prakasha Yadava",
@@ -7833,7 +7833,7 @@
     },
     {
       "voter_id": "ISP7673557",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Udayabhana",
@@ -7846,7 +7846,7 @@
     },
     {
       "voter_id": "ISP748306",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Madhura Raya",
@@ -7859,7 +7859,7 @@
     },
     {
       "voter_id": "SP484872",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Pragati Tripathi",
@@ -7872,7 +7872,7 @@
     },
     {
       "voter_id": "ISP5040357",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Jyoti",
@@ -7885,7 +7885,7 @@
     },
     {
       "voter_id": "ISP4667674",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Brjesha Kumara Mishra",
@@ -7898,7 +7898,7 @@
     },
     {
       "voter_id": "SP7673474",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Ananda",
@@ -7911,7 +7911,7 @@
     },
     {
       "voter_id": "SP674027",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Nirmala Devi",
@@ -7924,7 +7924,7 @@
     },
     {
       "voter_id": "ISP7673862",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Aloka Bharati",
@@ -7937,7 +7937,7 @@
     },
     {
       "voter_id": "ISP799852",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Ramashamkara Pandeya",
@@ -7950,7 +7950,7 @@
     },
     {
       "voter_id": "ISP2886075",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Mamju Simha",
@@ -7963,7 +7963,7 @@
     },
     {
       "voter_id": "ISP288609",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Amita Kumara Simha",
@@ -7976,7 +7976,7 @@
     },
     {
       "voter_id": "SP4847334",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Prajna Tripathi",
@@ -7989,7 +7989,7 @@
     },
     {
       "voter_id": "ISP344332",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Anila Kumara Chaube",
@@ -8002,7 +8002,7 @@
     },
     {
       "voter_id": "ISP4933677",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Sarita Devi",
@@ -8015,7 +8015,7 @@
     },
     {
       "voter_id": "ISP4667648",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Anushka Mishra",
@@ -8028,7 +8028,7 @@
     },
     {
       "voter_id": "ISP2886083",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Manisha Kumara Simha",
@@ -8041,7 +8041,7 @@
     },
     {
       "voter_id": "ISP3443724",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Ramjana Chaube",
@@ -8054,7 +8054,7 @@
     },
     {
       "voter_id": "ISP2547826",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Kirana Shrivastava",
@@ -8067,7 +8067,7 @@
     },
     {
       "voter_id": "SP2547878",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Radheshyama Simha",
@@ -8080,7 +8080,7 @@
     },
     {
       "voter_id": "SP470340",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Ratana Lala Praja",
@@ -8093,7 +8093,7 @@
     },
     {
       "voter_id": "ISP205666",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Daya Sha.nkara",
@@ -8106,7 +8106,7 @@
     },
     {
       "voter_id": "ISP3357889",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Shahanavaja Khana",
@@ -8119,7 +8119,7 @@
     },
     {
       "voter_id": "ISP7485002",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Shanti Devi",
@@ -8132,7 +8132,7 @@
     },
     {
       "voter_id": "ISP0873760",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Krshna Chamdra",
@@ -8145,7 +8145,7 @@
     },
     {
       "voter_id": "ISP2882652",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Mo Ta Kumara",
@@ -8158,7 +8158,7 @@
     },
     {
       "voter_id": "ISP767356",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Shivamgi Pradhana",
@@ -8171,7 +8171,7 @@
     },
     {
       "voter_id": "TMS2607607",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Shveta Rani",
@@ -8184,7 +8184,7 @@
     },
     {
       "voter_id": "SP377868",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Ashvani Kumara",
@@ -8197,7 +8197,7 @@
     },
     {
       "voter_id": "ISP3357863",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Sabiha Yasamina",
@@ -8210,7 +8210,7 @@
     },
     {
       "voter_id": "ISP335897",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Shahabaza Khana",
@@ -8223,7 +8223,7 @@
     },
     {
       "voter_id": "SP4636742",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Amita Kumara Malaviya",
@@ -8236,7 +8236,7 @@
     },
     {
       "voter_id": "ISP2886208",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Kodai Simha",
@@ -8249,7 +8249,7 @@
     },
     {
       "voter_id": "SP0873778",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Maya Devi",
@@ -8262,7 +8262,7 @@
     },
     {
       "voter_id": "SP4977435",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "sfta aaf ना",
@@ -8275,7 +8275,7 @@
     },
     {
       "voter_id": "ISP4703534",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Sumita Devi",
@@ -8288,7 +8288,7 @@
     },
     {
       "voter_id": "ISP4928404",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Brajesha Simha",
@@ -8301,7 +8301,7 @@
     },
     {
       "voter_id": "SP378707",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Nagendra Kumara",
@@ -8314,7 +8314,7 @@
     },
     {
       "voter_id": "ISP4346870",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Kamechcha Mishra",
@@ -8327,7 +8327,7 @@
     },
     {
       "voter_id": "ISP4877466",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Priti Gupta",
@@ -8340,7 +8340,7 @@
     },
     {
       "voter_id": "ISP2886034",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Anuradha Simha",
@@ -8353,7 +8353,7 @@
     },
     {
       "voter_id": "ISP4333043",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Nazira Saina",
@@ -8366,7 +8366,7 @@
     },
     {
       "voter_id": "ISP748529",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Malati Devi",
@@ -8379,7 +8379,7 @@
     },
     {
       "voter_id": "ISP2584977",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Krshna Kumara Shrivastava",
@@ -8392,7 +8392,7 @@
     },
     {
       "voter_id": "SP2586097",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Akhilesha Kumara",
@@ -8405,7 +8405,7 @@
     },
     {
       "voter_id": "SP0874529",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Gautama Sharma",
@@ -8418,7 +8418,7 @@
     },
     {
       "voter_id": "ISP087390",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Umesha 80",
@@ -8430,7 +8430,7 @@
     },
     {
       "voter_id": "SP0873667",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Ramadarasha",
@@ -8443,7 +8443,7 @@
     },
     {
       "voter_id": "ISP457793",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Rshi Tivari",
@@ -8456,7 +8456,7 @@
     },
     {
       "voter_id": "SP0874446",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Ratnesha Kumara",
@@ -8469,7 +8469,7 @@
     },
     {
       "voter_id": "ISP0873885",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Sujata Simha",
@@ -8482,7 +8482,7 @@
     },
     {
       "voter_id": "ISP3358694",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Minahaja Ahamada",
@@ -8495,7 +8495,7 @@
     },
     {
       "voter_id": "ISP2584993",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Tapsaya Shrivastava",
@@ -8508,7 +8508,7 @@
     },
     {
       "voter_id": "ISP2586205",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Kumari Sarita Bharati",
@@ -8521,7 +8521,7 @@
     },
     {
       "voter_id": "SP0007743",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Pushpa Devi",
@@ -8534,7 +8534,7 @@
     },
     {
       "voter_id": "SP0874487",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Dulala Chanda",
@@ -8547,7 +8547,7 @@
     },
     {
       "voter_id": "ISP087399",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Narendra",
@@ -8560,7 +8560,7 @@
     },
     {
       "voter_id": "ISP504707",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Urvashi Tivari",
@@ -8573,7 +8573,7 @@
     },
     {
       "voter_id": "ISP7998889",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Jyoti Prakasha",
@@ -8586,7 +8586,7 @@
     },
     {
       "voter_id": "SP087457",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Jaya Prakasha",
@@ -8599,7 +8599,7 @@
     },
     {
       "voter_id": "SP2584985",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Ananda Shrivastava",
@@ -8612,7 +8612,7 @@
     },
     {
       "voter_id": "ISP2586074",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Motilala",
@@ -8625,7 +8625,7 @@
     },
     {
       "voter_id": "ISP0007750",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Prashanta Kumara",
@@ -8638,7 +8638,7 @@
     },
     {
       "voter_id": "ISP0873802",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Manoja Kumara",
@@ -8651,7 +8651,7 @@
     },
     {
       "voter_id": "ISP3560766",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Iraphata Jaham 80",
@@ -8663,7 +8663,7 @@
     },
     {
       "voter_id": "SP0874503",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Divya Prakasha",
@@ -8676,7 +8676,7 @@
     },
     {
       "voter_id": "ISP0874289",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Madhavi",
@@ -8689,7 +8689,7 @@
     },
     {
       "voter_id": "SP0873737",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Alpana",
@@ -8702,7 +8702,7 @@
     },
     {
       "voter_id": "SP0874537",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Digavijaya Chauhana",
@@ -8715,7 +8715,7 @@
     },
     {
       "voter_id": "SP0873870",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Rupa",
@@ -8728,7 +8728,7 @@
     },
     {
       "voter_id": "ISP5054846",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Amshita Simha",
@@ -8741,7 +8741,7 @@
     },
     {
       "voter_id": "ISP3766022",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Samdipa Kumara",
@@ -8754,7 +8754,7 @@
     },
     {
       "voter_id": "ISP0874230",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Indrajita",
@@ -8767,7 +8767,7 @@
     },
     {
       "voter_id": "SP3579224",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Shubhama Chaurasiya",
@@ -8780,7 +8780,7 @@
     },
     {
       "voter_id": "ISP0874339",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Mehatava Alama",
@@ -8793,7 +8793,7 @@
     },
     {
       "voter_id": "SP0873869",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Maya Pamde",
@@ -8806,7 +8806,7 @@
     },
     {
       "voter_id": "SP0873877",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Muniva Pandeya",
@@ -8819,7 +8819,7 @@
     },
     {
       "voter_id": "SP463702",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Dhiraja Yadava",
@@ -8832,7 +8832,7 @@
     },
     {
       "voter_id": "ISP0874438",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Sudha Tivari",
@@ -8845,7 +8845,7 @@
     },
     {
       "voter_id": "ISP0873646",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Sneha Lata",
@@ -8858,7 +8858,7 @@
     },
     {
       "voter_id": "ISP2885507",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Shikha Siham",
@@ -8871,7 +8871,7 @@
     },
     {
       "voter_id": "SP444902",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Aishvarya Sharma",
@@ -8884,7 +8884,7 @@
     },
     {
       "voter_id": "ISP0874222",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Nirmala",
@@ -8897,7 +8897,7 @@
     },
     {
       "voter_id": "ISP3533890",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Avanisha Tripathi",
@@ -8910,7 +8910,7 @@
     },
     {
       "voter_id": "SP0873638",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Vibha Shrivastava",
@@ -8923,7 +8923,7 @@
     },
     {
       "voter_id": "SP0873729",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Rajesha Kumara",
@@ -8936,7 +8936,7 @@
     },
     {
       "voter_id": "ISP0874420",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Shanti Devi",
@@ -8949,7 +8949,7 @@
     },
     {
       "voter_id": "ISP0873836",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Hari Rama",
@@ -8962,7 +8962,7 @@
     },
     {
       "voter_id": "SP492263",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Amana Simha",
@@ -8975,7 +8975,7 @@
     },
     {
       "voter_id": "ISP3896362",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Harshita Simha",
@@ -8988,7 +8988,7 @@
     },
     {
       "voter_id": "SP288555",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Sunita Simha",
@@ -9001,7 +9001,7 @@
     },
     {
       "voter_id": "ISP3569688",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Archana Varma",
@@ -9014,7 +9014,7 @@
     },
     {
       "voter_id": "ISP3579232",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Sanan{}dipa Chaurasiya",
@@ -9027,7 +9027,7 @@
     },
     {
       "voter_id": "SP4335600",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet...",
       "name": "Varunendara Pandeya",
@@ -9040,7 +9040,7 @@
     },
     {
       "voter_id": "SP2885374",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet. 378. SH.",
       "name": "Supriya Raya",
@@ -9053,7 +9053,7 @@
     },
     {
       "voter_id": "ISP4698833",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet. 378. SH.",
       "name": "Shivama Pamdeya",
@@ -9066,7 +9066,7 @@
     },
     {
       "voter_id": "ISP4509436",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet. 378. SH.",
       "name": "Kavita Vishvakarma",
@@ -9079,7 +9079,7 @@
     },
     {
       "voter_id": "ISP3722808",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet. 378. SH.",
       "name": "Jashmina Kumari",
@@ -9092,7 +9092,7 @@
     },
     {
       "voter_id": "ISP468078",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet. 378. SH.",
       "name": "Amshika Simha",
@@ -9105,7 +9105,7 @@
     },
     {
       "voter_id": "ISP673805",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet. 378. SH.",
       "name": "Amju Shukla",
@@ -9118,7 +9118,7 @@
     },
     {
       "voter_id": "ISP375042",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet. 378. SH.",
       "name": "Nirmala Devi Jayasavala",
@@ -9131,7 +9131,7 @@
     },
     {
       "voter_id": "ISP3569654",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet. 378. SH.",
       "name": "Kusamavati Devi",
@@ -9144,7 +9144,7 @@
     },
     {
       "voter_id": "ISP7487032",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet. 378. SH.",
       "name": "Jaya Prakasha Pandeya",
@@ -9157,7 +9157,7 @@
     },
     {
       "voter_id": "ISP486992",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet. 378. SH.",
       "name": "Renu Upadhyaya",
@@ -9170,7 +9170,7 @@
     },
     {
       "voter_id": "ISP3354560",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet. 378. SH.",
       "name": "Satyabhama Mishra",
@@ -9183,7 +9183,7 @@
     },
     {
       "voter_id": "ISP0874578",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet. 378. SH.",
       "name": "Bandana Shrivastava",
@@ -9196,7 +9196,7 @@
     },
     {
       "voter_id": "ISP7485234",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet. 378. SH.",
       "name": "Ashoka Kumara",
@@ -9209,7 +9209,7 @@
     },
     {
       "voter_id": "SP7484948",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet. 378. SH.",
       "name": "Prema Chandra Goda",
@@ -9222,7 +9222,7 @@
     },
     {
       "voter_id": "ISP357974",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet. 378. SH.",
       "name": "Rita Pandeya",
@@ -9235,7 +9235,7 @@
     },
     {
       "voter_id": "ISP0873695",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet. 378. SH.",
       "name": "Munni Devi",
@@ -9248,7 +9248,7 @@
     },
     {
       "voter_id": "ISP7484872",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet. 378. SH.",
       "name": "Nitu Upadhyaya",
@@ -9261,7 +9261,7 @@
     },
     {
       "voter_id": "ISP5059258",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet. 378. SH.",
       "name": "Rajesha Yadava",
@@ -9274,7 +9274,7 @@
     },
     {
       "voter_id": "SP7487040",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet. 378. SH.",
       "name": "Sudha Pandeya",
@@ -9287,7 +9287,7 @@
     },
     {
       "voter_id": "SP487057",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet. 378. SH.",
       "name": "Punita Kumara Vishvakarma",
@@ -9300,7 +9300,7 @@
     },
     {
       "voter_id": "ISP402495",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet. 378. SH.",
       "name": "Anuraga Sharma",
@@ -9313,7 +9313,7 @@
     },
     {
       "voter_id": "ISP4734554",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet. 378. SH.",
       "name": "Ayusha Kumara Simha",
@@ -9326,7 +9326,7 @@
     },
     {
       "voter_id": "ISP485606",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet. 378. SH.",
       "name": "Bandana",
@@ -9339,7 +9339,7 @@
     },
     {
       "voter_id": "ISP0873620",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet. 378. SH.",
       "name": "Manoja Kumara",
@@ -9352,7 +9352,7 @@
     },
     {
       "voter_id": "ISP4346862",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet. 378. SH.",
       "name": "Vishnu Kamta Mishra",
@@ -9365,7 +9365,7 @@
     },
     {
       "voter_id": "SP0873844",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar Yet. 378. SH.",
       "name": "Laxmi Prasada",
@@ -9378,7 +9378,7 @@
     },
     {
       "voter_id": "ISP087385",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Ramju Devi",
@@ -9391,7 +9391,7 @@
     },
     {
       "voter_id": "ISP357958",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Indu Jayasavala",
@@ -9404,7 +9404,7 @@
     },
     {
       "voter_id": "SP0873570",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Meva Lala",
@@ -9417,7 +9417,7 @@
     },
     {
       "voter_id": "ISP3579766",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Ashoka Kumara Jayasavala",
@@ -9430,7 +9430,7 @@
     },
     {
       "voter_id": "ISP508492",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Sudhamshu Mishra",
@@ -9443,7 +9443,7 @@
     },
     {
       "voter_id": "ISP5084504",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Miralani Simha",
@@ -9456,7 +9456,7 @@
     },
     {
       "voter_id": "ISP508755",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Far Rani",
@@ -9469,7 +9469,7 @@
     },
     {
       "voter_id": "ISP5099049",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Vinita Simha",
@@ -9482,7 +9482,7 @@
     },
     {
       "voter_id": "ISP5799463",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Muskana Sharma",
@@ -9495,7 +9495,7 @@
     },
     {
       "voter_id": "ISP5724052",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Abhilasha Shrivastava",
@@ -9508,7 +9508,7 @@
     },
     {
       "voter_id": "ISP5724367",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Surendra Chauhana",
@@ -9521,7 +9521,7 @@
     },
     {
       "voter_id": "ISP5078597",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Shikha Mala",
@@ -9534,7 +9534,7 @@
     },
     {
       "voter_id": "ISP5084082",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Mamshu Shrivastava",
@@ -9547,7 +9547,7 @@
     },
     {
       "voter_id": "ISP5084843",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Mamshu Gupta",
@@ -9560,7 +9560,7 @@
     },
     {
       "voter_id": "ISP509250",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Durgesha Pandeya",
@@ -9573,7 +9573,7 @@
     },
     {
       "voter_id": "ISP5099722",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Nilama Hai",
@@ -9586,7 +9586,7 @@
     },
     {
       "voter_id": "SP570805",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Savita Chauhana",
@@ -9599,7 +9599,7 @@
     },
     {
       "voter_id": "ISP543063",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Aditya Chauhana",
@@ -9612,7 +9612,7 @@
     },
     {
       "voter_id": "ISP5724060",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Sagira Ahamada",
@@ -9623,7 +9623,7 @@
     },
     {
       "voter_id": "ISP524409",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Umashamkara Shrivastava",
@@ -9636,7 +9636,7 @@
     },
     {
       "voter_id": "ISP5087096",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Shilpa",
@@ -9649,7 +9649,7 @@
     },
     {
       "voter_id": "SP5084397",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Kumari Amchala",
@@ -9662,7 +9662,7 @@
     },
     {
       "voter_id": "SP5097357",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Archana Tripathi",
@@ -9675,7 +9675,7 @@
     },
     {
       "voter_id": "ISP5723583",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Samyogita",
@@ -9688,7 +9688,7 @@
     },
     {
       "voter_id": "ISP5724744",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Amsha Simha",
@@ -9701,7 +9701,7 @@
     },
     {
       "voter_id": "SP5724607",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Rashmi Gupta",
@@ -9714,7 +9714,7 @@
     },
     {
       "voter_id": "ISP5724873",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Surendra Simha",
@@ -9727,7 +9727,7 @@
     },
     {
       "voter_id": "ISP524847",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Abhisheka Shrivastava",
@@ -9740,7 +9740,7 @@
     },
     {
       "voter_id": "ISP5724904",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Rina Simha",
@@ -9753,7 +9753,7 @@
     },
     {
       "voter_id": "ISP527352",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Shraddha Mishra",
@@ -9766,7 +9766,7 @@
     },
     {
       "voter_id": "ISP5728046",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Chandana Chauhana",
@@ -9779,7 +9779,7 @@
     },
     {
       "voter_id": "ISP5724862",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Ajita Kumara Chaurashiya",
@@ -9792,7 +9792,7 @@
     },
     {
       "voter_id": "ISP572566",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Shiva Lahari Pandeya",
@@ -9805,7 +9805,7 @@
     },
     {
       "voter_id": "ISP5728236",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Ayusha Shrivastava",
@@ -9818,7 +9818,7 @@
     },
     {
       "voter_id": "SP5724839",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Samira Chauhana",
@@ -9831,7 +9831,7 @@
     },
     {
       "voter_id": "ISP5724888",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Pimki Chauhana",
@@ -9844,7 +9844,7 @@
     },
     {
       "voter_id": "ISP572585",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Sundari Simha",
@@ -9857,7 +9857,7 @@
     },
     {
       "voter_id": "SP5726479",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Babita Ta",
@@ -9870,7 +9870,7 @@
     },
     {
       "voter_id": "ISP5727055",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Bimala",
@@ -9883,7 +9883,7 @@
     },
     {
       "voter_id": "ISP5727956",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Samgita Simha",
@@ -9896,7 +9896,7 @@
     },
     {
       "voter_id": "ISP528244",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Ar",
@@ -9909,7 +9909,7 @@
     },
     {
       "voter_id": "ISP572892",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Ay Varma",
@@ -9922,7 +9922,7 @@
     },
     {
       "voter_id": "ISP4647590",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Rajashri Mishra",
@@ -9935,7 +9935,7 @@
     },
     {
       "voter_id": "ISP530240",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Saxi Shrivastava",
@@ -9948,7 +9948,7 @@
     },
     {
       "voter_id": "ISP533343",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Ravi Chau I",
@@ -9961,7 +9961,7 @@
     },
     {
       "voter_id": "ISP535595",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Shikhara Shrivastava",
@@ -9974,7 +9974,7 @@
     },
     {
       "voter_id": "ISP5736403",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Amana Pandeya",
@@ -9987,7 +9987,7 @@
     },
     {
       "voter_id": "ISP5729002",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Abhisheka Chauhana",
@@ -10000,7 +10000,7 @@
     },
     {
       "voter_id": "ISP5737230",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Umashamkara Shrivastava",
@@ -10013,7 +10013,7 @@
     },
     {
       "voter_id": "ISP533269",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Nikita Chau I",
@@ -10026,7 +10026,7 @@
     },
     {
       "voter_id": "ISP533699",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Sumita Gupta",
@@ -10039,7 +10039,7 @@
     },
     {
       "voter_id": "ISP5736098",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Rina Kumari",
@@ -10052,7 +10052,7 @@
     },
     {
       "voter_id": "ISP529069",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Sabhananda Varma",
@@ -10065,7 +10065,7 @@
     },
     {
       "voter_id": "ISP0002907",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Prakasha Chandra",
@@ -10078,7 +10078,7 @@
     },
     {
       "voter_id": "ISP530976",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Dilipa Kumara",
@@ -10091,7 +10091,7 @@
     },
     {
       "voter_id": "ISP5737289",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Bishvajita Shrivastava",
@@ -10104,7 +10104,7 @@
     },
     {
       "voter_id": "SP5733277",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Roshani Chau I",
@@ -10117,7 +10117,7 @@
     },
     {
       "voter_id": "ISP5735264",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Vijaya Chauhana",
@@ -10130,7 +10130,7 @@
     },
     {
       "voter_id": "ISP573704",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Lila Pathaka",
@@ -10143,7 +10143,7 @@
     },
     {
       "voter_id": "ISP5764603",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Lila Pathaka",
@@ -10156,7 +10156,7 @@
     },
     {
       "voter_id": "ISP5767085",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Ashutosha Tripathi",
@@ -10169,7 +10169,7 @@
     },
     {
       "voter_id": "ISP5200647",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Ayusha Simha",
@@ -10180,7 +10180,7 @@
     },
     {
       "voter_id": "ISP5737647",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Shashi Priya Shrivastava",
@@ -10193,7 +10193,7 @@
     },
     {
       "voter_id": "SP573976",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Usha Devi",
@@ -10206,7 +10206,7 @@
     },
     {
       "voter_id": "ISP564249",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "aa Ferrel",
@@ -10219,7 +10219,7 @@
     },
     {
       "voter_id": "ISP565907",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Kusuma Lata Tripathi",
@@ -10232,7 +10232,7 @@
     },
     {
       "voter_id": "ISP5774834",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Ayana Satvika Tivari",
@@ -10245,7 +10245,7 @@
     },
     {
       "voter_id": "ISP5785905",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Sneha Poddara",
@@ -10258,7 +10258,7 @@
     },
     {
       "voter_id": "ISP5790525",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Piyusha Kumara",
@@ -10271,7 +10271,7 @@
     },
     {
       "voter_id": "ISP5756708",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Shakuntala Tripathi",
@@ -10284,7 +10284,7 @@
     },
     {
       "voter_id": "ISP5764374",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Aniketa Simha",
@@ -10297,7 +10297,7 @@
     },
     {
       "voter_id": "ISP5765678",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Piyusha Shrivastava",
@@ -10310,7 +10310,7 @@
     },
     {
       "voter_id": "ISP576694",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Priti Sharma",
@@ -10323,7 +10323,7 @@
     },
     {
       "voter_id": "ISP5775666",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Star Shrivastava",
@@ -10336,7 +10336,7 @@
     },
     {
       "voter_id": "ISP578593",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Ayusha Poddara",
@@ -10349,7 +10349,7 @@
     },
     {
       "voter_id": "ISP5790665",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Mamju Shrivastava",
@@ -10362,7 +10362,7 @@
     },
     {
       "voter_id": "ISP527955",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Puja Shrivastava",
@@ -10375,7 +10375,7 @@
     },
     {
       "voter_id": "ISP5278037",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Pamkaja Kumara Shrivastava",
@@ -10388,7 +10388,7 @@
     },
     {
       "voter_id": "ISP5224035",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Jaya Kumara Shrivastava",
@@ -10401,7 +10401,7 @@
     },
     {
       "voter_id": "ISP5257350",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Rshi Shrivastava",
@@ -10414,7 +10414,7 @@
     },
     {
       "voter_id": "ISP526706",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Mamshi Pandeya",
@@ -10427,7 +10427,7 @@
     },
     {
       "voter_id": "ISP5265703",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Archana Pandeya",
@@ -10440,7 +10440,7 @@
     },
     {
       "voter_id": "SP5305255",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Shahina .khatuna",
@@ -10453,7 +10453,7 @@
     },
     {
       "voter_id": "ISP5346044",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Arunemdra Prakasha Maurya",
@@ -10466,7 +10466,7 @@
     },
     {
       "voter_id": "SP5222583",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Pratyusha Karana",
@@ -10479,7 +10479,7 @@
     },
     {
       "voter_id": "ISP5224050",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Ekata Shrivastava",
@@ -10492,7 +10492,7 @@
     },
     {
       "voter_id": "ISP5226055",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Amisha Shrivastava",
@@ -10505,7 +10505,7 @@
     },
     {
       "voter_id": "ISP5252044",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Anuvamshika Yadava",
@@ -10518,7 +10518,7 @@
     },
     {
       "voter_id": "ISP5263892",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Sudhira Kumara Dube",
@@ -10531,7 +10531,7 @@
     },
     {
       "voter_id": "ISP5266986",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Apurva Krshna",
@@ -10544,7 +10544,7 @@
     },
     {
       "voter_id": "ISP5295480",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Primsi Gupta",
@@ -10557,7 +10557,7 @@
     },
     {
       "voter_id": "ISP5305370",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Salama Yasamina",
@@ -10570,7 +10570,7 @@
     },
     {
       "voter_id": "ISP4027240",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Uma Agravala",
@@ -10583,7 +10583,7 @@
     },
     {
       "voter_id": "ISP539697",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Aditya Kumara",
@@ -10596,7 +10596,7 @@
     },
     {
       "voter_id": "SP522409",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Vidya Bharati",
@@ -10609,7 +10609,7 @@
     },
     {
       "voter_id": "ISP5224076",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Pradipa Kumara",
@@ -10622,7 +10622,7 @@
     },
     {
       "voter_id": "ISP5232533",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Rshi Shrivastava",
@@ -10635,7 +10635,7 @@
     },
     {
       "voter_id": "ISP5254420",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Ser Ramjana Sharma",
@@ -10648,7 +10648,7 @@
     },
     {
       "voter_id": "ISP5265079",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Aditya Kumara Dube",
@@ -10661,7 +10661,7 @@
     },
     {
       "voter_id": "ISP5268578",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Sha La Rava",
@@ -10674,7 +10674,7 @@
     },
     {
       "voter_id": "ISP5297296",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Pamkaja Tripathi",
@@ -10687,7 +10687,7 @@
     },
     {
       "voter_id": "ISP530674",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Saipha Khana",
@@ -10698,7 +10698,7 @@
     },
     {
       "voter_id": "ISPI087568",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Ritesha Kumara Sharma",
@@ -10711,7 +10711,7 @@
     },
     {
       "voter_id": "SP4497590",
-      "part_number": 44,
+      "part_number": 11,
       "section_number": 4,
       "section_name": "Vikas Nagar LIG.",
       "name": "Divya Chugavani",

@@ -4,7 +4,7 @@
     "total_pages": 43,
     "state": "Uttar Pradesh",
     "year": 2026,
-    "part_number": 8,
+    "part_number": 81,
     "assembly_constituency": {
       "number": 322,
       "name": "Gorakhpur City",
@@ -21,7 +21,7 @@
   "voter_records": [
     {
       "voter_id": "ISP0567065",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Avvasha Ali",
       "relation_type": "Father",
       "relation_name": "Sva0 Rajjaka",
@@ -32,7 +32,7 @@
     },
     {
       "voter_id": "ISP083504",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Gopala Yadava",
       "relation_type": "Father",
       "relation_name": "Sva0 Bamshi Yadava",
@@ -43,7 +43,7 @@
     },
     {
       "voter_id": "ISP234736",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Kusamavati Devi",
       "relation_type": "Husband",
       "relation_name": "Shivanatha Yadava",
@@ -54,7 +54,7 @@
     },
     {
       "voter_id": "SP4354700",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Akali Devi",
       "relation_type": "Husband",
       "relation_name": "Munna Lala",
@@ -65,7 +65,7 @@
     },
     {
       "voter_id": "ISP2793555",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Kaushalya Devi",
       "relation_type": "Husband",
       "relation_name": "Sva Kolahala Urpha Ramabarana",
@@ -76,7 +76,7 @@
     },
     {
       "voter_id": "ISP757657",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Satya Prakasha Simha",
       "relation_type": "Father",
       "relation_name": "Sva0 Lalaji Simha",
@@ -87,7 +87,7 @@
     },
     {
       "voter_id": "ISP4050346",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Harikesha Raya",
       "relation_type": "Father",
       "relation_name": "Vishvanatha Raya",
@@ -98,7 +98,7 @@
     },
     {
       "voter_id": "ISP7783505",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Punama Devi",
       "relation_type": "Husband",
       "relation_name": "Qashna Kumara Q",
@@ -109,7 +109,7 @@
     },
     {
       "voter_id": "SP7780747",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Avadhesha Pandeya",
       "relation_type": "Father",
       "relation_name": "Tirtharaja Pandeya",
@@ -120,7 +120,7 @@
     },
     {
       "voter_id": "ISP4050308",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Krshna Menana Upadhyaya",
       "relation_type": "Father",
       "relation_name": "Surya Narayana Upadhyaya",
@@ -131,7 +131,7 @@
     },
     {
       "voter_id": "ISP4050324",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Satyadeva Prasada",
       "relation_type": "Father",
       "relation_name": "Rama Badhai",
@@ -142,7 +142,7 @@
     },
     {
       "voter_id": "ISP2309706",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Gulama Saina",
       "relation_type": "Father",
       "relation_name": "Sva0 Nura Mohammada",
@@ -153,7 +153,7 @@
     },
     {
       "voter_id": "ISP074984",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Pramoda Kumara",
       "relation_type": "Father",
       "relation_name": "Hira Lala",
@@ -164,7 +164,7 @@
     },
     {
       "voter_id": "SP0648675",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Nebu Lala",
       "relation_type": "Father",
       "relation_name": "Sva0 Tat Chau I",
@@ -175,7 +175,7 @@
     },
     {
       "voter_id": "ISP705064",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Nura Mohammada",
       "relation_type": "Father",
       "relation_name": "Roshana Ali",
@@ -186,7 +186,7 @@
     },
     {
       "voter_id": "ISP7787952",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Sudha Pandeya",
       "relation_type": "Husband",
       "relation_name": "Avadhesha Pandeya",
@@ -197,7 +197,7 @@
     },
     {
       "voter_id": "SP2275477",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Pramoda Yadava",
       "relation_type": "Father",
       "relation_name": "Sva0 Bareli Yadava",
@@ -208,7 +208,7 @@
     },
     {
       "voter_id": "ISP408783",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ajaratuna Nisha",
       "relation_type": "Father",
       "relation_name": "Shivachanda Yadava",
@@ -219,7 +219,7 @@
     },
     {
       "voter_id": "ISP7074992",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Virendra Kumara",
       "relation_type": "Father",
       "relation_name": "Sva0 Sudeshi",
@@ -230,7 +230,7 @@
     },
     {
       "voter_id": "ISP707503",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Subhavati Devi",
       "relation_type": "Husband",
       "relation_name": "Virendra Kumara Qv",
@@ -241,7 +241,7 @@
     },
     {
       "voter_id": "ISP750934",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Lalita Devi",
       "relation_type": "Father",
       "relation_name": "Rajindra Prasada Pandeya",
@@ -252,7 +252,7 @@
     },
     {
       "voter_id": "ISP4053872",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Krshna Kumara",
       "relation_type": "Father",
       "relation_name": "Rama Prita",
@@ -263,7 +263,7 @@
     },
     {
       "voter_id": "ISPI779255",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Dinesha Kumara",
       "relation_type": "Father",
       "relation_name": "Ishvarachandra",
@@ -274,7 +274,7 @@
     },
     {
       "voter_id": "SP0834572",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Rajesha Sharma",
       "relation_type": "Father",
       "relation_name": "Bhagavana Dasa Sharma Pa",
@@ -285,7 +285,7 @@
     },
     {
       "voter_id": "ISP0567073",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Shayara Khatuna",
       "relation_type": "Husband",
       "relation_name": "Shahajada Ali",
@@ -296,7 +296,7 @@
     },
     {
       "voter_id": "ISP4053864",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Shambhu Sharana Prasada",
       "relation_type": "Father",
       "relation_name": "Rama Autara Prasada",
@@ -307,7 +307,7 @@
     },
     {
       "voter_id": "ISP056708",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Samina Khatuna",
       "relation_type": "Husband",
       "relation_name": "Gulama Saina",
@@ -318,7 +318,7 @@
     },
     {
       "voter_id": "ISP777498",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Anita Sharma",
       "relation_type": "Husband",
       "relation_name": "Jagata Prasada",
@@ -329,7 +329,7 @@
     },
     {
       "voter_id": "SP7790948",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Usha Devi",
       "relation_type": "Husband",
       "relation_name": "Surendra Kumara",
@@ -340,7 +340,7 @@
     },
     {
       "voter_id": "ISP4053880",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Harishvrmdra Yadava",
       "relation_type": "Father",
       "relation_name": "Vishuna Deva Yadava",
@@ -351,7 +351,7 @@
     },
     {
       "voter_id": "SP4050357",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Krpala Sharana",
       "relation_type": "Father",
       "relation_name": "Brjalala",
@@ -362,7 +362,7 @@
     },
     {
       "voter_id": "ISP056798",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Rukhasana Khatuna",
       "relation_type": "Husband",
       "relation_name": "Shabbira Ahamada",
@@ -373,7 +373,7 @@
     },
     {
       "voter_id": "SP7750850",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Akura Yadava",
       "relation_type": "Husband",
       "relation_name": "Digivijaya Natha Yadava",
@@ -384,7 +384,7 @@
     },
     {
       "voter_id": "ISP723538",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Jalaluddina",
       "relation_type": "Father",
       "relation_name": "Jane Mohammada",
@@ -395,7 +395,7 @@
     },
     {
       "voter_id": "SP7758044",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ramu Yadava",
       "relation_type": "Father",
       "relation_name": "Hira Lala",
@@ -406,7 +406,7 @@
     },
     {
       "voter_id": "ISP7075049",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ra La Kumara",
       "relation_type": "Father",
       "relation_name": "Sukhkhu Prasada",
@@ -417,7 +417,7 @@
     },
     {
       "voter_id": "SP2309722",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ravindra Kumara",
       "relation_type": "Father",
       "relation_name": "Rama Naresha Yadava",
@@ -428,7 +428,7 @@
     },
     {
       "voter_id": "ISP4975363",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Arati Devi",
       "relation_type": "Father",
       "relation_name": "Jhabbara Rajabhara",
@@ -439,7 +439,7 @@
     },
     {
       "voter_id": "ISP2275493",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Nilama Devi",
       "relation_type": "Husband",
       "relation_name": "Ajaya Chau I",
@@ -450,7 +450,7 @@
     },
     {
       "voter_id": "ISP7782267",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Fate Kumara Chau I",
       "relation_type": "Father",
       "relation_name": "Ramasarana",
@@ -461,7 +461,7 @@
     },
     {
       "voter_id": "ISP7752064",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Mo Ayuba",
       "relation_type": "Father",
       "relation_name": "Mo Husaina",
@@ -472,7 +472,7 @@
     },
     {
       "voter_id": "ISP0834580",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Nirmala Devi",
       "relation_type": "Husband",
       "relation_name": "Rajesha Sharma",
@@ -483,7 +483,7 @@
     },
     {
       "voter_id": "SP234744",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Vijaya Kumara Pandeya",
       "relation_type": "Father",
       "relation_name": "Rajendra Prasada Pandeya Qi",
@@ -494,7 +494,7 @@
     },
     {
       "voter_id": "SP797532",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ajaya Kumara",
       "relation_type": "Father",
       "relation_name": "Ramavatara Qi",
@@ -505,7 +505,7 @@
     },
     {
       "voter_id": "ISP0648876",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Pramoda Yadava",
       "relation_type": "Father",
       "relation_name": "Rajendra Yadava",
@@ -516,7 +516,7 @@
     },
     {
       "voter_id": "SP2309748",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Shamashera",
       "relation_type": "Father",
       "relation_name": "Sva0 Vali Mo0 Pa",
@@ -527,7 +527,7 @@
     },
     {
       "voter_id": "ISP7923520",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Khushanuda",
       "relation_type": "Father",
       "relation_name": "Sva0 Tribhuvana Dasa",
@@ -538,7 +538,7 @@
     },
     {
       "voter_id": "SP2082378",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Akhilesha Kumara Burt",
       "relation_type": "Father",
       "relation_name": "Kedaranatha Tripati",
@@ -549,7 +549,7 @@
     },
     {
       "voter_id": "SP2275485",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ramadhani Chauhana",
       "relation_type": "Father",
       "relation_name": "Sva0 Harishachdra",
@@ -560,7 +560,7 @@
     },
     {
       "voter_id": "ISP064869",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Sonamati Devi",
       "relation_type": "Husband",
       "relation_name": "Patatu Lala Chau I",
@@ -571,7 +571,7 @@
     },
     {
       "voter_id": "ISP4564662",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Bebi Pandeya",
       "relation_type": "Husband",
       "relation_name": "Ramesha Pandeya",
@@ -582,7 +582,7 @@
     },
     {
       "voter_id": "SP2082295",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Durgavati Devi",
       "relation_type": "Father",
       "relation_name": "Sva. Radheshyama",
@@ -593,7 +593,7 @@
     },
     {
       "voter_id": "ISP0648709",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Gajendra Sonakara",
       "relation_type": "Father",
       "relation_name": "Rama Adhare Sonakara",
@@ -604,7 +604,7 @@
     },
     {
       "voter_id": "ISP4787392",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Samgita Pandeya",
       "relation_type": "Husband",
       "relation_name": "Vijaya Kumara Pandeya",
@@ -615,7 +615,7 @@
     },
     {
       "voter_id": "ISP0834556",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Avadhesha Chau I",
       "relation_type": "Father",
       "relation_name": "Rama Nagina Chau I",
@@ -626,7 +626,7 @@
     },
     {
       "voter_id": "ISP773902",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Maya Yadava",
       "relation_type": "Father",
       "relation_name": "Gopala Yadava",
@@ -637,7 +637,7 @@
     },
     {
       "voter_id": "SP757988",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Mo0 Raisa",
       "relation_type": "Father",
       "relation_name": "Abdula Haphija",
@@ -648,7 +648,7 @@
     },
     {
       "voter_id": "ISP0835082",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Rajesha Bharadvaja",
       "relation_type": "Father",
       "relation_name": "Sva Simhasana",
@@ -659,7 +659,7 @@
     },
     {
       "voter_id": "ISP2047744",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Punama Yadava",
       "relation_type": "Husband",
       "relation_name": "Balavanta Yadava",
@@ -670,7 +670,7 @@
     },
     {
       "voter_id": "ISP0834630",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Shahina Phatama",
       "relation_type": "Father",
       "relation_name": "Mohammada Majida",
@@ -681,7 +681,7 @@
     },
     {
       "voter_id": "ISP075056",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Lalita Devi",
       "relation_type": "Husband",
       "relation_name": "Ra La Kumara",
@@ -692,7 +692,7 @@
     },
     {
       "voter_id": "ISP0679882",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Amita Devi",
       "relation_type": "Husband",
       "relation_name": "Anila Sharma",
@@ -703,7 +703,7 @@
     },
     {
       "voter_id": "ISP7783968",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Samjaya Kumara Pandeya",
       "relation_type": "Father",
       "relation_name": "Virendra Prasada Pandeya",
@@ -714,7 +714,7 @@
     },
     {
       "voter_id": "ISP432064",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Rina Devi",
       "relation_type": "Husband",
       "relation_name": "Samtosha Kumara",
@@ -725,7 +725,7 @@
     },
     {
       "voter_id": "SP064877",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Aravinda Kumara",
       "relation_type": "Father",
       "relation_name": "Suraja Natha Rajabhara",
@@ -736,7 +736,7 @@
     },
     {
       "voter_id": "ISP0648352",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Samjita Shaha",
       "relation_type": "Father",
       "relation_name": "Hajari Shaha",
@@ -747,7 +747,7 @@
     },
     {
       "voter_id": "ISP069577",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Kaushala Kumara",
       "relation_type": "Father",
       "relation_name": "Jhabbara Prasada Rajabhara",
@@ -758,7 +758,7 @@
     },
     {
       "voter_id": "SP2309805",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Shamkara",
       "relation_type": "Father",
       "relation_name": "Ravi",
@@ -769,7 +769,7 @@
     },
     {
       "voter_id": "ISP022507",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Aravinda",
       "relation_type": "Father",
       "relation_name": "Balala Yadava",
@@ -780,7 +780,7 @@
     },
     {
       "voter_id": "ISP7936993",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Narendra Kumara",
       "relation_type": "Father",
       "relation_name": "Sva. Radheshyama",
@@ -791,7 +791,7 @@
     },
     {
       "voter_id": "ISP0679866",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Deva Narayana",
       "relation_type": "Father",
       "relation_name": "Bhagavana Dasa Sharma",
@@ -802,7 +802,7 @@
     },
     {
       "voter_id": "ISP0834598",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Rajesha Kumara",
       "relation_type": "Father",
       "relation_name": "Umesha Chandra Gauda",
@@ -813,7 +813,7 @@
     },
     {
       "voter_id": "ISP0574459",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Indrajita Simha",
       "relation_type": "Father",
       "relation_name": "Mahatama Simha",
@@ -824,7 +824,7 @@
     },
     {
       "voter_id": "ISP0835025",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Amgira Devi",
       "relation_type": "Husband",
       "relation_name": "Ramjita Simha",
@@ -835,7 +835,7 @@
     },
     {
       "voter_id": "ISP0834606",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Uma Yadava",
       "relation_type": "Father",
       "relation_name": "Balala Yadava",
@@ -846,7 +846,7 @@
     },
     {
       "voter_id": "ISP708703",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Shubhama Ramjana Tripathi",
       "relation_type": "Father",
       "relation_name": "Nilaya Ramjana Tripathi",
@@ -857,7 +857,7 @@
     },
     {
       "voter_id": "ISP7782762",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Samjaya Kumara",
       "relation_type": "Father",
       "relation_name": "Ramesha Gupta",
@@ -868,7 +868,7 @@
     },
     {
       "voter_id": "ISP4053808",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Aruna Chauhana",
       "relation_type": "Father",
       "relation_name": "Bhola Chauhana",
@@ -879,7 +879,7 @@
     },
     {
       "voter_id": "ISP4978664",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Shri Mati",
       "relation_type": "Husband",
       "relation_name": "Niraja Kumara Bharati",
@@ -890,7 +890,7 @@
     },
     {
       "voter_id": "ISP4354650",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ishita Gupta",
       "relation_type": "Father",
       "relation_name": "Shravana Kumara Gupta",
@@ -901,7 +901,7 @@
     },
     {
       "voter_id": "ISP204627",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Jamila",
       "relation_type": "Father",
       "relation_name": "Ramaratana Gauda",
@@ -912,7 +912,7 @@
     },
     {
       "voter_id": "SPI799220",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Manoramjana Kumara Tivari",
       "relation_type": "Father",
       "relation_name": "Satyendra Tivari",
@@ -923,7 +923,7 @@
     },
     {
       "voter_id": "SP750879",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Mamata Yadava",
       "relation_type": "Father",
       "relation_name": "Shivachanda Yadava",
@@ -934,7 +934,7 @@
     },
     {
       "voter_id": "SP778408",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ashvani Pandeya",
       "relation_type": "Father",
       "relation_name": "Avadhesha Pandeya",
@@ -945,7 +945,7 @@
     },
     {
       "voter_id": "ISP4636304",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Niraja",
       "relation_type": "Father",
       "relation_name": "Phagu Lala",
@@ -956,7 +956,7 @@
     },
     {
       "voter_id": "ISP4053906",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Bijemdra Yadava",
       "relation_type": "Father",
       "relation_name": "Chedi Yadava",
@@ -967,7 +967,7 @@
     },
     {
       "voter_id": "ISP432056",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Rupa",
       "relation_type": "Father",
       "relation_name": "Jogimdara Pa",
@@ -978,7 +978,7 @@
     },
     {
       "voter_id": "SP4605887",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Kabira Kumara",
       "relation_type": "Father",
       "relation_name": "Rama Gulama",
@@ -989,7 +989,7 @@
     },
     {
       "voter_id": "ISP0834994",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Aravinda Kumara",
       "relation_type": "Father",
       "relation_name": "Dina Natha Yadava",
@@ -1000,7 +1000,7 @@
     },
     {
       "voter_id": "SP2082576",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Digvijaya Natha Dube",
       "relation_type": "Father",
       "relation_name": "Marakande Dube Pa",
@@ -1010,7 +1010,7 @@
     },
     {
       "voter_id": "ISP2347094",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Tara Devi",
       "relation_type": "Husband",
       "relation_name": "Laxmishamkara Gauda",
@@ -1020,7 +1020,7 @@
     },
     {
       "voter_id": "ISP4354668",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ashisha Pala",
       "relation_type": "Father",
       "relation_name": "Bhanu Pratapa",
@@ -1031,7 +1031,7 @@
     },
     {
       "voter_id": "ISP757452",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Vishala Ku. Simha",
       "relation_type": "Father",
       "relation_name": "Satya Prakasha Simha",
@@ -1042,7 +1042,7 @@
     },
     {
       "voter_id": "ISP4050340",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Amita Kumara Sharma",
       "relation_type": "Father",
       "relation_name": "Bachcha Rama Sharma",
@@ -1053,7 +1053,7 @@
     },
     {
       "voter_id": "ISP4053849",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Amita Kumara Simha",
       "relation_type": "Father",
       "relation_name": "Sushila Kumara Simha",
@@ -1064,7 +1064,7 @@
     },
     {
       "voter_id": "SP4089397",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ramadarasha",
       "relation_type": "Father",
       "relation_name": "Samgrama",
@@ -1075,7 +1075,7 @@
     },
     {
       "voter_id": "ISP4473633",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Puja",
       "relation_type": "Husband",
       "relation_name": "Vinoda Kumara",
@@ -1086,7 +1086,7 @@
     },
     {
       "voter_id": "ISP4904983",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Sahyama Saina",
       "relation_type": "Father",
       "relation_name": "Mahamuda Ali",
@@ -1097,7 +1097,7 @@
     },
     {
       "voter_id": "ISP2057357",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Rijavana Ali",
       "relation_type": "Father",
       "relation_name": "Sva Bhonu",
@@ -1108,7 +1108,7 @@
     },
     {
       "voter_id": "ISP205340",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Yasamina",
       "relation_type": "Father",
       "relation_name": "Bisarjana Yadava",
@@ -1119,7 +1119,7 @@
     },
     {
       "voter_id": "ISP3809845",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ghutari Devi",
       "relation_type": "Husband",
       "relation_name": "Shyama Sumdara",
@@ -1130,7 +1130,7 @@
     },
     {
       "voter_id": "ISP3976229",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Firoza Alama",
       "relation_type": "Father",
       "relation_name": "Abdula .khalida",
@@ -1141,7 +1141,7 @@
     },
     {
       "voter_id": "SP3798428",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Urmila Devi",
       "relation_type": "Husband",
       "relation_name": "Shivashamkara",
@@ -1152,7 +1152,7 @@
     },
     {
       "voter_id": "ISP4630323",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Samgita Devi",
       "relation_type": "Father",
       "relation_name": "Rama Asare",
@@ -1163,7 +1163,7 @@
     },
     {
       "voter_id": "ISP4794494",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Amkura Yadava",
       "relation_type": "Husband",
       "relation_name": "Digvijaya Natha Yadava",
@@ -1174,7 +1174,7 @@
     },
     {
       "voter_id": "SP2046209",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Shamashera Ali",
       "relation_type": "Father",
       "relation_name": "Sva Bhonu",
@@ -1185,7 +1185,7 @@
     },
     {
       "voter_id": "SP4750757",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Savita",
       "relation_type": "Husband",
       "relation_name": "Ravi",
@@ -1196,7 +1196,7 @@
     },
     {
       "voter_id": "ISP4739344",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Karishma Nishada",
       "relation_type": "Husband",
       "relation_name": "Rama Bhavana Nishada",
@@ -1207,7 +1207,7 @@
     },
     {
       "voter_id": "ISP463033",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Dasharatha Prasada",
       "relation_type": "Father",
       "relation_name": "Sva0 Rama Nihora Rama",
@@ -1218,7 +1218,7 @@
     },
     {
       "voter_id": "SP3736253",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Rukamani Devi",
       "relation_type": "Husband",
       "relation_name": "Rajana Kumara Pa",
@@ -1229,7 +1229,7 @@
     },
     {
       "voter_id": "ISP4354604",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Yogemdra Kumara",
       "relation_type": "Father",
       "relation_name": "Palakadhari Pa",
@@ -1240,7 +1240,7 @@
     },
     {
       "voter_id": "ISP4307826",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Munni Devi",
       "relation_type": "Husband",
       "relation_name": "Komala Yadava",
@@ -1251,7 +1251,7 @@
     },
     {
       "voter_id": "ISP367978",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Kalindi Pandeya",
       "relation_type": "Husband",
       "relation_name": "Ashoka Pandeya",
@@ -1262,7 +1262,7 @@
     },
     {
       "voter_id": "SP3852233",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Snehalata",
       "relation_type": "Husband",
       "relation_name": "Rama Vijaya",
@@ -1273,7 +1273,7 @@
     },
     {
       "voter_id": "ISP3736295",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Rajesha",
       "relation_type": "Father",
       "relation_name": "Fulachanda Pa",
@@ -1284,7 +1284,7 @@
     },
     {
       "voter_id": "ISP4750740",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Rekha Kumari",
       "relation_type": "Father",
       "relation_name": "Ravi",
@@ -1295,7 +1295,7 @@
     },
     {
       "voter_id": "SP4739333",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Rama Kevala",
       "relation_type": "Father",
       "relation_name": "Rama Natha",
@@ -1306,7 +1306,7 @@
     },
     {
       "voter_id": "ISP397694",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Aga Nisha",
       "relation_type": "Husband",
       "relation_name": "Abdula Hamida",
@@ -1317,7 +1317,7 @@
     },
     {
       "voter_id": "ISP396745",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Meruna Nisha",
       "relation_type": "Husband",
       "relation_name": "Firoza Alama",
@@ -1328,7 +1328,7 @@
     },
     {
       "voter_id": "SP4320772",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Veda Vyasa Tivari",
       "relation_type": "Father",
       "relation_name": "Chamdrabhana Tivari",
@@ -1339,7 +1339,7 @@
     },
     {
       "voter_id": "SP3852225",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Mohammada Ali",
       "relation_type": "Father",
       "relation_name": "Ajimullaha",
@@ -1350,7 +1350,7 @@
     },
     {
       "voter_id": "ISP4473609",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Urmila Devi",
       "relation_type": "Husband",
       "relation_name": "Achchelala",
@@ -1361,7 +1361,7 @@
     },
     {
       "voter_id": "ISP056723",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Shabbira Ahamada",
       "relation_type": "Father",
       "relation_name": "Fao Nura Mo0",
@@ -1372,7 +1372,7 @@
     },
     {
       "voter_id": "SP3798477",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Samdipa Kumara",
       "relation_type": "Father",
       "relation_name": "Ramanarayana",
@@ -1383,7 +1383,7 @@
     },
     {
       "voter_id": "ISP4307800",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Niraja Kumara",
       "relation_type": "Father",
       "relation_name": "Dashami",
@@ -1394,7 +1394,7 @@
     },
     {
       "voter_id": "ISP3888823",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Shamima Ahamada",
       "relation_type": "Father",
       "relation_name": "Maula",
@@ -1405,7 +1405,7 @@
     },
     {
       "voter_id": "ISP4558763",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Rimki Sharma",
       "relation_type": "Husband",
       "relation_name": "Anila Kumara Sharma",
@@ -1416,7 +1416,7 @@
     },
     {
       "voter_id": "ISP453883",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Menaka Bharati",
       "relation_type": "Husband",
       "relation_name": "Dipaka Kumara",
@@ -1427,7 +1427,7 @@
     },
     {
       "voter_id": "ISP4477634",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Suraja Kumara",
       "relation_type": "Father",
       "relation_name": "Raja Kumara",
@@ -1438,7 +1438,7 @@
     },
     {
       "voter_id": "ISP367903",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Pratima Devi",
       "relation_type": "Husband",
       "relation_name": "Ajaya Kumara Simha",
@@ -1449,7 +1449,7 @@
     },
     {
       "voter_id": "ISP3798444",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Samtosha Kumara",
       "relation_type": "Father",
       "relation_name": "Ramanarayana",
@@ -1460,7 +1460,7 @@
     },
     {
       "voter_id": "ISP4793900",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Jayashri",
       "relation_type": "Husband",
       "relation_name": "Samjaya Kumara Pam",
@@ -1471,7 +1471,7 @@
     },
     {
       "voter_id": "ISP3846086",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Sarita Bharati",
       "relation_type": "Husband",
       "relation_name": "Abhisheka Bharati Qi",
@@ -1482,7 +1482,7 @@
     },
     {
       "voter_id": "ISP4477485",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ulafata Ali",
       "relation_type": "Father",
       "relation_name": "Shera Ali",
@@ -1493,7 +1493,7 @@
     },
     {
       "voter_id": "ISP369794",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Akamxa Pandeya",
       "relation_type": "Father",
       "relation_name": "Ashoka Pandeya Pa",
@@ -1504,7 +1504,7 @@
     },
     {
       "voter_id": "ISP4793660",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Dhiraja Kumara",
       "relation_type": "Father",
       "relation_name": "Dashmi",
@@ -1515,7 +1515,7 @@
     },
     {
       "voter_id": "ISP4676423",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Sachidanamda Sharma",
       "relation_type": "Father",
       "relation_name": "Shambhu Prasada Sharma",
@@ -1526,7 +1526,7 @@
     },
     {
       "voter_id": "ISP4985586",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Rubi Rajabhara",
       "relation_type": "Husband",
       "relation_name": "Kaushala Kumara",
@@ -1537,7 +1537,7 @@
     },
     {
       "voter_id": "ISP453966",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Dhiraja Kumara",
       "relation_type": "Father",
       "relation_name": "Dhrupa Chandra",
@@ -1548,7 +1548,7 @@
     },
     {
       "voter_id": "ISP435469",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Mira Devi",
       "relation_type": "Husband",
       "relation_name": "Yogemdra Kumara",
@@ -1559,7 +1559,7 @@
     },
     {
       "voter_id": "SP383809",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Nisha Bharati",
       "relation_type": "Father",
       "relation_name": "Ramabrxa",
@@ -1570,7 +1570,7 @@
     },
     {
       "voter_id": "SP447750",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Tamanna Paravina",
       "relation_type": "Husband",
       "relation_name": "Ulafata Ali",
@@ -1581,7 +1581,7 @@
     },
     {
       "voter_id": "SP493736",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Mamju Devi",
       "relation_type": "Husband",
       "relation_name": "Ramesha Chamda",
@@ -1592,7 +1592,7 @@
     },
     {
       "voter_id": "SP4636372",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ritu Sagara",
       "relation_type": "Husband",
       "relation_name": "Vijaya",
@@ -1603,7 +1603,7 @@
     },
     {
       "voter_id": "SP4307784",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Snehalata",
       "relation_type": "Father",
       "relation_name": "Shrikamta",
@@ -1614,7 +1614,7 @@
     },
     {
       "voter_id": "ISP3976752",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Shada Alama",
       "relation_type": "Father",
       "relation_name": "Firoza Alama",
@@ -1625,7 +1625,7 @@
     },
     {
       "voter_id": "ISP3888974",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Neha Mamdala",
       "relation_type": "Father",
       "relation_name": "Hari Lala Prasada",
@@ -1636,7 +1636,7 @@
     },
     {
       "voter_id": "ISP4558490",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Shveta Kumari",
       "relation_type": "Father",
       "relation_name": "Suremdra Prasada",
@@ -1647,7 +1647,7 @@
     },
     {
       "voter_id": "SP466740",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Muskana Chauhana",
       "relation_type": "Father",
       "relation_name": "Mithalesha Chauhana",
@@ -1658,7 +1658,7 @@
     },
     {
       "voter_id": "ISP2793563",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Subedara Chau I",
       "relation_type": "Father",
       "relation_name": "Laxmi Prasada Chau I",
@@ -1669,7 +1669,7 @@
     },
     {
       "voter_id": "ISP435935",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Rama Ashisha Yadava",
       "relation_type": "Father",
       "relation_name": "Sva0 Komala Yadava",
@@ -1680,7 +1680,7 @@
     },
     {
       "voter_id": "ISP4477469",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Aditya Kumara",
       "relation_type": "Father",
       "relation_name": "Dipaka Kumara",
@@ -1691,7 +1691,7 @@
     },
     {
       "voter_id": "SP4597837",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Sumana",
       "relation_type": "Husband",
       "relation_name": "Shailesha Chamda Varma",
@@ -1702,7 +1702,7 @@
     },
     {
       "voter_id": "ISP406945",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Priti Kannaujiya",
       "relation_type": "Husband",
       "relation_name": "Dilipa Kumara",
@@ -1713,7 +1713,7 @@
     },
     {
       "voter_id": "ISP7873864",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Alamkara Varma",
       "relation_type": "Father",
       "relation_name": "Sudama Prasada Varma",
@@ -1724,7 +1724,7 @@
     },
     {
       "voter_id": "ISP7874003",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Omakara Kumara Varma",
       "relation_type": "Father",
       "relation_name": "Sudama Prasada Varma",
@@ -1735,7 +1735,7 @@
     },
     {
       "voter_id": "ISP496987",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Kapila Deva Yadava",
       "relation_type": "Father",
       "relation_name": "Mahesha Yadava",
@@ -1746,7 +1746,7 @@
     },
     {
       "voter_id": "ISP4558576",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ra La Kumara",
       "relation_type": "Father",
       "relation_name": "Suremdra Kumara",
@@ -1757,7 +1757,7 @@
     },
     {
       "voter_id": "SP200429",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Amaranatha",
       "relation_type": "Father",
       "relation_name": "Dvarika",
@@ -1768,7 +1768,7 @@
     },
     {
       "voter_id": "ISP4735943",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Munni Devi",
       "relation_type": "Husband",
       "relation_name": "Sva0 Komala Yadava",
@@ -1779,7 +1779,7 @@
     },
     {
       "voter_id": "ISP493275",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ajaya Yadava",
       "relation_type": "Father",
       "relation_name": "Sitarama Yadava",
@@ -1790,7 +1790,7 @@
     },
     {
       "voter_id": "ISP4875266",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Amchala Sharma",
       "relation_type": "Father",
       "relation_name": "Umashamkara Sharma",
@@ -1801,7 +1801,7 @@
     },
     {
       "voter_id": "SP4558447",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Hemamta Kumara",
       "relation_type": "Father",
       "relation_name": "Amaranatha",
@@ -1812,7 +1812,7 @@
     },
     {
       "voter_id": "SP2564078",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ganesha Nishada",
       "relation_type": "Father",
       "relation_name": "Sva Dinanatha",
@@ -1823,7 +1823,7 @@
     },
     {
       "voter_id": "ISP843845",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Mamju Varma",
       "relation_type": "Husband",
       "relation_name": "Sudama Prasada Varma",
@@ -1834,7 +1834,7 @@
     },
     {
       "voter_id": "ISP4583365",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Navina Varma",
       "relation_type": "Father",
       "relation_name": "Sudama Prasada Varma",
@@ -1845,7 +1845,7 @@
     },
     {
       "voter_id": "ISP429065",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Dipaka Pam",
       "relation_type": "Husband",
       "relation_name": "Dipaka Pam",
@@ -1856,7 +1856,7 @@
     },
     {
       "voter_id": "ISP4637388",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Garima Sonakara",
       "relation_type": "Father",
       "relation_name": "Prabhunatha Sonakara",
@@ -1867,7 +1867,7 @@
     },
     {
       "voter_id": "ISP2566206",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Apharoja Ali Amsari",
       "relation_type": "Father",
       "relation_name": "Gulama Rasula",
@@ -1878,7 +1878,7 @@
     },
     {
       "voter_id": "ISP4406062",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ramesha Kumara",
       "relation_type": "Father",
       "relation_name": "Nebulala",
@@ -1889,7 +1889,7 @@
     },
     {
       "voter_id": "ISP4875258",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Anuraga Sharma",
       "relation_type": "Father",
       "relation_name": "Uma Shamkara Sharma",
@@ -1900,7 +1900,7 @@
     },
     {
       "voter_id": "SP447387",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ashisha Kumara",
       "relation_type": "Father",
       "relation_name": "Late Vinaya Kumara Shrivastava",
@@ -1911,7 +1911,7 @@
     },
     {
       "voter_id": "SP2520896",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Sudama Prasada Varma",
       "relation_type": "Father",
       "relation_name": "Baijanatha Varma",
@@ -1922,7 +1922,7 @@
     },
     {
       "voter_id": "ISP3835022",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Niramkara Varma",
       "relation_type": "Father",
       "relation_name": "Sudama Prasada Varma",
@@ -1933,7 +1933,7 @@
     },
     {
       "voter_id": "ISP255747",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ja Da Paravina",
       "relation_type": "Husband",
       "relation_name": "Javeda Alama",
@@ -1944,7 +1944,7 @@
     },
     {
       "voter_id": "ISP4504635",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Amrta Varma",
       "relation_type": "Father",
       "relation_name": "Aruna Varma",
@@ -1955,7 +1955,7 @@
     },
     {
       "voter_id": "ISP4558342",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Shalu",
       "relation_type": "Father",
       "relation_name": "Govinda Chau I",
@@ -1966,7 +1966,7 @@
     },
     {
       "voter_id": "ISP468268",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Aloka Kumara Shrivastava",
       "relation_type": "Father",
       "relation_name": "Anamda Prakasha Shrivastava",
@@ -1977,7 +1977,7 @@
     },
     {
       "voter_id": "ISP4029260",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Nirmala Devi",
       "relation_type": "Husband",
       "relation_name": "Girija Shamkara Shukla",
@@ -1988,7 +1988,7 @@
     },
     {
       "voter_id": "SP2563732",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Priti Pandeya",
       "relation_type": "Husband",
       "relation_name": "Devesha Kumara Pandeya",
@@ -1999,7 +1999,7 @@
     },
     {
       "voter_id": "ISP098674",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Javeda Ali",
       "relation_type": "Father",
       "relation_name": "Abbasa Ali",
@@ -2010,7 +2010,7 @@
     },
     {
       "voter_id": "ISP465803",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Rakesha Kumara Jayasavala",
       "relation_type": "Father",
       "relation_name": "Rama Chamdra Jayasavala",
@@ -2021,7 +2021,7 @@
     },
     {
       "voter_id": "ISP463362",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Priti Kumari",
       "relation_type": "Father",
       "relation_name": "Shrirama",
@@ -2032,7 +2032,7 @@
     },
     {
       "voter_id": "ISP4354676",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Devendra Yadava",
       "relation_type": "Father",
       "relation_name": "Raja Yadava Qi",
@@ -2043,7 +2043,7 @@
     },
     {
       "voter_id": "ISP205373",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ananda Prakasha",
       "relation_type": "Father",
       "relation_name": "Sva Manatha Prasada",
@@ -2054,7 +2054,7 @@
     },
     {
       "voter_id": "ISP4727939",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Sarasvati",
       "relation_type": "Husband",
       "relation_name": "Aloka Kumara Shrivastava Pa",
@@ -2065,7 +2065,7 @@
     },
     {
       "voter_id": "SP4994307",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Mohammada Firoza",
       "relation_type": "Father",
       "relation_name": "Mohammada Yaquba",
@@ -2076,7 +2076,7 @@
     },
     {
       "voter_id": "ISP4029336",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Rupesha Shukla",
       "relation_type": "Father",
       "relation_name": "Girija Shamkara Shukla",
@@ -2087,7 +2087,7 @@
     },
     {
       "voter_id": "ISP4474658",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Samjaya Kumara",
       "relation_type": "Father",
       "relation_name": "Baijanatha Prasada Pa",
@@ -2098,7 +2098,7 @@
     },
     {
       "voter_id": "ISP4558433",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Jaya Himda",
       "relation_type": "Father",
       "relation_name": "Ramakevala",
@@ -2109,7 +2109,7 @@
     },
     {
       "voter_id": "ISP2275550",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Vishala Vikrama Simha",
       "relation_type": "Father",
       "relation_name": "Rudra Pratapa Simha",
@@ -2120,7 +2120,7 @@
     },
     {
       "voter_id": "ISP4354684",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Prabha Devi",
       "relation_type": "Husband",
       "relation_name": "Devemdra Yadava",
@@ -2131,7 +2131,7 @@
     },
     {
       "voter_id": "SP472892",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Savita Shrivastava",
       "relation_type": "Husband",
       "relation_name": "Anamda Prakasha Shrivastava",
@@ -2142,7 +2142,7 @@
     },
     {
       "voter_id": "ISP4029369",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Girija Shamkara Sh‌ 49)",
       "relation_type": "Father",
       "relation_name": "Sva. Pi. Ra",
@@ -2152,7 +2152,7 @@
     },
     {
       "voter_id": "ISP4029252",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Tvimkala Shukla 80",
       "relation_type": "Father",
       "relation_name": "Rupesha +2",
@@ -2162,7 +2162,7 @@
     },
     {
       "voter_id": "ISP098633",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Saida Khatuna",
       "relation_type": "Husband",
       "relation_name": "Mu0 Ayuba",
@@ -2173,7 +2173,7 @@
     },
     {
       "voter_id": "LFR4526380",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Pavana",
       "relation_type": "Father",
       "relation_name": "Ramesha Chanda",
@@ -2184,7 +2184,7 @@
     },
     {
       "voter_id": "ISP098387",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ashoka Kumara Pandeya",
       "relation_type": "Father",
       "relation_name": "Premanarayana Pandeya",
@@ -2195,7 +2195,7 @@
     },
     {
       "voter_id": "SP4343786",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Lalita Devi",
       "relation_type": "Husband",
       "relation_name": "Ramesha Kumara",
@@ -2206,7 +2206,7 @@
     },
     {
       "voter_id": "ISP4558540",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Amaremdra Kumara Yadava",
       "relation_type": "Father",
       "relation_name": "Rama Narayana Yadava",
@@ -2217,7 +2217,7 @@
     },
     {
       "voter_id": "ISP0363408",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ramesha Chanda",
       "relation_type": "Father",
       "relation_name": "Haradeva Narayana",
@@ -2228,7 +2228,7 @@
     },
     {
       "voter_id": "ISP479375",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Abhisheka Simha",
       "relation_type": "Father",
       "relation_name": "Oma Prakasha Simha",
@@ -2239,7 +2239,7 @@
     },
     {
       "voter_id": "ISP2309823",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Nilama Pandeya",
       "relation_type": "Husband",
       "relation_name": "Ashokara Kumara Pandeya",
@@ -2250,7 +2250,7 @@
     },
     {
       "voter_id": "SP2082428",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Sairuna Nemsha",
       "relation_type": "Husband",
       "relation_name": "Najira Ahamada",
@@ -2261,7 +2261,7 @@
     },
     {
       "voter_id": "ISP466673",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Amjuma .khatuna",
       "relation_type": "Husband",
       "relation_name": "Makasuda Alama",
@@ -2272,7 +2272,7 @@
     },
     {
       "voter_id": "ISP7999939",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ramalala Kushavaha",
       "relation_type": "Father",
       "relation_name": "Lallana Kushavaha",
@@ -2283,7 +2283,7 @@
     },
     {
       "voter_id": "ISP4652665",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ramesha Kumara",
       "relation_type": "Father",
       "relation_name": "Lalabachana",
@@ -2294,7 +2294,7 @@
     },
     {
       "voter_id": "SP3736337",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Samira Kumara",
       "relation_type": "Father",
       "relation_name": "Suresha Gautama",
@@ -2305,7 +2305,7 @@
     },
     {
       "voter_id": "ISP4582524",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Avinesha Kumara",
       "house_number": "702",
       "age": 22,
@@ -2314,7 +2314,7 @@
     },
     {
       "voter_id": "LFR4526356",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Sunila",
       "relation_type": "Father",
       "relation_name": "Udaya Kishora",
@@ -2325,7 +2325,7 @@
     },
     {
       "voter_id": "ISP0363476",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ravi",
       "relation_type": "Father",
       "relation_name": "Ramesha Chanda",
@@ -2336,7 +2336,7 @@
     },
     {
       "voter_id": "ISP4683405",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Aniketa Kumara Pamdeya Pamdeya Pamdeya",
       "relation_type": "Father",
       "relation_name": "Ashoka Kumara Pamdeya",
@@ -2347,7 +2347,7 @@
     },
     {
       "voter_id": "SP4587336",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Akhilesha Simha",
       "relation_type": "Father",
       "relation_name": "Oma Prakasha Simha",
@@ -2358,7 +2358,7 @@
     },
     {
       "voter_id": "ISP4847968",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Makasuda Alama",
       "relation_type": "Father",
       "relation_name": "Ramalala Kushavaha",
@@ -2369,7 +2369,7 @@
     },
     {
       "voter_id": "ISP4343836",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ramesha Kumara",
       "relation_type": "Father",
       "relation_name": "Banavari Lala",
@@ -2380,7 +2380,7 @@
     },
     {
       "voter_id": "SP4230058",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ramjita Shaha",
       "relation_type": "Father",
       "relation_name": "Hajari Shaha",
@@ -2391,7 +2391,7 @@
     },
     {
       "voter_id": "SP423004",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Kajala Devi",
       "relation_type": "Father",
       "relation_name": "Gulaba Chandra",
@@ -2402,7 +2402,7 @@
     },
     {
       "voter_id": "SP0648782",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Avanisha Yadava",
       "relation_type": "Father",
       "relation_name": "Shrirama Yadava",
@@ -2413,7 +2413,7 @@
     },
     {
       "voter_id": "LFR2852093",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Lalachandra",
       "relation_type": "Father",
       "relation_name": "Jiledara",
@@ -2424,7 +2424,7 @@
     },
     {
       "voter_id": "ISP782390",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Vijaya Kumara",
       "relation_type": "Father",
       "relation_name": "Gulaba Chandra Pa",
@@ -2435,7 +2435,7 @@
     },
     {
       "voter_id": "ISP4926739",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Priyamka Yadava",
       "relation_type": "Husband",
       "relation_name": "Vikasa Yadava",
@@ -2446,7 +2446,7 @@
     },
     {
       "voter_id": "ISP4927300",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Darakhsham Nura",
       "relation_type": "Husband",
       "relation_name": "Abdula Qadira",
@@ -2457,7 +2457,7 @@
     },
     {
       "voter_id": "ISP2082444",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Mustapha Saina",
       "relation_type": "Father",
       "relation_name": "Shaphi Mohammada Pam",
@@ -2468,7 +2468,7 @@
     },
     {
       "voter_id": "ISP0835033",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Babita Devi",
       "relation_type": "Husband",
       "relation_name": "Ajaya Yadava",
@@ -2479,7 +2479,7 @@
     },
     {
       "voter_id": "ISP098379",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Dipaka Kumara",
       "relation_type": "Father",
       "relation_name": "Phaggu Lala Pa",
@@ -2490,7 +2490,7 @@
     },
     {
       "voter_id": "ISP3505542",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ena0ema0",
       "relation_type": "Father",
       "relation_name": "Je0ema",
@@ -2501,7 +2501,7 @@
     },
     {
       "voter_id": "ISP4988598",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ayusha Kumara",
       "relation_type": "Father",
       "relation_name": "Devanamda",
@@ -2512,7 +2512,7 @@
     },
     {
       "voter_id": "ISP4257705",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Amju Devi",
       "relation_type": "Husband",
       "relation_name": "Raju Kumara",
@@ -2523,7 +2523,7 @@
     },
     {
       "voter_id": "ISP0648774",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Vikasha Yadava",
       "relation_type": "Father",
       "relation_name": "Shrirama Yadava",
@@ -2534,7 +2534,7 @@
     },
     {
       "voter_id": "ISP3979946",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Taihasina",
       "relation_type": "Father",
       "relation_name": "Mohammada Majida",
@@ -2545,7 +2545,7 @@
     },
     {
       "voter_id": "ISP0835796",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Nadima Ahamada",
       "relation_type": "Father",
       "relation_name": "Abdula Haphija",
@@ -2556,7 +2556,7 @@
     },
     {
       "voter_id": "ISP463543",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Shabana Khatuna",
       "relation_type": "Father",
       "relation_name": "Janadarana Prasada",
@@ -2567,7 +2567,7 @@
     },
     {
       "voter_id": "LFRI206266",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Lilavati",
       "relation_type": "Husband",
       "relation_name": "Je Ela Mukharji",
@@ -2578,7 +2578,7 @@
     },
     {
       "voter_id": "LFR2329233",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Oma Prakasha Simha",
       "relation_type": "Father",
       "relation_name": "Rama Darasha Simha",
@@ -2589,7 +2589,7 @@
     },
     {
       "voter_id": "LFR2856722",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Amara Natha Yadava",
       "relation_type": "Father",
       "relation_name": "Rama Asare Yadava",
@@ -2600,7 +2600,7 @@
     },
     {
       "voter_id": "SP208259",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Uma Devi",
       "relation_type": "Husband",
       "relation_name": "Raju Prasada",
@@ -2611,7 +2611,7 @@
     },
     {
       "voter_id": "SP0342568",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Shravana Kumara",
       "relation_type": "Father",
       "relation_name": "Dudhanatha",
@@ -2622,7 +2622,7 @@
     },
     {
       "voter_id": "SP777842",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Dina Natha",
       "relation_type": "Father",
       "relation_name": "Dipa Narayana",
@@ -2633,7 +2633,7 @@
     },
     {
       "voter_id": "ISP035434",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ashutosha Kumara",
       "relation_type": "Father",
       "relation_name": "Udaya Kishora",
@@ -2644,7 +2644,7 @@
     },
     {
       "voter_id": "ISP208250",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Raju Prasada",
       "relation_type": "Father",
       "relation_name": "Chauthi Prasada",
@@ -2655,7 +2655,7 @@
     },
     {
       "voter_id": "ISP427762",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Amkita Yadava",
       "relation_type": "Father",
       "relation_name": "Amara Natha Yadava",
@@ -2666,7 +2666,7 @@
     },
     {
       "voter_id": "ISP0342576",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Rita Devi",
       "relation_type": "Husband",
       "relation_name": "Shravana Kumara",
@@ -2677,7 +2677,7 @@
     },
     {
       "voter_id": "SP4877676",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Pranava Mishra",
       "relation_type": "Father",
       "relation_name": "Ga.gara Qi",
@@ -2688,7 +2688,7 @@
     },
     {
       "voter_id": "LFR3203536",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Savita",
       "relation_type": "Husband",
       "relation_name": "Vashishtha",
@@ -2699,7 +2699,7 @@
     },
     {
       "voter_id": "LFR285558",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Rita Devi",
       "relation_type": "Husband",
       "relation_name": "Rama Kishora Pa",
@@ -2710,7 +2710,7 @@
     },
     {
       "voter_id": "LFR4526349",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Satyendra",
       "relation_type": "Father",
       "relation_name": "Ganesha",
@@ -2721,7 +2721,7 @@
     },
     {
       "voter_id": "LFR2856532",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Sunita Yadava",
       "relation_type": "Father",
       "relation_name": "Amara Natha Yadava",
@@ -2732,7 +2732,7 @@
     },
     {
       "voter_id": "ISP0983809",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Manishakumara",
       "relation_type": "Father",
       "relation_name": "Chotela Gupta",
@@ -2743,7 +2743,7 @@
     },
     {
       "voter_id": "ISP3836478",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Aditya Dvivedi Aditya",
       "relation_type": "Father",
       "relation_name": "Ajaya Kumara Dube Ajaya Kumara Dube",
@@ -2754,7 +2754,7 @@
     },
     {
       "voter_id": "ISP5058029",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Mayamka Simha",
       "relation_type": "Father",
       "relation_name": "Anila Kumara Simha",
@@ -2765,7 +2765,7 @@
     },
     {
       "voter_id": "ISP745069",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Asha Devi",
       "relation_type": "Husband",
       "relation_name": "Surendra Yadava",
@@ -2776,7 +2776,7 @@
     },
     {
       "voter_id": "ISP0034355",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Vijaya Laxmi",
       "relation_type": "Father",
       "relation_name": "Budhirama",
@@ -2787,7 +2787,7 @@
     },
     {
       "voter_id": "LFR2389740",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Mala",
       "relation_type": "Father",
       "relation_name": "Ramajna",
@@ -2798,7 +2798,7 @@
     },
     {
       "voter_id": "ISP446929",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Dipaka Simga Dije",
       "relation_type": "Father",
       "relation_name": "Rameshvara Pam",
@@ -2809,7 +2809,7 @@
     },
     {
       "voter_id": "ISP0034363",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ramakanta",
       "relation_type": "Father",
       "relation_name": "Shri Nivasa",
@@ -2820,7 +2820,7 @@
     },
     {
       "voter_id": "LFR2389757",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Urmila",
       "relation_type": "Father",
       "relation_name": "Haregi",
@@ -2831,7 +2831,7 @@
     },
     {
       "voter_id": "LFR3206334",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Vidyananda",
       "relation_type": "Father",
       "relation_name": "Jagadisha",
@@ -2842,7 +2842,7 @@
     },
     {
       "voter_id": "LFRI338094",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Dhanan{}jaya",
       "relation_type": "Father",
       "relation_name": "Parasanatha",
@@ -2853,7 +2853,7 @@
     },
     {
       "voter_id": "ISP350559",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Rajakumari",
       "relation_type": "Father",
       "relation_name": "Yuddhishthara",
@@ -2864,7 +2864,7 @@
     },
     {
       "voter_id": "ISP0290098",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ravindra",
       "relation_type": "Father",
       "relation_name": "Badari",
@@ -2875,7 +2875,7 @@
     },
     {
       "voter_id": "SP026044",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Pratima Simha",
       "relation_type": "Husband",
       "relation_name": "Shri Vijaya Kumara Ma",
@@ -2886,7 +2886,7 @@
     },
     {
       "voter_id": "ISP705754",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Kaushala Kishora",
       "relation_type": "Father",
       "relation_name": "Oma Datta",
@@ -2897,7 +2897,7 @@
     },
     {
       "voter_id": "SP4687292",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Sima Pandeya",
       "relation_type": "Husband",
       "relation_name": "Ajaya Kumara Pandeya",
@@ -2908,7 +2908,7 @@
     },
     {
       "voter_id": "ISP3505583",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Krpa Narayana Pandeya",
       "relation_type": "Father",
       "relation_name": "Bhagavana Datta Pandeya",
@@ -2919,7 +2919,7 @@
     },
     {
       "voter_id": "LFR285798",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ramasurata",
       "relation_type": "Father",
       "relation_name": "Rama Narayana",
@@ -2930,7 +2930,7 @@
     },
     {
       "voter_id": "LFRI560476",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Janaka",
       "relation_type": "Father",
       "relation_name": "Dhirendra Pam",
@@ -2941,7 +2941,7 @@
     },
     {
       "voter_id": "LFR2707852",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Bindu",
       "relation_type": "Father",
       "relation_name": "Omadatta",
@@ -2952,7 +2952,7 @@
     },
     {
       "voter_id": "SP2347060",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Virendra Kumara",
       "relation_type": "Father",
       "relation_name": "Sva0 Buddhilala",
@@ -2963,7 +2963,7 @@
     },
     {
       "voter_id": "ISP4687250",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ajaya Kumara Pandeya",
       "relation_type": "Father",
       "relation_name": "Vidya Sagara Pandeya",
@@ -2974,7 +2974,7 @@
     },
     {
       "voter_id": "LFR2660352",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ramalakhana",
       "relation_type": "Father",
       "relation_name": "Gorakhanatha",
@@ -2985,7 +2985,7 @@
     },
     {
       "voter_id": "SP0339747",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Radhoshyama",
       "relation_type": "Father",
       "relation_name": "Chandi Prasada",
@@ -2996,7 +2996,7 @@
     },
     {
       "voter_id": "LFR320635",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Rajiva",
       "relation_type": "Father",
       "relation_name": "Rajakumara",
@@ -3007,7 +3007,7 @@
     },
     {
       "voter_id": "LFR3206554",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ramjana",
       "relation_type": "Father",
       "relation_name": "Baleshvara",
@@ -3018,7 +3018,7 @@
     },
     {
       "voter_id": "LFR3206570",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Nutana",
       "relation_type": "Husband",
       "relation_name": "Ajita",
@@ -3029,7 +3029,7 @@
     },
     {
       "voter_id": "LFR2859045",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Vimala",
       "relation_type": "Father",
       "relation_name": "Ramavrxa",
@@ -3040,7 +3040,7 @@
     },
     {
       "voter_id": "ISP026033",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Devesha Kumara Pandeya",
       "relation_type": "Father",
       "relation_name": "Shri Gamga Prasada Pandeya",
@@ -3051,7 +3051,7 @@
     },
     {
       "voter_id": "ISP0339739",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Vimalavati",
       "relation_type": "Husband",
       "relation_name": "Radheshyama",
@@ -3062,7 +3062,7 @@
     },
     {
       "voter_id": "ISP0342683",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Raghavemdra Kumara Sharma",
       "relation_type": "Father",
       "relation_name": "Rama Sahaya Sharma",
@@ -3073,7 +3073,7 @@
     },
     {
       "voter_id": "LFR3206547",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ra La",
       "relation_type": "Father",
       "relation_name": "Anila",
@@ -3084,7 +3084,7 @@
     },
     {
       "voter_id": "LFR3206505",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Sarika",
       "relation_type": "Husband",
       "relation_name": "Satisha",
@@ -3095,7 +3095,7 @@
     },
     {
       "voter_id": "LFR2850709",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Prahalada",
       "relation_type": "Father",
       "relation_name": "Ramapati Pa",
@@ -3106,7 +3106,7 @@
     },
     {
       "voter_id": "LFR285752",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Janardana",
       "relation_type": "Father",
       "relation_name": "Prahalada",
@@ -3117,7 +3117,7 @@
     },
     {
       "voter_id": "ISP0342592",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Vidya Devi",
       "relation_type": "Husband",
       "relation_name": "Rama Nagina",
@@ -3128,7 +3128,7 @@
     },
     {
       "voter_id": "LFR3207032",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Gamga Prasada",
       "relation_type": "Father",
       "relation_name": "Ramavali",
@@ -3139,7 +3139,7 @@
     },
     {
       "voter_id": "ISP708679",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Anila Kumara Shrivastava",
       "relation_type": "Father",
       "relation_name": "Jamga Bahadura Prasada Shrivastava",
@@ -3150,7 +3150,7 @@
     },
     {
       "voter_id": "LFR3206380",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Shanti",
       "relation_type": "Father",
       "relation_name": "Rajakumara",
@@ -3161,7 +3161,7 @@
     },
     {
       "voter_id": "LFR270944",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ajita",
       "relation_type": "Father",
       "relation_name": "Baleshvara",
@@ -3172,7 +3172,7 @@
     },
     {
       "voter_id": "LFR285737",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ravi",
       "relation_type": "Father",
       "relation_name": "Prahalada",
@@ -3183,7 +3183,7 @@
     },
     {
       "voter_id": "ISP0342600",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Indra Kumara",
       "relation_type": "Father",
       "relation_name": "Rama Nagina",
@@ -3194,7 +3194,7 @@
     },
     {
       "voter_id": "LFR3205002",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Urmila",
       "relation_type": "Husband",
       "relation_name": "Gamga",
@@ -3205,7 +3205,7 @@
     },
     {
       "voter_id": "ISP708687",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Satendra Prasada Shrivastava",
       "relation_type": "Father",
       "relation_name": "Jamga Bahadura Shrivastava",
@@ -3216,7 +3216,7 @@
     },
     {
       "voter_id": "SP447633",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Samkalpa Shrivastava",
       "relation_type": "Father",
       "relation_name": "Krshna Mohana Lala Shrivastava",
@@ -3227,7 +3227,7 @@
     },
     {
       "voter_id": "ISP408529",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Naremdra Bahadura Shrivastava",
       "relation_type": "Father",
       "relation_name": "Babu Lala Shrivastava",
@@ -3238,7 +3238,7 @@
     },
     {
       "voter_id": "SP447464",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Anubhava Shrivastava",
       "relation_type": "Father",
       "relation_name": "Rameshvara Lala Shrivastava",
@@ -3249,7 +3249,7 @@
     },
     {
       "voter_id": "SP479407",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Arana Gupta",
       "relation_type": "Father",
       "relation_name": "Pramoda Kumara Gupta",
@@ -3260,7 +3260,7 @@
     },
     {
       "voter_id": "ISP7078922",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Varuna Shrivastava",
       "relation_type": "Father",
       "relation_name": "Vishvamohana Shrivasvata",
@@ -3271,7 +3271,7 @@
     },
     {
       "voter_id": "ISP4003372",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Jagrti Shrivastava",
       "relation_type": "Father",
       "relation_name": "Vishva Mohana Shrivastava",
@@ -3282,7 +3282,7 @@
     },
     {
       "voter_id": "ISP0290056",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Jubaida",
       "relation_type": "Husband",
       "relation_name": "Mohammada Sami",
@@ -3293,7 +3293,7 @@
     },
     {
       "voter_id": "ISP4078537",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Shila Shrivastava",
       "relation_type": "Father",
       "relation_name": "Bhagavanadina",
@@ -3304,7 +3304,7 @@
     },
     {
       "voter_id": "SP4078867",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Priyamka Shrivastava",
       "relation_type": "Father",
       "relation_name": "Naremdra Bahadura Shrivastava",
@@ -3315,7 +3315,7 @@
     },
     {
       "voter_id": "ISP408859",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Shivama Shrivastava",
       "relation_type": "Father",
       "relation_name": "Naremdra Bahadura Shrivastava",
@@ -3326,7 +3326,7 @@
     },
     {
       "voter_id": "LFRI560069",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Amarasimha",
       "relation_type": "Father",
       "relation_name": "Lakhayaka",
@@ -3337,7 +3337,7 @@
     },
     {
       "voter_id": "SP448404",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Vijaya Kumara Gupta",
       "relation_type": "Father",
       "relation_name": "Jagadisha Prasada",
@@ -3348,7 +3348,7 @@
     },
     {
       "voter_id": "ISP0290080",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Jannatuna Nisha",
       "relation_type": "Father",
       "relation_name": "Mohammada Sami",
@@ -3359,7 +3359,7 @@
     },
     {
       "voter_id": "LFR2856873",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Mainavata Devi",
       "relation_type": "Husband",
       "relation_name": "Jitendra Kumara",
@@ -3370,7 +3370,7 @@
     },
     {
       "voter_id": "ISP708398",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Manoja Kumara",
       "relation_type": "Father",
       "relation_name": "Narendra Ie",
@@ -3380,7 +3380,7 @@
     },
     {
       "voter_id": "ISP4078842",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Puja Shrivastava",
       "relation_type": "Father",
       "relation_name": "Naremdra Bahadura Shrivastava",
@@ -3391,7 +3391,7 @@
     },
     {
       "voter_id": "LFR2856854",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Usha Devi",
       "relation_type": "Husband",
       "relation_name": "Arajurna",
@@ -3402,7 +3402,7 @@
     },
     {
       "voter_id": "SP4077320",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Amira Raza",
       "relation_type": "Father",
       "relation_name": "Gulama Akhtara",
@@ -3413,7 +3413,7 @@
     },
     {
       "voter_id": "LFR270574",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Gayatri Devi",
       "relation_type": "Husband",
       "relation_name": "Chandrasheshara",
@@ -3424,7 +3424,7 @@
     },
     {
       "voter_id": "ISP3505644",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Shobha Devi",
       "relation_type": "Husband",
       "relation_name": "Ghanashyama",
@@ -3435,7 +3435,7 @@
     },
     {
       "voter_id": "LFR2703270",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Rakesha",
       "relation_type": "Father",
       "relation_name": "Sitarama",
@@ -3446,7 +3446,7 @@
     },
     {
       "voter_id": "ISP0326686",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Jayamala",
       "relation_type": "Husband",
       "relation_name": "Ramavilasa",
@@ -3457,7 +3457,7 @@
     },
     {
       "voter_id": "ISP0326702",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Mira",
       "relation_type": "Husband",
       "relation_name": "Ramashisha",
@@ -3468,7 +3468,7 @@
     },
     {
       "voter_id": "SP0034223",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Phatama Johara",
       "relation_type": "Husband",
       "relation_name": "Gulama Akhtara",
@@ -3479,7 +3479,7 @@
     },
     {
       "voter_id": "LFR2850504",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Mirachanda",
       "relation_type": "Father",
       "relation_name": "Bholanatha",
@@ -3490,7 +3490,7 @@
     },
     {
       "voter_id": "SP2082329",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Har Mohana Shrivastava",
       "relation_type": "Father",
       "relation_name": "Tale Narasiha Prasada",
@@ -3501,7 +3501,7 @@
     },
     {
       "voter_id": "LFR2856763",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Viveka Nan{}da",
       "relation_type": "Father",
       "relation_name": "Rajendra",
@@ -3512,7 +3512,7 @@
     },
     {
       "voter_id": "ISP0330324",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Suresha Simha",
       "relation_type": "Father",
       "relation_name": "Nagendra Simha",
@@ -3523,7 +3523,7 @@
     },
     {
       "voter_id": "ISP0342659",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Uma",
       "relation_type": "Husband",
       "relation_name": "Ravibhana",
@@ -3534,7 +3534,7 @@
     },
     {
       "voter_id": "SP0330332",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Dhaneshvari Devi",
       "relation_type": "Husband",
       "relation_name": "Suresha Simha",
@@ -3545,7 +3545,7 @@
     },
     {
       "voter_id": "ISP003425",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Gulama Akhtara",
       "relation_type": "Father",
       "relation_name": "Nura Mohammada",
@@ -3556,7 +3556,7 @@
     },
     {
       "voter_id": "ISP3605633",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Radheshyama",
       "relation_type": "Father",
       "relation_name": "Bhu",
@@ -3567,7 +3567,7 @@
     },
     {
       "voter_id": "LFR3206968",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Gorakha",
       "relation_type": "Father",
       "relation_name": "Narasimha",
@@ -3578,7 +3578,7 @@
     },
     {
       "voter_id": "SP2082337",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Sushama Shrivastava",
       "relation_type": "Husband",
       "relation_name": "Krsha Mohana Shrivastava",
@@ -3589,7 +3589,7 @@
     },
     {
       "voter_id": "ISP3505674",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Parasa",
       "relation_type": "Father",
       "relation_name": "Ramashisha",
@@ -3600,7 +3600,7 @@
     },
     {
       "voter_id": "LFR2850022",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ravibhana",
       "relation_type": "Father",
       "relation_name": "Ramaji",
@@ -3611,7 +3611,7 @@
     },
     {
       "voter_id": "ISP230068",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ramavilasa",
       "relation_type": "Father",
       "relation_name": "Adalata",
@@ -3622,7 +3622,7 @@
     },
     {
       "voter_id": "ISP0326694",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ramashisha",
       "relation_type": "Father",
       "relation_name": "Adalata",
@@ -3633,7 +3633,7 @@
     },
     {
       "voter_id": "LFRI273560",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Shivashamkara",
       "house_number": "243",
       "age": 45,
@@ -3642,7 +3642,7 @@
     },
     {
       "voter_id": "ISP003437",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Gitadevi",
       "relation_type": "Husband",
       "relation_name": "Munna Yadava",
@@ -3653,7 +3653,7 @@
     },
     {
       "voter_id": "ISP793579",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Priyamka Devi",
       "relation_type": "Father",
       "relation_name": "Purnavasi",
@@ -3664,7 +3664,7 @@
     },
     {
       "voter_id": "ISP4970832",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Satyajita Bharati",
       "relation_type": "Father",
       "relation_name": "Ramajita Prasada Lilavati Devi",
@@ -3675,7 +3675,7 @@
     },
     {
       "voter_id": "ISP5036223",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Rama Avadha",
       "relation_type": "Father",
       "relation_name": "Leta Rama Subhaga",
@@ -3686,7 +3686,7 @@
     },
     {
       "voter_id": "ISP4922209",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Navanita Nayaka",
       "relation_type": "Father",
       "relation_name": "Paramatma Prasada",
@@ -3697,7 +3697,7 @@
     },
     {
       "voter_id": "ISP473838",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Chama",
       "relation_type": "Father",
       "relation_name": "Navina",
@@ -3708,7 +3708,7 @@
     },
     {
       "voter_id": "ISP4940744",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Anusha Mishra",
       "relation_type": "Father",
       "relation_name": "Ajita Kumara Mishra",
@@ -3719,7 +3719,7 @@
     },
     {
       "voter_id": "ISP7778505",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ara Simha Shere",
       "relation_type": "Father",
       "relation_name": "Ramakarana Rama",
@@ -3730,7 +3730,7 @@
     },
     {
       "voter_id": "ISP2557940",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Kishana Chanda",
       "relation_type": "Father",
       "relation_name": "Ramashisha",
@@ -3741,7 +3741,7 @@
     },
     {
       "voter_id": "ISP0034595",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Anila Kumara",
       "relation_type": "Father",
       "relation_name": "Rama Avadha Simha Pa",
@@ -3752,7 +3752,7 @@
     },
     {
       "voter_id": "ISP5034624",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Sumana Simha",
       "relation_type": "Husband",
       "relation_name": "Anila Simha",
@@ -3763,7 +3763,7 @@
     },
     {
       "voter_id": "SP492297",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Niharika Nayaka",
       "relation_type": "Father",
       "relation_name": "Paramatma Prasada",
@@ -3774,7 +3774,7 @@
     },
     {
       "voter_id": "ISP0824706",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Kamalavati Varma",
       "relation_type": "Husband",
       "relation_name": "Parasanatha Varma Pa",
@@ -3785,7 +3785,7 @@
     },
     {
       "voter_id": "ISP4997367",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Aphasana",
       "relation_type": "Father",
       "relation_name": "Mo Movina",
@@ -3796,7 +3796,7 @@
     },
     {
       "voter_id": "ISP7578364",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Mahendra Kumara",
       "relation_type": "Father",
       "relation_name": "Harishamkara Prasada",
@@ -3807,7 +3807,7 @@
     },
     {
       "voter_id": "ISP230746",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Sunila Kumara",
       "relation_type": "Father",
       "relation_name": "Adalata",
@@ -3818,7 +3818,7 @@
     },
     {
       "voter_id": "ISP3736264",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Roshana Pratapa Simha",
       "relation_type": "Father",
       "relation_name": "Ajaya Kumara Simha",
@@ -3829,7 +3829,7 @@
     },
     {
       "voter_id": "SP003467",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Rajani Simha",
       "relation_type": "Husband",
       "relation_name": "Anila Kumara",
@@ -3840,7 +3840,7 @@
     },
     {
       "voter_id": "ISP5033642",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Sudhamshu Simha",
       "relation_type": "Father",
       "relation_name": "Anila Simha",
@@ -3851,7 +3851,7 @@
     },
     {
       "voter_id": "ISP0035074",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Nayana Tara Devi",
       "relation_type": "Father",
       "relation_name": "Pheku Prasada",
@@ -3862,7 +3862,7 @@
     },
     {
       "voter_id": "ISP7767074",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Aruna Kumara",
       "relation_type": "Father",
       "relation_name": "Bhagata Prasada",
@@ -3873,7 +3873,7 @@
     },
     {
       "voter_id": "ISP4929428",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Phula Chamdra",
       "relation_type": "Father",
       "relation_name": "Magana Rama",
@@ -3884,7 +3884,7 @@
     },
     {
       "voter_id": "ISP766799",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Dhanendra Kumara Shrivastava",
       "relation_type": "Father",
       "relation_name": "Sva. Sukhanarayana Lala",
@@ -3895,7 +3895,7 @@
     },
     {
       "voter_id": "ISP758844",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Mo0 Nasima",
       "relation_type": "Father",
       "relation_name": "Mo0 Hanipha",
@@ -3906,7 +3906,7 @@
     },
     {
       "voter_id": "SP4824374",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ar",
       "relation_type": "Father",
       "relation_name": "Pramathesha Sharma",
@@ -3917,7 +3917,7 @@
     },
     {
       "voter_id": "SP4997425",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Mohammada Imarana",
       "relation_type": "Father",
       "relation_name": "Ismaila",
@@ -3928,7 +3928,7 @@
     },
     {
       "voter_id": "ISP446675",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Basamta Sahani",
       "relation_type": "Father",
       "relation_name": "Rama Subhaga",
@@ -3939,7 +3939,7 @@
     },
     {
       "voter_id": "SPI578752",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Savitri Shrivastava",
       "relation_type": "Husband",
       "relation_name": "Bashishta Lala",
@@ -3950,7 +3950,7 @@
     },
     {
       "voter_id": "ISP758857",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Hadisuna Nisha",
       "relation_type": "Father",
       "relation_name": "Mo0 Nasima",
@@ -3961,7 +3961,7 @@
     },
     {
       "voter_id": "ISP5029020",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ashvani Kumara Simha",
       "relation_type": "Father",
       "relation_name": "Rama Barai Simha",
@@ -3972,7 +3972,7 @@
     },
     {
       "voter_id": "ISP4706255",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Shailemdra Pratapa Yadava",
       "relation_type": "Father",
       "relation_name": "Jaya Mamgala Yadava",
@@ -3983,7 +3983,7 @@
     },
     {
       "voter_id": "ISP7578745",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Ramjana",
       "relation_type": "Father",
       "relation_name": "Bashishta Lala",
@@ -3994,7 +3994,7 @@
     },
     {
       "voter_id": "ISP7983725",
-      "part_number": 8,
+      "part_number": 81,
       "name": "Prabhan{}jaya Kumara Simha",
       "relation_type": "Father",
       "relation_name": "Shri Vijaya Bahadura Simha",
@@ -4005,7 +4005,7 @@
     },
     {
       "voter_id": "ISP0034538",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Rajarama",
@@ -4018,7 +4018,7 @@
     },
     {
       "voter_id": "ISP0034553",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Ree",
@@ -4031,7 +4031,7 @@
     },
     {
       "voter_id": "ISP0326843",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Ku Sushamita Simha",
@@ -4044,7 +4044,7 @@
     },
     {
       "voter_id": "ISP0034348",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Nityasimha",
@@ -4057,7 +4057,7 @@
     },
     {
       "voter_id": "LFR320626",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Vinaya",
@@ -4070,7 +4070,7 @@
     },
     {
       "voter_id": "ISP7093087",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Phuladevi",
@@ -4083,7 +4083,7 @@
     },
     {
       "voter_id": "LFR3204963",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Devendra",
@@ -4096,7 +4096,7 @@
     },
     {
       "voter_id": "ISP0034587",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Sipahi Yadava",
@@ -4109,7 +4109,7 @@
     },
     {
       "voter_id": "ISP003456",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Ragini",
@@ -4122,7 +4122,7 @@
     },
     {
       "voter_id": "ISP0034374",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Sunaina",
@@ -4135,7 +4135,7 @@
     },
     {
       "voter_id": "ISP0034330",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Ashutosha",
@@ -4148,7 +4148,7 @@
     },
     {
       "voter_id": "SP447298",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Tara Devi",
@@ -4161,7 +4161,7 @@
     },
     {
       "voter_id": "ISP0034546",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Raba.da Devi",
@@ -4174,7 +4174,7 @@
     },
     {
       "voter_id": "ISP0034306",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Abhaya Kumara Simha",
@@ -4187,7 +4187,7 @@
     },
     {
       "voter_id": "SP032680",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Sumitra",
@@ -4200,7 +4200,7 @@
     },
     {
       "voter_id": "LFR203784",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Usha",
@@ -4213,7 +4213,7 @@
     },
     {
       "voter_id": "LFR2874978",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Ramaratana",
@@ -4226,7 +4226,7 @@
     },
     {
       "voter_id": "ISP373688",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Sumana Sahaya",
@@ -4239,7 +4239,7 @@
     },
     {
       "voter_id": "ISP3505690",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Nimarla Devi",
@@ -4252,7 +4252,7 @@
     },
     {
       "voter_id": "ISP467939",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Madana Prasada",
@@ -4263,7 +4263,7 @@
     },
     {
       "voter_id": "LFR2856607",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Kailasha Sharma",
@@ -4276,7 +4276,7 @@
     },
     {
       "voter_id": "LFR2856896",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Anita Sharma",
@@ -4289,7 +4289,7 @@
     },
     {
       "voter_id": "ISP0034462",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Ramaji",
@@ -4302,7 +4302,7 @@
     },
     {
       "voter_id": "ISP3505708",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Ramananda",
@@ -4315,7 +4315,7 @@
     },
     {
       "voter_id": "ISP729378",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Niru Simha",
@@ -4328,7 +4328,7 @@
     },
     {
       "voter_id": "LFR285736",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Vasaki Natha",
@@ -4341,7 +4341,7 @@
     },
     {
       "voter_id": "LFR2856774",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Dugar‌ Vati",
@@ -4354,7 +4354,7 @@
     },
     {
       "voter_id": "LFR2856904",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Rani Sharma",
@@ -4367,7 +4367,7 @@
     },
     {
       "voter_id": "ISP774892",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Vimdaravati Devi",
@@ -4380,7 +4380,7 @@
     },
     {
       "voter_id": "ISP0353649",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Shrimati Manishadevi",
@@ -4393,7 +4393,7 @@
     },
     {
       "voter_id": "LFR285769",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Vimala Devi",
@@ -4406,7 +4406,7 @@
     },
     {
       "voter_id": "ISP0342675",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Snehalata",
@@ -4419,7 +4419,7 @@
     },
     {
       "voter_id": "LFR2856797",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Jagata Sharma",
@@ -4432,7 +4432,7 @@
     },
     {
       "voter_id": "LFR2875009",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Asha Devi",
@@ -4445,7 +4445,7 @@
     },
     {
       "voter_id": "ISP0034740",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Mira Kesharavani",
@@ -4458,7 +4458,7 @@
     },
     {
       "voter_id": "ISP3505776",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Lalaji",
@@ -4471,7 +4471,7 @@
     },
     {
       "voter_id": "LFR2707696",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Dinesha",
@@ -4484,7 +4484,7 @@
     },
     {
       "voter_id": "ISP0034090",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Indravati Devi",
@@ -4497,7 +4497,7 @@
     },
     {
       "voter_id": "LFR2850758",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Gita Devi",
@@ -4510,7 +4510,7 @@
     },
     {
       "voter_id": "ISP0260323",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Shri Dayala",
@@ -4523,7 +4523,7 @@
     },
     {
       "voter_id": "ISP2549863",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Shashikala",
@@ -4536,7 +4536,7 @@
     },
     {
       "voter_id": "ISP222963",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Laxmi Maddheshiya",
@@ -4549,7 +4549,7 @@
     },
     {
       "voter_id": "LFR285327",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Sarojani Devi",
@@ -4562,7 +4562,7 @@
     },
     {
       "voter_id": "LFR2850493",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Dhiraja Pandeya",
@@ -4575,7 +4575,7 @@
     },
     {
       "voter_id": "SP4639407",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Priyamka Yadava",
@@ -4588,7 +4588,7 @@
     },
     {
       "voter_id": "LFRI338342",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Smrti Devi",
@@ -4601,7 +4601,7 @@
     },
     {
       "voter_id": "LFRI337948",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Dinesha",
@@ -4614,7 +4614,7 @@
     },
     {
       "voter_id": "ISP2549855",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Samdhya Kumari",
@@ -4627,7 +4627,7 @@
     },
     {
       "voter_id": "LFR2850055",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Niraja Pandeya",
@@ -4640,7 +4640,7 @@
     },
     {
       "voter_id": "ISP3505732",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Shyama Dulari",
@@ -4653,7 +4653,7 @@
     },
     {
       "voter_id": "ISP0034447",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Shivakumara",
@@ -4666,7 +4666,7 @@
     },
     {
       "voter_id": "LFRI338052",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Rajadei",
@@ -4679,7 +4679,7 @@
     },
     {
       "voter_id": "SP777572",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Raja Kumari Devi",
@@ -4692,7 +4692,7 @@
     },
     {
       "voter_id": "ISP0034256",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Shashi Kumara",
@@ -4705,7 +4705,7 @@
     },
     {
       "voter_id": "ISP0034280",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Punama Devi",
@@ -4718,7 +4718,7 @@
     },
     {
       "voter_id": "ISP527895",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Hemalata Patila",
@@ -4731,7 +4731,7 @@
     },
     {
       "voter_id": "ISP757929",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Sudha Devi",
@@ -4744,7 +4744,7 @@
     },
     {
       "voter_id": "ISP3967023",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Chamdani",
@@ -4757,7 +4757,7 @@
     },
     {
       "voter_id": "ISP0034249",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Sumana Chau.",
@@ -4770,7 +4770,7 @@
     },
     {
       "voter_id": "ISP0034272",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Vijaya Devi",
@@ -4783,7 +4783,7 @@
     },
     {
       "voter_id": "ISP777663",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Gsh Bahadura",
@@ -4796,7 +4796,7 @@
     },
     {
       "voter_id": "ISP3967034",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Hvitika Kumara Bharati",
@@ -4809,7 +4809,7 @@
     },
     {
       "voter_id": "ISP0034298",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Narendrakumara",
@@ -4822,7 +4822,7 @@
     },
     {
       "voter_id": "ISP0034264",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Samjaya Kumara Chau I",
@@ -4835,7 +4835,7 @@
     },
     {
       "voter_id": "ISP373622",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Allaudadina",
@@ -4848,7 +4848,7 @@
     },
     {
       "voter_id": "ISP4644555",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Gumjana Simha",
@@ -4861,7 +4861,7 @@
     },
     {
       "voter_id": "SP2082477",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Mo. Raphi",
@@ -4874,7 +4874,7 @@
     },
     {
       "voter_id": "ISP4933305",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Sushila Kumara Pamdeya",
@@ -4887,7 +4887,7 @@
     },
     {
       "voter_id": "LFR232983",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Nohari Devi",
@@ -4900,7 +4900,7 @@
     },
     {
       "voter_id": "LFR2320943",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Rekharani",
@@ -4913,7 +4913,7 @@
     },
     {
       "voter_id": "ISP0363499",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Shyamavihari",
@@ -4926,7 +4926,7 @@
     },
     {
       "voter_id": "ISP069650",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Pamkaja Kumara",
@@ -4939,7 +4939,7 @@
     },
     {
       "voter_id": "ISP4466879",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Ishvara Chamda Gupta",
@@ -4952,7 +4952,7 @@
     },
     {
       "voter_id": "SP4644574",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Gaurava Simha",
@@ -4965,7 +4965,7 @@
     },
     {
       "voter_id": "ISP069676",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Sima Devi",
@@ -4978,7 +4978,7 @@
     },
     {
       "voter_id": "LFR285026",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Samjaya Kumara",
@@ -4991,7 +4991,7 @@
     },
     {
       "voter_id": "ISP2082485",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Ahamada Saina",
@@ -5004,7 +5004,7 @@
     },
     {
       "voter_id": "LFR2703460",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Oa",
@@ -5017,7 +5017,7 @@
     },
     {
       "voter_id": "LFR2389633",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Vishala",
@@ -5030,7 +5030,7 @@
     },
     {
       "voter_id": "LFR238964",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Vishvasa",
@@ -5043,7 +5043,7 @@
     },
     {
       "voter_id": "ISP069679",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Mavira Bharati",
@@ -5056,7 +5056,7 @@
     },
     {
       "voter_id": "ISP4495362",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Arati Gupta",
@@ -5069,7 +5069,7 @@
     },
     {
       "voter_id": "ISP4987434",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Isharavati Devi",
@@ -5082,7 +5082,7 @@
     },
     {
       "voter_id": "SP2275626",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Mahendra Kumara",
@@ -5095,7 +5095,7 @@
     },
     {
       "voter_id": "LFR285855",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Manoja Kumara",
@@ -5108,7 +5108,7 @@
     },
     {
       "voter_id": "LFR2857863",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Kavala",
@@ -5121,7 +5121,7 @@
     },
     {
       "voter_id": "SP003442",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Laxmana",
@@ -5134,7 +5134,7 @@
     },
     {
       "voter_id": "LFR2850345",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Vandana",
@@ -5147,7 +5147,7 @@
     },
     {
       "voter_id": "SP7799788",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Aravinda Kumara Pandeya",
@@ -5160,7 +5160,7 @@
     },
     {
       "voter_id": "ISP3736303",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Ratnama Harsha",
@@ -5173,7 +5173,7 @@
     },
     {
       "voter_id": "LFR3205724",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Lalaji",
@@ -5186,7 +5186,7 @@
     },
     {
       "voter_id": "ISP757387",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Julekha",
@@ -5199,7 +5199,7 @@
     },
     {
       "voter_id": "LFRI338292",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Udayapratapa",
@@ -5212,7 +5212,7 @@
     },
     {
       "voter_id": "LFRI338284",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Pavarti Devi",
@@ -5225,7 +5225,7 @@
     },
     {
       "voter_id": "ISPI775469",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Urmila Devi",
@@ -5238,7 +5238,7 @@
     },
     {
       "voter_id": "SPI775402",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Devi",
@@ -5251,7 +5251,7 @@
     },
     {
       "voter_id": "LFR3206778",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Sukha Deva",
@@ -5264,7 +5264,7 @@
     },
     {
       "voter_id": "LFR2329555",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Kamchana",
@@ -5277,7 +5277,7 @@
     },
     {
       "voter_id": "ISP069627",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Ravi Kumara",
@@ -5290,7 +5290,7 @@
     },
     {
       "voter_id": "SP0034470",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Savitri Devi",
@@ -5303,7 +5303,7 @@
     },
     {
       "voter_id": "ISP4968676",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Irafana Ali",
@@ -5316,7 +5316,7 @@
     },
     {
       "voter_id": "LFR2389583",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Vishvasa",
@@ -5327,7 +5327,7 @@
     },
     {
       "voter_id": "LFR2850733",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Rambha Devi",
@@ -5340,7 +5340,7 @@
     },
     {
       "voter_id": "LFRI336744",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Amita Kumara",
@@ -5353,7 +5353,7 @@
     },
     {
       "voter_id": "LFR3205234",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Dinesha Kumara Simha",
@@ -5366,7 +5366,7 @@
     },
     {
       "voter_id": "LFR3206786",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Babita",
@@ -5379,7 +5379,7 @@
     },
     {
       "voter_id": "SP069778",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Saroja Devi",
@@ -5392,7 +5392,7 @@
     },
     {
       "voter_id": "SP4975074",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Ravi Ramjana Kumara",
@@ -5405,7 +5405,7 @@
     },
     {
       "voter_id": "ISP3736246",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Nitu Devi",
@@ -5418,7 +5418,7 @@
     },
     {
       "voter_id": "ISP3505765",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Gorakha Prasada",
@@ -5431,7 +5431,7 @@
     },
     {
       "voter_id": "LFR4526257",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, Ramleel",
       "name": "Vidyavati",
@@ -5444,7 +5444,7 @@
     },
     {
       "voter_id": "LFR2329720",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, Ramleel",
       "name": "Shanti Devi",
@@ -5457,7 +5457,7 @@
     },
     {
       "voter_id": "LFR3204757",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, Ramleel",
       "name": "Dhamendra",
@@ -5470,7 +5470,7 @@
     },
     {
       "voter_id": "LFR285004",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, Ramleel",
       "name": "Rakesha",
@@ -5483,7 +5483,7 @@
     },
     {
       "voter_id": "LFRI335355",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, Ramleel",
       "name": "Lojari",
@@ -5496,7 +5496,7 @@
     },
     {
       "voter_id": "LFR2850246",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, Ramleel",
       "name": "Nilama",
@@ -5509,7 +5509,7 @@
     },
     {
       "voter_id": "ISP230829",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, Ramleel",
       "name": "Surendra Kumara",
@@ -5522,7 +5522,7 @@
     },
     {
       "voter_id": "ISP504279",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, Ramleel",
       "name": "Sajiya .khatuna",
@@ -5535,7 +5535,7 @@
     },
     {
       "voter_id": "LFR285595",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, Ramleel",
       "name": "Devidasa",
@@ -5548,7 +5548,7 @@
     },
     {
       "voter_id": "LFR2857400",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, Ramleel",
       "name": "Jaya Prakasha Lala",
@@ -5561,7 +5561,7 @@
     },
     {
       "voter_id": "LFR2857822",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, Ramleel",
       "name": "Kirana",
@@ -5574,7 +5574,7 @@
     },
     {
       "voter_id": "ISP7793876",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, Ramleel",
       "name": "Avinasha Kumara",
@@ -5587,7 +5587,7 @@
     },
     {
       "voter_id": "ISPI757288",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, Ramleel",
       "name": "Atiulal{}laha",
@@ -5600,7 +5600,7 @@
     },
     {
       "voter_id": "LFRI275524",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, Ramleel",
       "name": "Navina",
@@ -5611,7 +5611,7 @@
     },
     {
       "voter_id": "ISP3679087",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, Ramleel",
       "name": "Ramakesha Yadava",
@@ -5624,7 +5624,7 @@
     },
     {
       "voter_id": "ISP5042536",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, Ramleel",
       "name": "Ezaza Karima",
@@ -5637,7 +5637,7 @@
     },
     {
       "voter_id": "LFR4526232",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, Ramleel",
       "name": "Nita Simha",
@@ -5650,7 +5650,7 @@
     },
     {
       "voter_id": "LFR2329084",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, Ramleel",
       "name": "Rama Varana Prasada",
@@ -5663,7 +5663,7 @@
     },
     {
       "voter_id": "ISP0355362",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, Ramleel",
       "name": "Bhagauti Devi",
@@ -5676,7 +5676,7 @@
     },
     {
       "voter_id": "LFR3204740",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, Ramleel",
       "name": "Shaileja",
@@ -5689,7 +5689,7 @@
     },
     {
       "voter_id": "ISP3976202",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Krshna Mohana",
@@ -5702,7 +5702,7 @@
     },
     {
       "voter_id": "ISP397686",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Komala Kannaujiya",
@@ -5715,7 +5715,7 @@
     },
     {
       "voter_id": "ISP470033",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Puja",
@@ -5728,7 +5728,7 @@
     },
     {
       "voter_id": "SP4702007",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Puja Devi",
@@ -5741,7 +5741,7 @@
     },
     {
       "voter_id": "ISP4709663",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Seraja Khana 80",
@@ -5753,7 +5753,7 @@
     },
     {
       "voter_id": "SP425773",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Ratnesha Kumara",
@@ -5766,7 +5766,7 @@
     },
     {
       "voter_id": "ISP3979953",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Rehana .khatuna",
@@ -5779,7 +5779,7 @@
     },
     {
       "voter_id": "LFR320699",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Nagendara",
@@ -5792,7 +5792,7 @@
     },
     {
       "voter_id": "ISP3975998",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Nidhi Kannaujiya",
@@ -5805,7 +5805,7 @@
     },
     {
       "voter_id": "SP4478244",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Vishala Kumara",
@@ -5818,7 +5818,7 @@
     },
     {
       "voter_id": "ISP4320723",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Aniketa Kumara Bharati",
@@ -5831,7 +5831,7 @@
     },
     {
       "voter_id": "ISP5037585",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Mohammada Saphika",
@@ -5842,7 +5842,7 @@
     },
     {
       "voter_id": "ISP4354635",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Samgita",
@@ -5855,7 +5855,7 @@
     },
     {
       "voter_id": "ISP397976",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Mohammada Riyaza",
@@ -5868,7 +5868,7 @@
     },
     {
       "voter_id": "LFR3207073",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Prabha",
@@ -5881,7 +5881,7 @@
     },
     {
       "voter_id": "ISP4557930",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Amana",
@@ -5894,7 +5894,7 @@
     },
     {
       "voter_id": "ISP3836046",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Shabana",
@@ -5907,7 +5907,7 @@
     },
     {
       "voter_id": "ISP3836038",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Priyamka Tripathi",
@@ -5920,7 +5920,7 @@
     },
     {
       "voter_id": "ISP5044508",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Lavvali",
@@ -5933,7 +5933,7 @@
     },
     {
       "voter_id": "ISP4307834",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Chamda Bharati",
@@ -5946,7 +5946,7 @@
     },
     {
       "voter_id": "ISP4709838",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Saida Alama",
@@ -5959,7 +5959,7 @@
     },
     {
       "voter_id": "ISP3736329",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Anila Kumara",
@@ -5972,7 +5972,7 @@
     },
     {
       "voter_id": "ISP5026766",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Mamju Devi",
@@ -5985,7 +5985,7 @@
     },
     {
       "voter_id": "SP4984357",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Priya Raja",
@@ -5998,7 +5998,7 @@
     },
     {
       "voter_id": "ISP4278420",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 2,
       "section_name": "Jungle Tulsiram Bichiya, wate",
       "name": "Shashibala Upadhyaya",
@@ -6011,7 +6011,7 @@
     },
     {
       "voter_id": "SP4674079",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Kumari Ritu Sagara",
@@ -6024,7 +6024,7 @@
     },
     {
       "voter_id": "ISP3976004",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Gyanamati Devi",
@@ -6037,7 +6037,7 @@
     },
     {
       "voter_id": "ISP5025556",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Priyamka",
@@ -6050,7 +6050,7 @@
     },
     {
       "voter_id": "ISP3852266",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Abhisheka Kumara",
@@ -6063,7 +6063,7 @@
     },
     {
       "voter_id": "ISP4793579",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Govimda",
@@ -6076,7 +6076,7 @@
     },
     {
       "voter_id": "ISP493847",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Kahakasha Naja 80",
@@ -6089,7 +6089,7 @@
     },
     {
       "voter_id": "ISP4486932",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Rabiya Khatuna",
@@ -6102,7 +6102,7 @@
     },
     {
       "voter_id": "SP4484697",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Aphataba Alama",
@@ -6115,7 +6115,7 @@
     },
     {
       "voter_id": "ISP5027589",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Pimki Rava",
@@ -6128,7 +6128,7 @@
     },
     {
       "voter_id": "ISP395980",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Abhisheka Kumara",
@@ -6141,7 +6141,7 @@
     },
     {
       "voter_id": "ISP502943",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Shalini Gautama",
@@ -6154,7 +6154,7 @@
     },
     {
       "voter_id": "SP447367",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Najama .khatuna",
@@ -6167,7 +6167,7 @@
     },
     {
       "voter_id": "ISP026028",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Umashamkara",
@@ -6180,7 +6180,7 @@
     },
     {
       "voter_id": "ISP4994943",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Rubina .khatuna",
@@ -6193,7 +6193,7 @@
     },
     {
       "voter_id": "ISP4558755",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Uma Chaube",
@@ -6206,7 +6206,7 @@
     },
     {
       "voter_id": "ISP4597852",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Chamdrabhana",
@@ -6219,7 +6219,7 @@
     },
     {
       "voter_id": "SP4477642",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Dinesha Chandra Yadava",
@@ -6232,7 +6232,7 @@
     },
     {
       "voter_id": "SP4473575",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Rijuvana Alama",
@@ -6245,7 +6245,7 @@
     },
     {
       "voter_id": "ISP502563",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Vijayananda Bharati",
@@ -6258,7 +6258,7 @@
     },
     {
       "voter_id": "ISP4575755",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Amana Kumara",
@@ -6271,7 +6271,7 @@
     },
     {
       "voter_id": "ISP3957574",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Sumita Kumara",
@@ -6284,7 +6284,7 @@
     },
     {
       "voter_id": "ISP4558972",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Kumari Namdani",
@@ -6297,7 +6297,7 @@
     },
     {
       "voter_id": "SP4674745",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Saxi",
@@ -6310,7 +6310,7 @@
     },
     {
       "voter_id": "ISP4486957",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Nura Alama",
@@ -6323,7 +6323,7 @@
     },
     {
       "voter_id": "ISP432034",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Amjali Kumari",
@@ -6336,7 +6336,7 @@
     },
     {
       "voter_id": "ISP4558458",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Avinasha Chaube",
@@ -6349,7 +6349,7 @@
     },
     {
       "voter_id": "ISP4979522",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Shahabaja Ahamada",
@@ -6362,7 +6362,7 @@
     },
     {
       "voter_id": "ISP4778326",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Sadiya Eger 59)",
@@ -6374,7 +6374,7 @@
     },
     {
       "voter_id": "ISP4670089",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Navanatha Dube",
@@ -6387,7 +6387,7 @@
     },
     {
       "voter_id": "ISP4794536",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Anita",
@@ -6400,7 +6400,7 @@
     },
     {
       "voter_id": "SP4477535",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Imdravati Devi",
@@ -6413,7 +6413,7 @@
     },
     {
       "voter_id": "SP4558748",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Jyoti Chaube",
@@ -6426,7 +6426,7 @@
     },
     {
       "voter_id": "ISP4558474",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Devemdra Chaube",
@@ -6439,7 +6439,7 @@
     },
     {
       "voter_id": "ISP4945333",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Bhanu Pratapa Simha",
@@ -6452,7 +6452,7 @@
     },
     {
       "voter_id": "SP3888880",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Salimuna Oe 80",
@@ -6464,7 +6464,7 @@
     },
     {
       "voter_id": "ISP4473583",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Mazahara Ali",
@@ -6477,7 +6477,7 @@
     },
     {
       "voter_id": "ISP4405908",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Kajala Chau I",
@@ -6490,7 +6490,7 @@
     },
     {
       "voter_id": "ISP0983825",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Amarisha Kumara",
@@ -6503,7 +6503,7 @@
     },
     {
       "voter_id": "SP4559027",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Nitesha Kumara Rajabhara",
@@ -6516,7 +6516,7 @@
     },
     {
       "voter_id": "SP022523",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Shahajada Ali",
@@ -6529,7 +6529,7 @@
     },
     {
       "voter_id": "SP4558722",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Dinesha Chaube",
@@ -6542,7 +6542,7 @@
     },
     {
       "voter_id": "SP486529",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Rshabha Sharma",
@@ -6555,7 +6555,7 @@
     },
     {
       "voter_id": "SP4473625",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Dipaka Chau I",
@@ -6568,7 +6568,7 @@
     },
     {
       "voter_id": "ISP3888864",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Sarafaraza Ahamada",
@@ -6581,7 +6581,7 @@
     },
     {
       "voter_id": "SP459776",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Primsa Gopala Ojha",
@@ -6594,7 +6594,7 @@
     },
     {
       "voter_id": "SP4966702",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Roji Pandeya",
@@ -6607,7 +6607,7 @@
     },
     {
       "voter_id": "ISP4558565",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Kumari Shashi 80",
@@ -6619,7 +6619,7 @@
     },
     {
       "voter_id": "ISP448698",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Shahina .khatuna",
@@ -6632,7 +6632,7 @@
     },
     {
       "voter_id": "SP4477675",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Imarana Shekha",
@@ -6644,7 +6644,7 @@
     },
     {
       "voter_id": "ISP5048350",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Subhasha Chanda Pasana",
@@ -6657,7 +6657,7 @@
     },
     {
       "voter_id": "ISP4077509",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Amkita Kumara Simga",
@@ -6670,7 +6670,7 @@
     },
     {
       "voter_id": "ISP4938866",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Vandana Gupta",
@@ -6683,7 +6683,7 @@
     },
     {
       "voter_id": "ISP407338",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Nurushahara",
@@ -6696,7 +6696,7 @@
     },
     {
       "voter_id": "ISP4573259",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Ajaya Kumara Kumara",
@@ -6707,7 +6707,7 @@
     },
     {
       "voter_id": "ISP4895892",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Savitri Devi",
@@ -6720,7 +6720,7 @@
     },
     {
       "voter_id": "SP3679202",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Abhinava",
@@ -6733,7 +6733,7 @@
     },
     {
       "voter_id": "LFR2856730",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Aruna Lala",
@@ -6746,7 +6746,7 @@
     },
     {
       "voter_id": "SP4077494",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Ramjana",
@@ -6759,7 +6759,7 @@
     },
     {
       "voter_id": "ISSP4580890",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Puja Rani",
@@ -6772,7 +6772,7 @@
     },
     {
       "voter_id": "ISP4938833",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Aruna Kumara Gupta",
@@ -6785,7 +6785,7 @@
     },
     {
       "voter_id": "ISP4678504",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Phaijarasi Phatama",
@@ -6798,7 +6798,7 @@
     },
     {
       "voter_id": "ISP5048478",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Rubi",
@@ -6811,7 +6811,7 @@
     },
     {
       "voter_id": "SP4887774",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Soni",
@@ -6824,7 +6824,7 @@
     },
     {
       "voter_id": "ISP430792",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Sarvesha Kumara Bharati",
@@ -6837,7 +6837,7 @@
     },
     {
       "voter_id": "ZYH6427025",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Manoja Kumara Mishra",
@@ -6850,7 +6850,7 @@
     },
     {
       "voter_id": "ISP362906",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Pradipa Kumara Simha",
@@ -6863,7 +6863,7 @@
     },
     {
       "voter_id": "ISP499499",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Shashikala",
@@ -6876,7 +6876,7 @@
     },
     {
       "voter_id": "ISP4077483",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Sapana Pasavana",
@@ -6889,7 +6889,7 @@
     },
     {
       "voter_id": "ISP4938932",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Basuki Natha Gupta",
@@ -6902,7 +6902,7 @@
     },
     {
       "voter_id": "ISP4793868",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Gumja Kumari",
@@ -6915,7 +6915,7 @@
     },
     {
       "voter_id": "ISP2564060",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Nilama Devi",
@@ -6928,7 +6928,7 @@
     },
     {
       "voter_id": "ISP4942629",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Ramabilasa",
@@ -6941,7 +6941,7 @@
     },
     {
       "voter_id": "SP4632477",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Balarama Gaumda",
@@ -6954,7 +6954,7 @@
     },
     {
       "voter_id": "ISP0342626",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Anita Yadava",
@@ -6967,7 +6967,7 @@
     },
     {
       "voter_id": "LFR3205507",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Madhavi Simha",
@@ -6980,7 +6980,7 @@
     },
     {
       "voter_id": "ISP3679745",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Nitisha Kumara Simha",
@@ -6993,7 +6993,7 @@
     },
     {
       "voter_id": "SP4942587",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Jayamala",
@@ -7006,7 +7006,7 @@
     },
     {
       "voter_id": "SP493695",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Vina Mishra",
@@ -7019,7 +7019,7 @@
     },
     {
       "voter_id": "ISP4632485",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Chama Gomda",
@@ -7032,7 +7032,7 @@
     },
     {
       "voter_id": "ISP464759",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Shobha Gaumda",
@@ -7045,7 +7045,7 @@
     },
     {
       "voter_id": "ISP3833068",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Kumakuma",
@@ -7058,7 +7058,7 @@
     },
     {
       "voter_id": "ISP4473005",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Vinoda Kumara",
@@ -7071,7 +7071,7 @@
     },
     {
       "voter_id": "ISP4973509",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Abhisheka Kumara Chau I",
@@ -7084,7 +7084,7 @@
     },
     {
       "voter_id": "ISP4604492",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Mainejara Prasada Patela",
@@ -7097,7 +7097,7 @@
     },
     {
       "voter_id": "SP462760",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Harajita Simha Ovaraya",
@@ -7110,7 +7110,7 @@
     },
     {
       "voter_id": "ISP4942488",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Rajiva Simha Deva",
@@ -7123,7 +7123,7 @@
     },
     {
       "voter_id": "ISP4632543",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Durgavati",
@@ -7136,7 +7136,7 @@
     },
     {
       "voter_id": "ISP4437349",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Buddhima Krshna",
@@ -7149,7 +7149,7 @@
     },
     {
       "voter_id": "ISP034268",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Samtosha Kumara Yadava",
@@ -7162,7 +7162,7 @@
     },
     {
       "voter_id": "ISP4620673",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Pimki",
@@ -7173,7 +7173,7 @@
     },
     {
       "voter_id": "ISP3857235",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Avadhesha Kumara Chau I",
@@ -7186,7 +7186,7 @@
     },
     {
       "voter_id": "SP4934857",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Mamata Patela",
@@ -7199,7 +7199,7 @@
     },
     {
       "voter_id": "ISP4936233",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Nitu Simha",
@@ -7212,7 +7212,7 @@
     },
     {
       "voter_id": "LFR3205739",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Sarojani Simha",
@@ -7225,7 +7225,7 @@
     },
     {
       "voter_id": "ISP462759",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Rep Kumari",
@@ -7238,7 +7238,7 @@
     },
     {
       "voter_id": "ISP0339754",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Manoja",
@@ -7251,7 +7251,7 @@
     },
     {
       "voter_id": "ISP4845970",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Mohammada Shahanavaza",
@@ -7262,7 +7262,7 @@
     },
     {
       "voter_id": "ISP4533790",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Harsha Sharma",
@@ -7275,7 +7275,7 @@
     },
     {
       "voter_id": "SP454777",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Harshita",
@@ -7288,7 +7288,7 @@
     },
     {
       "voter_id": "ISP4580874",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Archana Yadava",
@@ -7301,7 +7301,7 @@
     },
     {
       "voter_id": "ISP4936209",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Vishvajita Simha",
@@ -7314,7 +7314,7 @@
     },
     {
       "voter_id": "ISP4075263",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Imdu Simha",
@@ -7327,7 +7327,7 @@
     },
     {
       "voter_id": "ISP4550709",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Aditya Shrivastava Aditya",
@@ -7340,7 +7340,7 @@
     },
     {
       "voter_id": "ISP4636296",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Brjesha Kumara Gupta",
@@ -7353,7 +7353,7 @@
     },
     {
       "voter_id": "ISP447359",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Amkita Chau I",
@@ -7366,7 +7366,7 @@
     },
     {
       "voter_id": "ISP3679053",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Sima",
@@ -7379,7 +7379,7 @@
     },
     {
       "voter_id": "SP4334272",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Abhisheka Kumara",
@@ -7390,7 +7390,7 @@
     },
     {
       "voter_id": "SP4579457",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Ramjita Kumara Shaha",
@@ -7403,7 +7403,7 @@
     },
     {
       "voter_id": "SP4694428",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Kalavati Devi",
@@ -7416,7 +7416,7 @@
     },
     {
       "voter_id": "ISP4556270",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Laxmi Yadava",
@@ -7427,7 +7427,7 @@
     },
     {
       "voter_id": "ISP4936563",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Nidhi Simha",
@@ -7440,7 +7440,7 @@
     },
     {
       "voter_id": "ISP4636502",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Vidyavati Devi",
@@ -7453,7 +7453,7 @@
     },
     {
       "voter_id": "ISP4643862",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Shambhavi Shrivastava",
@@ -7466,7 +7466,7 @@
     },
     {
       "voter_id": "SP4844570",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Suphiya Paravina",
@@ -7479,7 +7479,7 @@
     },
     {
       "voter_id": "ISP4979293",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Vakila ( 80",
@@ -7491,7 +7491,7 @@
     },
     {
       "voter_id": "ISP4470738",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Aditya Mishra",
@@ -7502,7 +7502,7 @@
     },
     {
       "voter_id": "SP4947548",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Pradipa Simha",
@@ -7515,7 +7515,7 @@
     },
     {
       "voter_id": "ISP4905964",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Ayusha Tivari",
@@ -7528,7 +7528,7 @@
     },
     {
       "voter_id": "ISP4988674",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Simmi",
@@ -7541,7 +7541,7 @@
     },
     {
       "voter_id": "SP4070330",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Chaya Pala",
@@ -7554,7 +7554,7 @@
     },
     {
       "voter_id": "ISP4558326",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Vikasa Simha",
@@ -7567,7 +7567,7 @@
     },
     {
       "voter_id": "ISP7775832",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Nurajaham Khatuna",
@@ -7580,7 +7580,7 @@
     },
     {
       "voter_id": "UKT3744409",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Ramabhajana Yadava",
@@ -7593,7 +7593,7 @@
     },
     {
       "voter_id": "SP2347702",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Jayashri",
@@ -7606,7 +7606,7 @@
     },
     {
       "voter_id": "SP2370753",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Upendra",
@@ -7619,7 +7619,7 @@
     },
     {
       "voter_id": "ISP4920864",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Ashoka Kumara Prasada",
@@ -7632,7 +7632,7 @@
     },
     {
       "voter_id": "SP4070322",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Sukamta Pala",
@@ -7645,7 +7645,7 @@
     },
     {
       "voter_id": "ISP5002076",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Amchala Kumari",
@@ -7656,7 +7656,7 @@
     },
     {
       "voter_id": "ISP779243",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Rita Devi",
@@ -7669,7 +7669,7 @@
     },
     {
       "voter_id": "ISP4466843",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Sonama Sahani",
@@ -7682,7 +7682,7 @@
     },
     {
       "voter_id": "ISP482089",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Sumita Rajabhara",
@@ -7695,7 +7695,7 @@
     },
     {
       "voter_id": "SP778877",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Renu Kumari",
@@ -7708,7 +7708,7 @@
     },
     {
       "voter_id": "SP2309938",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Samjiva Kumara",
@@ -7721,7 +7721,7 @@
     },
     {
       "voter_id": "ISP7752403",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Karima Ullaha",
@@ -7734,7 +7734,7 @@
     },
     {
       "voter_id": "ISP4665949",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Muskana Yadava",
@@ -7747,7 +7747,7 @@
     },
     {
       "voter_id": "ISP4567806",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Sudhamshu Ramjana Pala",
@@ -7760,7 +7760,7 @@
     },
     {
       "voter_id": "ISP4070306",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Sushamta Pala",
@@ -7773,7 +7773,7 @@
     },
     {
       "voter_id": "SP4558078",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Vishala Simha",
@@ -7786,7 +7786,7 @@
     },
     {
       "voter_id": "ISP4957224",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Kumdana Simha",
@@ -7799,7 +7799,7 @@
     },
     {
       "voter_id": "ISP4230926",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Nilo Ra Jahana",
@@ -7812,7 +7812,7 @@
     },
     {
       "voter_id": "SP4837027",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Sagara Yadava",
@@ -7825,7 +7825,7 @@
     },
     {
       "voter_id": "ISP5069638",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Avinasha",
@@ -7838,7 +7838,7 @@
     },
     {
       "voter_id": "ISP4469235",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Samgita Shrivastava",
@@ -7851,7 +7851,7 @@
     },
     {
       "voter_id": "SP230043",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Najanina Phatima",
@@ -7864,7 +7864,7 @@
     },
     {
       "voter_id": "ISP4709986",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Akhilesha",
@@ -7877,7 +7877,7 @@
     },
     {
       "voter_id": "SP230787",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Shri Mati Fare Simha",
@@ -7890,7 +7890,7 @@
     },
     {
       "voter_id": "ISP2370803",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Sudha",
@@ -7903,7 +7903,7 @@
     },
     {
       "voter_id": "ISP466578",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Nilasana Simha",
@@ -7916,7 +7916,7 @@
     },
     {
       "voter_id": "ISP0765244",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Amita Kumara Chau I",
@@ -7929,7 +7929,7 @@
     },
     {
       "voter_id": "XGE507006",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Durgavati",
@@ -7942,7 +7942,7 @@
     },
     {
       "voter_id": "ISP2275568",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Nalini Kanta",
@@ -7955,7 +7955,7 @@
     },
     {
       "voter_id": "ISP230767",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Shri Mati Urmila Rani",
@@ -7968,7 +7968,7 @@
     },
     {
       "voter_id": "ISP4639886",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Mano Devi",
@@ -7981,7 +7981,7 @@
     },
     {
       "voter_id": "ISP2057365",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Vandana Devi",
@@ -7994,7 +7994,7 @@
     },
     {
       "voter_id": "ISP5027479",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Ashvani Kumara Simha",
@@ -8007,7 +8007,7 @@
     },
     {
       "voter_id": "ISP2370070",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Shahanaza Paravina",
@@ -8020,7 +8020,7 @@
     },
     {
       "voter_id": "SP4672085",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Amita Kumara",
@@ -8033,7 +8033,7 @@
     },
     {
       "voter_id": "ISP4558292",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Rama Babu Chauhana",
@@ -8044,7 +8044,7 @@
     },
     {
       "voter_id": "SP230779",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Rama Ratana Simha",
@@ -8057,7 +8057,7 @@
     },
     {
       "voter_id": "ISP230795",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Shrimati Kalindi",
@@ -8070,7 +8070,7 @@
     },
     {
       "voter_id": "ISP5072004",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Amshika Rajabhara",
@@ -8083,7 +8083,7 @@
     },
     {
       "voter_id": "ISP507203",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Abha Rajabhara",
@@ -8096,7 +8096,7 @@
     },
     {
       "voter_id": "ISP5077576",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Durgavati Kumari",
@@ -8109,7 +8109,7 @@
     },
     {
       "voter_id": "ISP5083076",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Anuradha Rajabhara",
@@ -8122,7 +8122,7 @@
     },
     {
       "voter_id": "SP5084827",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Saxi Simha",
@@ -8135,7 +8135,7 @@
     },
     {
       "voter_id": "ISP5097848",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Nitisha Varma",
@@ -8148,7 +8148,7 @@
     },
     {
       "voter_id": "ISP507099",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Yashasvi Vidyarthi",
@@ -8161,7 +8161,7 @@
     },
     {
       "voter_id": "ISP5738938",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Suraja Simha",
@@ -8174,7 +8174,7 @@
     },
     {
       "voter_id": "ISP5072079",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Akrti Simha",
@@ -8187,7 +8187,7 @@
     },
     {
       "voter_id": "SP507252",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Sta Simha",
@@ -8200,7 +8200,7 @@
     },
     {
       "voter_id": "SP507859",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Amjali Varma",
@@ -8213,7 +8213,7 @@
     },
     {
       "voter_id": "ISP5080346",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Vidya Shamkara Nishada Na!",
@@ -8226,7 +8226,7 @@
     },
     {
       "voter_id": "ISP508487",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Shraddha Bharati",
@@ -8239,7 +8239,7 @@
     },
     {
       "voter_id": "ISP5084934",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Ramana Shrivastava",
@@ -8252,7 +8252,7 @@
     },
     {
       "voter_id": "ISP500045",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Rajiva Kumara Pathaka",
@@ -8265,7 +8265,7 @@
     },
     {
       "voter_id": "ISP570572",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Gita Maurya",
@@ -8278,7 +8278,7 @@
     },
     {
       "voter_id": "ISP5739084",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Aditi Saha",
@@ -8291,7 +8291,7 @@
     },
     {
       "voter_id": "SP5072087",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Varuna Shrivastava",
@@ -8304,7 +8304,7 @@
     },
     {
       "voter_id": "SP5074307",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Amana Rajabhara",
@@ -8317,7 +8317,7 @@
     },
     {
       "voter_id": "ISP5079678",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Chamdani",
@@ -8330,7 +8330,7 @@
     },
     {
       "voter_id": "ISP5080593",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Rudra Yogaraja",
@@ -8343,7 +8343,7 @@
     },
     {
       "voter_id": "ISP5084793",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Adarsha Simha",
@@ -8356,7 +8356,7 @@
     },
     {
       "voter_id": "ISP5087234",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Sitesha Kumara Mishra",
@@ -8367,7 +8367,7 @@
     },
     {
       "voter_id": "ISP5700664",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Garima Pamdeya",
@@ -8380,7 +8380,7 @@
     },
     {
       "voter_id": "ISP504948",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Varsha Gaura Shrivastava",
@@ -8393,7 +8393,7 @@
     },
     {
       "voter_id": "HZL6228308",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Ragini Kumari",
@@ -8406,7 +8406,7 @@
     },
     {
       "voter_id": "ISP5739734",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Tanushka Saha",
@@ -8419,7 +8419,7 @@
     },
     {
       "voter_id": "ISP539696",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Kalimdi Gautama",
@@ -8432,7 +8432,7 @@
     },
     {
       "voter_id": "SP5748077",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Manorama",
@@ -8445,7 +8445,7 @@
     },
     {
       "voter_id": "ISP5763449",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Nirmala Rauniyara",
@@ -8458,7 +8458,7 @@
     },
     {
       "voter_id": "ISP578078",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Nitu Shrivastava",
@@ -8471,7 +8471,7 @@
     },
     {
       "voter_id": "ISP5780955",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Raja Namdani Simha",
@@ -8484,7 +8484,7 @@
     },
     {
       "voter_id": "ISP5739506",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Rina",
@@ -8497,7 +8497,7 @@
     },
     {
       "voter_id": "ISP5740439",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Priyamka Bharati",
@@ -8510,7 +8510,7 @@
     },
     {
       "voter_id": "ISP5763407",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Suraja Kumara Gupta",
@@ -8523,7 +8523,7 @@
     },
     {
       "voter_id": "ISP5763563",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Byasa Ji Pandeya",
@@ -8536,7 +8536,7 @@
     },
     {
       "voter_id": "SP576637",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Pushpa Devi",
@@ -8549,7 +8549,7 @@
     },
     {
       "voter_id": "ISP568745",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Dipika Chaube",
@@ -8562,7 +8562,7 @@
     },
     {
       "voter_id": "SP579288",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Viremdra Kumara Gau.da",
@@ -8575,7 +8575,7 @@
     },
     {
       "voter_id": "ISP5780974",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Virendra Yadava",
@@ -8588,7 +8588,7 @@
     },
     {
       "voter_id": "SP5783827",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Subhana",
@@ -8601,7 +8601,7 @@
     },
     {
       "voter_id": "ISP5739688",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Vijaya Laxmi Simha",
@@ -8614,7 +8614,7 @@
     },
     {
       "voter_id": "ISP5740546",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Shila Simha",
@@ -8627,7 +8627,7 @@
     },
     {
       "voter_id": "ISP5763423",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Viki Kumara Gupta",
@@ -8640,7 +8640,7 @@
     },
     {
       "voter_id": "ISP578595",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Laxmana",
@@ -8653,7 +8653,7 @@
     },
     {
       "voter_id": "ISP5780922",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Mamshu Raja",
@@ -8666,7 +8666,7 @@
     },
     {
       "voter_id": "ISP578423",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Manisha Chau I",
@@ -8679,7 +8679,7 @@
     },
     {
       "voter_id": "ISP578422",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Nilama Gupta",
@@ -8692,7 +8692,7 @@
     },
     {
       "voter_id": "ISP584957",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Shivakumdala Prasada",
@@ -8705,7 +8705,7 @@
     },
     {
       "voter_id": "SP578673",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Jnanati Devi",
@@ -8718,7 +8718,7 @@
     },
     {
       "voter_id": "ISP5790202",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Gajemdra Kumara Maurya",
@@ -8731,7 +8731,7 @@
     },
     {
       "voter_id": "ISP5790608",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Kirana Simha",
@@ -8744,7 +8744,7 @@
     },
     {
       "voter_id": "ISP520750",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Rama Sevaka",
@@ -8757,7 +8757,7 @@
     },
     {
       "voter_id": "ISP520232",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Dhanalaxmi Simghaniya.n",
@@ -8770,7 +8770,7 @@
     },
     {
       "voter_id": "ISP5255062",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Ku Monika Aryana",
@@ -8781,7 +8781,7 @@
     },
     {
       "voter_id": "ISP5784247",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Ra La Chau I",
@@ -8794,7 +8794,7 @@
     },
     {
       "voter_id": "ISP585574",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Shairuna Nisha",
@@ -8807,7 +8807,7 @@
     },
     {
       "voter_id": "ISP586739",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Dhiraja Kumara",
@@ -8820,7 +8820,7 @@
     },
     {
       "voter_id": "ISP5789329",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Dayanamda",
@@ -8833,7 +8833,7 @@
     },
     {
       "voter_id": "ISP579025",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Shalini",
@@ -8846,7 +8846,7 @@
     },
     {
       "voter_id": "ISP5207444",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Amita Kumara Shukla",
@@ -8859,7 +8859,7 @@
     },
     {
       "voter_id": "ISP5209093",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Bhagavana Dasa Nishada",
@@ -8872,7 +8872,7 @@
     },
     {
       "voter_id": "ISP5230206",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Gayatri Chau I",
@@ -8885,7 +8885,7 @@
     },
     {
       "voter_id": "SP5255070",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Bimdu Tivari",
@@ -8898,7 +8898,7 @@
     },
     {
       "voter_id": "ISP5784940",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Laxmana",
@@ -8911,7 +8911,7 @@
     },
     {
       "voter_id": "ISP586085",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Kirana Devi",
@@ -8924,7 +8924,7 @@
     },
     {
       "voter_id": "ISP586705",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Suraja Kumara Gupta",
@@ -8937,7 +8937,7 @@
     },
     {
       "voter_id": "ISP5788586",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Shivama Gupta",
@@ -8950,7 +8950,7 @@
     },
     {
       "voter_id": "ISP5789642",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Gamga Devi",
@@ -8963,7 +8963,7 @@
     },
     {
       "voter_id": "SP5207493",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Shivanamda",
@@ -8976,7 +8976,7 @@
     },
     {
       "voter_id": "ISP5255054",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Anupurna Tivari",
@@ -8989,7 +8989,7 @@
     },
     {
       "voter_id": "ISP5255096",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Jyoti Devi",
@@ -9002,7 +9002,7 @@
     },
     {
       "voter_id": "ISP525504",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Nisha",
@@ -9015,7 +9015,7 @@
     },
     {
       "voter_id": "ISP5256849",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Priti Shrivastava",
@@ -9028,7 +9028,7 @@
     },
     {
       "voter_id": "ISP5255872",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Rupa Sahani",
@@ -9041,7 +9041,7 @@
     },
     {
       "voter_id": "ISP525594",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Rupali Sahani",
@@ -9054,7 +9054,7 @@
     },
     {
       "voter_id": "ISP5279898",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Guddi Devi",
@@ -9067,7 +9067,7 @@
     },
     {
       "voter_id": "ISP5284799",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Kirana Mathura",
@@ -9080,7 +9080,7 @@
     },
     {
       "voter_id": "ISP528576",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Shaharukha Shekha",
@@ -9093,7 +9093,7 @@
     },
     {
       "voter_id": "ISP5285879",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Niqahata Naza",
@@ -9106,7 +9106,7 @@
     },
     {
       "voter_id": "ISP5288796",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Anita",
@@ -9119,7 +9119,7 @@
     },
     {
       "voter_id": "ISP5255856",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Nitisha Kumara Ns",
@@ -9130,7 +9130,7 @@
     },
     {
       "voter_id": "ISP5255880",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Priyamka Shukla",
@@ -9143,7 +9143,7 @@
     },
     {
       "voter_id": "ISP5255922",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Sunila Kumara Shrivastava",
@@ -9156,7 +9156,7 @@
     },
     {
       "voter_id": "ISP5282652",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Samira Simha",
@@ -9169,7 +9169,7 @@
     },
     {
       "voter_id": "SP528537",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Arashada Karima",
@@ -9182,7 +9182,7 @@
     },
     {
       "voter_id": "ISP5286276",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Kumari Vijaya Laxmi Yadava",
@@ -9193,7 +9193,7 @@
     },
     {
       "voter_id": "ISP528948",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Sima Kumari",
@@ -9206,7 +9206,7 @@
     },
     {
       "voter_id": "ISP263840",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "A Gupta",
@@ -9219,7 +9219,7 @@
     },
     {
       "voter_id": "ISP5255864",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Raina Sahani",
@@ -9232,7 +9232,7 @@
     },
     {
       "voter_id": "ISP5255898",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Dinesha Kumara Shrivastava",
@@ -9245,7 +9245,7 @@
     },
     {
       "voter_id": "SP527470",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Sushila Devi",
@@ -9258,7 +9258,7 @@
     },
     {
       "voter_id": "ISP5283635",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Rajanatha Yadava",
@@ -9271,7 +9271,7 @@
     },
     {
       "voter_id": "ISP528543",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Shabanama Khatuna",
@@ -9284,7 +9284,7 @@
     },
     {
       "voter_id": "ISP5285333",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Ta Runa Nisha",
@@ -9297,7 +9297,7 @@
     },
     {
       "voter_id": "SP5286927",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Aditya Mara Shrivastava",
@@ -9310,7 +9310,7 @@
     },
     {
       "voter_id": "ISP529235",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Amjali Kumari",
@@ -9323,7 +9323,7 @@
     },
     {
       "voter_id": "ISP363759",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Ashutosha Kumara",
@@ -9336,7 +9336,7 @@
     },
     {
       "voter_id": "ISP2574669",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Girisha Chamdra",
@@ -9349,7 +9349,7 @@
     },
     {
       "voter_id": "SP5325675",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Chamdani",
@@ -9362,7 +9362,7 @@
     },
     {
       "voter_id": "ISP534238",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Mohammada Salima",
@@ -9375,7 +9375,7 @@
     },
     {
       "voter_id": "ISP535262",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Aliya Khana",
@@ -9388,7 +9388,7 @@
     },
     {
       "voter_id": "ISP5354773",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Ja Da Khatuna",
@@ -9401,7 +9401,7 @@
     },
     {
       "voter_id": "ISP5354774",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Shama .khatuna",
@@ -9414,7 +9414,7 @@
     },
     {
       "voter_id": "ISP536035",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Neha Paravina",
@@ -9427,7 +9427,7 @@
     },
     {
       "voter_id": "ISP857697",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Vipula Kumara Pandeya",
@@ -9440,7 +9440,7 @@
     },
     {
       "voter_id": "ISP5376245",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Sibbi",
@@ -9453,7 +9453,7 @@
     },
     {
       "voter_id": "ISP5327606",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Imarana",
@@ -9466,7 +9466,7 @@
     },
     {
       "voter_id": "ISP5357648",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Nasarina Khatuna",
@@ -9479,7 +9479,7 @@
     },
     {
       "voter_id": "ISP5352927",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Kuraishi Khatuna",
@@ -9492,7 +9492,7 @@
     },
     {
       "voter_id": "ISP5354279",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Phiradausa Naza",
@@ -9505,7 +9505,7 @@
     },
     {
       "voter_id": "ISP5355744",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "She.kha Sale Na Saina",
@@ -9518,7 +9518,7 @@
     },
     {
       "voter_id": "ISP536076",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Jamaluddina",
@@ -9531,7 +9531,7 @@
     },
     {
       "voter_id": "ISP5322003",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Alamasa Khatuna",
@@ -9544,7 +9544,7 @@
     },
     {
       "voter_id": "ISP6333729",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Nishada Hafiza",
@@ -9557,7 +9557,7 @@
     },
     {
       "voter_id": "ISP5352604",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Ku Laki Khana",
@@ -9570,7 +9570,7 @@
     },
     {
       "voter_id": "SP5353073",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Shaipha Ali",
@@ -9583,7 +9583,7 @@
     },
     {
       "voter_id": "ISP5354386",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Gulazara Saina",
@@ -9596,7 +9596,7 @@
     },
     {
       "voter_id": "SP5356977",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Shaha Alama",
@@ -9609,7 +9609,7 @@
     },
     {
       "voter_id": "ISP5365549",
-      "part_number": 8,
+      "part_number": 81,
       "section_number": 3,
       "section_name": "Jungle Tulsiram Bichiya, Time",
       "name": "Vipina Raya",

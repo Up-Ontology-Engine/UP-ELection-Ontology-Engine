@@ -4,7 +4,7 @@
     "total_pages": 26,
     "state": "Uttar Pradesh",
     "year": 2026,
-    "part_number": 5,
+    "part_number": 51,
     "assembly_constituency": {
       "number": 322,
       "name": "Gorakhpur City",
@@ -21,7 +21,7 @@
   "voter_records": [
     {
       "voter_id": "DWQ224047",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Giraja",
       "relation_type": "Husband",
       "relation_name": "Jayaprakasha",
@@ -32,7 +32,7 @@
     },
     {
       "voter_id": "ISP2928984",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Kumari Jagadamba",
       "relation_type": "Father",
       "relation_name": "Nan{}da Kishora Jayasavala",
@@ -43,7 +43,7 @@
     },
     {
       "voter_id": "ISP2966596",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Abhimanyu Kumara",
       "relation_type": "Father",
       "relation_name": "Nan{}dakishora",
@@ -54,7 +54,7 @@
     },
     {
       "voter_id": "DWQ2624260",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Gu.diya",
       "relation_type": "Husband",
       "relation_name": "Ashoka Kumara",
@@ -65,7 +65,7 @@
     },
     {
       "voter_id": "DWO345898",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Dite Kumara",
       "relation_type": "Father",
       "relation_name": "Ramavachana",
@@ -76,7 +76,7 @@
     },
     {
       "voter_id": "ISP2650505",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Sunila",
       "relation_type": "Father",
       "relation_name": "Ramasamujha",
@@ -87,7 +87,7 @@
     },
     {
       "voter_id": "SP292890",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Sunita Jayasavala",
       "relation_type": "Father",
       "relation_name": "Nan{}da Kishora Jayasavala",
@@ -98,7 +98,7 @@
     },
     {
       "voter_id": "ISP467863",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Vidyamsha Chau I",
       "relation_type": "Father",
       "relation_name": "Viremdra Kumara Chau I",
@@ -109,7 +109,7 @@
     },
     {
       "voter_id": "DWQ736097",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Renu",
       "relation_type": "Husband",
       "relation_name": "Rajakumara",
@@ -120,7 +120,7 @@
     },
     {
       "voter_id": "ISP2966695",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Ananda Prasada Chaurasiya",
       "relation_type": "Father",
       "relation_name": "Shivanatha Prasada Chaurasiya",
@@ -131,7 +131,7 @@
     },
     {
       "voter_id": "ISP794633",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Shashi Kala",
       "relation_type": "Father",
       "relation_name": "Ramabachana",
@@ -142,7 +142,7 @@
     },
     {
       "voter_id": "DWQ2624294",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Vindavasani",
       "relation_type": "Husband",
       "relation_name": "Vinoda Qi",
@@ -153,7 +153,7 @@
     },
     {
       "voter_id": "SP2650935",
-      "part_number": 5,
+      "part_number": 51,
       "name": "San{}jana Jayasavala",
       "relation_type": "Husband",
       "relation_name": "Amgada Jayasavala",
@@ -164,7 +164,7 @@
     },
     {
       "voter_id": "ISP2966620",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Dvarikadhisha Jayasavala",
       "relation_type": "Father",
       "relation_name": "Nan{}da Kishora Jayasavala",
@@ -175,7 +175,7 @@
     },
     {
       "voter_id": "ISP395690",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Shubhama Gupta",
       "relation_type": "Father",
       "relation_name": "Shri Rajakumara",
@@ -186,7 +186,7 @@
     },
     {
       "voter_id": "DWQ3458577",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Rajesha Kumara",
       "relation_type": "Father",
       "relation_name": "Ramavachana",
@@ -197,7 +197,7 @@
     },
     {
       "voter_id": "DWWA2240968",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Rama Samujha",
       "relation_type": "Father",
       "relation_name": "Mahadeva",
@@ -208,7 +208,7 @@
     },
     {
       "voter_id": "DWQ7637206",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Vinoda",
       "relation_type": "Father",
       "relation_name": "Ramasamujha",
@@ -219,7 +219,7 @@
     },
     {
       "voter_id": "ISP2649267",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Gudiya",
       "relation_type": "Husband",
       "relation_name": "Manoja",
@@ -230,7 +230,7 @@
     },
     {
       "voter_id": "DWAI639939",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Nirmala",
       "relation_type": "Father",
       "relation_name": "Dinesha Gupta",
@@ -241,7 +241,7 @@
     },
     {
       "voter_id": "WA2238729",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Aloka Kumara Gupta",
       "relation_type": "Father",
       "relation_name": "Sva Gopala Gupta",
@@ -252,7 +252,7 @@
     },
     {
       "voter_id": "DWAT639889",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Indravati",
       "relation_type": "Husband",
       "relation_name": "Gamgaprasada",
@@ -263,7 +263,7 @@
     },
     {
       "voter_id": "SP0580977",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Samdipa Chaurasiya",
       "relation_type": "Father",
       "relation_name": "Chabba Lala",
@@ -274,7 +274,7 @@
     },
     {
       "voter_id": "ISP0580985",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Chandana",
       "relation_type": "Father",
       "relation_name": "Gulama E",
@@ -285,7 +285,7 @@
     },
     {
       "voter_id": "SP237899",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Asf Chaurasiya",
       "relation_type": "Father",
       "relation_name": "Pramoda Kumara",
@@ -296,7 +296,7 @@
     },
     {
       "voter_id": "ISP354403",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Priyamka Gupta",
       "relation_type": "Husband",
       "relation_name": "Aloka Kumara Gupta",
@@ -307,7 +307,7 @@
     },
     {
       "voter_id": "ISP0077905",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Urvashi Chaurasiya",
       "relation_type": "Husband",
       "relation_name": "Shiva Kumara Chaurasiya",
@@ -318,7 +318,7 @@
     },
     {
       "voter_id": "ISP2652055",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Kanyavati Chaurasiya",
       "relation_type": "Husband",
       "relation_name": "Samjaya Chaurasiya",
@@ -329,7 +329,7 @@
     },
     {
       "voter_id": "ISP3699667",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Na Tavassuma",
       "relation_type": "Father",
       "relation_name": "Chabba Lala",
@@ -340,7 +340,7 @@
     },
     {
       "voter_id": "ISP0792252",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Saurabha Chaurasiya",
       "relation_type": "Father",
       "relation_name": "Pramoda Kumara Chau0",
@@ -351,7 +351,7 @@
     },
     {
       "voter_id": "ISP3590064",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Julekha",
       "relation_type": "Husband",
       "relation_name": "Gulama Ali",
@@ -362,7 +362,7 @@
     },
     {
       "voter_id": "SP237873",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Rita Chaurasiya",
       "relation_type": "Husband",
       "relation_name": "Narendra Chaurasiya",
@@ -373,7 +373,7 @@
     },
     {
       "voter_id": "ISP2077454",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Sarita Chaurasiya",
       "relation_type": "Husband",
       "relation_name": "Virendra Kumara Chaurasiya",
@@ -384,7 +384,7 @@
     },
     {
       "voter_id": "SP2648228",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Inayatulla",
       "relation_type": "Father",
       "relation_name": "Gulama Ali",
@@ -395,7 +395,7 @@
     },
     {
       "voter_id": "SP332792",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Na Tabassuma",
       "relation_type": "Husband",
       "relation_name": "Inayatulla",
@@ -406,7 +406,7 @@
     },
     {
       "voter_id": "ISP2648038",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Seva",
       "relation_type": "Husband",
       "relation_name": "Abdula",
@@ -417,7 +417,7 @@
     },
     {
       "voter_id": "ISP3768545",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Shamashera",
       "relation_type": "Father",
       "relation_name": "Hamida",
@@ -428,7 +428,7 @@
     },
     {
       "voter_id": "ISP2657230",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Suyasha Raja",
       "relation_type": "Father",
       "relation_name": "Rajakumara",
@@ -439,7 +439,7 @@
     },
     {
       "voter_id": "ISP3709649",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Saxama Chaurasiya",
       "relation_type": "Father",
       "relation_name": "Naremdra Chaurasiya",
@@ -450,7 +450,7 @@
     },
     {
       "voter_id": "ISP0580969",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Manisha",
       "relation_type": "Father",
       "relation_name": "Rajesha",
@@ -461,7 +461,7 @@
     },
     {
       "voter_id": "PWAS459088",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Lilavati",
       "relation_type": "Husband",
       "relation_name": "Ganti",
@@ -472,7 +472,7 @@
     },
     {
       "voter_id": "ISP3543253",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Sujana Shekha",
       "relation_type": "Husband",
       "relation_name": "Shamashera Ali",
@@ -483,7 +483,7 @@
     },
     {
       "voter_id": "ISP3256740",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Sumita Jaisavala",
       "relation_type": "Father",
       "relation_name": "Rajakumara Jaisavala",
@@ -494,7 +494,7 @@
     },
     {
       "voter_id": "ISP0254250",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Gopala Kumara",
       "relation_type": "Father",
       "relation_name": "Sva Shloka Kumara",
@@ -505,7 +505,7 @@
     },
     {
       "voter_id": "DWQI638626",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Munaka Devi",
       "relation_type": "Husband",
       "relation_name": "Tribhuvana",
@@ -516,7 +516,7 @@
     },
     {
       "voter_id": "ISP0580944",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Mita",
       "relation_type": "Father",
       "relation_name": "Achchana",
@@ -527,7 +527,7 @@
     },
     {
       "voter_id": "DWA3459070",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Madhuri",
       "relation_type": "Husband",
       "relation_name": "Rajakumara",
@@ -538,7 +538,7 @@
     },
     {
       "voter_id": "ISP7506203",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Sonu",
       "relation_type": "Father",
       "relation_name": "Mu,ali",
@@ -549,7 +549,7 @@
     },
     {
       "voter_id": "ISP3768937",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Moni",
       "relation_type": "Husband",
       "relation_name": "Mo. Ali Q",
@@ -560,7 +560,7 @@
     },
     {
       "voter_id": "ISP025429",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Ramasvarupa",
       "relation_type": "Father",
       "relation_name": "Sva Amara Jita",
@@ -571,7 +571,7 @@
     },
     {
       "voter_id": "SP237923",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Usha Devi",
       "relation_type": "Husband",
       "relation_name": "Pradipa Kumara Pa",
@@ -582,7 +582,7 @@
     },
     {
       "voter_id": "SP0254227",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Ku Gulaicha",
       "relation_type": "Father",
       "relation_name": "Sva Amara Jita",
@@ -593,7 +593,7 @@
     },
     {
       "voter_id": "SP3256757",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Bandana",
       "relation_type": "Father",
       "relation_name": "Harivamsha Pa",
@@ -604,7 +604,7 @@
     },
     {
       "voter_id": "SP058095",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Ashisha",
       "relation_type": "Father",
       "relation_name": "Rajesha",
@@ -615,7 +615,7 @@
     },
     {
       "voter_id": "ISP3543246",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Shamashera Ali",
       "relation_type": "Father",
       "relation_name": "Tarabudadina",
@@ -626,7 +626,7 @@
     },
     {
       "voter_id": "SP237907",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Ravi Gupta",
       "relation_type": "Father",
       "relation_name": "Rama Gatti",
@@ -637,7 +637,7 @@
     },
     {
       "voter_id": "DWQ3458734",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Pradipa Kumara",
       "relation_type": "Father",
       "relation_name": "Amara Jita",
@@ -648,7 +648,7 @@
     },
     {
       "voter_id": "DWQ3459575",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Radhika",
       "relation_type": "Father",
       "relation_name": "Harivamsha",
@@ -659,7 +659,7 @@
     },
     {
       "voter_id": "ISP7692896",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Kantidevi",
       "relation_type": "Husband",
       "relation_name": "Ramachandra",
@@ -670,7 +670,7 @@
     },
     {
       "voter_id": "DWA3458650",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Girajesha Yadava",
       "relation_type": "Father",
       "relation_name": "Tribhuvana",
@@ -681,7 +681,7 @@
     },
     {
       "voter_id": "ISP7692904",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Aloka Kumara",
       "relation_type": "Father",
       "relation_name": "Ramachandra",
@@ -692,7 +692,7 @@
     },
     {
       "voter_id": "ISP2648202",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Tarabudadina",
       "relation_type": "Father",
       "relation_name": "Barasati",
@@ -703,7 +703,7 @@
     },
     {
       "voter_id": "ISP2648794",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Shahanavaja",
       "relation_type": "Husband",
       "relation_name": "Ali Ahamada",
@@ -714,7 +714,7 @@
     },
     {
       "voter_id": "DWQ3459286",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Gita",
       "relation_type": "Husband",
       "relation_name": "Jitana",
@@ -725,7 +725,7 @@
     },
     {
       "voter_id": "SP0077924",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Lalita Yadava",
       "relation_type": "Father",
       "relation_name": "Dinesha Yadava Pa",
@@ -736,7 +736,7 @@
     },
     {
       "voter_id": "DWAQ2240588",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Punama Devi",
       "relation_type": "Husband",
       "relation_name": "Shivakumara Qi",
@@ -747,7 +747,7 @@
     },
     {
       "voter_id": "SP3327822",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Reshama Khatuna",
       "relation_type": "Husband",
       "relation_name": "Bismillaha",
@@ -758,7 +758,7 @@
     },
     {
       "voter_id": "ISP2965768",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Ajamli Gupta",
       "relation_type": "Father",
       "relation_name": "Phunni Lala Gupta",
@@ -769,7 +769,7 @@
     },
     {
       "voter_id": "DWQ2239978",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Baidhanatha",
       "relation_type": "Father",
       "relation_name": "Sitarama",
@@ -780,7 +780,7 @@
     },
     {
       "voter_id": "ISP264820",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Jubeda Khatuna",
       "relation_type": "Husband",
       "relation_name": "Rojana Ali",
@@ -791,7 +791,7 @@
     },
     {
       "voter_id": "ISP3355930",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Khursheda Ahamada",
       "relation_type": "Father",
       "relation_name": "Rojana Ali",
@@ -802,7 +802,7 @@
     },
     {
       "voter_id": "ISP058798",
-      "part_number": 5,
+      "part_number": 51,
       "name": "Rina Devi",
       "relation_type": "Husband",
       "relation_name": "Dilipa",
@@ -813,7 +813,7 @@
     },
     {
       "voter_id": "ISP3957552",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Vipina Gupta",
@@ -826,7 +826,7 @@
     },
     {
       "voter_id": "DWQI637704",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Sadananda",
@@ -839,7 +839,7 @@
     },
     {
       "voter_id": "ISP265464",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Amita Kumara",
@@ -852,7 +852,7 @@
     },
     {
       "voter_id": "SP3699782",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Subasha 80",
@@ -864,7 +864,7 @@
     },
     {
       "voter_id": "ISP369988",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Dhanamanti Devi",
@@ -877,7 +877,7 @@
     },
     {
       "voter_id": "DWQI994268",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Durgaprasada",
@@ -890,7 +890,7 @@
     },
     {
       "voter_id": "SP237972",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Dipa Mala",
@@ -903,7 +903,7 @@
     },
     {
       "voter_id": "ISP2647550",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Mohammada Asipha",
@@ -916,7 +916,7 @@
     },
     {
       "voter_id": "ISP0587740",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Gulaba",
@@ -929,7 +929,7 @@
     },
     {
       "voter_id": "ISP2657586",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Pushpa Devi",
@@ -942,7 +942,7 @@
     },
     {
       "voter_id": "ISP0078499",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Arajesha Sharma",
@@ -955,7 +955,7 @@
     },
     {
       "voter_id": "ISP2377964",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Mina Jai0",
@@ -968,7 +968,7 @@
     },
     {
       "voter_id": "ISP3355872",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Sarika",
@@ -981,7 +981,7 @@
     },
     {
       "voter_id": "ISP2928968",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Chamdravati Devi",
@@ -994,7 +994,7 @@
     },
     {
       "voter_id": "ISP0077483",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Mo Javeda",
@@ -1007,7 +1007,7 @@
     },
     {
       "voter_id": "DWQI638402",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Girajadevi",
@@ -1020,7 +1020,7 @@
     },
     {
       "voter_id": "DWQ2238053",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Sunita Devi",
@@ -1033,7 +1033,7 @@
     },
     {
       "voter_id": "DWQ202366",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Ananda Kumara",
@@ -1046,7 +1046,7 @@
     },
     {
       "voter_id": "DWA385242",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Ashoka",
@@ -1059,7 +1059,7 @@
     },
     {
       "voter_id": "ISP007475",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Hasamatullaha",
@@ -1072,7 +1072,7 @@
     },
     {
       "voter_id": "SP2235372",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Jubaida Khatuna",
@@ -1085,7 +1085,7 @@
     },
     {
       "voter_id": "DWQI639509",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Ishravatidevi",
@@ -1098,7 +1098,7 @@
     },
     {
       "voter_id": "DWQI639483",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Bindu",
@@ -1111,7 +1111,7 @@
     },
     {
       "voter_id": "DWQI994383",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Sudhira Kumara",
@@ -1124,7 +1124,7 @@
     },
     {
       "voter_id": "ISP0078743",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Ravi Shamkara Gupta",
@@ -1137,7 +1137,7 @@
     },
     {
       "voter_id": "ISP265028",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Jitendra Kumara Simha",
@@ -1150,7 +1150,7 @@
     },
     {
       "voter_id": "DWAQ2240307",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Nilama",
@@ -1163,7 +1163,7 @@
     },
     {
       "voter_id": "ISP058249",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Ravi Shamkara",
@@ -1176,7 +1176,7 @@
     },
     {
       "voter_id": "ISP792758",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Dipika Yadava",
@@ -1189,7 +1189,7 @@
     },
     {
       "voter_id": "ISP693357",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Lalita Devi",
@@ -1202,7 +1202,7 @@
     },
     {
       "voter_id": "SP237998",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Devanti Devi 80",
@@ -1214,7 +1214,7 @@
     },
     {
       "voter_id": "ISP532642",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Santosha Kumara Gupta",
@@ -1227,7 +1227,7 @@
     },
     {
       "voter_id": "DWQ2658728",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Samgita",
@@ -1240,7 +1240,7 @@
     },
     {
       "voter_id": "ISP265008",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Pramoda Kumara Simha",
@@ -1253,7 +1253,7 @@
     },
     {
       "voter_id": "ISP0587280",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Supriya",
@@ -1266,7 +1266,7 @@
     },
     {
       "voter_id": "ISP079329",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Budhira Gupta",
@@ -1279,7 +1279,7 @@
     },
     {
       "voter_id": "ISP238004",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Vikasha Gupta",
@@ -1292,7 +1292,7 @@
     },
     {
       "voter_id": "DWAT357870",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Mahatama",
@@ -1305,7 +1305,7 @@
     },
     {
       "voter_id": "DWA7638832",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Shakuntaladevi",
@@ -1318,7 +1318,7 @@
     },
     {
       "voter_id": "DWA2240679",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Prema Shila",
@@ -1331,7 +1331,7 @@
     },
     {
       "voter_id": "SP2378038",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Mira Devi",
@@ -1344,7 +1344,7 @@
     },
     {
       "voter_id": "ISP079460",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Rakesha Kumara",
@@ -1357,7 +1357,7 @@
     },
     {
       "voter_id": "ISP2965846",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Akhilesha Kumara Gupta",
@@ -1370,7 +1370,7 @@
     },
     {
       "voter_id": "ISPI693775",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Anupama Bharati",
@@ -1383,7 +1383,7 @@
     },
     {
       "voter_id": "ISP404403",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Belg, Kumara Sharma",
@@ -1396,7 +1396,7 @@
     },
     {
       "voter_id": "DWA2658508",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Chandrika",
@@ -1409,7 +1409,7 @@
     },
     {
       "voter_id": "ISP2235406",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Sunita Devi",
@@ -1422,7 +1422,7 @@
     },
     {
       "voter_id": "ISP2378053",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Virendra",
@@ -1435,7 +1435,7 @@
     },
     {
       "voter_id": "SP237806",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Kamalesha",
@@ -1448,7 +1448,7 @@
     },
     {
       "voter_id": "ISP0587330",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Amana",
@@ -1461,7 +1461,7 @@
     },
     {
       "voter_id": "DWQ7355957",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "ATCT",
@@ -1474,7 +1474,7 @@
     },
     {
       "voter_id": "DWO2658532",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Giraja",
@@ -1487,7 +1487,7 @@
     },
     {
       "voter_id": "DWQI637966",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Usha",
@@ -1500,7 +1500,7 @@
     },
     {
       "voter_id": "ISP0587322",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Rajendra",
@@ -1513,7 +1513,7 @@
     },
     {
       "voter_id": "DWQ2240695",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Shravana Kumara",
@@ -1526,7 +1526,7 @@
     },
     {
       "voter_id": "ISP058374",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Ra La",
@@ -1539,7 +1539,7 @@
     },
     {
       "voter_id": "ISP506500",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Mira Devi",
@@ -1552,7 +1552,7 @@
     },
     {
       "voter_id": "DWO2624690",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Dhyana Chandra Gupta",
@@ -1564,7 +1564,7 @@
     },
     {
       "voter_id": "ISP3784238",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Kamala Devi",
@@ -1577,7 +1577,7 @@
     },
     {
       "voter_id": "ISP7693258",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Ananta Lala Gupta",
@@ -1590,7 +1590,7 @@
     },
     {
       "voter_id": "DWQI994698",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Manoja Kumara",
@@ -1603,7 +1603,7 @@
     },
     {
       "voter_id": "ISP693225",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "San{}ni Gupta",
@@ -1616,7 +1616,7 @@
     },
     {
       "voter_id": "ISP2966430",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Shivanatha",
@@ -1629,7 +1629,7 @@
     },
     {
       "voter_id": "SP4722438",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Urmila Devi",
@@ -1642,7 +1642,7 @@
     },
     {
       "voter_id": "SP292885",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Satu Chaurasiya",
@@ -1655,7 +1655,7 @@
     },
     {
       "voter_id": "ISP3256765",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Samdipa Gupta",
@@ -1668,7 +1668,7 @@
     },
     {
       "voter_id": "DWA3458908",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Ma Chandra Gupta",
@@ -1681,7 +1681,7 @@
     },
     {
       "voter_id": "ISP2966455",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Surati Devi",
@@ -1694,7 +1694,7 @@
     },
     {
       "voter_id": "ISP2966489",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Satisha",
@@ -1707,7 +1707,7 @@
     },
     {
       "voter_id": "ISP472505",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Anupama Gupta",
@@ -1720,7 +1720,7 @@
     },
     {
       "voter_id": "ISP7693783",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Amana Kumara Gupta",
@@ -1733,7 +1733,7 @@
     },
     {
       "voter_id": "SP3256773",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Punama Gupta",
@@ -1746,7 +1746,7 @@
     },
     {
       "voter_id": "ISP3784246",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Manisha Simha",
@@ -1759,7 +1759,7 @@
     },
     {
       "voter_id": "ISP4743076",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Sunila Gupta",
@@ -1772,7 +1772,7 @@
     },
     {
       "voter_id": "ISP2966497",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Nirmala Devi",
@@ -1785,7 +1785,7 @@
     },
     {
       "voter_id": "ISP296653",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Samjiva Kumara",
@@ -1798,7 +1798,7 @@
     },
     {
       "voter_id": "ISP2965424",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Mamjita Kumara",
@@ -1811,7 +1811,7 @@
     },
     {
       "voter_id": "ISP2378087",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Ravi Kumara Gupta",
@@ -1824,7 +1824,7 @@
     },
     {
       "voter_id": "ISP237803",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Manisha Kumara Gupta",
@@ -1837,7 +1837,7 @@
     },
     {
       "voter_id": "DWWA2362872",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Kirana Devi",
@@ -1850,7 +1850,7 @@
     },
     {
       "voter_id": "ISP0360636",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Pushpa",
@@ -1863,7 +1863,7 @@
     },
     {
       "voter_id": "ISP2650463",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Nikhila Gupta",
@@ -1876,7 +1876,7 @@
     },
     {
       "voter_id": "ISP706676",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Vishvanatha Gupta",
@@ -1889,7 +1889,7 @@
     },
     {
       "voter_id": "ISP706608",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Rani Devi",
@@ -1902,7 +1902,7 @@
     },
     {
       "voter_id": "SP0230367",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Chanda Devi",
@@ -1915,7 +1915,7 @@
     },
     {
       "voter_id": "ISP474550",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Shivama Gupta",
@@ -1928,7 +1928,7 @@
     },
     {
       "voter_id": "ISP405786",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Sita Devi",
@@ -1941,7 +1941,7 @@
     },
     {
       "voter_id": "ISP4057832",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Dixa Gupta",
@@ -1954,7 +1954,7 @@
     },
     {
       "voter_id": "ISP746307",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Ramesha Kumara",
@@ -1967,7 +1967,7 @@
     },
     {
       "voter_id": "ISP0230334",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Amsha Devi",
@@ -1980,7 +1980,7 @@
     },
     {
       "voter_id": "SP2378079",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Pamkaja Gupta",
@@ -1993,7 +1993,7 @@
     },
     {
       "voter_id": "ISP238095",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Sunita Devi",
@@ -2006,7 +2006,7 @@
     },
     {
       "voter_id": "ISP4745535",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Shubhama Gupta",
@@ -2019,7 +2019,7 @@
     },
     {
       "voter_id": "DWWA3400652",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Pushpa Devi",
@@ -2032,7 +2032,7 @@
     },
     {
       "voter_id": "ISP256955",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Usha Devi",
@@ -2045,7 +2045,7 @@
     },
     {
       "voter_id": "ISP746604",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Sunita Tripathi",
@@ -2058,7 +2058,7 @@
     },
     {
       "voter_id": "ISP506556",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Rajiva Kumara Gupta",
@@ -2071,7 +2071,7 @@
     },
     {
       "voter_id": "ISP7946596",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Sharada Devi",
@@ -2084,7 +2084,7 @@
     },
     {
       "voter_id": "PWAS400579",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Munni Devi",
@@ -2097,7 +2097,7 @@
     },
     {
       "voter_id": "SP0360347",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Sumana Devi",
@@ -2110,7 +2110,7 @@
     },
     {
       "voter_id": "DWQ7639368",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Shamkara",
@@ -2123,7 +2123,7 @@
     },
     {
       "voter_id": "SP2928760",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Saxi Chaurasiya",
@@ -2136,7 +2136,7 @@
     },
     {
       "voter_id": "ISP2070944",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Bijuta Devi",
@@ -2149,7 +2149,7 @@
     },
     {
       "voter_id": "ISP7946562",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Ananda Kumara Tripathi",
@@ -2162,7 +2162,7 @@
     },
     {
       "voter_id": "DWA3400660",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Maya",
@@ -2175,7 +2175,7 @@
     },
     {
       "voter_id": "DWQ3459500",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Lal{}la",
@@ -2188,7 +2188,7 @@
     },
     {
       "voter_id": "DWQ3459450",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Samgita",
@@ -2201,7 +2201,7 @@
     },
     {
       "voter_id": "ISP2928745",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Pushpa Devi",
@@ -2214,7 +2214,7 @@
     },
     {
       "voter_id": "DWA2240422",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Subhasha",
@@ -2227,7 +2227,7 @@
     },
     {
       "voter_id": "SP0939702",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Rashika",
@@ -2240,7 +2240,7 @@
     },
     {
       "voter_id": "ISP207095",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Ashoka Kumara",
@@ -2253,7 +2253,7 @@
     },
     {
       "voter_id": "ISP7946588",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Ashutosha Kumara Tripathi",
@@ -2266,7 +2266,7 @@
     },
     {
       "voter_id": "DWA3400603",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Ashoka Chaurasiya",
@@ -2279,7 +2279,7 @@
     },
     {
       "voter_id": "ISP396562",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Vishvasa Chaurasiya",
@@ -2292,7 +2292,7 @@
     },
     {
       "voter_id": "ISP0360545",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Man{}ju",
@@ -2305,7 +2305,7 @@
     },
     {
       "voter_id": "ISP237829",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Saurabha Sonakara",
@@ -2318,7 +2318,7 @@
     },
     {
       "voter_id": "ISP093970",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Vrjavasi",
@@ -2331,7 +2331,7 @@
     },
     {
       "voter_id": "SP207322",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Bahetu Prasada",
@@ -2344,7 +2344,7 @@
     },
     {
       "voter_id": "ISP4897657",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Soni Kannaujiya",
@@ -2357,7 +2357,7 @@
     },
     {
       "voter_id": "ISP3784220",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Abhisheka Kumara Sonakara",
@@ -2370,7 +2370,7 @@
     },
     {
       "voter_id": "DWA7639293",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Ashama Khatuna",
@@ -2383,7 +2383,7 @@
     },
     {
       "voter_id": "SP2929008",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Priyamka",
@@ -2396,7 +2396,7 @@
     },
     {
       "voter_id": "SP3327897",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Ashiya Bano",
@@ -2409,7 +2409,7 @@
     },
     {
       "voter_id": "SP237837",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Udaya Sonakara",
@@ -2422,7 +2422,7 @@
     },
     {
       "voter_id": "DWAT637792",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Sagarali",
@@ -2435,7 +2435,7 @@
     },
     {
       "voter_id": "ISP7506393",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Najama Khatuna",
@@ -2448,7 +2448,7 @@
     },
     {
       "voter_id": "ISP0078093",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Sunila 80",
@@ -2460,7 +2460,7 @@
     },
     {
       "voter_id": "ISP693324",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Satisha",
@@ -2473,7 +2473,7 @@
     },
     {
       "voter_id": "SP407527",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Renu",
@@ -2486,7 +2486,7 @@
     },
     {
       "voter_id": "ISP2965259",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Manisha Kumara Chaurasiya",
@@ -2499,7 +2499,7 @@
     },
     {
       "voter_id": "ISP7506609",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Ramesha Sonakara",
@@ -2512,7 +2512,7 @@
     },
     {
       "voter_id": "ISP079279",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Anuraga Sonakara",
@@ -2525,7 +2525,7 @@
     },
     {
       "voter_id": "DWAI640070",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Masumali",
@@ -2538,7 +2538,7 @@
     },
     {
       "voter_id": "ISP5063755",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Ramakishuna",
@@ -2551,7 +2551,7 @@
     },
     {
       "voter_id": "ISP4638235",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Tamanna Shekha",
@@ -2564,7 +2564,7 @@
     },
     {
       "voter_id": "ISP3327939",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Umatunanisha",
@@ -2577,7 +2577,7 @@
     },
     {
       "voter_id": "ISP3784279",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Ravindra Kumara Shukla",
@@ -2590,7 +2590,7 @@
     },
     {
       "voter_id": "ISP3786654",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Gudiya Kumari",
@@ -2603,7 +2603,7 @@
     },
     {
       "voter_id": "ISP3327954",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Rama Naresha",
@@ -2616,7 +2616,7 @@
     },
     {
       "voter_id": "ISP3327889",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Paro Devi",
@@ -2629,7 +2629,7 @@
     },
     {
       "voter_id": "ISP3256690",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Asarapha Ali",
@@ -2642,7 +2642,7 @@
     },
     {
       "voter_id": "ISP2648285",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Sulatana Ahamada",
@@ -2655,7 +2655,7 @@
     },
     {
       "voter_id": "SP2235422",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Laxami Devi",
@@ -2668,7 +2668,7 @@
     },
     {
       "voter_id": "ISP3327830",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Punama Ravata",
@@ -2681,7 +2681,7 @@
     },
     {
       "voter_id": "ISP7506492",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Rama Pala Shukla",
@@ -2694,7 +2694,7 @@
     },
     {
       "voter_id": "ISP2965234",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Pradipa Kumara Chaurasiya",
@@ -2707,7 +2707,7 @@
     },
     {
       "voter_id": "DWWA3459492",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Bindu",
@@ -2720,7 +2720,7 @@
     },
     {
       "voter_id": "SP2648327",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Shabanama Miya",
@@ -2733,7 +2733,7 @@
     },
     {
       "voter_id": "ISP2235398",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Khalikuna Nisha",
@@ -2746,7 +2746,7 @@
     },
     {
       "voter_id": "ISP4798792",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Shana Khatuna",
@@ -2759,7 +2759,7 @@
     },
     {
       "voter_id": "ISP2966760",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Yogesha Kumara",
@@ -2772,7 +2772,7 @@
     },
     {
       "voter_id": "ISP2378745",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Chedilala",
@@ -2785,7 +2785,7 @@
     },
     {
       "voter_id": "SP4578274",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Sudha Barui",
@@ -2798,7 +2798,7 @@
     },
     {
       "voter_id": "ISP3978760",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Simdhu Shrivastava",
@@ -2811,7 +2811,7 @@
     },
     {
       "voter_id": "ISP2928802",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Renu Gupta",
@@ -2824,7 +2824,7 @@
     },
     {
       "voter_id": "SP2648277",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Sa La Ahamada",
@@ -2837,7 +2837,7 @@
     },
     {
       "voter_id": "ISP3699956",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Pharahana Ahamada",
@@ -2850,7 +2850,7 @@
     },
     {
       "voter_id": "SP2647642",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Manoja Kumara Gupta",
@@ -2863,7 +2863,7 @@
     },
     {
       "voter_id": "ISP3468535",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Mira Devi",
@@ -2876,7 +2876,7 @@
     },
     {
       "voter_id": "ISP3475726",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Man{}ju",
@@ -2889,7 +2889,7 @@
     },
     {
       "voter_id": "ISP4087896",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Jalimuna Nisha",
@@ -2902,7 +2902,7 @@
     },
     {
       "voter_id": "SP4463626",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Sonali Raja",
@@ -2915,7 +2915,7 @@
     },
     {
       "voter_id": "ISP3872058",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Hasina Bano",
@@ -2928,7 +2928,7 @@
     },
     {
       "voter_id": "SP332787",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Kirana Devi",
@@ -2941,7 +2941,7 @@
     },
     {
       "voter_id": "ISP3327863",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Vandana Gupta",
@@ -2954,7 +2954,7 @@
     },
     {
       "voter_id": "ISP727680",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Rama Kishuna Yadava",
@@ -2967,7 +2967,7 @@
     },
     {
       "voter_id": "ISP794666",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Dinesha",
@@ -2980,7 +2980,7 @@
     },
     {
       "voter_id": "ISP2378752",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Taradevi",
@@ -2993,7 +2993,7 @@
     },
     {
       "voter_id": "SP2235448",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Niyamata Ali",
@@ -3006,7 +3006,7 @@
     },
     {
       "voter_id": "ISP3328002",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Niyamata Ali",
@@ -3019,7 +3019,7 @@
     },
     {
       "voter_id": "DWQ3459526",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Phiroja",
@@ -3032,7 +3032,7 @@
     },
     {
       "voter_id": "DWQI638667",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Maheduna Nisha",
@@ -3045,7 +3045,7 @@
     },
     {
       "voter_id": "ISP4534442",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Nurajaha.n Khatuna",
@@ -3058,7 +3058,7 @@
     },
     {
       "voter_id": "SP3327855",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Manoja Kumara Gupta",
@@ -3071,7 +3071,7 @@
     },
     {
       "voter_id": "ISP3468543",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Gt Devi",
@@ -3084,7 +3084,7 @@
     },
     {
       "voter_id": "ISP2647386",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Sana Khatuna",
@@ -3097,7 +3097,7 @@
     },
     {
       "voter_id": "ISP3543238",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Rabiya Khatuna",
@@ -3110,7 +3110,7 @@
     },
     {
       "voter_id": "ISP4463634",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Shalini Raja",
@@ -3123,7 +3123,7 @@
     },
     {
       "voter_id": "ISP3584000",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Ajaya Ravata",
@@ -3136,7 +3136,7 @@
     },
     {
       "voter_id": "ISP692854",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Arjuna",
@@ -3149,7 +3149,7 @@
     },
     {
       "voter_id": "ISP2647402",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Maya Gupta",
@@ -3162,7 +3162,7 @@
     },
     {
       "voter_id": "SP3700028",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Guda.du",
@@ -3175,7 +3175,7 @@
     },
     {
       "voter_id": "ISP3327962",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Rama Vrxa Ravata",
@@ -3188,7 +3188,7 @@
     },
     {
       "voter_id": "ISP794662",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "San{}tosha",
@@ -3201,7 +3201,7 @@
     },
     {
       "voter_id": "SP3590023",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Rahamatullaha",
@@ -3214,7 +3214,7 @@
     },
     {
       "voter_id": "DWWA3458924",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Phatima",
@@ -3227,7 +3227,7 @@
     },
     {
       "voter_id": "ISP746620",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Rekha Devi",
@@ -3240,7 +3240,7 @@
     },
     {
       "voter_id": "ISP2647876",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Shanti Devi",
@@ -3253,7 +3253,7 @@
     },
     {
       "voter_id": "ISP2647980",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Ajaya Kumara",
@@ -3264,7 +3264,7 @@
     },
     {
       "voter_id": "ISP750679",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "house_number": "83",
@@ -3274,7 +3274,7 @@
     },
     {
       "voter_id": "ISP3327988",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Chandravati Devi",
@@ -3287,7 +3287,7 @@
     },
     {
       "voter_id": "SP3327970",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Rimki Devi",
@@ -3300,7 +3300,7 @@
     },
     {
       "voter_id": "SP264878",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Murtuja Sena",
@@ -3313,7 +3313,7 @@
     },
     {
       "voter_id": "SP2647857",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Sapana Devi",
@@ -3326,7 +3326,7 @@
     },
     {
       "voter_id": "SP264793",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Samgita",
@@ -3339,7 +3339,7 @@
     },
     {
       "voter_id": "ISP370068",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Rajana Kumara",
@@ -3352,7 +3352,7 @@
     },
     {
       "voter_id": "ISP0582346",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Rajanandani",
@@ -3365,7 +3365,7 @@
     },
     {
       "voter_id": "ISP377967",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Chetana",
@@ -3378,7 +3378,7 @@
     },
     {
       "voter_id": "SP472497",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Rajesha Kumara Kanaujiya",
@@ -3391,7 +3391,7 @@
     },
     {
       "voter_id": "DWAI636992",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Shamkara Sharana",
@@ -3404,7 +3404,7 @@
     },
     {
       "voter_id": "ISP7692763",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Raju",
@@ -3417,7 +3417,7 @@
     },
     {
       "voter_id": "ISP0582403",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Anila",
@@ -3430,7 +3430,7 @@
     },
     {
       "voter_id": "ISP369224",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Rakesha Kumara",
@@ -3443,7 +3443,7 @@
     },
     {
       "voter_id": "ISP3355906",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Ajita Kumara",
@@ -3456,7 +3456,7 @@
     },
     {
       "voter_id": "DWQ2624575",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Gulaba Datta Tripathi",
@@ -3469,7 +3469,7 @@
     },
     {
       "voter_id": "DWQ2624583",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Mainadevi",
@@ -3482,7 +3482,7 @@
     },
     {
       "voter_id": "ISP2375943",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Ramakesha",
@@ -3495,7 +3495,7 @@
     },
     {
       "voter_id": "DWQ7356906",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Sima",
@@ -3508,7 +3508,7 @@
     },
     {
       "voter_id": "ISP7692789",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Puja",
@@ -3521,7 +3521,7 @@
     },
     {
       "voter_id": "SP027307",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Kapila",
@@ -3534,7 +3534,7 @@
     },
     {
       "voter_id": "ISP0582338",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Ravi Prakasa",
@@ -3547,7 +3547,7 @@
     },
     {
       "voter_id": "ISP4764208",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Chamdrarekha Devi",
@@ -3560,7 +3560,7 @@
     },
     {
       "voter_id": "ISP3590072",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Gulama Ali",
@@ -3573,7 +3573,7 @@
     },
     {
       "voter_id": "DWA385839",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Ro Ta Narayana Gupta",
@@ -3586,7 +3586,7 @@
     },
     {
       "voter_id": "DWQ3852878",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Nirmala",
@@ -3599,7 +3599,7 @@
     },
     {
       "voter_id": "ISP2549889",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Chandraketa Mal{}la",
@@ -3612,7 +3612,7 @@
     },
     {
       "voter_id": "ISP507089",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Krshna Gupta",
@@ -3625,7 +3625,7 @@
     },
     {
       "voter_id": "SP397878",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Imdravati",
@@ -3638,7 +3638,7 @@
     },
     {
       "voter_id": "DWQ3857763",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Maya Feet",
@@ -3651,7 +3651,7 @@
     },
     {
       "voter_id": "ISP3769083",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Dilipa Kumara",
@@ -3664,7 +3664,7 @@
     },
     {
       "voter_id": "DWQ385782",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Danisha Narayana Gupta",
@@ -3677,7 +3677,7 @@
     },
     {
       "voter_id": "DWA3458239",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Shanti Devi",
@@ -3690,7 +3690,7 @@
     },
     {
       "voter_id": "SP3872033",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Brjesha Kumara Mal{}la",
@@ -3703,7 +3703,7 @@
     },
     {
       "voter_id": "DWQ3852860",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 2,
       "section_name": "Chainpur",
       "name": "Ashoka",
@@ -3716,7 +3716,7 @@
     },
     {
       "voter_id": "DWA3400504",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Lalaji",
@@ -3729,7 +3729,7 @@
     },
     {
       "voter_id": "ISP2375984",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Sumana Shrivastava",
@@ -3742,7 +3742,7 @@
     },
     {
       "voter_id": "WA3852670",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Ashoka Kumara",
@@ -3755,7 +3755,7 @@
     },
     {
       "voter_id": "ISP4460762",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Mira Devi",
@@ -3768,7 +3768,7 @@
     },
     {
       "voter_id": "DWQ3400553",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Sushila Devi",
@@ -3781,7 +3781,7 @@
     },
     {
       "voter_id": "ISP746638",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Mu.shaphata",
@@ -3794,7 +3794,7 @@
     },
     {
       "voter_id": "ISP008366",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Radhe Shyama",
@@ -3807,7 +3807,7 @@
     },
     {
       "voter_id": "ISP0078333",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Tara Devi",
@@ -3820,7 +3820,7 @@
     },
     {
       "voter_id": "ISP3768903",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Isalavati Devi",
@@ -3833,7 +3833,7 @@
     },
     {
       "voter_id": "DWWA2237782",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Suvasha",
@@ -3846,7 +3846,7 @@
     },
     {
       "voter_id": "SP2235299",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Varsha Mishra",
@@ -3859,7 +3859,7 @@
     },
     {
       "voter_id": "ISP2965366",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Vikesha",
@@ -3872,7 +3872,7 @@
     },
     {
       "voter_id": "ISP0078382",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Kamala Devi",
@@ -3885,7 +3885,7 @@
     },
     {
       "voter_id": "ISP0078580",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Raja Kapura Kapadiya",
@@ -3898,7 +3898,7 @@
     },
     {
       "voter_id": "ISP2375976",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Mohana Raja Bhandari",
@@ -3911,7 +3911,7 @@
     },
     {
       "voter_id": "DWQ223837",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Udaya Bhana",
@@ -3924,7 +3924,7 @@
     },
     {
       "voter_id": "ISP236248",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Tribhuvana Yadava",
@@ -3937,7 +3937,7 @@
     },
     {
       "voter_id": "SP204877",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Gaurava Simha",
@@ -3950,7 +3950,7 @@
     },
     {
       "voter_id": "ISP237632",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Sima",
@@ -3963,7 +3963,7 @@
     },
     {
       "voter_id": "ISP5067756",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Amshika Yadava",
@@ -3976,7 +3976,7 @@
     },
     {
       "voter_id": "ISP693290",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Virendra Chaurasiya",
@@ -3989,7 +3989,7 @@
     },
     {
       "voter_id": "ISP2376008",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Salogama Kha.n",
@@ -4002,7 +4002,7 @@
     },
     {
       "voter_id": "DWQ2239333",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Shailesha Kumara",
@@ -4015,7 +4015,7 @@
     },
     {
       "voter_id": "DWQ2238335",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Purnima",
@@ -4028,7 +4028,7 @@
     },
     {
       "voter_id": "ISP3954732",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Salima",
@@ -4041,7 +4041,7 @@
     },
     {
       "voter_id": "ISP506278",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Sumana Devi",
@@ -4054,7 +4054,7 @@
     },
     {
       "voter_id": "DWQ3400538",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Anita Devi",
@@ -4067,7 +4067,7 @@
     },
     {
       "voter_id": "ISP4593646",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Nishtha Chaurasiya",
@@ -4078,7 +4078,7 @@
     },
     {
       "voter_id": "ISP493937",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Oma Nivasa Pamdeya",
@@ -4089,7 +4089,7 @@
     },
     {
       "voter_id": "ISP7506443",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Mona Chaurasiya",
@@ -4102,7 +4102,7 @@
     },
     {
       "voter_id": "WWA2362655",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Shashilata Shahi",
@@ -4115,7 +4115,7 @@
     },
     {
       "voter_id": "DWQ3852787",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Ku. Amju Shri0",
@@ -4128,7 +4128,7 @@
     },
     {
       "voter_id": "ISP0792997",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Jaya Prakasha",
@@ -4141,7 +4141,7 @@
     },
     {
       "voter_id": "SP2070704",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Babita Simha",
@@ -4154,7 +4154,7 @@
     },
     {
       "voter_id": "ISP2660774",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Shadana Arasi",
@@ -4167,7 +4167,7 @@
     },
     {
       "voter_id": "ISP4594453",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Shivama Chaurasiya",
@@ -4178,7 +4178,7 @@
     },
     {
       "voter_id": "ISP4823530",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Shria Pamdeya",
@@ -4191,7 +4191,7 @@
     },
     {
       "voter_id": "SP207757",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Uttama Kumara",
@@ -4204,7 +4204,7 @@
     },
     {
       "voter_id": "SP237949",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Sonu",
@@ -4217,7 +4217,7 @@
     },
     {
       "voter_id": "ISP5032076",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Amjali Kumari",
@@ -4230,7 +4230,7 @@
     },
     {
       "voter_id": "DWQ3458353",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Prakasha Chandra",
@@ -4243,7 +4243,7 @@
     },
     {
       "voter_id": "SP446028",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Priya Pandeya",
@@ -4256,7 +4256,7 @@
     },
     {
       "voter_id": "ISP3343340",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Kalindi Simha",
@@ -4269,7 +4269,7 @@
     },
     {
       "voter_id": "ISP0582270",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Tasalima",
@@ -4282,7 +4282,7 @@
     },
     {
       "voter_id": "ISP2274686",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Kalindi Mishra",
@@ -4295,7 +4295,7 @@
     },
     {
       "voter_id": "DWQ7358969",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Usha",
@@ -4308,7 +4308,7 @@
     },
     {
       "voter_id": "SP0792352",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Mahe Jabina",
@@ -4321,7 +4321,7 @@
     },
     {
       "voter_id": "SP4825444",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Rekha Pathaka",
@@ -4334,7 +4334,7 @@
     },
     {
       "voter_id": "ISP4060976",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Manisha Gupta",
@@ -4345,7 +4345,7 @@
     },
     {
       "voter_id": "ISP0767049",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Abdula",
@@ -4358,7 +4358,7 @@
     },
     {
       "voter_id": "ISP3343324",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Da. Ravishamkara Simha",
@@ -4371,7 +4371,7 @@
     },
     {
       "voter_id": "ISP3343332",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Kaveri Simha",
@@ -4384,7 +4384,7 @@
     },
     {
       "voter_id": "SP2274652",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Amitakumara",
@@ -4397,7 +4397,7 @@
     },
     {
       "voter_id": "ISP2274694",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Mendra",
@@ -4410,7 +4410,7 @@
     },
     {
       "voter_id": "ISP467608",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Riya Pamdeya",
@@ -4423,7 +4423,7 @@
     },
     {
       "voter_id": "ISP5032008",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Dipaka Kumara",
@@ -4436,7 +4436,7 @@
     },
     {
       "voter_id": "ISP4786760",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Priyala Mittala",
@@ -4449,7 +4449,7 @@
     },
     {
       "voter_id": "ISP3343365",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Kiti Simha",
@@ -4462,7 +4462,7 @@
     },
     {
       "voter_id": "SP2274678",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Aravindakumara",
@@ -4475,7 +4475,7 @@
     },
     {
       "voter_id": "SP2274702",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Savita",
@@ -4488,7 +4488,7 @@
     },
     {
       "voter_id": "SP2274728",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Ratana Lala",
@@ -4501,7 +4501,7 @@
     },
     {
       "voter_id": "DWA3400546",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Vinaya Kumara",
@@ -4514,7 +4514,7 @@
     },
     {
       "voter_id": "SP4787958",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Ma Tabassuma",
@@ -4527,7 +4527,7 @@
     },
     {
       "voter_id": "ISP495048",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Ravindra Kumara",
@@ -4540,7 +4540,7 @@
     },
     {
       "voter_id": "ISP506294",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Prabha",
@@ -4553,7 +4553,7 @@
     },
     {
       "voter_id": "ISP4652038",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Prajna Maurya",
@@ -4566,7 +4566,7 @@
     },
     {
       "voter_id": "ISP2965408",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Samjaya Kumara Jayasavala",
@@ -4579,7 +4579,7 @@
     },
     {
       "voter_id": "SP2274736",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Madhu Gupta",
@@ -4592,7 +4592,7 @@
     },
     {
       "voter_id": "SP2274769",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Vinatijaina",
@@ -4605,7 +4605,7 @@
     },
     {
       "voter_id": "ISP2235364",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Shabana Khatuna",
@@ -4618,7 +4618,7 @@
     },
     {
       "voter_id": "ISP4733735",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Samgita Devi",
@@ -4631,7 +4631,7 @@
     },
     {
       "voter_id": "ISP4646634",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Shubha Pradhana",
@@ -4644,7 +4644,7 @@
     },
     {
       "voter_id": "ISP2965945",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Manisha Kumara Jayasavala",
@@ -4657,7 +4657,7 @@
     },
     {
       "voter_id": "SP2274744",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Ku. Amju Bharati",
@@ -4670,7 +4670,7 @@
     },
     {
       "voter_id": "SP2647667",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Majida Ali",
@@ -4683,7 +4683,7 @@
     },
     {
       "voter_id": "SP3954757",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Raju Ali",
@@ -4696,7 +4696,7 @@
     },
     {
       "voter_id": "ISP4733622",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Sushila Kumara",
@@ -4709,7 +4709,7 @@
     },
     {
       "voter_id": "ISP358409",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Jnana Chandra Maurya",
@@ -4722,7 +4722,7 @@
     },
     {
       "voter_id": "ISP2928950",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Rajani Jayasavala",
@@ -4735,7 +4735,7 @@
     },
     {
       "voter_id": "ISP5730083",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Naremdra Kumara Chaurasiya",
@@ -4746,7 +4746,7 @@
     },
     {
       "voter_id": "ISP539522",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Amjani Fa",
@@ -4759,7 +4759,7 @@
     },
     {
       "voter_id": "ISP5740009",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Soni Kumari",
@@ -4772,7 +4772,7 @@
     },
     {
       "voter_id": "ISP5740047",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Mamshu Gupta",
@@ -4783,7 +4783,7 @@
     },
     {
       "voter_id": "ISP5740660",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Namda Rani Sharma",
@@ -4796,7 +4796,7 @@
     },
     {
       "voter_id": "ISP5740934",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Abhinita Jayasavala",
@@ -4809,7 +4809,7 @@
     },
     {
       "voter_id": "ISP540975",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Punanaanamda Yadava",
@@ -4822,7 +4822,7 @@
     },
     {
       "voter_id": "ISP574007",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Aditya Sonakara",
@@ -4833,7 +4833,7 @@
     },
     {
       "voter_id": "ISP5747072",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Kavya Gupta",
@@ -4846,7 +4846,7 @@
     },
     {
       "voter_id": "ISP536730",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Anita Devi",
@@ -4859,7 +4859,7 @@
     },
     {
       "voter_id": "ISP539969",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Dipa Gupta",
@@ -4872,7 +4872,7 @@
     },
     {
       "voter_id": "SP574007",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Mina Kushavaha",
@@ -4885,7 +4885,7 @@
     },
     {
       "voter_id": "ISP5740074",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Priti Varma",
@@ -4898,7 +4898,7 @@
     },
     {
       "voter_id": "ISP540959",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Puja Gupta",
@@ -4911,7 +4911,7 @@
     },
     {
       "voter_id": "ISP5740983",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Puja Gupta",
@@ -4924,7 +4924,7 @@
     },
     {
       "voter_id": "ISP574098",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Sagara",
@@ -4937,7 +4937,7 @@
     },
     {
       "voter_id": "ISP539977",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Nitu Jayasavala",
@@ -4950,7 +4950,7 @@
     },
     {
       "voter_id": "SP5740876",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Soni Gupta",
@@ -4963,7 +4963,7 @@
     },
     {
       "voter_id": "ISP5740967",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Khushabu Gupta",
@@ -4976,7 +4976,7 @@
     },
     {
       "voter_id": "ISP574099",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Abhisheka Sonakara",
@@ -4989,7 +4989,7 @@
     },
     {
       "voter_id": "ISP574023",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Ro Ta Sonakara",
@@ -5000,7 +5000,7 @@
     },
     {
       "voter_id": "ISP574722",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "aftear",
@@ -5013,7 +5013,7 @@
     },
     {
       "voter_id": "ISP5747544",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Jyoti",
@@ -5026,7 +5026,7 @@
     },
     {
       "voter_id": "SP5745727",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Sanavi Gupta",
@@ -5039,7 +5039,7 @@
     },
     {
       "voter_id": "ISP5745768",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Bimdu Devi",
@@ -5052,7 +5052,7 @@
     },
     {
       "voter_id": "ISP5745792",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Kamalesha Jayasavala",
@@ -5065,7 +5065,7 @@
     },
     {
       "voter_id": "ISP5745859",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Kartika Jayasavala",
@@ -5078,7 +5078,7 @@
     },
     {
       "voter_id": "ISP5745883",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Sudhira Chaurasiya",
@@ -5089,7 +5089,7 @@
     },
     {
       "voter_id": "ISP5745977",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Samju Chaurasiya",
@@ -5102,7 +5102,7 @@
     },
     {
       "voter_id": "ISP5745958",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Ajita",
@@ -5115,7 +5115,7 @@
     },
     {
       "voter_id": "ISP5745644",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Sumana Gupta",
@@ -5128,7 +5128,7 @@
     },
     {
       "voter_id": "ISP545735",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Ro Ta Chaurashiya",
@@ -5141,7 +5141,7 @@
     },
     {
       "voter_id": "SP545776",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Karana Kumara Gupta",
@@ -5154,7 +5154,7 @@
     },
     {
       "voter_id": "SP5745867",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Srshti Gupta",
@@ -5167,7 +5167,7 @@
     },
     {
       "voter_id": "ISP574589",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Lalita Devi Jayasavala",
@@ -5180,7 +5180,7 @@
     },
     {
       "voter_id": "ISP5745925",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Pushpa Gupta",
@@ -5193,7 +5193,7 @@
     },
     {
       "voter_id": "ISP545966",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Kumari Gu.diya Jayasavala",
@@ -5206,7 +5206,7 @@
     },
     {
       "voter_id": "ISP5746074",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Abhisheka Kasaudhana",
@@ -5219,7 +5219,7 @@
     },
     {
       "voter_id": "ISP5747288",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Vinaya Nishada",
@@ -5232,7 +5232,7 @@
     },
     {
       "voter_id": "ISP545784",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Manisha",
@@ -5245,7 +5245,7 @@
     },
     {
       "voter_id": "ISP5745842",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Sharma Sashmita Samjiva Kumara",
@@ -5258,7 +5258,7 @@
     },
     {
       "voter_id": "ISP6745909",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Abhisheka",
@@ -5271,7 +5271,7 @@
     },
     {
       "voter_id": "ISP5745974",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Bechu",
@@ -5284,7 +5284,7 @@
     },
     {
       "voter_id": "SP5746022",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Drshti Gupta",
@@ -5297,7 +5297,7 @@
     },
     {
       "voter_id": "ISP5746030",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Vinaya Kumara Jayasavala",
@@ -5310,7 +5310,7 @@
     },
     {
       "voter_id": "ISP5288204",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Keema Rage I",
@@ -5323,7 +5323,7 @@
     },
     {
       "voter_id": "SP5337472",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Abhaya Kumara Mishra",
@@ -5336,7 +5336,7 @@
     },
     {
       "voter_id": "ISP5338959",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Ratana Priya Chaurasiya",
@@ -5349,7 +5349,7 @@
     },
     {
       "voter_id": "ISP5339072",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Sumana Devi",
@@ -5362,7 +5362,7 @@
     },
     {
       "voter_id": "ISP5347562",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Sajaruna Nisha",
@@ -5375,7 +5375,7 @@
     },
     {
       "voter_id": "ISP5395579",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Priyamka",
@@ -5388,7 +5388,7 @@
     },
     {
       "voter_id": "ISP5746048",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Rama Milana Chaurasiya",
@@ -5401,7 +5401,7 @@
     },
     {
       "voter_id": "ISP5337563",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Kumari Laxmi Kapariya",
@@ -5414,7 +5414,7 @@
     },
     {
       "voter_id": "ISP5338397",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Mala Sonakara",
@@ -5427,7 +5427,7 @@
     },
     {
       "voter_id": "ISP5338975",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Shalani Chaurasiya",
@@ -5440,7 +5440,7 @@
     },
     {
       "voter_id": "ISP5339205",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Mo Sami",
@@ -5453,7 +5453,7 @@
     },
     {
       "voter_id": "ISP5352747",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Samji Yadava",
@@ -5466,7 +5466,7 @@
     },
     {
       "voter_id": "ISP5395595",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Laxmi Gupta",
@@ -5479,7 +5479,7 @@
     },
     {
       "voter_id": "ISP5335393",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Izamamula Haqa",
@@ -5492,7 +5492,7 @@
     },
     {
       "voter_id": "ISP5338740",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Fiza",
@@ -5505,7 +5505,7 @@
     },
     {
       "voter_id": "ISP5338769",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Kanaka Chaurasiya",
@@ -5518,7 +5518,7 @@
     },
     {
       "voter_id": "ISP5339056",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Samjana Sonakara",
@@ -5529,7 +5529,7 @@
     },
     {
       "voter_id": "ISP5339643",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Mirza Amana Bega",
@@ -5542,7 +5542,7 @@
     },
     {
       "voter_id": "ISP535477",
-      "part_number": 5,
+      "part_number": 51,
       "section_number": 3,
       "section_name": "Jhungiya Harijan Basti",
       "name": "Sahana Khatuna",
