@@ -84,7 +84,7 @@ export default function BoothDetailCharts({ summary }: Props) {
               <Tooltip {...TT} />
               <Legend wrapperStyle={{ fontSize: 11 }} />
               <Bar dataKey="bjp" name="BJP" fill="#f97316" radius={[0, 2, 2, 0]} />
-              <Bar dataKey="opp" name="Opp" fill="#3b82f6" radius={[0, 2, 2, 0]} />
+              <Bar dataKey="opp" name="SP/BSP" fill="#3b82f6" radius={[0, 2, 2, 0]} />
             </BarChart>
           </ResponsiveContainer>
         )}

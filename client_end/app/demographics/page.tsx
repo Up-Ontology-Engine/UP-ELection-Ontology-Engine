@@ -121,7 +121,7 @@ export default async function DemographicsPage() {
           { label: "Registered Voters", value: fmt(totalVoters),   sub1: `${fmt(totalMale)} male`, sub2: `${fmt(totalFemale)} female`, icon: Users,      color: "#3b82f6", bar: null },
           { label: "Gender Ratio",       value: genderRatio != null ? `${genderRatio}` : "—",       sub1: "females per 1,000 males", sub2: `${pct(totalFemale, totalVoters)} female electorate`, icon: Users, color: "#ec4899", bar: genderRatio != null ? Math.min(100, (genderRatio / 1100) * 100) : null },
           { label: "2022 Turnout",        value: turnoutPct != null ? `${turnoutPct.toFixed(1)}%` : "—", sub1: turnout ? `${fmt(turnout.total_votes)} votes cast` : "—", sub2: turnout ? `of ${fmt(turnout.total_voters)} registered` : "—", icon: TrendingUp, color: "#10b981", bar: turnoutPct },
-          { label: "BJP Vote Share 2022", value: bjpVoteShare != null ? `${bjpVoteShare.toFixed(1)}%` : "—", sub1: `${bjpTotal} of ${booths.length} booths BJP-leaning`, sub2: `${oppTotal} opp-leaning · ${leanCounts["NEUTRAL"] ?? 0} neutral`, icon: Shield, color: "#f97316", bar: bjpVoteShare },
+          { label: "BJP Vote Share 2022", value: bjpVoteShare != null ? `${bjpVoteShare.toFixed(1)}%` : "—", sub1: `${bjpTotal} of ${booths.length} booths BJP-leaning`, sub2: `${oppTotal} SP/BSP-leaning · ${leanCounts["NEUTRAL"] ?? 0} neutral`, icon: Shield, color: "#f97316", bar: bjpVoteShare },
         ].map(({ label, value, sub1, sub2, icon: Icon, color, bar }) => (
           <div key={label} className="card rounded-xl p-5 flex flex-col">
             <div className="flex items-center gap-2 mb-3 h-7">

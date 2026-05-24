@@ -45,7 +45,7 @@ const LAYERS: {
     {
       id: "bjp_lean",
       label: "Political Lean",
-      desc: "BJP vs Opposition digital pulse signal",
+      desc: "Party digital pulse signal — BJP · SP · BSP",
       color: "#3b82f6",
       hasData: false,
     },
@@ -72,8 +72,8 @@ const LEGENDS: Record<HeatLayer, { label: string; color: string }[]> = {
     { label: "Strong BJP (+0.3+)", color: "#f97316" },
     { label: "Lean BJP", color: "#fb923c" },
     { label: "Neutral", color: "var(--text-3)" },
-    { label: "Lean Opp", color: "#60a5fa" },
-    { label: "Strong Opp", color: "#3b82f6" },
+    { label: "Lean SP", color: "#60a5fa" },
+    { label: "Strong SP", color: "#3b82f6" },
     { label: "No signal", color: "var(--text-4)" },
   ],
   confidence: [
@@ -294,8 +294,8 @@ export default function HeatMapClient({ coverage }: Props) {
                   {[
                     { label: "Booth ID", value: selected.booth_id, color: "var(--text-3)" },
                     { label: "Voters", value: selected.total_voters?.toLocaleString("en-IN") ?? "—", color: "var(--saffron)" },
-                    { label: "BJP pulse", value: selected.bjp_pulse_score?.toFixed(3) ?? "No data", color: "#f97316" },
-                    { label: "Opp pulse", value: selected.opp_pulse_score?.toFixed(3) ?? "No data", color: "#3b82f6" },
+                    { label: "BJP signal", value: selected.bjp_pulse_score?.toFixed(3) ?? "No data", color: "#f97316" },
+                    { label: "SP signal",  value: selected.opp_pulse_score?.toFixed(3) ?? "No data", color: "#3b82f6" },
                     { label: "Confidence", value: selected.confidence_label ?? "No data", color: selected.confidence_label === "HIGH" ? "#10b981" : selected.confidence_label === "LOW" ? "#ef4444" : "var(--text-4)" },
                     { label: "KG degree", value: String(selected.neo4j_degree), color: "#10b981" },
                   ].map(({ label, value, color }) => (

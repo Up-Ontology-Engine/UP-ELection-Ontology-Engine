@@ -177,7 +177,7 @@ export default function LeafletMap({ booths, layer, onSelect, selected }: Props)
                 <span style="color: var(--text-1); font-weight: 600;">${b.in_neo4j ? "Yes" : "No"}</span>
               </div>
               <div style="display: flex; justify-content: space-between;">
-                <span style="color: var(--text-3);">BJP pulse</span>
+                <span style="color: var(--text-3);">BJP signal</span>
                 <span style="color: var(--text-1); font-weight: 600;">${(b.bjp_pulse_score?.toFixed(3) ?? "No data")}</span>
               </div>
               <div style="display: flex; justify-content: space-between;">

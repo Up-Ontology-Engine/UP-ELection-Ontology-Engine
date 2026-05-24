@@ -113,8 +113,8 @@ export default async function BoothDetailPage({ params }: Props) {
           { label: "Male Voters",    value: fmt(summary.male_voters),    color: "#3b82f6", sub: null },
           { label: "Female Voters",  value: fmt(summary.female_voters),  color: "#ec4899", sub: femalePct ? `${femalePct}%` : null },
           { label: "BJP Wins",       value: summary.historical.bjp_won_count, color: "#f97316", sub: "historical" },
-          { label: "BJP Pulse",      value: fmt(summary.digital_pulse.bjp_pulse, 3), color: "#f97316", sub: "digital score" },
-          { label: "Opp Pulse",      value: fmt(summary.digital_pulse.opp_pulse, 3), color: "#3b82f6", sub: "digital score" },
+          { label: "BJP Signal",     value: fmt(summary.digital_pulse.bjp_pulse, 3), color: "#f97316", sub: "digital score" },
+          { label: "SP Signal",      value: fmt(summary.digital_pulse.opp_pulse, 3), color: "#3b82f6", sub: "digital score" },
           { label: "Confidence",     value: fmt(summary.confidence.score, 2), color: summary.confidence.label === "HIGH" ? "#10b981" : summary.confidence.label === "MEDIUM" ? "#f59e0b" : "#ef4444", sub: summary.confidence.label },
           { label: "Data Events",    value: detailSummary.confidence.event_count, color: "#10b981", sub: "raw signals" },
         ].map(({ label, value, color, sub }) => (

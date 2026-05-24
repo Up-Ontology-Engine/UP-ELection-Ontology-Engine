@@ -109,8 +109,8 @@ export default async function DashboardPage() {
 
   const fallbackCandidateList = booths.length > 0
     ? [
-        { name: "Incumbent BJP Candidate", year: 2022, candidate_id: "cand_001", is_incumbent: true, is_primary_opp: false, party: "BJP" },
-        { name: "SP Opposition Candidate", year: 2022, candidate_id: "cand_002", is_incumbent: false, is_primary_opp: true, party: "SP" },
+        { name: "BJP Candidate", year: 2022, candidate_id: "cand_001", is_incumbent: true, is_primary_opp: false, party: "BJP" },
+        { name: "SP Candidate", year: 2022, candidate_id: "cand_002", is_incumbent: false, is_primary_opp: true, party: "SP" },
       ]
     : [];
   const displayCandidates = candidates.length > 0 ? candidates : fallbackCandidateList;
@@ -304,8 +304,8 @@ export default async function DashboardPage() {
                 { key: "STRONG_BJP", label: "Strong BJP",   color: "#f97316" },
                 { key: "LEAN_BJP",   label: "Lean BJP",     color: "#fb923c" },
                 { key: "NEUTRAL",    label: "Neutral",      color: "#64748b" },
-                { key: "LEAN_OPP",   label: "Lean Opp",     color: "#60a5fa" },
-                { key: "STRONG_OPP", label: "Strong Opp",   color: "#3b82f6" },
+                { key: "LEAN_OPP",   label: "Lean SP",      color: "#60a5fa" },
+                { key: "STRONG_OPP", label: "Strong SP",    color: "#3b82f6" },
                 { key: "INSUFFICIENT",label: "Awaiting data",color: "var(--text-4)"},
               ].map(({ key, label, color }) => {
                 const count   = leanDist[key] ?? 0;
@@ -334,7 +334,7 @@ export default async function DashboardPage() {
             <div className="mt-2 flex justify-between text-xs mono">
               <span style={{ color: "#f97316" }}>BJP: {bjpLean}</span>
               <span style={{ color: "#64748b" }}>Neutral: {leanDist["NEUTRAL"] ?? 0}</span>
-              <span style={{ color: "#3b82f6" }}>Opp: {oppLean}</span>
+              <span style={{ color: "#3b82f6" }}>SP/BSP: {oppLean}</span>
             </div>
           </div>
 
@@ -358,7 +358,7 @@ export default async function DashboardPage() {
               <table className="w-full data-table">
                 <thead>
                   <tr>
-                    {["#", "Polling Station", "Locality", "Voters", "M / F", "BJP Pulse", "Lean", "Confidence"].map((h) => (
+                    {["#", "Polling Station", "Locality", "Voters", "M / F", "BJP Signal", "Lean", "Confidence"].map((h) => (
                       <th key={h}>{h}</th>
                     ))}
                   </tr>

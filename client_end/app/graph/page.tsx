@@ -89,7 +89,7 @@ const ENTITY_TYPES = ["AC", "Booth", "Issue", "Candidate", "Party", "Scheme", "N
 const QUICK_QUERIES = [
   { label: "Gorakhpur Urban AC",  type: "AC",        id: "GKP_322",         desc: "All AC connections" },
   { label: "BJP Party",           type: "Party",     id: "BJP",             desc: "BJP party network" },
-  { label: "SP Party",            type: "Party",     id: "SP",              desc: "SP opposition network" },
+  { label: "SP Party",            type: "Party",     id: "SP",              desc: "SP party network" },
   { label: "Water Issue",         type: "Issue",     id: "water",           desc: "Water issue network" },
   { label: "Education Issue",     type: "Issue",     id: "education",       desc: "Education issue" },
   { label: "Adityanath 2022",     type: "Candidate", id: "ADITYANATH_2022", desc: "Incumbent candidate" },
@@ -492,8 +492,8 @@ export default function GraphPage() {
                 <p className="label mb-2" style={{ color: S.t4 }}>Digital Pulse Scores</p>
                 <div className="grid grid-cols-2 gap-3">
                   {[
-                    { label: "BJP Pulse",  val: bjpPulse, color: "#f97316" },
-                    { label: "Opp Pulse",  val: oppPulse, color: "#3b82f6" },
+                    { label: "BJP Signal", val: bjpPulse, color: "#f97316" },
+                    { label: "SP Signal",  val: oppPulse, color: "#3b82f6" },
                   ].map(({ label, val, color }) => (
                     <div key={label} className="rounded-lg p-3 text-center"
                       style={{ background: S.surface, border: `1px solid ${S.border}` }}>
