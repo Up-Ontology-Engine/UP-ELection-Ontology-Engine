@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import {
   LayoutDashboard, Network, BarChart3,
   MessageSquare, BookOpen, Users, Activity,
-  ChevronDown, Shield, Flame, Target
+  ChevronDown, Shield, Flame, Target, ScrollText
 } from "lucide-react";
 
 const SECTIONS = [
@@ -28,8 +28,9 @@ const SECTIONS = [
   {
     label: "Analytics",
     items: [
-      { href: "/demographics", icon: Users,    label: "Demographics"   },
-      { href: "/ontology",     icon: BookOpen, label: "Ontology Layer" },
+      { href: "/demographics", icon: Users,       label: "Demographics"        },
+      { href: "/myneta",       icon: ScrollText,  label: "My Neta Report Card" },
+      { href: "/ontology",     icon: BookOpen,    label: "Ontology Layer"      },
     ],
   },
 ];

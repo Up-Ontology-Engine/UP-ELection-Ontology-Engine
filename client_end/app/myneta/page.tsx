@@ -1,0 +1,349 @@
+"use client";
+
+import { useEffect, useMemo, useState } from "react";
+import type { GraphNode, GraphEdge } from "@/lib/api";
+import { useTheme } from "@/components/ThemeProvider";
+import GraphCanvas from "../graph/GraphCanvas";
+import {
+  ScrollText, Network, Award, AlertTriangle, GraduationCap,
+  Wallet, Landmark, Users, ExternalLink, X, Filter,
+} from "lucide-react";
+
+interface MyNetaGraph {
+  nodes: GraphNode[];
+  edges: GraphEdge[];
+  stats: {
+    total_nodes: number;
+    total_edges: number;
+    node_types: Record<string, number>;
+    candidates: number;
+    constituencies: number;
+  };
+}
+
+const NODE_COLORS: Record<string, string> = {
+  Election:       "#f59e0b",
+  Constituency:   "#f97316",
+  Party:          "#8b5cf6",
+  Candidate:      "#10b981",
+  Education:      "#06b6d4",
+  Profession:     "#14b8a6",
+  CriminalRecord: "#dc2626",
+  AssetTier:      "#eab308",
+};
+
+const PARTY_COLORS: Record<string, string> = {
+  BJP: "#f97316", SP: "#ef4444", BSP: "#3b82f6", INC: "#22c55e",
+  AAP: "#06b6d4", AD: "#8b5cf6", IND: "#64748b",
+};
+
+const TYPE_ICONS: Record<string, React.ElementType> = {
+  Election: Landmark, Constituency: Network, Party: Users, Candidate: Award,
+  Education: GraduationCap, Profession: Users, CriminalRecord: AlertTriangle, AssetTier: Wallet,
+};
+
+function fmtRs(n: number | null | undefined): string {
+  if (!n || n <= 0) return "—";
+  if (n >= 1e7) return `₹${(n / 1e7).toFixed(2)} Cr`;
+  if (n >= 1e5) return `₹${(n / 1e5).toFixed(2)} L`;
+  return `₹${n.toLocaleString("en-IN")}`;
+}
+
+export default function MyNetaPage() {
+  const { theme } = useTheme();
+  const [graph, setGraph] = useState<MyNetaGraph | null>(null);
+  const [error, setError] = useState("");
+  const [selected, setSelected] = useState<GraphNode | null>(null);
+  const [showRivals, setShowRivals] = useState(false);
+  const [canvasKey, setCanvasKey] = useState(0);
+
+  useEffect(() => {
+    fetch("/myneta_graph.json", { cache: "no-store" })
+      .then((r) => { if (!r.ok) throw new Error(String(r.status)); return r.json(); })
+      .then((g: MyNetaGraph) => { setGraph(g); setCanvasKey((k) => k + 1); })
+      .catch(() => setError("Could not load the MyNeta graph. Run `python -m analytics.myneta_graph` to (re)build it."));
+  }, []);
+
+  // Edges shown on canvas — typed KG by default; rival co-occurrence is opt-in.
+  const visibleEdges = useMemo(
+    () => (graph?.edges ?? []).filter((e) => showRivals || e.type !== "RAN_AGAINST"),
+    [graph, showRivals],
+  );
+
+  const candidates = useMemo(
+    () => (graph?.nodes ?? []).filter((n) => n.type === "Candidate"),
+    [graph],
+  );
+
+  const partyDist = useMemo(() => {
+    const m: Record<string, number> = {};
+    candidates.forEach((c) => {
+      const p = (c.properties.party as string) ?? "IND";
+      m[p] = (m[p] ?? 0) + 1;
+    });
+    return Object.entries(m).sort((a, b) => b[1] - a[1]);
+  }, [candidates]);
+
+  const topAssets = useMemo(
+    () => [...candidates]
+      .sort((a, b) => ((b.properties.assets_rs as number) ?? 0) - ((a.properties.assets_rs as number) ?? 0))
+      .slice(0, 6),
+    [candidates],
+  );
+
+  const criminalFlagged = useMemo(
+    () => candidates.filter((c) => ((c.properties.criminal_cases as number) ?? 0) > 0),
+    [candidates],
+  );
+
+  const S = {
+    base: "var(--bg-base)", surface: "var(--bg-surface)", card: "var(--bg-card)",
+    hover: "var(--bg-hover)", border: "var(--border)",
+    t1: "var(--text-1)", t2: "var(--text-2)", t3: "var(--text-3)", t4: "var(--text-4)",
+    saffron: "var(--saffron)",
+  };
+
+  const maxParty = partyDist[0]?.[1] ?? 1;
+
+  return (
+    <div className="flex" style={{ height: "calc(100vh - 56px)", background: S.base }}>
+
+      {/* ── Left panel ── */}
+      <div className="w-80 flex-shrink-0 flex flex-col overflow-y-auto"
+        style={{ borderRight: `1px solid ${S.border}` }}>
+
+        <div className="px-4 py-3.5" style={{ borderBottom: `1px solid ${S.border}` }}>
+          <div className="flex items-center gap-2 mb-0.5">
+            <div className="w-6 h-6 rounded flex items-center justify-center"
+              style={{ background: "rgba(249,115,22,0.12)", border: "1px solid rgba(249,115,22,0.3)" }}>
+              <ScrollText size={12} style={{ color: S.saffron }} />
+            </div>
+            <h1 className="text-sm font-bold" style={{ color: S.t1 }}>My Neta Report Card</h1>
+          </div>
+          <p className="text-xs" style={{ color: S.t3 }}>
+            Candidate knowledge graph from MyNeta affidavits
+          </p>
+        </div>
+
+        {selected ? (
+          <NodeDetail node={selected} onClose={() => setSelected(null)} S={S} />
+        ) : (
+          <div className="p-4 space-y-5">
+            {/* Overview stats */}
+            <div className="grid grid-cols-2 gap-2">
+              {[
+                { label: "Candidates", val: graph?.stats.candidates ?? 0, color: NODE_COLORS.Candidate, icon: Award },
+                { label: "Constituencies", val: graph?.stats.constituencies ?? 0, color: NODE_COLORS.Constituency, icon: Network },
+                { label: "Parties", val: graph?.stats.node_types?.Party ?? 0, color: NODE_COLORS.Party, icon: Users },
+                { label: "Criminal-flagged", val: criminalFlagged.length, color: NODE_COLORS.CriminalRecord, icon: AlertTriangle },
+              ].map(({ label, val, color, icon: Icon }) => (
+                <div key={label} className="rounded-lg p-3" style={{ background: S.surface, border: `1px solid ${S.border}` }}>
+                  <div className="flex items-center gap-1.5 mb-1">
+                    <Icon size={11} style={{ color }} />
+                    <span className="text-xs" style={{ color: S.t4 }}>{label}</span>
+                  </div>
+                  <p className="mono text-xl font-bold tabular-nums" style={{ color }}>{val}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Party distribution */}
+            <div>
+              <p className="label mb-2" style={{ color: S.t4 }}>Candidates by Party</p>
+              <div className="space-y-1.5">
+                {partyDist.slice(0, 8).map(([party, n]) => {
+                  const color = PARTY_COLORS[party] ?? "#64748b";
+                  return (
+                    <div key={party} className="flex items-center gap-2">
+                      <span className="text-xs w-12 truncate" style={{ color: S.t2 }}>{party}</span>
+                      <div className="flex-1 h-1.5 rounded-full" style={{ background: S.border }}>
+                        <div className="h-1.5 rounded-full" style={{ width: `${(n / maxParty) * 100}%`, background: color }} />
+                      </div>
+                      <span className="mono text-xs w-5 text-right tabular-nums" style={{ color }}>{n}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Top by assets */}
+            <div>
+              <p className="label mb-2" style={{ color: S.t4 }}>Wealthiest Candidates</p>
+              <div className="space-y-1">
+                {topAssets.map((c) => (
+                  <button key={c.id} onClick={() => setSelected(c)}
+                    className="w-full text-left px-2.5 py-2 rounded-md flex items-center gap-2 transition-all"
+                    style={{ background: S.surface, border: `1px solid ${S.border}` }}
+                    onMouseEnter={(e) => (e.currentTarget.style.background = S.hover)}
+                    onMouseLeave={(e) => (e.currentTarget.style.background = S.surface)}>
+                    <div className="w-1.5 h-1.5 rounded-full flex-shrink-0"
+                      style={{ background: PARTY_COLORS[(c.properties.party as string)] ?? "#64748b" }} />
+                    <span className="flex-1 text-xs truncate" style={{ color: S.t2 }}>{c.properties.name as string}</span>
+                    <span className="mono text-xs flex-shrink-0 tabular-nums" style={{ color: NODE_COLORS.AssetTier }}>
+                      {fmtRs(c.properties.assets_rs as number)}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {error && (
+              <div className="rounded-md px-3 py-2.5 text-xs"
+                style={{ background: "rgba(239,68,68,0.08)", border: "1px solid rgba(239,68,68,0.25)", color: "#dc2626" }}>
+                {error}
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+
+      {/* ── Graph canvas ── */}
+      <div className="flex-1 relative">
+        {/* Controls */}
+        <div className="absolute top-3 left-3 z-10 flex items-center gap-2">
+          <button onClick={() => setShowRivals((v) => !v)}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs transition-all"
+            style={{
+              background: showRivals ? "rgba(249,115,22,0.12)" : "var(--bg-card)",
+              border: `1px solid ${showRivals ? "rgba(249,115,22,0.4)" : "var(--border)"}`,
+              color: showRivals ? "var(--saffron)" : "var(--text-3)",
+            }}>
+            <Filter size={11} /> {showRivals ? "Hide rivalries" : "Show rivalries"}
+          </button>
+        </div>
+
+        {/* Legend */}
+        <div className="absolute top-3 right-3 z-10 rounded-lg p-2.5"
+          style={{ background: "var(--bg-card)", border: "1px solid var(--border)" }}>
+          <div className="grid grid-cols-2 gap-x-3 gap-y-1">
+            {Object.entries(NODE_COLORS)
+              .filter(([t]) => (graph?.stats.node_types?.[t] ?? 0) > 0)
+              .map(([type, color]) => (
+                <div key={type} className="flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full" style={{ background: color }} />
+                  <span className="text-xs" style={{ color: "var(--text-3)", fontSize: 10 }}>{type}</span>
+                </div>
+              ))}
+          </div>
+        </div>
+
+        {graph ? (
+          <GraphCanvas
+            key={canvasKey}
+            nodes={graph.nodes}
+            edges={visibleEdges}
+            nodeColors={NODE_COLORS}
+            selectedId={selected?.id}
+            theme={theme}
+            onSelect={setSelected}
+          />
+        ) : (
+          <div className="w-full h-full flex flex-col items-center justify-center" style={{ color: "var(--text-4)" }}>
+            <ScrollText size={28} className="mb-2" />
+            <p className="text-xs">{error || "Loading MyNeta knowledge graph…"}</p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ── Selected-node detail (candidate report card) ────────────────────────────
+
+function NodeDetail({ node, onClose, S }: {
+  node: GraphNode;
+  onClose: () => void;
+  S: Record<string, string>;
+}) {
+  const p = node.properties;
+  const Icon = TYPE_ICONS[node.type] ?? Network;
+  const color = NODE_COLORS[node.type] ?? "#64748b";
+
+  if (node.type === "Candidate") {
+    const party = (p.party as string) ?? "IND";
+    const partyColor = PARTY_COLORS[party] ?? "#64748b";
+    const criminal = (p.criminal_cases as number) ?? 0;
+    return (
+      <div className="p-4 space-y-4">
+        <button onClick={onClose} className="flex items-center gap-1 text-xs" style={{ color: S.t4 }}>
+          <X size={11} /> Back to overview
+        </button>
+
+        <div className="rounded-lg p-3" style={{ background: `${partyColor}10`, border: `1px solid ${partyColor}35` }}>
+          <div className="flex items-center gap-2.5">
+            <div className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0"
+              style={{ background: partyColor, color: "#fff" }}>{party.slice(0, 3)}</div>
+            <div className="min-w-0">
+              <p className="font-bold text-sm truncate" style={{ color: S.t1 }}>{p.name as string}</p>
+              <p className="text-xs" style={{ color: S.t3 }}>{p.ac_name as string} · {p.election_year as number}</p>
+            </div>
+            {p.winner ? <Award size={14} style={{ color: S.saffron, marginLeft: "auto" }} /> : null}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 gap-2">
+          {[
+            { label: "Total Assets", val: fmtRs(p.assets_rs as number), color: NODE_COLORS.AssetTier },
+            { label: "Liabilities", val: fmtRs(p.liabilities_rs as number), color: "#ef4444" },
+            { label: "Criminal Cases", val: String(criminal), color: criminal > 0 ? "#dc2626" : S.t2 },
+            { label: "Age", val: p.age != null ? String(p.age) : "—", color: S.t2 },
+          ].map(({ label, val, color: c }) => (
+            <div key={label} className="rounded-md p-2.5" style={{ background: S.surface, border: `1px solid ${S.border}` }}>
+              <p className="text-xs mb-0.5" style={{ color: S.t4, fontSize: 10 }}>{label}</p>
+              <p className="mono text-sm font-bold tabular-nums" style={{ color: c }}>{val}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="rounded-md px-3 py-2.5" style={{ background: S.surface, border: `1px solid ${S.border}` }}>
+          <p className="text-xs mb-1" style={{ color: S.t4, fontSize: 10 }}>EDUCATION</p>
+          <p className="text-xs" style={{ color: S.t2 }}>{(p.education as string) || "Not stated"}</p>
+          {p.profession ? (
+            <>
+              <p className="text-xs mt-2 mb-1" style={{ color: S.t4, fontSize: 10 }}>PROFESSION</p>
+              <p className="text-xs" style={{ color: S.t2 }}>{p.profession as string}</p>
+            </>
+          ) : null}
+        </div>
+
+        {p.detail_url ? (
+          <a href={p.detail_url as string} target="_blank" rel="noopener noreferrer"
+            className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-md text-xs transition-all"
+            style={{ background: "rgba(249,115,22,0.1)", border: "1px solid rgba(249,115,22,0.25)", color: S.saffron }}>
+            <ExternalLink size={11} /> View MyNeta affidavit
+          </a>
+        ) : null}
+      </div>
+    );
+  }
+
+  // Generic detail for non-candidate nodes
+  return (
+    <div className="p-4 space-y-4">
+      <button onClick={onClose} className="flex items-center gap-1 text-xs" style={{ color: S.t4 }}>
+        <X size={11} /> Back to overview
+      </button>
+      <div className="rounded-lg p-3" style={{ background: `${color}10`, border: `1px solid ${color}35` }}>
+        <div className="flex items-center gap-2 mb-1">
+          <Icon size={13} style={{ color }} />
+          <p className="text-xs font-semibold" style={{ color }}>{node.type}</p>
+        </div>
+        <p className="text-sm font-bold" style={{ color: S.t1 }}>{(p.name as string) ?? node.label}</p>
+      </div>
+      <div className="rounded-md px-3 py-2.5" style={{ background: S.surface, border: `1px solid ${S.border}` }}>
+        <p className="text-xs" style={{ color: S.t3 }}>
+          {node.type === "Party" && "Click candidates in the graph to inspect each neta's report card."}
+          {node.type === "Constituency" && `Candidates who contested ${(p.ac_name as string) ?? ""} in ${(p.year as number) ?? ""}.`}
+          {node.type === "Election" && `All constituencies and candidates in the ${(p.year as number) ?? ""} election.`}
+          {node.type === "Education" && "Candidates with this declared education level."}
+          {node.type === "AssetTier" && "Candidates whose declared assets fall in this band."}
+          {node.type === "CriminalRecord" && "Candidates who declared one or more criminal cases."}
+          {node.type === "Profession" && "Candidates with this declared profession."}
+        </p>
+      </div>
+      <div className="text-xs" style={{ color: S.t4 }}>
+        Graph connections: {(p.weight as number) ?? 0}
+      </div>
+    </div>
+  );
+}

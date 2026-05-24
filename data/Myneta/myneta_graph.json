@@ -1,0 +1,4197 @@
+{
+  "source": "myneta",
+  "nodes": [
+    {
+      "id": "election::2017",
+      "label": "2017 Election",
+      "type": "Election",
+      "properties": {
+        "name": "2017 Election",
+        "year": 2017,
+        "weight": 22
+      }
+    },
+    {
+      "id": "const::GKP_322::2017",
+      "label": "Gorakhpur Urban (2017)",
+      "type": "Constituency",
+      "properties": {
+        "name": "Gorakhpur Urban (2017)",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "year": 2017,
+        "weight": 22
+      }
+    },
+    {
+      "id": "cand::DR_RADHA_MOHAN_DAS_AGRAWAL_2017",
+      "label": "Dr. Radha Mohan Das Agraw…",
+      "type": "Candidate",
+      "properties": {
+        "name": "Dr. Radha Mohan Das Agrawal",
+        "candidate_id": "DR_RADHA_MOHAN_DAS_AGRAWAL_2017",
+        "party": "BJP",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2017,
+        "assets_rs": 24363000,
+        "criminal_cases": 0,
+        "education": "Post Graduate",
+        "profession": "",
+        "age": 61,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=4488",
+        "winner": false,
+        "weight": 24
+      }
+    },
+    {
+      "id": "party::BJP",
+      "label": "BJP",
+      "type": "Party",
+      "properties": {
+        "name": "BJP",
+        "party": "BJP",
+        "weight": 3
+      }
+    },
+    {
+      "id": "edu::post graduate",
+      "label": "Post Graduate",
+      "type": "Education",
+      "properties": {
+        "name": "Post Graduate",
+        "weight": 10
+      }
+    },
+    {
+      "id": "assets_1cr",
+      "label": "₹1–10 Cr",
+      "type": "AssetTier",
+      "properties": {
+        "name": "₹1–10 Cr",
+        "weight": 11
+      }
+    },
+    {
+      "id": "cand::AJAY_KUMAR_2017",
+      "label": "Ajay Kumar",
+      "type": "Candidate",
+      "properties": {
+        "name": "Ajay Kumar",
+        "candidate_id": "AJAY_KUMAR_2017",
+        "party": "SARVODAYA BHARAT PAR",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2017,
+        "assets_rs": 7589164,
+        "criminal_cases": 0,
+        "education": "Graduate",
+        "profession": "",
+        "age": 38,
+        "liabilities_rs": 400000,
+        "detail_url": "candidate.php?candidate_id=4882",
+        "winner": false,
+        "weight": 24
+      }
+    },
+    {
+      "id": "party::SARVODAYA BHARAT PAR",
+      "label": "SARVODAYA BHARAT PAR",
+      "type": "Party",
+      "properties": {
+        "name": "SARVODAYA BHARAT PAR",
+        "party": "SARVODAYA BHARAT PAR",
+        "weight": 1
+      }
+    },
+    {
+      "id": "edu::graduate",
+      "label": "Graduate",
+      "type": "Education",
+      "properties": {
+        "name": "Graduate",
+        "weight": 12
+      }
+    },
+    {
+      "id": "assets_10l",
+      "label": "₹10 L–1 Cr",
+      "type": "AssetTier",
+      "properties": {
+        "name": "₹10 L–1 Cr",
+        "weight": 18
+      }
+    },
+    {
+      "id": "cand::AMRENDRA_2017",
+      "label": "Amrendra",
+      "type": "Candidate",
+      "properties": {
+        "name": "Amrendra",
+        "candidate_id": "AMRENDRA_2017",
+        "party": "GONDVANA GANTANTRA P",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2017,
+        "assets_rs": 244500,
+        "criminal_cases": 0,
+        "education": "12th Pass",
+        "profession": "",
+        "age": 38,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=4892",
+        "winner": false,
+        "weight": 24
+      }
+    },
+    {
+      "id": "party::GONDVANA GANTANTRA P",
+      "label": "GONDVANA GANTANTRA P",
+      "type": "Party",
+      "properties": {
+        "name": "GONDVANA GANTANTRA P",
+        "party": "GONDVANA GANTANTRA P",
+        "weight": 1
+      }
+    },
+    {
+      "id": "edu::12th pass",
+      "label": "12th Pass",
+      "type": "Education",
+      "properties": {
+        "name": "12th Pass",
+        "weight": 9
+      }
+    },
+    {
+      "id": "assets_lt10l",
+      "label": "< ₹10 L",
+      "type": "AssetTier",
+      "properties": {
+        "name": "< ₹10 L",
+        "weight": 15
+      }
+    },
+    {
+      "id": "cand::ANIL_KUMAR_SINGH_2017",
+      "label": "Anil Kumar Singh",
+      "type": "Candidate",
+      "properties": {
+        "name": "Anil Kumar Singh",
+        "candidate_id": "ANIL_KUMAR_SINGH_2017",
+        "party": "IND",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2017,
+        "assets_rs": 24251811,
+        "criminal_cases": 0,
+        "education": "Post Graduate",
+        "profession": "",
+        "age": 43,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=4878",
+        "winner": false,
+        "weight": 24
+      }
+    },
+    {
+      "id": "party::IND",
+      "label": "IND",
+      "type": "Party",
+      "properties": {
+        "name": "IND",
+        "party": "IND",
+        "weight": 16
+      }
+    },
+    {
+      "id": "cand::ARUN_KUMAR_2017",
+      "label": "Arun Kumar",
+      "type": "Candidate",
+      "properties": {
+        "name": "Arun Kumar",
+        "candidate_id": "ARUN_KUMAR_2017",
+        "party": "IND",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2017,
+        "assets_rs": 87500,
+        "criminal_cases": 0,
+        "education": "10th Pass",
+        "profession": "",
+        "age": 38,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=4894",
+        "winner": false,
+        "weight": 24
+      }
+    },
+    {
+      "id": "edu::10th pass",
+      "label": "10th Pass",
+      "type": "Education",
+      "properties": {
+        "name": "10th Pass",
+        "weight": 4
+      }
+    },
+    {
+      "id": "cand::ARUN_KUMAR_SRIVASTAVA_2017",
+      "label": "Arun Kumar Srivastava",
+      "type": "Candidate",
+      "properties": {
+        "name": "Arun Kumar Srivastava",
+        "candidate_id": "ARUN_KUMAR_SRIVASTAVA_2017",
+        "party": "PEACE PARTY",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2017,
+        "assets_rs": 11537965,
+        "criminal_cases": 0,
+        "education": "Graduate",
+        "profession": "",
+        "age": 55,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=4891",
+        "winner": false,
+        "weight": 24
+      }
+    },
+    {
+      "id": "party::PEACE PARTY",
+      "label": "PEACE PARTY",
+      "type": "Party",
+      "properties": {
+        "name": "PEACE PARTY",
+        "party": "PEACE PARTY",
+        "weight": 1
+      }
+    },
+    {
+      "id": "cand::JANARDAN_CHOUDHARI_2017",
+      "label": "Janardan Choudhari",
+      "type": "Candidate",
+      "properties": {
+        "name": "Janardan Choudhari",
+        "candidate_id": "JANARDAN_CHOUDHARI_2017",
+        "party": "SP",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2017,
+        "assets_rs": 26716206,
+        "criminal_cases": 1,
+        "education": "12th Pass",
+        "profession": "",
+        "age": 47,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=4884",
+        "winner": false,
+        "weight": 25
+      }
+    },
+    {
+      "id": "party::SP",
+      "label": "SP",
+      "type": "Party",
+      "properties": {
+        "name": "SP",
+        "party": "SP",
+        "weight": 5
+      }
+    },
+    {
+      "id": "criminal::flagged",
+      "label": "Criminal Cases Declared",
+      "type": "CriminalRecord",
+      "properties": {
+        "name": "Criminal Cases Declared",
+        "weight": 7
+      }
+    },
+    {
+      "id": "cand::KISHANCHAND_2017",
+      "label": "Kishanchand",
+      "type": "Candidate",
+      "properties": {
+        "name": "Kishanchand",
+        "candidate_id": "KISHANCHAND_2017",
+        "party": "IND",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2017,
+        "assets_rs": 110300,
+        "criminal_cases": 0,
+        "education": "Graduate",
+        "profession": "",
+        "age": 27,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=4899",
+        "winner": false,
+        "weight": 24
+      }
+    },
+    {
+      "id": "cand::MOHAN_DAS_AGRAWAL_2017",
+      "label": "Mohan Das Agrawal",
+      "type": "Candidate",
+      "properties": {
+        "name": "Mohan Das Agrawal",
+        "candidate_id": "MOHAN_DAS_AGRAWAL_2017",
+        "party": "IND",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2017,
+        "assets_rs": 11759787,
+        "criminal_cases": 0,
+        "education": "12th Pass",
+        "profession": "",
+        "age": 55,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=4887",
+        "winner": false,
+        "weight": 24
+      }
+    },
+    {
+      "id": "cand::MOHIT_JAYSAWAL_2017",
+      "label": "Mohit Jaysawal",
+      "type": "Candidate",
+      "properties": {
+        "name": "Mohit Jaysawal",
+        "candidate_id": "MOHIT_JAYSAWAL_2017",
+        "party": "IND",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2017,
+        "assets_rs": 55000,
+        "criminal_cases": 0,
+        "education": "Graduate",
+        "profession": "",
+        "age": 30,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=4895",
+        "winner": false,
+        "weight": 24
+      }
+    },
+    {
+      "id": "cand::NANDA_SINGH_2017",
+      "label": "Nanda Singh",
+      "type": "Candidate",
+      "properties": {
+        "name": "Nanda Singh",
+        "candidate_id": "NANDA_SINGH_2017",
+        "party": "SATYA KRANTI PARTY",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2017,
+        "assets_rs": 10011500,
+        "criminal_cases": 0,
+        "education": "Graduate",
+        "profession": "",
+        "age": 45,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=4883",
+        "winner": false,
+        "weight": 24
+      }
+    },
+    {
+      "id": "party::SATYA KRANTI PARTY",
+      "label": "SATYA KRANTI PARTY",
+      "type": "Party",
+      "properties": {
+        "name": "SATYA KRANTI PARTY",
+        "party": "SATYA KRANTI PARTY",
+        "weight": 1
+      }
+    },
+    {
+      "id": "cand::PRABAL_PRATAP_SHAHI_2017",
+      "label": "Prabal Pratap Shahi",
+      "type": "Candidate",
+      "properties": {
+        "name": "Prabal Pratap Shahi",
+        "candidate_id": "PRABAL_PRATAP_SHAHI_2017",
+        "party": "IND",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2017,
+        "assets_rs": 28000,
+        "criminal_cases": 1,
+        "education": "Post Graduate",
+        "profession": "",
+        "age": 37,
+        "liabilities_rs": 35000,
+        "detail_url": "candidate.php?candidate_id=4889",
+        "winner": false,
+        "weight": 25
+      }
+    },
+    {
+      "id": "cand::RAMDAVAN_MAURYA_2017",
+      "label": "Ramdavan Maurya",
+      "type": "Candidate",
+      "properties": {
+        "name": "Ramdavan Maurya",
+        "candidate_id": "RAMDAVAN_MAURYA_2017",
+        "party": "JAN ADHIKAR PARTY",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2017,
+        "assets_rs": 485649,
+        "criminal_cases": 0,
+        "education": "8th Pass",
+        "profession": "",
+        "age": 36,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=4888",
+        "winner": false,
+        "weight": 24
+      }
+    },
+    {
+      "id": "party::JAN ADHIKAR PARTY",
+      "label": "JAN ADHIKAR PARTY",
+      "type": "Party",
+      "properties": {
+        "name": "JAN ADHIKAR PARTY",
+        "party": "JAN ADHIKAR PARTY",
+        "weight": 1
+      }
+    },
+    {
+      "id": "edu::8th pass",
+      "label": "8th Pass",
+      "type": "Education",
+      "properties": {
+        "name": "8th Pass",
+        "weight": 2
+      }
+    },
+    {
+      "id": "cand::RANA_RAHUL_2017",
+      "label": "Rana Rahul",
+      "type": "Candidate",
+      "properties": {
+        "name": "Rana Rahul",
+        "candidate_id": "RANA_RAHUL_2017",
+        "party": "INC",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2017,
+        "assets_rs": 6832612,
+        "criminal_cases": 0,
+        "education": "Graduate",
+        "profession": "",
+        "age": 32,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=4877",
+        "winner": false,
+        "weight": 24
+      }
+    },
+    {
+      "id": "party::INC",
+      "label": "INC",
+      "type": "Party",
+      "properties": {
+        "name": "INC",
+        "party": "INC",
+        "weight": 2
+      }
+    },
+    {
+      "id": "cand::SATYAPRAKASH_2017",
+      "label": "Satyaprakash",
+      "type": "Candidate",
+      "properties": {
+        "name": "Satyaprakash",
+        "candidate_id": "SATYAPRAKASH_2017",
+        "party": "IND",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2017,
+        "assets_rs": 58694656,
+        "criminal_cases": 0,
+        "education": "Post Graduate",
+        "profession": "",
+        "age": 48,
+        "liabilities_rs": 17324162,
+        "detail_url": "candidate.php?candidate_id=4893",
+        "winner": false,
+        "weight": 24
+      }
+    },
+    {
+      "id": "cand::SHAILESH_KUMAR_2017",
+      "label": "Shailesh Kumar",
+      "type": "Candidate",
+      "properties": {
+        "name": "Shailesh Kumar",
+        "candidate_id": "SHAILESH_KUMAR_2017",
+        "party": "IND",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2017,
+        "assets_rs": 1085000,
+        "criminal_cases": 0,
+        "education": "12th Pass",
+        "profession": "",
+        "age": 44,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=4881",
+        "winner": false,
+        "weight": 24
+      }
+    },
+    {
+      "id": "cand::SHESHNATH_PANDEY_2017",
+      "label": "Sheshnath Pandey",
+      "type": "Candidate",
+      "properties": {
+        "name": "Sheshnath Pandey",
+        "candidate_id": "SHESHNATH_PANDEY_2017",
+        "party": "RASHTRIYA JANADHAR P",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2017,
+        "assets_rs": 13354,
+        "criminal_cases": 0,
+        "education": "Literate",
+        "profession": "",
+        "age": 67,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=4886",
+        "winner": false,
+        "weight": 24
+      }
+    },
+    {
+      "id": "party::RASHTRIYA JANADHAR P",
+      "label": "RASHTRIYA JANADHAR P",
+      "type": "Party",
+      "properties": {
+        "name": "RASHTRIYA JANADHAR P",
+        "party": "RASHTRIYA JANADHAR P",
+        "weight": 1
+      }
+    },
+    {
+      "id": "edu::literate",
+      "label": "Literate",
+      "type": "Education",
+      "properties": {
+        "name": "Literate",
+        "weight": 2
+      }
+    },
+    {
+      "id": "cand::VINAY_KUMAR_PANDEY_2017",
+      "label": "Vinay Kumar Pandey",
+      "type": "Candidate",
+      "properties": {
+        "name": "Vinay Kumar Pandey",
+        "candidate_id": "VINAY_KUMAR_PANDEY_2017",
+        "party": "IND",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2017,
+        "assets_rs": 6246000,
+        "criminal_cases": 0,
+        "education": "Post Graduate",
+        "profession": "",
+        "age": 41,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=4898",
+        "winner": false,
+        "weight": 24
+      }
+    },
+    {
+      "id": "cand::VINDU_DEVI_2017",
+      "label": "Vindu Devi",
+      "type": "Candidate",
+      "properties": {
+        "name": "Vindu Devi",
+        "candidate_id": "VINDU_DEVI_2017",
+        "party": "IND",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2017,
+        "assets_rs": 75000,
+        "criminal_cases": 0,
+        "education": "5th Pass",
+        "profession": "",
+        "age": 34,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=4897",
+        "winner": false,
+        "weight": 24
+      }
+    },
+    {
+      "id": "edu::5th pass",
+      "label": "5th Pass",
+      "type": "Education",
+      "properties": {
+        "name": "5th Pass",
+        "weight": 1
+      }
+    },
+    {
+      "id": "cand::VINOD_2017",
+      "label": "Vinod",
+      "type": "Candidate",
+      "properties": {
+        "name": "Vinod",
+        "candidate_id": "VINOD_2017",
+        "party": "BAHUJAN MUKTI PARTY",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2017,
+        "assets_rs": 64712,
+        "criminal_cases": 0,
+        "education": "Graduate Professional",
+        "profession": "",
+        "age": 53,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=4885",
+        "winner": false,
+        "weight": 29
+      }
+    },
+    {
+      "id": "party::BAHUJAN MUKTI PARTY",
+      "label": "BAHUJAN MUKTI PARTY",
+      "type": "Party",
+      "properties": {
+        "name": "BAHUJAN MUKTI PARTY",
+        "party": "BAHUJAN MUKTI PARTY",
+        "weight": 1
+      }
+    },
+    {
+      "id": "edu::graduate professional",
+      "label": "Graduate Professional",
+      "type": "Education",
+      "properties": {
+        "name": "Graduate Professional",
+        "weight": 4
+      }
+    },
+    {
+      "id": "party::RLD",
+      "label": "RLD",
+      "type": "Party",
+      "properties": {
+        "name": "RLD",
+        "party": "RLD",
+        "weight": 1
+      }
+    },
+    {
+      "id": "election::2022",
+      "label": "2022 Election",
+      "type": "Election",
+      "properties": {
+        "name": "2022 Election",
+        "year": 2022,
+        "weight": 13
+      }
+    },
+    {
+      "id": "const::GKP_322::2022",
+      "label": "Gorakhpur Urban (2022)",
+      "type": "Constituency",
+      "properties": {
+        "name": "Gorakhpur Urban (2022)",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "year": 2022,
+        "weight": 13
+      }
+    },
+    {
+      "id": "cand::ADITYANATH_2022",
+      "label": "Adityanath",
+      "type": "Candidate",
+      "properties": {
+        "name": "Adityanath",
+        "candidate_id": "ADITYANATH_2022",
+        "party": "BJP",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2022,
+        "assets_rs": 15494054,
+        "criminal_cases": 0,
+        "education": "Graduate",
+        "profession": "",
+        "age": 49,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=3801",
+        "winner": false,
+        "weight": 16
+      }
+    },
+    {
+      "id": "cand::AJAI_SHANKER_SRIVASTAVA_2022",
+      "label": "Ajai Shanker Srivastava",
+      "type": "Candidate",
+      "properties": {
+        "name": "Ajai Shanker Srivastava",
+        "candidate_id": "AJAI_SHANKER_SRIVASTAVA_2022",
+        "party": "ANARAKSHIT SAMAJ PAR",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2022,
+        "assets_rs": 6122193,
+        "criminal_cases": 0,
+        "education": "12th Pass",
+        "profession": "",
+        "age": 53,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=3803",
+        "winner": false,
+        "weight": 16
+      }
+    },
+    {
+      "id": "party::ANARAKSHIT SAMAJ PAR",
+      "label": "ANARAKSHIT SAMAJ PAR",
+      "type": "Party",
+      "properties": {
+        "name": "ANARAKSHIT SAMAJ PAR",
+        "party": "ANARAKSHIT SAMAJ PAR",
+        "weight": 1
+      }
+    },
+    {
+      "id": "cand::CHANDRA_SHEKHAR_2022",
+      "label": "Chandra Shekhar",
+      "type": "Candidate",
+      "properties": {
+        "name": "Chandra Shekhar",
+        "candidate_id": "CHANDRA_SHEKHAR_2022",
+        "party": "AAZAD SAMAJ PARTY (K",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2022,
+        "assets_rs": 4115293,
+        "criminal_cases": 16,
+        "education": "Graduate Professional",
+        "profession": "",
+        "age": 34,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=3802",
+        "winner": false,
+        "weight": 17
+      }
+    },
+    {
+      "id": "party::AAZAD SAMAJ PARTY (K",
+      "label": "AAZAD SAMAJ PARTY (K",
+      "type": "Party",
+      "properties": {
+        "name": "AAZAD SAMAJ PARTY (K",
+        "party": "AAZAD SAMAJ PARTY (K",
+        "weight": 1
+      }
+    },
+    {
+      "id": "cand::DR_CHETNA_PANDEY_2022",
+      "label": "Dr. Chetna Pandey",
+      "type": "Candidate",
+      "properties": {
+        "name": "Dr. Chetna Pandey",
+        "candidate_id": "DR_CHETNA_PANDEY_2022",
+        "party": "INC",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2022,
+        "assets_rs": 1005568,
+        "criminal_cases": 0,
+        "education": "Doctorate",
+        "profession": "",
+        "age": 38,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=3809",
+        "winner": false,
+        "weight": 16
+      }
+    },
+    {
+      "id": "edu::doctorate",
+      "label": "Doctorate",
+      "type": "Education",
+      "properties": {
+        "name": "Doctorate",
+        "weight": 1
+      }
+    },
+    {
+      "id": "cand::JASKARAN_RAJ_2022",
+      "label": "Jaskaran Raj",
+      "type": "Candidate",
+      "properties": {
+        "name": "Jaskaran Raj",
+        "candidate_id": "JASKARAN_RAJ_2022",
+        "party": "JANTA RAKSHAK PARTY",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2022,
+        "assets_rs": 438000,
+        "criminal_cases": 2,
+        "education": "Graduate Professional",
+        "profession": "",
+        "age": 48,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=3806",
+        "winner": false,
+        "weight": 17
+      }
+    },
+    {
+      "id": "party::JANTA RAKSHAK PARTY",
+      "label": "JANTA RAKSHAK PARTY",
+      "type": "Party",
+      "properties": {
+        "name": "JANTA RAKSHAK PARTY",
+        "party": "JANTA RAKSHAK PARTY",
+        "weight": 1
+      }
+    },
+    {
+      "id": "cand::KHWAJA_SHAMSUDDIN_2022",
+      "label": "Khwaja Shamsuddin",
+      "type": "Candidate",
+      "properties": {
+        "name": "Khwaja Shamsuddin",
+        "candidate_id": "KHWAJA_SHAMSUDDIN_2022",
+        "party": "SP",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2022,
+        "assets_rs": 5763171,
+        "criminal_cases": 0,
+        "education": "10th Pass",
+        "profession": "",
+        "age": 43,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=3800",
+        "winner": false,
+        "weight": 16
+      }
+    },
+    {
+      "id": "cand::QAZI_MOHD_RASHID_2022",
+      "label": "Qazi Mohd. Rashid",
+      "type": "Candidate",
+      "properties": {
+        "name": "Qazi Mohd. Rashid",
+        "candidate_id": "QAZI_MOHD_RASHID_2022",
+        "party": "IND",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2022,
+        "assets_rs": 7188866,
+        "criminal_cases": 0,
+        "education": "Graduate",
+        "profession": "",
+        "age": 37,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=3807",
+        "winner": false,
+        "weight": 16
+      }
+    },
+    {
+      "id": "cand::RAM_DAVAN_MAURYA_2022",
+      "label": "Ram Davan Maurya",
+      "type": "Candidate",
+      "properties": {
+        "name": "Ram Davan Maurya",
+        "candidate_id": "RAM_DAVAN_MAURYA_2022",
+        "party": "RIGHT TO RECALL PART",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2022,
+        "assets_rs": 118044,
+        "criminal_cases": 0,
+        "education": "10th Pass",
+        "profession": "",
+        "age": 40,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=3805",
+        "winner": false,
+        "weight": 16
+      }
+    },
+    {
+      "id": "party::RIGHT TO RECALL PART",
+      "label": "RIGHT TO RECALL PART",
+      "type": "Party",
+      "properties": {
+        "name": "RIGHT TO RECALL PART",
+        "party": "RIGHT TO RECALL PART",
+        "weight": 1
+      }
+    },
+    {
+      "id": "cand::SUBHAWATI_UPENDRA_DUTT_SHUKLA_2022",
+      "label": "Subhawati Upendra Dutt Sh…",
+      "type": "Candidate",
+      "properties": {
+        "name": "Subhawati Upendra Dutt Shukla",
+        "candidate_id": "SUBHAWATI_UPENDRA_DUTT_SHUKLA_2022",
+        "party": "SP",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2022,
+        "assets_rs": 11675583,
+        "criminal_cases": 0,
+        "education": "Literate",
+        "profession": "",
+        "age": 55,
+        "liabilities_rs": 72000,
+        "detail_url": "candidate.php?candidate_id=3799",
+        "winner": false,
+        "weight": 16
+      }
+    },
+    {
+      "id": "cand::SURAJ_KUMAR_YADAV_2022",
+      "label": "Suraj Kumar Yadav",
+      "type": "Candidate",
+      "properties": {
+        "name": "Suraj Kumar Yadav",
+        "candidate_id": "SURAJ_KUMAR_YADAV_2022",
+        "party": "IND",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2022,
+        "assets_rs": 172682,
+        "criminal_cases": 0,
+        "education": "Graduate",
+        "profession": "",
+        "age": 29,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=3808",
+        "winner": false,
+        "weight": 16
+      }
+    },
+    {
+      "id": "cand::VIJAY_KUMAR_SRIVASTAVA_2022",
+      "label": "Vijay Kumar Srivastava",
+      "type": "Candidate",
+      "properties": {
+        "name": "Vijay Kumar Srivastava",
+        "candidate_id": "VIJAY_KUMAR_SRIVASTAVA_2022",
+        "party": "AAP",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2022,
+        "assets_rs": 9312301,
+        "criminal_cases": 0,
+        "education": "Graduate",
+        "profession": "",
+        "age": 48,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=3810",
+        "winner": false,
+        "weight": 16
+      }
+    },
+    {
+      "id": "party::AAP",
+      "label": "AAP",
+      "type": "Party",
+      "properties": {
+        "name": "AAP",
+        "party": "AAP",
+        "weight": 1
+      }
+    },
+    {
+      "id": "cand::YUVRAJ_SHARMA_2022",
+      "label": "Yuvraj Sharma",
+      "type": "Candidate",
+      "properties": {
+        "name": "Yuvraj Sharma",
+        "candidate_id": "YUVRAJ_SHARMA_2022",
+        "party": "BHARATIYA JAN JAGRIT",
+        "ac_id": "GKP_322",
+        "ac_name": "Gorakhpur Urban",
+        "election_year": 2022,
+        "assets_rs": 91000,
+        "criminal_cases": 0,
+        "education": "Graduate",
+        "profession": "",
+        "age": 52,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=3798",
+        "winner": false,
+        "weight": 16
+      }
+    },
+    {
+      "id": "party::BHARATIYA JAN JAGRIT",
+      "label": "BHARATIYA JAN JAGRIT",
+      "type": "Party",
+      "properties": {
+        "name": "BHARATIYA JAN JAGRIT",
+        "party": "BHARATIYA JAN JAGRIT",
+        "weight": 1
+      }
+    },
+    {
+      "id": "election::2024",
+      "label": "2024 Election",
+      "type": "Election",
+      "properties": {
+        "name": "2024 Election",
+        "year": 2024,
+        "weight": 13
+      }
+    },
+    {
+      "id": "const::GKP_LS64::2024",
+      "label": "Gorakhpur (2024)",
+      "type": "Constituency",
+      "properties": {
+        "name": "Gorakhpur (2024)",
+        "ac_id": "GKP_LS64",
+        "ac_name": "Gorakhpur",
+        "year": 2024,
+        "weight": 13
+      }
+    },
+    {
+      "id": "cand::RAVINDRA_SHUKLA_ALIAS_RAVI_KISHAN_2024",
+      "label": "Ravindra Shukla Alias Rav…",
+      "type": "Candidate",
+      "properties": {
+        "name": "Ravindra Shukla Alias Ravi Kishan",
+        "candidate_id": "RAVINDRA_SHUKLA_ALIAS_RAVI_KISHAN_2024",
+        "party": "BJP",
+        "ac_id": "GKP_LS64",
+        "ac_name": "Gorakhpur",
+        "election_year": 2024,
+        "assets_rs": 433235326,
+        "criminal_cases": 0,
+        "education": "12th Pass",
+        "profession": "",
+        "age": 55,
+        "liabilities_rs": 17814634,
+        "detail_url": "candidate.php?candidate_id=8791",
+        "winner": false,
+        "weight": 16
+      }
+    },
+    {
+      "id": "assets_10cr",
+      "label": "₹10 Cr+",
+      "type": "AssetTier",
+      "properties": {
+        "name": "₹10 Cr+",
+        "weight": 1
+      }
+    },
+    {
+      "id": "cand::AMITA_BHARATI_2024",
+      "label": "Amita Bharati",
+      "type": "Candidate",
+      "properties": {
+        "name": "Amita Bharati",
+        "candidate_id": "AMITA_BHARATI_2024",
+        "party": "IND",
+        "ac_id": "GKP_LS64",
+        "ac_name": "Gorakhpur",
+        "election_year": 2024,
+        "assets_rs": 29420447,
+        "criminal_cases": 0,
+        "education": "Post Graduate",
+        "profession": "",
+        "age": 36,
+        "liabilities_rs": 4517713,
+        "detail_url": "candidate.php?candidate_id=8782",
+        "winner": false,
+        "weight": 16
+      }
+    },
+    {
+      "id": "cand::ANAND_KUMAR_YADAV_ALIAS_ANAND_KUMAR_FAUJI_2024",
+      "label": "Anand Kumar Yadav Alias A…",
+      "type": "Candidate",
+      "properties": {
+        "name": "Anand Kumar Yadav Alias Anand Kumar Fauji",
+        "candidate_id": "ANAND_KUMAR_YADAV_ALIAS_ANAND_KUMAR_FAUJI_2024",
+        "party": "BHARATHEEYA JAWAN KI",
+        "ac_id": "GKP_LS64",
+        "ac_name": "Gorakhpur",
+        "election_year": 2024,
+        "assets_rs": 5261700,
+        "criminal_cases": 0,
+        "education": "Post Graduate",
+        "profession": "",
+        "age": 39,
+        "liabilities_rs": 400000,
+        "detail_url": "candidate.php?candidate_id=8780",
+        "winner": false,
+        "weight": 16
+      }
+    },
+    {
+      "id": "party::BHARATHEEYA JAWAN KI",
+      "label": "BHARATHEEYA JAWAN KI",
+      "type": "Party",
+      "properties": {
+        "name": "BHARATHEEYA JAWAN KI",
+        "party": "BHARATHEEYA JAWAN KI",
+        "weight": 1
+      }
+    },
+    {
+      "id": "cand::ANKIT_SHAH_2024",
+      "label": "Ankit Shah",
+      "type": "Candidate",
+      "properties": {
+        "name": "Ankit Shah",
+        "candidate_id": "ANKIT_SHAH_2024",
+        "party": "BHARATIYA YUVA JAN E",
+        "ac_id": "GKP_LS64",
+        "ac_name": "Gorakhpur",
+        "election_year": 2024,
+        "assets_rs": 435368,
+        "criminal_cases": 0,
+        "education": "Graduate",
+        "profession": "",
+        "age": 41,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=8779",
+        "winner": false,
+        "weight": 16
+      }
+    },
+    {
+      "id": "party::BHARATIYA YUVA JAN E",
+      "label": "BHARATIYA YUVA JAN E",
+      "type": "Party",
+      "properties": {
+        "name": "BHARATIYA YUVA JAN E",
+        "party": "BHARATIYA YUVA JAN E",
+        "weight": 1
+      }
+    },
+    {
+      "id": "cand::JAVED_ASHRAF_ALIAS_JAVED_SIMNANI_2024",
+      "label": "Javed Ashraf Alias Javed …",
+      "type": "Candidate",
+      "properties": {
+        "name": "Javed Ashraf Alias Javed Simnani",
+        "candidate_id": "JAVED_ASHRAF_ALIAS_JAVED_SIMNANI_2024",
+        "party": "SP",
+        "ac_id": "GKP_LS64",
+        "ac_name": "Gorakhpur",
+        "election_year": 2024,
+        "assets_rs": 6051000,
+        "criminal_cases": 7,
+        "education": "12th Pass",
+        "profession": "",
+        "age": 41,
+        "liabilities_rs": 957850,
+        "detail_url": "candidate.php?candidate_id=8787",
+        "winner": false,
+        "weight": 17
+      }
+    },
+    {
+      "id": "cand::KAJAL_NISHAD_2024",
+      "label": "Kajal Nishad",
+      "type": "Candidate",
+      "properties": {
+        "name": "Kajal Nishad",
+        "candidate_id": "KAJAL_NISHAD_2024",
+        "party": "SP",
+        "ac_id": "GKP_LS64",
+        "ac_name": "Gorakhpur",
+        "election_year": 2024,
+        "assets_rs": 14658768,
+        "criminal_cases": 1,
+        "education": "8th Pass",
+        "profession": "",
+        "age": 43,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=8781",
+        "winner": false,
+        "weight": 17
+      }
+    },
+    {
+      "id": "cand::NAFEES_AKHTAR_2024",
+      "label": "Nafees Akhtar",
+      "type": "Candidate",
+      "properties": {
+        "name": "Nafees Akhtar",
+        "candidate_id": "NAFEES_AKHTAR_2024",
+        "party": "IND",
+        "ac_id": "GKP_LS64",
+        "ac_name": "Gorakhpur",
+        "election_year": 2024,
+        "assets_rs": 1744014,
+        "criminal_cases": 0,
+        "education": "Graduate Professional",
+        "profession": "",
+        "age": 42,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=8790",
+        "winner": false,
+        "weight": 16
+      }
+    },
+    {
+      "id": "cand::PINTU_SAHANI_2024",
+      "label": "Pintu Sahani",
+      "type": "Candidate",
+      "properties": {
+        "name": "Pintu Sahani",
+        "candidate_id": "PINTU_SAHANI_2024",
+        "party": "IND",
+        "ac_id": "GKP_LS64",
+        "ac_name": "Gorakhpur",
+        "election_year": 2024,
+        "assets_rs": 2246203,
+        "criminal_cases": 3,
+        "education": "Post Graduate",
+        "profession": "",
+        "age": 30,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=8784",
+        "winner": false,
+        "weight": 17
+      }
+    },
+    {
+      "id": "cand::SHIVSHANKAR_PRAJAPATI_2024",
+      "label": "Shivshankar Prajapati",
+      "type": "Candidate",
+      "properties": {
+        "name": "Shivshankar Prajapati",
+        "candidate_id": "SHIVSHANKAR_PRAJAPATI_2024",
+        "party": "BHAGIDARI PARTY(P)",
+        "ac_id": "GKP_LS64",
+        "ac_name": "Gorakhpur",
+        "election_year": 2024,
+        "assets_rs": 3812531,
+        "criminal_cases": 0,
+        "education": "Post Graduate",
+        "profession": "",
+        "age": 50,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=8785",
+        "winner": false,
+        "weight": 16
+      }
+    },
+    {
+      "id": "party::BHAGIDARI PARTY(P)",
+      "label": "BHAGIDARI PARTY(P)",
+      "type": "Party",
+      "properties": {
+        "name": "BHAGIDARI PARTY(P)",
+        "party": "BHAGIDARI PARTY(P)",
+        "weight": 1
+      }
+    },
+    {
+      "id": "cand::SHRIRAM_PRASAD_2024",
+      "label": "Shriram Prasad",
+      "type": "Candidate",
+      "properties": {
+        "name": "Shriram Prasad",
+        "candidate_id": "SHRIRAM_PRASAD_2024",
+        "party": "AL-HIND PARTY",
+        "ac_id": "GKP_LS64",
+        "ac_name": "Gorakhpur",
+        "election_year": 2024,
+        "assets_rs": 25000,
+        "criminal_cases": 0,
+        "education": "10th Pass",
+        "profession": "",
+        "age": 44,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=8788",
+        "winner": false,
+        "weight": 16
+      }
+    },
+    {
+      "id": "party::AL-HIND PARTY",
+      "label": "AL-HIND PARTY",
+      "type": "Party",
+      "properties": {
+        "name": "AL-HIND PARTY",
+        "party": "AL-HIND PARTY",
+        "weight": 1
+      }
+    },
+    {
+      "id": "cand::SONU_RAI_2024",
+      "label": "Sonu Rai",
+      "type": "Candidate",
+      "properties": {
+        "name": "Sonu Rai",
+        "candidate_id": "SONU_RAI_2024",
+        "party": "MERA ADHIKAAR RASHTR",
+        "ac_id": "GKP_LS64",
+        "ac_name": "Gorakhpur",
+        "election_year": 2024,
+        "assets_rs": 5019174,
+        "criminal_cases": 0,
+        "education": "12th Pass",
+        "profession": "",
+        "age": 36,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=8789",
+        "winner": false,
+        "weight": 16
+      }
+    },
+    {
+      "id": "party::MERA ADHIKAAR RASHTR",
+      "label": "MERA ADHIKAAR RASHTR",
+      "type": "Party",
+      "properties": {
+        "name": "MERA ADHIKAAR RASHTR",
+        "party": "MERA ADHIKAAR RASHTR",
+        "weight": 1
+      }
+    },
+    {
+      "id": "cand::SUDHANSHU_2024",
+      "label": "Sudhanshu",
+      "type": "Candidate",
+      "properties": {
+        "name": "Sudhanshu",
+        "candidate_id": "SUDHANSHU_2024",
+        "party": "IND",
+        "ac_id": "GKP_LS64",
+        "ac_name": "Gorakhpur",
+        "election_year": 2024,
+        "assets_rs": 5421448,
+        "criminal_cases": 0,
+        "education": "12th Pass",
+        "profession": "",
+        "age": 54,
+        "liabilities_rs": 0,
+        "detail_url": "candidate.php?candidate_id=8786",
+        "winner": false,
+        "weight": 16
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "const::GKP_322::2017",
+      "target": "election::2017",
+      "type": "PART_OF"
+    },
+    {
+      "source": "cand::DR_RADHA_MOHAN_DAS_AGRAWAL_2017",
+      "target": "const::GKP_322::2017",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::DR_RADHA_MOHAN_DAS_AGRAWAL_2017",
+      "target": "election::2017",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::DR_RADHA_MOHAN_DAS_AGRAWAL_2017",
+      "target": "party::BJP",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::DR_RADHA_MOHAN_DAS_AGRAWAL_2017",
+      "target": "edu::post graduate",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::DR_RADHA_MOHAN_DAS_AGRAWAL_2017",
+      "target": "assets_1cr",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::AJAY_KUMAR_2017",
+      "target": "const::GKP_322::2017",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::AJAY_KUMAR_2017",
+      "target": "election::2017",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::AJAY_KUMAR_2017",
+      "target": "party::SARVODAYA BHARAT PAR",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::AJAY_KUMAR_2017",
+      "target": "edu::graduate",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::AJAY_KUMAR_2017",
+      "target": "assets_10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::AMRENDRA_2017",
+      "target": "const::GKP_322::2017",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::AMRENDRA_2017",
+      "target": "election::2017",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::AMRENDRA_2017",
+      "target": "party::GONDVANA GANTANTRA P",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::AMRENDRA_2017",
+      "target": "edu::12th pass",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::AMRENDRA_2017",
+      "target": "assets_lt10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::ANIL_KUMAR_SINGH_2017",
+      "target": "const::GKP_322::2017",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::ANIL_KUMAR_SINGH_2017",
+      "target": "election::2017",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::ANIL_KUMAR_SINGH_2017",
+      "target": "party::IND",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::ANIL_KUMAR_SINGH_2017",
+      "target": "edu::post graduate",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::ANIL_KUMAR_SINGH_2017",
+      "target": "assets_1cr",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_2017",
+      "target": "const::GKP_322::2017",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_2017",
+      "target": "election::2017",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_2017",
+      "target": "party::IND",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_2017",
+      "target": "edu::10th pass",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_2017",
+      "target": "assets_lt10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_SRIVASTAVA_2017",
+      "target": "const::GKP_322::2017",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_SRIVASTAVA_2017",
+      "target": "election::2017",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_SRIVASTAVA_2017",
+      "target": "party::PEACE PARTY",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_SRIVASTAVA_2017",
+      "target": "edu::graduate",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_SRIVASTAVA_2017",
+      "target": "assets_1cr",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::JANARDAN_CHOUDHARI_2017",
+      "target": "const::GKP_322::2017",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::JANARDAN_CHOUDHARI_2017",
+      "target": "election::2017",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::JANARDAN_CHOUDHARI_2017",
+      "target": "party::SP",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::JANARDAN_CHOUDHARI_2017",
+      "target": "edu::12th pass",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::JANARDAN_CHOUDHARI_2017",
+      "target": "criminal::flagged",
+      "type": "FLAGGED"
+    },
+    {
+      "source": "cand::JANARDAN_CHOUDHARI_2017",
+      "target": "assets_1cr",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::KISHANCHAND_2017",
+      "target": "const::GKP_322::2017",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::KISHANCHAND_2017",
+      "target": "election::2017",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::KISHANCHAND_2017",
+      "target": "party::IND",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::KISHANCHAND_2017",
+      "target": "edu::graduate",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::KISHANCHAND_2017",
+      "target": "assets_lt10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::MOHAN_DAS_AGRAWAL_2017",
+      "target": "const::GKP_322::2017",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::MOHAN_DAS_AGRAWAL_2017",
+      "target": "election::2017",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::MOHAN_DAS_AGRAWAL_2017",
+      "target": "party::IND",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::MOHAN_DAS_AGRAWAL_2017",
+      "target": "edu::12th pass",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::MOHAN_DAS_AGRAWAL_2017",
+      "target": "assets_1cr",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::MOHIT_JAYSAWAL_2017",
+      "target": "const::GKP_322::2017",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::MOHIT_JAYSAWAL_2017",
+      "target": "election::2017",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::MOHIT_JAYSAWAL_2017",
+      "target": "party::IND",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::MOHIT_JAYSAWAL_2017",
+      "target": "edu::graduate",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::MOHIT_JAYSAWAL_2017",
+      "target": "assets_lt10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::NANDA_SINGH_2017",
+      "target": "const::GKP_322::2017",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::NANDA_SINGH_2017",
+      "target": "election::2017",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::NANDA_SINGH_2017",
+      "target": "party::SATYA KRANTI PARTY",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::NANDA_SINGH_2017",
+      "target": "edu::graduate",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::NANDA_SINGH_2017",
+      "target": "assets_1cr",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::PRABAL_PRATAP_SHAHI_2017",
+      "target": "const::GKP_322::2017",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::PRABAL_PRATAP_SHAHI_2017",
+      "target": "election::2017",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::PRABAL_PRATAP_SHAHI_2017",
+      "target": "party::IND",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::PRABAL_PRATAP_SHAHI_2017",
+      "target": "edu::post graduate",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::PRABAL_PRATAP_SHAHI_2017",
+      "target": "criminal::flagged",
+      "type": "FLAGGED"
+    },
+    {
+      "source": "cand::PRABAL_PRATAP_SHAHI_2017",
+      "target": "assets_lt10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::RAMDAVAN_MAURYA_2017",
+      "target": "const::GKP_322::2017",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::RAMDAVAN_MAURYA_2017",
+      "target": "election::2017",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::RAMDAVAN_MAURYA_2017",
+      "target": "party::JAN ADHIKAR PARTY",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::RAMDAVAN_MAURYA_2017",
+      "target": "edu::8th pass",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::RAMDAVAN_MAURYA_2017",
+      "target": "assets_lt10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::RANA_RAHUL_2017",
+      "target": "const::GKP_322::2017",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::RANA_RAHUL_2017",
+      "target": "election::2017",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::RANA_RAHUL_2017",
+      "target": "party::INC",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::RANA_RAHUL_2017",
+      "target": "edu::graduate",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::RANA_RAHUL_2017",
+      "target": "assets_10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::SATYAPRAKASH_2017",
+      "target": "const::GKP_322::2017",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::SATYAPRAKASH_2017",
+      "target": "election::2017",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::SATYAPRAKASH_2017",
+      "target": "party::IND",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::SATYAPRAKASH_2017",
+      "target": "edu::post graduate",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::SATYAPRAKASH_2017",
+      "target": "assets_1cr",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::SHAILESH_KUMAR_2017",
+      "target": "const::GKP_322::2017",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::SHAILESH_KUMAR_2017",
+      "target": "election::2017",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::SHAILESH_KUMAR_2017",
+      "target": "party::IND",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::SHAILESH_KUMAR_2017",
+      "target": "edu::12th pass",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::SHAILESH_KUMAR_2017",
+      "target": "assets_10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::SHESHNATH_PANDEY_2017",
+      "target": "const::GKP_322::2017",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::SHESHNATH_PANDEY_2017",
+      "target": "election::2017",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::SHESHNATH_PANDEY_2017",
+      "target": "party::RASHTRIYA JANADHAR P",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::SHESHNATH_PANDEY_2017",
+      "target": "edu::literate",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::SHESHNATH_PANDEY_2017",
+      "target": "assets_lt10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::VINAY_KUMAR_PANDEY_2017",
+      "target": "const::GKP_322::2017",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::VINAY_KUMAR_PANDEY_2017",
+      "target": "election::2017",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::VINAY_KUMAR_PANDEY_2017",
+      "target": "party::IND",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::VINAY_KUMAR_PANDEY_2017",
+      "target": "edu::post graduate",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::VINAY_KUMAR_PANDEY_2017",
+      "target": "assets_10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::VINDU_DEVI_2017",
+      "target": "const::GKP_322::2017",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::VINDU_DEVI_2017",
+      "target": "election::2017",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::VINDU_DEVI_2017",
+      "target": "party::IND",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::VINDU_DEVI_2017",
+      "target": "edu::5th pass",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::VINDU_DEVI_2017",
+      "target": "assets_lt10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::VINOD_2017",
+      "target": "const::GKP_322::2017",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::VINOD_2017",
+      "target": "election::2017",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::VINOD_2017",
+      "target": "party::BAHUJAN MUKTI PARTY",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::VINOD_2017",
+      "target": "edu::graduate professional",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::VINOD_2017",
+      "target": "assets_lt10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::VINOD_2017",
+      "target": "const::GKP_322::2017",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::VINOD_2017",
+      "target": "election::2017",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::VINOD_2017",
+      "target": "party::RLD",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::VINOD_2017",
+      "target": "edu::post graduate",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::VINOD_2017",
+      "target": "assets_10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "const::GKP_322::2022",
+      "target": "election::2022",
+      "type": "PART_OF"
+    },
+    {
+      "source": "cand::ADITYANATH_2022",
+      "target": "const::GKP_322::2022",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::ADITYANATH_2022",
+      "target": "election::2022",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::ADITYANATH_2022",
+      "target": "party::BJP",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::ADITYANATH_2022",
+      "target": "edu::graduate",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::ADITYANATH_2022",
+      "target": "assets_1cr",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::AJAI_SHANKER_SRIVASTAVA_2022",
+      "target": "const::GKP_322::2022",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::AJAI_SHANKER_SRIVASTAVA_2022",
+      "target": "election::2022",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::AJAI_SHANKER_SRIVASTAVA_2022",
+      "target": "party::ANARAKSHIT SAMAJ PAR",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::AJAI_SHANKER_SRIVASTAVA_2022",
+      "target": "edu::12th pass",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::AJAI_SHANKER_SRIVASTAVA_2022",
+      "target": "assets_10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::CHANDRA_SHEKHAR_2022",
+      "target": "const::GKP_322::2022",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::CHANDRA_SHEKHAR_2022",
+      "target": "election::2022",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::CHANDRA_SHEKHAR_2022",
+      "target": "party::AAZAD SAMAJ PARTY (K",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::CHANDRA_SHEKHAR_2022",
+      "target": "edu::graduate professional",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::CHANDRA_SHEKHAR_2022",
+      "target": "criminal::flagged",
+      "type": "FLAGGED"
+    },
+    {
+      "source": "cand::CHANDRA_SHEKHAR_2022",
+      "target": "assets_10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::DR_CHETNA_PANDEY_2022",
+      "target": "const::GKP_322::2022",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::DR_CHETNA_PANDEY_2022",
+      "target": "election::2022",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::DR_CHETNA_PANDEY_2022",
+      "target": "party::INC",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::DR_CHETNA_PANDEY_2022",
+      "target": "edu::doctorate",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::DR_CHETNA_PANDEY_2022",
+      "target": "assets_10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::JASKARAN_RAJ_2022",
+      "target": "const::GKP_322::2022",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::JASKARAN_RAJ_2022",
+      "target": "election::2022",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::JASKARAN_RAJ_2022",
+      "target": "party::JANTA RAKSHAK PARTY",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::JASKARAN_RAJ_2022",
+      "target": "edu::graduate professional",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::JASKARAN_RAJ_2022",
+      "target": "criminal::flagged",
+      "type": "FLAGGED"
+    },
+    {
+      "source": "cand::JASKARAN_RAJ_2022",
+      "target": "assets_lt10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::KHWAJA_SHAMSUDDIN_2022",
+      "target": "const::GKP_322::2022",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::KHWAJA_SHAMSUDDIN_2022",
+      "target": "election::2022",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::KHWAJA_SHAMSUDDIN_2022",
+      "target": "party::SP",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::KHWAJA_SHAMSUDDIN_2022",
+      "target": "edu::10th pass",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::KHWAJA_SHAMSUDDIN_2022",
+      "target": "assets_10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::QAZI_MOHD_RASHID_2022",
+      "target": "const::GKP_322::2022",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::QAZI_MOHD_RASHID_2022",
+      "target": "election::2022",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::QAZI_MOHD_RASHID_2022",
+      "target": "party::IND",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::QAZI_MOHD_RASHID_2022",
+      "target": "edu::graduate",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::QAZI_MOHD_RASHID_2022",
+      "target": "assets_10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::RAM_DAVAN_MAURYA_2022",
+      "target": "const::GKP_322::2022",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::RAM_DAVAN_MAURYA_2022",
+      "target": "election::2022",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::RAM_DAVAN_MAURYA_2022",
+      "target": "party::RIGHT TO RECALL PART",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::RAM_DAVAN_MAURYA_2022",
+      "target": "edu::10th pass",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::RAM_DAVAN_MAURYA_2022",
+      "target": "assets_lt10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::SUBHAWATI_UPENDRA_DUTT_SHUKLA_2022",
+      "target": "const::GKP_322::2022",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::SUBHAWATI_UPENDRA_DUTT_SHUKLA_2022",
+      "target": "election::2022",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::SUBHAWATI_UPENDRA_DUTT_SHUKLA_2022",
+      "target": "party::SP",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::SUBHAWATI_UPENDRA_DUTT_SHUKLA_2022",
+      "target": "edu::literate",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::SUBHAWATI_UPENDRA_DUTT_SHUKLA_2022",
+      "target": "assets_1cr",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::SURAJ_KUMAR_YADAV_2022",
+      "target": "const::GKP_322::2022",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::SURAJ_KUMAR_YADAV_2022",
+      "target": "election::2022",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::SURAJ_KUMAR_YADAV_2022",
+      "target": "party::IND",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::SURAJ_KUMAR_YADAV_2022",
+      "target": "edu::graduate",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::SURAJ_KUMAR_YADAV_2022",
+      "target": "assets_lt10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::VIJAY_KUMAR_SRIVASTAVA_2022",
+      "target": "const::GKP_322::2022",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::VIJAY_KUMAR_SRIVASTAVA_2022",
+      "target": "election::2022",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::VIJAY_KUMAR_SRIVASTAVA_2022",
+      "target": "party::AAP",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::VIJAY_KUMAR_SRIVASTAVA_2022",
+      "target": "edu::graduate",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::VIJAY_KUMAR_SRIVASTAVA_2022",
+      "target": "assets_10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::YUVRAJ_SHARMA_2022",
+      "target": "const::GKP_322::2022",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::YUVRAJ_SHARMA_2022",
+      "target": "election::2022",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::YUVRAJ_SHARMA_2022",
+      "target": "party::BHARATIYA JAN JAGRIT",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::YUVRAJ_SHARMA_2022",
+      "target": "edu::graduate",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::YUVRAJ_SHARMA_2022",
+      "target": "assets_lt10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "const::GKP_LS64::2024",
+      "target": "election::2024",
+      "type": "PART_OF"
+    },
+    {
+      "source": "cand::RAVINDRA_SHUKLA_ALIAS_RAVI_KISHAN_2024",
+      "target": "const::GKP_LS64::2024",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::RAVINDRA_SHUKLA_ALIAS_RAVI_KISHAN_2024",
+      "target": "election::2024",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::RAVINDRA_SHUKLA_ALIAS_RAVI_KISHAN_2024",
+      "target": "party::BJP",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::RAVINDRA_SHUKLA_ALIAS_RAVI_KISHAN_2024",
+      "target": "edu::12th pass",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::RAVINDRA_SHUKLA_ALIAS_RAVI_KISHAN_2024",
+      "target": "assets_10cr",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::AMITA_BHARATI_2024",
+      "target": "const::GKP_LS64::2024",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::AMITA_BHARATI_2024",
+      "target": "election::2024",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::AMITA_BHARATI_2024",
+      "target": "party::IND",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::AMITA_BHARATI_2024",
+      "target": "edu::post graduate",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::AMITA_BHARATI_2024",
+      "target": "assets_1cr",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::ANAND_KUMAR_YADAV_ALIAS_ANAND_KUMAR_FAUJI_2024",
+      "target": "const::GKP_LS64::2024",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::ANAND_KUMAR_YADAV_ALIAS_ANAND_KUMAR_FAUJI_2024",
+      "target": "election::2024",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::ANAND_KUMAR_YADAV_ALIAS_ANAND_KUMAR_FAUJI_2024",
+      "target": "party::BHARATHEEYA JAWAN KI",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::ANAND_KUMAR_YADAV_ALIAS_ANAND_KUMAR_FAUJI_2024",
+      "target": "edu::post graduate",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::ANAND_KUMAR_YADAV_ALIAS_ANAND_KUMAR_FAUJI_2024",
+      "target": "assets_10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::ANKIT_SHAH_2024",
+      "target": "const::GKP_LS64::2024",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::ANKIT_SHAH_2024",
+      "target": "election::2024",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::ANKIT_SHAH_2024",
+      "target": "party::BHARATIYA YUVA JAN E",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::ANKIT_SHAH_2024",
+      "target": "edu::graduate",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::ANKIT_SHAH_2024",
+      "target": "assets_lt10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::JAVED_ASHRAF_ALIAS_JAVED_SIMNANI_2024",
+      "target": "const::GKP_LS64::2024",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::JAVED_ASHRAF_ALIAS_JAVED_SIMNANI_2024",
+      "target": "election::2024",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::JAVED_ASHRAF_ALIAS_JAVED_SIMNANI_2024",
+      "target": "party::SP",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::JAVED_ASHRAF_ALIAS_JAVED_SIMNANI_2024",
+      "target": "edu::12th pass",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::JAVED_ASHRAF_ALIAS_JAVED_SIMNANI_2024",
+      "target": "criminal::flagged",
+      "type": "FLAGGED"
+    },
+    {
+      "source": "cand::JAVED_ASHRAF_ALIAS_JAVED_SIMNANI_2024",
+      "target": "assets_10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::KAJAL_NISHAD_2024",
+      "target": "const::GKP_LS64::2024",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::KAJAL_NISHAD_2024",
+      "target": "election::2024",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::KAJAL_NISHAD_2024",
+      "target": "party::SP",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::KAJAL_NISHAD_2024",
+      "target": "edu::8th pass",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::KAJAL_NISHAD_2024",
+      "target": "criminal::flagged",
+      "type": "FLAGGED"
+    },
+    {
+      "source": "cand::KAJAL_NISHAD_2024",
+      "target": "assets_1cr",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::NAFEES_AKHTAR_2024",
+      "target": "const::GKP_LS64::2024",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::NAFEES_AKHTAR_2024",
+      "target": "election::2024",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::NAFEES_AKHTAR_2024",
+      "target": "party::IND",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::NAFEES_AKHTAR_2024",
+      "target": "edu::graduate professional",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::NAFEES_AKHTAR_2024",
+      "target": "assets_10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::PINTU_SAHANI_2024",
+      "target": "const::GKP_LS64::2024",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::PINTU_SAHANI_2024",
+      "target": "election::2024",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::PINTU_SAHANI_2024",
+      "target": "party::IND",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::PINTU_SAHANI_2024",
+      "target": "edu::post graduate",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::PINTU_SAHANI_2024",
+      "target": "criminal::flagged",
+      "type": "FLAGGED"
+    },
+    {
+      "source": "cand::PINTU_SAHANI_2024",
+      "target": "assets_10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::SHIVSHANKAR_PRAJAPATI_2024",
+      "target": "const::GKP_LS64::2024",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::SHIVSHANKAR_PRAJAPATI_2024",
+      "target": "election::2024",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::SHIVSHANKAR_PRAJAPATI_2024",
+      "target": "party::BHAGIDARI PARTY(P)",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::SHIVSHANKAR_PRAJAPATI_2024",
+      "target": "edu::post graduate",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::SHIVSHANKAR_PRAJAPATI_2024",
+      "target": "assets_10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::SHRIRAM_PRASAD_2024",
+      "target": "const::GKP_LS64::2024",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::SHRIRAM_PRASAD_2024",
+      "target": "election::2024",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::SHRIRAM_PRASAD_2024",
+      "target": "party::AL-HIND PARTY",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::SHRIRAM_PRASAD_2024",
+      "target": "edu::10th pass",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::SHRIRAM_PRASAD_2024",
+      "target": "assets_lt10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::SONU_RAI_2024",
+      "target": "const::GKP_LS64::2024",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::SONU_RAI_2024",
+      "target": "election::2024",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::SONU_RAI_2024",
+      "target": "party::MERA ADHIKAAR RASHTR",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::SONU_RAI_2024",
+      "target": "edu::12th pass",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::SONU_RAI_2024",
+      "target": "assets_10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::SUDHANSHU_2024",
+      "target": "const::GKP_LS64::2024",
+      "type": "CONTESTED_IN"
+    },
+    {
+      "source": "cand::SUDHANSHU_2024",
+      "target": "election::2024",
+      "type": "IN_ELECTION"
+    },
+    {
+      "source": "cand::SUDHANSHU_2024",
+      "target": "party::IND",
+      "type": "REPRESENTS"
+    },
+    {
+      "source": "cand::SUDHANSHU_2024",
+      "target": "edu::12th pass",
+      "type": "EDUCATED"
+    },
+    {
+      "source": "cand::SUDHANSHU_2024",
+      "target": "assets_10l",
+      "type": "WEALTH_TIER"
+    },
+    {
+      "source": "cand::AJAY_KUMAR_2017",
+      "target": "cand::AMRENDRA_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAY_KUMAR_2017",
+      "target": "cand::ANIL_KUMAR_SINGH_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAY_KUMAR_2017",
+      "target": "cand::ARUN_KUMAR_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAY_KUMAR_2017",
+      "target": "cand::ARUN_KUMAR_SRIVASTAVA_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAY_KUMAR_2017",
+      "target": "cand::DR_RADHA_MOHAN_DAS_AGRAWAL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAY_KUMAR_2017",
+      "target": "cand::JANARDAN_CHOUDHARI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAY_KUMAR_2017",
+      "target": "cand::KISHANCHAND_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAY_KUMAR_2017",
+      "target": "cand::MOHAN_DAS_AGRAWAL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAY_KUMAR_2017",
+      "target": "cand::MOHIT_JAYSAWAL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAY_KUMAR_2017",
+      "target": "cand::NANDA_SINGH_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAY_KUMAR_2017",
+      "target": "cand::PRABAL_PRATAP_SHAHI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAY_KUMAR_2017",
+      "target": "cand::RAMDAVAN_MAURYA_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAY_KUMAR_2017",
+      "target": "cand::RANA_RAHUL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAY_KUMAR_2017",
+      "target": "cand::SATYAPRAKASH_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAY_KUMAR_2017",
+      "target": "cand::SHAILESH_KUMAR_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAY_KUMAR_2017",
+      "target": "cand::SHESHNATH_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAY_KUMAR_2017",
+      "target": "cand::VINAY_KUMAR_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAY_KUMAR_2017",
+      "target": "cand::VINDU_DEVI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAY_KUMAR_2017",
+      "target": "cand::VINOD_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMRENDRA_2017",
+      "target": "cand::ANIL_KUMAR_SINGH_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMRENDRA_2017",
+      "target": "cand::ARUN_KUMAR_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMRENDRA_2017",
+      "target": "cand::ARUN_KUMAR_SRIVASTAVA_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMRENDRA_2017",
+      "target": "cand::DR_RADHA_MOHAN_DAS_AGRAWAL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMRENDRA_2017",
+      "target": "cand::JANARDAN_CHOUDHARI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMRENDRA_2017",
+      "target": "cand::KISHANCHAND_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMRENDRA_2017",
+      "target": "cand::MOHAN_DAS_AGRAWAL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMRENDRA_2017",
+      "target": "cand::MOHIT_JAYSAWAL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMRENDRA_2017",
+      "target": "cand::NANDA_SINGH_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMRENDRA_2017",
+      "target": "cand::PRABAL_PRATAP_SHAHI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMRENDRA_2017",
+      "target": "cand::RAMDAVAN_MAURYA_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMRENDRA_2017",
+      "target": "cand::RANA_RAHUL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMRENDRA_2017",
+      "target": "cand::SATYAPRAKASH_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMRENDRA_2017",
+      "target": "cand::SHAILESH_KUMAR_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMRENDRA_2017",
+      "target": "cand::SHESHNATH_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMRENDRA_2017",
+      "target": "cand::VINAY_KUMAR_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMRENDRA_2017",
+      "target": "cand::VINDU_DEVI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMRENDRA_2017",
+      "target": "cand::VINOD_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANIL_KUMAR_SINGH_2017",
+      "target": "cand::ARUN_KUMAR_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANIL_KUMAR_SINGH_2017",
+      "target": "cand::ARUN_KUMAR_SRIVASTAVA_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANIL_KUMAR_SINGH_2017",
+      "target": "cand::DR_RADHA_MOHAN_DAS_AGRAWAL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANIL_KUMAR_SINGH_2017",
+      "target": "cand::JANARDAN_CHOUDHARI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANIL_KUMAR_SINGH_2017",
+      "target": "cand::KISHANCHAND_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANIL_KUMAR_SINGH_2017",
+      "target": "cand::MOHAN_DAS_AGRAWAL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANIL_KUMAR_SINGH_2017",
+      "target": "cand::MOHIT_JAYSAWAL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANIL_KUMAR_SINGH_2017",
+      "target": "cand::NANDA_SINGH_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANIL_KUMAR_SINGH_2017",
+      "target": "cand::PRABAL_PRATAP_SHAHI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANIL_KUMAR_SINGH_2017",
+      "target": "cand::RAMDAVAN_MAURYA_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANIL_KUMAR_SINGH_2017",
+      "target": "cand::RANA_RAHUL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANIL_KUMAR_SINGH_2017",
+      "target": "cand::SATYAPRAKASH_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANIL_KUMAR_SINGH_2017",
+      "target": "cand::SHAILESH_KUMAR_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANIL_KUMAR_SINGH_2017",
+      "target": "cand::SHESHNATH_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANIL_KUMAR_SINGH_2017",
+      "target": "cand::VINAY_KUMAR_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANIL_KUMAR_SINGH_2017",
+      "target": "cand::VINDU_DEVI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANIL_KUMAR_SINGH_2017",
+      "target": "cand::VINOD_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_2017",
+      "target": "cand::ARUN_KUMAR_SRIVASTAVA_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_2017",
+      "target": "cand::DR_RADHA_MOHAN_DAS_AGRAWAL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_2017",
+      "target": "cand::JANARDAN_CHOUDHARI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_2017",
+      "target": "cand::KISHANCHAND_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_2017",
+      "target": "cand::MOHAN_DAS_AGRAWAL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_2017",
+      "target": "cand::MOHIT_JAYSAWAL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_2017",
+      "target": "cand::NANDA_SINGH_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_2017",
+      "target": "cand::PRABAL_PRATAP_SHAHI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_2017",
+      "target": "cand::RAMDAVAN_MAURYA_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_2017",
+      "target": "cand::RANA_RAHUL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_2017",
+      "target": "cand::SATYAPRAKASH_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_2017",
+      "target": "cand::SHAILESH_KUMAR_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_2017",
+      "target": "cand::SHESHNATH_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_2017",
+      "target": "cand::VINAY_KUMAR_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_2017",
+      "target": "cand::VINDU_DEVI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_2017",
+      "target": "cand::VINOD_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_SRIVASTAVA_2017",
+      "target": "cand::DR_RADHA_MOHAN_DAS_AGRAWAL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_SRIVASTAVA_2017",
+      "target": "cand::JANARDAN_CHOUDHARI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_SRIVASTAVA_2017",
+      "target": "cand::KISHANCHAND_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_SRIVASTAVA_2017",
+      "target": "cand::MOHAN_DAS_AGRAWAL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_SRIVASTAVA_2017",
+      "target": "cand::MOHIT_JAYSAWAL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_SRIVASTAVA_2017",
+      "target": "cand::NANDA_SINGH_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_SRIVASTAVA_2017",
+      "target": "cand::PRABAL_PRATAP_SHAHI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_SRIVASTAVA_2017",
+      "target": "cand::RAMDAVAN_MAURYA_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_SRIVASTAVA_2017",
+      "target": "cand::RANA_RAHUL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_SRIVASTAVA_2017",
+      "target": "cand::SATYAPRAKASH_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_SRIVASTAVA_2017",
+      "target": "cand::SHAILESH_KUMAR_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_SRIVASTAVA_2017",
+      "target": "cand::SHESHNATH_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_SRIVASTAVA_2017",
+      "target": "cand::VINAY_KUMAR_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_SRIVASTAVA_2017",
+      "target": "cand::VINDU_DEVI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ARUN_KUMAR_SRIVASTAVA_2017",
+      "target": "cand::VINOD_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::DR_RADHA_MOHAN_DAS_AGRAWAL_2017",
+      "target": "cand::JANARDAN_CHOUDHARI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::DR_RADHA_MOHAN_DAS_AGRAWAL_2017",
+      "target": "cand::KISHANCHAND_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::DR_RADHA_MOHAN_DAS_AGRAWAL_2017",
+      "target": "cand::MOHAN_DAS_AGRAWAL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::DR_RADHA_MOHAN_DAS_AGRAWAL_2017",
+      "target": "cand::MOHIT_JAYSAWAL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::DR_RADHA_MOHAN_DAS_AGRAWAL_2017",
+      "target": "cand::NANDA_SINGH_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::DR_RADHA_MOHAN_DAS_AGRAWAL_2017",
+      "target": "cand::PRABAL_PRATAP_SHAHI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::DR_RADHA_MOHAN_DAS_AGRAWAL_2017",
+      "target": "cand::RAMDAVAN_MAURYA_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::DR_RADHA_MOHAN_DAS_AGRAWAL_2017",
+      "target": "cand::RANA_RAHUL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::DR_RADHA_MOHAN_DAS_AGRAWAL_2017",
+      "target": "cand::SATYAPRAKASH_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::DR_RADHA_MOHAN_DAS_AGRAWAL_2017",
+      "target": "cand::SHAILESH_KUMAR_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::DR_RADHA_MOHAN_DAS_AGRAWAL_2017",
+      "target": "cand::SHESHNATH_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::DR_RADHA_MOHAN_DAS_AGRAWAL_2017",
+      "target": "cand::VINAY_KUMAR_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::DR_RADHA_MOHAN_DAS_AGRAWAL_2017",
+      "target": "cand::VINDU_DEVI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::DR_RADHA_MOHAN_DAS_AGRAWAL_2017",
+      "target": "cand::VINOD_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JANARDAN_CHOUDHARI_2017",
+      "target": "cand::KISHANCHAND_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JANARDAN_CHOUDHARI_2017",
+      "target": "cand::MOHAN_DAS_AGRAWAL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JANARDAN_CHOUDHARI_2017",
+      "target": "cand::MOHIT_JAYSAWAL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JANARDAN_CHOUDHARI_2017",
+      "target": "cand::NANDA_SINGH_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JANARDAN_CHOUDHARI_2017",
+      "target": "cand::PRABAL_PRATAP_SHAHI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JANARDAN_CHOUDHARI_2017",
+      "target": "cand::RAMDAVAN_MAURYA_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JANARDAN_CHOUDHARI_2017",
+      "target": "cand::RANA_RAHUL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JANARDAN_CHOUDHARI_2017",
+      "target": "cand::SATYAPRAKASH_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JANARDAN_CHOUDHARI_2017",
+      "target": "cand::SHAILESH_KUMAR_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JANARDAN_CHOUDHARI_2017",
+      "target": "cand::SHESHNATH_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JANARDAN_CHOUDHARI_2017",
+      "target": "cand::VINAY_KUMAR_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JANARDAN_CHOUDHARI_2017",
+      "target": "cand::VINDU_DEVI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JANARDAN_CHOUDHARI_2017",
+      "target": "cand::VINOD_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::KISHANCHAND_2017",
+      "target": "cand::MOHAN_DAS_AGRAWAL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::KISHANCHAND_2017",
+      "target": "cand::MOHIT_JAYSAWAL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::KISHANCHAND_2017",
+      "target": "cand::NANDA_SINGH_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::KISHANCHAND_2017",
+      "target": "cand::PRABAL_PRATAP_SHAHI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::KISHANCHAND_2017",
+      "target": "cand::RAMDAVAN_MAURYA_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::KISHANCHAND_2017",
+      "target": "cand::RANA_RAHUL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::KISHANCHAND_2017",
+      "target": "cand::SATYAPRAKASH_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::KISHANCHAND_2017",
+      "target": "cand::SHAILESH_KUMAR_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::KISHANCHAND_2017",
+      "target": "cand::SHESHNATH_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::KISHANCHAND_2017",
+      "target": "cand::VINAY_KUMAR_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::KISHANCHAND_2017",
+      "target": "cand::VINDU_DEVI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::KISHANCHAND_2017",
+      "target": "cand::VINOD_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::MOHAN_DAS_AGRAWAL_2017",
+      "target": "cand::MOHIT_JAYSAWAL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::MOHAN_DAS_AGRAWAL_2017",
+      "target": "cand::NANDA_SINGH_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::MOHAN_DAS_AGRAWAL_2017",
+      "target": "cand::PRABAL_PRATAP_SHAHI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::MOHAN_DAS_AGRAWAL_2017",
+      "target": "cand::RAMDAVAN_MAURYA_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::MOHAN_DAS_AGRAWAL_2017",
+      "target": "cand::RANA_RAHUL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::MOHAN_DAS_AGRAWAL_2017",
+      "target": "cand::SATYAPRAKASH_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::MOHAN_DAS_AGRAWAL_2017",
+      "target": "cand::SHAILESH_KUMAR_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::MOHAN_DAS_AGRAWAL_2017",
+      "target": "cand::SHESHNATH_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::MOHAN_DAS_AGRAWAL_2017",
+      "target": "cand::VINAY_KUMAR_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::MOHAN_DAS_AGRAWAL_2017",
+      "target": "cand::VINDU_DEVI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::MOHAN_DAS_AGRAWAL_2017",
+      "target": "cand::VINOD_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::MOHIT_JAYSAWAL_2017",
+      "target": "cand::NANDA_SINGH_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::MOHIT_JAYSAWAL_2017",
+      "target": "cand::PRABAL_PRATAP_SHAHI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::MOHIT_JAYSAWAL_2017",
+      "target": "cand::RAMDAVAN_MAURYA_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::MOHIT_JAYSAWAL_2017",
+      "target": "cand::RANA_RAHUL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::MOHIT_JAYSAWAL_2017",
+      "target": "cand::SATYAPRAKASH_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::MOHIT_JAYSAWAL_2017",
+      "target": "cand::SHAILESH_KUMAR_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::MOHIT_JAYSAWAL_2017",
+      "target": "cand::SHESHNATH_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::MOHIT_JAYSAWAL_2017",
+      "target": "cand::VINAY_KUMAR_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::MOHIT_JAYSAWAL_2017",
+      "target": "cand::VINDU_DEVI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::MOHIT_JAYSAWAL_2017",
+      "target": "cand::VINOD_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::NANDA_SINGH_2017",
+      "target": "cand::PRABAL_PRATAP_SHAHI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::NANDA_SINGH_2017",
+      "target": "cand::RAMDAVAN_MAURYA_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::NANDA_SINGH_2017",
+      "target": "cand::RANA_RAHUL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::NANDA_SINGH_2017",
+      "target": "cand::SATYAPRAKASH_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::NANDA_SINGH_2017",
+      "target": "cand::SHAILESH_KUMAR_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::NANDA_SINGH_2017",
+      "target": "cand::SHESHNATH_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::NANDA_SINGH_2017",
+      "target": "cand::VINAY_KUMAR_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::NANDA_SINGH_2017",
+      "target": "cand::VINDU_DEVI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::NANDA_SINGH_2017",
+      "target": "cand::VINOD_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::PRABAL_PRATAP_SHAHI_2017",
+      "target": "cand::RAMDAVAN_MAURYA_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::PRABAL_PRATAP_SHAHI_2017",
+      "target": "cand::RANA_RAHUL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::PRABAL_PRATAP_SHAHI_2017",
+      "target": "cand::SATYAPRAKASH_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::PRABAL_PRATAP_SHAHI_2017",
+      "target": "cand::SHAILESH_KUMAR_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::PRABAL_PRATAP_SHAHI_2017",
+      "target": "cand::SHESHNATH_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::PRABAL_PRATAP_SHAHI_2017",
+      "target": "cand::VINAY_KUMAR_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::PRABAL_PRATAP_SHAHI_2017",
+      "target": "cand::VINDU_DEVI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::PRABAL_PRATAP_SHAHI_2017",
+      "target": "cand::VINOD_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::RAMDAVAN_MAURYA_2017",
+      "target": "cand::RANA_RAHUL_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::RAMDAVAN_MAURYA_2017",
+      "target": "cand::SATYAPRAKASH_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::RAMDAVAN_MAURYA_2017",
+      "target": "cand::SHAILESH_KUMAR_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::RAMDAVAN_MAURYA_2017",
+      "target": "cand::SHESHNATH_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::RAMDAVAN_MAURYA_2017",
+      "target": "cand::VINAY_KUMAR_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::RAMDAVAN_MAURYA_2017",
+      "target": "cand::VINDU_DEVI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::RAMDAVAN_MAURYA_2017",
+      "target": "cand::VINOD_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::RANA_RAHUL_2017",
+      "target": "cand::SATYAPRAKASH_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::RANA_RAHUL_2017",
+      "target": "cand::SHAILESH_KUMAR_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::RANA_RAHUL_2017",
+      "target": "cand::SHESHNATH_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::RANA_RAHUL_2017",
+      "target": "cand::VINAY_KUMAR_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::RANA_RAHUL_2017",
+      "target": "cand::VINDU_DEVI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::RANA_RAHUL_2017",
+      "target": "cand::VINOD_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::SATYAPRAKASH_2017",
+      "target": "cand::SHAILESH_KUMAR_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::SATYAPRAKASH_2017",
+      "target": "cand::SHESHNATH_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::SATYAPRAKASH_2017",
+      "target": "cand::VINAY_KUMAR_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::SATYAPRAKASH_2017",
+      "target": "cand::VINDU_DEVI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::SATYAPRAKASH_2017",
+      "target": "cand::VINOD_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::SHAILESH_KUMAR_2017",
+      "target": "cand::SHESHNATH_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::SHAILESH_KUMAR_2017",
+      "target": "cand::VINAY_KUMAR_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::SHAILESH_KUMAR_2017",
+      "target": "cand::VINDU_DEVI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::SHAILESH_KUMAR_2017",
+      "target": "cand::VINOD_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::SHESHNATH_PANDEY_2017",
+      "target": "cand::VINAY_KUMAR_PANDEY_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::SHESHNATH_PANDEY_2017",
+      "target": "cand::VINDU_DEVI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::SHESHNATH_PANDEY_2017",
+      "target": "cand::VINOD_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::VINAY_KUMAR_PANDEY_2017",
+      "target": "cand::VINDU_DEVI_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::VINAY_KUMAR_PANDEY_2017",
+      "target": "cand::VINOD_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::VINDU_DEVI_2017",
+      "target": "cand::VINOD_2017",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ADITYANATH_2022",
+      "target": "cand::AJAI_SHANKER_SRIVASTAVA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ADITYANATH_2022",
+      "target": "cand::CHANDRA_SHEKHAR_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ADITYANATH_2022",
+      "target": "cand::DR_CHETNA_PANDEY_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ADITYANATH_2022",
+      "target": "cand::JASKARAN_RAJ_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ADITYANATH_2022",
+      "target": "cand::KHWAJA_SHAMSUDDIN_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ADITYANATH_2022",
+      "target": "cand::QAZI_MOHD_RASHID_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ADITYANATH_2022",
+      "target": "cand::RAM_DAVAN_MAURYA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ADITYANATH_2022",
+      "target": "cand::SUBHAWATI_UPENDRA_DUTT_SHUKLA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ADITYANATH_2022",
+      "target": "cand::SURAJ_KUMAR_YADAV_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ADITYANATH_2022",
+      "target": "cand::VIJAY_KUMAR_SRIVASTAVA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ADITYANATH_2022",
+      "target": "cand::YUVRAJ_SHARMA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAI_SHANKER_SRIVASTAVA_2022",
+      "target": "cand::CHANDRA_SHEKHAR_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAI_SHANKER_SRIVASTAVA_2022",
+      "target": "cand::DR_CHETNA_PANDEY_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAI_SHANKER_SRIVASTAVA_2022",
+      "target": "cand::JASKARAN_RAJ_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAI_SHANKER_SRIVASTAVA_2022",
+      "target": "cand::KHWAJA_SHAMSUDDIN_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAI_SHANKER_SRIVASTAVA_2022",
+      "target": "cand::QAZI_MOHD_RASHID_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAI_SHANKER_SRIVASTAVA_2022",
+      "target": "cand::RAM_DAVAN_MAURYA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAI_SHANKER_SRIVASTAVA_2022",
+      "target": "cand::SUBHAWATI_UPENDRA_DUTT_SHUKLA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAI_SHANKER_SRIVASTAVA_2022",
+      "target": "cand::SURAJ_KUMAR_YADAV_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAI_SHANKER_SRIVASTAVA_2022",
+      "target": "cand::VIJAY_KUMAR_SRIVASTAVA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AJAI_SHANKER_SRIVASTAVA_2022",
+      "target": "cand::YUVRAJ_SHARMA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::CHANDRA_SHEKHAR_2022",
+      "target": "cand::DR_CHETNA_PANDEY_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::CHANDRA_SHEKHAR_2022",
+      "target": "cand::JASKARAN_RAJ_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::CHANDRA_SHEKHAR_2022",
+      "target": "cand::KHWAJA_SHAMSUDDIN_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::CHANDRA_SHEKHAR_2022",
+      "target": "cand::QAZI_MOHD_RASHID_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::CHANDRA_SHEKHAR_2022",
+      "target": "cand::RAM_DAVAN_MAURYA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::CHANDRA_SHEKHAR_2022",
+      "target": "cand::SUBHAWATI_UPENDRA_DUTT_SHUKLA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::CHANDRA_SHEKHAR_2022",
+      "target": "cand::SURAJ_KUMAR_YADAV_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::CHANDRA_SHEKHAR_2022",
+      "target": "cand::VIJAY_KUMAR_SRIVASTAVA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::CHANDRA_SHEKHAR_2022",
+      "target": "cand::YUVRAJ_SHARMA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::DR_CHETNA_PANDEY_2022",
+      "target": "cand::JASKARAN_RAJ_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::DR_CHETNA_PANDEY_2022",
+      "target": "cand::KHWAJA_SHAMSUDDIN_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::DR_CHETNA_PANDEY_2022",
+      "target": "cand::QAZI_MOHD_RASHID_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::DR_CHETNA_PANDEY_2022",
+      "target": "cand::RAM_DAVAN_MAURYA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::DR_CHETNA_PANDEY_2022",
+      "target": "cand::SUBHAWATI_UPENDRA_DUTT_SHUKLA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::DR_CHETNA_PANDEY_2022",
+      "target": "cand::SURAJ_KUMAR_YADAV_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::DR_CHETNA_PANDEY_2022",
+      "target": "cand::VIJAY_KUMAR_SRIVASTAVA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::DR_CHETNA_PANDEY_2022",
+      "target": "cand::YUVRAJ_SHARMA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JASKARAN_RAJ_2022",
+      "target": "cand::KHWAJA_SHAMSUDDIN_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JASKARAN_RAJ_2022",
+      "target": "cand::QAZI_MOHD_RASHID_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JASKARAN_RAJ_2022",
+      "target": "cand::RAM_DAVAN_MAURYA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JASKARAN_RAJ_2022",
+      "target": "cand::SUBHAWATI_UPENDRA_DUTT_SHUKLA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JASKARAN_RAJ_2022",
+      "target": "cand::SURAJ_KUMAR_YADAV_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JASKARAN_RAJ_2022",
+      "target": "cand::VIJAY_KUMAR_SRIVASTAVA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JASKARAN_RAJ_2022",
+      "target": "cand::YUVRAJ_SHARMA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::KHWAJA_SHAMSUDDIN_2022",
+      "target": "cand::QAZI_MOHD_RASHID_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::KHWAJA_SHAMSUDDIN_2022",
+      "target": "cand::RAM_DAVAN_MAURYA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::KHWAJA_SHAMSUDDIN_2022",
+      "target": "cand::SUBHAWATI_UPENDRA_DUTT_SHUKLA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::KHWAJA_SHAMSUDDIN_2022",
+      "target": "cand::SURAJ_KUMAR_YADAV_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::KHWAJA_SHAMSUDDIN_2022",
+      "target": "cand::VIJAY_KUMAR_SRIVASTAVA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::KHWAJA_SHAMSUDDIN_2022",
+      "target": "cand::YUVRAJ_SHARMA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::QAZI_MOHD_RASHID_2022",
+      "target": "cand::RAM_DAVAN_MAURYA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::QAZI_MOHD_RASHID_2022",
+      "target": "cand::SUBHAWATI_UPENDRA_DUTT_SHUKLA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::QAZI_MOHD_RASHID_2022",
+      "target": "cand::SURAJ_KUMAR_YADAV_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::QAZI_MOHD_RASHID_2022",
+      "target": "cand::VIJAY_KUMAR_SRIVASTAVA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::QAZI_MOHD_RASHID_2022",
+      "target": "cand::YUVRAJ_SHARMA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::RAM_DAVAN_MAURYA_2022",
+      "target": "cand::SUBHAWATI_UPENDRA_DUTT_SHUKLA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::RAM_DAVAN_MAURYA_2022",
+      "target": "cand::SURAJ_KUMAR_YADAV_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::RAM_DAVAN_MAURYA_2022",
+      "target": "cand::VIJAY_KUMAR_SRIVASTAVA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::RAM_DAVAN_MAURYA_2022",
+      "target": "cand::YUVRAJ_SHARMA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::SUBHAWATI_UPENDRA_DUTT_SHUKLA_2022",
+      "target": "cand::SURAJ_KUMAR_YADAV_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::SUBHAWATI_UPENDRA_DUTT_SHUKLA_2022",
+      "target": "cand::VIJAY_KUMAR_SRIVASTAVA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::SUBHAWATI_UPENDRA_DUTT_SHUKLA_2022",
+      "target": "cand::YUVRAJ_SHARMA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::SURAJ_KUMAR_YADAV_2022",
+      "target": "cand::VIJAY_KUMAR_SRIVASTAVA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::SURAJ_KUMAR_YADAV_2022",
+      "target": "cand::YUVRAJ_SHARMA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::VIJAY_KUMAR_SRIVASTAVA_2022",
+      "target": "cand::YUVRAJ_SHARMA_2022",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMITA_BHARATI_2024",
+      "target": "cand::ANAND_KUMAR_YADAV_ALIAS_ANAND_KUMAR_FAUJI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMITA_BHARATI_2024",
+      "target": "cand::ANKIT_SHAH_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMITA_BHARATI_2024",
+      "target": "cand::JAVED_ASHRAF_ALIAS_JAVED_SIMNANI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMITA_BHARATI_2024",
+      "target": "cand::KAJAL_NISHAD_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMITA_BHARATI_2024",
+      "target": "cand::NAFEES_AKHTAR_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMITA_BHARATI_2024",
+      "target": "cand::PINTU_SAHANI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMITA_BHARATI_2024",
+      "target": "cand::RAVINDRA_SHUKLA_ALIAS_RAVI_KISHAN_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMITA_BHARATI_2024",
+      "target": "cand::SHIVSHANKAR_PRAJAPATI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMITA_BHARATI_2024",
+      "target": "cand::SHRIRAM_PRASAD_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMITA_BHARATI_2024",
+      "target": "cand::SONU_RAI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::AMITA_BHARATI_2024",
+      "target": "cand::SUDHANSHU_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANAND_KUMAR_YADAV_ALIAS_ANAND_KUMAR_FAUJI_2024",
+      "target": "cand::ANKIT_SHAH_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANAND_KUMAR_YADAV_ALIAS_ANAND_KUMAR_FAUJI_2024",
+      "target": "cand::JAVED_ASHRAF_ALIAS_JAVED_SIMNANI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANAND_KUMAR_YADAV_ALIAS_ANAND_KUMAR_FAUJI_2024",
+      "target": "cand::KAJAL_NISHAD_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANAND_KUMAR_YADAV_ALIAS_ANAND_KUMAR_FAUJI_2024",
+      "target": "cand::NAFEES_AKHTAR_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANAND_KUMAR_YADAV_ALIAS_ANAND_KUMAR_FAUJI_2024",
+      "target": "cand::PINTU_SAHANI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANAND_KUMAR_YADAV_ALIAS_ANAND_KUMAR_FAUJI_2024",
+      "target": "cand::RAVINDRA_SHUKLA_ALIAS_RAVI_KISHAN_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANAND_KUMAR_YADAV_ALIAS_ANAND_KUMAR_FAUJI_2024",
+      "target": "cand::SHIVSHANKAR_PRAJAPATI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANAND_KUMAR_YADAV_ALIAS_ANAND_KUMAR_FAUJI_2024",
+      "target": "cand::SHRIRAM_PRASAD_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANAND_KUMAR_YADAV_ALIAS_ANAND_KUMAR_FAUJI_2024",
+      "target": "cand::SONU_RAI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANAND_KUMAR_YADAV_ALIAS_ANAND_KUMAR_FAUJI_2024",
+      "target": "cand::SUDHANSHU_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANKIT_SHAH_2024",
+      "target": "cand::JAVED_ASHRAF_ALIAS_JAVED_SIMNANI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANKIT_SHAH_2024",
+      "target": "cand::KAJAL_NISHAD_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANKIT_SHAH_2024",
+      "target": "cand::NAFEES_AKHTAR_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANKIT_SHAH_2024",
+      "target": "cand::PINTU_SAHANI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANKIT_SHAH_2024",
+      "target": "cand::RAVINDRA_SHUKLA_ALIAS_RAVI_KISHAN_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANKIT_SHAH_2024",
+      "target": "cand::SHIVSHANKAR_PRAJAPATI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANKIT_SHAH_2024",
+      "target": "cand::SHRIRAM_PRASAD_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANKIT_SHAH_2024",
+      "target": "cand::SONU_RAI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::ANKIT_SHAH_2024",
+      "target": "cand::SUDHANSHU_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JAVED_ASHRAF_ALIAS_JAVED_SIMNANI_2024",
+      "target": "cand::KAJAL_NISHAD_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JAVED_ASHRAF_ALIAS_JAVED_SIMNANI_2024",
+      "target": "cand::NAFEES_AKHTAR_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JAVED_ASHRAF_ALIAS_JAVED_SIMNANI_2024",
+      "target": "cand::PINTU_SAHANI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JAVED_ASHRAF_ALIAS_JAVED_SIMNANI_2024",
+      "target": "cand::RAVINDRA_SHUKLA_ALIAS_RAVI_KISHAN_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JAVED_ASHRAF_ALIAS_JAVED_SIMNANI_2024",
+      "target": "cand::SHIVSHANKAR_PRAJAPATI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JAVED_ASHRAF_ALIAS_JAVED_SIMNANI_2024",
+      "target": "cand::SHRIRAM_PRASAD_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JAVED_ASHRAF_ALIAS_JAVED_SIMNANI_2024",
+      "target": "cand::SONU_RAI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::JAVED_ASHRAF_ALIAS_JAVED_SIMNANI_2024",
+      "target": "cand::SUDHANSHU_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::KAJAL_NISHAD_2024",
+      "target": "cand::NAFEES_AKHTAR_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::KAJAL_NISHAD_2024",
+      "target": "cand::PINTU_SAHANI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::KAJAL_NISHAD_2024",
+      "target": "cand::RAVINDRA_SHUKLA_ALIAS_RAVI_KISHAN_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::KAJAL_NISHAD_2024",
+      "target": "cand::SHIVSHANKAR_PRAJAPATI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::KAJAL_NISHAD_2024",
+      "target": "cand::SHRIRAM_PRASAD_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::KAJAL_NISHAD_2024",
+      "target": "cand::SONU_RAI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::KAJAL_NISHAD_2024",
+      "target": "cand::SUDHANSHU_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::NAFEES_AKHTAR_2024",
+      "target": "cand::PINTU_SAHANI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::NAFEES_AKHTAR_2024",
+      "target": "cand::RAVINDRA_SHUKLA_ALIAS_RAVI_KISHAN_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::NAFEES_AKHTAR_2024",
+      "target": "cand::SHIVSHANKAR_PRAJAPATI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::NAFEES_AKHTAR_2024",
+      "target": "cand::SHRIRAM_PRASAD_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::NAFEES_AKHTAR_2024",
+      "target": "cand::SONU_RAI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::NAFEES_AKHTAR_2024",
+      "target": "cand::SUDHANSHU_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::PINTU_SAHANI_2024",
+      "target": "cand::RAVINDRA_SHUKLA_ALIAS_RAVI_KISHAN_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::PINTU_SAHANI_2024",
+      "target": "cand::SHIVSHANKAR_PRAJAPATI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::PINTU_SAHANI_2024",
+      "target": "cand::SHRIRAM_PRASAD_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::PINTU_SAHANI_2024",
+      "target": "cand::SONU_RAI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::PINTU_SAHANI_2024",
+      "target": "cand::SUDHANSHU_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::RAVINDRA_SHUKLA_ALIAS_RAVI_KISHAN_2024",
+      "target": "cand::SHIVSHANKAR_PRAJAPATI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::RAVINDRA_SHUKLA_ALIAS_RAVI_KISHAN_2024",
+      "target": "cand::SHRIRAM_PRASAD_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::RAVINDRA_SHUKLA_ALIAS_RAVI_KISHAN_2024",
+      "target": "cand::SONU_RAI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::RAVINDRA_SHUKLA_ALIAS_RAVI_KISHAN_2024",
+      "target": "cand::SUDHANSHU_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::SHIVSHANKAR_PRAJAPATI_2024",
+      "target": "cand::SHRIRAM_PRASAD_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::SHIVSHANKAR_PRAJAPATI_2024",
+      "target": "cand::SONU_RAI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::SHIVSHANKAR_PRAJAPATI_2024",
+      "target": "cand::SUDHANSHU_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::SHRIRAM_PRASAD_2024",
+      "target": "cand::SONU_RAI_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::SHRIRAM_PRASAD_2024",
+      "target": "cand::SUDHANSHU_2024",
+      "type": "RAN_AGAINST"
+    },
+    {
+      "source": "cand::SONU_RAI_2024",
+      "target": "cand::SUDHANSHU_2024",
+      "type": "RAN_AGAINST"
+    }
+  ],
+  "stats": {
+    "total_nodes": 87,
+    "total_edges": 557,
+    "node_types": {
+      "Election": 3,
+      "Constituency": 3,
+      "Candidate": 44,
+      "Party": 23,
+      "Education": 9,
+      "AssetTier": 4,
+      "CriminalRecord": 1
+    },
+    "constituencies": 3,
+    "candidates": 44
+  }
+}
