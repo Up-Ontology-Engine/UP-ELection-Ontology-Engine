@@ -1,0 +1,36 @@
+{
+  "source": "myneta",
+  "generated_at": "2026-05-24T05:22:41.876371+00:00",
+  "passes": [
+    "list",
+    "detail",
+    "expense"
+  ],
+  "constituencies": [
+    {
+      "file": "myneta_GKP_322_2022.json",
+      "ac_id": "GKP_322",
+      "ac_name": "Gorakhpur Urban",
+      "election_year": 2022,
+      "constituency_id": 186,
+      "candidate_count": 12
+    },
+    {
+      "file": "myneta_GKP_322_2017.json",
+      "ac_id": "GKP_322",
+      "ac_name": "Gorakhpur Urban",
+      "election_year": 2017,
+      "constituency_id": 362,
+      "candidate_count": 21
+    },
+    {
+      "file": "myneta_GKP_LS64_2024.json",
+      "ac_id": "GKP_LS64",
+      "ac_name": "Gorakhpur",
+      "election_year": 2024,
+      "constituency_id": 520,
+      "candidate_count": 12
+    }
+  ],
+  "total_candidates": 45
+}

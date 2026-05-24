@@ -1,0 +1,1761 @@
+{
+  "ac_id": "GKP_LS64",
+  "ac_name": "Gorakhpur",
+  "election_year": 2024,
+  "election_folder": "LokSabha2024",
+  "constituency_id": 520,
+  "source": "myneta",
+  "passes": [
+    "list",
+    "detail",
+    "expense"
+  ],
+  "scraped_at": "2026-05-24T05:22:41.869774+00:00",
+  "candidate_count": 12,
+  "candidates": [
+    {
+      "candidate_id": "RAVINDRA_SHUKLA_ALIAS_RAVI_KISHAN_2024",
+      "name": "Ravindra Shukla Alias Ravi Kishan",
+      "party": "BJP",
+      "party_raw": "BJP",
+      "ac_id": "GKP_LS64",
+      "ac_name": "Gorakhpur",
+      "election_year": 2024,
+      "source_candidate_id": 8791,
+      "detail_url": "candidate.php?candidate_id=8791",
+      "list_summary": {
+        "education": "12th Pass",
+        "age": 55,
+        "criminal_cases": 0,
+        "total_assets": 433235340,
+        "liabilities": 17814634
+      },
+      "affidavit_detail": {
+        "source_affidavit_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8791",
+        "html_snapshot_path": "/Users/aryansingh/Documents/UP-ELection-Ontology-Engine/data/raw/myneta_html/LokSabha2024/8791_affidavit.html",
+        "parse_status": "scraped",
+        "parse_error": null,
+        "itr_income_json": [
+          {
+            "relation": "self",
+            "year": "2022-2023",
+            "total_income_rs": 26751870
+          },
+          {
+            "relation": "self",
+            "year": "2021-2022",
+            "total_income_rs": 22835380
+          },
+          {
+            "relation": "self",
+            "year": "2020-2021",
+            "total_income_rs": 7539340
+          },
+          {
+            "relation": "self",
+            "year": "2019-2020",
+            "total_income_rs": 9146340
+          },
+          {
+            "relation": "self",
+            "year": "2018-2019",
+            "total_income_rs": 9407319
+          },
+          {
+            "relation": "spouse",
+            "year": "2022-2023",
+            "total_income_rs": 488480
+          },
+          {
+            "relation": "spouse",
+            "year": "2021-2022",
+            "total_income_rs": 458160
+          },
+          {
+            "relation": "spouse",
+            "year": "2020-2021",
+            "total_income_rs": 341820
+          },
+          {
+            "relation": "spouse",
+            "year": "2019-2020",
+            "total_income_rs": 6041620
+          },
+          {
+            "relation": "spouse",
+            "year": "2018-2019",
+            "total_income_rs": 259580
+          }
+        ],
+        "criminal_case_details_json": [],
+        "movable_assets_json": [
+          {
+            "item": "Cash",
+            "total_rs": 79021,
+            "self_rs": 79021
+          },
+          {
+            "item": "Deposits in Banks, Financial Institutions and Non-Banking Financial Companies",
+            "total_rs": 28740724,
+            "self_rs": 0
+          },
+          {
+            "item": "Bonds, Debentures and Shares in companies",
+            "total_rs": 21164799,
+            "self_rs": 0
+          },
+          {
+            "item": "(a) NSS, Postal Savings etc",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "LIC No 90197xxxxx 5,00,000 5 Lacs+ LIC No 91471xxxxx 7,00,000 7 Lacs+",
+            "total_rs": 1351715,
+            "self_rs": 0
+          },
+          {
+            "item": "Personal loans/advance given",
+            "total_rs": 95567740,
+            "self_rs": 0
+          },
+          {
+            "item": "Motor Vehicles (details of make, etc.)",
+            "total_rs": 6009842,
+            "self_rs": 0
+          },
+          {
+            "item": "Jewellery (give details weight value)",
+            "total_rs": 2043038,
+            "self_rs": 0
+          },
+          {
+            "item": "Other assets, such as values of claims / interests",
+            "total_rs": 3278447,
+            "self_rs": 0
+          }
+        ],
+        "movable_assets_rs": 158235326,
+        "immovable_assets_json": [
+          {
+            "item": "Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Non Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Commercial Buildings",
+            "total_rs": 70000000,
+            "self_rs": 0
+          },
+          {
+            "item": "Residential Buildings",
+            "total_rs": 205000000,
+            "self_rs": 0
+          },
+          {
+            "item": "Others",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "immovable_assets_rs": 275000000,
+        "liabilities_json": [
+          {
+            "item": "Assets:",
+            "total_rs": 433235340
+          },
+          {
+            "item": "Liabilities:",
+            "total_rs": 19051840
+          }
+        ],
+        "total_assets_detail": 433235326
+      },
+      "expense": {
+        "source_expense_url": "https://www.myneta.info/LokSabha2024/expense.php?candidate_id=8791",
+        "expense_scrape_status": "scraped",
+        "parse_error": null,
+        "total_election_expense_rs": 0,
+        "expense_breakdown_json": [
+          {
+            "category": "1",
+            "amount_rs": 6
+          },
+          {
+            "category": "i a . Expenses in public meeting, rally,procession etc. (ie:other than the ones with Star Campaigners of the Political party (Enclose as per Schedule-1)",
+            "amount_rs": 115669711
+          },
+          {
+            "category": "i b .Expenditure in public meeting rally, procession etc. with the Star Campaigner(s) (ie:other than those for general party propaganda) (Enclose as per Schedule-2)",
+            "amount_rs": 143968814
+          },
+          {
+            "category": "iii.Campaign through electronic/print media(including cable network).",
+            "amount_rs": 2845902
+          },
+          {
+            "category": "iv.Vehicles used and POL expenditure on such vehicles.",
+            "amount_rs": 105960010
+          },
+          {
+            "category": "v.Expenses on campaign workers.",
+            "amount_rs": 305700030
+          },
+          {
+            "category": "vi.Expenses incurred on publishing of declaration regarding criminal cases.",
+            "amount_rs": 18901
+          },
+          {
+            "category": "viii.Expenses incurred on Virtual Campaign (Enclose as per Schedule 11)",
+            "amount_rs": 1050001
+          },
+          {
+            "category": "Calculated Column Total",
+            "amount_rs": 710446569
+          },
+          {
+            "category": "i",
+            "amount_rs": 311000031
+          },
+          {
+            "category": "ii",
+            "amount_rs": 400000040
+          },
+          {
+            "category": "iii",
+            "amount_rs": 711000071
+          }
+        ],
+        "expense_data_quality": "Affidavit Data Quality Information"
+      }
+    },
+    {
+      "candidate_id": "AMITA_BHARATI_2024",
+      "name": "Amita Bharati",
+      "party": "IND",
+      "party_raw": "IND",
+      "ac_id": "GKP_LS64",
+      "ac_name": "Gorakhpur",
+      "election_year": 2024,
+      "source_candidate_id": 8782,
+      "detail_url": "candidate.php?candidate_id=8782",
+      "list_summary": {
+        "education": "Post Graduate",
+        "age": 36,
+        "criminal_cases": 0,
+        "total_assets": 31040448,
+        "liabilities": 4517713
+      },
+      "affidavit_detail": {
+        "source_affidavit_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8782",
+        "html_snapshot_path": "/Users/aryansingh/Documents/UP-ELection-Ontology-Engine/data/raw/myneta_html/LokSabha2024/8782_affidavit.html",
+        "parse_status": "scraped",
+        "parse_error": null,
+        "itr_income_json": [
+          {
+            "relation": "self",
+            "year": "2023-2024",
+            "total_income_rs": 498060
+          },
+          {
+            "relation": "self",
+            "year": "2022-2023",
+            "total_income_rs": 497760
+          },
+          {
+            "relation": "self",
+            "year": "2021-2022",
+            "total_income_rs": 496850
+          },
+          {
+            "relation": "self",
+            "year": "2020-2021",
+            "total_income_rs": 237540
+          },
+          {
+            "relation": "self",
+            "year": "2019-2020",
+            "total_income_rs": 283254
+          },
+          {
+            "relation": "spouse",
+            "year": "2023-2024",
+            "total_income_rs": 1285402
+          },
+          {
+            "relation": "spouse",
+            "year": "2022-2023",
+            "total_income_rs": 1157556
+          },
+          {
+            "relation": "spouse",
+            "year": "2021-2022",
+            "total_income_rs": 1047782
+          },
+          {
+            "relation": "spouse",
+            "year": "2020-2021",
+            "total_income_rs": 1062857
+          },
+          {
+            "relation": "spouse",
+            "year": "2019-2020",
+            "total_income_rs": 970209
+          }
+        ],
+        "criminal_case_details_json": [],
+        "movable_assets_json": [
+          {
+            "item": "Cash",
+            "total_rs": 93000,
+            "self_rs": 48000
+          },
+          {
+            "item": "Deposits in Banks, Financial Institutions and Non-Banking Financial Companies",
+            "total_rs": 32107,
+            "self_rs": 0
+          },
+          {
+            "item": "Bonds, Debentures and Shares in companies",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "(a) NSS, Postal Savings etc",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Nil",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Personal loans/advance given",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Motor Vehicles (details of make, etc.)",
+            "total_rs": 815340,
+            "self_rs": 0
+          },
+          {
+            "item": "Jewellery (give details weight value)",
+            "total_rs": 300000,
+            "self_rs": 0
+          },
+          {
+            "item": "Other assets, such as values of claims / interests",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "movable_assets_rs": 1240447,
+        "immovable_assets_json": [
+          {
+            "item": "Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Non Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Commercial Buildings",
+            "total_rs": 180000,
+            "self_rs": 0
+          },
+          {
+            "item": "Residential Buildings",
+            "total_rs": 15000000,
+            "self_rs": 0
+          },
+          {
+            "item": "Others",
+            "total_rs": 13000000,
+            "self_rs": 0
+          }
+        ],
+        "immovable_assets_rs": 28180000,
+        "liabilities_json": [
+          {
+            "item": "Assets:",
+            "total_rs": 31040448
+          },
+          {
+            "item": "Liabilities:",
+            "total_rs": 4517713
+          }
+        ],
+        "total_assets_detail": 29420447
+      },
+      "expense": {
+        "source_expense_url": "https://www.myneta.info/LokSabha2024/expense.php?candidate_id=8782",
+        "expense_scrape_status": "scraped",
+        "parse_error": null,
+        "total_election_expense_rs": 0,
+        "expense_data_quality": "Affidavit Data Quality Information"
+      }
+    },
+    {
+      "candidate_id": "ANAND_KUMAR_YADAV_ALIAS_ANAND_KUMAR_FAUJI_2024",
+      "name": "Anand Kumar Yadav Alias Anand Kumar Fauji",
+      "party": "BHARATHEEYA JAWAN KI",
+      "party_raw": "Bharatheeya Jawan Kisan Party",
+      "ac_id": "GKP_LS64",
+      "ac_name": "Gorakhpur",
+      "election_year": 2024,
+      "source_candidate_id": 8780,
+      "detail_url": "candidate.php?candidate_id=8780",
+      "list_summary": {
+        "education": "Post Graduate",
+        "age": 39,
+        "criminal_cases": 0,
+        "total_assets": 5252000,
+        "liabilities": 400000
+      },
+      "affidavit_detail": {
+        "source_affidavit_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8780",
+        "html_snapshot_path": "/Users/aryansingh/Documents/UP-ELection-Ontology-Engine/data/raw/myneta_html/LokSabha2024/8780_affidavit.html",
+        "parse_status": "scraped",
+        "parse_error": null,
+        "education_detail": "Self",
+        "itr_income_json": [
+          {
+            "relation": "self",
+            "year": "2023-2024",
+            "total_income_rs": 457550
+          }
+        ],
+        "criminal_case_details_json": [],
+        "movable_assets_json": [
+          {
+            "item": "Cash",
+            "total_rs": 7000,
+            "self_rs": 5000
+          },
+          {
+            "item": "Deposits in Banks, Financial Institutions and Non-Banking Financial Companies",
+            "total_rs": 95000,
+            "self_rs": 0
+          },
+          {
+            "item": "Bonds, Debentures and Shares in companies",
+            "total_rs": 40000,
+            "self_rs": 0
+          },
+          {
+            "item": "(a) NSS, Postal Savings etc",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Nil",
+            "total_rs": 9700,
+            "self_rs": 0
+          },
+          {
+            "item": "Personal loans/advance given",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Motor Vehicles (details of make, etc.)",
+            "total_rs": 600000,
+            "self_rs": 0
+          },
+          {
+            "item": "Jewellery (give details weight value)",
+            "total_rs": 210000,
+            "self_rs": 0
+          },
+          {
+            "item": "Other assets, such as values of claims / interests",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "movable_assets_rs": 961700,
+        "immovable_assets_json": [
+          {
+            "item": "Agricultural Land",
+            "total_rs": 2500000,
+            "self_rs": 0
+          },
+          {
+            "item": "Non Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Commercial Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Residential Buildings",
+            "total_rs": 1800000,
+            "self_rs": 0
+          },
+          {
+            "item": "Others",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "immovable_assets_rs": 4300000,
+        "liabilities_json": [
+          {
+            "item": "Assets:",
+            "total_rs": 5252000
+          },
+          {
+            "item": "Liabilities:",
+            "total_rs": 400000
+          }
+        ],
+        "total_assets_detail": 5261700
+      },
+      "expense": {
+        "source_expense_url": "https://www.myneta.info/LokSabha2024/expense.php?candidate_id=8780",
+        "expense_scrape_status": "scraped",
+        "parse_error": null,
+        "total_election_expense_rs": 0,
+        "expense_data_quality": "Affidavit Data Quality Information"
+      }
+    },
+    {
+      "candidate_id": "ANKIT_SHAH_2024",
+      "name": "Ankit Shah",
+      "party": "BHARATIYA YUVA JAN E",
+      "party_raw": "Bharatiya Yuva Jan Ekta Party",
+      "ac_id": "GKP_LS64",
+      "ac_name": "Gorakhpur",
+      "election_year": 2024,
+      "source_candidate_id": 8779,
+      "detail_url": "candidate.php?candidate_id=8779",
+      "list_summary": {
+        "education": "Graduate",
+        "age": 41,
+        "criminal_cases": 0,
+        "total_assets": 0,
+        "liabilities": 0
+      },
+      "affidavit_detail": {
+        "source_affidavit_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8779",
+        "html_snapshot_path": "/Users/aryansingh/Documents/UP-ELection-Ontology-Engine/data/raw/myneta_html/LokSabha2024/8779_affidavit.html",
+        "parse_status": "scraped",
+        "parse_error": null,
+        "itr_income_json": [
+          {
+            "relation": "self",
+            "year": "2022-2023",
+            "total_income_rs": 411550
+          },
+          {
+            "relation": "self",
+            "year": "2021-2022",
+            "total_income_rs": 721130
+          },
+          {
+            "relation": "self",
+            "year": "2020-2021",
+            "total_income_rs": 1263601
+          },
+          {
+            "relation": "self",
+            "year": "2019-2020",
+            "total_income_rs": 1258620
+          },
+          {
+            "relation": "self",
+            "year": "2018-2019",
+            "total_income_rs": 1541403
+          }
+        ],
+        "criminal_case_details_json": [],
+        "movable_assets_json": [
+          {
+            "item": "Cash",
+            "total_rs": 100000,
+            "self_rs": 100000
+          },
+          {
+            "item": "Deposits in Banks, Financial Institutions and Non-Banking Financial Companies",
+            "total_rs": 280368,
+            "self_rs": 0
+          },
+          {
+            "item": "Bonds, Debentures and Shares in companies",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "(a) NSS, Postal Savings etc",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Nil",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Personal loans/advance given",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Motor Vehicles (details of make, etc.)",
+            "total_rs": 55000,
+            "self_rs": 0
+          },
+          {
+            "item": "Jewellery (give details weight value)",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Other assets, such as values of claims / interests",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "movable_assets_rs": 435368,
+        "immovable_assets_json": [
+          {
+            "item": "Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Non Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Commercial Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Residential Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Others",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "immovable_assets_rs": 0,
+        "liabilities_json": [
+          {
+            "item": "Assets:",
+            "total_rs": 348688
+          },
+          {
+            "item": "Liabilities:",
+            "total_rs": 0
+          }
+        ],
+        "total_assets_detail": 435368
+      },
+      "expense": {
+        "source_expense_url": "https://www.myneta.info/LokSabha2024/expense.php?candidate_id=8779",
+        "expense_scrape_status": "scraped",
+        "parse_error": null,
+        "total_election_expense_rs": 0,
+        "expense_data_quality": "Affidavit Data Quality Information"
+      }
+    },
+    {
+      "candidate_id": "JAVED_ASHRAF_ALIAS_JAVED_SIMNANI_2024",
+      "name": "Javed Ashraf Alias Javed Simnani",
+      "party": "SP",
+      "party_raw": "BSP",
+      "ac_id": "GKP_LS64",
+      "ac_name": "Gorakhpur",
+      "election_year": 2024,
+      "source_candidate_id": 8787,
+      "detail_url": "candidate.php?candidate_id=8787",
+      "list_summary": {
+        "education": "12th Pass",
+        "age": 41,
+        "criminal_cases": 7,
+        "total_assets": 6051000,
+        "liabilities": 957850
+      },
+      "affidavit_detail": {
+        "source_affidavit_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8787",
+        "html_snapshot_path": "/Users/aryansingh/Documents/UP-ELection-Ontology-Engine/data/raw/myneta_html/LokSabha2024/8787_affidavit.html",
+        "parse_status": "scraped",
+        "parse_error": null,
+        "itr_income_json": [
+          {
+            "relation": "self",
+            "year": "2023-2024",
+            "total_income_rs": 547663
+          },
+          {
+            "relation": "self",
+            "year": "2022-2023",
+            "total_income_rs": 521758
+          },
+          {
+            "relation": "self",
+            "year": "2021-2022",
+            "total_income_rs": 581102
+          },
+          {
+            "relation": "self",
+            "year": "2020-2021",
+            "total_income_rs": 517314
+          },
+          {
+            "relation": "self",
+            "year": "2019-2020",
+            "total_income_rs": 465656
+          }
+        ],
+        "criminal_case_details_json": [
+          {
+            "raw_text": "Number of Criminal Cases: 7"
+          }
+        ],
+        "movable_assets_json": [
+          {
+            "item": "Cash",
+            "total_rs": 60000,
+            "self_rs": 25000
+          },
+          {
+            "item": "Deposits in Banks, Financial Institutions and Non-Banking Financial Companies",
+            "total_rs": 71000,
+            "self_rs": 0
+          },
+          {
+            "item": "Bonds, Debentures and Shares in companies",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "(a) NSS, Postal Savings etc",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Nil",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Personal loans/advance given",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Motor Vehicles (details of make, etc.)",
+            "total_rs": 1420000,
+            "self_rs": 0
+          },
+          {
+            "item": "Jewellery (give details weight value)",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Other assets, such as values of claims / interests",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "movable_assets_rs": 1551000,
+        "immovable_assets_json": [
+          {
+            "item": "Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Non Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Commercial Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Residential Buildings",
+            "total_rs": 4500000,
+            "self_rs": 1
+          },
+          {
+            "item": "Others",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "immovable_assets_rs": 4500000,
+        "liabilities_json": [
+          {
+            "item": "Assets:",
+            "total_rs": 6051000
+          },
+          {
+            "item": "Liabilities:",
+            "total_rs": 957850
+          }
+        ],
+        "total_assets_detail": 6051000
+      },
+      "expense": {
+        "source_expense_url": "https://www.myneta.info/LokSabha2024/expense.php?candidate_id=8787",
+        "expense_scrape_status": "scraped",
+        "parse_error": null,
+        "total_election_expense_rs": 0,
+        "expense_data_quality": "Affidavit Data Quality Information"
+      }
+    },
+    {
+      "candidate_id": "KAJAL_NISHAD_2024",
+      "name": "Kajal Nishad",
+      "party": "SP",
+      "party_raw": "SP",
+      "ac_id": "GKP_LS64",
+      "ac_name": "Gorakhpur",
+      "election_year": 2024,
+      "source_candidate_id": 8781,
+      "detail_url": "candidate.php?candidate_id=8781",
+      "list_summary": {
+        "education": "8th Pass",
+        "age": 43,
+        "criminal_cases": 1,
+        "total_assets": 14608669,
+        "liabilities": 0
+      },
+      "affidavit_detail": {
+        "source_affidavit_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8781",
+        "html_snapshot_path": "/Users/aryansingh/Documents/UP-ELection-Ontology-Engine/data/raw/myneta_html/LokSabha2024/8781_affidavit.html",
+        "parse_status": "scraped",
+        "parse_error": null,
+        "itr_income_json": [
+          {
+            "relation": "self",
+            "year": "2022-2023",
+            "total_income_rs": 257370
+          },
+          {
+            "relation": "self",
+            "year": "2021-2022",
+            "total_income_rs": 242310
+          },
+          {
+            "relation": "self",
+            "year": "2020-2021",
+            "total_income_rs": 443325
+          },
+          {
+            "relation": "self",
+            "year": "2019-2020",
+            "total_income_rs": 200778
+          },
+          {
+            "relation": "self",
+            "year": "2018-2019",
+            "total_income_rs": 218435
+          }
+        ],
+        "criminal_case_details_json": [
+          {
+            "raw_text": "Number of Criminal Cases: 1"
+          }
+        ],
+        "movable_assets_json": [
+          {
+            "item": "Cash",
+            "total_rs": 110000,
+            "self_rs": 60000
+          },
+          {
+            "item": "Deposits in Banks, Financial Institutions and Non-Banking Financial Companies",
+            "total_rs": 53768,
+            "self_rs": 0
+          },
+          {
+            "item": "Bonds, Debentures and Shares in companies",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "(a) NSS, Postal Savings etc",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Nil",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Personal loans/advance given",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Motor Vehicles (details of make, etc.)",
+            "total_rs": 15000,
+            "self_rs": 0
+          },
+          {
+            "item": "Jewellery (give details weight value)",
+            "total_rs": 980000,
+            "self_rs": 0
+          },
+          {
+            "item": "Other assets, such as values of claims / interests",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "movable_assets_rs": 1158768,
+        "immovable_assets_json": [
+          {
+            "item": "Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Non Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Commercial Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Residential Buildings",
+            "total_rs": 13500000,
+            "self_rs": 0
+          },
+          {
+            "item": "Others",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "immovable_assets_rs": 13500000,
+        "liabilities_json": [
+          {
+            "item": "Assets:",
+            "total_rs": 14608669
+          },
+          {
+            "item": "Liabilities:",
+            "total_rs": 0
+          }
+        ],
+        "total_assets_detail": 14658768
+      },
+      "expense": {
+        "source_expense_url": "https://www.myneta.info/LokSabha2024/expense.php?candidate_id=8781",
+        "expense_scrape_status": "scraped",
+        "parse_error": null,
+        "total_election_expense_rs": 0,
+        "expense_data_quality": "Affidavit Data Quality Information"
+      }
+    },
+    {
+      "candidate_id": "NAFEES_AKHTAR_2024",
+      "name": "Nafees Akhtar",
+      "party": "IND",
+      "party_raw": "IND",
+      "ac_id": "GKP_LS64",
+      "ac_name": "Gorakhpur",
+      "election_year": 2024,
+      "source_candidate_id": 8790,
+      "detail_url": "candidate.php?candidate_id=8790",
+      "list_summary": {
+        "education": "Graduate Professional",
+        "age": 42,
+        "criminal_cases": 0,
+        "total_assets": 0,
+        "liabilities": 0
+      },
+      "affidavit_detail": {
+        "source_affidavit_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8790",
+        "html_snapshot_path": "/Users/aryansingh/Documents/UP-ELection-Ontology-Engine/data/raw/myneta_html/LokSabha2024/8790_affidavit.html",
+        "parse_status": "scraped",
+        "parse_error": null,
+        "itr_income_json": [
+          {
+            "relation": "self",
+            "year": "2023-2024",
+            "total_income_rs": 381790
+          }
+        ],
+        "criminal_case_details_json": [],
+        "movable_assets_json": [
+          {
+            "item": "Cash",
+            "total_rs": 45000,
+            "self_rs": 35000
+          },
+          {
+            "item": "Deposits in Banks, Financial Institutions and Non-Banking Financial Companies",
+            "total_rs": 228928,
+            "self_rs": 0
+          },
+          {
+            "item": "Bonds, Debentures and Shares in companies",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "(a) NSS, Postal Savings etc",
+            "total_rs": 204086,
+            "self_rs": 0
+          },
+          {
+            "item": "Nil",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Personal loans/advance given",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Motor Vehicles (details of make, etc.)",
+            "total_rs": 250000,
+            "self_rs": 0
+          },
+          {
+            "item": "Jewellery (give details weight value)",
+            "total_rs": 1016000,
+            "self_rs": 0
+          },
+          {
+            "item": "Other assets, such as values of claims / interests",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "movable_assets_rs": 1744014,
+        "immovable_assets_json": [
+          {
+            "item": "Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Non Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Commercial Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Residential Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Others",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "immovable_assets_rs": 0,
+        "liabilities_json": [
+          {
+            "item": "Assets:",
+            "total_rs": 1744014
+          },
+          {
+            "item": "Liabilities:",
+            "total_rs": 0
+          }
+        ],
+        "total_assets_detail": 1744014
+      },
+      "expense": {
+        "source_expense_url": "https://www.myneta.info/LokSabha2024/expense.php?candidate_id=8790",
+        "expense_scrape_status": "scraped",
+        "parse_error": null,
+        "total_election_expense_rs": 0,
+        "expense_data_quality": "Affidavit Data Quality Information"
+      }
+    },
+    {
+      "candidate_id": "PINTU_SAHANI_2024",
+      "name": "Pintu Sahani",
+      "party": "IND",
+      "party_raw": "IND",
+      "ac_id": "GKP_LS64",
+      "ac_name": "Gorakhpur",
+      "election_year": 2024,
+      "source_candidate_id": 8784,
+      "detail_url": "candidate.php?candidate_id=8784",
+      "list_summary": {
+        "education": "Post Graduate",
+        "age": 30,
+        "criminal_cases": 3,
+        "total_assets": 2246203,
+        "liabilities": 0
+      },
+      "affidavit_detail": {
+        "source_affidavit_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8784",
+        "html_snapshot_path": "/Users/aryansingh/Documents/UP-ELection-Ontology-Engine/data/raw/myneta_html/LokSabha2024/8784_affidavit.html",
+        "parse_status": "scraped",
+        "parse_error": null,
+        "criminal_case_details_json": [
+          {
+            "raw_text": "Number of Criminal Cases: 3"
+          }
+        ],
+        "movable_assets_json": [
+          {
+            "item": "Cash",
+            "total_rs": 55000,
+            "self_rs": 50000
+          },
+          {
+            "item": "Deposits in Banks, Financial Institutions and Non-Banking Financial Companies",
+            "total_rs": 259203,
+            "self_rs": 0
+          },
+          {
+            "item": "Bonds, Debentures and Shares in companies",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "(a) NSS, Postal Savings etc",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Nil",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Personal loans/advance given",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Motor Vehicles (details of make, etc.)",
+            "total_rs": 61000,
+            "self_rs": 0
+          },
+          {
+            "item": "Jewellery (give details weight value)",
+            "total_rs": 71000,
+            "self_rs": 0
+          },
+          {
+            "item": "Other assets, such as values of claims / interests",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "movable_assets_rs": 446203,
+        "immovable_assets_json": [
+          {
+            "item": "Agricultural Land",
+            "total_rs": 1800000,
+            "self_rs": 0
+          },
+          {
+            "item": "Non Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Commercial Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Residential Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Others",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "immovable_assets_rs": 1800000,
+        "liabilities_json": [
+          {
+            "item": "Assets:",
+            "total_rs": 2246203
+          },
+          {
+            "item": "Liabilities:",
+            "total_rs": 0
+          }
+        ],
+        "total_assets_detail": 2246203
+      },
+      "expense": {
+        "source_expense_url": "https://www.myneta.info/LokSabha2024/expense.php?candidate_id=8784",
+        "expense_scrape_status": "scraped",
+        "parse_error": null,
+        "total_election_expense_rs": 0,
+        "expense_data_quality": "Affidavit Data Quality Information"
+      }
+    },
+    {
+      "candidate_id": "SHIVSHANKAR_PRAJAPATI_2024",
+      "name": "Shivshankar Prajapati",
+      "party": "BHAGIDARI PARTY(P)",
+      "party_raw": "Bhagidari Party(P)",
+      "ac_id": "GKP_LS64",
+      "ac_name": "Gorakhpur",
+      "election_year": 2024,
+      "source_candidate_id": 8785,
+      "detail_url": "candidate.php?candidate_id=8785",
+      "list_summary": {
+        "education": "Post Graduate",
+        "age": 50,
+        "criminal_cases": 0,
+        "total_assets": 3704531,
+        "liabilities": 0
+      },
+      "affidavit_detail": {
+        "source_affidavit_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8785",
+        "html_snapshot_path": "/Users/aryansingh/Documents/UP-ELection-Ontology-Engine/data/raw/myneta_html/LokSabha2024/8785_affidavit.html",
+        "parse_status": "scraped",
+        "parse_error": null,
+        "itr_income_json": [
+          {
+            "relation": "self",
+            "year": "2023-2024",
+            "total_income_rs": 498490
+          },
+          {
+            "relation": "self",
+            "year": "2022-2023",
+            "total_income_rs": 403900
+          },
+          {
+            "relation": "self",
+            "year": "2021-2022",
+            "total_income_rs": 450510
+          },
+          {
+            "relation": "self",
+            "year": "2020-2021",
+            "total_income_rs": 394500
+          },
+          {
+            "relation": "self",
+            "year": "2019-2020",
+            "total_income_rs": 249566
+          }
+        ],
+        "criminal_case_details_json": [],
+        "movable_assets_json": [
+          {
+            "item": "Cash",
+            "total_rs": 50000,
+            "self_rs": 50000
+          },
+          {
+            "item": "Deposits in Banks, Financial Institutions and Non-Banking Financial Companies",
+            "total_rs": 2221531,
+            "self_rs": 0
+          },
+          {
+            "item": "Bonds, Debentures and Shares in companies",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "(a) NSS, Postal Savings etc",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "ICICI Life Prudential Policy No 6429xxxxx 1,20,000 1 Lacs+",
+            "total_rs": 120000,
+            "self_rs": 0
+          },
+          {
+            "item": "Personal loans/advance given",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Motor Vehicles (details of make, etc.)",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Jewellery (give details weight value)",
+            "total_rs": 21000,
+            "self_rs": 0
+          },
+          {
+            "item": "Other assets, such as values of claims / interests",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "movable_assets_rs": 2412531,
+        "immovable_assets_json": [
+          {
+            "item": "Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Non Agricultural Land",
+            "total_rs": 1400000,
+            "self_rs": 1
+          },
+          {
+            "item": "Commercial Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Residential Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Others",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "immovable_assets_rs": 1400000,
+        "liabilities_json": [
+          {
+            "item": "Assets:",
+            "total_rs": 3704531
+          },
+          {
+            "item": "Liabilities:",
+            "total_rs": 0
+          }
+        ],
+        "total_assets_detail": 3812531
+      },
+      "expense": {
+        "source_expense_url": "https://www.myneta.info/LokSabha2024/expense.php?candidate_id=8785",
+        "expense_scrape_status": "scraped",
+        "parse_error": null,
+        "total_election_expense_rs": 0,
+        "expense_data_quality": "Affidavit Data Quality Information"
+      }
+    },
+    {
+      "candidate_id": "SHRIRAM_PRASAD_2024",
+      "name": "Shriram Prasad",
+      "party": "AL-HIND PARTY",
+      "party_raw": "Al-Hind Party",
+      "ac_id": "GKP_LS64",
+      "ac_name": "Gorakhpur",
+      "election_year": 2024,
+      "source_candidate_id": 8788,
+      "detail_url": "candidate.php?candidate_id=8788",
+      "list_summary": {
+        "education": "10th Pass",
+        "age": 44,
+        "criminal_cases": 0,
+        "total_assets": 25000,
+        "liabilities": 0
+      },
+      "affidavit_detail": {
+        "source_affidavit_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8788",
+        "html_snapshot_path": "/Users/aryansingh/Documents/UP-ELection-Ontology-Engine/data/raw/myneta_html/LokSabha2024/8788_affidavit.html",
+        "parse_status": "scraped",
+        "parse_error": null,
+        "criminal_case_details_json": [],
+        "movable_assets_json": [
+          {
+            "item": "Cash",
+            "total_rs": 25000,
+            "self_rs": 20000
+          },
+          {
+            "item": "Deposits in Banks, Financial Institutions and Non-Banking Financial Companies",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Bonds, Debentures and Shares in companies",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "(a) NSS, Postal Savings etc",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Nil",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Personal loans/advance given",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Motor Vehicles (details of make, etc.)",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Jewellery (give details weight value)",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Other assets, such as values of claims / interests",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "movable_assets_rs": 25000,
+        "immovable_assets_json": [
+          {
+            "item": "Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Non Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Commercial Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Residential Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Others",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "immovable_assets_rs": 0,
+        "liabilities_json": [
+          {
+            "item": "Assets:",
+            "total_rs": 25000
+          },
+          {
+            "item": "Liabilities:",
+            "total_rs": 0
+          }
+        ],
+        "total_assets_detail": 25000
+      },
+      "expense": {
+        "source_expense_url": "https://www.myneta.info/LokSabha2024/expense.php?candidate_id=8788",
+        "expense_scrape_status": "scraped",
+        "parse_error": null,
+        "total_election_expense_rs": 0,
+        "expense_data_quality": "Affidavit Data Quality Information"
+      }
+    },
+    {
+      "candidate_id": "SONU_RAI_2024",
+      "name": "Sonu Rai",
+      "party": "MERA ADHIKAAR RASHTR",
+      "party_raw": "Mera Adhikaar Rashtriya Dal",
+      "ac_id": "GKP_LS64",
+      "ac_name": "Gorakhpur",
+      "election_year": 2024,
+      "source_candidate_id": 8789,
+      "detail_url": "candidate.php?candidate_id=8789",
+      "list_summary": {
+        "education": "12th Pass",
+        "age": 36,
+        "criminal_cases": 0,
+        "total_assets": 0,
+        "liabilities": 0
+      },
+      "affidavit_detail": {
+        "source_affidavit_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8789",
+        "html_snapshot_path": "/Users/aryansingh/Documents/UP-ELection-Ontology-Engine/data/raw/myneta_html/LokSabha2024/8789_affidavit.html",
+        "parse_status": "scraped",
+        "parse_error": null,
+        "criminal_case_details_json": [],
+        "movable_assets_json": [
+          {
+            "item": "Cash",
+            "total_rs": 30000,
+            "self_rs": 30000
+          },
+          {
+            "item": "Deposits in Banks, Financial Institutions and Non-Banking Financial Companies",
+            "total_rs": 5000,
+            "self_rs": 0
+          },
+          {
+            "item": "Bonds, Debentures and Shares in companies",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "(a) NSS, Postal Savings etc",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Nil",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Personal loans/advance given",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Motor Vehicles (details of make, etc.)",
+            "total_rs": 784174,
+            "self_rs": 0
+          },
+          {
+            "item": "Jewellery (give details weight value)",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Other assets, such as values of claims / interests",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "movable_assets_rs": 819174,
+        "immovable_assets_json": [
+          {
+            "item": "Agricultural Land",
+            "total_rs": 4200000,
+            "self_rs": 0
+          },
+          {
+            "item": "Non Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Commercial Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Residential Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Others",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "immovable_assets_rs": 4200000,
+        "liabilities_json": [
+          {
+            "item": "Assets:",
+            "total_rs": 5019174
+          },
+          {
+            "item": "Liabilities:",
+            "total_rs": 485412
+          }
+        ],
+        "total_assets_detail": 5019174
+      },
+      "expense": {
+        "source_expense_url": "https://www.myneta.info/LokSabha2024/expense.php?candidate_id=8789",
+        "expense_scrape_status": "scraped",
+        "parse_error": null,
+        "total_election_expense_rs": 0,
+        "expense_data_quality": "Affidavit Data Quality Information"
+      }
+    },
+    {
+      "candidate_id": "SUDHANSHU_2024",
+      "name": "Sudhanshu",
+      "party": "IND",
+      "party_raw": "IND",
+      "ac_id": "GKP_LS64",
+      "ac_name": "Gorakhpur",
+      "election_year": 2024,
+      "source_candidate_id": 8786,
+      "detail_url": "candidate.php?candidate_id=8786",
+      "list_summary": {
+        "education": "12th Pass",
+        "age": 54,
+        "criminal_cases": 0,
+        "total_assets": 5421230,
+        "liabilities": 0
+      },
+      "affidavit_detail": {
+        "source_affidavit_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8786",
+        "html_snapshot_path": "/Users/aryansingh/Documents/UP-ELection-Ontology-Engine/data/raw/myneta_html/LokSabha2024/8786_affidavit.html",
+        "parse_status": "scraped",
+        "parse_error": null,
+        "itr_income_json": [
+          {
+            "relation": "self",
+            "year": "2024-2025",
+            "total_income_rs": 499400
+          },
+          {
+            "relation": "self",
+            "year": "2023-2024",
+            "total_income_rs": 489200
+          },
+          {
+            "relation": "self",
+            "year": "2022-2023",
+            "total_income_rs": 478660
+          },
+          {
+            "relation": "self",
+            "year": "2021-2022",
+            "total_income_rs": 259560
+          },
+          {
+            "relation": "self",
+            "year": "2020-2021",
+            "total_income_rs": 248650
+          }
+        ],
+        "criminal_case_details_json": [],
+        "movable_assets_json": [
+          {
+            "item": "Cash",
+            "total_rs": 16000,
+            "self_rs": 10000
+          },
+          {
+            "item": "Deposits in Banks, Financial Institutions and Non-Banking Financial Companies",
+            "total_rs": 948,
+            "self_rs": 0
+          },
+          {
+            "item": "Bonds, Debentures and Shares in companies",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "(a) NSS, Postal Savings etc",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Nil",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Personal loans/advance given",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Motor Vehicles (details of make, etc.)",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Jewellery (give details weight value)",
+            "total_rs": 88500,
+            "self_rs": 0
+          },
+          {
+            "item": "Other assets, such as values of claims / interests",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "movable_assets_rs": 105448,
+        "immovable_assets_json": [
+          {
+            "item": "Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Non Agricultural Land",
+            "total_rs": 316000,
+            "self_rs": 0
+          },
+          {
+            "item": "Commercial Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Residential Buildings",
+            "total_rs": 5000000,
+            "self_rs": 0
+          },
+          {
+            "item": "Others",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "immovable_assets_rs": 5316000,
+        "liabilities_json": [
+          {
+            "item": "Assets:",
+            "total_rs": 5421230
+          },
+          {
+            "item": "Liabilities:",
+            "total_rs": 0
+          }
+        ],
+        "total_assets_detail": 5421448
+      },
+      "expense": {
+        "source_expense_url": "https://www.myneta.info/LokSabha2024/expense.php?candidate_id=8786",
+        "expense_scrape_status": "scraped",
+        "parse_error": null,
+        "total_election_expense_rs": 0,
+        "expense_data_quality": "Affidavit Data Quality Information"
+      }
+    }
+  ]
+}
