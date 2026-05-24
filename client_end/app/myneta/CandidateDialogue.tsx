@@ -238,37 +238,6 @@ export default function CandidateDialogue({
           })}
         </div>
 
-        {/* Footer */}
-        <div
-          style={{
-            padding: "16px 24px",
-            borderTop: "1px solid var(--border)",
-            background: "var(--bg-surface)",
-            fontSize: "12px",
-            color: "var(--text-4)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
-          <span>Data sourced from MyNeta affidavits & Election Commission records</span>
-          <a
-            href={`https://www.myneta.info/LokSabha${electionYear}/candidate.php?candidate_id=${candidateId}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "6px",
-              color: "var(--saffron)",
-              textDecoration: "none",
-              fontSize: "12px",
-              fontWeight: "500",
-            }}
-          >
-            View on MyNeta <ExternalLink size={12} />
-          </a>
-        </div>
       </div>
     </div>
   );
