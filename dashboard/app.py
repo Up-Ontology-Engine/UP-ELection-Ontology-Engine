@@ -51,6 +51,7 @@ PAGES = [
     ("🧠", "Intelligence Query"),
     ("⚠️", "Data Quality"),
     ("🚨", "Recommendations"),
+    ("🧬", "Caste & Surname Analysis"),  # NEW: surname-caste influence pipeline
 ]
 
 API_URL = os.environ.get("API_BASE_URL", "http://localhost:8000")
@@ -166,3 +167,7 @@ elif page_name == "Data Quality":
 elif page_name == "Recommendations":
     from dashboard.pages.recommendations import render
     render(AC_ID, AC_NAME, booths, API_URL)
+
+elif page_name == "Caste & Surname Analysis":
+    from dashboard.pages.caste_analysis import render
+    render()

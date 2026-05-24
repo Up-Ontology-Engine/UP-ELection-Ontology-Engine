@@ -30,6 +30,7 @@ const SECTIONS = [
     items: [
       { href: "/demographics", icon: Users,    label: "Demographics",   dot: "cyan"  },
       { href: "/ontology",     icon: BookOpen, label: "Ontology Layer", dot: "slate" },
+      { href: "/caste-analysis", icon: BarChart3, label: "Caste Analysis", dot: "orange" },
     ],
   },
 ];

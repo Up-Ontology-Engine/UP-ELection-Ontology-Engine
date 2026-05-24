@@ -3,6 +3,7 @@ import glob
 import pandas as pd
 import sqlalchemy as sa
 from sqlalchemy import text
+from pathlib import Path
 import logging
 import sys
 
@@ -108,9 +109,10 @@ def parse_form20_xls(file_path):
     return booth_master_data, booth_results_data
 
 def run():
+    from dotenv import load_dotenv; load_dotenv()
     engine = sa.create_engine(os.environ["POSTGRES_URL"])
     
-    files = glob.glob("data/raw/2022/form20/*.xls")
+    files = glob.glob(str(Path(__file__).parents[1] / "data" / "Form 20 Gorakhpur Data" / "*.xls"))
     files = list(set(files))
     
     for f in files:

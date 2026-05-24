@@ -536,6 +536,106 @@ def seed_demo(ac_id: str, per_booth: int = Query(18, ge=5, le=50)):
     return {"ac_id": ac_id, "seeded": count}
 
 
+# ── Caste Analysis endpoints ───────────────────────────────────────────────
+
+import pandas as pd
+from pathlib import Path
+
+TRANSFORMED_DIR = Path(__file__).resolve().parents[1] / "data" / "transformed"
+
+def _get_ac_num(ac_id: str) -> int:
+    resolved = _rac(ac_id)
+    if resolved.startswith("GKP_"):
+        return int(resolved.split("_")[-1])
+    return int(resolved)
+
+@app.get("/ac/{ac_id}/caste/influence")
+def caste_influence(ac_id: str):
+    """Returns influence scores from caste_influence_scores.json"""
+    path = TRANSFORMED_DIR / "caste_influence_scores.json"
+    if not path.exists():
+        return {}
+    import json
+    with open(path, encoding="utf-8") as fh:
+        data = json.load(fh)
+    # The JSON is keyed by ac_key like "ac_322"
+    key = f"ac_{_get_ac_num(ac_id)}"
+    return data.get(key, {})
+
+@app.get("/ac/{ac_id}/caste/scatter")
+def caste_scatter(ac_id: str):
+    """Returns booth-level scatter data from caste_booth_analysis.parquet"""
+    path = TRANSFORMED_DIR / "caste_booth_analysis.parquet"
+    if not path.exists():
+        return []
+    df = pd.read_parquet(path)
+    # Filter by ac_number if available (assuming the parquet might contain multiple ACs)
+    if "ac_number" in df.columns:
+        df = df[df["ac_number"] == _get_ac_num(ac_id)]
+    
+    # Replace NaN with None so it serializes to JSON null
+    df = df.where(pd.notnull(df), None)
+    return df.to_dict(orient="records")
+
+@app.get("/ac/{ac_id}/caste/surnames")
+def caste_surnames(ac_id: str):
+    """Returns top 25 surnames from voter_roll_normalised_caste.parquet"""
+    path = TRANSFORMED_DIR / "voter_roll_normalised_caste.parquet"
+    if not path.exists():
+        return []
+    df = pd.read_parquet(path)
+    if "ac_number" in df.columns:
+        df = df[df["ac_number"] == _get_ac_num(ac_id)]
+    
+    # Exclude Unknown
+    df = df[df["surname"] != "UNKNOWN"]
+    top = df["surname"].value_counts().head(25).reset_index()
+    top.columns = ["surname", "count"]
+    
+    # Get mode of social_category
+    category_map = df.groupby("surname")["social_category"].agg(lambda x: x.mode()[0] if len(x.mode()) > 0 else "Unknown").to_dict()
+    
+    results = []
+    for _, row in top.iterrows():
+        results.append({
+            "surname": row["surname"],
+            "count": int(row["count"]),
+            "category": category_map.get(row["surname"], "Unknown")
+        })
+    return results
+
+@app.post("/ac/{ac_id}/caste/summary")
+def caste_summary(ac_id: str):
+    """Calls Groq API to generate AI summary of top influential castes"""
+    from groq import Groq
+    import os
+    import json
+    
+    api_key = os.getenv("GROQ_API_KEY")
+    if not api_key:
+        raise HTTPException(500, "GROQ_API_KEY not configured")
+    
+    # Get influence data
+    scores = caste_influence(ac_id)
+    if not scores:
+        return {"summary": "No influence data available to summarize."}
+        
+    from analytics.surname_caste.influence_scorer import top_influential_castes
+    ac_key = f"ac_{_get_ac_num(ac_id)}"
+    top = top_influential_castes({ac_key: scores}, ac_key=ac_key, n=10)
+    
+    try:
+        client = Groq(api_key=api_key)
+        prompt = f"Here is data on the most influential caste groups in an election:\n{json.dumps(top, indent=2)}\nSummarize the key takeaways in 3 simple bullet points. Keep it short and easy to understand for a political strategist."
+        res = client.chat.completions.create(
+            model="llama-3.1-8b-instant",
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.3
+        )
+        return {"summary": res.choices[0].message.content.replace("**", "")}
+    except Exception as e:
+        return {"summary": f"Failed to generate summary: {e}"}
+
 # ── Helper functions for insight/recommendation text ─────────────────────────
 
 def _generate_insight(_meta: dict, bjp_wins: int, bjp_shares: list, issues: list, _momentum: dict) -> str:

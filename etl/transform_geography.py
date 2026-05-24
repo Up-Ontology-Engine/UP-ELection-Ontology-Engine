@@ -102,13 +102,13 @@ def _read_electoral_roll(path: Path) -> pd.DataFrame:
 def _aggregate_booth_demographics(df: pd.DataFrame) -> pd.DataFrame:
     """Aggregate per-voter records to booth-level counts. Zero PII."""
     agg = (
-        df.groupby("part_no")
+        df.groupby("part_number")
         .apply(lambda g: pd.Series({
             "total_voters":   len(g),
-            "male_voters":    (g["gender"].str.upper() == "M").sum(),
-            "female_voters":  (g["gender"].str.upper() == "F").sum(),
-            "other_voters":   (~g["gender"].str.upper().isin(["M", "F"])).sum(),
-            "active_voters":  (g["status"].str.upper() == "A").sum(),
+            "male_voters":    (g["gender"].str.upper() == "MALE").sum(),
+            "female_voters":  (g["gender"].str.upper() == "FEMALE").sum(),
+            "other_voters":   (~g["gender"].str.upper().isin(["MALE", "FEMALE"])).sum(),
+            "active_voters":  len(g),  # Assume active since status is not in JSON
             "age_18_25":      ((g["age"] >= 18) & (g["age"] <= 25)).sum(),
             "age_26_40":      ((g["age"] >= 26) & (g["age"] <= 40)).sum(),
             "age_40_60":      ((g["age"] >= 41) & (g["age"] <= 60)).sum(),
@@ -116,31 +116,22 @@ def _aggregate_booth_demographics(df: pd.DataFrame) -> pd.DataFrame:
         }), include_groups=False)
         .reset_index()
     )
-    agg["booth_id"] = agg["part_no"].apply(lambda p: f"GKP_{AC_NUMBER}_{p:03d}")
+    agg["booth_id"] = agg["part_number"].apply(lambda p: f"GKP_{AC_NUMBER}_{p:03d}")
     agg["ac_id"]    = AC_ID
     return agg
 
 
 def load_booth_master(engine: sa.Engine) -> int:
-    """Build booth_master from electoral roll xlsx files."""
-    roll_files = [
-        DATA_DIR / "Convert to xcel sheet" / "electoral_roll.xlsx",
-        DATA_DIR / "Convert to xcel sheet" / "electoral_roll (1).xlsx",
-    ]
+    """Build booth_master from the normalised parquet file."""
+    parquet_path = Path(__file__).parents[1] / "data" / "transformed" / "voter_roll_normalized.parquet"
+    
+    if not parquet_path.exists():
+        # Fallback to parse it right now
+        from analytics.surname_caste.etl.parse_voter_roll import parse_voter_roll
+        df = parse_voter_roll(force=True)
+    else:
+        df = pd.read_parquet(parquet_path)
 
-    frames = []
-    for f in roll_files:
-        if f.exists():
-            try:
-                frames.append(_read_electoral_roll(f))
-                logger.info("Read %s", f.name)
-            except Exception as e:
-                logger.warning("Skipping %s: %s", f.name, e)
-
-    if not frames:
-        raise FileNotFoundError("No electoral roll xlsx files readable")
-
-    df      = pd.concat(frames, ignore_index=True)
     booths  = _aggregate_booth_demographics(df)
 
     inserted = 0
@@ -164,7 +155,7 @@ def load_booth_master(engine: sa.Engine) -> int:
                 {
                     "booth_id":     row["booth_id"],
                     "ac_id":        row["ac_id"],
-                    "part_no":      int(row["part_no"]),
+                    "part_no":      int(row["part_number"]),
                     "male_voters":  int(row["male_voters"]),
                     "female_voters":int(row["female_voters"]),
                     "other_voters": int(row["other_voters"]),
