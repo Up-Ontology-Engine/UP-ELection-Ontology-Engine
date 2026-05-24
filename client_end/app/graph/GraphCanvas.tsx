@@ -92,8 +92,8 @@ export default function GraphCanvas({ nodes, edges, nodeColors, selectedId, them
     stateRef.current.scale = 1;
     stateRef.current.panX = 0;
     stateRef.current.panY = 0;
-    // Give more ticks for larger graphs so they settle fully
-    stateRef.current.ticksLeft = Math.min(600, 250 + nodes.length * 2);
+    // Short live-tick budget; the bulk of layout is pre-settled before first paint (below).
+    stateRef.current.ticksLeft = Math.min(160, 60 + nodes.length);
 
     const idxMap = new Map(simNodes.map((n, i) => [n.id, i]));
 
@@ -102,7 +102,7 @@ export default function GraphCanvas({ nodes, edges, nodeColors, selectedId, them
     const repulsionK = 4000;
     const springK = 0.04;
     const gravityK = 0.018;
-    const damping = 0.82;
+    const damping = 0.86;
 
     function tick() {
       const ns = stateRef.current.nodes;
@@ -310,10 +310,22 @@ export default function GraphCanvas({ nodes, edges, nodeColors, selectedId, them
       if (s.ticksLeft > 0 || s.dragging) {
         tick();
         if (s.ticksLeft > 0) s.ticksLeft--;
+        // Freeze once the layout is essentially at rest — kills lingering drift/jitter.
+        if (!s.dragging) {
+          let ke = 0;
+          for (const n of s.nodes) ke += n.vx * n.vx + n.vy * n.vy;
+          if (ke / (s.nodes.length || 1) < 0.05) s.ticksLeft = 0;
+        }
       }
       draw();
       s.frame = requestAnimationFrame(loop);
     }
+
+    // Pre-settle the layout off-screen so nodes appear already placed
+    // instead of visibly flying in and oscillating.
+    for (let i = 0; i < 150; i++) tick();
+    for (const n of stateRef.current.nodes) { n.vx = 0; n.vy = 0; }
+
     stateRef.current.frame = requestAnimationFrame(loop);
 
     // ── Event handlers ─────────────────────────────────────────

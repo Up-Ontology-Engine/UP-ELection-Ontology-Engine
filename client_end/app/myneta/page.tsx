@@ -4,9 +4,10 @@ import { useEffect, useMemo, useState } from "react";
 import type { GraphNode, GraphEdge } from "@/lib/api";
 import { useTheme } from "@/components/ThemeProvider";
 import GraphCanvas from "../graph/GraphCanvas";
+import CandidateDossier from "./CandidateDossier";
 import {
   ScrollText, Network, Award, AlertTriangle, GraduationCap,
-  Wallet, Landmark, Users, ExternalLink, X, Filter,
+  Wallet, Landmark, Users, ExternalLink, X,
 } from "lucide-react";
 
 interface MyNetaGraph {
@@ -54,7 +55,7 @@ export default function MyNetaPage() {
   const [graph, setGraph] = useState<MyNetaGraph | null>(null);
   const [error, setError] = useState("");
   const [selected, setSelected] = useState<GraphNode | null>(null);
-  const [showRivals, setShowRivals] = useState(false);
+  const [dossier, setDossier] = useState<GraphNode | null>(null);
   const [canvasKey, setCanvasKey] = useState(0);
 
   useEffect(() => {
@@ -64,11 +65,17 @@ export default function MyNetaPage() {
       .catch(() => setError("Could not load the MyNeta graph. Run `python -m analytics.myneta_graph` to (re)build it."));
   }, []);
 
-  // Edges shown on canvas — typed KG by default; rival co-occurrence is opt-in.
-  const visibleEdges = useMemo(
-    () => (graph?.edges ?? []).filter((e) => showRivals || e.type !== "RAN_AGAINST"),
-    [graph, showRivals],
+  // Graph view: only political parties and their candidates, linked by REPRESENTS.
+  const visibleNodes = useMemo(
+    () => (graph?.nodes ?? []).filter((n) => n.type === "Party" || n.type === "Candidate"),
+    [graph],
   );
+  const visibleEdges = useMemo(
+    () => (graph?.edges ?? []).filter((e) => e.type === "REPRESENTS"),
+    [graph],
+  );
+
+  const onSelect = (n: GraphNode) => (n.type === "Candidate" ? setDossier(n) : setSelected(n));
 
   const candidates = useMemo(
     () => (graph?.nodes ?? []).filter((n) => n.type === "Candidate"),
@@ -171,7 +178,7 @@ export default function MyNetaPage() {
               <p className="label mb-2" style={{ color: S.t4 }}>Wealthiest Candidates</p>
               <div className="space-y-1">
                 {topAssets.map((c) => (
-                  <button key={c.id} onClick={() => setSelected(c)}
+                  <button key={c.id} onClick={() => setDossier(c)}
                     className="w-full text-left px-2.5 py-2 rounded-md flex items-center gap-2 transition-all"
                     style={{ background: S.surface, border: `1px solid ${S.border}` }}
                     onMouseEnter={(e) => (e.currentTarget.style.background = S.hover)}
@@ -199,43 +206,35 @@ export default function MyNetaPage() {
 
       {/* ── Graph canvas ── */}
       <div className="flex-1 relative">
-        {/* Controls */}
-        <div className="absolute top-3 left-3 z-10 flex items-center gap-2">
-          <button onClick={() => setShowRivals((v) => !v)}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs transition-all"
-            style={{
-              background: showRivals ? "rgba(249,115,22,0.12)" : "var(--bg-card)",
-              border: `1px solid ${showRivals ? "rgba(249,115,22,0.4)" : "var(--border)"}`,
-              color: showRivals ? "var(--saffron)" : "var(--text-3)",
-            }}>
-            <Filter size={11} /> {showRivals ? "Hide rivalries" : "Show rivalries"}
-          </button>
+        {/* Title chip */}
+        <div className="absolute top-3 left-3 z-10 flex items-center gap-2 px-3 py-1.5 rounded-md"
+          style={{ background: "var(--bg-card)", border: "1px solid var(--border)" }}>
+          <Network size={12} style={{ color: "var(--saffron)" }} />
+          <span className="text-xs" style={{ color: "var(--text-2)" }}>Parties → Candidates · click a candidate</span>
         </div>
 
         {/* Legend */}
         <div className="absolute top-3 right-3 z-10 rounded-lg p-2.5"
           style={{ background: "var(--bg-card)", border: "1px solid var(--border)" }}>
-          <div className="grid grid-cols-2 gap-x-3 gap-y-1">
-            {Object.entries(NODE_COLORS)
-              .filter(([t]) => (graph?.stats.node_types?.[t] ?? 0) > 0)
-              .map(([type, color]) => (
-                <div key={type} className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full" style={{ background: color }} />
-                  <span className="text-xs" style={{ color: "var(--text-3)", fontSize: 10 }}>{type}</span>
-                </div>
-              ))}
+          <div className="flex flex-col gap-1">
+            {[["Party", NODE_COLORS.Party], ["Candidate", NODE_COLORS.Candidate]].map(([type, color]) => (
+              <div key={type} className="flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full" style={{ background: color }} />
+                <span className="text-xs" style={{ color: "var(--text-3)", fontSize: 10 }}>{type}</span>
+              </div>
+            ))}
           </div>
         </div>
 
         {graph ? (
           <GraphCanvas
             key={canvasKey}
-            nodes={graph.nodes}
+            nodes={visibleNodes}
             edges={visibleEdges}
             nodeColors={NODE_COLORS}
             selectedId={selected?.id}
             theme={theme}
-            onSelect={setSelected}
+            onSelect={onSelect}
           />
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center" style={{ color: "var(--text-4)" }}>
@@ -244,6 +243,9 @@ export default function MyNetaPage() {
           </div>
         )}
       </div>
+
+      {/* ── Candidate dossier modal ── */}
+      {dossier && <CandidateDossier node={dossier} onClose={() => setDossier(null)} />}
     </div>
   );
 }

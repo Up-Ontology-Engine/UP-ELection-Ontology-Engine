@@ -145,6 +145,21 @@ def build_graph(constituency_files: list[Path]) -> dict[str, Any]:
             won = bool((c.get("affidavit_detail") or {}).get("is_winner")) or \
                 "winner" in (c.get("party_raw") or "").lower()
 
+            detail = c.get("affidavit_detail") or {}
+            affidavit = {
+                "movable_assets_rs": detail.get("movable_assets_rs"),
+                "immovable_assets_rs": detail.get("immovable_assets_rs"),
+                "total_assets_rs": detail.get("total_assets_detail") or assets,
+                "liabilities": detail.get("liabilities_json") or [],
+                "itr_income": detail.get("itr_income_json") or [],
+                "criminal_cases_detail": detail.get("criminal_case_details_json") or [],
+                "spouse_name": detail.get("spouse_name"),
+                "self_profession": detail.get("self_profession"),
+                "education_detail": detail.get("education_detail"),
+                "voter_enrolled": detail.get("voter_enrolled_ac_name"),
+                "source_url": detail.get("source_affidavit_url") or c.get("detail_url"),
+            }
+
             add_node(cid, c["name"], "Candidate", {
                 "candidate_id": c["candidate_id"],
                 "party": party,
@@ -159,6 +174,7 @@ def build_graph(constituency_files: list[Path]) -> dict[str, Any]:
                 "liabilities_rs": ls.get("liabilities") or 0,
                 "detail_url": c.get("detail_url"),
                 "winner": won,
+                "affidavit": affidavit,
             })
             bucket.add(cid)
 
@@ -220,7 +236,7 @@ def build_graph(constituency_files: list[Path]) -> dict[str, Any]:
 
 
 def run(myneta_dir: Path = MYNETA_DIR) -> dict[str, Any]:
-    files = sorted(p for p in myneta_dir.glob("myneta_*.json") if p.name != "manifest.json")
+    files = sorted(p for p in myneta_dir.glob("myneta_*.json") if p.name not in ("manifest.json", "myneta_graph.json"))
     if not files:
         raise FileNotFoundError(
             f"No MyNeta JSON found in {myneta_dir}. "
