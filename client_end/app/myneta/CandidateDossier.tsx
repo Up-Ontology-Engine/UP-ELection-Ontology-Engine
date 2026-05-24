@@ -78,6 +78,92 @@ const CURATED: Record<string, Curated> = {
       social: "https://ddnews.gov.in/en/yogis-twitter-following-surpasses-25-million-mark/",
     },
   },
+
+  RAVINDRA_SHUKLA_ALIAS_RAVI_KISHAN_2024: {
+    fullName: "Ravindra Kishan Shukla",
+    alias: "Ravi Kishan",
+    dob: "17 Jul 1969",
+    currentSeat: "Gorakhpur (Lok Sabha)",
+    currentRole: "Member of Parliament, Lok Sabha (Gorakhpur, since 2019)",
+    joinDate: "2014 (entered politics)",
+    partySwitches: "Joined INC in 2014, moved to BJP in 2017.",
+    election: "2024 · Gorakhpur (Lok Sabha) · Won",
+    margin: "1,03,526",
+    career: "Actor, film producer & TV personality — 200+ Bhojpuri/Hindi films.",
+    awards: "Sansad Ratna 2025; Filmfare & IIFA Best Supporting Actor for Laapataa Ladies (2024).",
+    publicPerception: "High-recognition Bhojpuri cinema star; two-term Gorakhpur MP.",
+    execStanding: "Sitting BJP MP for Gorakhpur, re-elected in 2024 by over 1 lakh votes.",
+    execInternet: "Nationally famous actor with a large fan following.",
+    sources: {
+      bio: "https://en.wikipedia.org/wiki/Ravi_Kishan",
+      sansad: "https://sansad.in/ls/members/biography/5144?from=members",
+    },
+  },
+
+  KAJAL_NISHAD_2024: {
+    fullName: "Kajal Nishad",
+    dob: "01 Jun 1982",
+    placeOfBirth: "Mumbai (parents from Kutch, Gujarat)",
+    spouse: "Sanjay Nishad (Bhojpuri film producer)",
+    currentSeat: "Gorakhpur (Lok Sabha)",
+    election: "2024 · Gorakhpur (Lok Sabha) · Lost (to Ravi Kishan)",
+    pastSeats: "Contested 2012 UP Assembly — Gorakhpur Rural (INC)",
+    career: "Actress — Chameli in 'Lapataganj' (SAB TV), Kanak in 'Ishq Ka Rang Safed' (Colors), 'Tota Weds Maina'.",
+    publicPerception: "From the Nishad community, influential on the Gorakhpur LS seat; INDIA-alliance SP candidate.",
+    sources: {
+      bio: "https://en.wikipedia.org/wiki/Kajal_Nishad",
+      news: "https://www.etvbharat.com/en/!state/gorakhpur-sp-bjp-candidates-lok-sabha-elections-enn24032205642",
+    },
+  },
+
+  CHANDRA_SHEKHAR_2022: {
+    fullName: "Chandra Shekhar Azad",
+    alias: "Ravan",
+    currentRole: "Founder, Azad Samaj Party (Kanshi Ram); chief of Bhim Army",
+    currentSeat: "Gorakhpur Urban (Uttar Pradesh)",
+    election: "2022 · Gorakhpur Urban · Lost (to Yogi Adityanath)",
+    policyStance: "Dalit rights and social justice.",
+    controversy: "Declared 16 criminal cases in the 2022 affidavit (per MyNeta).",
+    controversyVerdict: "True",
+    publicPerception: "Prominent young Dalit leader who chose to contest directly against CM Yogi Adityanath.",
+    execStanding: "Bhim Army chief; later elected MP from Nagina (2024).",
+    sources: {
+      news: "https://www.india.com/uttar-pradesh/gorakhpur-constituency-chunav-2022-latest-news-uttar-pradesh-election-yogi-adityanath-chandashekhar-azad-bhim-army-bjp-5215401/",
+    },
+  },
+
+  SUBHAWATI_UPENDRA_DUTT_SHUKLA_2022: {
+    fullName: "Subhawati Shukla",
+    spouse: "Late Upendra Dutt Shukla (former BJP vice-president, Gorakhpur)",
+    currentSeat: "Gorakhpur Urban (Uttar Pradesh)",
+    election: "2022 · Gorakhpur Urban · Lost (to Yogi Adityanath)",
+    publicPerception: "Widow of a late BJP leader; fielded by SP to court Brahmin voters against the CM.",
+    sources: {
+      news: "https://www.indiatvnews.com/elections/news/up-election-2022-samajwadi-party-fields-subhawati-shukla-against-yogi-adityanath-gorakhpur-2022-02-07-758477",
+    },
+  },
+
+  DR_RADHA_MOHAN_DAS_AGRAWAL_2017: {
+    fullName: "Dr. Radha Mohan Das Agrawal",
+    dob: "06 Mar 1955",
+    spouse: "Ragini Agrawal (m. 1988)",
+    degree: "MBBS (1976), MD Pediatrics (1981)",
+    institution: "Banaras Hindu University",
+    educationDetail: "Practising pediatrician before full-time politics.",
+    currentSeat: "Gorakhpur Urban (Uttar Pradesh)",
+    currentRole: "Rajya Sabha MP (since Jul 2022); BJP National General Secretary",
+    joinDate: "1998 (BJP, at Yogi Adityanath's invitation)",
+    election: "2017 · Gorakhpur Urban · Won",
+    votes: "1,22,221", margin: "~62,000",
+    pastSeats: "Gorakhpur Urban MLA, 2002–2022 (won 2002, 2007, 2012, 2017)",
+    career: "Pediatrician.",
+    publicPerception: "Four-term Gorakhpur Urban MLA who vacated the seat for Yogi Adityanath in 2022.",
+    execStanding: "Long-serving BJP MLA, later elevated to the Rajya Sabha and party national general secretary.",
+    sources: {
+      bio: "https://en.wikipedia.org/wiki/Radha_Mohan_Das_Agarwal",
+      myneta: "https://www.myneta.info/uttarpradesh2017/candidate.php?candidate_id=4488",
+    },
+  },
 };
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
