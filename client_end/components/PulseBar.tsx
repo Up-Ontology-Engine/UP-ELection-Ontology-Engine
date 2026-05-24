@@ -20,7 +20,7 @@ export default function PulseBar({ bjp, opp, size = "sm" }: Props) {
         <span className="text-xs w-8 text-right" style={{ color: "var(--text-3)" }}>{bjpPct}%</span>
       </div>
       <div className="flex items-center gap-2">
-        <span className="text-xs w-8" style={{ color: "#3b82f6" }}>OPP</span>
+        <span className="text-xs w-8" style={{ color: "#3b82f6" }}>SP</span>
         <div className={`flex-1 rounded-full ${h}`} style={{ background: "var(--border)" }}>
           <div className={`${h} rounded-full transition-all`}
             style={{ width: `${oppPct}%`, background: "#3b82f6" }} />
