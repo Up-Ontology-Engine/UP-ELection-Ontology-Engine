@@ -519,7 +519,7 @@ export default function ConversionPage() {
 
                   {/* Lean breakdown */}
                   <div className="flex items-center gap-2">
-                    {([["#f97316", "BJP", activeBooth.supporters], ["#f59e0b", "?", activeBooth.unknown_lean], ["#ef4444", "OPP", activeBooth.opp_lean]] as [string, string, number][]).map(([c, l, v]) => (
+                    {([["#f97316", "BJP", activeBooth.supporters], ["#f59e0b", "?", activeBooth.unknown_lean], ["#ef4444", "SP/BSP", activeBooth.opp_lean]] as [string, string, number][]).map(([c, l, v]) => (
                       <div key={l} className="flex items-center gap-1">
                         <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: c }} />
                         <span className="mono" style={{ color: "var(--text-4)", fontSize: 9 }}>{l} {v}</span>

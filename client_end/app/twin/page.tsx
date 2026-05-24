@@ -149,7 +149,7 @@ export default async function TwinPage() {
               <table className="w-full text-xs">
                 <thead>
                   <tr style={{ background: "var(--bg-base)", borderBottom: "1px solid var(--border)" }}>
-                    {["Booth", "Voters", "Lean", "BJP Pulse", "Volatility", "Top Issue", "Confidence", "Events"].map((h) => (
+                    {["Booth", "Voters", "Lean", "BJP Signal", "Volatility", "Top Issue", "Confidence", "Events"].map((h) => (
                       <th key={h} className="px-3 py-2 text-left font-medium uppercase tracking-wider"
                         style={{ color: "var(--text-4)" }}>{h}</th>
                     ))}
