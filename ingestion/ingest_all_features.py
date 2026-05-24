@@ -507,25 +507,18 @@ def step_panchayat_mapping(stats: dict[int, dict], engine, dry_run=False) -> int
                 len(panchayat_rows), len(mapping_rows))
 
     if not dry_run:
-        # Get panchayat_master columns first
-        with engine.connect() as conn:
-            cols = conn.execute(sa.text(
-                "SELECT column_name FROM information_schema.columns WHERE table_name='panchayat_master'"
-            )).scalars().all()
-
         with engine.begin() as conn:
             for r in panchayat_rows:
-                if "name" in cols:
-                    conn.execute(text("""
-                        INSERT INTO panchayat_master (panchayat_id, name, ac_id)
-                        VALUES (:id, :name, :ac_id)
-                        ON CONFLICT (panchayat_id) DO NOTHING
-                    """), {"id": r["id"], "name": r["name"], "ac_id": r["ac_id"]})
+                conn.execute(text("""
+                    INSERT INTO panchayat_master (panchayat_id, gp_name, block_name, district_id)
+                    VALUES (:id, :name, :block, :district_id)
+                    ON CONFLICT (panchayat_id) DO NOTHING
+                """), {"id": r["id"], "name": r["name"], "block": "Gorakhpur Urban", "district_id": "DIST_148"})
 
             for r in mapping_rows:
                 conn.execute(text("""
-                    INSERT INTO booth_panchayat_mapping (booth_id, panchayat_id)
-                    VALUES (:booth_id, :panchayat_id)
+                    INSERT INTO booth_panchayat_mapping (booth_id, panchayat_id, match_method)
+                    VALUES (:booth_id, :panchayat_id, 'section_name_cluster')
                     ON CONFLICT DO NOTHING
                 """), r)
 
