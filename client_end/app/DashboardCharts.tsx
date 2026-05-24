@@ -90,9 +90,9 @@ export default function DashboardCharts({ leanData, issueData, booths }: Props) 
         </ResponsiveContainer>
       </div>
 
-      {/* BJP vs Opp pulse comparison */}
+      {/* Party pulse comparison */}
       <div className="card p-4 col-span-2">
-        <p className="text-xs font-semibold mb-0.5" style={{ color: "var(--text-1)" }}>BJP vs Opposition Pulse — Booth Comparison</p>
+        <p className="text-xs font-semibold mb-0.5" style={{ color: "var(--text-1)" }}>Party Pulse by Booth — BJP vs SP/BSP</p>
         <p className="text-xs mb-3" style={{ color: "var(--text-3)" }}>Pulse scores across {pulseData.length} booths with data</p>
         {pulseData.length === 0 ? (
           <div className="flex items-center justify-center h-36 text-xs" style={{ color: "var(--text-3)" }}>No pulse data</div>
@@ -106,7 +106,7 @@ export default function DashboardCharts({ leanData, issueData, booths }: Props) 
               <ReferenceLine y={0} stroke={C.border} strokeDasharray="4 2" />
               <Tooltip {...TT} />
               <Line type="monotone" dataKey="bjp" name="BJP" stroke="#f97316" strokeWidth={1.5} dot={false} />
-              <Line type="monotone" dataKey="opp" name="Opp" stroke="#3b82f6" strokeWidth={1.5} dot={false} />
+              <Line type="monotone" dataKey="opp" name="SP/BSP" stroke="#3b82f6" strokeWidth={1.5} dot={false} />
             </LineChart>
           </ResponsiveContainer>
         )}

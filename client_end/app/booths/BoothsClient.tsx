@@ -104,7 +104,7 @@ export default function BoothsClient({ booths }: Props) {
             </span>
           </div>
           <p className="text-xs mono" style={{ color: "var(--text-3)" }}>
-            AC-322 · {fmt(totalVoters)} registered voters · {bjpCount} BJP-leaning · {oppCount} Opp-leaning
+            AC-322 · {fmt(totalVoters)} registered voters · {bjpCount} BJP-leaning · {oppCount} SP/BSP-leaning
           </p>
         </div>
         <div className="flex items-center gap-2">
@@ -131,7 +131,7 @@ export default function BoothsClient({ booths }: Props) {
           { label: "Total Booths",  value: total,                      color: "var(--text-1)" },
           { label: "With Pulse",    value: booths.filter((b) => b.bjp_pulse_score != null).length, color: "#10b981" },
           { label: "BJP Lean",      value: bjpCount,                   color: "#f97316" },
-          { label: "Opp Lean",      value: oppCount,                   color: "#3b82f6" },
+          { label: "SP/BSP Lean",    value: oppCount,                   color: "#3b82f6" },
           { label: "Neutral",       value: booths.filter((b) => b.digital_lean_label?.includes("NEUTRAL")).length, color: "#64748b" },
           { label: "High Conf.",    value: booths.filter((b) => b.confidence_label?.toUpperCase() === "HIGH").length, color: "#10b981" },
           { label: "Low Conf.",     value: booths.filter((b) => b.confidence_label?.toUpperCase() === "LOW").length, color: "#ef4444" },
@@ -233,8 +233,8 @@ export default function BoothsClient({ booths }: Props) {
                   { key: "locality_hint",label: "Locality" },
                   { key: "total_voters", label: "Voters" },
                   { key: null,           label: "M / F Split" },
-                  { key: "bjp_pulse_score", label: "BJP Pulse" },
-                  { key: "opp_pulse_score", label: "Opp Pulse" },
+                  { key: "bjp_pulse_score", label: "BJP Signal" },
+                  { key: "opp_pulse_score", label: "SP Signal" },
                   { key: "digital_lean_label", label: "Lean" },
                   { key: "top_issue",    label: "Top Issue" },
                   { key: "event_count",  label: "Events" },
