@@ -8,7 +8,7 @@ import CandidateDialogue from "./CandidateDialogue";
 import completeCandidateDataRaw from "./complete_candidate_data.json";
 import {
   ScrollText, Network, Award, AlertTriangle, GraduationCap,
-  Wallet, Landmark, Users, ExternalLink, X,
+  Wallet, Landmark, Users, ExternalLink, X, Search,
 } from "lucide-react";
 
 const completeCandidateData = completeCandidateDataRaw as Record<string, any>;
@@ -60,6 +60,7 @@ export default function MyNetaPage() {
   const [selected, setSelected] = useState<GraphNode | null>(null);
   const [dossier, setDossier] = useState<GraphNode | null>(null);
   const [canvasKey, setCanvasKey] = useState(0);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     fetch("/myneta_graph.json", { cache: "no-store" })
@@ -84,6 +85,16 @@ export default function MyNetaPage() {
     () => (graph?.nodes ?? []).filter((n) => n.type === "Candidate"),
     [graph],
   );
+
+  const filteredCandidates = useMemo(() => {
+    if (!search.trim()) return candidates;
+    const q = search.toLowerCase();
+    return candidates.filter((c) =>
+      (c.properties.name as string ?? "").toLowerCase().includes(q) ||
+      (c.properties.party as string ?? "").toLowerCase().includes(q) ||
+      (c.properties.ac_name as string ?? "").toLowerCase().includes(q)
+    );
+  }, [candidates, search]);
 
   const partyDist = useMemo(() => {
     const m: Record<string, number> = {};
@@ -135,9 +146,74 @@ export default function MyNetaPage() {
           </p>
         </div>
 
-        {selected ? (
+        {/* Search bar */}
+        <div className="px-3 py-2.5" style={{ borderBottom: `1px solid ${S.border}` }}>
+          <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg"
+            style={{ background: S.surface, border: `1px solid ${S.border}` }}>
+            <Search size={12} style={{ color: S.t4, flexShrink: 0 }} />
+            <input
+              type="text"
+              placeholder="Search candidate, party, constituency…"
+              value={search}
+              onChange={(e) => { setSearch(e.target.value); setSelected(null); }}
+              className="flex-1 bg-transparent outline-none text-xs"
+              style={{ color: S.t1, caretColor: S.saffron }}
+            />
+            {search && (
+              <button onClick={() => setSearch("")} style={{ color: S.t4, background: "none", border: "none", cursor: "pointer", padding: 0 }}>
+                <X size={11} />
+              </button>
+            )}
+          </div>
+        </div>
+
+        {/* Search results list */}
+        {search.trim() && (
+          <div className="flex-1 overflow-y-auto">
+            {filteredCandidates.length === 0 ? (
+              <div className="px-4 py-6 text-center text-xs" style={{ color: S.t4 }}>
+                No candidates match "{search}"
+              </div>
+            ) : (
+              <div className="p-2 space-y-1">
+                <p className="text-xs px-2 py-1" style={{ color: S.t4 }}>
+                  {filteredCandidates.length} candidate{filteredCandidates.length !== 1 ? "s" : ""} found
+                </p>
+                {filteredCandidates.map((c) => {
+                  const party = (c.properties.party as string) ?? "IND";
+                  const color = PARTY_COLORS[party] ?? "#64748b";
+                  return (
+                    <button key={c.id} onClick={() => setDossier(c)}
+                      className="w-full text-left px-3 py-2.5 rounded-lg transition-all"
+                      style={{ background: S.surface, border: `1px solid ${S.border}` }}
+                      onMouseEnter={(e) => (e.currentTarget.style.background = S.hover)}
+                      onMouseLeave={(e) => (e.currentTarget.style.background = S.surface)}>
+                      <div className="flex items-center gap-2">
+                        <div className="w-7 h-7 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0"
+                          style={{ background: color, fontSize: 10 }}>
+                          {party.slice(0, 2)}
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <p className="text-xs font-semibold truncate" style={{ color: S.t1 }}>
+                            {c.properties.name as string}
+                          </p>
+                          <p className="text-xs truncate" style={{ color: S.t4, fontSize: 10 }}>
+                            {party} · {c.properties.ac_name as string} · {c.properties.election_year as number}
+                          </p>
+                        </div>
+                        <ExternalLink size={10} style={{ color: S.t4, flexShrink: 0 }} />
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        )}
+
+        {!search.trim() && selected ? (
           <NodeDetail node={selected} onClose={() => setSelected(null)} S={S} />
-        ) : (
+        ) : !search.trim() ? (
           <div className="p-4 space-y-5">
             {/* Overview stats */}
             <div className="grid grid-cols-2 gap-2">
@@ -204,7 +280,7 @@ export default function MyNetaPage() {
               </div>
             )}
           </div>
-        )}
+        ) : null}
       </div>
 
       {/* ── Graph canvas ── */}

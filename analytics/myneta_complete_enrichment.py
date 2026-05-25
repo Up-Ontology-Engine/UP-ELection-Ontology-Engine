@@ -209,6 +209,19 @@ def extract_full_profile(candidate_data: dict[str, Any]) -> dict[str, Any]:
                 "Controversies (Fact-Check)": controversy_info,
                 "Source Verification": controversy_verdict,
             },
+            "10_DigitalPresence": {
+                "Twitter/X Handle": "Not found",
+                "Twitter/X Followers": "Not publicly available",
+                "Facebook": "Not found",
+                "Facebook Followers": "Not publicly available",
+                "Instagram": "Not found",
+                "Instagram Followers": "Not publicly available",
+                "YouTube": "Not found",
+                "YouTube Subscribers": "Not publicly available",
+                "Website": "Not found",
+                "Wikipedia": "Not found",
+                "Digital Footprint": "No public digital presence indexed for this candidate. Run web enrichment to update.",
+            },
         },
     }
 
