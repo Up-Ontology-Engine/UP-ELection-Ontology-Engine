@@ -4,14 +4,15 @@ import { useEffect, useMemo, useState } from "react";
 import type { GraphNode, GraphEdge } from "@/lib/api";
 import { useTheme } from "@/components/ThemeProvider";
 import GraphCanvas from "../graph/GraphCanvas";
-import CandidateDialogue from "./CandidateDialogue";
+import CandidateDialogue, { type CandidateProfile } from "./CandidateDialogue";
 import completeCandidateDataRaw from "./complete_candidate_data.json";
 import {
   ScrollText, Network, Award, AlertTriangle, GraduationCap,
   Wallet, Landmark, Users, ExternalLink, X, Search,
 } from "lucide-react";
+import { hexToRgba } from "@/lib/colors";
 
-const completeCandidateData = completeCandidateDataRaw as Record<string, any>;
+const completeCandidateData = completeCandidateDataRaw as Record<string, CandidateProfile>;
 
 interface MyNetaGraph {
   nodes: GraphNode[];
@@ -130,7 +131,7 @@ export default function MyNetaPage() {
     <div className="flex" style={{ height: "calc(100vh - 56px)", background: S.base }}>
 
       {/* ── Left panel ── */}
-      <div className="w-80 flex-shrink-0 flex flex-col overflow-y-auto"
+      <div className="w-80 shrink-0 flex flex-col overflow-y-auto"
         style={{ borderRight: `1px solid ${S.border}` }}>
 
         <div className="px-4 py-3.5" style={{ borderBottom: `1px solid ${S.border}` }}>
@@ -172,7 +173,7 @@ export default function MyNetaPage() {
           <div className="flex-1 overflow-y-auto">
             {filteredCandidates.length === 0 ? (
               <div className="px-4 py-6 text-center text-xs" style={{ color: S.t4 }}>
-                No candidates match "{search}"
+                No candidates match &quot;{search}&quot;
               </div>
             ) : (
               <div className="p-2 space-y-1">
@@ -189,7 +190,7 @@ export default function MyNetaPage() {
                       onMouseEnter={(e) => (e.currentTarget.style.background = S.hover)}
                       onMouseLeave={(e) => (e.currentTarget.style.background = S.surface)}>
                       <div className="flex items-center gap-2">
-                        <div className="w-7 h-7 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0"
+                        <div className="w-7 h-7 rounded-full flex items-center justify-center text-white font-bold shrink-0"
                           style={{ background: color, fontSize: 10 }}>
                           {party.slice(0, 2)}
                         </div>
@@ -262,10 +263,10 @@ export default function MyNetaPage() {
                     style={{ background: S.surface, border: `1px solid ${S.border}` }}
                     onMouseEnter={(e) => (e.currentTarget.style.background = S.hover)}
                     onMouseLeave={(e) => (e.currentTarget.style.background = S.surface)}>
-                    <div className="w-1.5 h-1.5 rounded-full flex-shrink-0"
+                    <div className="w-1.5 h-1.5 rounded-full shrink-0"
                       style={{ background: PARTY_COLORS[(c.properties.party as string)] ?? "#64748b" }} />
                     <span className="flex-1 text-xs truncate" style={{ color: S.t2 }}>{c.properties.name as string}</span>
-                    <span className="mono text-xs flex-shrink-0 tabular-nums" style={{ color: NODE_COLORS.AssetTier }}>
+                    <span className="mono text-xs shrink-0 tabular-nums" style={{ color: NODE_COLORS.AssetTier }}>
                       {fmtRs(c.properties.assets_rs as number)}
                     </span>
                   </button>
@@ -326,12 +327,11 @@ export default function MyNetaPage() {
       {/* ── Candidate dialogue (complete data, no dashes) ── */}
       {dossier && (
         <CandidateDialogue
-          candidateId={String(dossier.properties.candidate_id || "")}
           electionYear={Number(dossier.properties.election_year || new Date().getFullYear())}
           candidateData={
             completeCandidateData[
               `${dossier.properties.candidate_id}_${dossier.properties.election_year}` as keyof typeof completeCandidateData
-            ] as any
+            ]
           }
           onClose={() => setDossier(null)}
         />
@@ -361,9 +361,9 @@ function NodeDetail({ node, onClose, S }: {
           <X size={11} /> Back to overview
         </button>
 
-        <div className="rounded-lg p-3" style={{ background: `${partyColor}10`, border: `1px solid ${partyColor}35` }}>
+        <div className="rounded-lg p-3" style={{ background: hexToRgba(partyColor, "10"), border: `1px solid ${hexToRgba(partyColor, "35")}` }}>
           <div className="flex items-center gap-2.5">
-            <div className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0"
+            <div className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-xs shrink-0"
               style={{ background: partyColor, color: "#fff" }}>{party.slice(0, 3)}</div>
             <div className="min-w-0">
               <p className="font-bold text-sm truncate" style={{ color: S.t1 }}>{p.name as string}</p>
@@ -415,7 +415,7 @@ function NodeDetail({ node, onClose, S }: {
       <button onClick={onClose} className="flex items-center gap-1 text-xs" style={{ color: S.t4 }}>
         <X size={11} /> Back to overview
       </button>
-      <div className="rounded-lg p-3" style={{ background: `${color}10`, border: `1px solid ${color}35` }}>
+        <div className="rounded-lg p-3" style={{ background: hexToRgba(color, "10"), border: `1px solid ${hexToRgba(color, "35")}` }}>
         <div className="flex items-center gap-2 mb-1">
           <Icon size={13} style={{ color }} />
           <p className="text-xs font-semibold" style={{ color }}>{node.type}</p>

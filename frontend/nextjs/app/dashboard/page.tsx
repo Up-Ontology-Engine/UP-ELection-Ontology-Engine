@@ -33,7 +33,7 @@ function normalizeLeanLabel(label: string | null | undefined) {
 }
 
 export default async function DashboardPage() {
-  const [boothsR, intelR, qualityR, electionR, candidatesR, eventsR] = await Promise.allSettled([
+  const [boothsR, intelR, , electionR, candidatesR, eventsR] = await Promise.allSettled([
     api.booths(AC_ID),
     api.intelSummary(AC_ID),
     api.quality(AC_ID),

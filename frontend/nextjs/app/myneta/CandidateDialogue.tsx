@@ -3,8 +3,9 @@
 import { useEffect } from "react";
 import {
   X, User, Users, MapPin, TrendingUp, Vote, Wallet, Scale,
-  Briefcase, Eye, ExternalLink, Globe, BookOpen, Wifi, WifiOff,
+  Briefcase, Eye, Globe, BookOpen, Wifi, WifiOff,
 } from "lucide-react";
+import { hexToRgba } from "@/lib/colors";
 
 interface IconProps extends React.SVGProps<SVGSVGElement> {
   size?: number;
@@ -81,7 +82,7 @@ const Youtube = ({ size = 24, ...props }: IconProps) => (
   </svg>
 );
 
-interface CandidateProfile {
+export interface CandidateProfile {
   name: string;
   candidate_id: string;
   party: string;
@@ -90,7 +91,9 @@ interface CandidateProfile {
   profile: Record<string, Record<string, string>>;
 }
 
-const SECTION_ICONS: Record<string, React.ComponentType<any>> = {
+type IconComponent = React.ComponentType<IconProps>;
+
+const SECTION_ICONS: Record<string, IconComponent> = {
   "1_PersonalVitals":      User,
   "2_FamilyEducation":     Users,
   "3_ConstituencyData":    MapPin,
@@ -117,7 +120,7 @@ const SECTION_TITLES: Record<string, string> = {
 };
 
 // ── Social-platform metadata ─────────────────────────────────────────────────
-const PLATFORM_META: Record<string, { icon: React.ComponentType<any>; color: string; label: string }> = {
+const PLATFORM_META: Record<string, { icon: IconComponent; color: string; label: string }> = {
   "Twitter/X Handle":    { icon: Twitter,   color: "#1DA1F2", label: "X / Twitter" },
   "Facebook":            { icon: Facebook,  color: "#1877F2", label: "Facebook" },
   "Instagram":           { icon: Instagram, color: "#E1306C", label: "Instagram" },
@@ -170,13 +173,13 @@ function DigitalPresenceSection({ fields }: { fields: Record<string, string> }) 
               <div key={key} style={{
                 borderRadius: "10px", padding: "14px",
                 background: "var(--bg-surface)",
-                border: `1px solid ${meta.color}30`,
-                boxShadow: `0 0 12px ${meta.color}10`,
+                border: `1px solid ${hexToRgba(meta.color, "30")}`,
+                boxShadow: `0 0 12px ${hexToRgba(meta.color, "10")}`,
               }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
                   <div style={{
                     width: "30px", height: "30px", borderRadius: "6px",
-                    background: `${meta.color}18`,
+                    background: hexToRgba(meta.color, "18"),
                     display: "flex", alignItems: "center", justifyContent: "center",
                   }}>
                     <Icon size={15} style={{ color: meta.color }} />
@@ -239,12 +242,10 @@ function DigitalPresenceSection({ fields }: { fields: Record<string, string> }) 
 }
 
 export default function CandidateDialogue({
-  candidateId,
   electionYear,
   candidateData,
   onClose,
 }: {
-  candidateId: string;
   electionYear: number;
   candidateData: CandidateProfile | null;
   onClose: () => void;

@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useEffect, useCallback, useMemo, Suspense } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { api } from "@/lib/api";
+import { hexToRgba } from "@/lib/colors";
 import type { GraphResult, GraphNode, BoothRow, BoothSummary } from "@/lib/api";
 import { useTheme } from "@/components/ThemeProvider";
 import {
@@ -130,7 +131,10 @@ function DonutRing({ segs, size = 72, sw = 10 }: {
   const circ = 2 * Math.PI * r;
   const total = segs.reduce((s, x) => s + x.v, 0) || 1;
   const GAP = 1.5;
-  let off = 0;
+  const offsets = segs.reduce<number[]>((acc) => {
+    acc.push(acc.length === 0 ? 0 : acc[acc.length - 1] + (segs[acc.length - 1]?.v ?? 0) / total * circ);
+    return acc;
+  }, []);
   return (
     <svg width={size} height={size} style={{ transform: "rotate(-90deg)" }}>
       <circle cx={cx} cy={cx} r={r} fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth={sw} />
@@ -140,9 +144,8 @@ function DonutRing({ segs, size = 72, sw = 10 }: {
         const el = (
           <circle key={i} cx={cx} cy={cx} r={r} fill="none" stroke={seg.c}
             strokeWidth={sw} strokeDasharray={`${dash} ${circ - dash}`}
-            strokeDashoffset={-(off + GAP / 2)} strokeLinecap="butt" />
+            strokeDashoffset={-(offsets[i] + GAP / 2)} strokeLinecap="butt" />
         );
-        off += frac * circ;
         return el;
       })}
     </svg>
@@ -203,8 +206,8 @@ function GraphPageInner() {
   const { theme } = useTheme();
   const searchParams = useSearchParams();
 
-  const [entityType, setEntityType] = useState("AC");
-  const [entityId, setEntityId]     = useState("GKP_322");
+  const [entityType, setEntityType] = useState(() => searchParams.get("type") ?? "AC");
+  const [entityId, setEntityId]     = useState(() => searchParams.get("id") ?? "GKP_322");
   const [graph, setGraph]           = useState<GraphResult | null>(null);
   const [loading, setLoading]       = useState(false);
   const [error, setError]           = useState("");
@@ -218,31 +221,39 @@ function GraphPageInner() {
   const [nodeDetail, setNodeDetail] = useState<BoothSummary | null>(null);
   const [loadingDetail, setLoadingDetail] = useState(false);
   const [detailTab, setDetailTab] = useState<"analysis" | "connections" | "raw">("analysis");
+  const initialGraphParamsRef = useRef({
+    type: searchParams.get("type") ?? "AC",
+    id: searchParams.get("id") ?? "GKP_322",
+    excludeTypes: DEFAULT_EXCLUDED,
+  });
 
   useEffect(() => {
     api.booths("GKP_URBAN").then((r) => setBooths(r.booths)).catch(() => {});
   }, []);
 
-  useEffect(() => {
-    const typeParam = searchParams.get("type");
-    const idParam   = searchParams.get("id");
-    if (typeParam && idParam) { setEntityType(typeParam); setEntityId(idParam); }
-  }, [searchParams]);
-
-  // Reset analysis tab when a new node is selected
-  useEffect(() => { setDetailTab("analysis"); }, [selected?.id]);
-
   // Fetch detailed booth data when a Booth node is selected
   useEffect(() => {
-    setNodeDetail(null);
     if (!selected || selected.type !== "Booth") return;
     const boothId = (selected.properties.booth_id as string) ?? selected.id.replace("Booth:", "");
-    setLoadingDetail(true);
-    api.boothSummary(boothId, 365)
-      .then((d) => setNodeDetail(d))
-      .catch(() => setNodeDetail(null))
-      .finally(() => setLoadingDetail(false));
-  }, [selected?.id]);
+    let cancelled = false;
+
+    void (async () => {
+      setNodeDetail(null);
+      setLoadingDetail(true);
+      try {
+        const d = await api.boothSummary(boothId, 365);
+        if (!cancelled) setNodeDetail(d);
+      } catch {
+        if (!cancelled) setNodeDetail(null);
+      } finally {
+        if (!cancelled) setLoadingDetail(false);
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [selected]);
 
   const load = useCallback(async (
     type?: string, id?: string, excl?: string[], pushHistory = true,
@@ -271,6 +282,45 @@ function GraphPageInner() {
     } finally { setLoading(false); }
   }, [entityType, entityId, excludeTypes]);
 
+  useEffect(() => {
+    const { type, id, excludeTypes } = initialGraphParamsRef.current;
+    let cancelled = false;
+
+    void (async () => {
+      if (!id) return;
+      setLoading(true);
+      setError("");
+      setSelected(null);
+      try {
+        const result = await api.subgraph(type, id, excludeTypes);
+        if (cancelled) return;
+        if (result.nodes.length === 0) {
+          setError(`No graph data found for ${type} "${id}". Try removing type filters or check the entity ID.`);
+          return;
+        }
+        setGraph(result);
+        setCanvasKey((k) => k + 1);
+        setHistory((prev) => [
+          ...prev.slice(-19),
+          { type, id, nodeCount: result.nodes.length, edgeCount: result.edges.length, graph: result },
+        ]);
+      } catch {
+        if (!cancelled) setError(`Failed to reach the API for ${type} "${id}". Ensure the backend is running on port 8000.`);
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  function selectNode(node: GraphNode) {
+    setSelected(node);
+    setDetailTab("analysis");
+  }
+
   function toggleExclude(nodeType: string) {
     setExcludeTypes((prev) => {
       const next = prev.includes(nodeType) ? prev.filter((t) => t !== nodeType) : [...prev, nodeType];
@@ -284,6 +334,7 @@ function GraphPageInner() {
     if (!entityT) { setError(`Cannot expand ${node.type} nodes — no direct API mapping.`); return; }
     setEntityType(entityT);
     setEntityId(node.id);
+    setDetailTab("analysis");
     await load(entityT, node.id, excludeTypes);
   }
 
@@ -292,6 +343,7 @@ function GraphPageInner() {
     setEntityType(entry.type);
     setEntityId(entry.id);
     setSelected(null);
+    setDetailTab("analysis");
     setError("");
     setCanvasKey((k) => k + 1);
   }
@@ -377,8 +429,8 @@ function GraphPageInner() {
               ] as const).map(({ icon: Icon, label, val, color }) => (
                 <div key={label} className="rounded-md p-2.5 flex items-center gap-2"
                   style={{ background: S.surface, border: `1px solid ${S.border}` }}>
-                  <div className="w-6 h-6 rounded flex items-center justify-center flex-shrink-0"
-                    style={{ background: `${color}18` }}>
+                  <div className="w-6 h-6 rounded flex items-center justify-center shrink-0"
+                    style={{ background: hexToRgba(color, "18") }}>
                     <Icon size={11} style={{ color }} />
                   </div>
                   <div>
@@ -394,7 +446,7 @@ function GraphPageInner() {
               <p className="label mb-2" style={{ color: S.t4 }}>Active Issues</p>
               <div className="flex flex-wrap gap-1.5">
                 {selectedConnections["Issue"].map((n) => (
-                  <button key={n.id} onClick={() => setSelected(n)}
+                  <button key={n.id} onClick={() => selectNode(n)}
                     className="px-2 py-1 rounded text-xs transition-all"
                     style={{ background: "rgba(239,68,68,0.1)", border: "1px solid rgba(239,68,68,0.3)", color: NODE_COLORS.Issue }}>
                     {issueTitle((n.properties.code as string) ?? n.label)}
@@ -425,7 +477,7 @@ function GraphPageInner() {
           <div className="rounded-lg p-3" style={{ background: "rgba(59,130,246,0.07)", border: "1px solid rgba(59,130,246,0.25)" }}>
             <p className="text-xs font-semibold mb-3" style={{ color: NODE_COLORS.Booth }}>Voter Demographics</p>
             <div className="flex items-center gap-4">
-              <div className="relative flex-shrink-0" style={{ width: 72, height: 72 }}>
+              <div className="relative shrink-0" style={{ width: 72, height: 72 }}>
                 {male != null && female != null ? (
                   <>
                     <DonutRing segs={[{ v: male, c: "#60a5fa" }, { v: female, c: "#f472b6" }]} size={72} sw={10} />
@@ -472,14 +524,14 @@ function GraphPageInner() {
             {/* Lean + Confidence row */}
             <div className="flex gap-2">
               <div className="flex-1 flex items-center gap-2 px-3 py-2.5 rounded-lg"
-                style={{ background: `${leanCfg.color}10`, border: `1px solid ${leanCfg.color}40` }}>
+                style={{ background: hexToRgba(leanCfg.color, "10"), border: `1px solid ${hexToRgba(leanCfg.color, "40")}` }}>
                 <Activity size={12} style={{ color: leanCfg.color }} />
                 <div>
                   <p className="text-xs font-bold" style={{ color: leanCfg.color }}>{leanCfg.label}</p>
                   <p style={{ color: S.t4, fontSize: 9 }}>Political lean</p>
                 </div>
               </div>
-              <div className="px-3 py-2.5 rounded-lg text-center flex-shrink-0"
+              <div className="px-3 py-2.5 rounded-lg text-center shrink-0"
                 style={{ background: S.surface, border: `1px solid ${S.border}`, minWidth: 72 }}>
                 <p className="mono text-xs font-bold" style={{ color: S.t1 }}>{nodeDetail.confidence?.label ?? "—"}</p>
                 <p style={{ color: S.t4, fontSize: 9 }}>Confidence</p>
@@ -540,7 +592,7 @@ function GraphPageInner() {
                       <div key={iss.issue}>
                         <div className="flex justify-between items-center mb-1">
                           <span className="text-xs truncate mr-2" style={{ color: S.t2 }}>{issueTitle(iss.issue)}</span>
-                          <span className="mono text-xs flex-shrink-0" style={{ color: barColor, fontSize: 10 }}>
+                          <span className="mono text-xs shrink-0" style={{ color: barColor, fontSize: 10 }}>
                             {iss.mention_count}
                             <span style={{ color: S.t4, marginLeft: 3, fontSize: 9 }}>
                               {pol > 0.05 ? "+" : pol < -0.05 ? "−" : "~"}{Math.abs(pol).toFixed(2)}
@@ -562,7 +614,7 @@ function GraphPageInner() {
               <div>
                 <p className="label mb-2" style={{ color: S.t4 }}>Source Breakdown</p>
                 <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0">
+                  <div className="shrink-0">
                     <DonutRing segs={nodeDetail.source_breakdown.map((s) => ({
                       v: s.event_count,
                       c: SOURCE_COLORS[s.source_type] ?? "#64748b",
@@ -574,7 +626,7 @@ function GraphPageInner() {
                       return (
                         <div key={s.source_type} className="flex items-center justify-between">
                           <div className="flex items-center gap-1.5">
-                            <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: sc }} />
+                            <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: sc }} />
                             <span className="text-xs capitalize" style={{ color: S.t2 }}>
                               {s.source_type.replace(/_/g, " ")}
                             </span>
@@ -611,8 +663,8 @@ function GraphPageInner() {
                           <p className="text-xs font-medium truncate" style={{ color: S.t2 }}>{sg.scheme_name}</p>
                           <p style={{ color: S.t4, fontSize: 9 }}>{sg.gap_type.replace(/_/g, " ")}</p>
                         </div>
-                        <span className="mono text-xs px-1.5 py-0.5 rounded flex-shrink-0"
-                          style={{ background: priCfg.bg, color: priCfg.color, border: `1px solid ${priCfg.color}40`, fontSize: 9 }}>
+                        <span className="mono text-xs px-1.5 py-0.5 rounded shrink-0"
+                          style={{ background: priCfg.bg, color: priCfg.color, border: `1px solid ${hexToRgba(priCfg.color, "40")}`, fontSize: 9 }}>
                           {sg.priority}
                         </span>
                       </div>
@@ -685,8 +737,8 @@ function GraphPageInner() {
       return (
         <div className="space-y-4">
           <div className="rounded-lg p-3 flex items-center gap-3"
-            style={{ background: `${partyColor}10`, border: `1px solid ${partyColor}35` }}>
-            <div className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0"
+            style={{ background: hexToRgba(partyColor, "10"), border: `1px solid ${hexToRgba(partyColor, "35")}` }}>
+            <div className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm shrink-0"
               style={{ background: partyColor, color: "#fff" }}>
               {party.slice(0, 3)}
             </div>
@@ -695,7 +747,7 @@ function GraphPageInner() {
               <p className="text-xs" style={{ color: S.t3 }}>Political Party</p>
             </div>
             {isIncumbent && (
-              <div className="flex items-center gap-1 px-2 py-1 rounded flex-shrink-0"
+              <div className="flex items-center gap-1 px-2 py-1 rounded shrink-0"
                 style={{ background: "rgba(249,115,22,0.12)", border: "1px solid rgba(249,115,22,0.3)" }}>
                 <Award size={9} style={{ color: S.saffron }} />
                 <span className="text-xs mono" style={{ color: S.saffron, fontSize: 9 }}>Incumbent</span>
@@ -731,7 +783,7 @@ function GraphPageInner() {
       return (
         <div className="space-y-4">
           <div className="rounded-lg p-3 text-center"
-            style={{ background: `${partyColor}10`, border: `1px solid ${partyColor}35` }}>
+            style={{ background: hexToRgba(partyColor, "10"), border: `1px solid ${hexToRgba(partyColor, "35")}` }}>
             <div className="w-12 h-12 rounded-full flex items-center justify-center font-bold text-base mx-auto mb-2"
               style={{ background: partyColor, color: "#fff" }}>
               {party.slice(0, 3)}
@@ -756,12 +808,12 @@ function GraphPageInner() {
               <p className="label mb-2" style={{ color: S.t4 }}>Candidates</p>
               <div className="space-y-1">
                 {candidates.map((c) => (
-                  <button key={c.id} onClick={() => setSelected(c)}
+                  <button key={c.id} onClick={() => selectNode(c)}
                     className="w-full text-left px-3 py-2 rounded-md text-xs flex items-center gap-2 transition-all"
                     style={{ background: S.surface, border: `1px solid ${S.border}` }}
-                    onMouseEnter={(e) => { e.currentTarget.style.background = S.hover; e.currentTarget.style.borderColor = `${partyColor}50`; }}
+                    onMouseEnter={(e) => { e.currentTarget.style.background = S.hover; e.currentTarget.style.borderColor = hexToRgba(partyColor, "50"); }}
                     onMouseLeave={(e) => { e.currentTarget.style.background = S.surface; e.currentTarget.style.borderColor = S.border; }}>
-                    <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: partyColor }} />
+                    <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: partyColor }} />
                     <span className="flex-1 truncate" style={{ color: S.t2 }}>{c.properties.name as string ?? c.label}</span>
                     <span className="mono" style={{ color: S.t4, fontSize: 10 }}>{c.properties.election_year as number}</span>
                     {!!c.properties.is_incumbent && <Award size={9} style={{ color: S.saffron }} />}
@@ -809,7 +861,7 @@ function GraphPageInner() {
               <p className="label mb-2" style={{ color: S.t4 }}>Affected Booths</p>
               <div className="space-y-1 max-h-40 overflow-y-auto">
                 {booths.slice(0, 10).map((b) => (
-                  <button key={b.id} onClick={() => setSelected(b)}
+                  <button key={b.id} onClick={() => selectNode(b)}
                     className="w-full text-left px-2.5 py-1.5 rounded text-xs flex items-center gap-2 transition-all"
                     style={{ background: S.surface, border: `1px solid ${S.border}` }}
                     onMouseEnter={(e) => e.currentTarget.style.background = S.hover}
@@ -867,7 +919,7 @@ function GraphPageInner() {
             </div>
           )}
           {(selectedConnections["Booth"] ?? []).map((b) => (
-            <button key={b.id} onClick={() => setSelected(b)}
+            <button key={b.id} onClick={() => selectNode(b)}
               className="w-full text-left px-3 py-2 rounded-md flex items-center gap-2 transition-all"
               style={{ background: S.surface, border: `1px solid ${S.border}` }}
               onMouseEnter={(e) => e.currentTarget.style.background = S.hover}
@@ -924,7 +976,7 @@ function GraphPageInner() {
             ))}
           </div>
           {(selectedConnections["Booth"] ?? []).map((b) => (
-            <button key={b.id} onClick={() => setSelected(b)}
+            <button key={b.id} onClick={() => selectNode(b)}
               className="w-full text-left px-3 py-2 rounded-md flex items-center gap-2 transition-all"
               style={{ background: S.surface, border: `1px solid ${S.border}` }}
               onMouseEnter={(e) => e.currentTarget.style.background = S.hover}
@@ -947,7 +999,7 @@ function GraphPageInner() {
     <div className="flex h-screen" style={{ background: S.base }}>
 
       {/* ── Left panel ──────────────────────────────────────────────────────── */}
-      <div className="w-72 flex-shrink-0 flex flex-col" style={{ borderRight: `1px solid ${S.border}`, background: S.base }}>
+      <div className="w-72 shrink-0 flex flex-col" style={{ borderRight: `1px solid ${S.border}`, background: S.base }}>
 
         {/* Header */}
         <div className="px-4 py-3.5" style={{ borderBottom: `1px solid ${S.border}` }}>
@@ -1085,7 +1137,7 @@ function GraphPageInner() {
               {error && (
                 <div className="rounded-md px-3 py-2.5 text-xs flex gap-2"
                   style={{ background: "rgba(239,68,68,0.08)", border: "1px solid rgba(239,68,68,0.3)", color: "var(--red)" }}>
-                  <AlertTriangle size={12} className="flex-shrink-0 mt-0.5" />
+                  <AlertTriangle size={12} className="shrink-0 mt-0.5" />
                   {error}
                 </div>
               )}
@@ -1107,8 +1159,8 @@ function GraphPageInner() {
                       <button key={type} onClick={() => toggleExclude(type)}
                         className="flex items-center gap-1 px-2 py-1 rounded mono text-xs transition-all"
                         style={{
-                          background: excluded ? S.surface : `${color}18`,
-                          border:     `1px solid ${excluded ? S.border : color + "60"}`,
+                          background: excluded ? S.surface : hexToRgba(color, "18"),
+                          border:     `1px solid ${excluded ? S.border : hexToRgba(color, "60")}`,
                           color:      excluded ? S.t4 : color,
                           opacity:    excluded ? 0.55 : 1,
                           fontSize:   9,
@@ -1131,7 +1183,7 @@ function GraphPageInner() {
                       style={{ border: `1px solid ${S.border}`, color: S.t3, background: S.surface }}
                       onMouseEnter={(e) => { e.currentTarget.style.background = S.hover; e.currentTarget.style.borderColor = S.bright; }}
                       onMouseLeave={(e) => { e.currentTarget.style.background = S.surface; e.currentTarget.style.borderColor = S.border; }}>
-                      <span className="mono font-semibold px-1.5 py-0.5 rounded flex-shrink-0"
+                      <span className="mono font-semibold px-1.5 py-0.5 rounded shrink-0"
                         style={{ background: "rgba(249,115,22,0.12)", color: S.saffron, fontSize: 9 }}>
                         {q.type}
                       </span>
@@ -1158,9 +1210,9 @@ function GraphPageInner() {
                       style={{ border: "1px solid transparent" }}
                       onMouseEnter={(e) => { e.currentTarget.style.background = S.hover; e.currentTarget.style.borderColor = S.border; }}
                       onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.borderColor = "transparent"; }}>
-                      <div className="w-3 h-3 rounded-full flex-shrink-0" style={{ background: color, boxShadow: `0 0 6px ${color}60` }} />
+                      <div className="w-3 h-3 rounded-full shrink-0" style={{ background: color, boxShadow: `0 0 6px ${hexToRgba(color, "60")}` }} />
                       <span className="text-xs mono flex-1" style={{ color: S.t2 }}>{type}</span>
-                      <div className="flex-1 h-px" style={{ background: `${color}25` }} />
+                      <div className="flex-1 h-px" style={{ background: hexToRgba(color, "25") }} />
                       <span className="mono text-xs font-bold" style={{ color, fontSize: 10 }}>
                         {nodeCounts[type] ?? "—"}
                       </span>
@@ -1178,7 +1230,7 @@ function GraphPageInner() {
                     "Arrows show relationship direction",
                   ].map((tip, i) => (
                     <p key={i} className="flex items-center gap-2">
-                      <span className="w-4 h-4 rounded flex items-center justify-center flex-shrink-0"
+                      <span className="w-4 h-4 rounded flex items-center justify-center shrink-0"
                         style={{ background: "rgba(249,115,22,0.1)", color: S.saffron, fontSize: 9 }}>{i + 1}</span>
                       {tip}
                     </p>
@@ -1216,7 +1268,7 @@ function GraphPageInner() {
                       return (
                         <div key={type}>
                           <div className="flex items-center gap-2 mb-0.5">
-                            <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: color }} />
+                            <div className="w-2 h-2 rounded-full shrink-0" style={{ background: color }} />
                             <span className="text-xs flex-1" style={{ color: S.t2 }}>{type}</span>
                             <span className="mono text-xs font-semibold" style={{ color }}>{count}</span>
                           </div>
@@ -1317,7 +1369,7 @@ function GraphPageInner() {
             nodes={graph.nodes}
             edges={graph.edges}
             nodeColors={NODE_COLORS}
-            onSelect={setSelected}
+            onSelect={selectNode}
             selectedId={selected?.id}
             theme={theme}
           />
@@ -1383,19 +1435,19 @@ function GraphPageInner() {
 
       {/* ── Right analysis panel ───────────────────────────────────────────────── */}
       {selected && (
-        <div className="w-[440px] flex-shrink-0 flex flex-col"
+        <div className="w-110 shrink-0 flex flex-col"
           style={{ borderLeft: `1px solid ${S.border}`, background: S.base }}>
 
           {/* Header */}
-          <div className="px-4 py-3 flex-shrink-0"
+          <div className="px-4 py-3 shrink-0"
             style={{ borderBottom: `1px solid ${S.border}`, background: S.surface }}>
             <div className="flex items-start gap-2">
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 mb-1">
-                  <div className="w-2.5 h-2.5 rounded-full flex-shrink-0"
-                    style={{ background: nodeColor, boxShadow: `0 0 8px ${nodeColor}80` }} />
+                  <div className="w-2.5 h-2.5 rounded-full shrink-0"
+                    style={{ background: nodeColor, boxShadow: `0 0 8px ${hexToRgba(nodeColor, "80")}` }} />
                   <span className="mono px-2 py-0.5 rounded text-xs font-semibold"
-                    style={{ background: `${nodeColor}18`, color: nodeColor, border: `1px solid ${nodeColor}35`, fontSize: 10 }}>
+                    style={{ background: hexToRgba(nodeColor, "18"), color: nodeColor, border: `1px solid ${hexToRgba(nodeColor, "35")}`, fontSize: 10 }}>
                     {selected.type}
                   </span>
                 </div>
@@ -1403,7 +1455,7 @@ function GraphPageInner() {
                 <p className="mono mt-0.5 truncate" style={{ color: S.t4, fontSize: 10 }}>{selected.id}</p>
               </div>
               <button onClick={() => setSelected(null)}
-                className="w-7 h-7 flex-shrink-0 flex items-center justify-center rounded-md transition-all"
+                className="w-7 h-7 shrink-0 flex items-center justify-center rounded-md transition-all"
                 style={{ border: `1px solid ${S.border}`, color: S.t4, background: S.card }}
                 onMouseEnter={(e) => { e.currentTarget.style.borderColor = S.bright; e.currentTarget.style.color = S.t2; }}
                 onMouseLeave={(e) => { e.currentTarget.style.borderColor = S.border; e.currentTarget.style.color = S.t4; }}>
@@ -1413,7 +1465,7 @@ function GraphPageInner() {
           </div>
 
           {/* Tab bar */}
-          <div className="flex flex-shrink-0" style={{ borderBottom: `1px solid ${S.border}` }}>
+          <div className="flex shrink-0" style={{ borderBottom: `1px solid ${S.border}` }}>
             {([
               { id: "analysis",    label: "Analysis",    icon: BarChart2 },
               { id: "connections", label: "Connections", icon: GitBranch },
@@ -1466,8 +1518,8 @@ function GraphPageInner() {
                         const color = NODE_COLORS[type] ?? "#64748b";
                         return (
                           <div key={type} className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-md"
-                            style={{ background: `${color}12`, border: `1px solid ${color}35` }}>
-                            <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: color }} />
+                            style={{ background: hexToRgba(color, "12"), border: `1px solid ${hexToRgba(color, "35")}` }}>
+                            <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: color }} />
                             <span className="mono text-xs font-bold" style={{ color }}>{nodes.length}</span>
                             <span className="text-xs" style={{ color: S.t3 }}>{type}</span>
                           </div>
@@ -1485,12 +1537,12 @@ function GraphPageInner() {
                           <p className="font-semibold mb-1.5" style={{ color: S.t4, fontSize: 10 }}>{type.toUpperCase()}</p>
                           <div className="space-y-1">
                             {shown.map((n) => (
-                              <button key={n.id} onClick={() => setSelected(n)}
+                              <button key={n.id} onClick={() => selectNode(n)}
                                 className="w-full text-left px-2.5 py-1.5 rounded text-xs flex items-center gap-2 transition-all"
                                 style={{ background: S.surface, border: `1px solid ${S.border}` }}
-                                onMouseEnter={(e) => { e.currentTarget.style.background = S.hover; e.currentTarget.style.borderColor = `${color}50`; }}
+                                onMouseEnter={(e) => { e.currentTarget.style.background = S.hover; e.currentTarget.style.borderColor = hexToRgba(color, "50"); }}
                                 onMouseLeave={(e) => { e.currentTarget.style.background = S.surface; e.currentTarget.style.borderColor = S.border; }}>
-                                <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: color }} />
+                                <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: color }} />
                                 <span className="flex-1 truncate" style={{ color: S.t2 }}>{n.label}</span>
                                 <ChevronRight size={9} style={{ color: S.t4, flexShrink: 0 }} />
                               </button>
@@ -1518,7 +1570,7 @@ function GraphPageInner() {
                           borderBottom: i < arr.length - 1 ? `1px solid ${S.border}` : "none",
                           background: i % 2 === 0 ? "transparent" : `rgba(255,255,255,0.02)`,
                         }}>
-                        <span className="mono flex-shrink-0" style={{ color: S.t4, fontSize: 9, width: 90 }}>{k}</span>
+                        <span className="mono shrink-0" style={{ color: S.t4, fontSize: 9, width: 90 }}>{k}</span>
                         <span className="text-xs break-all" style={{ color: S.t2 }}>
                           {v === null || v === undefined
                             ? <span style={{ color: S.t4 }}>null</span>
@@ -1536,7 +1588,7 @@ function GraphPageInner() {
           </div>
 
           {/* Footer actions */}
-          <div className="px-4 py-3 flex-shrink-0 space-y-2"
+          <div className="px-4 py-3 shrink-0 space-y-2"
             style={{ borderTop: `1px solid ${S.border}`, background: S.surface }}>
             <button
               onClick={() => expandNode(selected)}

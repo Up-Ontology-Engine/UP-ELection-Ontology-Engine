@@ -1,4 +1,5 @@
 import { TrendingUp, TrendingDown, Minus } from "lucide-react";
+import { hexToRgba } from "@/lib/colors";
 
 interface Props {
   label: string;
@@ -19,7 +20,7 @@ export default function MetricCard({ label, value, sub, delta, deltaLabel, accen
     <div className="card p-4 flex flex-col gap-1.5 relative overflow-hidden transition-all hover:border-[var(--border-bright)]"
       style={alert ? { borderColor: "#ef444433", boxShadow: "inset 0 0 20px rgba(239,68,68,0.05)" } : {}}>
       {/* Top accent line */}
-      <div className="absolute top-0 left-0 right-0 h-px" style={{ background: `linear-gradient(90deg, ${accent}44, transparent)` }} />
+      <div className="absolute top-0 left-0 right-0 h-px" style={{ background: `linear-gradient(90deg, ${hexToRgba(accent, "44")}, transparent)` }} />
 
       <div className="flex items-center justify-between">
         <span className="label" style={{ color: "var(--text-3)" }}>{label}</span>

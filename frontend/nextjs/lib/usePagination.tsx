@@ -48,8 +48,6 @@ export function usePagination<T>(
   const [error,      setError]      = useState<string | null>(null);
   const abortRef = useRef<AbortController | null>(null);
 
-  const paramsString = JSON.stringify(params);
-
   const fetch_ = useCallback(
     async (targetPage: number) => {
       // Cancel previous in-flight request
@@ -98,7 +96,7 @@ export function usePagination<T>(
         setIsLoading(false);
       }
     },
-    [endpoint, pageSize, paramsString],
+    [endpoint, pageSize, params],
   );
 
   // Fetch when page or fetch_ changes

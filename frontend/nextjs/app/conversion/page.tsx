@@ -9,9 +9,9 @@ import {
   type PartyLean,
 } from "@/lib/api";
 import {
-  Target, Users, Phone, MapPin, CheckCircle2, ChevronRight,
+  Target, Phone, MapPin, CheckCircle2, ChevronRight,
   RefreshCw, Upload, Loader, AlertCircle, TrendingUp,
-  Filter, Search, Home, Zap, FileText,
+  Search, Home, Zap, FileText,
 } from "lucide-react";
 
 const AC_ID = process.env.NEXT_PUBLIC_PILOT_AC ?? "GKP_URBAN";
@@ -87,7 +87,7 @@ function BoothCard({
           </span>
         </div>
         {remainingTargets > 0 && (
-          <span className="mono px-1.5 py-0.5 rounded flex-shrink-0"
+          <span className="mono px-1.5 py-0.5 rounded shrink-0"
             style={{ background: "rgba(239,68,68,0.1)", color: "#ef4444", fontSize: 8, border: "1px solid rgba(239,68,68,0.2)" }}>
             {remainingTargets} left
           </span>
@@ -144,12 +144,12 @@ function BeneficiaryCard({
       {/* Main row */}
       <div className="px-4 py-3 flex items-start gap-3">
         {/* Priority indicator */}
-        <div className="w-1 self-stretch rounded-full flex-shrink-0"
+        <div className="w-1 self-stretch rounded-full shrink-0"
           style={{ background: b.contacted ? "#10b981" : borderColor }} />
 
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap mb-0.5">
-            <p className="font-medium text-sm text-[var(--text-1)]">{b.name}</p>
+            <p className="font-medium text-sm text-(--text-1)">{b.name}</p>
             <LeanBadge lean={b.party_lean} />
             {b.contacted && (
               <span className="mono flex items-center gap-1 px-1.5 py-0.5 rounded"
@@ -181,7 +181,7 @@ function BeneficiaryCard({
         </div>
 
         {/* Actions */}
-        <div className="flex flex-col items-end gap-1.5 flex-shrink-0">
+        <div className="flex flex-col items-end gap-1.5 shrink-0">
           {b.phone && (
             <a href={`tel:${b.phone}`}
               className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs mono transition-all hover:opacity-80"
@@ -296,23 +296,61 @@ export default function ConversionPage() {
       ]);
       setBoothList(ovRes.booths);
       setStats(stRes);
-      if (ovRes.booths.length > 0 && !activeBooth) {
-        setActiveBooth(ovRes.booths[0]);
+      if (ovRes.booths.length > 0) {
+        setActiveBooth((current) => current ?? ovRes.booths[0]);
       }
     } catch { /* offline */ }
     setLoading(false);
-  }, [activeBooth]);
+  }, []);
 
-  useEffect(() => { load(); }, []);
+  useEffect(() => {
+    let cancelled = false;
+
+    void (async () => {
+      setLoading(true);
+      try {
+        const [ovRes, stRes] = await Promise.all([
+          api.conversion.overview(AC_ID),
+          api.conversion.stats(AC_ID),
+        ]);
+        if (cancelled) return;
+        setBoothList(ovRes.booths);
+        setStats(stRes);
+        if (ovRes.booths.length > 0) {
+          setActiveBooth((current) => current ?? ovRes.booths[0]);
+        }
+      } catch {
+        /* offline */
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   useEffect(() => {
     if (!activeBooth) return;
-    setTargetsLoading(true);
-    const contacted = filter === "contacted" ? true : filter === "targets" ? false : undefined;
-    api.conversion.targets(activeBooth.booth_id, contacted, 300)
-      .then((r) => setTargets(r.targets))
-      .catch(() => setTargets([]))
-      .finally(() => setTargetsLoading(false));
+    let cancelled = false;
+
+    void (async () => {
+      setTargetsLoading(true);
+      const contacted = filter === "contacted" ? true : filter === "targets" ? false : undefined;
+      try {
+        const r = await api.conversion.targets(activeBooth.booth_id, contacted, 300);
+        if (!cancelled) setTargets(r.targets);
+      } catch {
+        if (!cancelled) setTargets([]);
+      } finally {
+        if (!cancelled) setTargetsLoading(false);
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
   }, [activeBooth, filter]);
 
   async function handleContacted(id: string, notes: string) {
@@ -366,7 +404,7 @@ export default function ConversionPage() {
   return (
     <div className="flex h-screen flex-col" style={{ background: "var(--bg-base)" }}>
       {/* Header */}
-      <div className="flex items-center justify-between px-5 py-3 flex-shrink-0"
+      <div className="flex items-center justify-between px-5 py-3 shrink-0"
         style={{ borderBottom: "1px solid var(--border)" }}>
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 rounded-lg flex items-center justify-center"
@@ -374,7 +412,7 @@ export default function ConversionPage() {
             <Target size={15} style={{ color: "#ef4444" }} />
           </div>
           <div>
-            <h1 className="text-sm font-bold text-[var(--text-1)]">Voter Conversion Engine</h1>
+            <h1 className="text-sm font-bold text-(--text-1)">Voter Conversion Engine</h1>
             <p className="mono text-xs" style={{ color: "var(--text-4)" }}>
               Beneficiary → Voter Mapping · Booth-Level Route Map
             </p>
@@ -399,7 +437,7 @@ export default function ConversionPage() {
 
       {/* KPI bar */}
       {stats && stats.total_beneficiaries > 0 && (
-        <div className="flex gap-3 px-5 py-3 flex-shrink-0 overflow-x-auto"
+        <div className="flex gap-3 px-5 py-3 shrink-0 overflow-x-auto"
           style={{ borderBottom: "1px solid var(--border)" }}>
           <KpiCard label="TOTAL BENEFICIARIES" value={stats.total_beneficiaries.toLocaleString()}
             sub={`${stats.booths_with_data} booths mapped`} color="#60a5fa" />
@@ -432,7 +470,7 @@ export default function ConversionPage() {
             <Target size={36} style={{ color: "#ef444460" }} />
           </div>
           <div className="text-center max-w-sm">
-            <p className="font-bold text-[var(--text-1)] mb-2">No Beneficiary Data</p>
+            <p className="font-bold text-(--text-1) mb-2">No Beneficiary Data</p>
             <p className="text-sm mb-4" style={{ color: "var(--text-3)" }}>
               Import real Electoral Roll / scheme data via the API, or load demo data to see the system in action.
             </p>
@@ -454,9 +492,9 @@ export default function ConversionPage() {
       ) : (
         <div className="flex flex-1 overflow-hidden">
           {/* Booth sidebar */}
-          <div className="w-60 flex-shrink-0 flex flex-col overflow-hidden"
+          <div className="w-60 shrink-0 flex flex-col overflow-hidden"
             style={{ borderRight: "1px solid var(--border)", background: "var(--bg-base)" }}>
-            <div className="px-3 pt-3 pb-2 flex-shrink-0">
+            <div className="px-3 pt-3 pb-2 shrink-0">
               <p className="mono mb-2 px-1" style={{ color: "var(--text-4)", fontSize: 9, letterSpacing: "0.1em" }}>
                 BOOTHS · SORTED BY OPPORTUNITY
               </p>
@@ -481,12 +519,12 @@ export default function ConversionPage() {
             {activeBooth ? (
               <>
                 {/* Route map header */}
-                <div className="px-5 py-3 flex items-center gap-4 flex-shrink-0"
+                <div className="px-5 py-3 flex items-center gap-4 shrink-0"
                   style={{ borderBottom: "1px solid var(--border)" }}>
                   <div>
                     <div className="flex items-center gap-2">
                       <Home size={13} style={{ color: "#60a5fa" }} />
-                      <p className="font-bold text-sm text-[var(--text-1)]">
+                      <p className="font-bold text-sm text-(--text-1)">
                         Booth {activeBooth.booth_number} — {activeBooth.booth_name}
                       </p>
                     </div>
@@ -521,7 +559,7 @@ export default function ConversionPage() {
                   <div className="flex items-center gap-2">
                     {([["#f97316", "BJP", activeBooth.supporters], ["#f59e0b", "?", activeBooth.unknown_lean], ["#ef4444", "SP/BSP", activeBooth.opp_lean]] as [string, string, number][]).map(([c, l, v]) => (
                       <div key={l} className="flex items-center gap-1">
-                        <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: c }} />
+                        <span className="w-2 h-2 rounded-full shrink-0" style={{ background: c }} />
                         <span className="mono" style={{ color: "var(--text-4)", fontSize: 9 }}>{l} {v}</span>
                       </div>
                     ))}
@@ -529,7 +567,7 @@ export default function ConversionPage() {
                 </div>
 
                 {/* Filters */}
-                <div className="px-5 py-2.5 flex items-center gap-3 flex-shrink-0"
+                <div className="px-5 py-2.5 flex items-center gap-3 shrink-0"
                   style={{ borderBottom: "1px solid var(--border)" }}>
                   {/* Tab filters */}
                   <div className="flex rounded-lg overflow-hidden" style={{ border: "1px solid var(--border)" }}>
@@ -565,7 +603,7 @@ export default function ConversionPage() {
                     <Search size={11} style={{ color: "var(--text-4)" }} />
                     <input value={search} onChange={(e) => setSearch(e.target.value)}
                       placeholder="Search name, ward, address…"
-                      className="bg-transparent outline-none text-xs flex-1 text-[var(--text-1)]"
+                      className="bg-transparent outline-none text-xs flex-1 text-(--text-1)"
                       style={{ color: "var(--text-3)" }} />
                   </div>
 

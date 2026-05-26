@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useCallback } from "react";
+import { hexToRgba } from "@/lib/colors";
 import type { GraphNode, GraphEdge } from "@/lib/api";
 
 interface Props {
@@ -66,18 +67,19 @@ export default function GraphCanvas({ nodes, edges, nodeColors, selectedId, them
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
+    const state = stateRef.current;
 
     let w = canvas.width = canvas.offsetWidth;
     let h = canvas.height = canvas.offsetHeight;
 
-    // Theme-aware colors
+    // Theme-aware colors (use rgba for reliable alpha handling)
     const isDark = theme === "dark";
-    const bgColor      = isDark ? "#060b14" : "#faf8f5";
-    const edgeColor    = isDark ? "#1e3050" : "#dccfbb";
-    const edgeLabelBg  = isDark ? "#060b14" : "#faf8f5";
-    const edgeLabelFg  = isDark ? "#3d5570" : "#aa9f8d";
-    const nodeLabelFg  = isDark ? "#f0f4fa" : "#1f1a14";
-    const typeTagFg    = isDark ? "#5a7899" : "#7c7264";
+    const bgColor      = isDark ? hexToRgba("#060b14", 1) : hexToRgba("#faf8f5", 1);
+    const edgeColor    = isDark ? hexToRgba("#1e3050", 1) : hexToRgba("#dccfbb", 1);
+    const edgeLabelBg  = isDark ? hexToRgba("#060b14", "d0") : hexToRgba("#faf8f5", "d0");
+    const edgeLabelFg  = isDark ? hexToRgba("#3d5570", 1) : hexToRgba("#aa9f8d", 1);
+    const nodeLabelFg  = isDark ? hexToRgba("#f0f4fa", 1) : hexToRgba("#1f1a14", 1);
+    const typeTagFg    = isDark ? hexToRgba("#5a7899", 1) : hexToRgba("#7c7264", 1);
     const gridLine     = isDark ? "rgba(26,43,68,0.4)" : "rgba(180,140,90,0.10)";
 
     // Initialize sim nodes with random positions near center
@@ -198,7 +200,7 @@ export default function GraphCanvas({ nodes, edges, nodeColors, selectedId, them
       const x1 = s.x + ux * sr, y1 = s.y + uy * sr;
       const x2 = t.x - ux * tr, y2 = t.y - uy * tr;
 
-      const color = isHighlighted ? "#f9731680" : edgeColor;
+      const color = isHighlighted ? hexToRgba("#f97316", "80") : edgeColor;
       ctx.beginPath();
       ctx.moveTo(x1, y1);
       ctx.lineTo(x2, y2);
@@ -221,13 +223,13 @@ export default function GraphCanvas({ nodes, edges, nodeColors, selectedId, them
       if (scale > 0.65 && edgeType) {
         const mx = (x1 + x2) / 2, my = (y1 + y2) / 2;
         const fontSize = Math.max(7, 8 / scale);
-        ctx.font = `${fontSize}px monospace`;
-        const tw = ctx.measureText(edgeType).width;
-        ctx.fillStyle = edgeLabelBg + "d0";
-        ctx.fillRect(mx - tw / 2 - 2, my - fontSize, tw + 4, fontSize + 2);
-        ctx.fillStyle = edgeLabelFg;
-        ctx.textAlign = "center";
-        ctx.fillText(edgeType, mx, my);
+          ctx.font = `${fontSize}px monospace`;
+          const tw = ctx.measureText(edgeType).width;
+          ctx.fillStyle = edgeLabelBg;
+          ctx.fillRect(mx - tw / 2 - 2, my - fontSize, tw + 4, fontSize + 2);
+          ctx.fillStyle = edgeLabelFg;
+          ctx.textAlign = "center";
+          ctx.fillText(edgeType, mx, my);
       }
     }
 
@@ -264,11 +266,11 @@ export default function GraphCanvas({ nodes, edges, nodeColors, selectedId, them
         if (isSel) {
           ctx.beginPath();
           ctx.arc(n.x, n.y, r + 7, 0, Math.PI * 2);
-          ctx.fillStyle = color + "25";
+          ctx.fillStyle = hexToRgba(color, "25");
           ctx.fill();
           ctx.beginPath();
           ctx.arc(n.x, n.y, r + 4, 0, Math.PI * 2);
-          ctx.strokeStyle = color + "70";
+          ctx.strokeStyle = hexToRgba(color, "70");
           ctx.lineWidth = 1.5 / scale;
           ctx.stroke();
         }
@@ -276,11 +278,11 @@ export default function GraphCanvas({ nodes, edges, nodeColors, selectedId, them
         // Node fill
         ctx.beginPath();
         ctx.arc(n.x, n.y, r, 0, Math.PI * 2);
-        ctx.fillStyle = isHovered ? color + "50" : color + "28";
+        ctx.fillStyle = isHovered ? hexToRgba(color, "50") : hexToRgba(color, "28");
         ctx.fill();
 
         // Node border
-        ctx.strokeStyle = isHovered ? color : (isSel ? color : color + "cc");
+        ctx.strokeStyle = isHovered ? hexToRgba(color, 1) : (isSel ? hexToRgba(color, 1) : hexToRgba(color, "cc"));
         ctx.lineWidth = (isSel ? 2.5 : isHovered ? 2 : 1.5) / scale;
         ctx.stroke();
 
@@ -430,7 +432,7 @@ export default function GraphCanvas({ nodes, edges, nodeColors, selectedId, them
     ro.observe(canvas);
 
     return () => {
-      cancelAnimationFrame(stateRef.current.frame);
+      cancelAnimationFrame(state.frame);
       canvas.removeEventListener("mousedown", onMouseDown);
       canvas.removeEventListener("mousemove", onMouseMove);
       canvas.removeEventListener("mouseup", onMouseUp);

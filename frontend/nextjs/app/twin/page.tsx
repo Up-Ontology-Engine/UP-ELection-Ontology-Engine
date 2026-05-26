@@ -1,6 +1,6 @@
 import { api } from "@/lib/api";
 import TwinCharts from "./TwinCharts";
-import { Cpu, AlertTriangle, TrendingUp, Activity } from "lucide-react";
+import { Cpu, TrendingUp, Activity } from "lucide-react";
 
 const AC_ID = "GKP_URBAN";
 
@@ -24,14 +24,6 @@ export default async function TwinPage() {
 
   // Twin state assembly from available data
   const totalVoters = booths.reduce((s, b) => s + (b.total_voters ?? 0), 0);
-  const boothsWithPulse = booths.filter((b) => b.bjp_pulse_score != null);
-  const avgBjp = boothsWithPulse.length > 0
-    ? boothsWithPulse.reduce((s, b) => s + (b.bjp_pulse_score ?? 0), 0) / boothsWithPulse.length
-    : null;
-  const avgOpp = boothsWithPulse.length > 0
-    ? boothsWithPulse.reduce((s, b) => s + (b.opp_pulse_score ?? 0), 0) / boothsWithPulse.length
-    : null;
-
   // Volatility: booths where lean is not decisive
   const volatileBooths = booths.filter((b) => {
     const label = b.digital_lean_label?.toUpperCase() ?? "";

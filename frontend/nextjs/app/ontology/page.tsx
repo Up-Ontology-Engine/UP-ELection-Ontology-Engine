@@ -1,7 +1,8 @@
-import { api, type OntologyStatus, type TwinSnapshot, type HeatmapCoverage } from "@/lib/api";
+import { api } from "@/lib/api";
+import { hexToRgba } from "@/lib/colors";
 import {
   BookOpen, CheckCircle, Circle, Database, GitBranch,
-  Activity, Layers, Link2, AlertCircle, ChevronRight,
+  Activity, Link2, AlertCircle, ChevronRight,
   Map, Users, Cpu, ShieldCheck, BarChart2, Zap,
 } from "lucide-react";
 
@@ -168,13 +169,13 @@ export default async function OntologyPage() {
             </div>
           </div>
           <div className="flex items-center gap-2 flex-wrap">
-            {[
+            {[ 
               { online: neo4jOnline, label: "Neo4j", color: "#10b981" },
               { online: pgOnline,    label: "PostgreSQL", color: "#3b82f6" },
             ].map(({ online, label, color }) => (
               <div key={label} className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg"
-                style={{ background: online ? `${color}14` : "rgba(239,68,68,0.08)",
-                         border: `1px solid ${online ? `${color}40` : "rgba(239,68,68,0.25)"}` }}>
+                style={{ background: online ? hexToRgba(color, "14") : "rgba(239,68,68,0.08)",
+                         border: `1px solid ${online ? hexToRgba(color, "40") : "rgba(239,68,68,0.25)"}` }}>
                 <span className="w-1.5 h-1.5 rounded-full" style={{ background: online ? color : "#ef4444", display: "inline-block" }} />
                 <span className="mono text-xs" style={{ color: online ? color : "#ef4444" }}>
                   {label} {online ? "LIVE" : "OFFLINE"}
@@ -196,7 +197,7 @@ export default async function OntologyPage() {
           <div key={label} className="rounded-xl p-4"
             style={{ background: "var(--bg-card-2)", border: "1px solid var(--border)" }}>
             <div className="flex items-center gap-2 mb-2">
-              <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: `${color}18` }}>
+              <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: hexToRgba(color, "18") }}>
                 <Icon size={13} style={{ color }} />
               </div>
               <span className="text-xs" style={{ color: "var(--text-3)" }}>{label}</span>
@@ -264,7 +265,7 @@ export default async function OntologyPage() {
                   const color = SEGMENT_COLORS[seg.name] ?? "#64748b";
                   return (
                     <div key={seg.name} className="flex items-center gap-2 rounded-lg px-3 py-2"
-                      style={{ background: `${color}12`, border: `1px solid ${color}30` }}>
+                      style={{ background: hexToRgba(color, "12"), border: `1px solid ${hexToRgba(color, "30")}` }}>
                       <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: color }} />
                       <div>
                         <p className="text-xs font-mono font-semibold" style={{ color }}>

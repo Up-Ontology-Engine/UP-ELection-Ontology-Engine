@@ -7,8 +7,8 @@ import BoothDetailCharts from "./BoothDetailCharts";
 
 export const revalidate = 3600; // Enable ISR, cache page for 1 hour
 import {
-  ArrowLeft, Users, Shield, AlertTriangle, BookOpen,
-  TrendingUp, ChevronRight, Radio, Eye, Zap, Database,
+  ArrowLeft, Users, Shield,
+  TrendingUp, ChevronRight, Radio,
   Target, Activity, Wifi
 } from "lucide-react";
 

@@ -1,5 +1,6 @@
 import { api } from "@/lib/api";
-import type { BoothRow, BoothElectionRow } from "@/lib/api";
+import { hexToRgba } from "@/lib/colors";
+import type { BoothElectionRow } from "@/lib/api";
 import DemographicsCharts from "./DemographicsCharts";
 import Link from "next/link";
 import { Users, TrendingUp, Shield, Activity, ChevronRight } from "lucide-react";
@@ -125,8 +126,8 @@ export default async function DemographicsPage() {
         ].map(({ label, value, sub1, sub2, icon: Icon, color, bar }) => (
           <div key={label} className="card rounded-xl p-5 flex flex-col">
             <div className="flex items-center gap-2 mb-3 h-7">
-              <div className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0"
-                style={{ background: `${color}18` }}>
+                <div className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0"
+                style={{ background: hexToRgba(color, "18") }}>
                 <Icon size={13} style={{ color }} />
               </div>
               <span className="text-xs leading-tight" style={{ color: "var(--text-3)" }}>{label}</span>
@@ -150,7 +151,7 @@ export default async function DemographicsPage() {
       <div className="grid grid-cols-3 md:grid-cols-6 gap-3 mb-6">
         {segments.map((s) => (
           <div key={s.label} className="rounded-xl px-3.5 py-3 flex flex-col"
-            style={{ background: `${s.color}09`, border: `1px solid ${s.color}28` }}>
+            style={{ background: hexToRgba(s.color, "09"), border: `1px solid ${hexToRgba(s.color, "28")}` }}>
             <p className="mono tabular-nums text-2xl font-bold" style={{ color: "var(--text-1)" }}>{s.count}</p>
             <p className="text-xs font-medium mt-0.5" style={{ color: s.color }}>{s.label}</p>
             <p className="text-xs mt-0.5 leading-tight" style={{ color: "var(--text-4)" }}>{s.desc}</p>
@@ -267,7 +268,7 @@ export default async function DemographicsPage() {
                     </td>
                     <td className="px-3 py-2">
                       <span className="mono px-1.5 py-0.5 rounded"
-                        style={{ background: `${leanColor}18`, color: leanColor, border: `1px solid ${leanColor}30`, fontSize: 9 }}>
+                        style={{ background: hexToRgba(leanColor, "18"), color: leanColor, border: `1px solid ${hexToRgba(leanColor, "30")}`, fontSize: 9 }}>
                         {b.lean.replace("_", " ")}
                       </span>
                     </td>

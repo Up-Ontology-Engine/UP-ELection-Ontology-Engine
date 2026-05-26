@@ -5,10 +5,9 @@ import Link from "next/link";
 import type { BoothRow } from "@/lib/api";
 import LeanBadge from "@/components/LeanBadge";
 import ConfidenceBadge from "@/components/ConfidenceBadge";
-import SectionHeader from "@/components/SectionHeader";
 import {
   Search, Filter, Download, ArrowUpDown, ArrowUp, ArrowDown,
-  Activity, Users, ChevronLeft, ChevronRight, X
+  Activity, ChevronLeft, ChevronRight, X
 } from "lucide-react";
 
 type SortKey = keyof BoothRow;

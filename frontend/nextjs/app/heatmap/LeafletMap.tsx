@@ -17,14 +17,8 @@ interface Props {
   selected: PlottedBooth | null;
 }
 
-// Gorakhpur Urban AC-322 bounds (city, not full district)
+// Gorakhpur Urban AC-322 center (city, not full district)
 const GORAKHPUR_URBAN_CENTER: [number, number] = [26.755, 83.375];
-const GORAKHPUR_URBAN_BOUNDS = {
-  north: 26.800,
-  south: 26.705,
-  east:  83.425,
-  west:  83.325,
-};
 
 const MAX_VOTERS = 3000;
 

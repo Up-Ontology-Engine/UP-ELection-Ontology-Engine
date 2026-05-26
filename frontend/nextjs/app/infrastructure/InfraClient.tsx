@@ -6,7 +6,7 @@ import type { InfraOverview, GraphCoverageResponse, GraphCoverageBooth } from "@
 import type { InfraLayer } from "./InfraMap";
 import {
   Server, Database, GitBranch, Layers, AlertCircle,
-  MapPin, X, Activity, Cpu, Info
+  X, Activity, Cpu, Info
 } from "lucide-react";
 
 const Map = dynamic(() => import("./InfraMap"), {
@@ -126,9 +126,9 @@ export default function InfraClient({ overview, coverage }: Props) {
       {/* ── Title strip ── */}
       <div className="px-6 py-4 flex items-center gap-3"
         style={{ borderBottom: "1px solid var(--border)" }}>
-        <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+        <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0"
           style={{ background: "linear-gradient(135deg, #f97316 0%, #dc2626 100%)", boxShadow: "0 2px 8px rgba(249,115,22,0.25)" }}>
-          <Server size={15} className="text-[var(--text-1)]" />
+          <Server size={15} className="text-(--text-1)" />
         </div>
         <div>
           <h1 className="font-bold text-sm" style={{ color: "var(--text-1)" }}>Data Infrastructure</h1>
@@ -158,7 +158,7 @@ export default function InfraClient({ overview, coverage }: Props) {
       <div className="flex flex-1" style={{ minHeight: 0 }}>
 
         {/* Left panel */}
-        <div className="w-72 flex-shrink-0 flex flex-col overflow-y-auto"
+        <div className="w-72 shrink-0 flex flex-col overflow-y-auto"
           style={{ borderRight: "1px solid var(--border)" }}>
 
           {/* Map layer selector */}
@@ -179,7 +179,7 @@ export default function InfraClient({ overview, coverage }: Props) {
                       color: active ? "var(--saffron)" : "var(--text-3)",
                     }}>
                     <div className="flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full flex-shrink-0"
+                      <span className="w-2 h-2 rounded-full shrink-0"
                         style={{ background: active ? "var(--saffron)" : "var(--border)" }} />
                       <span className="font-medium">{l.label}</span>
                     </div>
@@ -195,7 +195,7 @@ export default function InfraClient({ overview, coverage }: Props) {
             <div className="mt-3 space-y-1">
               {legend.map(({ label: ll, color }) => (
                 <div key={ll} className="flex items-center gap-2">
-                  <div className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ background: color }} />
+                  <div className="w-2.5 h-2.5 rounded-full shrink-0" style={{ background: color }} />
                   <span className="text-xs" style={{ color: "var(--text-4)", fontSize: 10 }}>{ll}</span>
                 </div>
               ))}
@@ -341,7 +341,7 @@ export default function InfraClient({ overview, coverage }: Props) {
                             : "1px solid var(--border)",
                         }}>
                         <div className="flex items-center gap-1.5 mb-1">
-                          <span className="w-2 h-2 rounded-full flex-shrink-0"
+                          <span className="w-2 h-2 rounded-full shrink-0"
                             style={{ background: b.in_neo4j ? "#10b981" : "#374151" }} />
                           <span className="mono text-xs font-bold" style={{ color: "var(--saffron)", fontSize: 10 }}>
                             B-{String(b.booth_number).padStart(3, "0")}
@@ -379,7 +379,7 @@ export default function InfraClient({ overview, coverage }: Props) {
 
           {/* Selected booth detail */}
           {selected && (
-            <div className="w-60 flex-shrink-0 overflow-y-auto"
+            <div className="w-60 shrink-0 overflow-y-auto"
               style={{ borderLeft: "1px solid var(--border)", background: "var(--bg-base)" }}>
               <div className="flex items-center justify-between px-4 py-3"
                 style={{ borderBottom: "1px solid var(--border)" }}>

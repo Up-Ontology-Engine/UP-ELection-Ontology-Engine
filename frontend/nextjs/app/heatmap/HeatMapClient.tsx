@@ -1,5 +1,6 @@
 "use client";
 
+import { hexToRgba } from "@/lib/colors";
 import { useState, useMemo } from "react";
 import dynamic from "next/dynamic";
 import type { GraphCoverageResponse, GraphCoverageBooth } from "@/lib/api";
@@ -8,7 +9,7 @@ import {
   Flame, Layers, BarChart3, X, Users, GitBranch,
   TrendingUp, Network, Search, MapPin, Info,
   Activity, Zap, ShieldCheck, AlertTriangle,
-  ExternalLink, BarChart2, Target,
+  BarChart2, Target,
 } from "lucide-react";
 
 const LeafletMap = dynamic(() => import("./LeafletMap"), { ssr: false });
@@ -68,6 +69,71 @@ const LEAN_STYLE: Record<string, { bg: string; text: string; label: string }> = 
 
 interface Props {
   coverage: GraphCoverageResponse | null;
+}
+
+type PanelStyles = {
+  border: string;
+  t1: string;
+  t2: string;
+  t3: string;
+  t4: string;
+  surface: string;
+};
+
+function Divider({ S }: { S: PanelStyles }) {
+  return <div style={{ height: 1, background: S.border, margin: "12px 0" }} />;
+}
+
+function StatRow({
+  label,
+  value,
+  S,
+  color = S.t2,
+}: {
+  label: string;
+  value: string | number;
+  S: PanelStyles;
+  color?: string;
+}) {
+  return (
+    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "5px 0", borderBottom: `1px solid ${S.border}` }}>
+      <span style={{ color: S.t4, fontSize: 11 }}>{label}</span>
+      <span style={{ color, fontSize: 12, fontWeight: 600, fontFamily: "monospace" }}>{value}</span>
+    </div>
+  );
+}
+
+function PulseBar({
+  label,
+  pct,
+  score,
+  color,
+  S,
+}: {
+  label: string;
+  pct: number;
+  score: number | null;
+  color: string;
+  S: PanelStyles;
+}) {
+  return (
+    <div style={{ marginBottom: 10 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
+        <span style={{ color: S.t4, fontSize: 11 }}>{label}</span>
+        <span style={{ color, fontSize: 11, fontFamily: "monospace", fontWeight: 600 }}>
+          {score != null ? score.toFixed(3) : "No data"}
+        </span>
+      </div>
+      <div style={{ height: 5, borderRadius: 4, background: "var(--bg-base)" }}>
+        <div style={{
+          height: "100%", borderRadius: 4,
+          width: `${pct}%`,
+          background: score != null ? color : "var(--border)",
+          transition: "width 0.4s ease",
+        }} />
+      </div>
+    </div>
+  );
 }
 
 // ── Seed synthetic coords within Gorakhpur Urban using a low-discrepancy spread ─
@@ -134,40 +200,6 @@ function BoothAnalysisPanel({
     t1: "var(--text-1)", t2: "var(--text-2)", t3: "var(--text-3)", t4: "var(--text-4)",
     surface: "var(--bg-surface)",
   };
-
-  function Divider() {
-    return <div style={{ height: 1, background: S.border, margin: "12px 0" }} />;
-  }
-
-  function StatRow({ label, value, color = S.t2 }: { label: string; value: string | number; color?: string }) {
-    return (
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "5px 0", borderBottom: `1px solid ${S.border}` }}>
-        <span style={{ color: S.t4, fontSize: 11 }}>{label}</span>
-        <span style={{ color, fontSize: 12, fontWeight: 600, fontFamily: "monospace" }}>{value}</span>
-      </div>
-    );
-  }
-
-  function PulseBar({ label, pct, score, color }: { label: string; pct: number; score: number | null; color: string }) {
-    return (
-      <div style={{ marginBottom: 10 }}>
-        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
-          <span style={{ color: S.t4, fontSize: 11 }}>{label}</span>
-          <span style={{ color, fontSize: 11, fontFamily: "monospace", fontWeight: 600 }}>
-            {score != null ? score.toFixed(3) : "No data"}
-          </span>
-        </div>
-        <div style={{ height: 5, borderRadius: 4, background: "var(--bg-base)" }}>
-          <div style={{
-            height: "100%", borderRadius: 4,
-            width: `${pct}%`,
-            background: score != null ? color : "var(--border)",
-            transition: "width 0.4s ease",
-          }} />
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div style={{
@@ -306,7 +338,7 @@ function BoothAnalysisPanel({
           )}
         </div>
 
-        <Divider />
+        <Divider S={S} />
 
         {/* Party signals */}
         <div style={{ marginBottom: 16 }}>
@@ -316,15 +348,15 @@ function BoothAnalysisPanel({
             </div>
             <span style={{ color: S.t2, fontSize: 12, fontWeight: 600 }}>Party Pulse Signals</span>
           </div>
-          <PulseBar label="BJP Signal" pct={bjpBar} score={bjpScore} color="#f97316" />
-          <PulseBar label="SP Signal"  pct={spBar}  score={spScore}  color="#3b82f6" />
+          <PulseBar label="BJP Signal" pct={bjpBar} score={bjpScore} color="#f97316" S={S} />
+          <PulseBar label="SP Signal"  pct={spBar}  score={spScore}  color="#3b82f6" S={S} />
           {booth.digital_lean != null && (
-            <StatRow label="Net Lean Score" value={booth.digital_lean.toFixed(3)}
+            <StatRow label="Net Lean Score" value={booth.digital_lean.toFixed(3)} S={S}
               color={booth.digital_lean > 0 ? "#f97316" : booth.digital_lean < 0 ? "#3b82f6" : "#64748b"} />
           )}
         </div>
 
-        <Divider />
+        <Divider S={S} />
 
         {/* Data intelligence */}
         <div style={{ marginBottom: 16 }}>
@@ -369,12 +401,12 @@ function BoothAnalysisPanel({
             </div>
           </div>
 
-          <StatRow label="KG Connections" value={booth.neo4j_degree} color="#10b981" />
-          <StatRow label="Knowledge Graph" value={booth.in_neo4j ? "Indexed" : "Not indexed"}
+          <StatRow label="KG Connections" value={booth.neo4j_degree} S={S} color="#10b981" />
+          <StatRow label="Knowledge Graph" value={booth.in_neo4j ? "Indexed" : "Not indexed"} S={S}
             color={booth.in_neo4j ? "#10b981" : "#ef4444"} />
-          <StatRow label="Booth ID" value={booth.booth_id} color={S.t3} />
+          <StatRow label="Booth ID" value={booth.booth_id} S={S} color={S.t3} />
           {booth.lat && (
-            <StatRow label="Coordinates"
+            <StatRow label="Coordinates" S={S}
               value={`${Number(booth.lat).toFixed(4)}, ${Number(booth.lon).toFixed(4)}`}
               color={S.t4} />
           )}
@@ -383,7 +415,7 @@ function BoothAnalysisPanel({
         {/* Top issue */}
         {booth.top_issue && (
           <>
-            <Divider />
+            <Divider S={S} />
             <div style={{ marginBottom: 16 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 10 }}>
                 <div style={{ width: 24, height: 24, borderRadius: 6, background: "rgba(245,158,11,0.12)", display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -474,7 +506,7 @@ export default function HeatMapClient({ coverage }: Props) {
     <div className="flex" style={{ height: "calc(100vh - 56px)", background: "var(--bg-base)" }}>
 
       {/* ── Left control panel ── */}
-      <div className="w-60 flex-shrink-0 flex flex-col overflow-y-auto"
+      <div className="w-60 shrink-0 flex flex-col overflow-y-auto"
         style={{ borderRight: "1px solid var(--border)" }}>
 
         {/* Header */}
@@ -548,17 +580,17 @@ export default function HeatMapClient({ coverage }: Props) {
                 <button key={l.id} onClick={() => setLayer(l.id)}
                   className="w-full text-left px-3 py-2 rounded-md text-xs transition-all"
                   style={{
-                    background: active ? `${l.color}18` : "transparent",
-                    border: active ? `1px solid ${l.color}45` : "1px solid transparent",
+                    background: active ? hexToRgba(l.color, "18") : "transparent",
+                    border: active ? `1px solid ${hexToRgba(l.color, "45")}` : "1px solid transparent",
                     color: active ? l.color : "var(--text-3)",
                   }}>
                   <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full flex-shrink-0"
+                    <span className="w-2 h-2 rounded-full shrink-0"
                       style={{ background: active ? l.color : "var(--border)" }} />
                     <span className="font-medium">{l.label}</span>
                   </div>
                   {active && (
-                    <p className="mt-0.5 ml-4" style={{ color: `${l.color}99`, fontSize: 9 }}>{l.desc}</p>
+                    <p className="mt-0.5 ml-4" style={{ color: hexToRgba(l.color, "99"), fontSize: 9 }}>{l.desc}</p>
                   )}
                 </button>
               );
@@ -575,7 +607,7 @@ export default function HeatMapClient({ coverage }: Props) {
           <div className="space-y-1.5">
             {LEGENDS[layer].map(({ label, color }) => (
               <div key={label} className="flex items-center gap-2">
-                <div className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ background: color }} />
+                <div className="w-2.5 h-2.5 rounded-full shrink-0" style={{ background: color }} />
                 <span style={{ color: "var(--text-4)", fontSize: 10 }}>{label}</span>
               </div>
             ))}

@@ -18,7 +18,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="hi"
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full`}>
-      <head />
       <body className="min-h-full flex grid-bg">
         <ThemeProvider>
           <Sidebar />
