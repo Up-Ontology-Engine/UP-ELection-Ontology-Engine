@@ -447,7 +447,10 @@ export default function HeatMapClient({ coverage }: Props) {
   const [selected, setSelected] = useState<PlottedBooth | null>(null);
   const [search,   setSearch]   = useState("");
 
-  const booths: GraphCoverageBooth[] = useMemo(() => coverage?.booths ?? [], [coverage]);
+  const booths: GraphCoverageBooth[] = useMemo(() => {
+    const raw = coverage?.booths ?? [];
+    return raw.filter((b) => b.lat !== null && b.lon !== null);
+  }, [coverage]);
 
   const total       = booths.length;
   const inKg        = booths.filter((b) => b.in_neo4j).length;
@@ -495,7 +498,7 @@ export default function HeatMapClient({ coverage }: Props) {
             style={{ background: "rgba(16,185,129,0.1)", border: "1px solid rgba(16,185,129,0.3)" }}>
             <span className="w-1.5 h-1.5 rounded-full" style={{ background: "#10b981" }} />
             <span style={{ color: "#10b981", fontSize: 9 }}>
-              {realCoordCount} real · {total - realCoordCount} estimated coords
+              {realCoordCount} accurate coordinates
             </span>
           </div>
         </div>
