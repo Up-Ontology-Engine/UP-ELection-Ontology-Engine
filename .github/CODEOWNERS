@@ -1,0 +1,8 @@
+# Catch-all owner for the entire repository
+*       @Aryan-en @FTS18
+
+# Specific folder routing
+/backend/            @Aryan-en @FTS18
+/pipeline/           @sivasambhavi @aparna-boda
+/frontend/           @Aryan-en @FTS18
+/.github/workflows/  @FTS18
