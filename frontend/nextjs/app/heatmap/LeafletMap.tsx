@@ -105,21 +105,7 @@ export default function LeafletMap({ booths, layer, onSelect, selected }: Props)
         }
       ).addTo(mapRef.current);
 
-      // Gorakhpur Urban boundary box (visual reference)
-      L.rectangle(
-        [
-          [GORAKHPUR_URBAN_BOUNDS.south, GORAKHPUR_URBAN_BOUNDS.west],
-          [GORAKHPUR_URBAN_BOUNDS.north, GORAKHPUR_URBAN_BOUNDS.east],
-        ],
-        {
-          color: "#f97316",
-          weight: 1.5,
-          opacity: 0.35,
-          fillOpacity: 0.03,
-          dashArray: "6 4",
-          interactive: false,
-        }
-      ).addTo(mapRef.current);
+
     }
 
     // Remove old markers

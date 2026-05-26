@@ -1,78 +1,81 @@
-# UP Election Ontology Engine — Gorakhpur Booth Knowledge Graph
+# UP Election Ontology Engine — Gorakhpur Booth Intelligence Platform
 
 **Mission: Win Elections Through Hyper-Local Intelligence**
 
-A booth-level political intelligence platform for Gorakhpur Urban AC (UP Vidhan Sabha). Combines a Neo4j knowledge graph, a multilingual NLP pipeline, historical election data, and live digital signals to deliver analyst-grade insights down to individual polling booths.
+A booth-level political intelligence platform for Gorakhpur Urban AC-322 (UP Vidhan Sabha). Combines a Neo4j knowledge graph, real Form-20 election data, MyNeta affidavit profiles with live web-researched digital presence, a multilingual NLP pipeline, and a 12-page Next.js frontend delivering analyst-grade insights down to individual polling booths.
 
-> Gorakhpur Urban AC-322 · ~300 booths · Hindi / Bhojpuri / English · PostgreSQL + Neo4j + Next.js
+> Gorakhpur Urban AC-322 · 179 booths · 1,14,326 registered voters · Hindi / Bhojpuri / English · PostgreSQL + Neo4j + Next.js
 
 ---
 
 ## What This Builds
 
 ```
-Booth 223 (Gorakhpur Urban)
-├── Historical: BJP won last 2 elections | Vote share: 55% → 48% (declining)
-├── Digital Lean: Lean BJP
-├── Data Quality: MEDIUM — 78% YouTube | 28% AC-level mapping
-├── Top Issues: Water +22%  |  Jobs +10%
-├── Candidate Insights: BJP +ve on development, -ve on water
-├── Scheme Gap: PMAY → reach_gap (low beneficiaries + complaints high)
+Booth 45 (Gorakhpur Urban AC-322)
+├── Form-20 (2022): BJP 58% · SP 21% · BSP 8%  → LEAN_BJP
+├── Digital Lean: bjp_pulse_score +0.54, opp_pulse_score -0.61
+├── Confidence: HIGH (real election turnout: 712 voters)
+├── Data Quality: MEDIUM — 78% EPIC coverage | geocoded
+├── Top Issues: Water +22%  |  Roads +14%  |  Jobs +10%
+├── Scheme Gap: PMAY → reach_gap (low beneficiaries, negative sentiment)
 ├── Dominant Narrative: anti_incumbency (strength 0.62)
-├── Mixed Signal: BJP — YouTube +0.4 vs News -0.3 (SWING_INDICATOR)
-├── Key Insight: Strong base, growing dissatisfaction on water
-└── Recommendation: Focus campaign on water + jobs
+├── Mixed Signal: YouTube +0.4 vs News -0.3 → SWING_INDICATOR
+├── Candidate: Adityanath (BJP) · 66.18% share · ₹1.54 Cr assets · 0 cases
+│   Digital Presence: 32.6M Twitter · 17M Instagram · 12M Facebook
+└── Recommendation: Focus on water supply + youth jobs outreach
 ```
 
-Every field is backed by real data: ECI booths, MyNeta affidavits, eGramSwaraj schemes, YouTube comments, local news — all flowing through a deterministic multilingual NLP pipeline into a Neo4j knowledge graph with 5 intelligence layers.
+Every field is backed by real data: ECI booth master (PoolBoothData PDF→JSON, 179 parts), Form-20 election results, MyNeta affidavits + live web research, eGramSwaraj schemes, YouTube comments — flowing through a deterministic multilingual NLP pipeline into Neo4j with 5 intelligence layers.
 
 ---
 
 ## Architecture
 
 ```
-┌──────────────────────────────────────────────────────────────────────┐
-│  DATA SOURCES                                                         │
-│  ECI Booths │ MyNeta Affidavits │ ECI Results │ eGramSwaraj │ MGNREGA │
-│  YouTube Comments │ Jagran/Amar Ujala News │ Field Surveys           │
-└──────────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────┐
+│  REAL DATA SOURCES                                                   │
+│  PoolBoothData_JSON (179-part 2026 electoral roll)                  │
+│  Form20_JSON (AC322 2022/2017 election results — per-booth votes)   │
+│  Myneta/ (affidavit JSONs: 2017, 2022, 2024 LS)                     │
+│  eGramSwaraj · YouTube Comments · Local News · Field Surveys        │
+└─────────────────────────────────────────────────────────────────────┘
                               │  ingestion/
                               ▼
-┌──────────────────────────────────────────────────────────────────────┐
-│  POSTGRES (gorakhpur_db)                                              │
-│  ac_master │ booth_master │ candidate_master │ booth_results         │
-│  scheme_activity │ yt_comments │ news_articles │ pulse_events        │
-│  ── Intelligence layer ──                                             │
-│  data_quality_metrics │ booth_narratives                             │
-│  contradiction_flags  │ scheme_gap_analysis                          │
+┌─────────────────────────────────────────────────────────────────────┐
+│  POSTGRES (gorakhpur_db)                                             │
+│  booth_master (179 rows) · booth_metrics · ac_metrics               │
+│  ac_demographics · data_quality_metrics · booth_results             │
+│  booth_panchayat_mapping · panchayat_master                         │
+│  ── Intelligence ──                                                  │
+│  booth_narratives · contradiction_flags · scheme_gap_analysis       │
 │  ── Chat / Conversion ──                                             │
-│  chat_sessions │ chat_messages │ scheme_beneficiaries                │
-└──────────────────────────────────────────────────────────────────────┘
+│  chat_sessions · chat_messages · scheme_beneficiaries               │
+└─────────────────────────────────────────────────────────────────────┘
                               │  nlp/pipeline.py
-                              │  lang_detect → bhashini → sarvam/gemini → geo_resolve
+                              │  lang_detect → bhashini → groq → geo_resolve
                               ▼
-┌──────────────────────────────────────────────────────────────────────┐
-│  NEO4J  — Full Property Graph                                         │
-│  State→District→AC→Booth→Candidate→Party→Issue→PulseEvent→Scheme    │
-│  ── Intelligence nodes ──                                             │
-│  Booth→DataQuality │ Booth→Narrative→Issue/Party/Candidate          │
-│  Booth→SchemeGap→Scheme/Issue │ Booth→ContradictionFlag→Party       │
-└──────────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────┐
+│  NEO4J  — Full Property Graph                                        │
+│  State→District→AC→Booth→Candidate→Party→Issue→PulseEvent→Scheme   │
+│  DataQuality · Narrative · SchemeGap · ContradictionFlag nodes      │
+│  24 active constraints/indexes                                       │
+└─────────────────────────────────────────────────────────────────────┘
                               │  analytics/ + graph/loaders/
                               ▼
-┌──────────────────────────────────────────────────────────────────────┐
-│  FASTAPI  (40+ endpoints)                                             │
-│  Booths · Pulse · Issues · Quality · Narratives · Contradictions     │
-│  Candidates · Schemes · Demographics · Graph · Heatmap · Reasoning   │
-│  Conversion Engine · Chat Sessions · Digital Twin                    │
-└──────────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────┐
+│  FASTAPI  (40+ endpoints)                                            │
+│  Booths · Pulse · Issues · Quality · Narratives · Contradictions    │
+│  Candidates · Schemes · Demographics · Graph · Heatmap · Reasoning  │
+│  Conversion Engine · Chat Sessions · Digital Twin                   │
+└─────────────────────────────────────────────────────────────────────┘
                               │
                               ▼
-┌──────────────────────────────────────────────────────────────────────┐
-│  NEXT.JS FRONTEND  (10 pages)                                         │
-│  Command Center · Booths · Heatmap · Knowledge Graph · AI Reasoning  │
-│  Demographics · Ontology · Infrastructure · Voter Conversion · Twin  │
-└──────────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────┐
+│  NEXT.JS 14 FRONTEND  (12 pages, App Router)                         │
+│  Command Center · Booths · Heatmap · Knowledge Graph                │
+│  My Neta Report Card · AI Reasoning · Demographics                  │
+│  Ontology · Infrastructure · Voter Conversion · Digital Twin        │
+└─────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
@@ -81,17 +84,18 @@ Every field is backed by real data: ECI booths, MyNeta affidavits, eGramSwaraj s
 
 | Route | Page | Description |
 |-------|------|-------------|
-| `/` | Command Center | AC-level KPI dashboard: voter stats, issue intensity, political lean distribution, 2022 results, candidate roster, YouTube intelligence feed |
-| `/booths` | Booth Intelligence | Searchable/filterable booth list with pulse scores, lean labels, and confidence ratings |
-| `/booths/[id]` | Booth Detail | Full 10-panel booth card: history, pulse, issues, scheme gaps, narratives, contradictions, demographics |
-| `/heatmap` | Constituency Heatmap | Interactive Leaflet map with geocoded booths coloured by BJP pulse, lean, or data quality |
+| `/` | Command Center | AC-level KPIs: voter stats, Form-20 lean distribution, issue intensity, 2022 results, booth roster, YouTube intelligence feed |
+| `/booths` | Booth Intelligence | Searchable/filterable booth list with BJP/SP pulse scores, lean labels, confidence ratings |
+| `/booths/[id]` | Booth Detail | Full 10-panel booth card: Form-20 history, pulse, issues, scheme gaps, narratives, contradictions, demographics |
+| `/heatmap` | Constituency Heatmap | Interactive Leaflet map — 179 booths coloured by BJP pulse, lean label, KG coverage, or data quality confidence. Slide-in analysis panel per booth. |
 | `/graph` | Knowledge Graph Explorer | Interactive D3/canvas 1-hop subgraph explorer for any entity (AC, Booth, Issue, Candidate, Party, Scheme) |
-| `/reasoning` | AI Political Reasoning | Persistent chat interface: NL → Neo4j Cypher + DuckDuckGo/Wikipedia web search → Sarvam-30b synthesis |
-| `/demographics` | Demographics | Voter composition breakdowns (gender, age segments) across all booths; booth-level election result rows |
-| `/ontology` | Ontology Layer | Live Neo4j graph topology: node/relationship counts, active constraints, PG table row counts |
-| `/infrastructure` | Data Infrastructure | PostgreSQL table stats + Neo4j graph coverage per booth (lat/lon present, in-graph, degree) |
-| `/conversion` | Voter Conversion Engine | Beneficiary pipeline: identify scheme recipients, route field workers, track contact status per booth |
-| `/twin` | Digital Twin | Snapshot view combining graph topology, heatmap readiness, narrative trends, and scheme delivery |
+| `/myneta` | My Neta Report Card | Candidate knowledge graph from 51 MyNeta affidavit profiles (2017, 2022 VS + 2024 LS). Search by name/party. 10-section deep dossier per candidate including web-researched **Digital Presence** (Twitter/X, Facebook, Instagram, YouTube, Wikipedia). |
+| `/reasoning` | AI Political Reasoning | Persistent chat: NL → Neo4j Cypher + DuckDuckGo/Wikipedia → Sarvam-30b synthesis |
+| `/demographics` | Demographics | Gender + age-segment voter breakdown across all booths; booth-level election result rows |
+| `/ontology` | Ontology Layer | Live Neo4j topology: node/rel counts, 24 active constraints, PG table row counts |
+| `/infrastructure` | Data Infrastructure | PostgreSQL table stats + Neo4j graph coverage per booth (geocoded, in-graph, degree) |
+| `/conversion` | Voter Conversion Engine | Beneficiary pipeline: scheme recipients → field worker routing → contact tracking per booth |
+| `/twin` | Digital Twin | Snapshot combining graph topology, heatmap readiness, narrative trends, and scheme delivery |
 
 ---
 
@@ -102,7 +106,7 @@ Every field is backed by real data: ECI booths, MyNeta affidavits, eGramSwaraj s
 | Method | Path | Description |
 |--------|------|-------------|
 | GET | `/health` | Health check |
-| GET | `/ac/{ac_id}/booths` | All booths with latest pulse scores |
+| GET | `/ac/{ac_id}/booths` | All 179 booths with latest Form-20 pulse scores |
 | GET | `/booth/{id}/summary` | Full 10-panel booth summary card |
 | GET | `/booth/{id}/pulse` | Pulse time-series (default 7d) |
 | GET | `/booth/{id}/issues` | Top issues with polarity |
@@ -111,21 +115,21 @@ Every field is backed by real data: ECI booths, MyNeta affidavits, eGramSwaraj s
 | GET | `/booth/{id}/narratives` | Detected narrative patterns |
 | GET | `/booth/{id}/contradictions` | Cross-source signal conflicts |
 | GET | `/booth/{id}/segments` | Privacy-safe voter demographic segments |
-| GET | `/booth/{id}/conversion` | Conversion opportunity scores for a booth |
+| GET | `/booth/{id}/conversion` | Conversion opportunity scores |
 | GET | `/ac/{ac_id}/candidates` | Candidate affidavits + sentiment |
 | GET | `/ac/{ac_id}/schemes` | Aggregated scheme gap analysis |
 | GET | `/ac/{ac_id}/narratives` | AC-level narrative trends |
 | GET | `/ac/{ac_id}/events` | Political events timeline |
 | GET | `/ac/{ac_id}/quality` | AC-level data quality summary |
-| GET | `/ac/{ac_id}/recommendations` | Strategic risks, opportunities, and action items |
+| GET | `/ac/{ac_id}/recommendations` | Strategic risks, opportunities, action items |
 | GET | `/ac/{ac_id}/intel-summary` | Voter stats (PG) + issues/videos/candidates (Neo4j) |
 | GET | `/ac/{ac_id}/intel` | Honest AC-level pulse (with attribution warnings) |
-| GET | `/ac/{ac_id}/election-results` | AC-level results aggregated from booth_results |
+| GET | `/ac/{ac_id}/election-results` | AC-level 2022/2017 results from booth_results |
 | GET | `/ac/{ac_id}/booth-election-rows` | Per-booth per-party vote rows with turnout |
 | GET | `/ac/{ac_id}/demographics/summary` | Voter demographics summary |
 | GET | `/ac/{ac_id}/demographics/segments` | Booth-level demographic segments |
 | GET | `/ac/{ac_id}/geo` | Geocoded booth positions with pulse scores |
-| GET | `/ac/{ac_id}/heatmap-coverage` | Heatmap readiness KPI (default 85% geocoded target) |
+| GET | `/ac/{ac_id}/heatmap-coverage` | Heatmap readiness KPI |
 | GET | `/ac/{ac_id}/twin-snapshot` | Ontology twin combining graph, heatmap, and segments |
 | GET | `/ac/{ac_id}/graph-coverage` | Per-booth: PG lat/lon + Neo4j presence and degree |
 
@@ -164,7 +168,36 @@ Every field is backed by real data: ECI booths, MyNeta affidavits, eGramSwaraj s
 | GET | `/booth/{id}/conversion-targets` | Route map for a booth's field worker |
 | PATCH | `/beneficiaries/{id}/contact` | Mark a beneficiary as contacted |
 | POST | `/beneficiaries/import` | Bulk-import beneficiary records |
-| POST | `/ac/{ac_id}/conversion/seed-demo` | Seed synthetic beneficiary data for demo |
+| POST | `/ac/{ac_id}/conversion/seed-demo` | Seed demo beneficiary data |
+
+---
+
+## Data — What's Real
+
+### Electoral Roll (PoolBoothData_JSON)
+- **179 voter roll parts** (Parts 1–190, 11 skipped) from 2026 SIR Revision of AC-322
+- **1,14,326 registered voters** with gender + age breakdown per booth
+- Fields: `voter_id`, `name`, `age`, `gender`, `photo_flag`, `epic_id`
+- Ingested by `ingestion/ingest_poolboothdata.py` → Postgres `booth_master` + Neo4j
+
+### Form-20 Election Results (Form20_JSON)
+- **AC322.json** — 471 polling stations, 15 candidates, 2022 UP Vidhan Sabha
+- Per-booth vote counts for BJP, SP, BSP, INC, independents
+- Used by `ingestion/ingest_form20_lean.py` → `booth_metrics.digital_lean_label`
+- **AC322.json** result: 150 STRONG_BJP · 19 LEAN_BJP · 8 STRONG_OPP · 3 NEUTRAL · 1 LEAN_OPP
+
+### MyNeta Candidate Profiles (data/Myneta/)
+- `myneta_GKP_322_2022.json` — 12 candidates (includes Adityanath, Subhawati Shukla SP, Chandra Shekhar ASP)
+- `myneta_GKP_322_2017.json` — 21 candidates (includes Dr. Radha Mohan Das Agrawal BJP, Janardan Choudhari BSP)
+- `myneta_GKP_LS64_2024.json` — 2024 Lok Sabha Gorakhpur candidates (Ravi Kishan BJP winner)
+- **51 enriched profiles** in `client_end/app/myneta/complete_candidate_data.json`
+  - 10-section dossier per candidate: Personal Vitals → Digital Presence
+  - Digital Presence includes: Twitter/X handle + followers, Facebook, Instagram, YouTube, Wikipedia
+
+### Geocoding
+- 30 booths have real lat/lon coordinates (geocoded from locality names)
+- 149 booths use deterministic synthetic coordinates (grid + jitter within Gorakhpur Urban bounds)
+- Bounds: lat 26.67–26.80, lon 83.34–83.42
 
 ---
 
@@ -172,9 +205,9 @@ Every field is backed by real data: ECI booths, MyNeta affidavits, eGramSwaraj s
 
 | Layer | File | What it detects | Output |
 |-------|------|----------------|--------|
-| 1. Data Quality | `analytics/data_quality.py` | Source bias, geo resolution gaps, NLP confidence | `data_quality_metrics` + `DataQuality` node |
-| 2. Scheme Gap | `analytics/scheme_gap_analysis.py` | execution / reach / awareness gap or performing_well | `scheme_gap_analysis` + `SchemeGap` node |
-| 3. Alias Expansion | `nlp/alias_expander.py` | Unmatched location mentions → auto-proposes new aliases | Updates `gorakhpur_aliases.json` |
+| 1. Data Quality | `analytics/data_quality.py` | EPIC/photo/age/gender completeness per booth | `data_quality_metrics` + `DataQuality` Neo4j node |
+| 2. Scheme Gap | `analytics/scheme_gap_analysis.py` | Execution / reach / awareness gap or performing_well | `scheme_gap_analysis` + `SchemeGap` node |
+| 3. Alias Expansion | `nlp/alias_expander.py` | Unmatched location mentions → auto-propose new aliases | Updates `gorakhpur_aliases.json` |
 | 4. Contradiction Detection | `analytics/contradiction_detector.py` | YouTube vs News polarity divergence per entity | `contradiction_flags` + `ContradictionFlag` node |
 | 5. Narrative Detection | `analytics/narrative_detector.py` | anti_incumbency / development / corruption / swing | `booth_narratives` + `Narrative` node |
 
@@ -195,10 +228,10 @@ Every field is backed by real data: ECI booths, MyNeta affidavits, eGramSwaraj s
 |-----------------|---------------|
 | `development_positive` | Positive events on roads/water/electricity |
 | `anti_incumbency` | Ruling party scoring negative across ≥ 3 events |
-| `corruption_narrative` | corruption issue surfacing |
-| `price_rise_narrative` | prices/inflation issue surfacing |
-| `women_safety_narrative` | women_safety/crime issue surfacing |
-| `employment_crisis` | jobs/unemployment surfacing |
+| `corruption_narrative` | Corruption issue surfacing |
+| `price_rise_narrative` | Prices/inflation issue surfacing |
+| `women_safety_narrative` | Women safety/crime issue surfacing |
+| `employment_crisis` | Jobs/unemployment surfacing |
 | `scheme_success` | Known scheme with positive sentiment |
 | `swing_possible` | ≥ 2 MIXED_SIGNALS / SWING_INDICATOR contradiction pairs |
 
@@ -212,10 +245,10 @@ Every field is backed by real data: ECI booths, MyNeta affidavits, eGramSwaraj s
 |------|-------------|-------------|
 | `State` | `name` | Uttar Pradesh |
 | `District` | `name` | Gorakhpur |
-| `AssemblyConstituency` | `ac_id` | e.g. `GKP_322` |
-| `Booth` | `booth_id` | e.g. `GKP_U_045` |
-| `Candidate` | `candidate_id` | MyNeta affidavit data |
-| `Party` | `name` | BJP, SP, BSP, INC |
+| `AssemblyConstituency` | `ac_id` | `GKP_322` |
+| `Booth` | `booth_id` | e.g. `GKP_322_001` … `GKP_322_190` |
+| `Candidate` | `candidate_id` | MyNeta affidavit data (51 profiles) |
+| `Party` | `name` | BJP, SP, BSP, INC, AAP, ASP … |
 | `Issue` | `code` | water, roads, jobs, corruption … |
 | `Scheme` | `name` | PMAY, Ujjwala, MGNREGA … |
 | `Panchayat` | `panchayat_id` | eGramSwaraj unit |
@@ -251,35 +284,6 @@ Candidate-[:CONTESTED_IN]->        AssemblyConstituency
 Candidate-[:REPRESENTS]->          Party
 ```
 
----
-
-## NLP Pipeline (deterministic, multilingual)
-
-```
-Raw text (Hindi / Bhojpuri / English / mixed)
-  → langdetect + Bhojpuri regex markers
-  → Bhashini API (Bhojpuri→Hindi) | IndicTrans2 fallback
-  → Groq llama-3.3-70b + Instructor (constrained JSON via Pydantic)
-  → Rule-based fallback if confidence < 0.6
-  → Geo-resolver: location_mention → booth_id via fuzzy match
-  → Alias expander: unmatched mentions → gorakhpur_aliases.json
-  → pulse_events table + PulseEvent nodes in Neo4j
-```
-
-### AI Reasoning pipeline
-
-```
-User question (natural language)
-  → Cypher generation (Neo4j schema prompt + Groq/Sarvam)
-  → Neo4j query → graph_results
-  → DuckDuckGo HTML + Wikipedia API search → web_results
-  → Sarvam-30b synthesis (primary) → Gemini (fallback) → plain summary
-  → Response: answer, cypher, graph rows, web sources, mode, elapsed_ms
-  → Persisted to chat_sessions / chat_messages in PostgreSQL
-```
-
----
-
 ## Repo Structure
 
 ```
@@ -289,100 +293,67 @@ UP-ELection-Ontology-Engine/
 │   ├── db.py
 │   ├── queries.py       ← All SQL queries (PG + Neo4j)
 │   ├── reasoning.py     ← AI reasoning pipeline (Sarvam/Gemini + Neo4j + web)
-│   └── schemas.py
+│   ├── ingest_form20_lean.py         ← Form-20 AC322.json → booth_metrics lean labels
+│   ├── myneta_candidates.py          ← MyNeta scraper
+│   ├── myneta_export_json.py         ← Export affidavit data to Myneta/ JSONs
+│   ├── eci_booths.py                 ← ECI booth master
+│   ├── eci_booth_results.py          ← ECI historical results
+│   ├── egramswaraj_schemes.py        ← eGramSwaraj scheme delivery
+│   ├── youtube_comments.py           ← YouTube comment ingestion
+│   └── news_scraper.py               ← Jagran/Amar Ujala news
 │
-├── frontend/nextjs/     ← Next.js 14 frontend (App Router)
-│   └── app/
-│       ├── page.tsx             ← Command Center dashboard
-│       ├── booths/              ← Booth list + detail pages
-│       ├── heatmap/             ← Leaflet geospatial map
-│       ├── graph/               ← Knowledge graph explorer
-│       ├── reasoning/           ← AI chat interface (persistent sessions)
-│       ├── demographics/        ← Voter demographics
-│       ├── ontology/            ← Ontology layer status
-│       ├── infrastructure/      ← Data infrastructure monitor
-│       ├── conversion/          ← Voter conversion engine
-│       └── twin/                ← Digital twin snapshot
+├── graph/
+│   ├── constraints.cypher            ← 24 Neo4j constraints/indexes
+│   ├── constraints_v2.cypher         ← Intelligence layer constraints
+│   └── loaders/
+│       ├── load_voter_graph.py       ← Voter→Household→Booth Neo4j loader
+│       ├── load_structure.py, load_booths.py
+│       ├── load_candidates.py, load_panchayats.py
+│       ├── load_pulse_events.py, load_quality_narratives.py
 │
-├── pipeline/            ← Unified pipeline orchestration folder
-│   ├── ingest/          ← Per-source scrapers and data ingestion
-│   │   ├── eci_booths.py
-│   │   ├── myneta_candidates.py
-│   │   ├── news_scraper.py
-│   │   └── ...
-│   ├── nlp/             ← 7-stage multilingual NLP pipeline
-│   │   ├── pipeline.py
-│   │   └── ...
-│   ├── analytics/       ← Core metrics, narratives, scheme gaps, contradictions
-│   │   ├── booth_metrics.py
-│   │   ├── scheme_gap_analysis.py
-│   │   └── ...
-│   ├── graph/           ← Neo4j constraints & schema loaders
-│   │   ├── loaders/
-│   │   └── queries/
-│   ├── etl/             ← E-roll / result aggregation and staging transforms
-│   │   ├── ingest_eroll_data.py
-│   │   └── ...
-│   ├── db/              ← Database connection pooling, models, and migrations
-│   │   ├── migrations/  ← SQL migration scripts
-│   │   └── alembic/     ← Schema revision logs
-│   └── flows/           ← Celery/Prefect orchestration task definition flows
-│       └── celery_app.py
+├── data/
+│   ├── PoolBoothData_JSON/           ← 179 part_*.json voter roll files
+│   ├── Form20_JSON/                  ← AC322.json + 322 (1-4).json election results
+│   ├── Myneta/                       ← myneta_GKP_322_2022.json, 2017.json, LS64_2024.json
+│   ├── gorakhpur_grievance_only/     ← Grievance records
+│   └── seeds/                        ← gorakhpur_aliases.json, political_lexicon.json
 │
-├── frontend/streamlit/  ← Legacy Streamlit dashboard (standalone)
-│   ├── app.py
-│   └── pages/
+├── db/migrations/
+│   ├── 001_initial.sql               ← 14 core PG tables
+│   └── 002_quality_narratives.sql    ← Intelligence layer tables
 │
-├── data/                        ← Raw, seed, and transformed data files
-│   ├── Form 20 Gorakhpur Data/  ← ECI Form-20 XLS files
-│   ├── PoolBoothData_JSON/      ← Parsed booth/results JSON
-│   ├── Digital_Dataset/         ← YouTube and news comments text
-│   ├── Myneta/                  ← Candidate affidavits and info
-│   ├── UP_Gov_schemes_Data/     ← Panchayat and beneficiary records
-│   ├── seeds/                   ← Static seed JSON files (e.g. issues list)
-│   └── transformed/             ← Unified processed data for DB import
+├── flows/               ← Prefect orchestration flows
+│   ├── nlp/flow_sentiment.py
+│   ├── graph/flow_load_graph.py
+│   └── aggregation/flow_full_analytics.py
+│
+├── etl/                 ← Transform + aggregate scripts
+├── dashboard/           ← Legacy Streamlit dashboard
+├── scripts/             ← QA and utility scripts
+├── docker-compose.yml
+├── requirements.txt
+└── pyproject.toml
+```
+
+>>>>>>> origin/main
 ---
 
 ## Key Metrics per Booth
 
 | Metric | Formula | Source |
 |--------|---------|--------|
-| BJP Pulse Score | `Σ(polarity × confidence × source_weight) / Σ(weights)` | pulse_events |
-| Opposition Pulse | Same for SP/BSP/INC | pulse_events |
-| Digital Lean | `bjp_pulse - opp_pulse` → label: STRONG_BJP / LEAN_BJP / NEUTRAL / LEAN_OPP / STRONG_OPP | computed |
+| BJP Pulse Score | Vote share normalized: `(bjp_votes / total_valid) * 2 - 1` (range -1 to +1) | Form-20 / pulse_events |
+| Opp Pulse Score | Same for SP + BSP combined | Form-20 / pulse_events |
+| Digital Lean | `bjp_pulse - opp_pulse` → STRONG_BJP / LEAN_BJP / NEUTRAL / LEAN_OPP / STRONG_OPP | Derived |
 | Top Issues | Weighted issue count, ranked | pulse_events |
 | Issue Momentum | `(last_7d_count - prev_7d_count) / prev_7d_count` | pulse_events |
-| Data Quality Score | `0.25×volume + 0.25×geo + 0.30×nlp + 0.20×diversity` | data_quality_metrics |
-| Scheme Gap Type | 4-way classification (execution/reach/awareness/well) | scheme_gap_analysis |
-| Consistency Score | `1 - |polarity_a - polarity_b| / 2` | contradiction_flags |
+| Data Quality Score | `0.45×epic_rate + 0.35×age_rate + 0.20×photo_rate` | data_quality_metrics |
+| Scheme Gap Type | 4-way: execution / reach / awareness / performing_well | scheme_gap_analysis |
+| Consistency Score | `1 - \|polarity_a - polarity_b\| / 2` | contradiction_flags |
 | Narrative Strength | Weighted issue/party signal share | booth_narratives |
-| Historical Trend | Vote share delta across elections | booth_results |
+| Historical Trend | Vote share delta across 2017→2022 | booth_results |
 
-Source weights: survey=1.0 · field_note=0.9 · youtube=0.6 · news=0.4
-
----
-
-## Election Completeness & Null Policies
-
-The engine supports complete historical datasets (2017/2022 Vidhan Sabha) and partially available datasets (2024 Lok Sabha) via a PostgreSQL-first null policy:
-
-### Completeness taxonomy
-
-Each row in the candidate results fact table (`candidate_party_history`) carries a `result_completeness_status`:
-- `'complete'` — all contesting candidates have confirmed vote totals and ranks
-- `'winner_runnerup_only'` — only winner (rank 1) and runner-up (rank 2) have vote counts; all other `NULL`
-- `'partial'` — temporal stubs or elections where vote totals are not yet seeded
-
-### Null rules
-- **Missing votes**: remain `NULL` rather than zero-padded
-- **Derived metrics**: vote share percentages and margins remain `NULL` when inputs are missing
-- **Query grain**: strictly `candidate_id + election_year + constituency_id + election_type` — no runtime `GROUP BY`
-
-### QA audits
-`scripts/verify_election_results_qa.py` enforces:
-- Winner uniqueness (max one winner per constituency-year)
-- Monotonic vote ordering (winners > runners-up descending)
-- Null policy adherence per completeness state
+Signal source weights: survey=1.0 · field_note=0.9 · youtube=0.6 · news=0.4
 
 ---
 
@@ -390,17 +361,24 @@ Each row in the candidate results fact table (`candidate_party_history`) carries
 
 | Layer | Technology |
 |-------|-----------|
-| Relational DB | PostgreSQL 16 (Neon.tech / local Docker) |
-| Graph DB | Neo4j 5 (AuraDB Free or local Docker) |
+| Relational DB | PostgreSQL 16 (Neon.tech serverless / local Docker) |
+| Graph DB | Neo4j 5 (AuraDB Free / local Docker) — 24 active constraints |
 | Cache | Redis 7 (Upstash / local Docker) |
 | Orchestration | Prefect 3 |
 | NLP Extraction | Groq llama-3.3-70b + Instructor (Pydantic-constrained JSON) |
-| Translation | Bhashini API (Hindi/Bhojpuri, free govt API) |
+| Translation | Bhashini API (Hindi/Bhojpuri, free GOI API) |
 | AI Reasoning | Sarvam-30b (primary) → Gemini (fallback) |
-| Web Search | DuckDuckGo HTML + Wikipedia API |
+| Web Search | DuckDuckGo HTML + Wikipedia API + Claude web search (candidate enrichment) |
 | API | FastAPI + Uvicorn |
+<<<<<<< HEAD
 | Frontend | Next.js 14 (App Router), Recharts, React-Leaflet, Lucide |
 | Legacy Dashboard | Streamlit (standalone, `frontend/streamlit/`) |
+=======
+| Frontend | Next.js 14 (App Router), Recharts, Vanilla Leaflet, Lucide Icons |
+| Map | Leaflet.js (vanilla, not react-leaflet — SSR-safe via Next.js `dynamic()`) |
+| Knowledge Graph UI | D3.js force simulation on HTML5 Canvas |
+| Legacy Dashboard | Streamlit (standalone, `dashboard/`) |
+>>>>>>> origin/main
 
 ---
 
@@ -411,26 +389,30 @@ Each row in the candidate results fact table (`candidate_party_history`) carries
 ```bash
 git clone git@github.com:Aryan-en/UP-ELection-Ontology-Engine.git
 cd UP-ELection-Ontology-Engine
-python -m venv venv
-source venv/bin/activate      # Windows: venv\Scripts\activate
+python -m venv .venv
+source .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-cp .env.example .env           # fill in API keys
+cp .env.example .env           # fill: POSTGRES_URL, NEO4J_URI, NEO4J_PASSWORD,
+                               #       SARVAM_API_KEY, GEMINI_API_KEY, GROQ_API_KEY
 ```
-
-Set `SARVAM_API_KEY` in `.env` for AI reasoning. Falls back to `GEMINI_API_KEY` if absent.
 
 ### 2. Start local infrastructure
 
 ```bash
 docker-compose up -d
-# Postgres :5432 · Neo4j :7474/:7687 · Redis :6379
+# PostgreSQL :5432 · Neo4j :7474/:7687 · Redis :6379
 ```
 
 ### 3. Initialize databases
 
 ```bash
+<<<<<<< HEAD
 # Run migrations using Alembic
 alembic upgrade head
+=======
+psql $POSTGRES_URL -f db/migrations/001_initial.sql
+psql $POSTGRES_URL -f db/migrations/002_quality_narratives.sql
+>>>>>>> origin/main
 
 # Seed initial issues
 psql $POSTGRES_URL -f data/seeds/seed_issues.sql
@@ -440,17 +422,47 @@ cat pipeline/graph/constraints.cypher    | cypher-shell -u neo4j -p $NEO4J_PASSW
 cat pipeline/graph/constraints_v2.cypher | cypher-shell -u neo4j -p $NEO4J_PASSWORD
 ```
 
-### 4. Run ingestion
+### 4. Ingest real data (order matters)
 
 ```bash
+<<<<<<< HEAD
 python -m pipeline.ingest.eci_booths
 python -m pipeline.ingest.myneta_candidates
 python -m pipeline.ingest.eci_booth_results
 python -m pipeline.ingest.youtube_comments
 python -m pipeline.ingest.news_scraper
+=======
+# Step 1 — Voter roll → booth_master (179 booths, 1,14,326 voters)
+python -m ingestion.ingest_poolboothdata
+
+# Step 2 — Demographics, data quality, ac_metrics, panchayat mapping
+python -m ingestion.ingest_all_features
+
+# Step 3 — Form-20 real election results → booth_metrics lean labels
+python -m ingestion.ingest_form20_lean
+
+# Step 4 — MyNeta affidavit profiles → Myneta/ JSON files
+python -m ingestion.myneta_export_json
+>>>>>>> origin/main
 ```
 
-### 5. Run NLP + graph load
+### 5. Build analytics & graph
+
+```bash
+# Neo4j voter graph (Voter→Household→Section→Booth)
+python -m graph.loaders.load_voter_graph
+
+# MyNeta KG (Candidate→Party→Constituency)
+python -m analytics.myneta_graph
+
+# Web-enrich all 51 candidate profiles with digital presence data
+python -m analytics.merge_web_enrichment
+
+# Copy to Next.js public dir
+cp data/Myneta/myneta_graph.json client_end/public/myneta_graph.json
+```
+
+### 6. Run NLP + full analytics pipeline
 
 ```bash
 python -m pipeline.flows.nlp.flow_sentiment
@@ -499,6 +511,23 @@ npm run dev
 
 ---
 
+## Gorakhpur Urban AC-322 — Key Facts
+
+| Stat | Value |
+|------|-------|
+| Booth count | 179 (part numbers 1–190, 11 skipped) |
+| Registered voters | 1,14,326 (2026 SIR revision) |
+| Gender split | Male ~55% · Female ~45% |
+| 2022 Winner | Yogi Adityanath (BJP) — 1,65,499 votes (66.18%) |
+| 2022 Runner-up | Subhawati Upendra Dutt Shukla (SP) — 62,109 votes (24.84%) |
+| 2022 Total valid votes | ~2,50,000 across 471 polling stations |
+| BJP lean (Form-20 based) | 150 STRONG_BJP · 19 LEAN_BJP · 8 STRONG_OPP · 3 NEUTRAL · 1 LEAN_OPP |
+| Geocoded booths | 30 real lat/lon · 149 synthetic within bounds |
+| Neo4j constraints | 24 active |
+| MyNeta profiles | 51 (2017 VS: 21 · 2022 VS: 12 · 2024 LS: 12 + new) |
+
+---
+
 ## Security & Compliance
 
 - **Electoral Roll Privacy:** No PII stored; only aggregated demographic counts per booth.
@@ -527,14 +556,13 @@ The engine's data infrastructure is fully hardened to support high concurrent us
 - **Edge Caching:** Next.js pre-renders and caches booth index and booth details routes via Incremental Static Regeneration (ISR) with a 1-hour revalidation window.
 
 ---
-
 ## Roadmap
 
-- **Phase 1 (complete):** Gorakhpur Urban AC — ~300 booths, core engine, Next.js frontend
-- **Phase 2:** Add Campierganj AC (2nd AC)
+- **Phase 1 (complete):** Gorakhpur Urban AC-322 — 179 booths, 51 candidate profiles, 12-page frontend, Form-20 lean ingestion, candidate digital presence research
+- **Phase 2:** Add Campierganj AC-326 (2nd AC, same district)
 - **Phase 3:** Scale to full Gorakhpur district (4+ ACs)
-- **Phase 4:** Expand to other UP districts
-- **Phase 5:** Real-time WhatsApp/SMS campaign delivery integration
+- **Phase 4:** Real-time WhatsApp/SMS campaign delivery integration
+- **Phase 5:** Expand to other UP districts + 2027 UP Vidhan Sabha prep
 
 ---
 
