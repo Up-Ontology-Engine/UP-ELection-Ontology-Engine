@@ -1,9 +1,0 @@
-{
-  "include": ["."],
-  "extraPaths": [
-    "digital-democracy-pipeline/src"
-  ],
-  "pythonVersion": "3.11",
-  "typeCheckingMode": "basic",
-  "reportMissingModuleSource": "none"
-}

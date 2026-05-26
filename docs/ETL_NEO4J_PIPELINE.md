@@ -70,7 +70,7 @@ DATA SOURCES (files + scrapers)
 
 ## 2. Data Inventory
 
-### 2A. Files Already in `data/data/`
+### 2A. Files in `data/processed/text/` (and `data/processed/`)
 
 | # | File | Format | Status | Contains |
 |---|------|--------|--------|----------|
@@ -1272,7 +1272,7 @@ python -m graph.loaders.load_quality_narratives
 
 # Step 9: Start services
 uvicorn api.main:app --reload --port 8000
-streamlit run dashboard/app.py
+streamlit run frontend/streamlit/app.py
 ```
 
 ---

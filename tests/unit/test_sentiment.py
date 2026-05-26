@@ -1,8 +1,8 @@
 """Unit tests for NLP pipeline components."""
 import pytest
-from nlp.lang_detect import detect_language
-from nlp.rule_classifier import rule_based_extract
-from nlp.schemas import ExtractionResult
+from pipeline.nlp.lang_detect import detect_language
+from pipeline.nlp.rule_classifier import rule_based_extract
+from pipeline.nlp.schemas import ExtractionResult
 
 
 def test_hindi_detected():
@@ -54,3 +54,40 @@ def test_extraction_result_schema():
     )
     assert r.is_political is False
     assert r.statements == []
+
+
+def test_bhashini_circuit_breaker():
+    from pipeline.nlp.bhashini import _bhashini, _bhashini_breaker
+    from unittest.mock import patch
+
+    # Reset circuit breaker state
+    _bhashini_breaker.state = "CLOSED"
+    _bhashini_breaker.failure_count = 0
+
+    # Mock the underlying call to fail
+    with patch("nlp.bhashini._bhashini_call", side_effect=Exception("API Error")):
+        # Call 1
+        val, method = _bhashini("test text", "bho")
+        assert val == "test text"
+        assert method == "failed"
+        assert _bhashini_breaker.state == "CLOSED"
+
+        # Call 2
+        _bhashini("test text", "bho")
+        assert _bhashini_breaker.state == "CLOSED"
+
+        # Call 3 (triggers trip)
+        _bhashini("test text", "bho")
+        assert _bhashini_breaker.state == "OPEN"
+
+    # Subsequent call when OPEN should not even try to call _bhashini_call
+    with patch("nlp.bhashini._bhashini_call") as mock_call:
+        val, method = _bhashini("test text", "bho")
+        assert val == "test text"
+        assert method == "circuit_breaker_open"
+        mock_call.assert_not_called()
+
+    # Reset again to CLOSED for other tests
+    _bhashini_breaker.state = "CLOSED"
+    _bhashini_breaker.failure_count = 0
+

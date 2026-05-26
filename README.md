@@ -284,115 +284,15 @@ Candidate-[:CONTESTED_IN]->        AssemblyConstituency
 Candidate-[:REPRESENTS]->          Party
 ```
 
----
-
-## NLP Pipeline (deterministic, multilingual)
-
-```
-Raw text (Hindi / Bhojpuri / English / mixed)
-  → langdetect + Bhojpuri regex markers
-  → Bhashini API (Bhojpuri→Hindi) | IndicTrans2 fallback
-  → Groq llama-3.3-70b + Instructor (constrained JSON via Pydantic)
-  → Rule-based fallback if confidence < 0.6
-  → Geo-resolver: location_mention → booth_id via fuzzy match
-  → Alias expander: unmatched mentions → gorakhpur_aliases.json
-  → pulse_events table + PulseEvent nodes in Neo4j
-```
-
-### AI Reasoning pipeline
-
-```
-User question (natural language)
-  → Cypher generation (Neo4j schema prompt + Groq/Sarvam)
-  → Neo4j query → graph_results
-  → DuckDuckGo HTML + Wikipedia API search → web_results
-  → Sarvam-30b synthesis (primary) → Gemini (fallback) → plain summary
-  → Response: answer, cypher, graph rows, web sources, mode, elapsed_ms
-  → Persisted to chat_sessions / chat_messages in PostgreSQL
-```
-
-### My Neta web enrichment pipeline
-
-```
-Candidate name (from Myneta JSON)
-  → Web search: "[Name] [party] [constituency] politician"
-  → Extract: bio, DOB, family, education, career, assets, criminal cases
-  → Social media: Twitter/X handle + followers, Facebook page, Instagram,
-                  YouTube channel, Wikipedia URL
-  → Stored in analytics/merge_web_enrichment.py → complete_candidate_data.json
-  → Served as 10-section profile in /myneta CandidateDialogue modal
-```
-
----
-
 ## Repo Structure
 
 ```
 UP-ELection-Ontology-Engine/
-│
-├── api/
-│   ├── main.py          ← 40+ FastAPI endpoints
-│   ├── db.py            ← PG + Neo4j connection factories
-│   ├── queries.py       ← All SQL + Cypher queries
+├── backend/             ← 40+ FastAPI endpoints
+│   ├── main.py
+│   ├── db.py
+│   ├── queries.py       ← All SQL queries (PG + Neo4j)
 │   ├── reasoning.py     ← AI reasoning pipeline (Sarvam/Gemini + Neo4j + web)
-│   └── schemas.py       ← Pydantic response models
-│
-├── client_end/          ← Next.js 14 App Router frontend
-│   ├── app/
-│   │   ├── page.tsx                  ← Command Center
-│   │   ├── DashboardCharts.tsx       ← Party pulse chart
-│   │   ├── globals.css               ← CSS variables design system
-│   │   ├── layout.tsx                ← Root layout + ThemeProvider
-│   │   ├── booths/                   ← Booth list + [id] detail
-│   │   ├── heatmap/
-│   │   │   ├── page.tsx              ← SSR wrapper
-│   │   │   ├── HeatMapClient.tsx     ← Client component + analysis panel
-│   │   │   └── LeafletMap.tsx        ← Vanilla Leaflet (SSR-safe via dynamic())
-│   │   ├── graph/
-│   │   │   ├── page.tsx              ← Suspense wrapper (fixes useSearchParams)
-│   │   │   └── GraphCanvas.tsx       ← D3 force simulation canvas
-│   │   ├── myneta/
-│   │   │   ├── page.tsx              ← Graph canvas + search bar + party stats
-│   │   │   ├── CandidateDossier.tsx  ← Slide-in report card
-│   │   │   ├── CandidateDialogue.tsx ← Full 10-section modal + Digital Presence
-│   │   │   ├── complete_candidate_data.json ← 51 enriched profiles (web-researched)
-│   │   │   └── candidate_enrichment.json
-│   │   ├── reasoning/                ← Persistent AI chat interface
-│   │   ├── demographics/             ← Voter demographics + election rows
-│   │   ├── ontology/                 ← Neo4j topology + constraint viewer
-│   │   ├── infrastructure/           ← PG table stats + Neo4j coverage
-│   │   ├── conversion/               ← Voter conversion engine
-│   │   └── twin/                     ← Digital twin snapshot
-│   ├── components/
-│   │   ├── LeanBadge.tsx             ← Party label chip (BJP/SP/BSP/Neutral)
-│   │   ├── PulseBar.tsx              ← BJP vs SP signal bar
-│   │   ├── Header.tsx                ← Executive briefing bar
-│   │   ├── Sidebar.tsx               ← Navigation sidebar
-│   │   └── ThemeProvider.tsx         ← Dark/light theme context
-│   └── lib/
-│       └── api.ts                    ← All typed fetch helpers + interfaces
-│
-├── nlp/                 ← 7-stage multilingual NLP pipeline
-│   ├── pipeline.py, lang_detect.py, bhashini.py
-│   ├── extractor.py, rule_classifier.py
-│   ├── geo_resolver.py, alias_expander.py, schemas.py
-│
-├── analytics/
-│   ├── data_quality.py               ← Layer 1: EPIC/photo/age completeness
-│   ├── scheme_gap_analysis.py        ← Layer 2: Scheme execution/reach/awareness gaps
-│   ├── contradiction_detector.py     ← Layer 4: YouTube vs News polarity conflicts
-│   ├── narrative_detector.py         ← Layer 5: anti_incumbency/development/swing
-│   ├── booth_metrics.py              ← Booth-level pulse aggregation
-│   ├── historical_analysis.py        ← Vote share trend analysis
-│   ├── conversion_opportunity.py     ← Beneficiary → conversion scoring
-│   ├── myneta_graph.py               ← Build MyNeta KG JSON for /myneta
-│   ├── myneta_complete_enrichment.py ← Auto-generate 10-section profiles from affidavits
-│   ├── merge_web_enrichment.py       ← Merge web-researched data into profiles
-│   └── geo_resolver_batch.py         ← Batch geocoding for booth coordinates
-│
-├── ingestion/           ← Data ingestion scripts
-│   ├── ingest_poolboothdata.py       ← PoolBoothData PDF→JSON→PG→Neo4j (179 booths)
-│   ├── ingest_all_features.py        ← Master pipeline: demographics, quality, metrics
 │   ├── ingest_form20_lean.py         ← Form-20 AC322.json → booth_metrics lean labels
 │   ├── myneta_candidates.py          ← MyNeta scraper
 │   ├── myneta_export_json.py         ← Export affidavit data to Myneta/ JSONs
@@ -435,6 +335,7 @@ UP-ELection-Ontology-Engine/
 └── pyproject.toml
 ```
 
+>>>>>>> origin/main
 ---
 
 ## Key Metrics per Booth
@@ -469,10 +370,15 @@ Signal source weights: survey=1.0 · field_note=0.9 · youtube=0.6 · news=0.4
 | AI Reasoning | Sarvam-30b (primary) → Gemini (fallback) |
 | Web Search | DuckDuckGo HTML + Wikipedia API + Claude web search (candidate enrichment) |
 | API | FastAPI + Uvicorn |
+<<<<<<< HEAD
+| Frontend | Next.js 14 (App Router), Recharts, React-Leaflet, Lucide |
+| Legacy Dashboard | Streamlit (standalone, `frontend/streamlit/`) |
+=======
 | Frontend | Next.js 14 (App Router), Recharts, Vanilla Leaflet, Lucide Icons |
 | Map | Leaflet.js (vanilla, not react-leaflet — SSR-safe via Next.js `dynamic()`) |
 | Knowledge Graph UI | D3.js force simulation on HTML5 Canvas |
 | Legacy Dashboard | Streamlit (standalone, `dashboard/`) |
+>>>>>>> origin/main
 
 ---
 
@@ -500,16 +406,32 @@ docker-compose up -d
 ### 3. Initialize databases
 
 ```bash
+<<<<<<< HEAD
+# Run migrations using Alembic
+alembic upgrade head
+=======
 psql $POSTGRES_URL -f db/migrations/001_initial.sql
 psql $POSTGRES_URL -f db/migrations/002_quality_narratives.sql
+>>>>>>> origin/main
 
-cat graph/constraints.cypher    | cypher-shell -u neo4j -p $NEO4J_PASSWORD
-cat graph/constraints_v2.cypher | cypher-shell -u neo4j -p $NEO4J_PASSWORD
+# Seed initial issues
+psql $POSTGRES_URL -f data/seeds/seed_issues.sql
+
+# Load graph constraints (Neo4j browser at http://localhost:7474)
+cat pipeline/graph/constraints.cypher    | cypher-shell -u neo4j -p $NEO4J_PASSWORD
+cat pipeline/graph/constraints_v2.cypher | cypher-shell -u neo4j -p $NEO4J_PASSWORD
 ```
 
 ### 4. Ingest real data (order matters)
 
 ```bash
+<<<<<<< HEAD
+python -m pipeline.ingest.eci_booths
+python -m pipeline.ingest.myneta_candidates
+python -m pipeline.ingest.eci_booth_results
+python -m pipeline.ingest.youtube_comments
+python -m pipeline.ingest.news_scraper
+=======
 # Step 1 — Voter roll → booth_master (179 booths, 1,14,326 voters)
 python -m ingestion.ingest_poolboothdata
 
@@ -521,6 +443,7 @@ python -m ingestion.ingest_form20_lean
 
 # Step 4 — MyNeta affidavit profiles → Myneta/ JSON files
 python -m ingestion.myneta_export_json
+>>>>>>> origin/main
 ```
 
 ### 5. Build analytics & graph
@@ -542,21 +465,28 @@ cp data/Myneta/myneta_graph.json client_end/public/myneta_graph.json
 ### 6. Run NLP + full analytics pipeline
 
 ```bash
-python -m flows.nlp.flow_sentiment
-python -m flows.aggregation.flow_full_analytics
+python -m pipeline.flows.nlp.flow_sentiment
+python -m pipeline.flows.graph.flow_load_graph
+```
+
+### 6. Run full analytics pipeline
+
+```bash
+# All 5 intelligence layers in dependency order
+python -m pipeline.flows.aggregation.flow_full_analytics
 ```
 
 ### 7. Start API
 
 ```bash
-uvicorn api.main:app --reload --port 8000
+uvicorn backend.main:app --reload --port 8000
 # Swagger UI: http://localhost:8000/docs
 ```
 
 ### 8. Start Next.js frontend
 
 ```bash
-cd client_end
+cd frontend/nextjs
 npm install
 npm run dev
 # http://localhost:3000
@@ -566,18 +496,18 @@ npm run dev
 
 ## Data Sources
 
-| Source | What | Actual files | Script |
-|--------|------|-------------|--------|
-| CEO UP / ECI Electoral Roll | 179-booth voter roll (179 parts, 1,14,326 voters) | `PoolBoothData_JSON/part_*.json` | `ingestion/ingest_poolboothdata.py` |
-| ECI Form-20 Results | Per-booth vote counts 2022/2017 (AC322, 471 polling stations) | `Form20_JSON/AC322.json` | `ingestion/ingest_form20_lean.py` |
-| MyNeta / ADR | Candidate affidavits — 51 profiles across 2017/2022/2024 | `data/Myneta/myneta_*.json` | `ingestion/myneta_export_json.py` |
-| Web Research | Candidate digital presence (Twitter, Facebook, Instagram, YouTube) | `complete_candidate_data.json` | `analytics/merge_web_enrichment.py` |
-| eGramSwaraj | Panchayat scheme delivery records | — | `ingestion/egramswaraj_schemes.py` |
-| YouTube (yt-dlp) | Comments + videos on political content | — | `ingestion/youtube_comments.py` |
-| Jagran / Amar Ujala | Local news articles | — | `ingestion/news_scraper.py` |
-| TCPD Vote Share | Historical vote share data | — | `etl/ingest_tcpd_voteshare.py` |
-| KoBoToolbox | Field surveys | manual → ETL | — |
-| MGNREGA / PMAY | Beneficiary data | — | `etl/load_real_schemes.py` |
+| Source | What | Priority | Script |
+|--------|------|----------|--------|
+| CEO UP / ECI | Booth master, AC list | P0 | `pipeline/ingest/eci_booths.py` |
+| MyNeta / ADR | Candidate affidavits | P0 | `pipeline/ingest/myneta_candidates.py` |
+| ECI Results Archives | Historical booth results | P1 | `pipeline/ingest/eci_booth_results.py` |
+| eGramSwaraj | Panchayat scheme delivery | P1 | `pipeline/ingest/egramswaraj_schemes.py` |
+| YouTube (yt-dlp) | Comments + videos on political content | P1 | `pipeline/ingest/youtube_videos.py` |
+| Jagran / Amar Ujala | Local news articles | P1 | `pipeline/ingest/news_scraper.py` |
+| Electoral Roll (PDF) | Voter demographics per booth | P1 | `pipeline/etl/ingest_eroll_data.py` |
+| TCPD Vote Share | Historical vote share data | P2 | `pipeline/etl/ingest_tcpd_voteshare.py` |
+| KoBoToolbox | Field surveys | P2 | manual → ETL |
+| MGNREGA / PMAY | Beneficiary data | P2 | `pipeline/etl/load_real_schemes.py` |
 
 ---
 
@@ -608,6 +538,24 @@ npm run dev
 
 ---
 
+## Success Metrics
+
+- **Coverage:** Booth-level data for entire AC(s).
+- **Sentiment Accuracy:** NLP confidence > 85% on ground-truth validation.
+- **Data Freshness:** Daily sentiment pulse updates.
+- **Prediction Power:** Pre-election booth-level sentiment vs. actual results correlation > 0.75.
+
+---
+
+## Production Hardening
+
+The engine's data infrastructure is fully hardened to support high concurrent user traffic:
+- **Connection Pooling:** All transactional services route database calls through PgBouncer transaction-level pooling (`port 6432`).
+- **Distributed Locking:** Prevents duplicate scraper and pipeline task execution using a Redis-backed atomic lock.
+- **Observability:** Backend metrics are instrumented using Prometheus (`/metrics`) and auto-provisioned to a Grafana dashboard for real-time traffic, latency, and database pool health.
+- **Edge Caching:** Next.js pre-renders and caches booth index and booth details routes via Incremental Static Regeneration (ISR) with a 1-hour revalidation window.
+
+---
 ## Roadmap
 
 - **Phase 1 (complete):** Gorakhpur Urban AC-322 — 179 booths, 51 candidate profiles, 12-page frontend, Form-20 lean ingestion, candidate digital presence research
@@ -620,4 +568,31 @@ npm run dev
 
 ## Contributing
 
-Closed-source strategic tool. Access restricted to core team members and authorised party functionaries.
+This is a closed-source strategic tool. Access is restricted to core team members and authorized party functionaries.
+
+---
+
+## Documentation
+
+| File | Purpose |
+|------|---------|
+| `docs/SETUP.md` | Local environment setup |
+| `docs/DEPLOYMENT.md` | Production deployment runbook |
+| `docs/DISASTER_RECOVERY.md` | Disaster recovery & database backup strategies |
+| `docs/ARCHITECTURE.md` | System design patterns and database integration model |
+| `docs/RUNBOOKS.md` | Operational troubleshooting runbooks for on-call teams |
+| `docs/API_REFERENCE.md` | Endpoint schemas and payload specifications |
+| `SECURITY.md` | Vulnerability disclosure and compliance policy |
+| `CONTRIBUTING.md` | Developer contribution and style guidelines |
+| `CHANGELOG.md` | Version history and release notes |
+| `CODE_OF_CONDUCT.md` | Participation rules and communication standards |
+| `.github/PULL_REQUEST_TEMPLATE.md` | Pull request template and checklists |
+| `docs/ETL_NEO4J_PIPELINE.md` | ETL → Neo4j pipeline details |
+| `docs/SCRAPING_GUIDE.md` | Scraper execution guide and configurations |
+| `docs/SCRAPER_README.md` | Scraper codebase documentation |
+| `docs/MODULE_REFERENCE.md` | Module-by-module reference |
+| `docs/DATA_SOURCES.md` | Source inventory and ingestion notes |
+| `docs/ontology_spec.md` | Knowledge graph ontology specification |
+| `docs/archive/gorakhpur-master-plan.md` | Full 5-week plan, all 15 roles, all data sources |
+| `docs/archive/gorakhpur-5day-sprint.md` | 5-day demo sprint with runnable code |
+| `docs/archive/team_presentation_guide.md` | Team onboarding and presentation script |

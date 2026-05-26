@@ -1,0 +1,237 @@
+name: CI — Lint, Test & Security
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHON_VERSION: "3.11"
+
+jobs:
+  # ── 1. Lint & type-check ───────────────────────────────────────────────────
+  lint:
+    name: Lint & Type Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: Install dev dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: ruff — lint
+        run: ruff check . --output-format=github
+
+      - name: ruff — format check
+        run: ruff format --check .
+
+      - name: mypy — type check (backend + nlp)
+        run: mypy backend/ pipeline/nlp/ --ignore-missing-imports --no-error-summary
+        continue-on-error: true   # non-blocking until full type coverage
+
+  # ── 2. Unit tests ──────────────────────────────────────────────────────────
+  test-unit:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    env:
+      TESTING: "true"
+      TEST_CACHE: "false"
+      GOOGLE_API_KEY: "ci-dummy-key"
+      SARVAM_API_KEY: "ci-dummy-key"
+      BHASHINI_API_KEY: "ci-dummy-key"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Run unit tests with coverage
+        run: |
+          pytest tests/unit/ \
+            --cov=backend --cov=pipeline/nlp --cov=pipeline/graph --cov=pipeline/ingest \
+            --cov-report=xml:coverage.xml \
+            --cov-report=term-missing \
+            -q
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          files: coverage.xml
+          fail_ci_if_error: false
+
+  # ── 3. Integration tests (with service containers) ─────────────────────────
+  test-integration:
+    name: Integration Tests
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: gorakhpur_test
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+        ports:
+          - 5432:5432
+
+      redis:
+        image: redis:7-alpine
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 5
+        ports:
+          - 6379:6379
+
+    env:
+      TESTING: "true"
+      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/gorakhpur_test
+      POSTGRES_URL: postgresql://postgres:postgres@localhost:5432/gorakhpur_test
+      REDIS_URL: redis://localhost:6379/0
+      NEO4J_URI: bolt://localhost:7687
+      NEO4J_USER: neo4j
+      NEO4J_PASSWORD: test
+      GOOGLE_API_KEY: "ci-dummy-key"
+      SARVAM_API_KEY: "ci-dummy-key"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Apply DB migrations
+        run: |
+          pip install alembic psycopg2-binary
+          alembic upgrade head || echo "No migrations to apply"
+
+      - name: Run integration tests
+        run: pytest tests/integration/ -q --timeout=60
+
+  # ── 4. Security / dependency audit ────────────────────────────────────────
+  security:
+    name: Security Audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: Install pip-audit
+        run: pip install pip-audit
+
+      - name: Audit Python dependencies
+        run: |
+          pip install . --quiet
+          pip-audit --ignore-vuln PYSEC-2022-42969 || true
+
+      - name: npm audit (frontend)
+        working-directory: frontend/nextjs
+        run: |
+          npm ci --prefer-offline
+          npm audit --audit-level=high || true
+
+  # ── 5. Schema drift check (daily + on push) ────────────────────────────────
+  schema-drift:
+    name: Schema Drift Check
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4 pydantic
+
+      - name: Run drift detector
+        run: python -m pipeline.ingest.schema_drift_detector --ac 322 --year 2022
+
+  # ── 6. Docker Vulnerability Scan ───────────────────────────────────────────
+  docker-security:
+    name: Docker Image Security
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Backend Image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: docker/Dockerfile.backend
+          load: true
+          tags: backend:test
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Run Trivy vulnerability scanner on Backend Container
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: 'backend:test'
+          format: 'table'
+          exit-code: '1'
+          ignore-unfixed: true
+          vuln-type: 'os,library'
+          severity: 'CRITICAL,HIGH'
+
+      - name: Build Frontend Image
+        uses: docker/build-push-action@v5
+        with:
+          context: ./frontend/nextjs
+          file: docker/Dockerfile.frontend
+          load: true
+          tags: frontend:test
+          build-args: |
+            NEXT_PUBLIC_API_URL=/api
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Run Trivy vulnerability scanner on Frontend Container
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: 'frontend:test'
+          format: 'table'
+          exit-code: '1'
+          ignore-unfixed: true
+          vuln-type: 'os,library'
+          severity: 'CRITICAL,HIGH'

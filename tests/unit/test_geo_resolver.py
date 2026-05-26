@@ -1,6 +1,6 @@
 """Unit tests for geo resolution."""
 import pytest
-from nlp.geo_resolver import GeoResolver
+from pipeline.nlp.geo_resolver import GeoResolver
 
 ALIAS_DATA = {
     "Deoria Naka": {"id": "GKP_U_045", "type": "booth"},

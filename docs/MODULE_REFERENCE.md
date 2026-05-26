@@ -1,31 +1,60 @@
-to# Module Reference — UP Election Ontology Engine
+# Module Reference — UP Election Ontology Engine
 
 > Gorakhpur Political Intelligence OS — component-by-component guide  
 > Pilot AC: Gorakhpur Urban (GKP_322) | Stack: PostgreSQL · Neo4j · Redis · FastAPI · Streamlit
 
 ---
 
+## Consolidated Ownership Map
+
+The repo still keeps several top-level modules for compatibility, but new code should treat these as the canonical homes:
+
+| Area | Canonical namespace | Notes |
+|------|---------------------|-------|
+| Booth analytics | `analytics.booth` | Booth metrics, attribution, historical trend, AC-level rollups |
+| Signal analytics | `analytics.signals` | Data quality, contradictions, narratives, scheme gaps, conversion signals |
+| Candidate enrichment | `analytics.enrichment` | MyNeta parsing, enrichment, graph building |
+| ETL ingestion | `etl.ingesters` | Parse / ingest / stage / pulse preparation jobs |
+| ETL transforms | `etl.transforms` | Transform, aggregate, geocode, fix-up helpers |
+| ETL loaders | `etl.loaders` | One-shot baseline and bulk loaders |
+| ETL seeders | `etl.seeders` | Seed jobs and demo data inserts |
+| Runtime config | `config/` | Ingestion registry, editor/type-check settings, config docs |
+| Operational helpers | `scripts/`, `tools/` | Repeatable admin commands in `scripts/`; tiny ad hoc helpers in `tools/` |
+
+Legacy flat modules remain importable so existing flows and scripts keep working, but they should be treated as compatibility shims rather than the preferred import path.
+
 ## Data Directory Layout
 
 ```
 data/
 ├── raw/                    # Source files — never modified after ingestion
-│   ├── 2022/
-│   │   └── form20/         # ECI Form-20 XLS (booth-level vote counts per candidate)
-│   └── 2025/               # Future cycle placeholder
-├── data/                   # Mixed raw + pipeline outputs (legacy; being cleaned up)
-│   ├── Convert to xcel sheet/   # Voter roll XLSX exports from PDF pipeline
-│   ├── Outputs of pipline/      # DDP pipeline JSON/JSONL outputs
-│   └── text/               # Affidavit text, MLA JSON, candidate JSON
-├── transformed/            # Clean pipeline outputs ready for DB load
-│   ├── 2022/
-│   └── 2025/
+│   ├── form20/             # ECI Form-20 XLS (booth-level vote counts) ← TRUE RAW
+│   ├── myneta/             # Raw MyNeta affidavit scrapes
+│   ├── candidates/         # Raw candidate profile JSON
+│   ├── gov_schemes/        # Raw government scheme XLS exports (eGramSwaraj)
+│   ├── beneficiary/        # Raw beneficiary lists (PM-KISAN, UPDES)
+│   ├── historical/         # Raw Gorakhpur 10-year election history data
+│   ├── grievances/         # Raw grievance portal scrapes
+│   └── digital/            # Raw digital signals (YouTube, newspapers, tweets)
+│       ├── Youtube/        # YT video/comment metadata + analysis
+│       ├── newspapers/     # Jagran/Amar Ujala article JSON
+│       ├── x_tweets/       # Twitter/X data
+│       └── analysis/       # Cross-source combined analysis
+├── processed/              # Pipeline outputs — generated from raw/ by ETL scripts
+│   ├── form20_json/        # JSON from form20_to_json.py (Form-20 XLS → JSON)
+│   ├── pool_booth/         # JSON from pdf_to_json.py (PDF electoral rolls → JSON)
+│   ├── text/               # Affidavit text, MLA JSON, candidate JSON, ECI roll
+│   ├── Convert to xcel sheet/  # Voter roll XLSX exports from PDF pipeline
+│   ├── Outputs of pipline/     # DDP pipeline JSONL outputs (eroll)
+│   ├── screenshots/        # Scraper screenshots and session recordings
+│   └── 2025/               # Future cycle pipeline outputs
 ├── seeds/                  # Static reference files (aliases, lexicons, villages)
 │   ├── gorakhpur_aliases.json
 │   ├── political_lexicon.json
+│   ├── seed_issues.sql
 │   └── unmatched_villages.json
-└── labeled/                # Hand-labeled training examples for NLP classifiers
 ```
+
 
 ---
 
@@ -75,7 +104,7 @@ Loads AC master + booth demographics from electoral roll XLSX.
 
 ### `transform_candidates.py` ⚠️ Partial
 Loads candidate data from JSON files into `candidate_master`.  
-- Source: `data/data/text/affidavit_gorakhpur_all_candidates.json` (name + party only, no financials)  
+- Source: `data/processed/text/affidavit_gorakhpur_all_candidates.json` (name + party only, no financials)  
 - **Gap**: Affidavit detail (age, assets, education) not in source JSON — use `seed_known_candidates.py` instead
 
 ### `seed_known_candidates.py` ✅ New
@@ -93,7 +122,7 @@ Loads eGramSwaraj scheme data → `panchayat_master` + `scheme_activity`.
 Seeds panchayat reference rows from JSON/CSV.
 
 ### `ingest_youtube_videos.py` ✅ New
-Loads 831 videos from `data/Digital_Dataset/Youtube/videos/metadata/video_index.json` into:
+Loads 831 videos from `data/raw/digital/Youtube/videos/metadata/video_index.json` into:
 - `yt_channels` — deduplicated channel rows
 - `yt_videos` — one row per video with metadata
 - `pulse_events_raw` — one NLP-ready entry per video title + description (processed = FALSE)
@@ -115,7 +144,7 @@ Alternative scheme loader using direct eGramSwaraj CSV exports.
 
 ### `ingest_eroll_data.py` ⚠️ Partial
 Ingests electoral roll XLSX + pipeline JSONL into booth_master demographics.  
-- `data/data/Outputs of pipline/eroll_322_part2/electoral_roll_records_english.jsonl` has `part_no: null` — booth mapping not possible without DDP pipeline fix.
+- `data/processed/Outputs of pipline/eroll_322_part2/electoral_roll_records_english.jsonl` has `part_no: null` — booth mapping not possible without DDP pipeline fix.
 
 ### `compute_booth_metrics.py` ✅ Complete
 Pre-computes `booth_metrics` (pulse scores, lean labels, top issues) from `pulse_events`.  
@@ -200,7 +229,7 @@ Connection factories for PostgreSQL (`get_pg_engine`) and Neo4j (`get_neo4j_sess
 
 ---
 
-## Dashboard Pages (`dashboard/pages/`)
+## Dashboard Pages (`frontend/streamlit/dashboard/pages/`)
 
 | Page | File | Status | Data Source |
 |------|------|--------|-------------|
@@ -215,7 +244,7 @@ Connection factories for PostgreSQL (`get_pg_engine`) and Neo4j (`get_neo4j_sess
 | Recommendations | `recommendations.py` | ✅ | `/ac/{id}/recommendations` |
 
 All pages include realistic demo fallbacks when live data is absent.  
-**Run**: `streamlit run dashboard/app.py`
+**Run**: `streamlit run frontend/streamlit/app.py`
 
 ---
 
@@ -268,7 +297,7 @@ Neo4j node types: `AC`, `Booth`, `Candidate`, `Party`, `Issue`, `Scheme`, `Panch
 | `db/migrations/001_initial.sql` | Base schema |
 | `db/migrations/002_quality_narratives.sql` | Quality + narrative tables |
 | `db/migrations/003_new_tables.sql` | Events + recommendations tables |
-| `db/seeds/seed_issues.sql` | Issue taxonomy seed |
+| `data/seeds/seed_issues.sql` | Issue taxonomy seed |
 | `.streamlit/config.toml` | War-room dark theme |
 
 ---
@@ -312,7 +341,7 @@ docker compose up -d
 psql $POSTGRES_URL < db/migrations/001_initial.sql
 psql $POSTGRES_URL < db/migrations/002_quality_narratives.sql
 psql $POSTGRES_URL < db/migrations/003_new_tables.sql
-psql $POSTGRES_URL < db/seeds/seed_issues.sql
+psql $POSTGRES_URL < data/seeds/seed_issues.sql
 
 # 3. ETL
 psql $POSTGRES_URL -f db/migrations/004_fixes.sql   # unique constraints + yt_videos cols
@@ -330,5 +359,5 @@ python -m flows.graph.flow_load_graph --stage etl
 
 # 6. API + Dashboard
 uvicorn api.main:app --reload &
-streamlit run dashboard/app.py
+streamlit run frontend/streamlit/app.py
 ```

@@ -1,0 +1,44 @@
+name: Scheduled — Schema Drift & Dependency Audit
+
+on:
+  schedule:
+    - cron: '0 2 * * *'   # 02:00 UTC daily = 07:30 IST
+  workflow_dispatch:
+
+jobs:
+  drift:
+    name: Schema Drift Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install deps
+        run: pip install requests beautifulsoup4 pydantic
+      - name: Run drift detector
+        run: python -m pipeline.ingest.schema_drift_detector --ac 322 --year 2022
+
+  dep-audit:
+    name: Dependency CVE Audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install pip-audit
+        run: pip install pip-audit
+      - name: Audit
+        run: |
+          pip install . --quiet
+          pip-audit --format=json -o audit-report.json || true
+          cat audit-report.json
+      - name: Upload audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: pip-audit-report
+          path: audit-report.json
+          retention-days: 30
