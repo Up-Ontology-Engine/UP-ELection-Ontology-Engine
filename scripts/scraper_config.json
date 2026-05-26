@@ -1,0 +1,55 @@
+{
+  "youtube_api_key": "${YOUTUBE_API_KEY}",
+  "max_videos": 100,
+  "max_comments_per_video": 200,
+  "max_articles": 300,
+  "scrape_interval_hours": 24,
+  "queries": {
+    "youtube": [
+      "उत्तर प्रदेश चुनाव 2024",
+      "Uttar Pradesh election 2024",
+      "UP election candidates",
+      "गोरखपुर चुनाव",
+      "Gorakhpur election news",
+      "भारत चुनाव समाचार",
+      "Indian election coverage",
+      "यूपी चुनाव परिणाम",
+      "UP election results",
+      "चुनाव प्रचार यूपी"
+    ],
+    "news": [
+      "uttar pradesh election",
+      "up election candidates 2024",
+      "gorakhpur election news",
+      "up election results",
+      "उत्तर प्रदेश चुनाव",
+      "गोरखपुर चुनाव खबरें",
+      "election commission india"
+    ]
+  },
+  "news_sources": [
+    "theprint",
+    "indianexpress",
+    "thehindu",
+    "deccan",
+    "outlookindia",
+    "aajtak",
+    "bhaskar"
+  ],
+  "output_paths": {
+    "videos": "data/yt_cache",
+    "comments": "data/yt_cache",
+    "articles": "data/newspapers",
+    "logs": "data/scraping_logs"
+  },
+  "rate_limiting": {
+    "youtube_api_delay_seconds": 1,
+    "web_scrape_delay_seconds": 2,
+    "between_sources_delay_seconds": 3
+  },
+  "content_filters": {
+    "min_text_length": 50,
+    "exclude_promotional": true,
+    "languages": ["en", "hi"]
+  }
+}
