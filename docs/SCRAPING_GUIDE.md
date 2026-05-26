@@ -469,7 +469,7 @@ for comment in comments:
 ## Support & Documentation
 
 - **Main README**: [SCRAPER_README.md](SCRAPER_README.md)
-- **Configuration**: [scraper_config.json](scraper_config.json)
+- **Configuration**: [scraper_config.json](../scripts/scraper_config.json)
 - **Logs**: [data/scraping_logs/](../data/scraping_logs/)
 - **YouTube API**: https://developers.google.com/youtube/v3
 - **Issues**: Check logs for detailed error messages

@@ -588,6 +588,8 @@ This is a closed-source strategic tool. Access is restricted to core team member
 | `CODE_OF_CONDUCT.md` | Participation rules and communication standards |
 | `.github/PULL_REQUEST_TEMPLATE.md` | Pull request template and checklists |
 | `docs/ETL_NEO4J_PIPELINE.md` | ETL → Neo4j pipeline details |
+| `docs/SCRAPING_GUIDE.md` | Scraper execution guide and configurations |
+| `docs/SCRAPER_README.md` | Scraper codebase documentation |
 | `docs/MODULE_REFERENCE.md` | Module-by-module reference |
 | `docs/DATA_SOURCES.md` | Source inventory and ingestion notes |
 | `docs/ontology_spec.md` | Knowledge graph ontology specification |
