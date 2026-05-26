@@ -90,7 +90,7 @@ export default async function BoothDetailPage({ params }: Props) {
                 style={{ background: "var(--bg-surface)", color: "#f97316", border: "1px solid #f9731630" }}>
                 B-{String(summary.booth_number).padStart(3, "0")}
               </span>
-              <h1 className="font-bold text-[var(--text-1)]" style={{ fontSize: 16 }}>{summary.name}</h1>
+              <h1 className="font-bold text-(--text-1)" style={{ fontSize: 16 }}>{summary.name}</h1>
             </div>
             <p className="text-xs mono" style={{ color: "var(--text-3)" }}>
               {summary.ac_name} · AC-322 · ID: {id}
@@ -132,7 +132,7 @@ export default async function BoothDetailPage({ params }: Props) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
         <div className="rounded-md px-4 py-3 flex items-start gap-3"
           style={{ background: "rgba(16,185,129,0.06)", border: "1px solid rgba(16,185,129,0.2)" }}>
-          <Shield size={14} className="mt-0.5 flex-shrink-0" style={{ color: "#10b981" }} />
+          <Shield size={14} className="mt-0.5 shrink-0" style={{ color: "#10b981" }} />
           <div>
             <p className="label mb-1" style={{ color: "#10b981" }}>Key Insight</p>
             <p className="text-xs" style={{ color: "var(--text-3)" }}>{summary.key_insight}</p>
@@ -140,7 +140,7 @@ export default async function BoothDetailPage({ params }: Props) {
         </div>
         <div className="rounded-md px-4 py-3 flex items-start gap-3"
           style={{ background: "rgba(249,115,22,0.06)", border: "1px solid rgba(249,115,22,0.2)" }}>
-          <TrendingUp size={14} className="mt-0.5 flex-shrink-0" style={{ color: "#f97316" }} />
+          <TrendingUp size={14} className="mt-0.5 shrink-0" style={{ color: "#f97316" }} />
           <div>
             <p className="label mb-1" style={{ color: "#f97316" }}>Recommendation</p>
             <p className="text-xs" style={{ color: "var(--text-3)" }}>{summary.recommendation}</p>
@@ -177,7 +177,7 @@ export default async function BoothDetailPage({ params }: Props) {
                       <div className="flex items-center justify-between mb-1">
                         <div className="flex items-center gap-2">
                           <span className="mono text-xs w-4" style={{ color: "var(--text-4)" }}>{i + 1}</span>
-                          <span className="text-xs font-medium text-[var(--text-1)] capitalize">
+                          <span className="text-xs font-medium text-(--text-1) capitalize">
                             {iss.issue.replace(/_/g, " ")}
                           </span>
                         </div>
@@ -240,7 +240,7 @@ export default async function BoothDetailPage({ params }: Props) {
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2">
                           <div className="w-2 h-2 rounded-full" style={{ background: color }} />
-                          <span className="text-xs font-medium text-[var(--text-1)]">{label}</span>
+                          <span className="text-xs font-medium text-(--text-1)">{label}</span>
                         </div>
                         <div className="flex items-center gap-3">
                           <span className="mono text-xs" style={{ color: "var(--text-3)" }}>{total.toLocaleString("en-IN")} signals</span>
@@ -326,7 +326,7 @@ export default async function BoothDetailPage({ params }: Props) {
               <div key={i} className="mb-2 last:mb-0 rounded-md p-3"
                 style={{ background: "var(--bg-surface)", border: "1px solid var(--border)" }}>
                 <div className="flex items-center justify-between mb-1">
-                  <span className="text-xs font-medium text-[var(--text-1)] capitalize">
+                  <span className="text-xs font-medium text-(--text-1) capitalize">
                     {n.narrative_type?.replace(/_/g, " ")}
                   </span>
                   {n.strength != null && (
@@ -360,7 +360,7 @@ export default async function BoothDetailPage({ params }: Props) {
                   <div key={i} className="rounded-md p-2.5"
                     style={{ background: "var(--bg-surface)", border: "1px solid var(--border)" }}>
                     <div className="flex items-center justify-between mb-1">
-                      <span className="text-xs font-medium text-[var(--text-1)]">{c.entity}</span>
+                      <span className="text-xs font-medium text-(--text-1)">{c.entity}</span>
                       {c.delta != null && (
                         <span className="mono text-xs" style={{ color: "#ef4444", fontSize: 9 }}>
                           Δ {c.delta.toFixed(2)}
@@ -390,10 +390,10 @@ export default async function BoothDetailPage({ params }: Props) {
                 {summary.scheme_analysis.map((s, i) => (
                   <div key={i} className="flex items-center gap-2 py-2 px-2.5 rounded-md"
                     style={{ background: "var(--bg-surface)", border: "1px solid var(--border)" }}>
-                    <div className="w-1.5 h-1.5 rounded-full flex-shrink-0"
+                    <div className="w-1.5 h-1.5 rounded-full shrink-0"
                       style={{ background: s.priority === "HIGH" ? "#ef4444" : "#f59e0b" }} />
                     <div className="flex-1 min-w-0">
-                      <p className="text-xs font-medium text-[var(--text-1)] truncate">{s.scheme_name}</p>
+                      <p className="text-xs font-medium text-(--text-1) truncate">{s.scheme_name}</p>
                       <p className="text-xs capitalize" style={{ color: "var(--text-3)", fontSize: 9 }}>
                         {s.gap_type?.replace(/_/g, " ")}
                       </p>
@@ -442,10 +442,10 @@ export default async function BoothDetailPage({ params }: Props) {
                   const pct = seg.pct_of_voters != null ? (seg.pct_of_voters * 100).toFixed(1) : null;
                   return (
                     <div key={seg.segment_type} className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: color }} />
+                      <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: color }} />
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center justify-between mb-0.5">
-                          <span className="text-xs text-[var(--text-1)]">{labels[seg.segment_type] ?? seg.segment_type}</span>
+                          <span className="text-xs text-(--text-1)">{labels[seg.segment_type] ?? seg.segment_type}</span>
                           <div className="flex items-center gap-2">
                             <span className="mono text-xs" style={{ color, fontSize: 10 }}>{seg.count.toLocaleString("en-IN")}</span>
                             {pct && <span className="mono text-xs" style={{ color: "var(--text-3)", fontSize: 9 }}>{pct}%</span>}
@@ -535,7 +535,7 @@ export default async function BoothDetailPage({ params }: Props) {
               <div className="space-y-2 max-h-56 overflow-y-auto pr-1">
                 {summary.backing_comments.map((c, i) => (
                   <div key={i} className="rounded-md p-2.5" style={{ background: "var(--bg-surface)", border: "1px solid var(--border)" }}>
-                    <p className="text-xs text-[var(--text-1)] line-clamp-2 mb-1.5">{c.content}</p>
+                    <p className="text-xs text-(--text-1) line-clamp-2 mb-1.5">{c.content}</p>
                     <div className="flex items-center gap-2 flex-wrap">
                       <span className="mono text-xs px-1.5 py-0.5 rounded"
                         style={{ background: "var(--bg-card)", color: "#3b82f6", border: "1px solid var(--border)", fontSize: 9 }}>

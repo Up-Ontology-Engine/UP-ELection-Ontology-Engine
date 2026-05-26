@@ -10,7 +10,7 @@ export function Insights() {
   return (
     <section id="insights" className="border-t" style={{ borderTopColor: "rgba(220,207,187,0.65)" }}>
       <div className="mx-auto max-w-6xl px-6 py-20 grid lg:grid-cols-2 gap-6 items-stretch">
-        <div className="rounded-3xl border border-[color:var(--border-bright)] bg-[var(--bg-card)] p-6 shadow-sm hover:shadow-md transition-all duration-200">
+        <div className="rounded-3xl border border-(--border-bright) bg-(--bg-card) p-6 shadow-sm hover:shadow-md transition-all duration-200">
           <div className="text-xs font-mono tracking-widest text-(--saffron)">CANDIDATES BY PARTY</div>
           <div className="mt-5 space-y-3">
             {parties.map((p) => (
@@ -24,7 +24,7 @@ export function Insights() {
             ))}
           </div>
         </div>
-        <div className="rounded-3xl border border-[color:var(--border-bright)] bg-[var(--bg-card)] p-6 shadow-sm hover:shadow-md transition-all duration-200">
+        <div className="rounded-3xl border border-(--border-bright) bg-(--bg-card) p-6 shadow-sm hover:shadow-md transition-all duration-200">
           <div className="text-xs font-mono tracking-widest text-(--saffron)">AGE DISTRIBUTION · 18–80+</div>
           <div className="mt-6 flex items-end gap-3 h-44">
             {[42, 78, 96, 60, 32, 14].map((h, i) => (

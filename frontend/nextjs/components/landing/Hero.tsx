@@ -8,7 +8,7 @@ export function Hero() {
     <section className="relative overflow-hidden">
       <div className="mx-auto max-w-6xl px-6 pt-20 pb-24 grid lg:grid-cols-[1.05fr_1fr] gap-14 items-center">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-[color:var(--border-bright)] bg-(--saffron-subtle) px-3 py-1 text-xs font-mono text-(--saffron-dim)">
+          <div className="inline-flex items-center gap-2 rounded-full border border-(--border-bright) bg-(--saffron-subtle) px-3 py-1 text-xs font-mono text-(--saffron-dim)">
             <span className="h-1.5 w-1.5 rounded-full bg-(--saffron)" /> Gorakhpur Pilot
           </div>
           <h1 className="mt-6 text-5xl md:text-6xl font-semibold tracking-tight text-foreground leading-[1.05]">
@@ -22,7 +22,7 @@ export function Hero() {
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Button asChild size="lg" className="gap-2 bg-(--saffron) text-white hover:bg-(--saffron-dim) shadow-none"><Link href="/signup"><ArrowRight size={16} /> Get started</Link></Button>
-            <Button asChild size="lg" variant="outline" className="gap-2 border-[color:var(--border-bright)] bg-white text-(--saffron-dim) hover:bg-(--saffron-subtle) shadow-none">
+            <Button asChild size="lg" variant="outline" className="gap-2 border-(--border-bright) bg-white text-(--saffron-dim) hover:bg-(--saffron-subtle) shadow-none">
               <Link href="/dashboard">
                 <PlayCircle size={18} /> See live demo
               </Link>

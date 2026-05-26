@@ -23,7 +23,7 @@ export function Features() {
         </div>
         <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {items.map((it) => (
-            <div key={it.title} className="rounded-3xl border border-[color:var(--border-bright)] bg-(--bg-card) p-5 shadow-sm hover:shadow-md transition-all duration-200">
+            <div key={it.title} className="rounded-3xl border border-(--border-bright) bg-(--bg-card) p-5 shadow-sm hover:shadow-md transition-all duration-200">
               <div className={`h-10 w-10 rounded-xl flex items-center justify-center ${toneBg[it.tone]}`}>
                 <it.icon size={20} />
               </div>

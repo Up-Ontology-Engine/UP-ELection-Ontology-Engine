@@ -48,7 +48,7 @@ export default function Sidebar() {
       {/* Logo / Brand */}
       <div className="px-4 pt-4 pb-3.5" style={{ borderBottom: "1px solid var(--border)" }}>
         <div className="flex items-center gap-3 mb-3.5">
-          <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
+          <div className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
             style={{ background: "var(--saffron)" }}>
             <BarChart3 size={17} className="text-white" />
           </div>
