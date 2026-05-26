@@ -7,7 +7,7 @@ import hashlib
 from unittest.mock import patch, MagicMock
 from bs4 import BeautifulSoup
 
-from ingestion.news_scraper import (
+from pipeline.ingest.news_scraper import (
     scrape_source,
     _absolute_url,
     SOURCES,
@@ -117,7 +117,7 @@ def test_content_hash_uniqueness():
 
 def test_duplicate_run_does_not_double_insert():
     """load_to_postgres ON CONFLICT DO NOTHING — rowcount=0 on dupe."""
-    from ingestion.news_scraper import load_to_postgres
+    from pipeline.ingest.news_scraper import load_to_postgres
 
     engine = MagicMock()
     conn = MagicMock()

@@ -1,8 +1,8 @@
 """Unit tests for NLP pipeline components."""
 import pytest
-from nlp.lang_detect import detect_language
-from nlp.rule_classifier import rule_based_extract
-from nlp.schemas import ExtractionResult
+from pipeline.nlp.lang_detect import detect_language
+from pipeline.nlp.rule_classifier import rule_based_extract
+from pipeline.nlp.schemas import ExtractionResult
 
 
 def test_hindi_detected():
@@ -57,7 +57,7 @@ def test_extraction_result_schema():
 
 
 def test_bhashini_circuit_breaker():
-    from nlp.bhashini import _bhashini, _bhashini_breaker
+    from pipeline.nlp.bhashini import _bhashini, _bhashini_breaker
     from unittest.mock import patch
 
     # Reset circuit breaker state
