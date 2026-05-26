@@ -42,3 +42,7 @@ logs/
 
 # Neo4j local data
 neo4j_data/
+
+# OS-generated files
+**/.DS_Store
+.DS_Store

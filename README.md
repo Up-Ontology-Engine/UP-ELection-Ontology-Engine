@@ -284,14 +284,14 @@ User question (natural language)
 
 ```
 UP-ELection-Ontology-Engine/
-├── api/
-│   ├── main.py          ← 40+ FastAPI endpoints
+├── backend/             ← 40+ FastAPI endpoints
+│   ├── main.py
 │   ├── db.py
 │   ├── queries.py       ← All SQL queries (PG + Neo4j)
 │   ├── reasoning.py     ← AI reasoning pipeline (Sarvam/Gemini + Neo4j + web)
 │   └── schemas.py
 │
-├── client_end/          ← Next.js 14 frontend (App Router)
+├── frontend/nextjs/     ← Next.js 14 frontend (App Router)
 │   └── app/
 │       ├── page.tsx             ← Command Center dashboard
 │       ├── booths/              ← Booth list + detail pages
@@ -304,90 +304,43 @@ UP-ELection-Ontology-Engine/
 │       ├── conversion/          ← Voter conversion engine
 │       └── twin/                ← Digital twin snapshot
 │
-├── nlp/                 ← 7-stage multilingual NLP pipeline
-│   ├── pipeline.py
-│   ├── lang_detect.py
-│   ├── bhashini.py
-│   ├── extractor.py
-│   ├── rule_classifier.py
-│   ├── geo_resolver.py
-│   ├── alias_expander.py
-│   └── schemas.py
+├── pipeline/            ← Unified pipeline orchestration folder
+│   ├── ingest/          ← Per-source scrapers and data ingestion
+│   │   ├── eci_booths.py
+│   │   ├── myneta_candidates.py
+│   │   ├── news_scraper.py
+│   │   └── ...
+│   ├── nlp/             ← 7-stage multilingual NLP pipeline
+│   │   ├── pipeline.py
+│   │   └── ...
+│   ├── analytics/       ← Core metrics, narratives, scheme gaps, contradictions
+│   │   ├── booth_metrics.py
+│   │   ├── scheme_gap_analysis.py
+│   │   └── ...
+│   ├── graph/           ← Neo4j constraints & schema loaders
+│   │   ├── loaders/
+│   │   └── queries/
+│   ├── etl/             ← E-roll / result aggregation and staging transforms
+│   │   ├── ingest_eroll_data.py
+│   │   └── ...
+│   ├── db/              ← Database connection pooling, models, and migrations
+│   │   ├── migrations/  ← SQL migration scripts
+│   │   └── alembic/     ← Schema revision logs
+│   └── flows/           ← Celery/Prefect orchestration task definition flows
+│       └── celery_app.py
 │
-├── analytics/
-│   ├── booth_metrics.py
-│   ├── data_quality.py
-│   ├── scheme_gap_analysis.py
-│   ├── contradiction_detector.py
-│   ├── narrative_detector.py
-│   └── historical_analysis.py
-│
-├── graph/
-│   ├── constraints.cypher
-│   ├── constraints_v2.cypher
-│   ├── loaders/
-│   │   ├── load_structure.py
-│   │   ├── load_booths.py
-│   │   ├── load_candidates.py
-│   │   ├── load_panchayats.py
-│   │   ├── load_pulse_events.py
-│   │   └── load_quality_narratives.py
-│   └── queries/
-│       └── cypher_lib.py
-│
-├── etl/                 ← 20+ ETL scripts
-│   ├── ingest_eroll_data.py
-│   ├── ingest_political_data.py
-│   ├── ingest_tcpd_voteshare.py
-│   ├── ingest_youtube_videos.py
-│   ├── aggregate_eroll_segments.py
-│   ├── aggregate_form20_results.py
-│   ├── compute_booth_election_metrics.py
-│   ├── process_youtube_signals.py
-│   ├── stage_news_to_pulse.py
-│   ├── stage_youtube_to_pulse.py
-│   ├── transform_candidates.py
-│   ├── transform_census.py
-│   ├── transform_geography.py
-│   ├── transform_schemes.py
-│   └── pulse_event_prep.py
-│
-├── ingestion/           ← Per-source scrapers
-│   ├── eci_booths.py
-│   ├── myneta_candidates.py
-│   ├── eci_booth_results.py
-│   ├── egramswaraj_schemes.py
-│   ├── youtube_comments.py
-│   ├── youtube_videos.py
-│   ├── news_scraper.py
-│   ├── multi_news_scraper.py
-│   ├── electoral_demographics.py
-│   └── grievance_scraper.py
-│
-├── dashboard/           ← Legacy Streamlit dashboard (standalone)
+├── frontend/streamlit/  ← Legacy Streamlit dashboard (standalone)
 │   ├── app.py
 │   └── pages/
 │
-├── flows/               ← Prefect orchestration flows
-│   ├── nlp/flow_sentiment.py
-│   ├── graph/flow_load_graph.py
-│   └── aggregation/
-│       ├── flow_booth_metrics.py
-│       └── flow_full_analytics.py
-│
-├── db/migrations/
-│   ├── 001_initial.sql          ← 14 core tables
-│   └── 002_quality_narratives.sql
-│
-├── data/seeds/
-│   ├── gorakhpur_aliases.json   ← locality → booth_id (auto-expanded)
-│   └── political_lexicon.json
-│
-├── docker-compose.yml
-├── requirements.txt
-└── pyproject.toml
-```
-
+├── data/                        ← Raw, seed, and transformed data files
+│   ├── Form 20 Gorakhpur Data/  ← ECI Form-20 XLS files
+│   ├── PoolBoothData_JSON/      ← Parsed booth/results JSON
+│   ├── Digital_Dataset/         ← YouTube and news comments text
+│   ├── Myneta/                  ← Candidate affidavits and info
+│   ├── UP_Gov_schemes_Data/     ← Panchayat and beneficiary records
+│   ├── seeds/                   ← Static seed JSON files (e.g. issues list)
+│   └── transformed/             ← Unified processed data for DB import
 ---
 
 ## Key Metrics per Booth
@@ -447,7 +400,7 @@ Each row in the candidate results fact table (`candidate_party_history`) carries
 | Web Search | DuckDuckGo HTML + Wikipedia API |
 | API | FastAPI + Uvicorn |
 | Frontend | Next.js 14 (App Router), Recharts, React-Leaflet, Lucide |
-| Legacy Dashboard | Streamlit (standalone, `dashboard/`) |
+| Legacy Dashboard | Streamlit (standalone, `frontend/streamlit/`) |
 
 ---
 
@@ -476,49 +429,52 @@ docker-compose up -d
 ### 3. Initialize databases
 
 ```bash
-psql $POSTGRES_URL -f db/migrations/001_initial.sql
-psql $POSTGRES_URL -f db/migrations/002_quality_narratives.sql
-psql $POSTGRES_URL -f db/seeds/seed_issues.sql
+# Run migrations using Alembic
+alembic upgrade head
 
-cat graph/constraints.cypher    | cypher-shell -u neo4j -p $NEO4J_PASSWORD
-cat graph/constraints_v2.cypher | cypher-shell -u neo4j -p $NEO4J_PASSWORD
+# Seed initial issues
+psql $POSTGRES_URL -f data/seeds/seed_issues.sql
+
+# Load graph constraints (Neo4j browser at http://localhost:7474)
+cat pipeline/graph/constraints.cypher    | cypher-shell -u neo4j -p $NEO4J_PASSWORD
+cat pipeline/graph/constraints_v2.cypher | cypher-shell -u neo4j -p $NEO4J_PASSWORD
 ```
 
 ### 4. Run ingestion
 
 ```bash
-python -m ingestion.eci_booths
-python -m ingestion.myneta_candidates
-python -m ingestion.eci_booth_results
-python -m ingestion.youtube_comments
-python -m ingestion.news_scraper
+python -m pipeline.ingest.eci_booths
+python -m pipeline.ingest.myneta_candidates
+python -m pipeline.ingest.eci_booth_results
+python -m pipeline.ingest.youtube_comments
+python -m pipeline.ingest.news_scraper
 ```
 
 ### 5. Run NLP + graph load
 
 ```bash
-python -m flows.nlp.flow_sentiment
-python -m flows.graph.flow_load_graph
+python -m pipeline.flows.nlp.flow_sentiment
+python -m pipeline.flows.graph.flow_load_graph
 ```
 
 ### 6. Run full analytics pipeline
 
 ```bash
 # All 5 intelligence layers in dependency order
-python -m flows.aggregation.flow_full_analytics
+python -m pipeline.flows.aggregation.flow_full_analytics
 ```
 
 ### 7. Start API
 
 ```bash
-uvicorn api.main:app --reload --port 8000
+uvicorn backend.main:app --reload --port 8000
 # Swagger UI: http://localhost:8000/docs
 ```
 
 ### 8. Start Next.js frontend
 
 ```bash
-cd client_end
+cd frontend/nextjs
 npm install
 npm run dev
 # http://localhost:3000
@@ -530,16 +486,16 @@ npm run dev
 
 | Source | What | Priority | Script |
 |--------|------|----------|--------|
-| CEO UP / ECI | Booth master, AC list | P0 | `ingestion/eci_booths.py` |
-| MyNeta / ADR | Candidate affidavits | P0 | `ingestion/myneta_candidates.py` |
-| ECI Results Archives | Historical booth results | P1 | `ingestion/eci_booth_results.py` |
-| eGramSwaraj | Panchayat scheme delivery | P1 | `ingestion/egramswaraj_schemes.py` |
-| YouTube (yt-dlp) | Comments + videos on political content | P1 | `ingestion/youtube_videos.py` |
-| Jagran / Amar Ujala | Local news articles | P1 | `ingestion/news_scraper.py` |
-| Electoral Roll (PDF) | Voter demographics per booth | P1 | `etl/ingest_eroll_data.py` |
-| TCPD Vote Share | Historical vote share data | P2 | `etl/ingest_tcpd_voteshare.py` |
+| CEO UP / ECI | Booth master, AC list | P0 | `pipeline/ingest/eci_booths.py` |
+| MyNeta / ADR | Candidate affidavits | P0 | `pipeline/ingest/myneta_candidates.py` |
+| ECI Results Archives | Historical booth results | P1 | `pipeline/ingest/eci_booth_results.py` |
+| eGramSwaraj | Panchayat scheme delivery | P1 | `pipeline/ingest/egramswaraj_schemes.py` |
+| YouTube (yt-dlp) | Comments + videos on political content | P1 | `pipeline/ingest/youtube_videos.py` |
+| Jagran / Amar Ujala | Local news articles | P1 | `pipeline/ingest/news_scraper.py` |
+| Electoral Roll (PDF) | Voter demographics per booth | P1 | `pipeline/etl/ingest_eroll_data.py` |
+| TCPD Vote Share | Historical vote share data | P2 | `pipeline/etl/ingest_tcpd_voteshare.py` |
 | KoBoToolbox | Field surveys | P2 | manual → ETL |
-| MGNREGA / PMAY | Beneficiary data | P2 | `etl/load_real_schemes.py` |
+| MGNREGA / PMAY | Beneficiary data | P2 | `pipeline/etl/load_real_schemes.py` |
 
 ---
 
@@ -559,6 +515,16 @@ npm run dev
 - **Sentiment Accuracy:** NLP confidence > 85% on ground-truth validation.
 - **Data Freshness:** Daily sentiment pulse updates.
 - **Prediction Power:** Pre-election booth-level sentiment vs. actual results correlation > 0.75.
+
+---
+
+## Production Hardening
+
+The engine's data infrastructure is fully hardened to support high concurrent user traffic:
+- **Connection Pooling:** All transactional services route database calls through PgBouncer transaction-level pooling (`port 6432`).
+- **Distributed Locking:** Prevents duplicate scraper and pipeline task execution using a Redis-backed atomic lock.
+- **Observability:** Backend metrics are instrumented using Prometheus (`/metrics`) and auto-provisioned to a Grafana dashboard for real-time traffic, latency, and database pool health.
+- **Edge Caching:** Next.js pre-renders and caches booth index and booth details routes via Incremental Static Regeneration (ISR) with a 1-hour revalidation window.
 
 ---
 
@@ -582,9 +548,21 @@ This is a closed-source strategic tool. Access is restricted to core team member
 
 | File | Purpose |
 |------|---------|
-| `docs/setup.md` | Local environment setup |
+| `docs/SETUP.md` | Local environment setup |
+| `docs/DEPLOYMENT.md` | Production deployment runbook |
+| `docs/DISASTER_RECOVERY.md` | Disaster recovery & database backup strategies |
+| `docs/ARCHITECTURE.md` | System design patterns and database integration model |
+| `docs/RUNBOOKS.md` | Operational troubleshooting runbooks for on-call teams |
+| `docs/API_REFERENCE.md` | Endpoint schemas and payload specifications |
+| `SECURITY.md` | Vulnerability disclosure and compliance policy |
+| `CONTRIBUTING.md` | Developer contribution and style guidelines |
+| `CHANGELOG.md` | Version history and release notes |
+| `CODE_OF_CONDUCT.md` | Participation rules and communication standards |
+| `.github/PULL_REQUEST_TEMPLATE.md` | Pull request template and checklists |
 | `docs/ETL_NEO4J_PIPELINE.md` | ETL → Neo4j pipeline details |
 | `docs/MODULE_REFERENCE.md` | Module-by-module reference |
-| `gorakhpur-master-plan.md` | Full 5-week plan, all 15 roles, all data sources |
-| `gorakhpur-5day-sprint.md` | 5-day demo sprint with runnable code |
-| `DATA_SOURCES.md` | Source inventory and ingestion notes |
+| `docs/DATA_SOURCES.md` | Source inventory and ingestion notes |
+| `docs/ontology_spec.md` | Knowledge graph ontology specification |
+| `docs/archive/gorakhpur-master-plan.md` | Full 5-week plan, all 15 roles, all data sources |
+| `docs/archive/gorakhpur-5day-sprint.md` | 5-day demo sprint with runnable code |
+| `docs/archive/team_presentation_guide.md` | Team onboarding and presentation script |

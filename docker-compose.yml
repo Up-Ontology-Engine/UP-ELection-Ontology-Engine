@@ -4,22 +4,49 @@ services:
   postgres:
     image: postgres:16
     container_name: gorakhpur_postgres
+    command: postgres -c shared_buffers=512MB -c effective_cache_size=1536MB -c work_mem=16MB -c maintenance_work_mem=128MB -c random_page_cost=1.1 -c temp_file_limit=10GB
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: gorakhpur_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=gorakhpur_db
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
-      - ./db/migrations/001_initial.sql:/docker-entrypoint-initdb.d/01_schema.sql
-      - ./db/migrations/002_quality_narratives.sql:/docker-entrypoint-initdb.d/02_quality.sql
-      - ./db/migrations/003_new_tables.sql:/docker-entrypoint-initdb.d/03_new_tables.sql
-      - ./db/migrations/004_fixes.sql:/docker-entrypoint-initdb.d/04_fixes.sql
-      - ./db/migrations/005_political_events.sql:/docker-entrypoint-initdb.d/05_political_events.sql
-      - ./db/seeds/seed_issues.sql:/docker-entrypoint-initdb.d/06_seeds.sql
+      - ./pipeline/db/migrations:/docker-entrypoint-initdb.d:ro
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2G
+
+  pgbouncer:
+    image: edoburu/pgbouncer:latest
+    container_name: gorakhpur_pgbouncer
+    environment:
+      - DATABASE_URL=postgres://postgres:postgres@postgres:5432/gorakhpur_db
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=gorakhpur_db
+      - POOL_MODE=transaction
+      - MAX_CLIENT_CONN=1000
+      - DEFAULT_POOL_SIZE=20
+      - MIN_POOL_SIZE=5
+      - RESERVE_POOL_SIZE=5
+    ports:
+      - "6432:6432"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -h localhost -p 6432 -U postgres"]
       interval: 5s
       timeout: 5s
       retries: 5
@@ -31,6 +58,9 @@ services:
       NEO4J_AUTH: neo4j/gorakhpur_neo4j_pass
       NEO4J_PLUGINS: '["apoc"]'
       NEO4J_dbms_security_procedures_unrestricted: apoc.*
+      NEO4J_server_memory_heap_initial__size: 512m
+      NEO4J_server_memory_heap_max__size: 1g
+      NEO4J_server_memory_pagecache_size: 512m
     ports:
       - "7474:7474"   # HTTP browser
       - "7687:7687"   # Bolt
@@ -42,10 +72,16 @@ services:
       interval: 10s
       timeout: 10s
       retries: 10
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2G
 
   redis:
     image: redis:7-alpine
     container_name: gorakhpur_redis
+    command: redis-server --maxmemory 256mb --maxmemory-policy allkeys-lru --save "" --tcp-keepalive 300
     ports:
       - "6379:6379"
     volumes:
@@ -55,9 +91,190 @@ services:
       interval: 5s
       timeout: 3s
       retries: 5
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+
+  backend:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.backend
+    container_name: gorakhpur_backend
+    user: "10001:10001"
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@pgbouncer:6432/gorakhpur_db
+      - POSTGRES_URL=postgresql://postgres:postgres@pgbouncer:6432/gorakhpur_db
+      - NEO4J_URI=bolt://neo4j:7687
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      pgbouncer:
+        condition: service_healthy
+      neo4j:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    deploy:
+      resources:
+        limits:
+          cpus: '1.5'
+          memory: 1.5G
+    develop:
+      watch:
+        - action: sync
+          path: ./backend
+          target: /app/backend
+          ignore:
+            - "**/__pycache__/"
+            - "**/*.pyc"
+            - "**/.DS_Store"
+            - "**/Thumbs.db"
+        - action: rebuild
+          path: ./pyproject.toml
+
+  frontend:
+    build:
+      context: ./frontend/nextjs
+      dockerfile: ../../docker/Dockerfile.frontend
+      args:
+        - NEXT_PUBLIC_API_URL=http://localhost:8000
+    container_name: gorakhpur_frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+      - INTERNAL_API_URL=http://backend:8000
+    depends_on:
+      - backend
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
+    develop:
+      watch:
+        - action: sync
+          path: ./frontend/nextjs
+          target: /app
+          ignore:
+            - node_modules/
+            - .next/
+            - "**/*.tsbuildinfo"
+            - "**/.DS_Store"
+            - "**/Thumbs.db"
+            - "**/*.log"
+
+  nginx:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.nginx
+    container_name: gorakhpur_nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+      - frontend
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+
+  dashboard:
+    profiles: ["analytics"]
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.dashboard
+    container_name: gorakhpur_dashboard
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@pgbouncer:6432/gorakhpur_db
+      - POSTGRES_URL=postgresql://postgres:postgres@pgbouncer:6432/gorakhpur_db
+      - NEO4J_URI=bolt://neo4j:7687
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      pgbouncer:
+        condition: service_healthy
+      neo4j:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
+
+  scraper:
+    profiles: ["analytics"]
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.scraper
+    container_name: gorakhpur_scraper
+    user: "10001:10001"
+    env_file:
+      - .env
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@pgbouncer:6432/gorakhpur_db
+      - POSTGRES_URL=postgresql://postgres:postgres@pgbouncer:6432/gorakhpur_db
+      - NEO4J_URI=bolt://neo4j:7687
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      pgbouncer:
+        condition: service_healthy
+      neo4j:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    deploy:
+      resources:
+        limits:
+          cpus: '1.5'
+          memory: 1.5G
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: gorakhpur_prometheus
+    volumes:
+      - ./docker/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+      - '--web.console.templates=/usr/share/prometheus/consoles'
+    ports:
+      - "9090:9090"
+    depends_on:
+      - backend
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: gorakhpur_grafana
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./docker/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./docker/grafana/dashboards:/etc/grafana/dashboards:ro
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    depends_on:
+      - prometheus
 
 volumes:
   postgres_data:
   neo4j_data:
   neo4j_logs:
   redis_data:
+  prometheus_data:
+  grafana_data:
