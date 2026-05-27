@@ -10,6 +10,7 @@ Pipeline per question:
 LLM chain: Sarvam (primary) -> Gemini (fallback) -> plain summarisation
 Web search: DuckDuckGo HTML -> Wikipedia API (merged, deduplicated)
 """
+
 from __future__ import annotations
 
 import logging
@@ -102,10 +103,11 @@ Always end with one actionable insight relevant to electoral strategy or governa
 
 _HTTP_CLIENT = httpx.Client(timeout=30, follow_redirects=True)
 
-_SARVAM_BASE  = "https://api.sarvam.ai/v1"
+_SARVAM_BASE = "https://api.sarvam.ai/v1"
 _SARVAM_MODEL = os.environ.get("SARVAM_REASONING_MODEL", "sarvam-m")
 
 # ── LLM calls ────────────────────────────────────────────────────────────────
+
 
 def _call_sarvam(messages: list[dict], max_tokens: int = 2500) -> str:
     api_key = os.environ.get("SARVAM_API_KEY")
@@ -131,6 +133,7 @@ def _call_sarvam(messages: list[dict], max_tokens: int = 2500) -> str:
 def _call_gemini(system: str, user: str, max_tokens: int = 1024) -> str:
     from google import genai
     from google.genai import types
+
     client = genai.Client(api_key=os.environ["GOOGLE_API_KEY"])
     resp = client.models.generate_content(
         model=os.environ.get("GOOGLE_REASONING_MODEL", "gemini-2.5-flash"),
@@ -165,6 +168,7 @@ def generate_cypher(question: str) -> str:
 
 def execute_cypher(cypher: str) -> list[dict[str, Any]]:
     from .db import get_neo4j_session
+
     with get_neo4j_session() as session:
         result = session.run(cypher)
         return [dict(record) for record in result]
@@ -202,14 +206,16 @@ def _search_duckduckgo(query: str, max_results: int = 6) -> list[dict]:
             return results
         soup = BeautifulSoup(resp.text, "html.parser")
         for item in soup.select(".result__body")[:max_results]:
-            title_el   = item.select_one(".result__title")
+            title_el = item.select_one(".result__title")
             snippet_el = item.select_one(".result__snippet")
-            url_el     = item.select_one("a.result__url, .result__title a")
-            title   = title_el.get_text(strip=True)   if title_el   else ""
+            url_el = item.select_one("a.result__url, .result__title a")
+            title = title_el.get_text(strip=True) if title_el else ""
             snippet = snippet_el.get_text(strip=True) if snippet_el else ""
-            url     = _decode_ddg_url(url_el.get("href", "")) if url_el else ""
+            url = _decode_ddg_url(url_el.get("href", "")) if url_el else ""
             if title or snippet:
-                results.append({"title": title, "snippet": snippet, "url": url, "source": "DuckDuckGo"})
+                results.append(
+                    {"title": title, "snippet": snippet, "url": url, "source": "DuckDuckGo"}
+                )
     except Exception as e:
         logger.debug("DuckDuckGo search failed: %s", e)
     return results
@@ -228,20 +234,24 @@ def _search_duckduckgo_instant(query: str) -> list[dict]:
             return results
         data = resp.json()
         if data.get("AbstractText"):
-            results.append({
-                "title":   data.get("Heading") or query,
-                "snippet": data["AbstractText"][:500],
-                "url":     data.get("AbstractURL") or "",
-                "source":  "DuckDuckGo Instant",
-            })
+            results.append(
+                {
+                    "title": data.get("Heading") or query,
+                    "snippet": data["AbstractText"][:500],
+                    "url": data.get("AbstractURL") or "",
+                    "source": "DuckDuckGo Instant",
+                }
+            )
         for topic in data.get("RelatedTopics", [])[:3]:
             if isinstance(topic, dict) and topic.get("Text"):
-                results.append({
-                    "title":   topic["Text"][:80],
-                    "snippet": topic["Text"][:400],
-                    "url":     topic.get("FirstURL") or "",
-                    "source":  "DuckDuckGo",
-                })
+                results.append(
+                    {
+                        "title": topic["Text"][:80],
+                        "snippet": topic["Text"][:400],
+                        "url": topic.get("FirstURL") or "",
+                        "source": "DuckDuckGo",
+                    }
+                )
     except Exception as e:
         logger.debug("DDG instant failed: %s", e)
     return results
@@ -253,9 +263,12 @@ def _search_wikipedia(query: str, max_results: int = 3) -> list[dict]:
         resp = _HTTP_CLIENT.get(
             "https://en.wikipedia.org/w/api.php",
             params={
-                "action": "query", "list": "search",
-                "srsearch": query, "srlimit": max_results,
-                "format": "json", "utf8": 1,
+                "action": "query",
+                "list": "search",
+                "srsearch": query,
+                "srlimit": max_results,
+                "format": "json",
+                "utf8": 1,
             },
             headers={"User-Agent": _WIKI_UA},
             timeout=10,
@@ -264,13 +277,15 @@ def _search_wikipedia(query: str, max_results: int = 3) -> list[dict]:
             return results
         for hit in resp.json().get("query", {}).get("search", []):
             snippet = re.sub(r"<[^>]+>", "", hit.get("snippet", ""))
-            title   = hit.get("title", "")
-            results.append({
-                "title":   title,
-                "snippet": snippet[:400],
-                "url":     f"https://en.wikipedia.org/wiki/{urllib.parse.quote(title.replace(' ', '_'))}",
-                "source":  "Wikipedia",
-            })
+            title = hit.get("title", "")
+            results.append(
+                {
+                    "title": title,
+                    "snippet": snippet[:400],
+                    "url": f"https://en.wikipedia.org/wiki/{urllib.parse.quote(title.replace(' ', '_'))}",
+                    "source": "Wikipedia",
+                }
+            )
     except Exception as e:
         logger.debug("Wikipedia search failed: %s", e)
     return results
@@ -280,9 +295,9 @@ def web_search(question: str, max_results: int = 8) -> list[dict]:
     """Combine DDG HTML + Instant + Wikipedia, deduplicated."""
     enriched = f"{question} Gorakhpur UP India" if "gorakhpur" not in question.lower() else question
 
-    instant  = _search_duckduckgo_instant(question)
+    instant = _search_duckduckgo_instant(question)
     ddg_html = _search_duckduckgo(enriched, max_results=6)
-    wiki     = _search_wikipedia(question, max_results=3)
+    wiki = _search_wikipedia(question, max_results=3)
 
     seen: set[str] = set()
     merged: list[dict] = []
@@ -299,18 +314,46 @@ def web_search(question: str, max_results: int = 8) -> list[dict]:
 # ── Question classifier ───────────────────────────────────────────────────────
 
 _GRAPH_ONLY_TERMS = {
-    "booth", "pulse score", "bjp score", "opp score",
-    "digital lean", "event count", "confidence_label",
-    "narrative", "contradiction", "scheme gap",
+    "booth",
+    "pulse score",
+    "bjp score",
+    "opp score",
+    "digital lean",
+    "event count",
+    "confidence_label",
+    "narrative",
+    "contradiction",
+    "scheme gap",
 }
 
 _WEB_SIGNALS = {
-    "latest", "recent", "current", "news", "today",
-    "2024", "2025", "2026",
-    "who is", "who won", "who will", "result", "winner",
-    "yogi adityanath", "modi", "rahul", "akhilesh", "mayawati",
-    "government policy", "scheme launch", "budget", "census",
-    "why", "explain", "what is", "background", "history",
+    "latest",
+    "recent",
+    "current",
+    "news",
+    "today",
+    "2024",
+    "2025",
+    "2026",
+    "who is",
+    "who won",
+    "who will",
+    "result",
+    "winner",
+    "yogi adityanath",
+    "modi",
+    "rahul",
+    "akhilesh",
+    "mayawati",
+    "government policy",
+    "scheme launch",
+    "budget",
+    "census",
+    "why",
+    "explain",
+    "what is",
+    "background",
+    "history",
 }
 
 
@@ -332,8 +375,10 @@ def _needs_web_search(question: str, graph_results: list[dict]) -> bool:
 
 # ── Synthesis ─────────────────────────────────────────────────────────────────
 
+
 def _build_context(graph_results: list[dict], web_results: list[dict]) -> str:
     import json
+
     parts: list[str] = []
     has_graph = graph_results and not (
         len(graph_results) == 1 and "cannot answer" in str(graph_results[0]).lower()
@@ -361,7 +406,7 @@ def synthesize_answer(question: str, graph_results: list[dict], web_results: lis
     )
     msgs = [
         {"role": "system", "content": _SYNTHESIS_SYSTEM},
-        {"role": "user",   "content": user_msg},
+        {"role": "user", "content": user_msg},
     ]
     try:
         answer = _call_sarvam(msgs, max_tokens=2500)
@@ -396,13 +441,17 @@ def _mode_label(graph_results: list[dict], web_results: list[dict]) -> str:
     has_graph = bool(graph_results) and not (
         len(graph_results) == 1 and "cannot answer" in str(graph_results[0]).lower()
     )
-    if has_graph and web_results:  return "hybrid"
-    if has_graph:                   return "graph"
-    if web_results:                 return "web"
+    if has_graph and web_results:
+        return "hybrid"
+    if has_graph:
+        return "graph"
+    if web_results:
+        return "web"
     return "llm"
 
 
 # ── Public entry point ────────────────────────────────────────────────────────
+
 
 def reasoning_query(question: str) -> dict:
     """
@@ -413,8 +462,8 @@ def reasoning_query(question: str) -> dict:
       answer, summary (compat), sources, mode, row_count, elapsed_ms, error
     """
     t0 = time.monotonic()
-    cypher: str | None     = None
-    graph_results: list    = []
+    cypher: str | None = None
+    graph_results: list = []
     graph_error: str | None = None
 
     # Step 1: Neo4j
@@ -450,19 +499,19 @@ def reasoning_query(question: str) -> dict:
         answer = _plain_summarise(graph_results, web_results)
 
     sources = [r["url"] for r in web_results if r.get("url")]
-    mode    = _mode_label(graph_results, web_results)
+    mode = _mode_label(graph_results, web_results)
 
     return {
-        "question":      question,
-        "cypher":        cypher,
+        "question": question,
+        "cypher": cypher,
         "graph_results": graph_results,
-        "results":       graph_results,   # legacy field — keep for compat
-        "web_results":   web_results,
-        "answer":        answer,
-        "summary":       answer[:300] if answer else None,
-        "sources":       sources,
-        "mode":          mode,
-        "row_count":     len(graph_results),
-        "elapsed_ms":    round((time.monotonic() - t0) * 1000),
-        "error":         graph_error,
+        "results": graph_results,  # legacy field — keep for compat
+        "web_results": web_results,
+        "answer": answer,
+        "summary": answer[:300] if answer else None,
+        "sources": sources,
+        "mode": mode,
+        "row_count": len(graph_results),
+        "elapsed_ms": round((time.monotonic() - t0) * 1000),
+        "error": graph_error,
     }

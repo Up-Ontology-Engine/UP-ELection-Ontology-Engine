@@ -2,17 +2,20 @@
 Full NLP pipeline orchestrator.
 Stages: detect → clean → translate → extract (LLM) → fallback (rules) → geo-resolve.
 """
+
 from __future__ import annotations
-import re
+
 import json
 import logging
+import re
 from typing import Optional
-from .schemas import PipelineResult, ExtractionResult, GeoResolution
-from .lang_detect import detect_language
+
 from .bhashini import normalize_text
 from .extractor import extract_from_normalized_text
-from .rule_classifier import rule_based_extract
 from .geo_resolver import GeoResolver
+from .lang_detect import detect_language
+from .rule_classifier import rule_based_extract
+from .schemas import ExtractionResult, GeoResolution, PipelineResult
 
 logger = logging.getLogger(__name__)
 
@@ -23,11 +26,16 @@ def _get_resolver() -> GeoResolver:
     global _geo_resolver
     if _geo_resolver is None:
         import os
+
         path = os.environ.get("ALIAS_INDEX_PATH", "data/seeds/gorakhpur_aliases.json")
         try:
             with open(path, encoding="utf-8") as f:
                 data = json.load(f)
-            aliases = data.get("geo_aliases", data) if isinstance(data, dict) and "geo_aliases" in data else data
+            aliases = (
+                data.get("geo_aliases", data)
+                if isinstance(data, dict) and "geo_aliases" in data
+                else data
+            )
             _geo_resolver = GeoResolver(aliases)
         except FileNotFoundError:
             logger.warning(f"Alias index not found at {path}. Geo resolution disabled.")
@@ -38,7 +46,7 @@ def _get_resolver() -> GeoResolver:
 def _clean_text(text: str) -> str:
     text = re.sub(r"https?://\S+", "", text)
     text = re.sub(r"@\w+", "", text)
-    text = re.sub(r"(.)\1{3,}", r"\1\1", text)   # "aaaa" → "aa"
+    text = re.sub(r"(.)\1{3,}", r"\1\1", text)  # "aaaa" → "aa"
     text = re.sub(r"\s+", " ", text)
     return text.strip()
 
@@ -58,7 +66,9 @@ def process_one(
     text_clean = _clean_text(text_raw)
     if not text_clean:
         return PipelineResult(
-            source_id=source_id, source_type=source_type, text_raw=text_raw,
+            source_id=source_id,
+            source_type=source_type,
+            text_raw=text_raw,
             language_detected=lang,
             extraction=ExtractionResult(statements=[], is_political=False),
             extraction_method="skipped",
@@ -76,9 +86,8 @@ def process_one(
     extraction_method = "llm"
 
     # Stage 4b — rule fallback
-    needs_fallback = (
-        not extraction.statements
-        or all(s.confidence < confidence_threshold for s in extraction.statements)
+    needs_fallback = not extraction.statements or all(
+        s.confidence < confidence_threshold for s in extraction.statements
     )
     if needs_fallback:
         rule_result = rule_based_extract(normalized)
@@ -113,6 +122,7 @@ def process_one(
         # Stage 6b — entity resolution: map raw text → canonical graph node
         try:
             from .entity_resolver import get_resolver
+
             resolver = get_resolver()
             _cid, canonical_name, _conf = resolver.resolve(
                 best.entity, best.entity_type.value if best.entity_type else "unknown"
@@ -144,7 +154,7 @@ def process_batch(rows: list[dict], batch_size: int = 50) -> list[PipelineResult
     results = []
     total = len(rows)
     for i in range(0, total, batch_size):
-        batch = rows[i: i + batch_size]
+        batch = rows[i : i + batch_size]
         for row in batch:
             try:
                 r = process_one(

@@ -1,4 +1,5 @@
 """Startup schema initialization script to execute CREATE CONSTRAINT and CREATE INDEX commands."""
+
 import logging
 import sys
 from pathlib import Path
@@ -65,25 +66,25 @@ INDEXES = [
 def initialize_schema():
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
     logger.info("Initializing Neo4j schema indexes and constraints...")
-    
+
     with get_neo4j_session() as session:
         applied_constraints = 0
         applied_indexes = 0
-        
+
         for stmt in CONSTRAINTS:
             try:
                 session.run(stmt)
                 applied_constraints += 1
             except Exception as e:
                 logger.warning("Constraint creation skipped/failed: %s | Statement: %s", e, stmt)
-                
+
         for stmt in INDEXES:
             try:
                 session.run(stmt)
                 applied_indexes += 1
             except Exception as e:
                 logger.warning("Index creation skipped/failed: %s | Statement: %s", e, stmt)
-                
+
         logger.info(
             "Schema initialization complete. Applied %d constraints, %d indexes.",
             applied_constraints,

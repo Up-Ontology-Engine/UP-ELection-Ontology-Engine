@@ -8,6 +8,7 @@ Usage:
 
 Falls back silently to no-cache if Redis is unavailable.
 """
+
 from __future__ import annotations
 
 import functools
@@ -25,6 +26,7 @@ _MISS = object()  # sentinel
 def _get_redis():
     """Lazy import to avoid circular deps."""
     from .db import get_redis_client
+
     return get_redis_client()
 
 
@@ -85,6 +87,7 @@ def cached(key_template: str, ttl: int = 60) -> Callable[[F], F]:
         @cached("cache:intel:{ac_id}", ttl=60)
         def get_ac_intel_summary(ac_id: str) -> dict: ...
     """
+
     def decorator(fn: F) -> F:
         @functools.wraps(fn)
         def wrapper(*args, **kwargs):

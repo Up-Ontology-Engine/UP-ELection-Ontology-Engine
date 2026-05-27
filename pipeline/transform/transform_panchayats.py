@@ -1,4 +1,4 @@
-﻿"""
+"""
 ETL: Panchayats → panchayat_master
 
 Source:
@@ -12,6 +12,7 @@ Connector key produced:
 
 Run: python -m etl.transform_panchayats
 """
+
 from __future__ import annotations
 
 import json
@@ -21,8 +22,8 @@ import re
 from pathlib import Path
 
 import sqlalchemy as sa
-from sqlalchemy import text
 from etl.constants import BLOCK_TO_AC
+from sqlalchemy import text
 
 logger = logging.getLogger(__name__)
 
@@ -32,6 +33,7 @@ DATA_DIR = Path(__file__).parents[1] / "data" / "data"
 def _make_panchayat_id(block: str, gp_name: str) -> str:
     def slug(s: str) -> str:
         return re.sub(r"[^A-Z0-9]+", "_", s.strip().upper()).strip("_")
+
     return f"{slug(block)}_{slug(gp_name)}"
 
 
@@ -55,27 +57,31 @@ def load_panchayat_master(engine: sa.Engine) -> int:
 
         # If this is the sample block, use the real GP name
         if block == sample.get("block"):
-            pradhan   = sample.get("pradhan", "")
-            members   = sample.get("elected_members", [])
-            gp_name   = sample.get("name", f"{block}_GP_001")
-            rows.append({
-                "panchayat_id": _make_panchayat_id(block, gp_name),
-                "gp_name":      gp_name,
-                "block_name":   block,
-                "ac_id":        ac_id,
-                "pradhan_name": pradhan,
-                "total_reps":   len(members),
-            })
+            pradhan = sample.get("pradhan", "")
+            members = sample.get("elected_members", [])
+            gp_name = sample.get("name", f"{block}_GP_001")
+            rows.append(
+                {
+                    "panchayat_id": _make_panchayat_id(block, gp_name),
+                    "gp_name": gp_name,
+                    "block_name": block,
+                    "ac_id": ac_id,
+                    "pradhan_name": pradhan,
+                    "total_reps": len(members),
+                }
+            )
         else:
             # Placeholder row per block (real GPs require full eGramSwaraj scrape)
-            rows.append({
-                "panchayat_id": _make_panchayat_id(block, "BLOCK_AGGREGATE"),
-                "gp_name":      f"{block} (aggregate — {gp_count} GPs)",
-                "block_name":   block,
-                "ac_id":        ac_id,
-                "pradhan_name": "",
-                "total_reps":   0,
-            })
+            rows.append(
+                {
+                    "panchayat_id": _make_panchayat_id(block, "BLOCK_AGGREGATE"),
+                    "gp_name": f"{block} (aggregate — {gp_count} GPs)",
+                    "block_name": block,
+                    "ac_id": ac_id,
+                    "pradhan_name": "",
+                    "total_reps": 0,
+                }
+            )
 
     with engine.connect() as conn:
         for row in rows:

@@ -10,7 +10,6 @@ from sqlalchemy import text
 from .cache import cached
 from .db import get_neo4j_session, get_pg_engine
 
-
 # Logical → physical AC-ID aliases (frontend uses logical, DBs use physical)
 _PG_AC_ALIASES: dict[str, str] = {
     "GKP_URBAN": "GKP_322",
@@ -1609,6 +1608,7 @@ def get_ac_intel_summary(ac_id: str) -> dict:
                     )
         except Exception as exc:
             import logging
+
             logging.getLogger(__name__).warning("Neo4j intel summary failed: %s", exc)
         return _issues, _videos, _candidates, _yt_count
 

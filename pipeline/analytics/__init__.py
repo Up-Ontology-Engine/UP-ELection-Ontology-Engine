@@ -7,4 +7,3 @@ New code should prefer the grouped namespaces:
 """
 
 __all__ = ["booth", "signals", "enrichment"]
-

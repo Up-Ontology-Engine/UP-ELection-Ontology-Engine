@@ -2,22 +2,22 @@
 Page 8 — Data Quality & Confidence
 Coverage, geo accuracy, entity resolution, source bias per booth and AC-wide.
 """
+
 from __future__ import annotations
+
+import pandas as pd
+import plotly.graph_objects as go
 import requests
 import streamlit as st
-import plotly.graph_objects as go
-import plotly.express as px
-import pandas as pd
 
-from dashboard.components.war_room import inject_css, section, info_bar, badge, PLOTLY_LAYOUT
-
+from dashboard.components.war_room import PLOTLY_LAYOUT, info_bar, inject_css, section
 
 QUALITY_COLORS = {
-    "HIGH":         "#2ecc71",
-    "MEDIUM":       "#f39c12",
-    "LOW":          "#e67e22",
+    "HIGH": "#2ecc71",
+    "MEDIUM": "#f39c12",
+    "LOW": "#e67e22",
     "INSUFFICIENT": "#e74c3c",
-    "UNKNOWN":      "#8b949e",
+    "UNKNOWN": "#8b949e",
 }
 
 
@@ -35,7 +35,9 @@ def render(ac_id: str, ac_name: str, booths: list[dict], api_url: str) -> None:
     inject_css()
 
     st.markdown("## ⚠️ Data Quality & Confidence")
-    info_bar(f"AC: {ac_name}  |  Coverage, source bias, geo accuracy, and entity resolution metrics")
+    info_bar(
+        f"AC: {ac_name}  |  Coverage, source bias, geo accuracy, and entity resolution metrics"
+    )
 
     quality_data = _fetch_quality(ac_id, api_url)
 
@@ -64,12 +66,12 @@ def render(ac_id: str, ac_name: str, booths: list[dict], api_url: str) -> None:
 
 
 def _render_ac_summary(summary: dict, booths: list[dict]) -> None:
-    total_booths    = len([b for b in booths if not b["booth_id"].endswith("_TOTAL")])
+    total_booths = len([b for b in booths if not b["booth_id"].endswith("_TOTAL")])
     booths_with_data = summary.get("booths_with_data", 0)
-    avg_quality     = summary.get("avg_quality_score", 0)
-    total_events    = summary.get("total_events", 0)
-    geo_accuracy    = summary.get("avg_geo_confidence", 0)
-    entity_match    = summary.get("entity_match_rate", 0)
+    avg_quality = summary.get("avg_quality_score", 0)
+    total_events = summary.get("total_events", 0)
+    geo_accuracy = summary.get("avg_geo_confidence", 0)
+    entity_match = summary.get("entity_match_rate", 0)
 
     ql = summary.get("overall_quality", "UNKNOWN")
     ql_color = QUALITY_COLORS.get(ql, "#8b949e")
@@ -99,26 +101,33 @@ def _render_source_breakdown(summary: dict) -> None:
 
     sources = {
         "YouTube": summary.get("avg_youtube_pct", 0),
-        "News":    summary.get("avg_news_pct", 0),
-        "Survey":  summary.get("avg_survey_pct", 0),
-        "Field":   summary.get("avg_field_pct", 0),
+        "News": summary.get("avg_news_pct", 0),
+        "Survey": summary.get("avg_survey_pct", 0),
+        "Field": summary.get("avg_field_pct", 0),
     }
 
     colors = ["#FF6B35", "#3498db", "#2ecc71", "#9b59b6"]
     fig = go.Figure()
     for (src, pct), col in zip(sources.items(), colors):
-        fig.add_trace(go.Bar(
-            name=src, x=[src], y=[pct],
-            marker_color=col,
-            text=[f"{pct:.0f}%"], textposition="auto",
-        ))
+        fig.add_trace(
+            go.Bar(
+                name=src,
+                x=[src],
+                y=[pct],
+                marker_color=col,
+                text=[f"{pct:.0f}%"],
+                textposition="auto",
+            )
+        )
     fig.update_layout(
-        **{**PLOTLY_LAYOUT,
-           "height": 240,
-           "yaxis": dict(range=[0, 105], ticksuffix="%"),
-           "showlegend": False,
-           "bargap": 0.3,
-           "margin": dict(l=0, r=0, t=20, b=20)},
+        **{
+            **PLOTLY_LAYOUT,
+            "height": 240,
+            "yaxis": dict(range=[0, 105], ticksuffix="%"),
+            "showlegend": False,
+            "bargap": 0.3,
+            "margin": dict(l=0, r=0, t=20, b=20),
+        },
     )
     st.plotly_chart(fig, use_container_width=True)
 
@@ -137,27 +146,29 @@ def _render_quality_gauge(summary: dict) -> None:
 
     score = summary.get("avg_quality_score", 0) * 100
 
-    fig = go.Figure(go.Indicator(
-        mode="gauge+number",
-        value=score,
-        number={"suffix": "%", "font": {"size": 28, "color": "#e6edf3"}},
-        gauge={
-            "axis": {"range": [0, 100], "tickcolor": "#8b949e"},
-            "bar":  {"color": _score_color(score / 100)},
-            "bgcolor": "#0f1729",
-            "bordercolor": "#1e2d4a",
-            "steps": [
-                {"range": [0,  40],  "color": "#e74c3c22"},
-                {"range": [40, 70],  "color": "#f39c1222"},
-                {"range": [70, 100], "color": "#2ecc7122"},
-            ],
-            "threshold": {
-                "line": {"color": "#FF6B35", "width": 3},
-                "thickness": 0.75,
-                "value": 70,
+    fig = go.Figure(
+        go.Indicator(
+            mode="gauge+number",
+            value=score,
+            number={"suffix": "%", "font": {"size": 28, "color": "#e6edf3"}},
+            gauge={
+                "axis": {"range": [0, 100], "tickcolor": "#8b949e"},
+                "bar": {"color": _score_color(score / 100)},
+                "bgcolor": "#0f1729",
+                "bordercolor": "#1e2d4a",
+                "steps": [
+                    {"range": [0, 40], "color": "#e74c3c22"},
+                    {"range": [40, 70], "color": "#f39c1222"},
+                    {"range": [70, 100], "color": "#2ecc7122"},
+                ],
+                "threshold": {
+                    "line": {"color": "#FF6B35", "width": 3},
+                    "thickness": 0.75,
+                    "value": 70,
+                },
             },
-        },
-    ))
+        )
+    )
     fig.update_layout(**{**PLOTLY_LAYOUT, "height": 220, "margin": dict(l=20, r=20, t=20, b=10)})
     st.plotly_chart(fig, use_container_width=True)
 
@@ -170,11 +181,22 @@ def _render_booth_quality_table(booth_quality: list[dict]) -> None:
         return
 
     df = pd.DataFrame(booth_quality)
-    display_cols = [c for c in [
-        "booth_id", "quality_label", "overall_quality_score", "total_events",
-        "unique_sources", "youtube_pct", "news_pct", "survey_pct",
-        "avg_geo_confidence", "entity_match_rate",
-    ] if c in df.columns]
+    display_cols = [
+        c
+        for c in [
+            "booth_id",
+            "quality_label",
+            "overall_quality_score",
+            "total_events",
+            "unique_sources",
+            "youtube_pct",
+            "news_pct",
+            "survey_pct",
+            "avg_geo_confidence",
+            "entity_match_rate",
+        ]
+        if c in df.columns
+    ]
 
     def color_quality(val):
         color = QUALITY_COLORS.get(str(val), "#8b949e")
@@ -191,27 +213,51 @@ def _render_bias_panel(summary: dict) -> None:
     section("Bias & Coverage Risks", "🔬")
 
     risks = []
-    yt_pct   = summary.get("avg_youtube_pct", 0)
-    geo_acc  = summary.get("avg_geo_confidence", 0)
+    yt_pct = summary.get("avg_youtube_pct", 0)
+    geo_acc = summary.get("avg_geo_confidence", 0)
     ent_match = summary.get("entity_match_rate", 0)
-    cov_pct  = summary.get("booth_coverage_pct", 0)
+    cov_pct = summary.get("booth_coverage_pct", 0)
 
     if yt_pct > 60:
-        risks.append(("⚠️", "YouTube Dominance",
-                      f"YouTube accounts for {yt_pct:.0f}% of data. "
-                      "Digital-native bias may under-represent rural/offline voters.", "high"))
+        risks.append(
+            (
+                "⚠️",
+                "YouTube Dominance",
+                f"YouTube accounts for {yt_pct:.0f}% of data. "
+                "Digital-native bias may under-represent rural/offline voters.",
+                "high",
+            )
+        )
     if geo_acc < 0.6:
-        risks.append(("📍", "Low Geo Resolution",
-                      f"Only {geo_acc:.0%} of events mapped to a booth. "
-                      "Many events remain at AC level — booth insights unreliable.", "high"))
+        risks.append(
+            (
+                "📍",
+                "Low Geo Resolution",
+                f"Only {geo_acc:.0%} of events mapped to a booth. "
+                "Many events remain at AC level — booth insights unreliable.",
+                "high",
+            )
+        )
     if ent_match < 0.5:
-        risks.append(("🏷️", "Entity Resolution Gap",
-                      f"{ent_match:.0%} entity match rate. "
-                      "Sentiment may be mis-attributed to wrong candidates/parties.", "medium"))
+        risks.append(
+            (
+                "🏷️",
+                "Entity Resolution Gap",
+                f"{ent_match:.0%} entity match rate. "
+                "Sentiment may be mis-attributed to wrong candidates/parties.",
+                "medium",
+            )
+        )
     if cov_pct < 0.4:
-        risks.append(("📊", "Sparse Booth Coverage",
-                      f"Only {cov_pct:.0%} of booths have digital data. "
-                      "AC-level conclusions extrapolate heavily.", "high"))
+        risks.append(
+            (
+                "📊",
+                "Sparse Booth Coverage",
+                f"Only {cov_pct:.0%} of booths have digital data. "
+                "AC-level conclusions extrapolate heavily.",
+                "high",
+            )
+        )
     if not risks:
         st.success("✅ No critical data quality risks detected.")
         return

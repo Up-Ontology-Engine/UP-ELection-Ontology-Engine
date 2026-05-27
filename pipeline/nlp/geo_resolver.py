@@ -1,16 +1,43 @@
 import re
-from thefuzz import process as fuzz
-from .schemas import GeoResolution
 from typing import Optional
+
+from thefuzz import process as fuzz
+
+from .schemas import GeoResolution
 
 DEFAULT_AC_ID = "GKP_322"
 
 OTHER_DISTRICTS = {
-    "lucknow", "kanpur", "allahabad", "prayagraj", "varanasi", "banaras", 
-    "patna", "delhi", "noida", "ghaziabad", "agra", "meerut", "bareilly", 
-    "aligarh", "moradabad", "jhansi", "muzaffarnagar", "faizabad", "ayodhya", 
-    "deoria", "basti", "kushinagar", "maharajganj", "siddharthnagar", 
-    "azamgarh", "jaunpur", "mirzapur", "ghazipur", "ballia", "mau"
+    "lucknow",
+    "kanpur",
+    "allahabad",
+    "prayagraj",
+    "varanasi",
+    "banaras",
+    "patna",
+    "delhi",
+    "noida",
+    "ghaziabad",
+    "agra",
+    "meerut",
+    "bareilly",
+    "aligarh",
+    "moradabad",
+    "jhansi",
+    "muzaffarnagar",
+    "faizabad",
+    "ayodhya",
+    "deoria",
+    "basti",
+    "kushinagar",
+    "maharajganj",
+    "siddharthnagar",
+    "azamgarh",
+    "jaunpur",
+    "mirzapur",
+    "ghazipur",
+    "ballia",
+    "mau",
 }
 
 
@@ -29,6 +56,7 @@ class GeoResolver:
       ...
     }
     """
+
     def __init__(self, alias_data: dict):
         self.aliases = alias_data
         self.keys = list(alias_data.keys())
@@ -41,21 +69,21 @@ class GeoResolver:
         text_lower = location_text.lower()
         is_foreign = False
         for dist in OTHER_DISTRICTS:
-            if re.search(r'\b' + re.escape(dist) + r'\b', text_lower):
+            if re.search(r"\b" + re.escape(dist) + r"\b", text_lower):
                 if "gorakhpur" not in text_lower and "gkp" not in text_lower:
                     is_foreign = True
                     break
 
         match, score = fuzz.extractOne(location_text, self.keys)
-        
+
         # Penalize score if it matches another district
         if is_foreign:
             # If the matched alias itself contains the district name, bypass the penalty.
             matched_lower = match.lower()
             triggered_dist = None
             for dist in OTHER_DISTRICTS:
-                if re.search(r'\b' + re.escape(dist) + r'\b', text_lower):
-                    if re.search(r'\b' + re.escape(dist) + r'\b', matched_lower):
+                if re.search(r"\b" + re.escape(dist) + r"\b", text_lower):
+                    if re.search(r"\b" + re.escape(dist) + r"\b", matched_lower):
                         triggered_dist = dist
                         break
             if not triggered_dist:
@@ -81,4 +109,3 @@ class GeoResolver:
             mapped_ac_id=mapped_ac,
             geo_confidence=geo_conf if score >= threshold else 0.3,
         )
-

@@ -1,5 +1,5 @@
 """Unit tests for NLP pipeline components."""
-import pytest
+
 from pipeline.nlp.lang_detect import detect_language
 from pipeline.nlp.rule_classifier import rule_based_extract
 from pipeline.nlp.schemas import ExtractionResult
@@ -57,8 +57,9 @@ def test_extraction_result_schema():
 
 
 def test_bhashini_circuit_breaker():
-    from pipeline.nlp.bhashini import _bhashini, _bhashini_breaker
     from unittest.mock import patch
+
+    from pipeline.nlp.bhashini import _bhashini, _bhashini_breaker
 
     # Reset circuit breaker state
     _bhashini_breaker.state = "CLOSED"
@@ -90,4 +91,3 @@ def test_bhashini_circuit_breaker():
     # Reset again to CLOSED for other tests
     _bhashini_breaker.state = "CLOSED"
     _bhashini_breaker.failure_count = 0
-

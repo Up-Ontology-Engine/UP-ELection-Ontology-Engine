@@ -3,29 +3,31 @@ Page: Geospatial Intelligence
 Plotly mapbox scatter showing booth-level political signals.
 Color = BJP/opposition lean; size = total voters.
 """
+
 from __future__ import annotations
+
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
 import requests
 import streamlit as st
-import plotly.graph_objects as go
-import plotly.express as px
-import pandas as pd
 
-from dashboard.components.war_room import inject_css, section, info_bar, PLOTLY_LAYOUT
+from dashboard.components.war_room import PLOTLY_LAYOUT, info_bar, inject_css, section
 
 ISSUE_COLORS = {
-    "water":        "#3498db",
-    "roads":        "#7f8c8d",
-    "electricity":  "#f39c12",
-    "jobs":         "#27ae60",
-    "health":       "#e74c3c",
-    "education":    "#9b59b6",
-    "corruption":   "#c0392b",
-    "law_order":    "#2c3e50",
-    "farmer":       "#16a085",
+    "water": "#3498db",
+    "roads": "#7f8c8d",
+    "electricity": "#f39c12",
+    "jobs": "#27ae60",
+    "health": "#e74c3c",
+    "education": "#9b59b6",
+    "corruption": "#c0392b",
+    "law_order": "#2c3e50",
+    "farmer": "#16a085",
     "women_safety": "#e91e63",
-    "price_rise":   "#ff5722",
-    "sugarcane":    "#8bc34a",
-    "other":        "#95a5a6",
+    "price_rise": "#ff5722",
+    "sugarcane": "#8bc34a",
+    "other": "#95a5a6",
 }
 
 
@@ -43,20 +45,22 @@ def _load_geo_data(ac_id: str, api_url: str) -> pd.DataFrame:
 
     df = pd.DataFrame(rows)
     df = df[df["lat"].notna() & df["lon"].notna()].copy()
-    df["bjp_pulse"]    = pd.to_numeric(df.get("bjp_pulse_score",   0.5), errors="coerce").fillna(0.5)
-    df["opp_pulse"]    = pd.to_numeric(df.get("opp_pulse_score",   0.5), errors="coerce").fillna(0.5)
-    df["digital_lean"] = pd.to_numeric(df.get("digital_lean",      0.0), errors="coerce").fillna(0.0)
-    df["total_voters"] = pd.to_numeric(df.get("total_voters",      500), errors="coerce").fillna(500)
-    df["top_issue"]    = df.get("top_issue", "other").fillna("other")
-    df["lean_label"]   = df.get("digital_lean_label", "Unknown").fillna("Unknown")
-    df["name"]         = df.get("name", df.get("booth_id", "")).fillna("")
+    df["bjp_pulse"] = pd.to_numeric(df.get("bjp_pulse_score", 0.5), errors="coerce").fillna(0.5)
+    df["opp_pulse"] = pd.to_numeric(df.get("opp_pulse_score", 0.5), errors="coerce").fillna(0.5)
+    df["digital_lean"] = pd.to_numeric(df.get("digital_lean", 0.0), errors="coerce").fillna(0.0)
+    df["total_voters"] = pd.to_numeric(df.get("total_voters", 500), errors="coerce").fillna(500)
+    df["top_issue"] = df.get("top_issue", "other").fillna("other")
+    df["lean_label"] = df.get("digital_lean_label", "Unknown").fillna("Unknown")
+    df["name"] = df.get("name", df.get("booth_id", "")).fillna("")
     return df
 
 
 def render(ac_id: str, ac_name: str, api_url: str) -> None:
     inject_css()
     st.markdown("## 🗺️ Geospatial Intelligence")
-    info_bar(f"AC: {ac_name}  |  Booth-level spatial signals — bubble size = voters, colour = political lean")
+    info_bar(
+        f"AC: {ac_name}  |  Booth-level spatial signals — bubble size = voters, colour = political lean"
+    )
 
     col_mode, col_refresh = st.columns([3, 1])
     with col_mode:
@@ -76,7 +80,9 @@ def render(ac_id: str, ac_name: str, api_url: str) -> None:
         st.warning("No geocoded booth data yet.")
         col_a, col_b = st.columns(2)
         with col_a:
-            st.info("Step 1: Apply migration 006\n```\npsql $POSTGRES_URL -f db/migrations/006_intelligence_tables.sql\n```")
+            st.info(
+                "Step 1: Apply migration 006\n```\npsql $POSTGRES_URL -f db/migrations/006_intelligence_tables.sql\n```"
+            )
         with col_b:
             st.info("Step 2: Run geocoder\n```\npython -m etl.geocode_booths\n```")
         _render_placeholder(ac_id)
@@ -102,29 +108,35 @@ def render(ac_id: str, ac_name: str, api_url: str) -> None:
 
     if map_mode == "Top Issue":
         for issue, grp in df.groupby("top_issue"):
-            fig.add_trace(go.Scattermapbox(
-                lat=grp["lat"], lon=grp["lon"],
-                mode="markers",
-                name=str(issue).replace("_", " ").title(),
-                marker=dict(size=grp["_sz"], color=ISSUE_COLORS.get(str(issue), "#888")),
-                text=grp.apply(
-                    lambda r: (
-                        f"<b>{r['name'] or r['booth_id']}</b><br>"
-                        f"Issue: {str(r['top_issue']).replace('_',' ').title()}<br>"
-                        f"Voters: {int(r['total_voters']):,}"
-                    ), axis=1,
-                ),
-                hoverinfo="text",
-            ))
+            fig.add_trace(
+                go.Scattermapbox(
+                    lat=grp["lat"],
+                    lon=grp["lon"],
+                    mode="markers",
+                    name=str(issue).replace("_", " ").title(),
+                    marker=dict(size=grp["_sz"], color=ISSUE_COLORS.get(str(issue), "#888")),
+                    text=grp.apply(
+                        lambda r: (
+                            f"<b>{r['name'] or r['booth_id']}</b><br>"
+                            f"Issue: {str(r['top_issue']).replace('_',' ').title()}<br>"
+                            f"Voters: {int(r['total_voters']):,}"
+                        ),
+                        axis=1,
+                    ),
+                    hoverinfo="text",
+                )
+            )
     else:
         if map_mode == "BJP Pulse":
-            color_col, colorscale, ctitle = "bjp_pulse",    "Oranges",  "BJP Pulse"
+            color_col, colorscale, ctitle = "bjp_pulse", "Oranges", "BJP Pulse"
         elif map_mode == "Opposition Pulse":
-            color_col, colorscale, ctitle = "opp_pulse",    "Reds",     "Opp Pulse"
+            color_col, colorscale, ctitle = "opp_pulse", "Reds", "Opp Pulse"
         else:
-            color_col, colorscale, ctitle = "digital_lean", [
-                [0.0, "#FF0000"], [0.5, "#666666"], [1.0, "#FF9933"]
-            ], "← Opp | BJP →"
+            color_col, colorscale, ctitle = (
+                "digital_lean",
+                [[0.0, "#FF0000"], [0.5, "#666666"], [1.0, "#FF9933"]],
+                "← Opp | BJP →",
+            )
 
         hover = df.apply(
             lambda r: (
@@ -132,24 +144,28 @@ def render(ac_id: str, ac_name: str, api_url: str) -> None:
                 f"Lean: {r['lean_label']}<br>"
                 f"Issue: {str(r['top_issue']).replace('_',' ').title()}<br>"
                 f"Voters: {int(r['total_voters']):,}"
-            ), axis=1,
-        )
-        fig.add_trace(go.Scattermapbox(
-            lat=df["lat"], lon=df["lon"],
-            mode="markers",
-            marker=dict(
-                size=df["_sz"],
-                color=df[color_col],
-                colorscale=colorscale,
-                colorbar=dict(title=ctitle, thickness=12, x=1.0, len=0.7),
-                showscale=True,
-                cmin=-1 if color_col == "digital_lean" else 0,
-                cmax=1,
             ),
-            text=hover,
-            hoverinfo="text",
-            name="Booths",
-        ))
+            axis=1,
+        )
+        fig.add_trace(
+            go.Scattermapbox(
+                lat=df["lat"],
+                lon=df["lon"],
+                mode="markers",
+                marker=dict(
+                    size=df["_sz"],
+                    color=df[color_col],
+                    colorscale=colorscale,
+                    colorbar=dict(title=ctitle, thickness=12, x=1.0, len=0.7),
+                    showscale=True,
+                    cmin=-1 if color_col == "digital_lean" else 0,
+                    cmax=1,
+                ),
+                text=hover,
+                hoverinfo="text",
+                name="Booths",
+            )
+        )
 
     fig.update_layout(
         mapbox=dict(
@@ -161,7 +177,9 @@ def render(ac_id: str, ac_name: str, api_url: str) -> None:
         margin=dict(l=0, r=0, t=0, b=0),
         paper_bgcolor="#0a0e1a",
         legend=dict(
-            orientation="v", x=0, y=1,
+            orientation="v",
+            x=0,
+            y=1,
             bgcolor="rgba(10,14,26,0.85)",
             font=dict(color="#e6edf3", size=10),
         ),
@@ -174,7 +192,10 @@ def render(ac_id: str, ac_name: str, api_url: str) -> None:
     ic.columns = ["Issue", "Booths"]
     ic["Issue"] = ic["Issue"].str.replace("_", " ").str.title()
     fig2 = px.bar(
-        ic, x="Issue", y="Booths", text="Booths",
+        ic,
+        x="Issue",
+        y="Booths",
+        text="Booths",
         color="Issue",
         color_discrete_sequence=list(ISSUE_COLORS.values()),
     )
@@ -191,16 +212,20 @@ def render(ac_id: str, ac_name: str, api_url: str) -> None:
 
 def _render_placeholder(ac_id: str) -> None:
     """Centred map placeholder when no geo data exists."""
-    fig = go.Figure(go.Scattermapbox(
-        lat=[26.760], lon=[83.375],
-        mode="markers+text",
-        marker=dict(size=20, color="#FF6B35"),
-        text=["Gorakhpur Urban AC"],
-        textposition="top right",
-    ))
+    fig = go.Figure(
+        go.Scattermapbox(
+            lat=[26.760],
+            lon=[83.375],
+            mode="markers+text",
+            marker=dict(size=20, color="#FF6B35"),
+            text=["Gorakhpur Urban AC"],
+            textposition="top right",
+        )
+    )
     fig.update_layout(
         mapbox=dict(style="carto-darkmatter", center=dict(lat=26.760, lon=83.375), zoom=12),
-        height=400, margin=dict(l=0, r=0, t=0, b=0),
+        height=400,
+        margin=dict(l=0, r=0, t=0, b=0),
         paper_bgcolor="#0a0e1a",
     )
     st.plotly_chart(fig, use_container_width=True)

@@ -8,6 +8,7 @@ Usage:
   python -m flows.graph.flow_load_graph --stage etl # ETL only (Postgres staging)
   python -m flows.graph.flow_load_graph --stage neo4j # Neo4j only (assumes Postgres populated)
 """
+
 from __future__ import annotations
 
 import argparse
@@ -74,9 +75,17 @@ def run_etl_stage(_engine: sa.Engine) -> None:
     from etl.seeders import run_seed_known_candidates as seed_cand_run
     from etl.transforms import (
         run_transform_candidates as cand_run,
+    )
+    from etl.transforms import (
         run_transform_geography as geo_run,
+    )
+    from etl.transforms import (
         run_transform_news as news_run,
+    )
+    from etl.transforms import (
         run_transform_panchayats as pan_run,
+    )
+    from etl.transforms import (
         run_transform_schemes as scheme_run,
     )
 
@@ -104,6 +113,7 @@ def run_etl_stage(_engine: sa.Engine) -> None:
     # Census is optional (requires gorakhpur_aliases.json populated)
     try:
         from etl.transforms import run_transform_census as census_run
+
         census_run()
         logger.info("[+] Census enrichment done")
     except Exception as e:
@@ -114,15 +124,16 @@ def run_neo4j_stage() -> None:
     """Stage 2: Load Postgres data → Neo4j graph."""
     logger.info("=== NEO4J STAGE: Postgres → Graph ===")
 
-    from backend.db import get_pg_engine, get_neo4j_session
-    from graph.loaders.load_structure          import load_all as load_structure
-    from graph.loaders.load_candidates         import load_all as load_candidates
-    from graph.loaders.load_results            import load_all as load_results
-    from graph.loaders.load_panchayats         import load_all as load_panchayats
-    from graph.loaders.load_mla_works          import load_all as load_mla_works
-    from graph.loaders.load_pulse_events       import load_pulse_events
+    from graph.loaders.load_candidates import load_all as load_candidates
+    from graph.loaders.load_mla_works import load_all as load_mla_works
+    from graph.loaders.load_panchayats import load_all as load_panchayats
+    from graph.loaders.load_pulse_events import load_pulse_events
     from graph.loaders.load_quality_narratives import load_all as load_intelligence
-    from graph.loaders.load_youtube            import load_all as load_youtube
+    from graph.loaders.load_results import load_all as load_results
+    from graph.loaders.load_structure import load_all as load_structure
+    from graph.loaders.load_youtube import load_all as load_youtube
+
+    from backend.db import get_neo4j_session, get_pg_engine
 
     pg = get_pg_engine()
 

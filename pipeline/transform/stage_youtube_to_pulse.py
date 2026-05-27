@@ -8,6 +8,7 @@ Run AFTER ingestion/ingest_youtube_videos.py has fetched comments:
     python -m etl.stage_youtube_to_pulse
     python -m flows.nlp.flow_sentiment
 """
+
 from __future__ import annotations
 
 import logging
@@ -21,7 +22,9 @@ logger = logging.getLogger(__name__)
 
 def stage_youtube_comments(engine: sa.Engine) -> int:
     with engine.connect() as conn:
-        rows = conn.execute(text("""
+        rows = (
+            conn.execute(
+                text("""
             SELECT
                 yc.comment_id           AS source_id,
                 yc.text_raw,
@@ -35,7 +38,11 @@ def stage_youtube_comments(engine: sa.Engine) -> int:
                     AND per.source_type = 'youtube'
               )
             ORDER BY yc.published_at ASC NULLS LAST
-        """)).mappings().fetchall()
+        """)
+            )
+            .mappings()
+            .fetchall()
+        )
 
         if not rows:
             logger.info("No new YouTube comments to stage.")
@@ -43,17 +50,20 @@ def stage_youtube_comments(engine: sa.Engine) -> int:
 
         inserted = 0
         for row in rows:
-            conn.execute(text("""
+            conn.execute(
+                text("""
                 INSERT INTO pulse_events_raw
                     (source_type, source_id, text_raw, video_id)
                 VALUES
                     ('youtube', :source_id, :text_raw, :video_id)
                 ON CONFLICT DO NOTHING
-            """), {
-                "source_id": row["source_id"],
-                "text_raw":  row["text_raw"],
-                "video_id":  row["video_id"],
-            })
+            """),
+                {
+                    "source_id": row["source_id"],
+                    "text_raw": row["text_raw"],
+                    "video_id": row["video_id"],
+                },
+            )
             inserted += 1
 
         conn.commit()

@@ -20,6 +20,7 @@ SQL filter (mapped_ac_id = 'GKP_322') via a thin adapter.
 Usage:
     python -m analytics.ac_level_analytics [--window 365]
 """
+
 from __future__ import annotations
 
 import argparse
@@ -36,8 +37,8 @@ load_dotenv()
 
 logger = logging.getLogger(__name__)
 
-AC_ID     = "GKP_322"
-AC_PSEUDO_BOOTH_ID = "GKP_322"   # stored as booth_id in analytics tables
+AC_ID = "GKP_322"
+AC_PSEUDO_BOOTH_ID = "GKP_322"  # stored as booth_id in analytics tables
 
 
 def _compute_ac_quality(engine: sa.Engine, window_days: int, computed_at: datetime) -> dict:
@@ -47,10 +48,12 @@ def _compute_ac_quality(engine: sa.Engine, window_days: int, computed_at: dateti
     """
     import math
     from datetime import timedelta
+
     cutoff = computed_at - timedelta(days=window_days)
 
     with engine.connect() as conn:
-        rows = conn.execute(text("""
+        rows = conn.execute(
+            text("""
             SELECT
                 source_type,
                 geo_confidence,
@@ -63,7 +66,9 @@ def _compute_ac_quality(engine: sa.Engine, window_days: int, computed_at: dateti
             WHERE mapped_ac_id = :ac
               AND created_at >= :cutoff
               AND created_at <= :now
-        """), {"ac": AC_ID, "cutoff": cutoff, "now": computed_at}).fetchall()
+        """),
+            {"ac": AC_ID, "cutoff": cutoff, "now": computed_at},
+        ).fetchall()
 
     if not rows:
         return {
@@ -99,24 +104,21 @@ def _compute_ac_quality(engine: sa.Engine, window_days: int, computed_at: dateti
         return round(source_counts.get(src, 0) / total * 100, 1)
 
     shares = [c / total for c in source_counts.values()]
-    hhi = sum(s ** 2 for s in shares)
+    hhi = sum(s**2 for s in shares)
     source_diversity_score = round(1 - hhi, 3)
 
     booth_mapped = sum(1 for r in rows if r.mapped_booth_id)
-    geo_confs  = [r.geo_confidence for r in rows if r.geo_confidence is not None]
-    nlp_confs  = [r.nlp_confidence for r in rows if r.nlp_confidence is not None]
-    llm_count  = sum(1 for r in rows if r.extraction_method == "llm")
-    valid_ent  = sum(1 for r in rows if r.entity and r.entity.strip())
+    geo_confs = [r.geo_confidence for r in rows if r.geo_confidence is not None]
+    nlp_confs = [r.nlp_confidence for r in rows if r.nlp_confidence is not None]
+    llm_count = sum(1 for r in rows if r.extraction_method == "llm")
+    valid_ent = sum(1 for r in rows if r.entity and r.entity.strip())
 
     avg_geo = round(sum(geo_confs) / len(geo_confs), 3) if geo_confs else 0.0
     avg_nlp = round(sum(nlp_confs) / len(nlp_confs), 3) if nlp_confs else 0.0
 
-    volume_score    = min(1.0, math.log1p(total) / math.log1p(200))
+    volume_score = min(1.0, math.log1p(total) / math.log1p(200))
     overall = round(
-        0.25 * volume_score
-        + 0.25 * avg_geo
-        + 0.30 * avg_nlp
-        + 0.20 * source_diversity_score,
+        0.25 * volume_score + 0.25 * avg_geo + 0.30 * avg_nlp + 0.20 * source_diversity_score,
         3,
     )
 
@@ -170,10 +172,13 @@ def _compute_ac_booth_metrics(engine: sa.Engine, window_days: int, computed_at: 
     Uses weighted polarity across all AC-level pulse_events.
     """
     from datetime import timedelta
+
     cutoff = computed_at - timedelta(days=window_days)
 
     with engine.connect() as conn:
-        r = conn.execute(text("""
+        r = (
+            conn.execute(
+                text("""
             SELECT
                 SUM(CASE WHEN entity ILIKE 'BJP%' THEN final_polarity * final_confidence * source_weight END) /
                     NULLIF(SUM(CASE WHEN entity ILIKE 'BJP%' THEN final_confidence * source_weight END), 0)
@@ -190,10 +195,16 @@ def _compute_ac_booth_metrics(engine: sa.Engine, window_days: int, computed_at: 
               AND created_at >= :cutoff
               AND created_at <= :now
               AND final_polarity IS NOT NULL
-        """), {"ac": AC_ID, "cutoff": cutoff, "now": computed_at}).mappings().fetchone()
+        """),
+                {"ac": AC_ID, "cutoff": cutoff, "now": computed_at},
+            )
+            .mappings()
+            .fetchone()
+        )
 
         # Issue breakdown
-        issues = conn.execute(text("""
+        issues = conn.execute(
+            text("""
             SELECT final_issue AS issue, COUNT(*) AS n
             FROM pulse_events
             WHERE mapped_ac_id = :ac
@@ -201,13 +212,15 @@ def _compute_ac_booth_metrics(engine: sa.Engine, window_days: int, computed_at: 
               AND final_issue IS NOT NULL
             GROUP BY final_issue
             ORDER BY n DESC
-        """), {"ac": AC_ID, "cutoff": cutoff}).fetchall()
+        """),
+            {"ac": AC_ID, "cutoff": cutoff},
+        ).fetchall()
 
-    bjp_pulse  = round(float(r["bjp_pulse"] or 0), 3)
-    opp_pulse  = round(float(r["opp_pulse"] or 0), 3)
-    lean       = round(bjp_pulse - opp_pulse, 3)
-    events     = int(r["event_count"] or 0)
-    conf       = round(float(r["avg_conf"] or 0), 3)
+    bjp_pulse = round(float(r["bjp_pulse"] or 0), 3)
+    opp_pulse = round(float(r["opp_pulse"] or 0), 3)
+    lean = round(bjp_pulse - opp_pulse, 3)
+    events = int(r["event_count"] or 0)
+    conf = round(float(r["avg_conf"] or 0), 3)
 
     if lean > 0.15:
         lean_label = "Lean BJP"
@@ -220,13 +233,16 @@ def _compute_ac_booth_metrics(engine: sa.Engine, window_days: int, computed_at: 
     top_issue = max(issue_counts, key=issue_counts.__getitem__) if issue_counts else None
 
     conf_label = (
-        "HIGH" if conf >= 0.75 and events >= 50
-        else "MEDIUM" if conf >= 0.55 and events >= 20
+        "HIGH"
+        if conf >= 0.75 and events >= 50
+        else "MEDIUM"
+        if conf >= 0.55 and events >= 20
         else "LOW"
     )
 
     with engine.begin() as conn:
-        conn.execute(text("""
+        conn.execute(
+            text("""
             INSERT INTO booth_metrics (
                 booth_id, window_start, window_end,
                 bjp_pulse_score, opp_pulse_score, digital_lean, digital_lean_label,
@@ -248,24 +264,29 @@ def _compute_ac_booth_metrics(engine: sa.Engine, window_days: int, computed_at: 
                 event_count       = EXCLUDED.event_count,
                 data_confidence   = EXCLUDED.data_confidence,
                 confidence_label  = EXCLUDED.confidence_label
-        """), {
-            "bid":        AC_PSEUDO_BOOTH_ID,
-            "ws":         computed_at,
-            "we":         computed_at,
-            "bjp":        bjp_pulse,
-            "opp":        opp_pulse,
-            "lean":       lean,
-            "lean_label": lean_label,
-            "top_issue":  top_issue,
-            "issues":     json.dumps(issue_counts),
-            "events":     events,
-            "conf":       conf,
-            "conf_label": conf_label,
-        })
+        """),
+            {
+                "bid": AC_PSEUDO_BOOTH_ID,
+                "ws": computed_at,
+                "we": computed_at,
+                "bjp": bjp_pulse,
+                "opp": opp_pulse,
+                "lean": lean,
+                "lean_label": lean_label,
+                "top_issue": top_issue,
+                "issues": json.dumps(issue_counts),
+                "events": events,
+                "conf": conf,
+                "conf_label": conf_label,
+            },
+        )
 
     logger.info(
         "AC-level booth_metrics: BJP=%.3f OPP=%.3f lean=%s events=%d",
-        bjp_pulse, opp_pulse, lean_label, events,
+        bjp_pulse,
+        opp_pulse,
+        lean_label,
+        events,
     )
 
 
@@ -274,14 +295,14 @@ def run(engine: sa.Engine, window_days: int = 365) -> dict:
     Run all AC-level analytics for GKP_322.
     Returns a summary dict.
     """
+    from analytics.contradiction_detector import (
+        update_booth_metrics_consistency,
+        upsert_contradiction_rows,
+    )
     from analytics.data_quality import upsert_quality_row
     from analytics.narrative_detector import (
-        detect_narratives_for_booth, upsert_narrative_rows,
         update_booth_metrics_narrative,
-    )
-    from analytics.contradiction_detector import (
-        detect_contradictions_for_booth, upsert_contradiction_rows,
-        update_booth_metrics_consistency,
+        upsert_narrative_rows,
     )
 
     computed_at = datetime.now(timezone.utc)
@@ -291,7 +312,7 @@ def run(engine: sa.Engine, window_days: int = 365) -> dict:
     quality = _compute_ac_quality(engine, window_days, computed_at)
     upsert_quality_row(engine, quality)
     results["quality_label"] = quality["quality_label"]
-    results["total_events"]  = quality["total_events"]
+    results["total_events"] = quality["total_events"]
     logger.info("AC quality: %s (%d events)", quality["quality_label"], quality["total_events"])
 
     # 2. Booth metrics at AC level (uses pulse_events.mapped_ac_id)
@@ -322,15 +343,21 @@ def _detect_ac_narratives(engine: sa.Engine, window_days: int, computed_at: date
     (all events, not just booth-mapped).
     """
     from datetime import timedelta
+
     from analytics.narrative_detector import (
-        NARRATIVE_ISSUE_MAP, RULING_PARTY, MIN_STRENGTH,
-        _weighted_sentiment, _build_narrative,
+        MIN_STRENGTH,
+        NARRATIVE_ISSUE_MAP,
+        RULING_PARTY,
+        _build_narrative,
+        _weighted_sentiment,
     )
 
     cutoff = computed_at - timedelta(days=window_days)
 
     with engine.connect() as conn:
-        rows = conn.execute(text("""
+        rows = (
+            conn.execute(
+                text("""
             SELECT
                 final_issue    AS issue,
                 entity,
@@ -343,7 +370,12 @@ def _detect_ac_narratives(engine: sa.Engine, window_days: int, computed_at: date
               AND created_at >= :cutoff
               AND created_at <= :now
               AND final_polarity IS NOT NULL
-        """), {"ac": AC_ID, "cutoff": cutoff, "now": computed_at}).mappings().fetchall()
+        """),
+                {"ac": AC_ID, "cutoff": cutoff, "now": computed_at},
+            )
+            .mappings()
+            .fetchall()
+        )
 
     if not rows:
         return []
@@ -378,29 +410,39 @@ def _detect_ac_narratives(engine: sa.Engine, window_days: int, computed_at: date
 
         if ok:
             strength = round(pol if pol > 0 else count / max(len(rows), 1), 3)
-            narratives.append(_build_narrative(
-                bid, narrative_type, computed_at, window_days,
-                strength=strength,
-                description=f"[AC-level] {narrative_type.replace('_', ' ').title()} — {count} events.",
-                top_issues=[r["issue"] for r in nr if r.get("issue")],
-                top_entities=[r["entity"] for r in nr if r.get("entity")],
-                evidence_count=count,
-                confidence=min(1.0, count / 20),
-            ))
+            narratives.append(
+                _build_narrative(
+                    bid,
+                    narrative_type,
+                    computed_at,
+                    window_days,
+                    strength=strength,
+                    description=f"[AC-level] {narrative_type.replace('_', ' ').title()} — {count} events.",
+                    top_issues=[r["issue"] for r in nr if r.get("issue")],
+                    top_entities=[r["entity"] for r in nr if r.get("entity")],
+                    evidence_count=count,
+                    confidence=min(1.0, count / 20),
+                )
+            )
 
     # Anti-incumbency
     ruling_rows = [r for r in rows if (r.get("entity") or "").upper() == RULING_PARTY]
     anti_pol, anti_count = _weighted_sentiment(ruling_rows)
     if anti_count >= 3 and anti_pol <= -0.2:
-        narratives.append(_build_narrative(
-            bid, "anti_incumbency", computed_at, window_days,
-            strength=round(abs(anti_pol), 3),
-            description=f"[AC-level] Anti-incumbency — {RULING_PARTY} negative across {anti_count} events.",
-            top_issues=top_items("issue"),
-            top_entities=[RULING_PARTY],
-            evidence_count=anti_count,
-            confidence=min(1.0, anti_count / 20),
-        ))
+        narratives.append(
+            _build_narrative(
+                bid,
+                "anti_incumbency",
+                computed_at,
+                window_days,
+                strength=round(abs(anti_pol), 3),
+                description=f"[AC-level] Anti-incumbency — {RULING_PARTY} negative across {anti_count} events.",
+                top_issues=top_items("issue"),
+                top_entities=[RULING_PARTY],
+                evidence_count=anti_count,
+                confidence=min(1.0, anti_count / 20),
+            )
+        )
 
     return sorted(
         [n for n in narratives if n["strength"] >= MIN_STRENGTH],
@@ -408,20 +450,27 @@ def _detect_ac_narratives(engine: sa.Engine, window_days: int, computed_at: date
     )
 
 
-def _detect_ac_contradictions(engine: sa.Engine, window_days: int, computed_at: datetime) -> list[dict]:
+def _detect_ac_contradictions(
+    engine: sa.Engine, window_days: int, computed_at: datetime
+) -> list[dict]:
     """
     Cross-source contradiction detection scoped to mapped_ac_id = 'GKP_322'.
     """
     import itertools
     from datetime import timedelta
+
     from analytics.contradiction_detector import (
-        MIXED_SIGNALS_DELTA, SWING_INDICATOR_DELTA, MIN_EVENTS_PER_SOURCE,
+        MIN_EVENTS_PER_SOURCE,
+        MIXED_SIGNALS_DELTA,
+        SWING_INDICATOR_DELTA,
     )
 
     cutoff = computed_at - timedelta(days=window_days)
 
     with engine.connect() as conn:
-        rows = conn.execute(text("""
+        rows = (
+            conn.execute(
+                text("""
             SELECT
                 entity,
                 final_issue         AS issue,
@@ -437,12 +486,25 @@ def _detect_ac_contradictions(engine: sa.Engine, window_days: int, computed_at: 
               AND final_polarity IS NOT NULL
             GROUP BY entity, final_issue, source_type
             HAVING COUNT(*) >= :min_events
-        """), {"ac": AC_ID, "cutoff": cutoff, "now": computed_at, "min_events": MIN_EVENTS_PER_SOURCE}).mappings().fetchall()
+        """),
+                {
+                    "ac": AC_ID,
+                    "cutoff": cutoff,
+                    "now": computed_at,
+                    "min_events": MIN_EVENTS_PER_SOURCE,
+                },
+            )
+            .mappings()
+            .fetchall()
+        )
 
     grouped: dict[tuple, dict[str, tuple]] = {}
     for r in rows:
         key = (r["entity"], r["issue"])
-        grouped.setdefault(key, {})[r["source_type"]] = (float(r["avg_polarity"]), int(r["event_count"]))
+        grouped.setdefault(key, {})[r["source_type"]] = (
+            float(r["avg_polarity"]),
+            int(r["event_count"]),
+        )
 
     flags: list[dict] = []
     for (entity, issue), source_stats in grouped.items():
@@ -462,22 +524,24 @@ def _detect_ac_contradictions(engine: sa.Engine, window_days: int, computed_at: 
             else:
                 flag_label = "MINOR_DIVERGENCE"
 
-            flags.append({
-                "booth_id":          AC_PSEUDO_BOOTH_ID,
-                "entity":            entity,
-                "issue":             issue,
-                "computed_at":       computed_at,
-                "window_days":       window_days,
-                "source_a":          src_a,
-                "source_b":          src_b,
-                "polarity_a":        round(pol_a, 3),
-                "polarity_b":        round(pol_b, 3),
-                "delta":             round(delta, 3),
-                "events_a":          cnt_a,
-                "events_b":          cnt_b,
-                "consistency_score": round(1 - (delta / 2), 3),
-                "flag_label":        flag_label,
-            })
+            flags.append(
+                {
+                    "booth_id": AC_PSEUDO_BOOTH_ID,
+                    "entity": entity,
+                    "issue": issue,
+                    "computed_at": computed_at,
+                    "window_days": window_days,
+                    "source_a": src_a,
+                    "source_b": src_b,
+                    "polarity_a": round(pol_a, 3),
+                    "polarity_b": round(pol_b, 3),
+                    "delta": round(delta, 3),
+                    "events_a": cnt_a,
+                    "events_b": cnt_b,
+                    "consistency_score": round(1 - (delta / 2), 3),
+                    "flag_label": flag_label,
+                }
+            )
 
     return sorted(flags, key=lambda x: -x["delta"])
 

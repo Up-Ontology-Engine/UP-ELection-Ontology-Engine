@@ -1,18 +1,33 @@
 from __future__ import annotations
-import os
+
 import json
-from typing import Optional, Literal
+import os
+from typing import Optional
+
 from fastapi import APIRouter, HTTPException, Query
-from pydantic import BaseModel, Field
-from ..queries import (
-    _rac, get_booths_for_ac, get_booth_summary, get_booth_history,
-    get_booth_pulse, get_booth_issues, get_booth_comments,
-    get_booth_source_breakdown, get_booth_quality, get_booth_narratives,
-    get_booth_contradictions, get_scheme_gap, get_booth_segments,
-    get_booth_conversion, get_conversion_targets, mark_beneficiary_contacted,
-    bulk_import_beneficiaries, seed_demo_beneficiaries
-)
+from pydantic import BaseModel
+
 from ..cache import clear_api_cache
+from ..queries import (
+    _rac,
+    bulk_import_beneficiaries,
+    get_booth_comments,
+    get_booth_contradictions,
+    get_booth_conversion,
+    get_booth_history,
+    get_booth_issues,
+    get_booth_narratives,
+    get_booth_pulse,
+    get_booth_quality,
+    get_booth_segments,
+    get_booth_source_breakdown,
+    get_booth_summary,
+    get_booths_for_ac,
+    get_conversion_targets,
+    get_scheme_gap,
+    mark_beneficiary_contacted,
+    seed_demo_beneficiaries,
+)
 from ..validation import InputValidationRoute
 
 router = APIRouter(route_class=InputValidationRoute)
@@ -29,7 +44,10 @@ class ImportBeneficiariesRequest(BaseModel):
 
 # ── Helper functions for insight/recommendation text ─────────────────────────
 
-def _generate_insight(_meta: dict, bjp_wins: int, bjp_shares: list, issues: list, _momentum: dict) -> str:
+
+def _generate_insight(
+    _meta: dict, bjp_wins: int, bjp_shares: list, issues: list, _momentum: dict
+) -> str:
     parts = []
     if bjp_wins >= 2:
         parts.append(f"Strong BJP base ({bjp_wins} consecutive wins)")
@@ -52,6 +70,7 @@ def _generate_recommendation(issues: list, _momentum: dict) -> str:
 def list_booths(ac_id: str):
     """All booths for an AC with latest pulse scores. Powers the booth selector."""
     import json as _json
+
     from ..db import get_redis_client
 
     cache_key = f"cache:list_booths:{ac_id}"
@@ -81,11 +100,11 @@ def booth_summary(booth_id: str, days: int = Query(7, ge=1, le=365)):
     if not meta:
         raise HTTPException(404, f"Booth '{booth_id}' not found.")
 
-    history         = get_booth_history(booth_id)
-    pulse           = get_booth_pulse(booth_id, days=days)
-    issues          = get_booth_issues(booth_id, limit=12)
-    comments        = get_booth_comments(booth_id, limit=5)
-    scheme_gaps     = get_scheme_gap(booth_id)
+    history = get_booth_history(booth_id)
+    pulse = get_booth_pulse(booth_id, days=days)
+    issues = get_booth_issues(booth_id, limit=12)
+    comments = get_booth_comments(booth_id, limit=5)
+    scheme_gaps = get_scheme_gap(booth_id)
     source_breakdown = get_booth_source_breakdown(booth_id)
 
     # Derive BJP historical summary
@@ -99,8 +118,8 @@ def booth_summary(booth_id: str, days: int = Query(7, ge=1, le=365)):
     top_momentum = sorted(momentum.items(), key=lambda x: abs(x[1]), reverse=True)[:3]
 
     # Intelligence layer
-    quality       = get_booth_quality(booth_id)
-    narratives    = get_booth_narratives(booth_id)
+    quality = get_booth_quality(booth_id)
+    narratives = get_booth_narratives(booth_id)
     contradictions = get_booth_contradictions(booth_id)
 
     # Confidence
@@ -122,7 +141,11 @@ def booth_summary(booth_id: str, days: int = Query(7, ge=1, le=365)):
         "historical": {
             "bjp_won_count": bjp_wins,
             "bjp_vote_shares": bjp_shares,
-            "trend": "declining" if len(bjp_shares) >= 2 and bjp_shares[-1] < bjp_shares[-2] else "stable",
+            "trend": (
+                "declining"
+                if len(bjp_shares) >= 2 and bjp_shares[-1] < bjp_shares[-2]
+                else "stable"
+            ),
             "full_history": history,
         },
         # Digital pulse
@@ -150,17 +173,16 @@ def booth_summary(booth_id: str, days: int = Query(7, ge=1, le=365)):
         # Scheme gap
         "scheme_analysis": scheme_gaps,
         # Intelligence layer
-        "narratives":      narratives,
-        "contradictions":  contradictions,
+        "narratives": narratives,
+        "contradictions": contradictions,
         # Insight + recommendation
         "key_insight": insight,
         "recommendation": recommendation,
         # Honest attribution metadata — UI should gate on this
-        "attribution_level": (
-            "booth" if (meta.get("event_count") or 0) > 0 else "none"
-        ),
+        "attribution_level": ("booth" if (meta.get("event_count") or 0) > 0 else "none"),
         "data_warning": (
-            None if (meta.get("event_count") or 0) > 0
+            None
+            if (meta.get("event_count") or 0) > 0
             else "Insufficient booth-linked digital evidence — no pulse events geo-attributed to this booth"
         ),
     }
@@ -188,7 +210,7 @@ def booth_contradictions(booth_id: str):
     contradictions = get_booth_contradictions(booth_id)
     has_mixed = any(c["flag_label"] == "MIXED_SIGNALS" for c in contradictions)
     return {
-        "booth_id":       booth_id,
+        "booth_id": booth_id,
         "has_mixed_signals": has_mixed,
         "contradictions": contradictions,
     }

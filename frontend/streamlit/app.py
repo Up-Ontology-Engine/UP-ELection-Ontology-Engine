@@ -2,7 +2,9 @@
 Gorakhpur Political Intelligence OS
 Entry point: streamlit run frontend/streamlit/app.py
 """
+
 from __future__ import annotations
+
 import os
 import sys
 
@@ -28,15 +30,15 @@ inject_css()
 # ── Constants ─────────────────────────────────────────────────────────────────
 
 AC_OPTIONS = {
-    "Gorakhpur Urban (GKP_322)":  "GKP_322",
-    "Gorakhpur Rural (GKP_323)":  "GKP_323",
-    "Caimpiyarganj (GKP_320)":    "GKP_320",
-    "Pipraich (GKP_321)":         "GKP_321",
-    "Sahajanwa (GKP_324)":        "GKP_324",
-    "Khajani (GKP_325)":          "GKP_325",
-    "Chauri-Chaura (GKP_326)":    "GKP_326",
-    "Bansgaon (GKP_327)":         "GKP_327",
-    "Chillupar (GKP_328)":        "GKP_328",
+    "Gorakhpur Urban (GKP_322)": "GKP_322",
+    "Gorakhpur Rural (GKP_323)": "GKP_323",
+    "Caimpiyarganj (GKP_320)": "GKP_320",
+    "Pipraich (GKP_321)": "GKP_321",
+    "Sahajanwa (GKP_324)": "GKP_324",
+    "Khajani (GKP_325)": "GKP_325",
+    "Chauri-Chaura (GKP_326)": "GKP_326",
+    "Bansgaon (GKP_327)": "GKP_327",
+    "Chillupar (GKP_328)": "GKP_328",
 }
 
 PAGES = [
@@ -92,6 +94,7 @@ with st.sidebar:
 # ── Load booths (needed by several pages) ─────────────────────────────────────
 import requests as _req
 
+
 @st.cache_data(ttl=300, show_spinner=False)
 def _load_booths(ac_id: str) -> list[dict]:
     try:
@@ -100,6 +103,7 @@ def _load_booths(ac_id: str) -> list[dict]:
         return r.json().get("booths", [])
     except Exception:
         return []
+
 
 booths = _load_booths(AC_ID)
 
@@ -113,7 +117,8 @@ if page_name in BOOTH_PAGES:
     else:
         booth_opts = {
             f"Booth {b['booth_number']} — {(b.get('name') or '')[:35]}": b["booth_id"]
-            for b in booths if b.get("booth_number")
+            for b in booths
+            if b.get("booth_number")
         }
         with st.sidebar:
             chosen_label = st.selectbox("Booth", list(booth_opts.keys()))
@@ -122,10 +127,12 @@ if page_name in BOOTH_PAGES:
 # ── Route ─────────────────────────────────────────────────────────────────────
 if page_name == "Constituency Overview":
     from dashboard.pages.ac_overview import render
+
     render(AC_ID, AC_NAME, booths, API_URL)
 
 elif page_name == "Booth Intelligence":
     from dashboard.pages.booth_summary import render
+
     if selected_booth_id:
         render(selected_booth_id, window_days, API_URL)
     else:
@@ -133,36 +140,45 @@ elif page_name == "Booth Intelligence":
 
 elif page_name == "Candidate Intelligence":
     from dashboard.pages.candidate_panel import render
+
     render(AC_ID, "", API_URL)
 
 elif page_name == "Scheme Intelligence":
     from dashboard.pages.scheme_intelligence import render
+
     render(AC_ID, AC_NAME, API_URL)
 
 elif page_name == "Narrative & Sentiment":
     from dashboard.pages.narrative_sentiment import render
+
     render(AC_ID, AC_NAME, window_days, API_URL)
 
 elif page_name == "Event Timeline":
     from dashboard.pages.event_timeline import render
+
     render(AC_ID, AC_NAME, API_URL)
 
 elif page_name == "Knowledge Graph":
     from dashboard.pages.knowledge_graph import render
+
     render(AC_ID, AC_NAME, API_URL)
 
 elif page_name == "Geospatial Intelligence":
     from dashboard.pages.geo_intelligence import render
+
     render(AC_ID, AC_NAME, API_URL)
 
 elif page_name == "Intelligence Query":
     from dashboard.pages.intelligence_query import render
+
     render(AC_ID, AC_NAME, API_URL)
 
 elif page_name == "Data Quality":
     from dashboard.pages.data_quality import render
+
     render(AC_ID, AC_NAME, booths, API_URL)
 
 elif page_name == "Recommendations":
     from dashboard.pages.recommendations import render
+
     render(AC_ID, AC_NAME, booths, API_URL)

@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
-import sys, io
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+import io
+import sys
+
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
 """
 BJP Sentiment Filter
@@ -13,8 +15,11 @@ Usage:
   python bjp_filter.py results/myfile.json      # specific file
 """
 
-import os, json, glob
+import glob
+import json
+import os
 from datetime import datetime
+
 from colorama import Fore, Style, init
 
 init(autoreset=True)
@@ -25,63 +30,166 @@ init(autoreset=True)
 
 PRO_BJP_KEYWORDS = [
     # Development / Governance praise
-    "development", "vikas", "inaugurates", "inaugurated", "launches", "launched",
-    "growth", "progress", "infrastructure", "smart city", "investment",
-    "improved", "achievement", "success", "felicitated", "awarded",
-    "double engine", "double-engine", "sabka saath", "amrit kaal",
+    "development",
+    "vikas",
+    "inaugurates",
+    "inaugurated",
+    "launches",
+    "launched",
+    "growth",
+    "progress",
+    "infrastructure",
+    "smart city",
+    "investment",
+    "improved",
+    "achievement",
+    "success",
+    "felicitated",
+    "awarded",
+    "double engine",
+    "double-engine",
+    "sabka saath",
+    "amrit kaal",
     # BJP leaders praised
-    "yogi praised", "pm modi inaugurates", "modi launches", "bjp government",
-    "yogi government", "cm yogi inaugurates", "cm yogi launches",
-    "bjp wins", "bjp victory", "bjp leads", "saffron wave",
+    "yogi praised",
+    "pm modi inaugurates",
+    "modi launches",
+    "bjp government",
+    "yogi government",
+    "cm yogi inaugurates",
+    "cm yogi launches",
+    "bjp wins",
+    "bjp victory",
+    "bjp leads",
+    "saffron wave",
     # Hindi pro
-    "विकास", "उपलब्धि", "सफलता", "भाजपा सरकार", "योगी सरकार",
-    "प्रगति", "नई परियोजना", "उद्घाटन", "डबल इंजन",
+    "विकास",
+    "उपलब्धि",
+    "सफलता",
+    "भाजपा सरकार",
+    "योगी सरकार",
+    "प्रगति",
+    "नई परियोजना",
+    "उद्घाटन",
+    "डबल इंजन",
     # Law & Order credited to BJP
-    "law and order improved", "crime reduced", "mafia eliminated",
-    "encounter mafia", "goonda raj ended", "safe uttar pradesh",
+    "law and order improved",
+    "crime reduced",
+    "mafia eliminated",
+    "encounter mafia",
+    "goonda raj ended",
+    "safe uttar pradesh",
     # Welfare schemes
-    "free ration", "ujjwala", "pm awas", "ayushman bharat",
-    "jan dhan", "swachh bharat", "toilet built", "bijli ghar ghar",
+    "free ration",
+    "ujjwala",
+    "pm awas",
+    "ayushman bharat",
+    "jan dhan",
+    "swachh bharat",
+    "toilet built",
+    "bijli ghar ghar",
 ]
 
 ANTI_BJP_KEYWORDS = [
     # Corruption / Failure
-    "corruption", "scam", "scandal", "bribe", "fraud", "mismanagement",
-    "bhrashtachar", "घोटाला", "भ्रष्टाचार", "रिश्वत",
+    "corruption",
+    "scam",
+    "scandal",
+    "bribe",
+    "fraud",
+    "mismanagement",
+    "bhrashtachar",
+    "घोटाला",
+    "भ्रष्टाचार",
+    "रिश्वत",
     # Unemployment
-    "unemployment", "berozgari", "job loss", "jobs gone", "no jobs",
-    "बेरोजगारी", "रोजगार नहीं", "नौकरी नहीं",
+    "unemployment",
+    "berozgari",
+    "job loss",
+    "jobs gone",
+    "no jobs",
+    "बेरोजगारी",
+    "रोजगार नहीं",
+    "नौकरी नहीं",
     # Inflation / hardship
-    "inflation", "price rise", "mahangai", "महंगाई", "petrol price",
-    "lpg price", "costly", "poor", "poverty",
+    "inflation",
+    "price rise",
+    "mahangai",
+    "महंगाई",
+    "petrol price",
+    "lpg price",
+    "costly",
+    "poor",
+    "poverty",
     # Law & Order failures
-    "rape", "murder", "mob lynching", "riots", "communal violence",
-    "crime rise", "unsafe", "criminals", "gangster", "दंगा",
-    "बलात्कार", "हत्या", "अपराध बढ़ा",
+    "rape",
+    "murder",
+    "mob lynching",
+    "riots",
+    "communal violence",
+    "crime rise",
+    "unsafe",
+    "criminals",
+    "gangster",
+    "दंगा",
+    "बलात्कार",
+    "हत्या",
+    "अपराध बढ़ा",
     # Protests / Opposition
-    "protest against", "opposition slams", "yogi criticized", "bjp criticized",
-    "yogi fails", "bjp failure", "bjp government fails",
-    "bjp anti farmer", "bjp anti poor",
-    "akhilesh attacks", "sp slams bjp", "bsp slams",
-    "demonstration against", "agitation against",
-    "योगी की आलोचना", "भाजपा विरोध", "सरकार विफल",
+    "protest against",
+    "opposition slams",
+    "yogi criticized",
+    "bjp criticized",
+    "yogi fails",
+    "bjp failure",
+    "bjp government fails",
+    "bjp anti farmer",
+    "bjp anti poor",
+    "akhilesh attacks",
+    "sp slams bjp",
+    "bsp slams",
+    "demonstration against",
+    "agitation against",
+    "योगी की आलोचना",
+    "भाजपा विरोध",
+    "सरकार विफल",
     # Farmers anger
-    "farmer suicide", "kisan aatmhatya", "sugarcane dues", "ganna bakaya",
-    "किसान आत्महत्या", "गन्ना बकाया",
+    "farmer suicide",
+    "kisan aatmhatya",
+    "sugarcane dues",
+    "ganna bakaya",
+    "किसान आत्महत्या",
+    "गन्ना बकाया",
     # BRD hospital tragedy
-    "brd deaths", "oxygen deaths", "hospital deaths", "encephalitis deaths",
+    "brd deaths",
+    "oxygen deaths",
+    "hospital deaths",
+    "encephalitis deaths",
     # Flood blame
-    "flood mismanagement", "flood victims ignored", "flood relief delayed",
+    "flood mismanagement",
+    "flood victims ignored",
+    "flood relief delayed",
     # Anti-BJP electoral signals
-    "bjp loses", "bjp defeated", "bjp setback", "anti-incumbency",
-    "people angry", "public anger", "jan virodh",
+    "bjp loses",
+    "bjp defeated",
+    "bjp setback",
+    "anti-incumbency",
+    "people angry",
+    "public anger",
+    "jan virodh",
 ]
 
 NEUTRAL_OVERRIDE_KEYWORDS = [
     # Pure news without bias
-    "election schedule", "election commission", "voting date",
-    "candidate list", "nomination filed", "seat sharing",
-    "चुनाव आयोग", "मतदान", "प्रत्याशी",
+    "election schedule",
+    "election commission",
+    "voting date",
+    "candidate list",
+    "nomination filed",
+    "seat sharing",
+    "चुनाव आयोग",
+    "मतदान",
+    "प्रत्याशी",
 ]
 
 
@@ -89,15 +197,16 @@ NEUTRAL_OVERRIDE_KEYWORDS = [
 #  CLASSIFIER
 # ══════════════════════════════════════════════════════════════════
 
+
 def classify_bjp(text: str) -> dict:
     """Return BJP sentiment label + scores."""
     t = text.lower()
 
-    pro_score  = sum(1 for kw in PRO_BJP_KEYWORDS  if kw.lower() in t)
+    pro_score = sum(1 for kw in PRO_BJP_KEYWORDS if kw.lower() in t)
     anti_score = sum(1 for kw in ANTI_BJP_KEYWORDS if kw.lower() in t)
     neutral_hit = any(kw.lower() in t for kw in NEUTRAL_OVERRIDE_KEYWORDS)
 
-    matched_pro  = [kw for kw in PRO_BJP_KEYWORDS  if kw.lower() in t][:5]
+    matched_pro = [kw for kw in PRO_BJP_KEYWORDS if kw.lower() in t][:5]
     matched_anti = [kw for kw in ANTI_BJP_KEYWORDS if kw.lower() in t][:5]
 
     # Decide label
@@ -122,13 +231,13 @@ def classify_bjp(text: str) -> dict:
     confidence = round(abs(net) / total, 3)
 
     return {
-        "label":         label,
-        "pro_score":     pro_score,
-        "anti_score":    anti_score,
-        "net_score":     net,
-        "confidence":    confidence,
-        "matched_pro":   matched_pro,
-        "matched_anti":  matched_anti,
+        "label": label,
+        "pro_score": pro_score,
+        "anti_score": anti_score,
+        "net_score": net,
+        "confidence": confidence,
+        "matched_pro": matched_pro,
+        "matched_anti": matched_anti,
     }
 
 
@@ -144,6 +253,7 @@ def classify_articles(articles: list) -> list:
 #  LOAD / SAVE
 # ══════════════════════════════════════════════════════════════════
 
+
 def find_latest_result() -> str:
     files = sorted(glob.glob("results/gorakhpur_election_*.json"))
     if not files:
@@ -153,12 +263,19 @@ def find_latest_result() -> str:
 
 def save_filtered(articles: list, label_prefix: str, out_dir: str = "results") -> str:
     os.makedirs(out_dir, exist_ok=True)
-    ts   = datetime.now().strftime("%Y%m%d_%H%M%S")
+    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
     path = f"{out_dir}/{label_prefix}_{ts}.json"
     with open(path, "w", encoding="utf-8") as f:
-        json.dump({"generated_at": datetime.now().isoformat(),
-                   "total": len(articles), "articles": articles},
-                  f, ensure_ascii=False, indent=2)
+        json.dump(
+            {
+                "generated_at": datetime.now().isoformat(),
+                "total": len(articles),
+                "articles": articles,
+            },
+            f,
+            ensure_ascii=False,
+            indent=2,
+        )
     return path
 
 
@@ -167,12 +284,13 @@ def save_filtered(articles: list, label_prefix: str, out_dir: str = "results") -
 # ══════════════════════════════════════════════════════════════════
 
 LABEL_COLORS = {
-    "PRO-BJP":       Fore.GREEN,
-    "LEAN-PRO-BJP":  Fore.LIGHTGREEN_EX,
-    "NEUTRAL":       Fore.YELLOW,
+    "PRO-BJP": Fore.GREEN,
+    "LEAN-PRO-BJP": Fore.LIGHTGREEN_EX,
+    "NEUTRAL": Fore.YELLOW,
     "LEAN-ANTI-BJP": Fore.LIGHTRED_EX,
-    "ANTI-BJP":      Fore.RED,
+    "ANTI-BJP": Fore.RED,
 }
+
 
 def print_report(articles: list):
     if not articles:
@@ -186,9 +304,9 @@ def print_report(articles: list):
         groups.setdefault(lbl, []).append(a)
 
     total = len(articles)
-    print(f"\n{Fore.CYAN}" + "-"*64)
+    print(f"\n{Fore.CYAN}" + "-" * 64)
     print("  BJP SENTIMENT FILTER -- GORAKHPUR ELECTION ARTICLES")
-    print("-"*64 + Style.RESET_ALL)
+    print("-" * 64 + Style.RESET_ALL)
     print(f"  Total articles classified : {Fore.WHITE}{total}{Style.RESET_ALL}\n")
 
     order = ["PRO-BJP", "LEAN-PRO-BJP", "NEUTRAL", "LEAN-ANTI-BJP", "ANTI-BJP"]
@@ -196,9 +314,9 @@ def print_report(articles: list):
         arts = groups.get(lbl, [])
         if not arts:
             continue
-        pct  = round(len(arts) * 100 / total)
-        bar  = "#" * min(len(arts), 40)
-        clr  = LABEL_COLORS.get(lbl, Fore.WHITE)
+        pct = round(len(arts) * 100 / total)
+        bar = "#" * min(len(arts), 40)
+        clr = LABEL_COLORS.get(lbl, Fore.WHITE)
         print(f"  {clr}{lbl:<18}{Style.RESET_ALL}  {bar}  {len(arts):>3} ({pct}%)")
 
     # Sample headlines per group
@@ -212,9 +330,13 @@ def print_report(articles: list):
             s = a["bjp_sentiment"]
             print(f"    pro={s['pro_score']} anti={s['anti_score']}  {a['title'][:65]}")
             if s["matched_pro"]:
-                print(f"      {Fore.GREEN}Pro signals : {', '.join(s['matched_pro'][:3])}{Style.RESET_ALL}")
+                print(
+                    f"      {Fore.GREEN}Pro signals : {', '.join(s['matched_pro'][:3])}{Style.RESET_ALL}"
+                )
             if s["matched_anti"]:
-                print(f"      {Fore.RED}Anti signals: {', '.join(s['matched_anti'][:3])}{Style.RESET_ALL}")
+                print(
+                    f"      {Fore.RED}Anti signals: {', '.join(s['matched_anti'][:3])}{Style.RESET_ALL}"
+                )
 
     # Topic breakdown within pro vs anti
     print(f"\n  {Fore.CYAN}-- Topic Breakdown --{Style.RESET_ALL}")
@@ -259,21 +381,21 @@ if __name__ == "__main__":
     groups = print_report(articles)
 
     # Save split files
-    pro_arts  = groups.get("PRO-BJP", []) + groups.get("LEAN-PRO-BJP", [])
+    pro_arts = groups.get("PRO-BJP", []) + groups.get("LEAN-PRO-BJP", [])
     anti_arts = groups.get("ANTI-BJP", []) + groups.get("LEAN-ANTI-BJP", [])
-    neu_arts  = groups.get("NEUTRAL", [])
+    neu_arts = groups.get("NEUTRAL", [])
 
-    p1 = save_filtered(pro_arts,  "pro_bjp")
+    p1 = save_filtered(pro_arts, "pro_bjp")
     p2 = save_filtered(anti_arts, "anti_bjp")
-    p3 = save_filtered(neu_arts,  "neutral")
+    p3 = save_filtered(neu_arts, "neutral")
 
     # Also save fully classified master file
     master_path = src_file.replace(".json", "_classified.json")
     data["articles"] = articles
     data["bjp_classification"] = {
-        "pro_bjp":       len(pro_arts),
-        "anti_bjp":      len(anti_arts),
-        "neutral":       len(neu_arts),
+        "pro_bjp": len(pro_arts),
+        "anti_bjp": len(anti_arts),
+        "neutral": len(neu_arts),
         "classified_at": datetime.now().isoformat(),
     }
     with open(master_path, "w", encoding="utf-8") as f:

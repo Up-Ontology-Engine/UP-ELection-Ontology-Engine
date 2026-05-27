@@ -13,6 +13,7 @@ Run:
     python -m etl.geocode_booths --ac-id all   # every AC
     python -m etl.geocode_booths --dry-run     # print only, no DB writes
 """
+
 from __future__ import annotations
 
 import argparse
@@ -40,42 +41,43 @@ AC_CENTROID: dict[str, tuple[float, float]] = {
 
 # Known precise coordinates for Gorakhpur Urban landmarks
 KNOWN_LOCALITIES: dict[str, tuple[float, float]] = {
-    "Golghar":            (26.7616, 83.3731),
-    "Civil Lines":        (26.7630, 83.3690),
-    "Railway Station":    (26.7571, 83.3740),
-    "BRD Medical":        (26.7628, 83.3968),
-    "Medical College":    (26.7628, 83.3968),
-    "Shahpur":            (26.7540, 83.3650),
-    "Mohaddipur":         (26.7740, 83.3730),
-    "Rustampur":          (26.7680, 83.3820),
-    "Chargawan":          (26.7990, 83.3260),
-    "Mirzapur":           (26.7500, 83.3880),
-    "Dhumanganj":         (26.7700, 83.3820),
-    "Ramgarh Tal":        (26.7450, 83.3760),
-    "Betiahata":          (26.7650, 83.3800),
-    "Shivpuri":           (26.7550, 83.3750),
-    "Basharatpur":        (26.7600, 83.3620),
-    "Humayunpur":         (26.7690, 83.3550),
-    "Alinagar":           (26.7720, 83.3640),
-    "Uska Bazar":         (26.7800, 83.3900),
-    "Madan Mohan":        (26.7620, 83.3780),
-    "Jungle Kauria":      (26.6900, 83.4100),
-    "Deoria Naka":        (26.7540, 83.3640),
-    "Taramandal":         (26.7800, 83.3700),
-    "Padrauna Road":      (26.7750, 83.4100),
-    "Gorakhnath":         (26.7810, 83.3680),
-    "Pipraich":           (26.8400, 83.3430),
-    "Sahjanwa":           (26.7080, 83.4400),
-    "Campierganj":        (26.7990, 83.2750),
-    "Bansgaon":           (26.5490, 83.3590),
-    "Belghat":            (26.6210, 83.5420),
-    "Gagaha":             (26.7220, 83.4580),
+    "Golghar": (26.7616, 83.3731),
+    "Civil Lines": (26.7630, 83.3690),
+    "Railway Station": (26.7571, 83.3740),
+    "BRD Medical": (26.7628, 83.3968),
+    "Medical College": (26.7628, 83.3968),
+    "Shahpur": (26.7540, 83.3650),
+    "Mohaddipur": (26.7740, 83.3730),
+    "Rustampur": (26.7680, 83.3820),
+    "Chargawan": (26.7990, 83.3260),
+    "Mirzapur": (26.7500, 83.3880),
+    "Dhumanganj": (26.7700, 83.3820),
+    "Ramgarh Tal": (26.7450, 83.3760),
+    "Betiahata": (26.7650, 83.3800),
+    "Shivpuri": (26.7550, 83.3750),
+    "Basharatpur": (26.7600, 83.3620),
+    "Humayunpur": (26.7690, 83.3550),
+    "Alinagar": (26.7720, 83.3640),
+    "Uska Bazar": (26.7800, 83.3900),
+    "Madan Mohan": (26.7620, 83.3780),
+    "Jungle Kauria": (26.6900, 83.4100),
+    "Deoria Naka": (26.7540, 83.3640),
+    "Taramandal": (26.7800, 83.3700),
+    "Padrauna Road": (26.7750, 83.4100),
+    "Gorakhnath": (26.7810, 83.3680),
+    "Pipraich": (26.8400, 83.3430),
+    "Sahjanwa": (26.7080, 83.4400),
+    "Campierganj": (26.7990, 83.2750),
+    "Bansgaon": (26.5490, 83.3590),
+    "Belghat": (26.6210, 83.5420),
+    "Gagaha": (26.7220, 83.4580),
 }
 
 
 def _fuzzy_known_match(name: str) -> Optional[tuple[float, float]]:
     try:
         from thefuzz import process as fuzz
+
         keys = list(KNOWN_LOCALITIES.keys())
         match, score = fuzz.extractOne(name, keys)
         if score >= 68:
@@ -88,6 +90,7 @@ def _fuzzy_known_match(name: str) -> Optional[tuple[float, float]]:
 def _nominatim_geocode(name: str) -> Optional[tuple[float, float]]:
     try:
         import requests
+
         resp = requests.get(
             "https://nominatim.openstreetmap.org/search",
             params={"q": f"{name}, Gorakhpur, Uttar Pradesh, India", "format": "json", "limit": 1},
@@ -108,7 +111,9 @@ def _nominatim_geocode(name: str) -> Optional[tuple[float, float]]:
 def geocode_booths(engine: sa.Engine, ac_id: str = "GKP_322", dry_run: bool = False) -> int:
     ac_filter = "TRUE" if ac_id == "all" else "ac_id = :ac_id"
     with engine.connect() as conn:
-        rows = conn.execute(text(f"""
+        rows = (
+            conn.execute(
+                text(f"""
             SELECT booth_id, ac_id, polling_station_name, locality_hint
             FROM booth_master
             WHERE {ac_filter}
@@ -116,16 +121,21 @@ def geocode_booths(engine: sa.Engine, ac_id: str = "GKP_322", dry_run: bool = Fa
               AND booth_id NOT LIKE '%_TOTAL'
               AND polling_station_name IS NOT NULL
             ORDER BY ac_id, booth_number
-        """), {} if ac_id == "all" else {"ac_id": ac_id}).mappings().fetchall()
+        """),
+                {} if ac_id == "all" else {"ac_id": ac_id},
+            )
+            .mappings()
+            .fetchall()
+        )
 
     logger.info("Geocoding %d booths (ac_id=%s)", len(rows), ac_id)
     geocoded = 0
     nominatim_calls = 0
 
     for row in rows:
-        bid    = row["booth_id"]
-        hint   = (row["locality_hint"] or "").strip()
-        bname  = (row["polling_station_name"] or "").split("(")[0].strip()
+        bid = row["booth_id"]
+        hint = (row["locality_hint"] or "").strip()
+        bname = (row["polling_station_name"] or "").split("(")[0].strip()
         centroid = AC_CENTROID.get(row["ac_id"], (26.760, 83.375))
 
         lat = lon = None
@@ -152,6 +162,7 @@ def geocode_booths(engine: sa.Engine, ac_id: str = "GKP_322", dry_run: bool = Fa
         # 3. Centroid + jitter
         if lat is None:
             import random
+
             rng = random.Random(hash(bid))
             lat = centroid[0] + rng.uniform(-0.022, 0.022)
             lon = centroid[1] + rng.uniform(-0.022, 0.022)
@@ -160,11 +171,14 @@ def geocode_booths(engine: sa.Engine, ac_id: str = "GKP_322", dry_run: bool = Fa
             logger.info("[DRY] %s → (%.4f, %.4f)", bid, lat, lon)
         else:
             with engine.connect() as conn:
-                conn.execute(text("""
+                conn.execute(
+                    text("""
                     UPDATE booth_master
                     SET lat = :lat, lon = :lon, geocoded_at = NOW()
                     WHERE booth_id = :bid
-                """), {"lat": lat, "lon": lon, "bid": bid})
+                """),
+                    {"lat": lat, "lon": lon, "bid": bid},
+                )
                 conn.commit()
 
         geocoded += 1

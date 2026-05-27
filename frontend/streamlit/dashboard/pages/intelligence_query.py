@@ -2,12 +2,14 @@
 Page: Political Intelligence Query
 Natural language → Groq Cypher generation → Neo4j results.
 """
+
 from __future__ import annotations
+
+import pandas as pd
 import requests
 import streamlit as st
-import pandas as pd
 
-from dashboard.components.war_room import inject_css, section, info_bar
+from dashboard.components.war_room import info_bar, inject_css, section
 
 EXAMPLES = [
     "Show all candidates with criminal cases",
@@ -63,15 +65,14 @@ def render(ac_id: str, ac_name: str, api_url: str) -> None:
         value=init_val,
         height=80,
         placeholder=(
-            "e.g. Show candidates with more than 2 criminal cases "
-            "ordered by total assets"
+            "e.g. Show candidates with more than 2 criminal cases " "ordered by total assets"
         ),
         key="iq_input",
     )
 
     c_run, c_clr, _ = st.columns([1, 1, 5])
-    run_btn   = c_run.button("Run Query", type="primary", use_container_width=True)
-    clear_btn = c_clr.button("Clear",                   use_container_width=True)
+    run_btn = c_run.button("Run Query", type="primary", use_container_width=True)
+    clear_btn = c_clr.button("Clear", use_container_width=True)
 
     if clear_btn:
         st.session_state.pop("iq_q", None)
@@ -113,7 +114,7 @@ def _execute_and_display(question: str, api_url: str) -> None:
         return
 
     # Results
-    results  = data.get("results", [])
+    results = data.get("results", [])
     row_count = data.get("row_count", len(results))
 
     section(f"Results — {row_count} row{'s' if row_count != 1 else ''}", "📊")

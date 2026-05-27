@@ -7,9 +7,11 @@ exercise the actual SQL layer, not mocks.
 Run:
     pytest tests/integration/ -q --timeout=60
 """
+
 from __future__ import annotations
 
 import os
+
 import pytest
 from fastapi.testclient import TestClient
 
@@ -28,6 +30,7 @@ def pg_url():
 
     try:
         from testcontainers.postgres import PostgresContainer
+
         with PostgresContainer("postgres:16") as pg:
             url = pg.get_connection_url()
             os.environ["DATABASE_URL"] = url
@@ -43,18 +46,20 @@ def app_client(pg_url):
     os.environ["TESTING"] = "true"
     os.environ["DATABASE_URL"] = pg_url
     os.environ["POSTGRES_URL"] = pg_url
-    os.environ.setdefault("NEO4J_URI",      "bolt://localhost:7687")
-    os.environ.setdefault("NEO4J_USER",     "neo4j")
+    os.environ.setdefault("NEO4J_URI", "bolt://localhost:7687")
+    os.environ.setdefault("NEO4J_USER", "neo4j")
     os.environ.setdefault("NEO4J_PASSWORD", "test")
-    os.environ.setdefault("REDIS_URL",      "redis://localhost:6379/0")
+    os.environ.setdefault("REDIS_URL", "redis://localhost:6379/0")
     os.environ.setdefault("GOOGLE_API_KEY", "ci-dummy")
     os.environ.setdefault("SARVAM_API_KEY", "ci-dummy")
 
     from backend.main import app
+
     return TestClient(app)
 
 
 # ── Health endpoint ────────────────────────────────────────────────────────────
+
 
 def test_health_returns_200(app_client):
     resp = app_client.get("/health")
@@ -67,6 +72,7 @@ def test_health_postgres_field_present(app_client):
 
 
 # ── Root / docs ────────────────────────────────────────────────────────────────
+
 
 def test_openapi_schema_accessible(app_client):
     resp = app_client.get("/openapi.json")
@@ -82,6 +88,7 @@ def test_docs_page_accessible(app_client):
 
 
 # ── Input validation ───────────────────────────────────────────────────────────
+
 
 def test_subgraph_rejects_sql_injection(app_client):
     """Cypher injection attempt must be rejected at the API layer."""
@@ -106,6 +113,7 @@ def test_reasoning_rejects_overlong_question(app_client):
 
 # ── Rate limiting ──────────────────────────────────────────────────────────────
 
+
 def test_health_not_rate_limited(app_client):
     """Health endpoint should never be rate-limited."""
     for _ in range(10):
@@ -114,6 +122,7 @@ def test_health_not_rate_limited(app_client):
 
 
 # ── AC endpoints (graceful degradation without Neo4j) ─────────────────────────
+
 
 def test_ac_booths_returns_json_or_503(app_client):
     resp = app_client.get("/ac/GKP_322/booths")

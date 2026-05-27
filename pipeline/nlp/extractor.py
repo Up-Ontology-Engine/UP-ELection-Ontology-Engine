@@ -1,12 +1,19 @@
 """Gemini LLM extraction with structured JSON output via google.genai SDK."""
-import os, logging, re, json as _json
+
+import json as _json
+import logging
+import os
+import re
+
 from google import genai
 from google.genai import types
+
 from .schemas import ExtractionResult
 
 logger = logging.getLogger(__name__)
 
 _client: genai.Client | None = None
+
 
 def _get_client() -> genai.Client:
     global _client
@@ -81,46 +88,88 @@ FEW-SHOT EXAMPLES OF SARCASM:
 _GEMINI_MODEL = "gemini-2.5-flash"
 
 POLITICAL_KEYWORDS = {
-    "bjp", "sp", "bsp", "congress", "aap", "rld", "yogi", "modi", "akhilesh", "mayawati",
-    "sarkar", "chunav", "neta", "voter", "booth", "ganna", "cycle", "kamal", "hathi",
-    "development", "kaam", "water", "road", "bijli", "jobs", "safety", "politic", "election",
-    "candidate", "गन्ना", "चुनाव", "योगी", "मोदी", "अखिलेश", "मायावती", "सरकार", "काम", "सड़क",
-    "पानी", "नौकरी", "रोजगार", "बिजली", "सुरक्षा", "भ्रष्टाचार", "कानून", "पार्टी"
+    "bjp",
+    "sp",
+    "bsp",
+    "congress",
+    "aap",
+    "rld",
+    "yogi",
+    "modi",
+    "akhilesh",
+    "mayawati",
+    "sarkar",
+    "chunav",
+    "neta",
+    "voter",
+    "booth",
+    "ganna",
+    "cycle",
+    "kamal",
+    "hathi",
+    "development",
+    "kaam",
+    "water",
+    "road",
+    "bijli",
+    "jobs",
+    "safety",
+    "politic",
+    "election",
+    "candidate",
+    "गन्ना",
+    "चुनाव",
+    "योगी",
+    "मोदी",
+    "अखिलेश",
+    "मायावती",
+    "सरकार",
+    "काम",
+    "सड़क",
+    "पानी",
+    "नौकरी",
+    "रोजगार",
+    "बिजली",
+    "सुरक्षा",
+    "भ्रष्टाचार",
+    "कानून",
+    "पार्टी",
 }
+
 
 def compress_text(text: str) -> str:
     """Pre-extraction text compression: removes HTML tags and keeps only sentences with political entities/keywords if text is long."""
     # Remove HTML tags
-    text = re.sub(r'<[^>]+>', ' ', text)
+    text = re.sub(r"<[^>]+>", " ", text)
     # Normalize spaces
-    text = re.sub(r'\s+', ' ', text).strip()
-    
+    text = re.sub(r"\s+", " ", text).strip()
+
     # If the text is short, keep as is
     if len(text) <= 1200:
         return text
 
     # Split into sentences using punctuation markers
-    sentences = re.split(r'(?<=[.!?।])\s+', text)
+    sentences = re.split(r"(?<=[.!?।])\s+", text)
     if len(sentences) <= 3:
         return text
 
     keep_indices = set()
     for idx, sentence in enumerate(sentences):
-        words = re.findall(r'\b\w+\b', sentence.lower())
+        words = re.findall(r"\b\w+\b", sentence.lower())
         has_keyword = any(w in POLITICAL_KEYWORDS for w in words)
         if not has_keyword:
             has_keyword = any(kw in sentence.lower() for kw in POLITICAL_KEYWORDS)
-        
+
         if has_keyword:
             keep_indices.add(idx)
             if idx > 0:
                 keep_indices.add(idx - 1)
             if idx < len(sentences) - 1:
                 keep_indices.add(idx + 1)
-                
+
     if not keep_indices:
         return " ".join(sentences[:3]) + "..."
-        
+
     compressed_sentences = []
     last_idx = -1
     for idx in sorted(keep_indices):
@@ -128,17 +177,17 @@ def compress_text(text: str) -> str:
             compressed_sentences.append("[...]")
         compressed_sentences.append(sentences[idx])
         last_idx = idx
-        
+
     return " ".join(compressed_sentences)
 
 
 def extract_from_normalized_text(text: str) -> ExtractionResult:
     if not text or len(text.strip()) < 5:
         return ExtractionResult(statements=[], is_political=False)
-    
+
     # Compress text to optimize context window and tokens
     compressed = compress_text(text)
-    
+
     try:
         resp = _get_client().models.generate_content(
             model=_GEMINI_MODEL,
@@ -152,7 +201,7 @@ def extract_from_normalized_text(text: str) -> ExtractionResult:
         raw = (resp.text or "").strip()
         if not raw:
             return ExtractionResult(statements=[], is_political=True)
-        import re as regex
+
         data = _json.loads(raw)
         for stmt in data.get("statements", []):
             stmt.setdefault("entity_type", "party")
