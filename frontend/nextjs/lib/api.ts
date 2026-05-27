@@ -3,8 +3,33 @@ const API_BASE = isServer
   ? (process.env.INTERNAL_API_URL ?? process.env.NEXT_PUBLIC_API_URL ?? "http://api:8000")
   : (process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000");
 
+/**
+ * Fetch with no caching — for real-time/mutable endpoints
+ * (chat, reasoning, health checks, write operations).
+ */
 async function get<T>(path: string): Promise<T> {
   const res = await fetch(`${API_BASE}${path}`, { cache: "no-store" });
+  if (!res.ok) throw new Error(`API ${path} → ${res.status}`);
+  return res.json();
+}
+
+/**
+ * Fetch with 5-second ISR revalidation — for semi-live data
+ * that changes on each poll cycle (booth pulse, issues, quality).
+ */
+async function getLive<T>(path: string): Promise<T> {
+  const res = await fetch(`${API_BASE}${path}`, { next: { revalidate: 5 } });
+  if (!res.ok) throw new Error(`API ${path} → ${res.status}`);
+  return res.json();
+}
+
+/**
+ * Fetch with 60-second ISR revalidation — for near-static data
+ * (election results, booth roster, demographics, candidates, intel summary).
+ * Backend also Redis-caches these at 60s so the load on PG/Neo4j is minimal.
+ */
+async function getStatic<T>(path: string): Promise<T> {
+  const res = await fetch(`${API_BASE}${path}`, { next: { revalidate: 60 } });
   if (!res.ok) throw new Error(`API ${path} → ${res.status}`);
   return res.json();
 }
@@ -49,45 +74,45 @@ async function del<T>(path: string): Promise<T> {
 export const api = {
   health: () => get<{ status: string; ac: string }>("/health"),
 
-  // AC-level
-  booths: (acId: string) => get<BoothsResponse>(`/ac/${acId}/booths`),
-  candidates: (acId: string) => get<{ ac_id: string; candidates: Candidate[] }>(`/ac/${acId}/candidates`),
-  schemes: (acId: string) => get<{ ac_id: string; schemes: SchemeGap[] }>(`/ac/${acId}/schemes`),
-  narratives: (acId: string) => get<{ ac_id: string; narratives: Narrative[] }>(`/ac/${acId}/narratives`),
-  events: (acId: string, limit = 50) => get<{ ac_id: string; events: PoliticalEvent[] }>(`/ac/${acId}/events?limit=${limit}`),
-  quality: (acId: string) => get<AcQuality>(`/ac/${acId}/quality`),
-  recommendations: (acId: string) => get<AcRecommendations>(`/ac/${acId}/recommendations`),
-  geo: (acId: string) => get<GeoResponse>(`/ac/${acId}/geo`),
-  demographics: (acId: string) => get<DemographicsSummary>(`/ac/${acId}/demographics/summary`).catch(() => null),
-  demographicSegments: (acId: string) => get<DemographicSegments>(`/ac/${acId}/demographics/segments`).catch(() => null),
-  twinSnapshot: (acId: string) => get<TwinSnapshot>(`/ac/${acId}/twin-snapshot`).catch(() => null),
-  heatmapCoverage: (acId: string) => get<HeatmapCoverage>(`/ac/${acId}/heatmap-coverage`).catch(() => null),
+  // AC-level — booth/candidate/scheme lists are near-static: 60s revalidate
+  booths: (acId: string) => getStatic<BoothsResponse>(`/ac/${acId}/booths`),
+  candidates: (acId: string) => getStatic<{ ac_id: string; candidates: Candidate[] }>(`/ac/${acId}/candidates`),
+  schemes: (acId: string) => getLive<{ ac_id: string; schemes: SchemeGap[] }>(`/ac/${acId}/schemes`),
+  narratives: (acId: string) => getLive<{ ac_id: string; narratives: Narrative[] }>(`/ac/${acId}/narratives`),
+  events: (acId: string, limit = 50) => getLive<{ ac_id: string; events: PoliticalEvent[] }>(`/ac/${acId}/events?limit=${limit}`),
+  quality: (acId: string) => getLive<AcQuality>(`/ac/${acId}/quality`),
+  recommendations: (acId: string) => getLive<AcRecommendations>(`/ac/${acId}/recommendations`),
+  geo: (acId: string) => getStatic<GeoResponse>(`/ac/${acId}/geo`),
+  demographics: (acId: string) => getStatic<DemographicsSummary>(`/ac/${acId}/demographics/summary`).catch(() => null),
+  demographicSegments: (acId: string) => getStatic<DemographicSegments>(`/ac/${acId}/demographics/segments`).catch(() => null),
+  twinSnapshot: (acId: string) => getLive<TwinSnapshot>(`/ac/${acId}/twin-snapshot`).catch(() => null),
+  heatmapCoverage: (acId: string) => getLive<HeatmapCoverage>(`/ac/${acId}/heatmap-coverage`).catch(() => null),
 
-  // Booth-level
-  boothSummary: (boothId: string, days = 7) => get<BoothSummary>(`/booth/${boothId}/summary?days=${days}`),
-  boothQuality: (boothId: string) => get<BoothQualityResponse>(`/booth/${boothId}/quality`),
-  boothNarratives: (boothId: string) => get<{ booth_id: string; narratives: Narrative[] }>(`/booth/${boothId}/narratives`),
-  boothContradictions: (boothId: string) => get<ContradictionsResponse>(`/booth/${boothId}/contradictions`),
-  boothPulse: (boothId: string, days = 7) => get<PulseResponse>(`/booth/${boothId}/pulse?days=${days}`),
-  boothIssues: (boothId: string) => get<{ booth_id: string; issues: Issue[] }>(`/booth/${boothId}/issues`),
+  // Booth-level — pulse is live (5s), others are semi-static
+  boothSummary: (boothId: string, days = 7) => getLive<BoothSummary>(`/booth/${boothId}/summary?days=${days}`),
+  boothQuality: (boothId: string) => getLive<BoothQualityResponse>(`/booth/${boothId}/quality`),
+  boothNarratives: (boothId: string) => getLive<{ booth_id: string; narratives: Narrative[] }>(`/booth/${boothId}/narratives`),
+  boothContradictions: (boothId: string) => getLive<ContradictionsResponse>(`/booth/${boothId}/contradictions`),
+  boothPulse: (boothId: string, days = 7) => getLive<PulseResponse>(`/booth/${boothId}/pulse?days=${days}`),
+  boothIssues: (boothId: string) => getLive<{ booth_id: string; issues: Issue[] }>(`/booth/${boothId}/issues`),
   boothComments: (boothId: string) => get<{ booth_id: string; comments: Comment[] }>(`/booth/${boothId}/comments`),
-  boothSegments: (boothId: string) => get<BoothSegmentsResponse>(`/booth/${boothId}/segments`).catch(() => null),
-  boothConversion: (boothId: string) => get<ConversionOpportunity>(`/booth/${boothId}/conversion`).catch(() => null),
+  boothSegments: (boothId: string) => getStatic<BoothSegmentsResponse>(`/booth/${boothId}/segments`).catch(() => null),
+  boothConversion: (boothId: string) => getLive<ConversionOpportunity>(`/booth/${boothId}/conversion`).catch(() => null),
 
   // Graph
   subgraph: (entityType: string, entityId: string, excludeTypes: string[] = [], limit = 120) => {
     const base = `/graph/subgraph?entity_type=${encodeURIComponent(entityType)}&entity_id=${encodeURIComponent(entityId)}&limit=${limit}`;
     const excl = excludeTypes.map((t) => `&exclude_types=${encodeURIComponent(t)}`).join("");
-    return get<GraphResult>(base + excl);
+    return getLive<GraphResult>(base + excl);
   },
 
-  // Reasoning
+  // Reasoning — always no-store (user-specific queries)
   reason: (question: string) => post<ReasoningResult>("/reasoning/query", { question }),
 
   // Voter Conversion Engine
   conversion: {
-    overview: (acId: string) => get<{ ac_id: string; booths: ConversionBoothSummary[] }>(`/ac/${acId}/conversion-overview`),
-    stats: (acId: string) => get<ConversionStats>(`/ac/${acId}/conversion-stats`),
+    overview: (acId: string) => getLive<{ ac_id: string; booths: ConversionBoothSummary[] }>(`/ac/${acId}/conversion-overview`),
+    stats: (acId: string) => getLive<ConversionStats>(`/ac/${acId}/conversion-stats`),
     targets: (boothId: string, contacted?: boolean, limit = 200) => {
       const ct = contacted === undefined ? "" : `&contacted=${contacted}`;
       return get<{ booth_id: string; count: number; targets: BeneficiaryRow[] }>(`/booth/${boothId}/conversion-targets?limit=${limit}${ct}`);
@@ -100,7 +125,7 @@ export const api = {
       post<{ ac_id: string; seeded: number }>(`/ac/${acId}/conversion/seed-demo?per_booth=${perBooth}`, {}),
   },
 
-  // Chat session persistence
+  // Chat session persistence — always no-store (user-specific state)
   chat: {
     sessions: (limit = 50) => get<{ sessions: ChatSession[] }>(`/chat/sessions?limit=${limit}`),
     createSession: (title?: string) => post<ChatSession>("/chat/sessions", { title }),
@@ -114,20 +139,20 @@ export const api = {
   },
 
   // Infrastructure
-  infraOverview: () => get<InfraOverview>("/infrastructure/overview"),
-  graphCoverage: (acId: string) => get<GraphCoverageResponse>(`/ac/${acId}/graph-coverage`),
+  infraOverview: () => getLive<InfraOverview>("/infrastructure/overview"),
+  graphCoverage: (acId: string) => getLive<GraphCoverageResponse>(`/ac/${acId}/graph-coverage`),
 
   // Ontology live status
-  ontologyStatus: () => get<OntologyStatus>("/ontology/status").catch(() => null),
+  ontologyStatus: () => getLive<OntologyStatus>("/ontology/status").catch(() => null),
 
-  // Intelligence summary (PG voter stats + Neo4j issues/videos/candidates)
-  intelSummary: (acId: string) => get<AcIntelSummary>(`/ac/${acId}/intel-summary`),
+  // Intelligence summary — 60s static (backend also Redis-caches at 60s)
+  intelSummary: (acId: string) => getStatic<AcIntelSummary>(`/ac/${acId}/intel-summary`),
 
-  // Election results (Form-20 ingested)
-  electionResults: (acId: string, year = 2022) => get<AcElectionResults>(`/ac/${acId}/election-results?year=${year}`),
+  // Election results — near-immutable, 60s cache
+  electionResults: (acId: string, year = 2022) => getStatic<AcElectionResults>(`/ac/${acId}/election-results?year=${year}`),
 
-  // Per-booth election rows (bulk)
-  boothElectionRows: (acId: string, year = 2022) => get<BoothElectionRowsResponse>(`/ac/${acId}/booth-election-rows?year=${year}`),
+  // Per-booth election rows (bulk) — near-immutable, 60s cache
+  boothElectionRows: (acId: string, year = 2022) => getStatic<BoothElectionRowsResponse>(`/ac/${acId}/booth-election-rows?year=${year}`),
 };
 
 // ── Types ─────────────────────────────────────────────────────────────────────

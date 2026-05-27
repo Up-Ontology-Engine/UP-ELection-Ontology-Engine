@@ -1,13 +1,17 @@
 from __future__ import annotations
+
 import os
 import sys
-from fastapi import APIRouter
+
 import sqlalchemy as sa
-from ..db import get_pg_engine, get_neo4j_driver, get_redis_client, get_async_pg_engine
-from ..validation import InputValidationRoute
+from fastapi import APIRouter
+
+from ..db import get_async_pg_engine, get_neo4j_driver, get_redis_client
 from ..schemas import HealthResponse
+from ..validation import InputValidationRoute
 
 router = APIRouter(route_class=InputValidationRoute)
+
 
 @router.get("/health", response_model=HealthResponse)
 async def health():
@@ -17,8 +21,10 @@ async def health():
         async with engine.connect() as conn:
             await conn.execute(sa.text("SELECT 1"))
         postgres_ok = True
-    except Exception:
-        pass
+    except Exception as e:
+        import traceback
+        print("Healthcheck Postgres error:")
+        traceback.print_exc()
 
     redis_ok = False
     try:
@@ -38,9 +44,7 @@ async def health():
         pass
 
     is_testing = "pytest" in sys.modules or os.environ.get("TESTING") == "true"
-    overall_status = "ok" if is_testing or (
-        postgres_ok and redis_ok and neo4j_ok
-    ) else "unhealthy"
+    overall_status = "ok" if is_testing or (postgres_ok and redis_ok and neo4j_ok) else "unhealthy"
 
     return {
         "status": overall_status,
