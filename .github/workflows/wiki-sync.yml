@@ -23,11 +23,8 @@ jobs:
           # Clone the wiki repository
           git clone "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.wiki.git" wiki_repo
           
-          # Clean existing files in the wiki clone (except .git)
-          find wiki_repo -maxdepth 1 -type f -not -name '.git*' -delete
-          
-          # Copy markdown files from docs/ to wiki_repo/
-          cp -r docs/*.md wiki_repo/
+          # Mirror docs/ into the wiki clone, preserving .git/ and removing stale files/directories
+          rsync -a --delete --exclude='.git/' docs/ wiki_repo/
           
           cd wiki_repo
           
