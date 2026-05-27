@@ -107,7 +107,7 @@ def _render_lean_distribution(df: pd.DataFrame) -> None:
     )
     lean_counts.columns = ["lean", "count"]
 
-    colors = [COLOR_MAP.get(l, "#8b949e") for l in lean_counts["lean"]]
+    colors = [COLOR_MAP.get(lean_lbl, "#8b949e") for lean_lbl in lean_counts["lean"]]
     fig = go.Figure(
         go.Bar(
             x=lean_counts["lean"],

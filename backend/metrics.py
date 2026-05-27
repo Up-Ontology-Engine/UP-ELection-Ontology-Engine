@@ -35,7 +35,6 @@ try:
     from prometheus_client import (
         CONTENT_TYPE_LATEST,
         REGISTRY,
-        CollectorRegistry,
         Counter,
         Gauge,
         Histogram,

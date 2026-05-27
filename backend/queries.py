@@ -1,4 +1,5 @@
 """All database queries for the FastAPI layer."""
+# ruff: noqa: E402
 
 from __future__ import annotations
 

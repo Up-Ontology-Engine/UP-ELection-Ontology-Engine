@@ -20,7 +20,7 @@ from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
 from slowapi.util import get_remote_address
 
-from .cache import clear_api_cache
+# ruff: noqa: E402
 from .db import get_async_pg_engine
 from .queries import init_beneficiary_tables, init_chat_tables
 from .routers import ac, booths, graph, health, reasoning

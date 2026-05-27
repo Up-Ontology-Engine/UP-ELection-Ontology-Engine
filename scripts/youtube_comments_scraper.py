@@ -18,13 +18,6 @@ try:
 except ImportError:
     GOOGLE_API_AVAILABLE = False
 
-try:
-    import requests
-    from bs4 import BeautifulSoup
-
-    WEB_SCRAPE_AVAILABLE = True
-except ImportError:
-    WEB_SCRAPE_AVAILABLE = False
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

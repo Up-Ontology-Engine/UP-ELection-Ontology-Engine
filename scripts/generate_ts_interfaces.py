@@ -1,4 +1,5 @@
 import sys
+import types
 from pathlib import Path
 
 # Add backend directory to path to import schemas
@@ -81,8 +82,6 @@ def pydantic_to_ts(model) -> str:
     lines.append("}\n")
     return "\n".join(lines)
 
-
-import types
 
 UnionType = getattr(types, "UnionType", None)
 

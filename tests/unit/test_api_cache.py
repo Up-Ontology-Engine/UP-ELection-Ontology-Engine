@@ -20,7 +20,7 @@ def mock_redis_globally():
     backend.db._redis_client = old_redis
 
 
-from backend.main import app
+from backend.main import app  # noqa: E402
 
 client = TestClient(app)
 

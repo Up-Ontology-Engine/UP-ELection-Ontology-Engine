@@ -244,7 +244,7 @@ def render(ac_id: str, ac_name: str, api_url: str) -> None:
 
     col3, col4 = st.columns([1, 3])
     with col3:
-        hops = st.selectbox("Graph depth (hops)", [1, 2], index=0)
+        st.selectbox("Graph depth (hops)", [1, 2], index=0)
     with col4:
         st.markdown("")
         explore = st.button("🔍 Explore Graph", type="primary", use_container_width=True)

@@ -1,1 +1,1 @@
-import pipeline
+import pipeline  # noqa: F401

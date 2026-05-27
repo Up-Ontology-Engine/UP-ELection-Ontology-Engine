@@ -2,6 +2,7 @@
 Gorakhpur Political Intelligence OS
 Entry point: streamlit run frontend/streamlit/app.py
 """
+# ruff: noqa: E402
 
 from __future__ import annotations
 

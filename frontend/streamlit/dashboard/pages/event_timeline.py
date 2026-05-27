@@ -178,7 +178,6 @@ def _render_timeline(events: list[dict]) -> None:
 
         meta = EVENT_TYPE_META.get(etype, EVENT_TYPE_META["other"])
         icon = meta["icon"]
-        color = meta["color"]
 
         si_color = {"positive": "#2ecc71", "negative": "#e74c3c", "mixed": "#f39c12"}.get(
             si, "#8b949e"
