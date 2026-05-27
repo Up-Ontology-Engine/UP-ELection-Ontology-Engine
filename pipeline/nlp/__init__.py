@@ -1,1 +1,1 @@
-from .pipeline import process_one, process_batch
+from .pipeline import process_batch, process_one

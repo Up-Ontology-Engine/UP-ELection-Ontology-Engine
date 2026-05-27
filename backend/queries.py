@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import functools
 from datetime import datetime, timezone
 
 from sqlalchemy import text
@@ -56,7 +55,7 @@ def get_booth_geo(ac_id: str) -> list[dict]:
 
 
 # ── Booth list for AC ─────────────────────────────────────────────────────────
-@functools.lru_cache(maxsize=32)
+@cached("cache:booth_list:{ac_id}", ttl=60)
 def get_booths_for_ac(ac_id: str) -> list[dict]:
     resolved = _rac(ac_id)
     with get_pg_engine().connect() as conn:

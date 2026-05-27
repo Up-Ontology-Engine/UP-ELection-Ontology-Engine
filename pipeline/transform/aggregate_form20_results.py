@@ -38,7 +38,7 @@ from sqlalchemy import text
 
 logger = logging.getLogger(__name__)
 
-DATA_DIR = Path(__file__).parents[1] / "data" / "Form20_JSON"
+DATA_DIR = Path(__file__).parents[2] / "data" / "Form20_JSON"
 
 # Manual overrides: (ac_id, OCR_name_upper, election_year) → canonical candidate_id
 # Use when the OCR name is too different from any candidate_master entry for fuzzy matching to work.

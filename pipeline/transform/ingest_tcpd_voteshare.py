@@ -41,7 +41,7 @@ load_dotenv()
 
 logger = logging.getLogger(__name__)
 
-CSV_PATH = Path(__file__).parents[1] / "data" / "voteshare" / "Uttar_Pradesh_AE.csv"
+CSV_PATH = Path(__file__).parents[2] / "data" / "voteshare" / "Uttar_Pradesh_AE.csv"
 AC_ID = "GKP_322"
 CONST_NO = 322
 DISTRICT = "GORAKHPUR"

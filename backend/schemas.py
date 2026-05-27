@@ -34,10 +34,38 @@ class BoothGeoResponse(BaseModel):
     geo: List[Dict[str, Any]]
 
 
+class VoterStats(BaseModel):
+    total: int
+    total_voters: int
+    male_voters: int
+    female_voters: int
+
+
+class IssueItem(BaseModel):
+    code: str
+    label: str
+    count: int
+
+
+class VideoItem(BaseModel):
+    title: str
+    url: Optional[str] = None
+    channel: Optional[str] = None
+
+
+class CandidateItem(BaseModel):
+    name: str
+    year: Optional[int] = None
+    candidate_id: str
+    is_incumbent: Optional[bool] = None
+    is_primary_opp: Optional[bool] = None
+    party: Optional[str] = None
+
+
 class IntelSummaryResponse(BaseModel):
     ac_id: str
-    postgres_status: str
-    neo4j_status: str
-    total_booths: int
-    total_voters: int
-    booth_details: List[Dict[str, Any]]
+    voter_stats: VoterStats
+    issues: List[IssueItem]
+    youtube_count: int
+    videos: List[VideoItem]
+    candidates: List[CandidateItem]

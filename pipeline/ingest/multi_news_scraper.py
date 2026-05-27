@@ -192,7 +192,6 @@ def _fetch_text(url: str, timeout: int = 15) -> str:
             return result
 
     # Plain urllib fallback
-
     _FALLBACK_HEADERS = {
         "User-Agent": (
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "

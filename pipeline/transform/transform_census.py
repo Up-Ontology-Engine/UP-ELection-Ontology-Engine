@@ -33,8 +33,8 @@ from sqlalchemy import text
 
 logger = logging.getLogger(__name__)
 
-DATA_DIR = Path(__file__).parents[1] / "data" / "data"
-SEEDS_DIR = Path(__file__).parents[1] / "data" / "seeds"
+DATA_DIR = Path(__file__).resolve().parents[2] / "data" / "data"
+SEEDS_DIR = Path(__file__).resolve().parents[2] / "data" / "seeds"
 
 
 # Subset of 96 columns we care about (mapped to our output names)

@@ -63,12 +63,25 @@ from typing import Any
 
 logger = logging.getLogger(__name__)
 
-ROOT = Path(__file__).parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 JSON_DIR = ROOT / "data" / "PoolBoothData_JSON"
 AC_DEFAULT = 322
 AC_NAME = "Gorakhpur City"
 AC_ID = f"GKP_{AC_DEFAULT}"
 
+try:
+    from dotenv import load_dotenv
+
+    load_dotenv(ROOT / ".env")
+except ImportError:
+    pass
+
+try:
+    import pipeline.compat
+
+    pipeline.compat.register()
+except ImportError:
+    pass
 
 # ── Make the loader importable ────────────────────────────────────────────────
 
@@ -78,6 +91,7 @@ def _setup_paths() -> None:
     root = str(ROOT)
     if root not in sys.path:
         sys.path.insert(0, root)
+    sys.path.insert(0, str(ROOT / "pipeline"))
     ddp_src = ROOT / "digital-democracy-pipeline" / "src"
     if ddp_src.is_dir():
         ddp_str = str(ddp_src)
@@ -169,6 +183,10 @@ def load_json_files(parts: list[int] | None = None) -> tuple[list[dict], list[di
             # Inject a serial_no if missing (position within the file)
             if not v.get("serial_no"):
                 v = {**v, "serial_no": idx + 1}
+            # Inject polling station name and address from metadata
+            v["polling_station_name"] = meta.get("polling_station_name", "")
+            v["address"] = meta.get("address", "")
+
             all_raw.append(v)
             all_ddp.append(transform_voter(v, ac_no, ac_name))
 
@@ -203,7 +221,9 @@ def run_postgres(raw_records: list[dict]) -> None:
     from backend.db import get_pg_engine
 
     # Aggregate by part_number
-    counts: dict[int, dict[str, int]] = defaultdict(lambda: {"M": 0, "F": 0, "O": 0})
+    counts: dict[int, dict[str, Any]] = defaultdict(
+        lambda: {"M": 0, "F": 0, "O": 0, "polling_station_name": "", "address": ""}
+    )
     for v in raw_records:
         part = int(v.get("part_number") or 0)
         if part == 0:
@@ -211,20 +231,28 @@ def run_postgres(raw_records: list[dict]) -> None:
         g = _norm_gender(v.get("gender"))
         counts[part][g] = counts[part].get(g, 0) + 1
 
+        # Take the non-empty polling station name/address from any record for this part
+        if v.get("polling_station_name") and not counts[part]["polling_station_name"]:
+            counts[part]["polling_station_name"] = v.get("polling_station_name")
+        if v.get("address") and not counts[part]["address"]:
+            counts[part]["address"] = v.get("address")
+
     logger.info("Updating booth_master for %d parts…", len(counts))
     engine = get_pg_engine()
 
     upsert_sql = text("""
         INSERT INTO booth_master
             (booth_id, ac_id, booth_number, male_voters, female_voters,
-             other_voters, total_voters)
+             other_voters, total_voters, polling_station_name, address)
         VALUES
-            (:booth_id, :ac_id, :booth_number, :male, :female, :other, :total)
+            (:booth_id, :ac_id, :booth_number, :male, :female, :other, :total, :polling_station_name, :address)
         ON CONFLICT (booth_id) DO UPDATE
             SET male_voters   = EXCLUDED.male_voters,
                 female_voters = EXCLUDED.female_voters,
                 other_voters  = EXCLUDED.other_voters,
-                total_voters  = EXCLUDED.total_voters
+                total_voters  = EXCLUDED.total_voters,
+                polling_station_name = EXCLUDED.polling_station_name,
+                address       = EXCLUDED.address
     """)
 
     rows_written = 0
@@ -241,6 +269,8 @@ def run_postgres(raw_records: list[dict]) -> None:
                     "female": g.get("F", 0),
                     "other": g.get("O", 0),
                     "total": g.get("M", 0) + g.get("F", 0) + g.get("O", 0),
+                    "polling_station_name": g.get("polling_station_name", ""),
+                    "address": g.get("address", ""),
                 },
             )
             rows_written += 1

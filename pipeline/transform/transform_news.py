@@ -29,7 +29,7 @@ from sqlalchemy import text
 
 logger = logging.getLogger(__name__)
 
-DATA_DIR = Path(__file__).parents[1] / "data" / "data"
+DATA_DIR = Path(__file__).resolve().parents[2] / "data" / "data"
 
 CSV_PATH = DATA_DIR / "Convert to xcel sheet" / "results-20260508043736 (3).csv"
 

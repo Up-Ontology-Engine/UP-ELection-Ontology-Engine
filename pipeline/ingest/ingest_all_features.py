@@ -30,12 +30,27 @@ from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
-ROOT = Path(__file__).parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 JSON_DIR = ROOT / "data" / "PoolBoothData_JSON"
 AC_ID = "GKP_322"
 AC_NO = 322
 
 sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT / "pipeline"))
+
+try:
+    from dotenv import load_dotenv
+
+    load_dotenv(ROOT / ".env")
+except ImportError:
+    pass
+
+try:
+    import pipeline.compat
+
+    pipeline.compat.register()
+except ImportError:
+    pass
 
 # ── Load & aggregate all voter records ───────────────────────────────────────
 
@@ -170,9 +185,15 @@ def step_booth_master(stats: dict[int, dict], engine, dry_run=False) -> int:
         rows.append(
             {
                 "booth_id": booth_id,
+                "ac_id": AC_ID,
+                "booth_number": part,
                 "station": station_name,
                 "locality": locality,
                 "panchayat_hint": panchayat,
+                "male": s["male"],
+                "female": s["female"],
+                "other": s["other"],
+                "total": s["total"],
             }
         )
 
@@ -181,12 +202,27 @@ def step_booth_master(stats: dict[int, dict], engine, dry_run=False) -> int:
             for r in rows:
                 conn.execute(
                     text("""
-                    UPDATE booth_master
-                       SET polling_station_name = COALESCE(NULLIF(polling_station_name,''), :station),
-                           locality_hint        = COALESCE(NULLIF(locality_hint,''), :locality),
-                           panchayat_hint       = COALESCE(NULLIF(panchayat_hint,''), :panchayat_hint),
-                           updated_at           = NOW()
-                     WHERE booth_id = :booth_id
+                    INSERT INTO booth_master (
+                        booth_id, ac_id, booth_number, polling_station_name,
+                        locality_hint, panchayat_hint,
+                        male_voters, female_voters, other_voters, total_voters,
+                        updated_at
+                    )
+                    VALUES (
+                        :booth_id, :ac_id, :booth_number, :station,
+                        :locality, :panchayat_hint,
+                        :male, :female, :other, :total,
+                        NOW()
+                    )
+                    ON CONFLICT (booth_id) DO UPDATE SET
+                        polling_station_name = COALESCE(NULLIF(booth_master.polling_station_name,''), EXCLUDED.polling_station_name),
+                        locality_hint        = COALESCE(NULLIF(booth_master.locality_hint,''), EXCLUDED.locality_hint),
+                        panchayat_hint       = COALESCE(NULLIF(booth_master.panchayat_hint,''), EXCLUDED.panchayat_hint),
+                        male_voters          = EXCLUDED.male_voters,
+                        female_voters        = EXCLUDED.female_voters,
+                        other_voters         = EXCLUDED.other_voters,
+                        total_voters         = EXCLUDED.total_voters,
+                        updated_at           = NOW()
                 """),
                     r,
                 )
@@ -195,7 +231,9 @@ def step_booth_master(stats: dict[int, dict], engine, dry_run=False) -> int:
         updated = len(rows)
 
     logger.info(
-        "Step booth_master: %d booths %s", updated, "would update" if dry_run else "updated"
+        "Step booth_master: %d booths %s",
+        updated,
+        "would update/insert" if dry_run else "updated/inserted",
     )
     return updated
 
@@ -388,9 +426,11 @@ def step_data_quality(stats: dict[int, dict], engine, dry_run=False) -> int:
 
 def step_booth_metrics(stats: dict[int, dict], engine, dry_run=False) -> int:
     """Seed booth_metrics for booths that have no pulse-event coverage yet.
-    Uses voter-count ratios to estimate a neutral BJp/Opp signal,
-    and marks data_confidence from the quality score.
+    Uses actual Form 20 voting data to estimate the baseline political pulse.
     """
+    import json
+    from pathlib import Path
+
     from sqlalchemy import text
 
     # Fetch booths already in booth_metrics
@@ -400,15 +440,47 @@ def step_booth_metrics(stats: dict[int, dict], engine, dry_run=False) -> int:
             for r in conn.execute(sa.text("SELECT DISTINCT booth_id FROM booth_metrics")).fetchall()
         }
 
+    # Load Form 20 Data
+    form20_path = (
+        Path(__file__).parent.parent.parent.parent / "data" / "Form20_JSON" / f"AC{AC_NO}.json"
+    )
+    form20_data = {}
+    if form20_path.exists():
+        try:
+            with open(form20_path, "r", encoding="utf-8") as f:
+                f20 = json.load(f)
+                if "sheets" in f20 and len(f20["sheets"]) > 0:
+                    for ps in f20["sheets"][0].get("polling_stations", []):
+                        ps_num = ps.get("polling_station_number")
+                        if ps_num is not None:
+                            form20_data[ps_num] = ps
+        except Exception as e:
+            logger.error(f"Error loading Form 20 data: {e}")
+
     now = datetime.now(timezone.utc)
     rows = []
-    total_voters_ac = sum(s["total"] for s in stats.values())
-    max_voters = max((s["total"] for s in stats.values()), default=1)
 
-    for part, s in sorted(stats.items()):
+    # Get a unified list of parts from both PoolBoothData and Form 20
+    all_parts = set(stats.keys()).union(set(form20_data.keys()))
+
+    for part in sorted(all_parts):
         booth_id = f"GKP_{AC_NO}_{part:03d}"
         if booth_id in covered:
             continue  # already has real signal, don't overwrite
+
+        s = stats.get(
+            part,
+            {
+                "total": 0,
+                "epic_ok": 0,
+                "epic_missing": 0,
+                "age_ok": 0,
+                "age_missing": 0,
+                "photo_ok": 0,
+            },
+        )
+
+        f20_ps = form20_data.get(part, {})
 
         total = s["total"]
         score, label, reasons = quality_score(
@@ -419,11 +491,43 @@ def step_booth_metrics(stats: dict[int, dict], engine, dry_run=False) -> int:
             s["photo_ok"],
             total,
         )
-        # Neutral signal — no ground truth yet
-        bjp_pulse = 0.0
-        opp_pulse = 0.0
-        digital_lean = 0.0
-        event_count = total  # treat each voter record as a census event
+
+        bjp_votes = 0
+        opp_votes = 0
+        total_votes = f20_ps.get("turnout_total", 0)
+
+        if "candidate_votes" in f20_ps:
+            # We look for BJP vs max(others)
+            other_votes = []
+            for cv in f20_ps["candidate_votes"]:
+                c_party = (cv.get("party") or "").upper().replace(".", "")
+                c_votes = cv.get("votes", 0)
+                if "BJP" in c_party:
+                    bjp_votes += c_votes
+                elif "NOTA" not in c_party:
+                    other_votes.append(c_votes)
+
+            if other_votes:
+                opp_votes = max(other_votes)
+
+        # Avoid division by zero
+        if total_votes == 0:
+            total_votes = bjp_votes + opp_votes
+
+        bjp_pulse = round(bjp_votes / max(total_votes, 1), 4)
+        opp_pulse = round(opp_votes / max(total_votes, 1), 4)
+        digital_lean = round(bjp_pulse - opp_pulse, 4)
+
+        if digital_lean > 0.1:
+            lean_label = "Lean BJP"
+        elif digital_lean < -0.1:
+            lean_label = "Lean Opp"
+        else:
+            lean_label = "Contested"
+
+        event_count = (
+            total_votes if total_votes > 0 else total
+        )  # Treat historical votes as events if present
 
         rows.append(
             {
@@ -433,7 +537,7 @@ def step_booth_metrics(stats: dict[int, dict], engine, dry_run=False) -> int:
                 "bjp_pulse_score": bjp_pulse,
                 "opp_pulse_score": opp_pulse,
                 "digital_lean": digital_lean,
-                "digital_lean_label": "NEUTRAL",
+                "digital_lean_label": lean_label,
                 "top_issue": "electoral_roll_coverage",
                 "issue_breakdown": json.dumps({"electoral_roll_coverage": total}),
                 "issue_momentum": json.dumps({}),
@@ -444,7 +548,11 @@ def step_booth_metrics(stats: dict[int, dict], engine, dry_run=False) -> int:
                 "last_computed_at": now,
                 "signal_consistency_score": score,
                 "has_contradiction": False,
-                "dominant_narrative": "Voter roll data loaded",
+                "dominant_narrative": (
+                    f"Form 20 Historical Turnout: {total_votes} votes"
+                    if total_votes > 0
+                    else "Voter roll data loaded"
+                ),
                 "narrative_strength": score,
                 "quality_score": score,
             }
@@ -696,6 +804,251 @@ def step_neo4j_ontology(dry_run=False) -> dict:
 # ── Print final summary ───────────────────────────────────────────────────────
 
 
+def step_candidate_master(engine, dry_run=False) -> dict:
+    """Parse MyNeta JSON data and populate Postgres tables and Neo4j Candidate nodes."""
+    import json
+    from pathlib import Path
+
+    from sqlalchemy import text
+
+    myneta_path = (
+        Path(__file__).parent.parent.parent.parent
+        / "data"
+        / "Myneta"
+        / f"myneta_GKP_{AC_NO}_2022.json"
+    )
+
+    stats = {"pg_candidate_master": 0, "pg_candidate_affidavits": 0, "neo4j_candidates": 0}
+
+    if not myneta_path.exists():
+        logger.warning(f"Myneta data not found at {myneta_path}")
+        return stats
+
+    try:
+        with open(myneta_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except Exception as e:
+        logger.error(f"Failed to read Myneta JSON: {e}")
+        return stats
+
+    candidates = data.get("candidates", [])
+    now = datetime.now(timezone.utc)
+
+    c_master_rows = []
+    c_affidavit_rows = []
+
+    for c in candidates:
+        cid = c.get("candidate_id")
+        if not cid:
+            continue
+
+        name = c.get("name")
+        party = c.get("party")
+        ac_id = c.get("ac_id")
+        election_year = c.get("election_year", 2022)
+
+        list_summary = c.get("list_summary", {})
+        education = list_summary.get("education")
+        age = list_summary.get("age")
+        assets = list_summary.get("total_assets", 0)
+        liabs = list_summary.get("liabilities", 0)
+        net_worth = assets - liabs
+        criminal_cases = list_summary.get("criminal_cases", 0)
+
+        aff = c.get("affidavit_detail", {})
+
+        c_master_rows.append(
+            {
+                "candidate_id": cid,
+                "name": name,
+                "party": party or "Unknown",
+                "ac_id": ac_id,
+                "election_year": election_year,
+                "source_candidate_id": str(c.get("source_candidate_id", "")),
+                "source_system": c.get("source", "myneta"),
+                "display_name": name,
+                "net_worth_rs": net_worth,
+            }
+        )
+
+        c_affidavit_rows.append(
+            {
+                "candidate_id": cid,
+                "election_year": election_year,
+                "total_assets": assets,
+                "total_liabilities": liabs,
+                "education": education,
+                "age": age,
+                "criminal_cases": criminal_cases,
+                "movable_assets_json": json.dumps(aff.get("movable_assets_json", [])),
+                "criminal_case_details_json": json.dumps(aff.get("criminal_case_details_json", [])),
+                "itr_income_json": json.dumps(aff.get("itr_income_json", [])),
+                "source_affidavit_url": aff.get("source_affidavit_url"),
+                "parse_status": aff.get("parse_status", "scraped"),
+                "scraped_at": data.get("scraped_at"),
+            }
+        )
+
+    if not dry_run:
+        with engine.begin() as conn:
+            # candidate_master
+            if c_master_rows:
+                stmt1 = text("""
+                    INSERT INTO candidate_master 
+                    (candidate_id, name, party, ac_id, election_year, source_candidate_id, source_system, display_name, net_worth_rs)
+                    VALUES (:candidate_id, :name, :party, :ac_id, :election_year, :source_candidate_id, :source_system, :display_name, :net_worth_rs)
+                    ON CONFLICT (candidate_id) DO UPDATE SET
+                    name = EXCLUDED.name, party = EXCLUDED.party, net_worth_rs = EXCLUDED.net_worth_rs
+                """)
+                for r in c_master_rows:
+                    conn.execute(stmt1, r)
+                stats["pg_candidate_master"] = len(c_master_rows)
+
+            # candidate_affidavits
+            if c_affidavit_rows:
+                stmt2 = text("""
+                    INSERT INTO candidate_affidavits
+                    (id, candidate_id, election_year, total_assets, total_liabilities, education, age, criminal_cases, movable_assets_json, criminal_case_details_json, itr_income_json, source_affidavit_url, parse_status, scraped_at)
+                    VALUES (gen_random_uuid(), :candidate_id, :election_year, :total_assets, :total_liabilities, :education, :age, :criminal_cases, :movable_assets_json, :criminal_case_details_json, :itr_income_json, :source_affidavit_url, :parse_status, :scraped_at)
+                    -- No conflict clause since we might just insert, but let's avoid duplicates by candidate_id+year? 
+                    -- Schema has no unique constraint, so we just insert. We'd rather not duplicate though.
+                """)
+                # Let's delete existing to avoid duplicates easily
+                conn.execute(
+                    text("DELETE FROM candidate_affidavits WHERE candidate_id IN :cids"),
+                    {"cids": tuple(c.get("candidate_id") for c in c_affidavit_rows)},
+                )
+                for r in c_affidavit_rows:
+                    conn.execute(stmt2, r)
+                stats["pg_candidate_affidavits"] = len(c_affidavit_rows)
+
+        # Neo4j Graph ingestion
+        with get_neo4j_session() as session:
+            for c in c_master_rows:
+                q = """
+                MERGE (cand:Candidate {id: $candidate_id})
+                SET cand.name = $name,
+                    cand.party = $party,
+                    cand.net_worth_rs = $net_worth_rs
+                
+                MERGE (ac:AssemblyConstituency {id: $ac_id})
+                MERGE (cand)-[:CONTESTED {year: $election_year}]->(ac)
+                """
+                session.run(
+                    q,
+                    candidate_id=c["candidate_id"],
+                    name=c["name"],
+                    party=c["party"],
+                    ac_id=c["ac_id"],
+                    election_year=c["election_year"],
+                    net_worth_rs=c["net_worth_rs"],
+                )
+            stats["neo4j_candidates"] = len(c_master_rows)
+
+    logger.info(f"Step candidate_master: inserted/updated {stats}")
+    return stats
+
+
+def step_voter_household_graph(engine, dry_run=False) -> dict:
+    import glob
+    import json
+    import os
+
+    from neo4j import GraphDatabase
+
+    neo4j_uri = os.environ.get("NEO4J_URI", "bolt://localhost:7687")
+    neo4j_user = os.environ.get("NEO4J_USER", "neo4j")
+    neo4j_pass = os.environ.get("NEO4J_PASSWORD", "password")
+
+    voter_count = 0
+
+    if dry_run:
+        return {"neo4j_voters": 0}
+
+    driver = GraphDatabase.driver(neo4j_uri, auth=(neo4j_user, neo4j_pass))
+
+    batch = []
+
+    def flush_batch(session):
+        nonlocal voter_count
+        if not batch:
+            return
+        query = """
+        UNWIND $batch AS v
+        MERGE (booth:PollingStation {id: v.booth_id})
+        ON CREATE SET booth.ac_number = v.ac_number, booth.part_number = v.part_number
+        MERGE (hh:Household {id: v.household_id})
+        MERGE (voter:Voter {id: v.voter_id})
+        ON CREATE SET 
+            voter.name = v.name,
+            voter.age = v.age,
+            voter.gender = v.gender,
+            voter.relation_name = v.relation_name
+        MERGE (voter)-[:BELONGS_TO]->(hh)
+        MERGE (voter)-[:VOTES_AT]->(booth)
+        """
+        session.run(query, batch=batch)
+        voter_count += len(batch)
+        batch.clear()
+
+    with driver.session() as session:
+        session.run("CREATE CONSTRAINT IF NOT EXISTS FOR (v:Voter) REQUIRE v.id IS UNIQUE")
+        session.run("CREATE CONSTRAINT IF NOT EXISTS FOR (h:Household) REQUIRE h.id IS UNIQUE")
+        session.run("CREATE CONSTRAINT IF NOT EXISTS FOR (p:PollingStation) REQUIRE p.id IS UNIQUE")
+
+        for file in glob.glob("data/PoolBoothData_JSON/*.json"):
+            with open(file, "r", encoding="utf-8") as f:
+                try:
+                    data = json.load(f)
+                    ac_number = (
+                        data.get("metadata", {}).get("assembly_constituency", {}).get("number")
+                    )
+                    part_number = data.get("metadata", {}).get("part_number")
+
+                    if not ac_number or not part_number:
+                        continue
+
+                    booth_id = f"{ac_number}_{part_number}"
+
+                    for v in data.get("voter_records", []):
+                        house_number = str(v.get("house_number", "")).strip()
+                        voter_id = v.get("voter_id")
+
+                        if not voter_id:
+                            continue
+
+                        if not house_number:
+                            house_number = "UNKNOWN"
+
+                        household_id = f"{booth_id}_{house_number}"
+
+                        batch.append(
+                            {
+                                "voter_id": voter_id,
+                                "household_id": household_id,
+                                "booth_id": booth_id,
+                                "ac_number": ac_number,
+                                "part_number": part_number,
+                                "name": v.get("name"),
+                                "age": v.get("age"),
+                                "gender": v.get("gender"),
+                                "relation_name": v.get("relation_name"),
+                            }
+                        )
+
+                        if len(batch) >= 2000:
+                            flush_batch(session)
+
+                except Exception as e:
+                    logger.error(f"Failed to parse {file} for Neo4j Graph: {e}")
+
+        flush_batch(session)
+
+    driver.close()
+    logger.info(f"Step voter_household_graph: upserted {voter_count} voters in Neo4j")
+    return {"neo4j_voters": voter_count}
+
+
 def print_summary(engine, neo4j_stats: dict) -> None:
     print("\n" + "=" * 62)
     print("  INGESTION SUMMARY")
@@ -737,6 +1090,7 @@ def main() -> None:
             "ac_metrics",
             "panchayat",
             "ontology",
+            "candidate",
         ],
     )
     parser.add_argument("-v", "--verbose", action="store_true")
@@ -774,7 +1128,15 @@ def main() -> None:
         step_panchayat_mapping(stats, engine, dry_run=args.dry_run)
 
     if run_all or args.step == "ontology":
-        neo4j_stats = step_neo4j_ontology(dry_run=args.dry_run)
+        neo4j_stats.update(step_voter_household_graph(engine, dry_run=args.dry_run))
+
+    if run_all or args.step == "candidate":
+        candidate_stats = step_candidate_master(engine, dry_run=args.dry_run)
+        neo4j_stats.update(candidate_stats)
+
+    if run_all or args.step == "ontology":
+        ontology_stats = step_neo4j_ontology(dry_run=args.dry_run)
+        neo4j_stats.update(ontology_stats)
 
     if not args.dry_run:
         print_summary(engine, neo4j_stats)

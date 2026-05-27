@@ -71,10 +71,8 @@ _ensure_ddp_importable()
 
 # DDP backend logic, reused verbatim so identity/family/normalization match upstream.
 from digital_democracy_pipeline import ontology  # noqa: E402
-
-# noqa: E402
 from digital_democracy_pipeline.entity_resolution import best_name_match  # noqa: E402
-from digital_democracy_pipeline.voter_graph import (
+from digital_democracy_pipeline.voter_graph import (  # noqa: E402
     _CORESIDENCE_HOUSEHOLD_CAP,
     _norm_name,
 )

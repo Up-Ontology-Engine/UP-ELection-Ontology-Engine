@@ -25,7 +25,7 @@ from pathlib import Path
 logger = logging.getLogger(__name__)
 
 # ── directories (resolved relative to repo root) ─────────────────────────────
-_BASE = Path(__file__).resolve().parents[1] / "data" / "Digital_Dataset" / "Youtube"
+_BASE = Path(__file__).resolve().parents[2] / "data" / "Digital_Dataset" / "Youtube"
 VIDEOS_RAW_DIR = _BASE / "videos" / "raw"
 VIDEOS_PROC_DIR = _BASE / "videos" / "processed"
 VIDEOS_META_DIR = _BASE / "videos" / "metadata"
@@ -33,7 +33,7 @@ COMMENTS_RAW_DIR = _BASE / "comments" / "raw"
 COMMENTS_PROC_DIR = _BASE / "comments" / "processed"
 COMMENTS_BY_VID_DIR = _BASE / "comments" / "by_video"
 ANALYSIS_DIR = _BASE / "analysis"
-CACHE_DIR = Path(__file__).resolve().parents[1] / "data" / "yt_cache"
+CACHE_DIR = Path(__file__).resolve().parents[2] / "data" / "yt_cache"
 
 for _d in (
     VIDEOS_RAW_DIR,
