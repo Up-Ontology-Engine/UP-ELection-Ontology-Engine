@@ -480,8 +480,7 @@ export default function HeatMapClient({ coverage }: Props) {
   const [search,   setSearch]   = useState("");
 
   const booths: GraphCoverageBooth[] = useMemo(() => {
-    const raw = coverage?.booths ?? [];
-    return raw.filter((b) => b.lat !== null && b.lon !== null);
+    return coverage?.booths ?? [];
   }, [coverage]);
 
   const total       = booths.length;
