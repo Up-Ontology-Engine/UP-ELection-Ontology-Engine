@@ -17,6 +17,7 @@ from ..queries import (
     get_ac_quality,
     get_ac_recommendations,
     get_ac_schemes,
+    get_all_acs,
     get_booth_geo,
     get_conversion_overview,
     get_conversion_stats,
@@ -36,6 +37,12 @@ from ..validation import InputValidationRoute
 router = APIRouter(route_class=InputValidationRoute)
 
 
+@router.get("/acs")
+def list_acs():
+    """List all available Assembly Constituencies."""
+    return {"acs": get_all_acs()}
+
+
 @router.get("/ac/{ac_id}/conversion-overview", response_model=ConversionOverviewResponse)
 def conversion_overview(ac_id: str):
     """Per-booth beneficiary + conversion funnel stats — powers the main dashboard."""
@@ -50,8 +57,11 @@ def conversion_stats(ac_id: str):
 
 
 @router.get("/ac/{ac_id}/candidates", response_model=CandidateResponse)
-def ac_candidates(ac_id: str):
-    return {"ac_id": ac_id, "candidates": get_ac_candidates(_rac(ac_id))}
+def ac_candidates(ac_id: str, limit: int = Query(100, ge=1, le=500), offset: int = Query(0, ge=0)):
+    return {
+        "ac_id": ac_id,
+        "candidates": get_ac_candidates(_rac(ac_id), limit=limit, offset=offset),
+    }
 
 
 @router.get("/ac/{ac_id}/schemes", response_model=SchemeResponse)

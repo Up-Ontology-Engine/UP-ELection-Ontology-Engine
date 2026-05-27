@@ -175,8 +175,9 @@ Every field is backed by real data: ECI booth master (PoolBoothData PDF→JSON, 
 ## Data — What's Real
 
 ### Electoral Roll (PoolBoothData_JSON)
-- **179 voter roll parts** (Parts 1–190, 11 skipped) from 2026 SIR Revision of AC-322
-- **1,14,326 registered voters** with gender + age breakdown per booth
+- **Status: Partial Ingestion (179 out of 471 parts completed)** 
+- Currently tracking **1,14,326 registered voters** with gender + age breakdown per booth (for the 179 processed booths).
+- The remaining 292 booths are in `booth_master` but have 0 voters until their PDFs are run through `pdf_to_json.py`.
 - Fields: `voter_id`, `name`, `age`, `gender`, `photo_flag`, `epic_id`
 - Ingested by `ingestion/ingest_poolboothdata.py` → Postgres `booth_master` + Neo4j
 

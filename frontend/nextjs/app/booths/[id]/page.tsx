@@ -95,6 +95,12 @@ export default async function BoothDetailPage({ params }: Props) {
             <p className="text-xs mono" style={{ color: "var(--text-3)" }}>
               {summary.ac_name} · AC-322 · ID: {id}
             </p>
+            {summary.address && (
+              <p className="text-xs mt-1.5 flex items-start gap-1" style={{ color: "var(--text-2)", maxWidth: "500px" }}>
+                <span className="font-bold opacity-70">Address:</span> 
+                <span className="truncate">{summary.address}</span>
+              </p>
+            )}
           </div>
           <div className="flex items-center gap-2 flex-wrap">
             <LeanBadge label={summary.digital_pulse.lean_label} />

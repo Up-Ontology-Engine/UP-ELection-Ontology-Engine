@@ -133,6 +133,7 @@ def booth_summary(booth_id: str, days: int = Query(7, ge=1, le=365)):
         "booth_id": booth_id,
         "booth_number": meta.get("booth_number"),
         "name": meta.get("polling_station_name"),
+        "address": meta.get("address"),
         "ac_name": os.environ.get("PILOT_AC_NAME", "Gorakhpur Urban"),
         "total_voters": meta.get("total_voters"),
         "male_voters": meta.get("male_voters"),
