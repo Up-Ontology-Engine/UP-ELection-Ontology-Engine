@@ -25,7 +25,7 @@ If applicable, add screenshots to help explain your problem.
 
 **Environment (please complete the following info):**
  - OS: [e.g. Windows, macOS, Linux]
- - Browser [e.g. chrome, safari]
+ - Browser: [e.g. Chrome, Safari]
  - Python Version: [e.g. 3.11]
  - DB/Ontology backend version: [e.g. Postgres 16, Neo4j 5]
 
