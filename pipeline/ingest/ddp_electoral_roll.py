@@ -42,8 +42,8 @@ from sqlalchemy import text
 
 logger = logging.getLogger(__name__)
 
-DATA_DIR = Path(__file__).parents[1] / "data" / "data" / "Raw file"
-RUNS_DIR = Path(__file__).parents[1] / "data" / "ddp_runs"
+DATA_DIR = Path(__file__).parents[2] / "data" / "data" / "Raw file"
+RUNS_DIR = Path(__file__).parents[2] / "data" / "ddp_runs"
 
 ELECTORAL_ROLL_PDFS = [
     (DATA_DIR / "2026-EROLLGEN-S24-322-SIR-FinalRoll-Revision1-HIN-2-WI-3-10 (2).pdf", 322),

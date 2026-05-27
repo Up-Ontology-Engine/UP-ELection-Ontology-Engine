@@ -31,7 +31,7 @@ import time
 from pathlib import Path
 
 # ── Bootstrap: load .env before any project imports ──────────────────────────
-_REPO_ROOT = Path(__file__).parent
+_REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(_REPO_ROOT))
 
 try:
@@ -40,6 +40,14 @@ try:
     load_dotenv(_REPO_ROOT / ".env")
 except ImportError:
     pass  # python-dotenv not installed; env must be set externally
+
+try:
+    import pipeline.compat
+
+    pipeline.compat.register()
+except ImportError:
+    pass
+
 
 # ── ANSI colour helpers ───────────────────────────────────────────────────────
 _NO_COLOR = not sys.stdout.isatty() or os.environ.get("NO_COLOR")

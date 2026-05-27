@@ -25,7 +25,7 @@ from sqlalchemy import text
 
 logger = logging.getLogger(__name__)
 
-DATA_DIR = Path(__file__).parents[1] / "data" / "data"
+DATA_DIR = Path(__file__).resolve().parents[2] / "data" / "data"
 
 AC_NUMBER = 322  # Gorakhpur Urban — pilot scope
 AC_ID = "GKP_322"

@@ -16,7 +16,7 @@ from pathlib import Path
 import openpyxl
 import xlrd
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 INPUT_DIR = BASE_DIR / "data" / "Form 20 Gorakhpur Data"
 OUTPUT_DIR = BASE_DIR / "data" / "Form20_JSON"
 

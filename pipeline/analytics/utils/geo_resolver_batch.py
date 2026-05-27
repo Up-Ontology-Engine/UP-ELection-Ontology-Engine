@@ -34,7 +34,7 @@ load_dotenv()
 
 logger = logging.getLogger(__name__)
 
-ALIAS_FILE = Path(__file__).parents[1] / "data" / "seeds" / "gorakhpur_aliases.json"
+ALIAS_FILE = Path(__file__).parents[2] / "data" / "seeds" / "gorakhpur_aliases.json"
 BOOTH_THRESHOLD = 0.75  # minimum geo_confidence to assign mapped_booth_id
 PILOT_AC_ID = "GKP_322"
 BATCH_SIZE = 500

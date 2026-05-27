@@ -83,7 +83,7 @@ LOK_SABHA: dict[int, tuple[str, str, str, int | None]] = {
 }
 
 # Raw snapshot storage for debugging failed parses
-HTML_SNAPSHOT_DIR = Path(__file__).parents[1] / "data" / "raw" / "myneta_html"
+HTML_SNAPSHOT_DIR = Path(__file__).parents[2] / "data" / "raw" / "myneta_html"
 
 EDUCATION_RANK = {
     "10th pass": 1,

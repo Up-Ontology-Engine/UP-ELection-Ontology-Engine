@@ -8,7 +8,7 @@ import json
 import re
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parents[1]
+BASE_DIR = Path(__file__).resolve().parents[2]
 JSON_DIR = BASE_DIR / "data" / "PoolBoothData_JSON"
 
 _NAME_LABEL_ARTIFACT_RE = re.compile(

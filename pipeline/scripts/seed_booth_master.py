@@ -10,7 +10,7 @@ import sqlalchemy as sa
 from sqlalchemy import text
 
 DATA_CSV = os.path.join(
-    os.path.dirname(__file__), "..", "data", "seeds", "booth_master_gorakhpur_urban.csv"
+    os.path.dirname(__file__), "..", "..", "data", "seeds", "booth_master_gorakhpur_urban.csv"
 )
 
 

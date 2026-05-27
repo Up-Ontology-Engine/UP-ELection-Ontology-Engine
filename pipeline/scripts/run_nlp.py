@@ -6,7 +6,20 @@ Usage:
     python run_nlp_direct.py [--batch 500]
 """
 
-from __future__ import annotations
+import sys
+from pathlib import Path
+
+# ── Bootstrap: load .env and setup sys.path before any imports ────────────────
+_REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+sys.path.insert(0, str(_REPO_ROOT))
+sys.path.insert(0, str(_REPO_ROOT / "pipeline"))
+
+try:
+    from dotenv import load_dotenv
+
+    load_dotenv(_REPO_ROOT / ".env")
+except ImportError:
+    pass
 
 import argparse
 import json as _json
@@ -15,10 +28,8 @@ import os
 from typing import Any
 
 import sqlalchemy as sa
-from dotenv import load_dotenv
 from sqlalchemy import text
 
-load_dotenv()
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
 

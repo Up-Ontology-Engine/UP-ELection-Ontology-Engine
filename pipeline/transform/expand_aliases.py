@@ -25,7 +25,7 @@ from sqlalchemy import text
 
 logger = logging.getLogger(__name__)
 
-ALIAS_FILE = Path(__file__).parents[1] / "data" / "seeds" / "gorakhpur_aliases.json"
+ALIAS_FILE = Path(__file__).parents[2] / "data" / "seeds" / "gorakhpur_aliases.json"
 AC_ID = "GKP_322"
 
 

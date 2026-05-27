@@ -33,7 +33,7 @@ from sqlalchemy import text
 load_dotenv()
 logger = logging.getLogger(__name__)
 
-DATA_DIR = Path(__file__).parents[1] / "data" / "PoolBoothData_JSON"
+DATA_DIR = Path(__file__).parents[2] / "data" / "PoolBoothData_JSON"
 
 
 def _build_booth_id(ac_number: int, part_number: int) -> str:

@@ -21,7 +21,7 @@ from PIL import Image
 
 pytesseract.pytesseract.tesseract_cmd = "/opt/homebrew/bin/tesseract"
 
-BASE_DIR = Path(__file__).resolve().parents[1]
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 INPUT_DIR = BASE_DIR / "data" / "PoolBoothData"
 OUTPUT_DIR = BASE_DIR / "data" / "PoolBoothData_JSON"
 LOG_FILE = BASE_DIR / "scripts" / "pdf_to_json.log"
@@ -201,6 +201,11 @@ PUB_DATE_RE = re.compile(r"प्रकाशन की तिथि\s*[:।]\s*
 REVISION_RE = re.compile(r"पुनरीक्षण का प्रकार\s*[:।]\s*(.+?)(?:\n|$)")
 RESERVATION_RE = re.compile(r"\((सामान्य|अनुसूचित जाति|अनुसूचित जनजाति|अन्य पिछड़ा वर्ग)\)")
 
+POLLING_STATION_RE = re.compile(
+    r"मतदान (?:केन्द्र|स्थल).+?नाम\s*[:।]\s*(?:(?:\d+[-—\s]*)*)(.+?)(?:\n|$)"
+)
+ADDRESS_RE = re.compile(r"मतदान (?:केन्द्र|स्थल) का [पुूरा]+ पता\s*[:।]\s*(.+?)(?:\n|$)")
+
 
 def normalize_voter_id(raw: str) -> str:
     """Normalize a voter ID: uppercase and fix common OCR digit/letter swaps."""
@@ -314,6 +319,22 @@ def parse_header(text: str) -> dict:
     rev = REVISION_RE.search(text)
     if rev:
         meta["revision_type"] = translate_place(rev.group(1).strip())
+
+    # Polling station name
+    ps = POLLING_STATION_RE.search(text)
+    if ps:
+        hi_name = ps.group(1).strip()
+        meta["polling_station_name"] = translate_place(hi_name)
+    else:
+        meta["polling_station_name"] = "Unknown Polling Station"
+
+    # Address
+    addr = ADDRESS_RE.search(text)
+    if addr:
+        hi_addr = addr.group(1).strip()
+        meta["address"] = translate_place(hi_addr)
+    else:
+        meta["address"] = "Unknown Address"
 
     return meta
 

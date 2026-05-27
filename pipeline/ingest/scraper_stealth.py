@@ -185,7 +185,6 @@ class StealthSession:
         Fetch URL with stealth headers.  Returns decoded HTML or None on failure.
         Retries on 429 / 5xx with exponential backoff.
         """
-
         self._polite_wait()
         headers = _build_headers(extra_headers)
 

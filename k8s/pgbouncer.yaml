@@ -42,6 +42,8 @@ spec:
               value: "gorakhpur_db"
             - name: POOL_MODE
               value: "transaction"
+            - name: AUTH_TYPE
+              value: "scram-sha-256"
             - name: MAX_CLIENT_CONN
               value: "1000"
             - name: DEFAULT_POOL_SIZE
@@ -50,6 +52,18 @@ spec:
               value: "5"
             - name: RESERVE_POOL_SIZE
               value: "5"
+            - name: SERVER_IDLE_TIMEOUT
+              value: "120"
+            - name: SERVER_LIFETIME
+              value: "1800"
+            - name: CLIENT_IDLE_TIMEOUT
+              value: "120"
+            - name: QUERY_TIMEOUT
+              value: "300"
+            - name: SERVER_RESET_QUERY
+              value: "DEALLOCATE ALL"
+            - name: LISTEN_PORT
+              value: "6432"
           readinessProbe:
             tcpSocket:
               port: 6432

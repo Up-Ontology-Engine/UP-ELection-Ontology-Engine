@@ -233,9 +233,23 @@ export interface Candidate {
   name: string;
   party: string;
   election_year: number;
-  votes: number | null;
-  vote_share: number | null;
-  winner_flag: boolean;
+  is_incumbent?: boolean;
+  is_primary_opp?: boolean;
+  net_worth_rs?: number;
+  self_profession?: string;
+  criminal_cases?: number;
+  serious_cases?: number;
+  total_assets?: string;
+  total_liabilities?: string;
+  education?: string;
+  age?: number;
+  total_votes?: number;
+  vote_share_pct?: number;
+  rank?: number;
+  is_winner?: boolean;
+  sentiment_score?: number;
+  mention_count?: number;
+  history_json?: any;
 }
 
 export interface GeoRow {
