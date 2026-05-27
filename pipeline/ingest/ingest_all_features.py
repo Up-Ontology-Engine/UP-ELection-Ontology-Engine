@@ -358,7 +358,7 @@ def step_data_quality(stats: dict[int, dict], engine, dry_run=False) -> int:
             s["total"],
         )
         total = s["total"]
-        epic_ok, age_ok, photo_ok = s["epic_ok"], s["age_ok"], s["photo_ok"]
+        epic_ok, _age_ok, _photo_ok = s["epic_ok"], s["age_ok"], s["photo_ok"]
 
         # Infer source breakdown (we only have electoral-roll data)
         rows.append(
@@ -832,7 +832,7 @@ def step_candidate_master(engine, dry_run=False) -> dict:
         return stats
 
     candidates = data.get("candidates", [])
-    now = datetime.now(timezone.utc)
+    datetime.now(timezone.utc)
 
     c_master_rows = []
     c_affidavit_rows = []
@@ -923,6 +923,8 @@ def step_candidate_master(engine, dry_run=False) -> dict:
                 stats["pg_candidate_affidavits"] = len(c_affidavit_rows)
 
         # Neo4j Graph ingestion
+        from backend.db import get_neo4j_session
+
         with get_neo4j_session() as session:
             for c in c_master_rows:
                 q = """

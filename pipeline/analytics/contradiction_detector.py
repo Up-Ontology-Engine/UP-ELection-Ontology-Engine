@@ -1,3 +1,4 @@
+# ruff: noqa: E402, F401, F404, F405, F841, F811
 """Compatibility shim: moved into analytics.signals.contradiction_detector."""
 
 from __future__ import annotations

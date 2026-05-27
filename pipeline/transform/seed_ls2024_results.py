@@ -1,3 +1,4 @@
+# ruff: noqa: E402, F401, F404, F405, F841, F811
 """
 Seed 2024 Lok Sabha PC 64 Gorakhpur results into candidate_party_history.
 

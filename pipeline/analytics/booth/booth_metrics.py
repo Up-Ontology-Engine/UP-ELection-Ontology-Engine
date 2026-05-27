@@ -90,7 +90,9 @@ def compute_booth_metrics(engine: sa.Engine, window_days: int = 7):
 
         metrics_rows = []
         for booth_id, events in booth_events.items():
-            sw = lambda e: SOURCE_WEIGHTS.get(e["source_type"], 0.5)
+
+            def sw(e):
+                return SOURCE_WEIGHTS.get(e["source_type"], 0.5)
 
             bjp_weighted = sum(
                 e["final_polarity"] * e["final_confidence"] * sw(e)

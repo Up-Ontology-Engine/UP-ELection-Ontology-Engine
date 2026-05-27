@@ -21,7 +21,7 @@ def parse_form20_xls(file_path):
         ac_num = "".join(filter(str.isdigit, os.path.basename(file_path)))
         if not ac_num:
             ac_num = "322"
-    except:
+    except Exception:
         ac_num = "322"
 
     df = pd.read_excel(file_path, skiprows=6, header=None)
@@ -30,7 +30,7 @@ def parse_form20_xls(file_path):
     booth_results_data = []
 
     # Candidate names are in row 4 (index 3)
-    header_row = pd.read_excel(file_path, skiprows=3, nrows=1, header=None).iloc[0]
+    pd.read_excel(file_path, skiprows=3, nrows=1, header=None).iloc[0]
 
     for _, row in df.iterrows():
         part_no_raw = row[1]
@@ -53,7 +53,7 @@ def parse_form20_xls(file_path):
             total_electors = int(float(row[3]))
             male_voters = int(float(row[4]))
             female_voters = int(float(row[5]))
-        except:
+        except Exception:
             pass
 
         booth_master_data.append(
@@ -89,7 +89,7 @@ def parse_form20_xls(file_path):
 
             try:
                 votes = int(float(votes_raw))
-            except:
+            except Exception:
                 votes = 0
 
             party = party_map.get(party_raw.strip(), party_raw.strip())

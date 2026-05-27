@@ -220,7 +220,7 @@ def show_collection(collector):
                 print(f"   Source: {article['source']}")
                 print(f"   Published: {article['published'][:10]}")
                 print(f"   URL: {article['url'][:70]}")
-        except:
+        except Exception:
             pass
 
 

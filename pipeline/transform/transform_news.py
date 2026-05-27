@@ -92,7 +92,7 @@ def load_news_articles(engine: sa.Engine) -> int:
             source = _domain_to_source(url)
             published = row["Date"] if pd.notna(row["Date"]) else None
             content_hash = hashlib.sha256((url + title).encode()).hexdigest()[:64]
-            weight = DEFAULT_SOURCE_WEIGHT.get(source, 0.6)
+            DEFAULT_SOURCE_WEIGHT.get(source, 0.6)
 
             try:
                 conn.execute(

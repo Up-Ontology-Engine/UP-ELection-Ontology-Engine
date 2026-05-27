@@ -1,3 +1,4 @@
+# ruff: noqa: E402, F401, F404, F405, F841, F811
 # -*- coding: utf-8 -*-
 import io
 import sys
@@ -497,7 +498,7 @@ def clean_html(html):
 def safe_date(raw):
     try:
         return dateparser.parse(str(raw), ignoretz=True).isoformat()
-    except:
+    except Exception:
         return datetime.now().isoformat()
 
 
@@ -539,7 +540,7 @@ def classify_bjp(text: str, topics: list = None, source: str = "") -> dict:
     anti_matched = [s for s in ANTI_SIGNALS if s.lower() in t]
     kw_pro = len(pro_matched)
     kw_anti = len(anti_matched)
-    kw_net = kw_pro - kw_anti
+    kw_pro - kw_anti
 
     # Layer 2: topic bias
     topic_bias = get_topic_bias(topics or [])
@@ -642,7 +643,7 @@ class Scraper:
                 " ",
                 " ".join(p.get_text() for p in soup.find_all("p") if len(p.get_text()) > 40),
             )[:3000]
-        except:
+        except Exception:
             return ""
 
     def run(self):

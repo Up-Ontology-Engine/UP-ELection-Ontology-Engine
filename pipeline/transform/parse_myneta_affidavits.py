@@ -96,7 +96,11 @@ def parse_header(soup: BeautifulSoup) -> dict:
 
     prof_p = panel.find("p")
     if prof_p:
-        lines = [_clean(l) for l in prof_p.get_text("\n").split("\n") if l.strip()]
+        lines = [
+            _clean(line_item)
+            for line_item in prof_p.get_text("\n").split("\n")
+            if line_item.strip()
+        ]
         for line in lines:
             if line.startswith("Self Profession:"):
                 out["self_profession"] = line.replace("Self Profession:", "").strip()

@@ -67,16 +67,10 @@ PARTY_NORM: dict[str, str] = {
     "INDEPENDENT CANDIDATE": "IND",
     "IND": "IND",
     # Common BJP spellings / OCR variants
-    "BHARATIYA JANTA PARTY": "BJP",  # missing 'A' in JANATA — very common
-    "BHARATIYA JANATA PARTY": "BJP",
+    "BHARATIYA JANTA PARTY": "BJP",
     "B J P": "BJP",
-    "B.J.P": "BJP",
-    "B.J.P.": "BJP",
     # Common BSP OCR artifacts (space-separated)
     "B A S P": "BSP",
-    "B.S.P": "BSP",
-    "B.S.P.": "BSP",
-    "BAHUJAN SAMAJ PARTY": "BSP",
     # Common SP / AAP OCR artifacts
     "A A P": "AAP",
     "A.A.P": "AAP",

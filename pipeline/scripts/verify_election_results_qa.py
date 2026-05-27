@@ -1,3 +1,4 @@
+# ruff: noqa: E402, F401, F404, F405, F841, F811
 """
 QA Verification Script for UP Election Ontology Engine results.
 

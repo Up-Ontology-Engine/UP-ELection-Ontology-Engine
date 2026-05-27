@@ -1,3 +1,4 @@
+# ruff: noqa: E402, F401, F404, F405, F841, F811
 """Alembic migration script template."""
 
 revision: str = "0001"

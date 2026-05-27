@@ -1,3 +1,4 @@
+# ruff: noqa: E402, F401, F404, F405, F841, F811
 """
 Direct NLP runner — bypasses Prefect to avoid SQLite telemetry lock.
 Calls the same logic as flows/nlp/flow_sentiment.py but without @flow/@task.

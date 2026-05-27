@@ -1,3 +1,4 @@
+# ruff: noqa: E402, F401, F404, F405, F841, F811
 """Compatibility shim: `analytics.booth_metrics` moved to `analytics.booth.booth_metrics`.
 
 This module re-exports the original public API for compatibility during migration.

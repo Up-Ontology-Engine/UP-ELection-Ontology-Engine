@@ -431,16 +431,16 @@ def main():
     # Ask user for target
     try:
         target = int(input("How many articles to collect? (default: 500): ").strip() or "500")
-    except:
+    except Exception:
         target = 500
 
     try:
         per_feed = int(input("Articles per feed? (default: 100): ").strip() or "100")
-    except:
+    except Exception:
         per_feed = 100
 
     # Scrape
-    articles = collector.scrape_all(articles_per_feed=per_feed, target=target)
+    collector.scrape_all(articles_per_feed=per_feed, target=target)
 
     # Show summary
     collector.print_summary()

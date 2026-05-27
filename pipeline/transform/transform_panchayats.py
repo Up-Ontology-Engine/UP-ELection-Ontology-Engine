@@ -42,7 +42,7 @@ def load_panchayat_master(engine: sa.Engine) -> int:
     with open(path, encoding="utf-8") as f:
         data = json.load(f)
 
-    overview = data.get("district_overview", {})
+    data.get("district_overview", {})
     block_counts: dict[str, int] = data.get("block_wise_gram_panchayats", {})
     sample = data.get("sample_panchayat", {})
 
