@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { GraphNode, GraphEdge, api, Candidate } from "@/lib/api";
+import { GraphNode, GraphEdge, api, Candidate, AcRow } from "@/lib/api";
 import { useTheme } from "@/components/ThemeProvider";
 import GraphCanvas from "../graph/GraphCanvas";
 import CandidateDialogue from "./CandidateDialogue";
@@ -42,9 +42,13 @@ function fmtRs(n: number | null | undefined): string {
 export default function MyNetaPage() {
   const { theme } = useTheme();
   const [acId, setAcId] = useState("258"); // Default AC for demonstration
+  const [acs, setAcs] = useState<AcRow[]>([]);
   const [candidates, setCandidates] = useState<Candidate[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [page, setPage] = useState(0);
+  const [hasMore, setHasMore] = useState(false);
+  const limit = 100;
   
   const [selected, setSelected] = useState<GraphNode | null>(null);
   const [dossier, setDossier] = useState<GraphNode | null>(null);
@@ -52,16 +56,27 @@ export default function MyNetaPage() {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    setLoading(true);
-    api.candidates(acId)
+    api.acs().then((res) => setAcs(res.acs)).catch(() => {});
+  }, []);
+
+  useEffect(() => {
+    let active = true;
+    api.candidates(acId, limit, page * limit)
       .then((res) => {
+        if (!active) return;
         setCandidates(res.candidates);
+        setHasMore(res.candidates.length === limit);
         setCanvasKey((k) => k + 1);
         setError("");
       })
-      .catch((err) => setError(err.message || "Failed to load candidates"))
-      .finally(() => setLoading(false));
-  }, [acId]);
+      .catch((err) => {
+        if (active) setError(err.message || "Failed to load candidates");
+      })
+      .finally(() => {
+        if (active) setLoading(false);
+      });
+    return () => { active = false; };
+  }, [acId, page]);
 
   // Dynamically build graph elements from live API Candidate data
   const { graph, partyDist, topAssets, criminalFlagged } = useMemo(() => {
@@ -84,7 +99,7 @@ export default function MyNetaPage() {
         id: c.candidate_id,
         label: c.name,
         type: "Candidate",
-        properties: { ...c as any, ac_name: acId, election_year: c.election_year || 2022 }
+        properties: { ...(c as unknown as Record<string, unknown>), ac_name: acId, election_year: c.election_year || 2022 }
       });
 
       edges.push({
@@ -147,9 +162,30 @@ export default function MyNetaPage() {
             </div>
             <h1 className="text-sm font-bold" style={{ color: S.t1 }}>My Neta Report Card</h1>
           </div>
-          <p className="text-xs" style={{ color: S.t3 }}>
+          <p className="text-xs mb-3" style={{ color: S.t3 }}>
             Live candidate profiles mapped from Postgres
           </p>
+          <div className="flex flex-col gap-1.5">
+            <label className="text-[10px] uppercase font-bold tracking-wider" style={{ color: S.t4 }}>Select Constituency</label>
+            <select
+              value={acId}
+              onChange={(e) => {
+                setAcId(e.target.value);
+                setPage(0); // Reset page on AC change
+                setLoading(true);
+              }}
+              className="w-full text-xs px-2.5 py-2 outline-none rounded-lg cursor-pointer"
+              style={{ background: S.surface, border: `1px solid ${S.border}`, color: S.t1 }}
+            >
+              {acs.length === 0 && <option value={acId}>Loading ACs...</option>}
+              {acs.map((ac) => (
+                <option key={ac.ac_id} value={ac.ac_id}>
+                  {ac.ac_name} ({ac.ac_id})
+                </option>
+              ))}
+              <option value="bankipur" disabled>Bankipur, Bihar (Coming Soon)</option>
+            </select>
+          </div>
         </div>
 
         {/* Search bar */}
@@ -258,6 +294,25 @@ export default function MyNetaPage() {
               </div>
             </div>
 
+            {/* Pagination Controls */}
+            <div className="flex items-center justify-between pt-2">
+              <button 
+                onClick={() => { setPage(p => Math.max(0, p - 1)); setLoading(true); }}
+                disabled={page === 0}
+                className="text-xs px-3 py-1.5 rounded disabled:opacity-50"
+                style={{ background: S.surface, border: `1px solid ${S.border}`, color: S.t2 }}>
+                Previous
+              </button>
+              <span className="text-xs" style={{ color: S.t3 }}>Page {page + 1}</span>
+              <button 
+                onClick={() => { setPage(p => p + 1); setLoading(true); }}
+                disabled={!hasMore}
+                className="text-xs px-3 py-1.5 rounded disabled:opacity-50"
+                style={{ background: S.surface, border: `1px solid ${S.border}`, color: S.t2 }}>
+                Next
+              </button>
+            </div>
+            
             {/* Top by assets */}
             <div>
               <p className="label mb-2" style={{ color: S.t4 }}>Wealthiest Candidates</p>
@@ -377,7 +432,7 @@ function NodeDetail({ node, onClose, S }: {
         <div className="grid grid-cols-2 gap-2">
           {[
             { label: "Total Assets", val: fmtRs(p.net_worth_rs as number), color: NODE_COLORS.AssetTier },
-            { label: "Liabilities", val: p.total_liabilities || "—", color: "#ef4444" },
+            { label: "Liabilities", val: (p.total_liabilities as string) || "—", color: "#ef4444" },
             { label: "Criminal Cases", val: String(criminal), color: criminal > 0 ? "#dc2626" : S.t2 },
             { label: "Age", val: p.age != null ? String(p.age) : "—", color: S.t2 },
           ].map(({ label, val, color: c }) => (
@@ -399,7 +454,7 @@ function NodeDetail({ node, onClose, S }: {
           ) : null}
         </div>
 
-        {p.history_json && (
+        {!!p.history_json && (
           <div className="mt-4 pt-3 border-t text-xs text-slate-500 overflow-x-hidden">
              See detailed dossier for rich history and financials.
           </div>

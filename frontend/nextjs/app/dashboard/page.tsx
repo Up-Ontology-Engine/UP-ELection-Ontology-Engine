@@ -88,8 +88,8 @@ export default async function DashboardPage() {
         name: c.name,
         year: c.election_year,
         candidate_id: c.candidate_id,
-        is_incumbent: c.winner_flag,
-        is_primary_opp: c.party !== "BJP" && !c.winner_flag,
+        is_incumbent: c.is_winner,
+        is_primary_opp: c.party !== "BJP" && !c.is_winner,
         party: c.party,
       }));
 

@@ -21,6 +21,21 @@ def _rac(ac_id: str) -> str:
     return _PG_AC_ALIASES.get(ac_id, ac_id)
 
 
+def get_all_acs() -> list[dict]:
+    """Return a list of all Assembly Constituencies from ac_master."""
+    with get_pg_engine().connect() as conn:
+        rows = (
+            conn.execute(
+                text(
+                    "SELECT ac_id, ac_name, ac_type, district_name FROM ac_master ORDER BY ac_name"
+                )
+            )
+            .mappings()
+            .fetchall()
+        )
+    return [dict(r) for r in rows]
+
+
 # ── Booth geo data (lat/lon + pulse scores) ───────────────────────────────────
 def get_booth_geo(ac_id: str) -> list[dict]:
     """Return booth lat/lon + latest pulse metrics for all geocoded booths in an AC."""
@@ -253,7 +268,7 @@ def get_booth_comments(booth_id: str, limit: int = 10, source: str | None = None
 
 
 # ── Candidates ────────────────────────────────────────────────────────────────
-def get_ac_candidates(ac_id: str) -> list[dict]:
+def get_ac_candidates(ac_id: str, limit: int = 100, offset: int = 0) -> list[dict]:
     """
     Returns enriched candidate list for an AC, joining across:
       candidate_master        — identity, profession, net_worth_rs   (007)
@@ -367,8 +382,9 @@ def get_ac_candidates(ac_id: str) -> list[dict]:
                 cph.rank ASC NULLS LAST,
                 cm.is_incumbent DESC,
                 cm.party
+            LIMIT :limit OFFSET :offset
         """),
-                {"ac_id": ac_id},
+                {"ac_id": ac_id, "limit": limit, "offset": offset},
             )
             .mappings()
             .fetchall()

@@ -248,10 +248,10 @@ export default async function TwinPage() {
                       <p style={{ color: "var(--text-4)" }}>{c.party} · {c.election_year}</p>
                     </div>
                     <div className="text-right">
-                      {c.vote_share != null && (
-                        <p style={{ color: "var(--text-3)" }}>{c.vote_share.toFixed(1)}%</p>
+                      {c.vote_share_pct != null && (
+                        <p style={{ color: "var(--text-3)" }}>{c.vote_share_pct.toFixed(1)}%</p>
                       )}
-                      {c.winner_flag && (
+                      {c.is_winner && (
                         <span className="text-xs px-1 py-0.5 rounded" style={{ background: "#10b98122", color: "#10b981" }}>Won</span>
                       )}
                     </div>
