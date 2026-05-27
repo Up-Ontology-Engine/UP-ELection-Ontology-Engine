@@ -33,7 +33,7 @@ from sqlalchemy import text
 
 logger = logging.getLogger(__name__)
 
-DATA_DIR = Path(__file__).parents[1] / "data" / "data"
+DATA_DIR = Path(__file__).parents[2] / "data" / "data"
 
 AFFIDAVIT_PDFS = sorted(DATA_DIR.glob("Affidavit-*.pdf"))
 

@@ -33,7 +33,7 @@ from thefuzz import process as fuzz_process
 
 logger = logging.getLogger(__name__)
 
-ALIAS_FILE = Path(__file__).parent.parent / "data" / "seeds" / "gorakhpur_aliases.json"
+ALIAS_FILE = Path(__file__).parent.parent.parent / "data" / "seeds" / "gorakhpur_aliases.json"
 
 # Accept a fuzzy match as "same location" only above this score
 LEARN_THRESHOLD = 80

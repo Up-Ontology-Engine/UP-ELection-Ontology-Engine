@@ -38,7 +38,7 @@ try:
 except ImportError:
     raise ImportError("Run: pip install requests")
 
-DATA_DIR = Path(__file__).parents[1] / "data" / "data"
+DATA_DIR = Path(__file__).parents[2] / "data" / "data"
 
 # All 9 AC numbers + their NVSP state/AC codes
 # UP state code on NVSP = S24 (based on file names 2026-EROLLGEN-S24-322...)

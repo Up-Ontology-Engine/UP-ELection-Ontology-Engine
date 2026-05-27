@@ -22,6 +22,66 @@ def _get_client() -> genai.Client:
     return _client
 
 
+def _extract_via_sarvam(compressed_text: str) -> ExtractionResult:
+    sarvam_key = os.environ.get("SARVAM_API_KEY")
+    if not sarvam_key:
+        raise ValueError("Neither GOOGLE_API_KEY nor SARVAM_API_KEY is configured.")
+
+    import requests
+
+    url = "https://api.sarvam.ai/v1/chat/completions"
+    headers = {"Authorization": f"Bearer {sarvam_key}", "Content-Type": "application/json"}
+    payload = {
+        "model": os.environ.get("SARVAM_REASONING_MODEL", "sarvam-30b"),
+        "messages": [
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": f"Extract sentiment:\n\n{compressed_text}"},
+        ],
+        "temperature": 0.0,
+    }
+    r = requests.post(url, json=payload, headers=headers, timeout=30)
+    r.raise_for_status()
+    resp_data = r.json()
+    raw = resp_data["choices"][0]["message"]["content"].strip()
+
+    # Strip markdown code blocks if present
+    if raw.startswith("```"):
+        match = re.match(r"^```(?:json)?\s*(.*?)\s*```$", raw, re.DOTALL)
+        if match:
+            raw = match.group(1).strip()
+
+    if not raw:
+        return ExtractionResult(statements=[], is_political=True)
+
+    # Robustify JSON parsing (remove trailing commas)
+    raw_cleaned = re.sub(r",\s*([\]}])", r"\1", raw)
+    data = _json.loads(raw_cleaned)
+
+    # Sanitize statements
+    valid_types = {"party", "candidate", "scheme", "issue", "govt"}
+    for stmt in data.get("statements", []):
+        stmt.setdefault("language", "hi")
+        if "entity_type" in stmt:
+            et = str(stmt["entity_type"]).lower().strip()
+            if et not in valid_types:
+                if et in ("person", "leader", "politician", "candidate"):
+                    stmt["entity_type"] = "candidate"
+                elif et in ("party", "political party"):
+                    stmt["entity_type"] = "party"
+                elif et in ("scheme", "govt_scheme"):
+                    stmt["entity_type"] = "scheme"
+                elif et in ("issue", "topic", "problem"):
+                    stmt["entity_type"] = "issue"
+                elif et in ("govt", "government"):
+                    stmt["entity_type"] = "govt"
+                else:
+                    stmt["entity_type"] = "candidate"  # default safe fallback
+        else:
+            stmt["entity_type"] = "party"
+
+    return ExtractionResult.model_validate(data)
+
+
 SYSTEM_PROMPT = """\
 You are a political sentiment extractor for Uttar Pradesh elections, India.
 
@@ -188,6 +248,17 @@ def extract_from_normalized_text(text: str) -> ExtractionResult:
     # Compress text to optimize context window and tokens
     compressed = compress_text(text)
 
+    # Check for keys
+    google_key = os.environ.get("GOOGLE_API_KEY")
+
+    if not google_key:
+        # Fall back to Sarvam
+        try:
+            return _extract_via_sarvam(compressed)
+        except Exception as e:
+            logger.error("Sarvam extraction failed: %s", e)
+            return ExtractionResult(statements=[], is_political=True)
+
     try:
         resp = _get_client().models.generate_content(
             model=_GEMINI_MODEL,
@@ -201,7 +272,6 @@ def extract_from_normalized_text(text: str) -> ExtractionResult:
         raw = (resp.text or "").strip()
         if not raw:
             return ExtractionResult(statements=[], is_political=True)
-
         data = _json.loads(raw)
         for stmt in data.get("statements", []):
             stmt.setdefault("entity_type", "party")
@@ -209,4 +279,11 @@ def extract_from_normalized_text(text: str) -> ExtractionResult:
         return ExtractionResult.model_validate(data)
     except Exception as e:
         logger.error("LLM extraction failed: %s", e)
+        # Try falling back to Sarvam if LLM failed and Sarvam key exists
+        if os.environ.get("SARVAM_API_KEY"):
+            try:
+                logger.info("Retrying extraction using Sarvam fallback...")
+                return _extract_via_sarvam(compressed)
+            except Exception as se:
+                logger.error("Sarvam extraction fallback also failed: %s", se)
         return ExtractionResult(statements=[], is_political=True)

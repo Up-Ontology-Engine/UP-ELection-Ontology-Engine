@@ -46,7 +46,7 @@ from ingestion.myneta_candidates import (
 
 logger = logging.getLogger(__name__)
 
-OUT_DIR = Path(__file__).parents[1] / "data" / "Myneta"
+OUT_DIR = Path(__file__).parents[2] / "data" / "Myneta"
 
 
 def _now_iso() -> str:

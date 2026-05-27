@@ -25,7 +25,7 @@ load_dotenv()
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
 log = logging.getLogger(__name__)
 
-FORM20_PATH = Path(__file__).parent.parent / "data" / "Form 20 Gorakhpur Data" / "AC322.xls"
+FORM20_PATH = Path(__file__).parent.parent.parent / "data" / "Form 20 Gorakhpur Data" / "AC322.xls"
 AC_ID = "GKP_322"
 YEAR = 2022
 N_BOOTHS = 30

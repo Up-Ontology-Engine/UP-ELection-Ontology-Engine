@@ -283,6 +283,36 @@ services:
     depends_on:
       - prometheus
 
+  ingestion-watcher:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.backend
+    container_name: gorakhpur_watcher
+    user: "10001:10001"
+    command: python -m pipeline.ingest.watcher
+    env_file:
+      - .env
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@pgbouncer:6432/gorakhpur_db
+      - POSTGRES_URL=postgresql://postgres:postgres@pgbouncer:6432/gorakhpur_db
+      - NEO4J_URI=bolt://neo4j:7687
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      pgbouncer:
+        condition: service_healthy
+      neo4j:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ./data:/app/data
+      - ./pipeline:/app/pipeline
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+
 volumes:
   postgres_data:
   neo4j_data:

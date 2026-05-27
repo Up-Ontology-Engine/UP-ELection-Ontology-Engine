@@ -29,7 +29,7 @@ from sqlalchemy import text
 load_dotenv()
 logger = logging.getLogger(__name__)
 
-DATA_DIR = Path(__file__).parents[1] / "data"
+DATA_DIR = Path(__file__).resolve().parents[2] / "data"
 FORM20_JSON = DATA_DIR / "Form20_JSON" / "AC322.json"
 POOL_DIR = DATA_DIR / "PoolBoothData_JSON"
 
@@ -113,6 +113,30 @@ def fix_booth_results(engine: sa.Engine) -> dict[str, int]:
 
     data = json.loads(FORM20_JSON.read_text(encoding="utf-8"))
     polling_stations = data["sheets"][0]["polling_stations"]
+
+    # Pre-insert any missing booths as placeholders so we don't violate the FK constraint
+    unique_booths = {}
+    for ps in polling_stations:
+        booth_number = ps.get("polling_station_number")
+        if not booth_number:
+            continue
+        try:
+            b_num = int(booth_number)
+            booth_id = f"GKP_322_{b_num:03d}"
+            unique_booths[booth_id] = b_num
+        except Exception:
+            continue
+
+    with engine.begin() as conn:
+        for bid, bnum in unique_booths.items():
+            conn.execute(
+                text("""
+                    INSERT INTO booth_master (booth_id, ac_id, booth_number, polling_station_name)
+                    VALUES (:bid, 'GKP_322', :bnum, :name)
+                    ON CONFLICT (booth_id) DO NOTHING
+                """),
+                {"bid": bid, "bnum": bnum, "name": f"Polling Station {bnum} - {AC_NAME}"},
+            )
 
     rows_to_insert: list[dict] = []
     skipped = 0

@@ -27,7 +27,7 @@ from sqlalchemy import text
 
 logger = logging.getLogger(__name__)
 
-DATA_DIR = Path(__file__).parents[1] / "data" / "data"
+DATA_DIR = Path(__file__).resolve().parents[2] / "data" / "data"
 
 
 def _make_panchayat_id(block: str, gp_name: str) -> str:

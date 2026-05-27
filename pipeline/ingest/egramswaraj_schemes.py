@@ -89,7 +89,7 @@ HEADERS = {
     "Referer": BASE_URL,
 }
 
-SEEDS_DIR = Path(__file__).parents[1] / "data" / "seeds"
+SEEDS_DIR = Path(__file__).parents[2] / "data" / "seeds"
 
 
 def _issue_tag(scheme_name: str) -> str:
