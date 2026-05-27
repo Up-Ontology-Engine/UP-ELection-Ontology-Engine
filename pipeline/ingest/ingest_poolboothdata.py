@@ -50,6 +50,7 @@ Environment:
   NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD
   POSTGRES_URL
 """
+
 from __future__ import annotations
 
 import argparse
@@ -62,14 +63,15 @@ from typing import Any
 
 logger = logging.getLogger(__name__)
 
-ROOT       = Path(__file__).parents[1]
-JSON_DIR   = ROOT / "data" / "PoolBoothData_JSON"
+ROOT = Path(__file__).parents[1]
+JSON_DIR = ROOT / "data" / "PoolBoothData_JSON"
 AC_DEFAULT = 322
-AC_NAME    = "Gorakhpur City"
-AC_ID      = f"GKP_{AC_DEFAULT}"
+AC_NAME = "Gorakhpur City"
+AC_ID = f"GKP_{AC_DEFAULT}"
 
 
 # ── Make the loader importable ────────────────────────────────────────────────
+
 
 def _setup_paths() -> None:
     """Add repo root and DDP src to sys.path."""
@@ -82,18 +84,26 @@ def _setup_paths() -> None:
         if ddp_str not in sys.path:
             sys.path.insert(0, ddp_str)
 
+
 _setup_paths()
 
-from graph.loaders.load_voter_graph import records_to_rows, ingest_rows  # noqa: E402
-
+from graph.loaders.load_voter_graph import ingest_rows, records_to_rows  # noqa: E402
 
 # ── Gender normalisation (matches the PDF pipeline's output) ─────────────────
 
 _GENDER_MAP = {
-    "male": "M", "m": "M", "पुरुष": "M",
-    "female": "F", "f": "F", "महिला": "F", "woman": "F",
-    "other": "O", "o": "O", "अन्य": "O",
+    "male": "M",
+    "m": "M",
+    "पुरुष": "M",
+    "female": "F",
+    "f": "F",
+    "महिला": "F",
+    "woman": "F",
+    "other": "O",
+    "o": "O",
+    "अन्य": "O",
 }
+
 
 def _norm_gender(raw: str | None) -> str:
     return _GENDER_MAP.get((raw or "").strip().lower(), raw or "")
@@ -101,30 +111,32 @@ def _norm_gender(raw: str | None) -> str:
 
 # ── JSON record → DDP-compatible dict ────────────────────────────────────────
 
+
 def transform_voter(v: dict[str, Any], ac_no: int, ac_name: str) -> dict[str, Any]:
     """Convert one PoolBoothData_JSON voter record to the DDP dict format
     that records_to_rows() expects."""
     return {
-        "epic_id":                   (v.get("voter_id") or "").strip(),
-        "serial_no":                 str(v.get("serial_no") or ""),
-        "assembly_constituency_no":  str(ac_no),
+        "epic_id": (v.get("voter_id") or "").strip(),
+        "serial_no": str(v.get("serial_no") or ""),
+        "assembly_constituency_no": str(ac_no),
         "assembly_constituency_name": ac_name,
-        "part_no":                   str(v.get("part_number") or ""),
-        "section_no":                str(v.get("section_number") or ""),
-        "section_name":              (v.get("section_name") or "").strip(),
-        "name":                      (v.get("name") or "").strip(),
-        "guardian_name":             (v.get("relation_name") or "").strip(),
-        "guardian_relation":         (v.get("relation_type") or "").strip(),
-        "house_number":              str(v.get("house_number") or "").strip(),
-        "age":                       str(v.get("age") or ""),
-        "gender":                    _norm_gender(v.get("gender")),
-        "deleted":                   False,
-        "deletion_reason_code":      "",
-        "deletion_reason":           "",
+        "part_no": str(v.get("part_number") or ""),
+        "section_no": str(v.get("section_number") or ""),
+        "section_name": (v.get("section_name") or "").strip(),
+        "name": (v.get("name") or "").strip(),
+        "guardian_name": (v.get("relation_name") or "").strip(),
+        "guardian_relation": (v.get("relation_type") or "").strip(),
+        "house_number": str(v.get("house_number") or "").strip(),
+        "age": str(v.get("age") or ""),
+        "gender": _norm_gender(v.get("gender")),
+        "deleted": False,
+        "deletion_reason_code": "",
+        "deletion_reason": "",
     }
 
 
 # ── File loading ──────────────────────────────────────────────────────────────
+
 
 def load_json_files(parts: list[int] | None = None) -> tuple[list[dict], list[dict]]:
     """Load and transform all (or selected) JSON files.
@@ -149,7 +161,7 @@ def load_json_files(parts: list[int] | None = None) -> tuple[list[dict], list[di
     for i, path in enumerate(files, 1):
         data = json.loads(path.read_text(encoding="utf-8"))
         meta = data.get("metadata", {})
-        ac_no   = meta.get("assembly_constituency", {}).get("number", AC_DEFAULT)
+        ac_no = meta.get("assembly_constituency", {}).get("number", AC_DEFAULT)
         ac_name = meta.get("assembly_constituency", {}).get("name", AC_NAME)
 
         voters = data.get("voter_records", [])
@@ -161,14 +173,14 @@ def load_json_files(parts: list[int] | None = None) -> tuple[list[dict], list[di
             all_ddp.append(transform_voter(v, ac_no, ac_name))
 
         if i % 20 == 0 or i == total_files:
-            logger.info("  Loaded %d / %d files — %d records so far",
-                        i, total_files, len(all_ddp))
+            logger.info("  Loaded %d / %d files — %d records so far", i, total_files, len(all_ddp))
 
     logger.info("Total: %d voter records from %d files", len(all_ddp), total_files)
     return all_raw, all_ddp
 
 
 # ── Neo4j ingestion ───────────────────────────────────────────────────────────
+
 
 def run_neo4j(ddp_records: list[dict], batch_size: int = 500) -> None:
     from backend.db import get_neo4j_session
@@ -184,10 +196,11 @@ def run_neo4j(ddp_records: list[dict], batch_size: int = 500) -> None:
 
 # ── Postgres booth_master sync ────────────────────────────────────────────────
 
+
 def run_postgres(raw_records: list[dict]) -> None:
-    from backend.db import get_pg_engine
-    import sqlalchemy as sa
     from sqlalchemy import text
+
+    from backend.db import get_pg_engine
 
     # Aggregate by part_number
     counts: dict[int, dict[str, int]] = defaultdict(lambda: {"M": 0, "F": 0, "O": 0})
@@ -218,21 +231,25 @@ def run_postgres(raw_records: list[dict]) -> None:
     with engine.begin() as conn:
         for part_no, g in sorted(counts.items()):
             booth_id = f"GKP_{AC_DEFAULT}_{part_no:03d}"
-            conn.execute(upsert_sql, {
-                "booth_id":    booth_id,
-                "ac_id":       AC_ID,
-                "booth_number": part_no,
-                "male":        g.get("M", 0),
-                "female":      g.get("F", 0),
-                "other":       g.get("O", 0),
-                "total":       g.get("M", 0) + g.get("F", 0) + g.get("O", 0),
-            })
+            conn.execute(
+                upsert_sql,
+                {
+                    "booth_id": booth_id,
+                    "ac_id": AC_ID,
+                    "booth_number": part_no,
+                    "male": g.get("M", 0),
+                    "female": g.get("F", 0),
+                    "other": g.get("O", 0),
+                    "total": g.get("M", 0) + g.get("F", 0) + g.get("O", 0),
+                },
+            )
             rows_written += 1
 
     logger.info("Postgres: upserted %d booth rows", rows_written)
 
 
 # ── Dry-run stats ─────────────────────────────────────────────────────────────
+
 
 def dry_run(raw_records: list[dict], ddp_records: list[dict]) -> None:
     logger.info("=== DRY RUN — no DB writes ===")
@@ -245,12 +262,14 @@ def dry_run(raw_records: list[dict], ddp_records: list[dict]) -> None:
     parts = sorted({int(v.get("part_number") or 0) for v in raw_records if v.get("part_number")})
 
     print(f"\n{'='*54}")
-    print(f"  PoolBoothData_JSON ingestion dry-run")
+    print("  PoolBoothData_JSON ingestion dry-run")
     print(f"{'='*54}")
     print(f"  Source records : {len(raw_records):,}")
     print(f"  Neo4j rows     : {len(rows):,}")
     print(f"  Parts (booths) : {len(parts)}  ({parts[0]}–{parts[-1]})")
-    print(f"  Gender — M:{gender_counts['M']:,}  F:{gender_counts['F']:,}  O:{gender_counts['O']:,}  ?:{gender_counts['']:,}")
+    print(
+        f"  Gender — M:{gender_counts['M']:,}  F:{gender_counts['F']:,}  O:{gender_counts['O']:,}  ?:{gender_counts['']:,}"
+    )
     print(f"  AC             : {AC_DEFAULT} — {AC_NAME}")
     print(f"{'='*54}\n")
 
@@ -264,13 +283,16 @@ def dry_run(raw_records: list[dict], ddp_records: list[dict]) -> None:
 
 # ── CLI ───────────────────────────────────────────────────────────────────────
 
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Ingest PoolBoothData_JSON into Neo4j + Postgres")
-    parser.add_argument("--dry-run",  action="store_true", help="Transform only; no DB writes")
-    parser.add_argument("--neo4j",    action="store_true", help="Load into Neo4j only")
-    parser.add_argument("--postgres", action="store_true", help="Sync booth_master in Postgres only")
-    parser.add_argument("--parts",    nargs="+", type=int,  help="Only process these part numbers")
-    parser.add_argument("--batch",    type=int, default=500, help="Neo4j batch size (default 500)")
+    parser.add_argument("--dry-run", action="store_true", help="Transform only; no DB writes")
+    parser.add_argument("--neo4j", action="store_true", help="Load into Neo4j only")
+    parser.add_argument(
+        "--postgres", action="store_true", help="Sync booth_master in Postgres only"
+    )
+    parser.add_argument("--parts", nargs="+", type=int, help="Only process these part numbers")
+    parser.add_argument("--batch", type=int, default=500, help="Neo4j batch size (default 500)")
     parser.add_argument("-v", "--verbose", action="store_true")
     args = parser.parse_args()
 

@@ -9,6 +9,7 @@ Run:
   python -m ingestion.ingest_form20_lean
   python -m ingestion.ingest_form20_lean --dry-run
 """
+
 from __future__ import annotations
 
 import argparse
@@ -21,14 +22,14 @@ from pathlib import Path
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
 
-ROOT       = Path(__file__).parents[1]
+ROOT = Path(__file__).parents[1]
 FORM20_JSON = ROOT / "data" / "Form20_JSON" / "AC322.json"
-AC_ID      = "GKP_322"
-AC_NO      = 322
+AC_ID = "GKP_322"
+AC_NO = 322
 
-BJP_ALIASES  = {"B.J.P", "BJP", "B.J.P."}
-SP_ALIASES   = {"Samajwadi Party", "S.P.", "SP"}
-BSP_ALIASES  = {"B.S.P.", "BSP", "B.S.P"}
+BJP_ALIASES = {"B.J.P", "BJP", "B.J.P."}
+SP_ALIASES = {"Samajwadi Party", "S.P.", "SP"}
+BSP_ALIASES = {"B.S.P.", "BSP", "B.S.P"}
 
 
 def party_tag(raw: str) -> str:
@@ -50,13 +51,13 @@ def compute_lean(bjp: int, sp: int, bsp: int, total_valid: int) -> tuple[str, fl
     if total_valid == 0:
         return "NEUTRAL", 0.0, 0.0
 
-    bjp_share    = bjp / total_valid
+    bjp_share = bjp / total_valid
     sp_bsp_share = (sp + bsp) / total_valid
 
     # bjp_pulse_score: normalised advantage, centred at 0
     # +1 = all votes for BJP, -1 = all for others
-    bjp_pulse  = round(bjp_share * 2 - 1, 4)
-    opp_pulse  = round(sp_bsp_share * 2 - 1, 4)
+    bjp_pulse = round(bjp_share * 2 - 1, 4)
+    opp_pulse = round(sp_bsp_share * 2 - 1, 4)
 
     margin = bjp_share - sp_bsp_share
 
@@ -64,7 +65,7 @@ def compute_lean(bjp: int, sp: int, bsp: int, total_valid: int) -> tuple[str, fl
         label = "STRONG_BJP"
     elif bjp_share >= 0.45:
         label = "LEAN_BJP"
-    elif margin >= -0.05:        # within 5% — call it neutral
+    elif margin >= -0.05:  # within 5% — call it neutral
         label = "NEUTRAL"
     elif sp_bsp_share - bjp_share < 0.15:
         label = "LEAN_OPP"
@@ -87,26 +88,31 @@ def load_form20() -> dict[int, dict]:
             v = cv.get("votes") or 0
             tag = party_tag(cv.get("party", ""))
             total += v
-            if tag == "BJP":  bjp  += v
-            elif tag == "SP": sp   += v
-            elif tag == "BSP":bsp  += v
+            if tag == "BJP":
+                bjp += v
+            elif tag == "SP":
+                sp += v
+            elif tag == "BSP":
+                bsp += v
 
         result[ps_num] = {
-            "ps_num":   ps_num,
+            "ps_num": ps_num,
             "electors": s.get("total_electors", 0) or 0,
-            "turnout":  s.get("turnout_total", 0)  or 0,
-            "bjp":      bjp,
-            "sp":       sp,
-            "bsp":      bsp,
-            "total":    total,
+            "turnout": s.get("turnout_total", 0) or 0,
+            "bjp": bjp,
+            "sp": sp,
+            "bsp": bsp,
+            "total": total,
         }
     return result
 
 
 def run(dry_run: bool = False) -> None:
     import os
+
     sys.path.insert(0, str(ROOT))
     from dotenv import load_dotenv
+
     load_dotenv()
     from sqlalchemy import create_engine, text
 
@@ -114,18 +120,18 @@ def run(dry_run: bool = False) -> None:
     logger.info("Loaded %d polling stations from Form-20", len(form20))
 
     rows = []
-    now  = datetime.now(timezone.utc)
+    now = datetime.now(timezone.utc)
 
     engine = create_engine(os.environ["POSTGRES_URL"])
     with engine.connect() as conn:
-        db_booths = conn.execute(text(
-            "SELECT booth_id, booth_number FROM booth_master ORDER BY booth_number"
-        )).fetchall()
+        db_booths = conn.execute(
+            text("SELECT booth_id, booth_number FROM booth_master ORDER BY booth_number")
+        ).fetchall()
 
     for row in db_booths:
-        booth_id  = row[0]
+        booth_id = row[0]
         booth_num = row[1]
-        data      = form20.get(booth_num)
+        data = form20.get(booth_num)
 
         if data is None:
             logger.warning("No Form-20 data for booth %d — skipping", booth_num)
@@ -144,21 +150,24 @@ def run(dry_run: bool = False) -> None:
         else:
             conf = "LOW"
 
-        rows.append({
-            "booth_id":         booth_id,
-            "window_start":     now,
-            "window_end":       now,
-            "bjp_pulse_score":  bjp_pulse,
-            "opp_pulse_score":  opp_pulse,
-            "digital_lean":     digital_lean,
-            "digital_lean_label": label,
-            "confidence_label": conf,
-            "event_count":      data["turnout"],
-            "top_issue":        None,
-        })
+        rows.append(
+            {
+                "booth_id": booth_id,
+                "window_start": now,
+                "window_end": now,
+                "bjp_pulse_score": bjp_pulse,
+                "opp_pulse_score": opp_pulse,
+                "digital_lean": digital_lean,
+                "digital_lean_label": label,
+                "confidence_label": conf,
+                "event_count": data["turnout"],
+                "top_issue": None,
+            }
+        )
 
     # Print preview
     from collections import Counter
+
     label_counts = Counter(r["digital_lean_label"] for r in rows)
     logger.info("Lean distribution preview:")
     for lbl, cnt in sorted(label_counts.items(), key=lambda x: -x[1]):
@@ -168,7 +177,8 @@ def run(dry_run: bool = False) -> None:
         logger.info("Dry-run — no writes.")
         return
     with engine.begin() as conn:
-        conn.execute(text("""
+        conn.execute(
+            text("""
             INSERT INTO booth_metrics
                 (booth_id, window_start, window_end,
                  bjp_pulse_score, opp_pulse_score, digital_lean, digital_lean_label,
@@ -184,13 +194,16 @@ def run(dry_run: bool = False) -> None:
                     digital_lean_label= EXCLUDED.digital_lean_label,
                     confidence_label  = EXCLUDED.confidence_label,
                     event_count       = EXCLUDED.event_count
-        """), rows)
+        """),
+            rows,
+        )
 
     logger.info("Inserted %d rows into booth_metrics", len(rows))
 
     # Verify distribution
     with engine.connect() as conn:
-        dist = conn.execute(text("""
+        dist = conn.execute(
+            text("""
             SELECT digital_lean_label, COUNT(*) AS n
             FROM (
                 SELECT DISTINCT ON (booth_id) booth_id, digital_lean_label
@@ -199,7 +212,8 @@ def run(dry_run: bool = False) -> None:
             ) latest
             GROUP BY digital_lean_label
             ORDER BY n DESC
-        """)).fetchall()
+        """)
+        ).fetchall()
         logger.info("Live dashboard distribution (latest per booth):")
         for row in dist:
             logger.info("  %-15s %3d", row[0], row[1])

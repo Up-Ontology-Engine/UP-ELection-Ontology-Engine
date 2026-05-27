@@ -1,4 +1,4 @@
-﻿"""
+"""
 Enrich GKP_322_candidate_profiles.json with TCPD Uttar_Pradesh_AE.csv data.
 
 Adds per-candidate:
@@ -16,15 +16,15 @@ import json
 import re
 from pathlib import Path
 
-CSV_PATH     = Path("data/voteshare/Uttar_Pradesh_AE.csv")
-PROFILES_IN  = Path("data/raw/candidates/GKP_322_candidate_profiles.json")
-PROFILES_OUT = PROFILES_IN   # overwrite in place
+CSV_PATH = Path("data/voteshare/Uttar_Pradesh_AE.csv")
+PROFILES_IN = Path("data/raw/candidates/GKP_322_candidate_profiles.json")
+PROFILES_OUT = PROFILES_IN  # overwrite in place
 
 
 def _norm(name: str) -> str:
     """Normalise candidate name for fuzzy matching."""
     name = name.upper().strip()
-    name = re.sub(r"\bDR\.?\s*", "", name)   # strip Dr. prefix
+    name = re.sub(r"\bDR\.?\s*", "", name)  # strip Dr. prefix
     name = re.sub(r"\s+", " ", name)
     return name.strip()
 
@@ -53,27 +53,37 @@ def build_constituency_history(all_rows: list[dict]) -> list[dict]:
     for year in sorted(by_year.keys(), reverse=True):
         yr_rows = sorted(by_year[year], key=lambda x: int(x["Position"]))
         winner = yr_rows[0]
-        history.append({
-            "year": int(year),
-            "total_electors": int(winner["Electors"]) if winner["Electors"] else None,
-            "valid_votes": int(winner["Valid_Votes"]) if winner["Valid_Votes"] else None,
-            "turnout_pct": float(winner["Turnout_Percentage"]) if winner["Turnout_Percentage"] else None,
-            "n_candidates": int(winner["N_Cand"]) if winner["N_Cand"] else None,
-            "candidates": [
-                {
-                    "position": int(r["Position"]),
-                    "name": r["Candidate"],
-                    "party": r["Party"],
-                    "votes": int(r["Votes"]) if r["Votes"] else None,
-                    "vote_share_pct": float(r["Vote_Share_Percentage"]) if r["Vote_Share_Percentage"] else None,
-                    "margin": int(r["Margin"]) if r["Margin"] else None,
-                    "deposit_lost": r["Deposit_Lost"].lower() == "yes" if r["Deposit_Lost"] else None,
-                    "sex": r["Sex"] or None,
-                }
-                for r in yr_rows
-                if r["Candidate"] != "None Of The Above"
-            ],
-        })
+        history.append(
+            {
+                "year": int(year),
+                "total_electors": int(winner["Electors"]) if winner["Electors"] else None,
+                "valid_votes": int(winner["Valid_Votes"]) if winner["Valid_Votes"] else None,
+                "turnout_pct": (
+                    float(winner["Turnout_Percentage"]) if winner["Turnout_Percentage"] else None
+                ),
+                "n_candidates": int(winner["N_Cand"]) if winner["N_Cand"] else None,
+                "candidates": [
+                    {
+                        "position": int(r["Position"]),
+                        "name": r["Candidate"],
+                        "party": r["Party"],
+                        "votes": int(r["Votes"]) if r["Votes"] else None,
+                        "vote_share_pct": (
+                            float(r["Vote_Share_Percentage"])
+                            if r["Vote_Share_Percentage"]
+                            else None
+                        ),
+                        "margin": int(r["Margin"]) if r["Margin"] else None,
+                        "deposit_lost": (
+                            r["Deposit_Lost"].lower() == "yes" if r["Deposit_Lost"] else None
+                        ),
+                        "sex": r["Sex"] or None,
+                    }
+                    for r in yr_rows
+                    if r["Candidate"] != "None Of The Above"
+                ],
+            }
+        )
     return history
 
 
@@ -93,7 +103,9 @@ def enrich_profile(profile: dict, row: dict) -> dict:
         "position": int(row["Position"]),
         "votes": int(row["Votes"]) if row["Votes"] else None,
         "valid_votes": int(row["Valid_Votes"]) if row["Valid_Votes"] else None,
-        "vote_share_pct": float(row["Vote_Share_Percentage"]) if row["Vote_Share_Percentage"] else None,
+        "vote_share_pct": (
+            float(row["Vote_Share_Percentage"]) if row["Vote_Share_Percentage"] else None
+        ),
         "margin": int(row["Margin"]) if row["Margin"] else None,
         "margin_pct": float(row["Margin_Percentage"]) if row["Margin_Percentage"] else None,
         "deposit_lost": row["Deposit_Lost"].lower() == "yes" if row["Deposit_Lost"] else None,
@@ -122,10 +134,10 @@ def enrich_profile(profile: dict, row: dict) -> dict:
     }
 
     # 4. Profession (TCPD-coded, more systematic than self-declared)
-    tcpd_main   = row["TCPD_Prof_Main"] or None
+    tcpd_main = row["TCPD_Prof_Main"] or None
     tcpd_main_d = row["TCPD_Prof_Main_Desc"] or None
-    tcpd_sec    = row["TCPD_Prof_Second"] or None
-    tcpd_sec_d  = row["TCPD_Prof_Second_Desc"] or None
+    tcpd_sec = row["TCPD_Prof_Second"] or None
+    tcpd_sec_d = row["TCPD_Prof_Second_Desc"] or None
 
     profile["profession"]["tcpd_main"] = (
         f"{tcpd_main} ({tcpd_main_d})" if tcpd_main_d else tcpd_main
@@ -162,9 +174,7 @@ def main():
         # Attach constituency history to every profile
         profile["constituency_history"] = constituency_history
 
-    PROFILES_OUT.write_text(
-        json.dumps(profiles, indent=2, ensure_ascii=False), encoding="utf-8"
-    )
+    PROFILES_OUT.write_text(json.dumps(profiles, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"\nDone. matched={matched} unmatched={unmatched}")
     print(f"Constituency history: {len(constituency_history)} elections (1962-2022)")
     print(f"Written to {PROFILES_OUT}")

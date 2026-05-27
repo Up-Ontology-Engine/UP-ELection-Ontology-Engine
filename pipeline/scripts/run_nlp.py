@@ -5,12 +5,18 @@ Calls the same logic as flows/nlp/flow_sentiment.py but without @flow/@task.
 Usage:
     python run_nlp_direct.py [--batch 500]
 """
+
 from __future__ import annotations
-import argparse, logging, os, json as _json
+
+import argparse
+import json as _json
+import logging
+import os
 from typing import Any
+
 import sqlalchemy as sa
-from sqlalchemy import text
 from dotenv import load_dotenv
+from sqlalchemy import text
 
 load_dotenv()
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
@@ -23,9 +29,12 @@ def _to_dict(obj: Any) -> Any:
         return obj.model_dump()
     return obj
 
+
 def fetch_unprocessed(engine: sa.Engine, limit: int) -> list[dict]:
     with engine.connect() as conn:
-        rows = conn.execute(text("""
+        rows = (
+            conn.execute(
+                text("""
             SELECT id::text AS source_id, source_type, text_raw
             FROM pulse_events_raw
             WHERE processed = FALSE
@@ -33,7 +42,12 @@ def fetch_unprocessed(engine: sa.Engine, limit: int) -> list[dict]:
               AND LENGTH(TRIM(text_raw)) > 5
             ORDER BY created_at ASC
             LIMIT :limit
-        """), {"limit": limit}).mappings().fetchall()
+        """),
+                {"limit": limit},
+            )
+            .mappings()
+            .fetchall()
+        )
     return [dict(r) for r in rows]
 
 
@@ -46,14 +60,15 @@ def write_pulse_events(results: list, engine: sa.Engine) -> int:
     for r in results:
         # Convert Pydantic models to dicts if needed
         r = _to_dict(r)
-        
+
         extraction = _to_dict(r.get("extraction", {}))
         stmts = extraction.get("statements", [])
-        geo   = _to_dict(r.get("geo_resolution") or {})
+        geo = _to_dict(r.get("geo_resolution") or {})
         source_id = r.get("source_id") or r.get("id")
         try:
             with engine.begin() as conn:
-                conn.execute(text("""
+                conn.execute(
+                    text("""
                     INSERT INTO pulse_events (
                         source_type, source_id, text_raw, text_normalized_hi,
                         language_detected, translation_method,
@@ -69,27 +84,29 @@ def write_pulse_events(results: list, engine: sa.Engine) -> int:
                         :final_polarity, :final_issue,
                         :loc_text, :booth_id, :ac_id, :geo_level
                     ) ON CONFLICT DO NOTHING
-                """), {
-                    "source_type":    r["source_type"],
-                    "source_id":      source_id,
-                    "text_raw":       r["text_raw"],
-                    "text_hi":        r.get("text_normalized_hi"),
-                    "lang":           r.get("language_detected", "unknown"),
-                    "trans_method":   r.get("translation_method", "none"),
-                    "ext_method":     r.get("extraction_method", "unknown"),
-                    "llm_output":     _json.dumps(stmts),
-                    "entity":         r.get("final_entity"),
-                    "entity_type":    stmts[0].get("entity_type") if stmts else None,
-                    "issue":          r.get("final_issue"),
-                    "polarity":       r.get("final_polarity"),
-                    "evidence":       stmts[0].get("evidence") if stmts else None,
-                    "final_polarity": r.get("final_polarity"),
-                    "final_issue":    r.get("final_issue"),
-                    "loc_text":       stmts[0].get("location_mention") if stmts else None,
-                    "booth_id":       geo.get("mapped_booth_id"),
-                    "ac_id":          geo.get("mapped_ac_id", os.environ.get("PILOT_AC_ID", "GKP_322")),
-                    "geo_level":      geo.get("mapped_type"),
-                })
+                """),
+                    {
+                        "source_type": r["source_type"],
+                        "source_id": source_id,
+                        "text_raw": r["text_raw"],
+                        "text_hi": r.get("text_normalized_hi"),
+                        "lang": r.get("language_detected", "unknown"),
+                        "trans_method": r.get("translation_method", "none"),
+                        "ext_method": r.get("extraction_method", "unknown"),
+                        "llm_output": _json.dumps(stmts),
+                        "entity": r.get("final_entity"),
+                        "entity_type": stmts[0].get("entity_type") if stmts else None,
+                        "issue": r.get("final_issue"),
+                        "polarity": r.get("final_polarity"),
+                        "evidence": stmts[0].get("evidence") if stmts else None,
+                        "final_polarity": r.get("final_polarity"),
+                        "final_issue": r.get("final_issue"),
+                        "loc_text": stmts[0].get("location_mention") if stmts else None,
+                        "booth_id": geo.get("mapped_booth_id"),
+                        "ac_id": geo.get("mapped_ac_id", os.environ.get("PILOT_AC_ID", "GKP_322")),
+                        "geo_level": geo.get("mapped_type"),
+                    },
+                )
             inserted += 1
             processed_ids.append(str(source_id))
         except Exception as e:
@@ -97,10 +114,13 @@ def write_pulse_events(results: list, engine: sa.Engine) -> int:
 
     if processed_ids:
         with engine.begin() as conn:
-            conn.execute(text("""
+            conn.execute(
+                text("""
                 UPDATE pulse_events_raw SET processed = TRUE
                 WHERE id::text = ANY(:ids)
-            """), {"ids": processed_ids})
+            """),
+                {"ids": processed_ids},
+            )
 
     return inserted
 

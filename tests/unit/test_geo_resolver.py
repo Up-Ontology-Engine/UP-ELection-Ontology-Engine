@@ -1,5 +1,5 @@
 """Unit tests for geo resolution."""
-import pytest
+
 from pipeline.nlp.geo_resolver import GeoResolver
 
 ALIAS_DATA = {
@@ -19,7 +19,7 @@ def test_exact_match():
 
 def test_fuzzy_match():
     r = GeoResolver(ALIAS_DATA)
-    result = r.resolve("Deoria Naaka")   # typo
+    result = r.resolve("Deoria Naaka")  # typo
     assert result is not None
     assert result.mapped_booth_id == "GKP_U_045"
 

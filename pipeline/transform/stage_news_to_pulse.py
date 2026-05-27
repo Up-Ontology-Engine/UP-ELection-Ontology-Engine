@@ -10,6 +10,7 @@ Run AFTER etl.transform_news:
     python -m etl.stage_news_to_pulse   # news_articles → pulse_events_raw
     python -m flows.nlp.flow_sentiment  # pulse_events_raw → pulse_events
 """
+
 from __future__ import annotations
 
 import logging
@@ -23,7 +24,9 @@ logger = logging.getLogger(__name__)
 
 def stage_news(engine: sa.Engine) -> int:
     with engine.connect() as conn:
-        rows = conn.execute(text("""
+        rows = (
+            conn.execute(
+                text("""
             SELECT
                 na.article_id::text        AS source_id,
                 COALESCE(na.body_raw, na.headline) AS text_raw
@@ -35,7 +38,11 @@ def stage_news(engine: sa.Engine) -> int:
                   AND per.source_type = 'news'
               )
             ORDER BY na.published_at ASC NULLS LAST
-        """)).mappings().fetchall()
+        """)
+            )
+            .mappings()
+            .fetchall()
+        )
 
         if not rows:
             logger.info("No new articles to stage — all already in pulse_events_raw.")
@@ -43,11 +50,14 @@ def stage_news(engine: sa.Engine) -> int:
 
         inserted = 0
         for row in rows:
-            conn.execute(text("""
+            conn.execute(
+                text("""
                 INSERT INTO pulse_events_raw (source_type, source_id, text_raw)
                 VALUES ('news', :source_id, :text_raw)
                 ON CONFLICT DO NOTHING
-            """), {"source_id": row["source_id"], "text_raw": row["text_raw"]})
+            """),
+                {"source_id": row["source_id"], "text_raw": row["text_raw"]},
+            )
             inserted += 1
 
         conn.commit()

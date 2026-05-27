@@ -34,6 +34,7 @@ Run:
     # End-to-end from a PDF (requires SARVAM_API_KEY; OCR cost):
     python -m graph.loaders.load_voter_graph --pdf "path/to/roll.pdf" --ac 322 --dump records.json
 """
+
 from __future__ import annotations
 
 import argparse
@@ -58,6 +59,7 @@ def _ensure_ddp_importable() -> None:
     """
     try:
         import digital_democracy_pipeline  # noqa: F401
+
         return
     except ImportError:
         src = Path(__file__).resolve().parents[2] / "digital-democracy-pipeline" / "src"
@@ -69,8 +71,13 @@ _ensure_ddp_importable()
 
 # DDP backend logic, reused verbatim so identity/family/normalization match upstream.
 from digital_democracy_pipeline import ontology  # noqa: E402
-from digital_democracy_pipeline.voter_graph import _CORESIDENCE_HOUSEHOLD_CAP, _norm_name  # noqa: E402
+
+# noqa: E402
 from digital_democracy_pipeline.entity_resolution import best_name_match  # noqa: E402
+from digital_democracy_pipeline.voter_graph import (
+    _CORESIDENCE_HOUSEHOLD_CAP,
+    _norm_name,
+)
 
 _CONSTRAINTS = [
     "CREATE CONSTRAINT voter_key IF NOT EXISTS FOR (v:Voter) REQUIRE v.voter_key IS UNIQUE",
@@ -86,6 +93,7 @@ _CONSTRAINTS = [
 
 # ── Record → row transformation (existing-graph keys) ────────────────────────
 
+
 def _g(rec: dict[str, Any], key: str) -> str:
     return str(rec.get(key) or "").strip()
 
@@ -96,7 +104,11 @@ def _as_dict(rec: Any) -> dict[str, Any]:
     if isinstance(rec, dict):
         return rec
     # dataclass / arbitrary object fallback
-    return {k: getattr(rec, k) for k in dir(rec) if not k.startswith("_") and not callable(getattr(rec, k))}
+    return {
+        k: getattr(rec, k)
+        for k in dir(rec)
+        if not k.startswith("_") and not callable(getattr(rec, k))
+    }
 
 
 def _digits(s: str) -> str:
@@ -110,7 +122,9 @@ def records_to_rows(records: list[Any], ac_default: int | None = None) -> list[d
     for i, raw in enumerate(records):
         rec = _as_dict(raw)
         epic = _g(rec, "epic_id")
-        ac_digits = _digits(_g(rec, "assembly_constituency_no")) or (str(ac_default) if ac_default else "")
+        ac_digits = _digits(_g(rec, "assembly_constituency_no")) or (
+            str(ac_default) if ac_default else ""
+        )
         part_digits = _digits(_g(rec, "part_no"))
 
         if not (ac_digits and part_digits):
@@ -128,32 +142,34 @@ def records_to_rows(records: list[Any], ac_default: int | None = None) -> list[d
         guardian = _g(rec, "guardian_name")
 
         ident = epic or f"SYN:{ac_no}:{part_no}:{_g(rec, 'serial_no') or i}"
-        rows.append({
-            "key": f"voter::{ident}",
-            "epic_id": epic,
-            "epic_synthetic": not epic,
-            "serial_no": _g(rec, "serial_no"),
-            "name": _g(rec, "name"),
-            "name_norm": _norm_name(rec.get("name")),
-            "age": _g(rec, "age"),
-            "gender": _g(rec, "gender"),
-            "deleted": bool(rec.get("deleted")),
-            "deletion_reason_code": _g(rec, "deletion_reason_code"),
-            "deletion_reason": _g(rec, "deletion_reason"),
-            "house_number": house,
-            "part_no": part_no,
-            "section_no": section,
-            "section_name": _g(rec, "section_name"),
-            "ac_id": ac_id,
-            "ac_name": _g(rec, "assembly_constituency_name"),
-            "booth_id": booth_id,
-            "guardian_name": guardian,
-            "guardian_norm": _norm_name(guardian),
-            "guardian_relation": _g(rec, "guardian_relation"),
-            "guardian_kind": ontology.family_relation(rec.get("guardian_relation")),
-            "section_id": f"{booth_id}|{section}" if section else "",
-            "house_id": f"{booth_id}|{section}|{house}" if house else "",
-        })
+        rows.append(
+            {
+                "key": f"voter::{ident}",
+                "epic_id": epic,
+                "epic_synthetic": not epic,
+                "serial_no": _g(rec, "serial_no"),
+                "name": _g(rec, "name"),
+                "name_norm": _norm_name(rec.get("name")),
+                "age": _g(rec, "age"),
+                "gender": _g(rec, "gender"),
+                "deleted": bool(rec.get("deleted")),
+                "deletion_reason_code": _g(rec, "deletion_reason_code"),
+                "deletion_reason": _g(rec, "deletion_reason"),
+                "house_number": house,
+                "part_no": part_no,
+                "section_no": section,
+                "section_name": _g(rec, "section_name"),
+                "ac_id": ac_id,
+                "ac_name": _g(rec, "assembly_constituency_name"),
+                "booth_id": booth_id,
+                "guardian_name": guardian,
+                "guardian_norm": _norm_name(guardian),
+                "guardian_relation": _g(rec, "guardian_relation"),
+                "guardian_kind": ontology.family_relation(rec.get("guardian_relation")),
+                "section_id": f"{booth_id}|{section}" if section else "",
+                "house_id": f"{booth_id}|{section}|{house}" if house else "",
+            }
+        )
 
     # Flag duplicate EPICs (same EPIC on multiple source records).
     epic_counts = Counter(r["epic_id"] for r in rows if r["epic_id"])
@@ -167,7 +183,7 @@ def records_to_rows(records: list[Any], ac_default: int | None = None) -> list[d
 
 def _batches(rows: list[dict[str, Any]], size: int) -> Iterable[list[dict[str, Any]]]:
     for i in range(0, len(rows), size):
-        yield rows[i: i + size]
+        yield rows[i : i + size]
 
 
 # ── Cypher ───────────────────────────────────────────────────────────────────
@@ -253,7 +269,9 @@ MERGE (a)-[:SIBLING_OF]-(b)
 """
 
 
-def _link_guardians(session: Session, rows: list[dict[str, Any]], batch_size: int) -> dict[str, int]:
+def _link_guardians(
+    session: Session, rows: list[dict[str, Any]], batch_size: int
+) -> dict[str, int]:
     """Resolve each guardian to a Voter (exact, then fuzzy within the same booth/part)
     and write the GUARDIAN edge; unmatched guardians become :Person nodes."""
     norms_by_part: dict[int, list[str]] = {}
@@ -279,15 +297,24 @@ def _link_guardians(session: Session, rows: list[dict[str, Any]], batch_size: in
             if matched:
                 target = key_by_norm_part.get((part, matched))
         if target and target != r["key"]:
-            voter_links.append({"vkey": r["key"], "gkey": target, "kind": r["guardian_kind"], "relation": r["guardian_relation"]})
+            voter_links.append(
+                {
+                    "vkey": r["key"],
+                    "gkey": target,
+                    "kind": r["guardian_kind"],
+                    "relation": r["guardian_relation"],
+                }
+            )
         else:
-            person_links.append({
-                "vkey": r["key"],
-                "pid": f"person::{part}::{gnorm}",
-                "pname": r["guardian_name"],
-                "kind": r["guardian_kind"],
-                "relation": r["guardian_relation"],
-            })
+            person_links.append(
+                {
+                    "vkey": r["key"],
+                    "pid": f"person::{part}::{gnorm}",
+                    "pname": r["guardian_name"],
+                    "kind": r["guardian_kind"],
+                    "relation": r["guardian_relation"],
+                }
+            )
     for batch in _batches(voter_links, batch_size):
         session.run(_Q_GUARDIAN_VOTER, rows=batch)
     for batch in _batches(person_links, batch_size):
@@ -295,7 +322,9 @@ def _link_guardians(session: Session, rows: list[dict[str, Any]], batch_size: in
     return {"guardian_voter": len(voter_links), "guardian_person": len(person_links)}
 
 
-def ingest_rows(session: Session, rows: list[dict[str, Any]], *, batch_size: int = 500) -> dict[str, Any]:
+def ingest_rows(
+    session: Session, rows: list[dict[str, Any]], *, batch_size: int = 500
+) -> dict[str, Any]:
     """Ingest pre-built rows into the existing Neo4j graph (idempotent)."""
     for stmt in _CONSTRAINTS:
         session.run(stmt)
@@ -323,7 +352,9 @@ def ingest_rows(session: Session, rows: list[dict[str, Any]], *, batch_size: int
     return result
 
 
-def ingest_records(records: list[Any], *, ac_default: int | None = None, batch_size: int = 500) -> dict[str, Any]:
+def ingest_records(
+    records: list[Any], *, ac_default: int | None = None, batch_size: int = 500
+) -> dict[str, Any]:
     """Build rows from electoral records and ingest into the existing graph."""
     from backend.db import get_neo4j_session
 
@@ -337,6 +368,7 @@ def ingest_records(records: list[Any], *, ac_default: int | None = None, batch_s
 
 # ── Record sources ────────────────────────────────────────────────────────────
 
+
 def _load_records_json(path: Path) -> list[dict[str, Any]]:
     data = json.loads(path.read_text())
     if isinstance(data, dict) and "records" in data:
@@ -348,7 +380,7 @@ def _load_records_json(path: Path) -> list[dict[str, Any]]:
 
 def _extract_from_pdf(pdf: Path, ac: int, dump: Path | None) -> list[Any]:
     """Run the DDP OCR + extraction pipeline (reuses ingestion.ddp_electoral_roll)."""
-    from ingestion.ddp_electoral_roll import extract_records_from_pdf, RUNS_DIR
+    from ingestion.ddp_electoral_roll import RUNS_DIR, extract_records_from_pdf
 
     records = extract_records_from_pdf(pdf, RUNS_DIR / pdf.stem)
     if dump:
@@ -359,12 +391,25 @@ def _extract_from_pdf(pdf: Path, ac: int, dump: Path | None) -> list[Any]:
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
-    p = argparse.ArgumentParser(description="Ingest electoral-roll voter graph into the existing Neo4j KG")
+    p = argparse.ArgumentParser(
+        description="Ingest electoral-roll voter graph into the existing Neo4j KG"
+    )
     src = p.add_mutually_exclusive_group(required=True)
     src.add_argument("--records", type=Path, help="Path to extracted records JSON (no OCR)")
-    src.add_argument("--pdf", type=Path, help="Path to electoral roll PDF (runs Sarvam OCR; needs SARVAM_API_KEY)")
-    p.add_argument("--ac", type=int, default=None, help="AC number fallback when records omit it (e.g. 322)")
-    p.add_argument("--dump", type=Path, default=None, help="With --pdf: also write extracted records to this JSON")
+    src.add_argument(
+        "--pdf",
+        type=Path,
+        help="Path to electoral roll PDF (runs Sarvam OCR; needs SARVAM_API_KEY)",
+    )
+    p.add_argument(
+        "--ac", type=int, default=None, help="AC number fallback when records omit it (e.g. 322)"
+    )
+    p.add_argument(
+        "--dump",
+        type=Path,
+        default=None,
+        help="With --pdf: also write extracted records to this JSON",
+    )
     p.add_argument("--batch-size", type=int, default=500)
     args = p.parse_args()
 

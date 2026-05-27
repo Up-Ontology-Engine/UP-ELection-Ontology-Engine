@@ -3,11 +3,11 @@ Lightweight Article Scraper for Gorakhpur with Pro/Anti-BJP Sentiment
 Focus: Scrape Gorakhpur articles and classify sentiment
 """
 
-import feedparser
-import requests
-from datetime import datetime
-from typing import List, Dict, Tuple
 import logging
+from datetime import datetime
+from typing import Dict, List
+
+import feedparser
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
@@ -18,48 +18,140 @@ logger = logging.getLogger(__name__)
 
 GORAKHPUR_KEYWORDS = [
     # Exact matches
-    "gorakhpur", "गोरखपुर", "gorkhapur",
+    "gorakhpur",
+    "गोरखपुर",
+    "gorkhapur",
     # Regional context (Uttar Pradesh, Eastern UP)
-    "uttar pradesh", "उत्तर प्रदेश", "eastern up", "eastern uttar",
+    "uttar pradesh",
+    "उत्तर प्रदेश",
+    "eastern up",
+    "eastern uttar",
     # Key politicians
-    "yogi", "योगी", "adityanath", "ravi kishan", "राविकिशन",
+    "yogi",
+    "योगी",
+    "adityanath",
+    "ravi kishan",
+    "राविकिशन",
     # Election related
-    "lok sabha", "assembly", "विधानसभा", "लोकसभा", "election", "चुनाव",
+    "lok sabha",
+    "assembly",
+    "विधानसभा",
+    "लोकसभा",
+    "election",
+    "चुनाव",
     # BJP-related (since most Gorakhpur sentiment is BJP-related)
-    "bjp", "भाजपा", "saffron", "प्रधानमंत्री", "prime minister",
+    "bjp",
+    "भाजपा",
+    "saffron",
+    "प्रधानमंत्री",
+    "prime minister",
     # Regions near Gorakhpur
-    "banaras", "varanasi", "काशी", "देवरिया", "पूर्वांचल"
+    "banaras",
+    "varanasi",
+    "काशी",
+    "देवरिया",
+    "पूर्वांचल",
 ]
 
 PRO_BJP_KEYWORDS = [
     # English - BJP achievements/positive
-    "bjp victory", "bjp wins", "bjp success", "bjp achievement", "bjp growth",
-    "development under bjp", "bjp government strong", "bjp performance good", 
-    "bjp government formation", "bjp elected", "bjp chosen", "yogi success",
-    "yogi government", "yogi achievement", "yogi performance", "bjp stability",
-    "bjp positive", "bjp support", "bjp expands", "bjp grows", "bjp dominates",
+    "bjp victory",
+    "bjp wins",
+    "bjp success",
+    "bjp achievement",
+    "bjp growth",
+    "development under bjp",
+    "bjp government strong",
+    "bjp performance good",
+    "bjp government formation",
+    "bjp elected",
+    "bjp chosen",
+    "yogi success",
+    "yogi government",
+    "yogi achievement",
+    "yogi performance",
+    "bjp stability",
+    "bjp positive",
+    "bjp support",
+    "bjp expands",
+    "bjp grows",
+    "bjp dominates",
     # CM/Leader achievements
-    "cm sworn in", "cm elected", "cm takes oath", "first bjp cm", "bjp cm",
-    "leader elected", "government formation", "power", "victory", "won",
+    "cm sworn in",
+    "cm elected",
+    "cm takes oath",
+    "first bjp cm",
+    "bjp cm",
+    "leader elected",
+    "government formation",
+    "power",
+    "victory",
+    "won",
     # Hindi
-    "भाजपा जीत", "भाजपा विजय", "भाजपा सफलता", "भाजपा विकास", "भाजपा शक्ति",
-    "योगी जी", "योगी शक्ति", "योगी सफलता", "भाजपा अच्छा", "भाजपा बेहतर",
-    "भाजपा चुना", "सरकार बनी", "शपथ ग्रहण"
+    "भाजपा जीत",
+    "भाजपा विजय",
+    "भाजपा सफलता",
+    "भाजपा विकास",
+    "भाजपा शक्ति",
+    "योगी जी",
+    "योगी शक्ति",
+    "योगी सफलता",
+    "भाजपा अच्छा",
+    "भाजपा बेहतर",
+    "भाजपा चुना",
+    "सरकार बनी",
+    "शपथ ग्रहण",
 ]
 
 ANTI_BJP_KEYWORDS = [
     # English - BJP challenges/negative
-    "bjp failure", "bjp crisis", "bjp problem", "bjp controversy", "bjp corruption",
-    "bjp criticism", "bjp attack", "anti-bjp", "against bjp", "bjp negative", 
-    "bjp poor", "bjp weak", "yogi criticism", "yogi failure", "bjp faces crisis",
-    "bjp loses", "bjp defeated", "bjp challenge", "bjp opposition",
+    "bjp failure",
+    "bjp crisis",
+    "bjp problem",
+    "bjp controversy",
+    "bjp corruption",
+    "bjp criticism",
+    "bjp attack",
+    "anti-bjp",
+    "against bjp",
+    "bjp negative",
+    "bjp poor",
+    "bjp weak",
+    "yogi criticism",
+    "yogi failure",
+    "bjp faces crisis",
+    "bjp loses",
+    "bjp defeated",
+    "bjp challenge",
+    "bjp opposition",
     # Challenges/defeats
-    "defeat", "loss", "opposition", "challenge", "crisis", "controversy", "corruption",
-    "unseated", "dissolved", "resigned", "failed", "dropped",
+    "defeat",
+    "loss",
+    "opposition",
+    "challenge",
+    "crisis",
+    "controversy",
+    "corruption",
+    "unseated",
+    "dissolved",
+    "resigned",
+    "failed",
+    "dropped",
     # Hindi
-    "भाजपा असफल", "भाजपा संकट", "भाजपा विरोध", "भाजपा समस्या", "भाजपा भ्रष्टाचार",
-    "योगी आलोचना", "योगी असफल", "भाजपा आलोचना", "भाजपा कमजोर", "भाजपा गलत",
-    "हार", "संकट", "विरोध", "समस्या"
+    "भाजपा असफल",
+    "भाजपा संकट",
+    "भाजपा विरोध",
+    "भाजपा समस्या",
+    "भाजपा भ्रष्टाचार",
+    "योगी आलोचना",
+    "योगी असफल",
+    "भाजपा आलोचना",
+    "भाजपा कमजोर",
+    "भाजपा गलत",
+    "हार",
+    "संकट",
+    "विरोध",
+    "समस्या",
 ]
 
 # ─────────────────────────────────────────────
@@ -90,7 +182,10 @@ RSS_FEEDS = [
     {"name": "Health", "url": "https://indianexpress.com/section/health/"},
     {"name": "Education", "url": "https://www.business-standard.com/category/current-affairs"},
     {"name": "Social News", "url": "https://www.livemint.com/news"},
-    {"name": "Crime & Law", "url": "https://www.hindustantimes.com/feeds/rss/india-crime/rssfeed.xml"},
+    {
+        "name": "Crime & Law",
+        "url": "https://www.hindustantimes.com/feeds/rss/india-crime/rssfeed.xml",
+    },
     {"name": "Farmer Issues", "url": "https://www.deccanchronicle.com/farming/"},
 ]
 
@@ -113,30 +208,52 @@ class ArticleCollector:
     def classify_sentiment(self, title: str, summary: str = "") -> str:
         """Classify article sentiment as Pro-BJP or Anti-BJP."""
         text = (title + " " + summary).lower()
-        
+
         # Count keyword matches
         pro_count = sum(1 for kw in PRO_BJP_KEYWORDS if kw.lower() in text)
         anti_count = sum(1 for kw in ANTI_BJP_KEYWORDS if kw.lower() in text)
-        
+
         # Additional pattern matching for sentiment indicators
         # Pro-BJP patterns: victory, wins, success, elected, govt formation, etc.
-        pro_patterns = ["victory", "wins", "success", "elected", "sworn in", 
-                       "takes oath", "forms government", "first cm", "chosen",
-                       "dominat", "expand", "growth"]
-        anti_patterns = ["defeat", "loss", "crisis", "resign", "dissolved", 
-                        "opposition", "fail", "challenges", "controversies",
-                        "unseated", "dropped", "unseat"]
-        
+        pro_patterns = [
+            "victory",
+            "wins",
+            "success",
+            "elected",
+            "sworn in",
+            "takes oath",
+            "forms government",
+            "first cm",
+            "chosen",
+            "dominat",
+            "expand",
+            "growth",
+        ]
+        anti_patterns = [
+            "defeat",
+            "loss",
+            "crisis",
+            "resign",
+            "dissolved",
+            "opposition",
+            "fail",
+            "challenges",
+            "controversies",
+            "unseated",
+            "dropped",
+            "unseat",
+        ]
+
         # Add pattern matches (case-insensitive)
         text_lower = text.lower()
         pro_count += sum(1 for pattern in pro_patterns if pattern in text_lower)
         anti_count += sum(1 for pattern in anti_patterns if pattern in text_lower)
-        
+
         # If it mentions BJP government/CM formation - likely Pro-BJP
         if "bjp" in text_lower and ("government" in text_lower or "cm" in text_lower):
             if "crisis" not in text_lower and "resign" not in text_lower:
                 pro_count += 2
-        
+
         # Decision logic
         if pro_count > anti_count:
             return "Pro-BJP"
@@ -151,18 +268,18 @@ class ArticleCollector:
         try:
             logger.info(f"  Fetching from {source_name}…")
             feed = feedparser.parse(feed_url)
-            
+
             for entry in feed.entries[:articles_per_feed]:
                 title = entry.get("title", "")
                 summary = entry.get("summary", "")
-                
+
                 # STRICT FILTER: Only include Gorakhpur-related articles
                 if not self.is_gorakhpur_related(title, summary):
                     continue
-                
+
                 # Classify sentiment
                 sentiment = self.classify_sentiment(title, summary)
-                
+
                 article = {
                     "source": source_name,
                     "title": title,
@@ -171,15 +288,15 @@ class ArticleCollector:
                     "published": entry.get("published", datetime.now().isoformat()),
                     "sentiment": sentiment,
                 }
-                
+
                 # Skip if duplicate URL exists
                 if not any(a["url"] == article["url"] for a in self.articles):
                     self.articles.append(article)
                     count += 1
-                
+
         except Exception as e:
             logger.warning(f"    ⚠️  Error: {str(e)[:50]}")
-        
+
         if count > 0:
             logger.info(f"    ✅ Added {count} articles from {source_name}")
         return count
@@ -187,28 +304,28 @@ class ArticleCollector:
     def scrape_all(self, articles_per_feed: int = 100, target: int = 500) -> List[Dict]:
         """Scrape all RSS feeds."""
         start_time = datetime.now()
-        logger.info(f"\n🔄 SCRAPING STARTED")
+        logger.info("\n🔄 SCRAPING STARTED")
         logger.info(f"📰 Target: {target}+ articles from {len(RSS_FEEDS)} sources")
         logger.info(f"📊 Fetching ~{articles_per_feed} articles per feed\n")
-        
+
         total_added = 0
         for i, feed in enumerate(RSS_FEEDS, 1):
             added = self.scrape_feed(feed["url"], feed["name"], articles_per_feed)
             total_added += added
             logger.info(f"  Progress: {len(self.articles)} articles collected")
-            
+
             if len(self.articles) >= target:
-                logger.info(f"  ✅ Reached target! Stopping…")
+                logger.info("  ✅ Reached target! Stopping…")
                 break
-        
+
         self.scrape_time = (datetime.now() - start_time).total_seconds()
         logger.info(f"\n{'='*80}")
-        logger.info(f"✅ SCRAPING COMPLETE")
+        logger.info("✅ SCRAPING COMPLETE")
         logger.info(f"{'='*80}")
         logger.info(f"Total articles collected: {len(self.articles)}")
         logger.info(f"Time taken: {self.scrape_time:.1f} seconds")
         logger.info(f"Average: {len(self.articles)/self.scrape_time:.1f} articles/sec")
-        
+
         return self.articles
 
     def print_summary(self):
@@ -216,24 +333,24 @@ class ArticleCollector:
         if not self.articles:
             print("No articles collected yet.")
             return
-        
+
         print(f"\n{'='*80}")
-        print(f"ARTICLES COLLECTION SUMMARY")
+        print("ARTICLES COLLECTION SUMMARY")
         print(f"{'='*80}")
         print(f"\nTotal articles: {len(self.articles)}")
-        
+
         # Group by source
         sources_dict = {}
         for article in self.articles:
             source = article["source"]
             sources_dict[source] = sources_dict.get(source, 0) + 1
-        
+
         print(f"\nArticles by source ({len(sources_dict)} sources):")
         for source in sorted(sources_dict.keys(), key=lambda x: sources_dict[x], reverse=True):
             print(f"  {source:<20} : {sources_dict[source]:>3} articles")
-        
+
         # Sample articles
-        print(f"\n\nSample Articles (first 5):")
+        print("\n\nSample Articles (first 5):")
         print("-" * 80)
         for i, article in enumerate(self.articles[:5], 1):
             print(f"\n{i}. {article['title'][:70]}")
@@ -244,11 +361,12 @@ class ArticleCollector:
     def export_to_json(self, filename: str = "articles_collection.json"):
         """Export articles to JSON file."""
         import json
+
         data = {
             "collected_at": datetime.now().isoformat(),
             "total_articles": len(self.articles),
             "scrape_time_seconds": self.scrape_time,
-            "articles": self.articles
+            "articles": self.articles,
         }
         with open(filename, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
@@ -258,16 +376,17 @@ class ArticleCollector:
     def export_to_csv(self, filename: str = "articles_collection.csv"):
         """Export articles to CSV file with sentiment."""
         import csv
+
         if not self.articles:
             print("No articles to export.")
             return
-        
+
         fieldnames = ["source", "title", "sentiment", "url", "published"]
         with open(filename, "w", newline="", encoding="utf-8") as f:
-            writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction='ignore')
+            writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
             writer.writeheader()
             writer.writerows(self.articles)
-        
+
         logger.info(f"✅ Exported {len(self.articles)} articles to {filename}")
         return filename
 
@@ -275,7 +394,8 @@ class ArticleCollector:
         """Search articles by keyword."""
         keyword_lower = keyword.lower()
         results = [
-            a for a in self.articles
+            a
+            for a in self.articles
             if keyword_lower in a["title"].lower() or keyword_lower in a["summary"].lower()
         ]
         return results
@@ -300,53 +420,53 @@ class ArticleCollector:
 
 def main():
     """Main execution."""
-    print("\n" + "="*80)
+    print("\n" + "=" * 80)
     print("LIGHTWEIGHT ARTICLE COLLECTOR - Gorakhpur News")
-    print("="*80)
+    print("=" * 80)
     print("\nMode: Scraping articles only (no sentiment analysis)")
     print("Focus: Collect maximum articles and store in memory\n")
-    
+
     collector = ArticleCollector()
-    
+
     # Ask user for target
     try:
         target = int(input("How many articles to collect? (default: 500): ").strip() or "500")
     except:
         target = 500
-    
+
     try:
         per_feed = int(input("Articles per feed? (default: 100): ").strip() or "100")
     except:
         per_feed = 100
-    
+
     # Scrape
     articles = collector.scrape_all(articles_per_feed=per_feed, target=target)
-    
+
     # Show summary
     collector.print_summary()
-    
+
     # Show topic coverage
-    print(f"\n\nTopic Coverage:")
+    print("\n\nTopic Coverage:")
     print("-" * 80)
     coverage = collector.get_topics_coverage()
     for topic, count in sorted(coverage.items(), key=lambda x: x[1], reverse=True):
         print(f"  {topic:<20}: {count:>3} articles")
-    
+
     # Export options
-    print(f"\n\nExport Options:")
+    print("\n\nExport Options:")
     print("-" * 80)
     print("1. Export to JSON (for analysis)")
     print("2. Export to CSV (for Excel)")
     print("3. Both")
     print("4. Skip export")
-    
+
     choice = input("\nChoice (1-4): ").strip()
-    
+
     if choice in ["1", "3"]:
         collector.export_to_json()
     if choice in ["2", "3"]:
         collector.export_to_csv()
-    
+
     print(f"\n✅ Done! {len(collector.articles)} articles ready in memory")
 
 

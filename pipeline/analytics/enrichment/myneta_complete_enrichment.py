@@ -16,9 +16,9 @@ Run:
 
 import json
 import logging
-from pathlib import Path
-from typing import Any, Optional
 from datetime import datetime
+from pathlib import Path
+from typing import Any
 
 logger = logging.getLogger(__name__)
 
@@ -56,8 +56,9 @@ def extract_full_profile(candidate_data: dict[str, Any]) -> dict[str, Any]:
     demographics = f"Constituency {ac_name}, {election_year} Election"
 
     # ── ELECTORAL RECORD ───────────────────────────────────────
-    winner_status = (affidavit.get("is_winner") or
-                     ("winner" in (candidate_data.get("party_raw") or "").lower()))
+    winner_status = affidavit.get("is_winner") or (
+        "winner" in (candidate_data.get("party_raw") or "").lower()
+    )
 
     status = "Won" if winner_status else "Contested"
     votes_polled = list_summary.get("votes_polled") or 0
@@ -86,17 +87,24 @@ def extract_full_profile(candidate_data: dict[str, Any]) -> dict[str, Any]:
     total_assets = format_currency(total_assets_rs) if total_assets_rs else "Not Disclosed"
 
     movable_assets = affidavit.get("movable_assets_rs")
-    movable_display = format_currency(movable_assets) if movable_assets else "Not separately declared"
+    movable_display = (
+        format_currency(movable_assets) if movable_assets else "Not separately declared"
+    )
 
     immovable_assets = affidavit.get("immovable_assets_rs")
     immovable_display = format_currency(immovable_assets) if immovable_assets else "None declared"
 
-    immovable_detail = affidavit.get("immovable_assets_detail") or "No agricultural/non-agricultural property declared"
+    immovable_detail = (
+        affidavit.get("immovable_assets_detail")
+        or "No agricultural/non-agricultural property declared"
+    )
 
     vehicles_detail = affidavit.get("vehicles_detail") or "No vehicles declared"
 
     liabilities = affidavit.get("liabilities") or 0
-    liabilities_display = format_currency(liabilities) if liabilities else "Debt-free / Not Disclosed"
+    liabilities_display = (
+        format_currency(liabilities) if liabilities else "Debt-free / Not Disclosed"
+    )
 
     # ── INCOME ─────────────────────────────────────────────────
     itr_data = affidavit.get("itr_income_json") or []
@@ -129,7 +137,11 @@ def extract_full_profile(candidate_data: dict[str, Any]) -> dict[str, Any]:
     # Extract from education/profession fields
     profession_declared = affidavit.get("self_profession") or "Not specified"
 
-    career_info = profession_declared if profession_declared != "Not specified" else "Professional status not publicly declared"
+    career_info = (
+        profession_declared
+        if profession_declared != "Not specified"
+        else "Professional status not publicly declared"
+    )
 
     # ── POLICY STANCE (from party affiliation context) ──────────
     policy_stance = get_party_policy_stance(party)
@@ -172,7 +184,9 @@ def extract_full_profile(candidate_data: dict[str, Any]) -> dict[str, Any]:
             },
             "4_PoliticalTrajectory": {
                 "Current Party": party,
-                "Political Status": "Active candidate" if election_year >= 2022 else "Previous candidate",
+                "Political Status": (
+                    "Active candidate" if election_year >= 2022 else "Previous candidate"
+                ),
                 "Party Join/Switch Information": f"Representing {party}",
                 "Role & Responsibilities": "Electoral candidate",
             },
@@ -246,8 +260,11 @@ def get_party_policy_stance(party: str) -> str:
 def run(myneta_dir: Path = MYNETA_DIR) -> dict[str, Any]:
     """Process all MyNeta candidate files and create COMPLETE enriched profiles."""
 
-    files = sorted(p for p in myneta_dir.glob("myneta_*.json")
-                   if p.name not in ("manifest.json", "myneta_graph.json"))
+    files = sorted(
+        p
+        for p in myneta_dir.glob("myneta_*.json")
+        if p.name not in ("manifest.json", "myneta_graph.json")
+    )
 
     if not files:
         raise FileNotFoundError(f"No MyNeta JSON found in {myneta_dir}")
@@ -273,8 +290,7 @@ def run(myneta_dir: Path = MYNETA_DIR) -> dict[str, Any]:
     # Write output
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_FILE.write_text(
-        json.dumps(all_candidates, ensure_ascii=False, indent=2),
-        encoding="utf-8"
+        json.dumps(all_candidates, ensure_ascii=False, indent=2), encoding="utf-8"
     )
 
     logger.info(f"✓ Wrote {total_candidates} COMPLETE candidate profiles → {OUTPUT_FILE}")

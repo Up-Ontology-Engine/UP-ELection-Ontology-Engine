@@ -1,6 +1,9 @@
 """Historical vote-share trend analysis from booth_results."""
+
 from __future__ import annotations
-import os, logging
+
+import logging
+
 import sqlalchemy as sa
 from sqlalchemy import text
 
@@ -10,12 +13,19 @@ logger = logging.getLogger(__name__)
 def get_vote_share_trend(booth_id: str, engine: sa.Engine) -> list[dict]:
     """Returns [{election_year, party, vote_share, winner_flag}] sorted by year."""
     with engine.connect() as conn:
-        rows = conn.execute(text("""
+        rows = (
+            conn.execute(
+                text("""
             SELECT election_year, party, vote_share, winner_flag
             FROM booth_results
             WHERE booth_id = :bid
             ORDER BY election_year ASC, vote_share DESC
-        """), {"bid": booth_id}).mappings().fetchall()
+        """),
+                {"bid": booth_id},
+            )
+            .mappings()
+            .fetchall()
+        )
     return [dict(r) for r in rows]
 
 
@@ -31,9 +41,9 @@ def get_bjp_trend_summary(booth_id: str, engine: sa.Engine) -> dict:
     if not bjp_rows:
         return {"summary": "No historical BJP data available", "years": [], "shares": []}
 
-    years  = [r["election_year"] for r in bjp_rows]
+    years = [r["election_year"] for r in bjp_rows]
     shares = [round(r["vote_share"] or 0, 1) for r in bjp_rows]
-    wins   = [r["winner_flag"] for r in bjp_rows]
+    wins = [r["winner_flag"] for r in bjp_rows]
 
     # trend
     if len(shares) >= 2:
@@ -48,6 +58,10 @@ def get_bjp_trend_summary(booth_id: str, engine: sa.Engine) -> dict:
     summary = f"{won_text}. Vote share: {share_text} ({trend})"
 
     return {
-        "years": years, "shares": shares, "wins": wins,
-        "trend": trend, "wins_count": wins_count, "summary": summary,
+        "years": years,
+        "shares": shares,
+        "wins": wins,
+        "trend": trend,
+        "wins_count": wins_count,
+        "summary": summary,
     }

@@ -11,6 +11,7 @@ Usage:
     python -m analytics.booth_attribution_report
     python -m analytics.booth_attribution_report --out report.json
 """
+
 from __future__ import annotations
 
 import argparse
@@ -27,7 +28,7 @@ load_dotenv()
 
 logger = logging.getLogger(__name__)
 
-CLONE_SCORE_TOLERANCE = 0.001   # booth pulse scores within this range flagged as clone suspects
+CLONE_SCORE_TOLERANCE = 0.001  # booth pulse scores within this range flagged as clone suspects
 MIN_BOOTHS_FOR_CLONE_CHECK = 3
 
 
@@ -38,9 +39,10 @@ def run(engine: sa.Engine) -> dict:
     }
 
     with engine.connect() as conn:
-
         # ── 1. Overall attribution breakdown ─────────────────────────────
-        agg = conn.execute(text("""
+        agg = (
+            conn.execute(
+                text("""
             SELECT
                 COUNT(*)                                    AS total,
                 COUNT(*) FILTER (WHERE mapped_booth_id IS NOT NULL
@@ -54,16 +56,20 @@ def run(engine: sa.Engine) -> dict:
                 AVG(geo_confidence) FILTER (WHERE geo_confidence IS NOT NULL) AS avg_geo_conf
             FROM pulse_events
             WHERE mapped_ac_id = 'GKP_322'
-        """)).mappings().fetchone()
+        """)
+            )
+            .mappings()
+            .fetchone()
+        )
 
         r = dict(agg) if agg else {}
         total = int(r.get("total") or 0)
         report["totals"] = {
-            "total_events":       total,
-            "booth_high_conf":    int(r.get("booth_high_conf") or 0),
-            "booth_low_conf":     int(r.get("booth_low_conf") or 0),
-            "ac_level":           int(r.get("ac_level") or 0),
-            "unresolved":         int(r.get("unresolved") or 0),
+            "total_events": total,
+            "booth_high_conf": int(r.get("booth_high_conf") or 0),
+            "booth_low_conf": int(r.get("booth_low_conf") or 0),
+            "ac_level": int(r.get("ac_level") or 0),
+            "unresolved": int(r.get("unresolved") or 0),
             "avg_geo_confidence": round(float(r.get("avg_geo_conf") or 0), 3),
         }
         if total > 0:
@@ -75,7 +81,9 @@ def run(engine: sa.Engine) -> dict:
             )
 
         # ── 2. Booth-level distribution ───────────────────────────────────
-        booth_dist = conn.execute(text("""
+        booth_dist = (
+            conn.execute(
+                text("""
             SELECT mapped_booth_id, COUNT(*) AS n,
                    AVG(geo_confidence) AS avg_conf,
                    COUNT(DISTINCT source_type) AS source_types
@@ -84,11 +92,15 @@ def run(engine: sa.Engine) -> dict:
               AND mapped_ac_id = 'GKP_322'
             GROUP BY mapped_booth_id
             ORDER BY n DESC
-        """)).mappings().fetchall()
+        """)
+            )
+            .mappings()
+            .fetchall()
+        )
 
         report["booth_distribution"] = [
             {
-                "booth_id":    r["mapped_booth_id"],
+                "booth_id": r["mapped_booth_id"],
                 "event_count": int(r["n"]),
                 "avg_geo_conf": round(float(r["avg_conf"]), 3),
                 "source_types": int(r["source_types"]),
@@ -97,7 +109,8 @@ def run(engine: sa.Engine) -> dict:
         ]
 
         # ── 3. Top unresolved location_text values ────────────────────────
-        unresolved_locs = conn.execute(text("""
+        unresolved_locs = conn.execute(
+            text("""
             SELECT location_text, COUNT(*) AS n
             FROM pulse_events
             WHERE location_text IS NOT NULL
@@ -107,20 +120,27 @@ def run(engine: sa.Engine) -> dict:
             GROUP BY location_text
             ORDER BY n DESC
             LIMIT 30
-        """)).fetchall()
+        """)
+        ).fetchall()
 
         report["top_unresolved_localities"] = [
             {"location_text": r[0], "count": int(r[1])} for r in unresolved_locs
         ]
 
         # ── 4. Source type breakdown ──────────────────────────────────────
-        source_dist = conn.execute(text("""
+        source_dist = (
+            conn.execute(
+                text("""
             SELECT source_type, geo_level, COUNT(*) AS n
             FROM pulse_events
             WHERE mapped_ac_id = 'GKP_322'
             GROUP BY source_type, geo_level
             ORDER BY source_type, geo_level
-        """)).mappings().fetchall()
+        """)
+            )
+            .mappings()
+            .fetchall()
+        )
 
         report["source_geo_breakdown"] = [
             {"source": r["source_type"], "geo_level": r["geo_level"], "count": int(r["n"])}
@@ -129,7 +149,9 @@ def run(engine: sa.Engine) -> dict:
 
         # ── 5. Synthetic clone detection ──────────────────────────────────
         # Flag if multiple booths have identical bjp_pulse_score or opp_pulse_score
-        clone_check = conn.execute(text("""
+        clone_check = (
+            conn.execute(
+                text("""
             SELECT bjp_pulse_score, opp_pulse_score, COUNT(*) AS booth_count
             FROM booth_metrics
             WHERE booth_id LIKE 'GKP_322_%'
@@ -137,14 +159,19 @@ def run(engine: sa.Engine) -> dict:
             HAVING COUNT(*) >= :min_booths
                AND bjp_pulse_score IS NOT NULL
             ORDER BY booth_count DESC
-        """), {"min_booths": MIN_BOOTHS_FOR_CLONE_CHECK}).mappings().fetchall()
+        """),
+                {"min_booths": MIN_BOOTHS_FOR_CLONE_CHECK},
+            )
+            .mappings()
+            .fetchall()
+        )
 
         clone_suspects = [
             {
                 "bjp_pulse_score": r["bjp_pulse_score"],
                 "opp_pulse_score": r["opp_pulse_score"],
-                "booth_count":     int(r["booth_count"]),
-                "flag":            "SYNTHETIC_CLONE_SUSPECT",
+                "booth_count": int(r["booth_count"]),
+                "flag": "SYNTHETIC_CLONE_SUSPECT",
             }
             for r in clone_check
         ]
@@ -153,9 +180,7 @@ def run(engine: sa.Engine) -> dict:
 
         # ── 6. Recommended alias additions ───────────────────────────────
         # Top location_texts that appear 3+ times but aren't booth-mapped
-        alias_candidates = [
-            loc for loc in report["top_unresolved_localities"] if loc["count"] >= 3
-        ]
+        alias_candidates = [loc for loc in report["top_unresolved_localities"] if loc["count"] >= 3]
         report["recommended_alias_additions"] = alias_candidates
 
     return report
@@ -168,7 +193,9 @@ def _print_report(r: dict) -> None:
     print(f"  Generated: {r['generated_at']}")
     print(f"{'='*60}")
     print(f"\n  Total pulse events:       {t['total_events']}")
-    print(f"  Booth-attributed (>=0.75): {t['booth_high_conf']}  ({t.get('pct_booth_attributed', 0):.1f}%)")
+    print(
+        f"  Booth-attributed (>=0.75): {t['booth_high_conf']}  ({t.get('pct_booth_attributed', 0):.1f}%)"
+    )
     print(f"  AC-level only:            {t['ac_level']}  ({t.get('pct_ac_level', 0):.1f}%)")
     print(f"  Unresolved:               {t['unresolved']}")
     print(f"  Avg geo confidence:       {t['avg_geo_confidence']:.3f}")
@@ -176,31 +203,39 @@ def _print_report(r: dict) -> None:
     if r["booth_distribution"]:
         print(f"\n  Booth distribution ({len(r['booth_distribution'])} booths with events):")
         for b in r["booth_distribution"][:10]:
-            print(f"    {b['booth_id']}  events={b['event_count']}  "
-                  f"avg_conf={b['avg_geo_conf']:.2f}  sources={b['source_types']}")
+            print(
+                f"    {b['booth_id']}  events={b['event_count']}  "
+                f"avg_conf={b['avg_geo_conf']:.2f}  sources={b['source_types']}"
+            )
 
     if r["top_unresolved_localities"]:
-        print(f"\n  Top unresolved locality mentions:")
+        print("\n  Top unresolved locality mentions:")
         for loc in r["top_unresolved_localities"][:10]:
             print(f"    {loc['location_text']!r:<35}  count={loc['count']}")
 
     if r["clone_suspects"]:
-        print(f"\n  ⚠  CLONE SUSPECTS ({len(r['clone_suspects'])} score groups with {MIN_BOOTHS_FOR_CLONE_CHECK}+ identical booths):")
+        print(
+            f"\n  ⚠  CLONE SUSPECTS ({len(r['clone_suspects'])} score groups with {MIN_BOOTHS_FOR_CLONE_CHECK}+ identical booths):"
+        )
         for c in r["clone_suspects"][:5]:
-            print(f"    BJP={c['bjp_pulse_score']} OPP={c['opp_pulse_score']}  "
-                  f"across {c['booth_count']} booths — likely synthetic")
+            print(
+                f"    BJP={c['bjp_pulse_score']} OPP={c['opp_pulse_score']}  "
+                f"across {c['booth_count']} booths — likely synthetic"
+            )
     else:
-        print(f"\n  ✓  No synthetic clone patterns detected.")
+        print("\n  ✓  No synthetic clone patterns detected.")
 
     if r["recommended_alias_additions"]:
-        print(f"\n  Recommended alias additions (appear 3+ times, unmapped):")
+        print("\n  Recommended alias additions (appear 3+ times, unmapped):")
         for loc in r["recommended_alias_additions"]:
             print(f"    {loc['location_text']!r}  (count={loc['count']})")
     print()
 
 
 if __name__ == "__main__":
-    import io, sys
+    import io
+    import sys
+
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     parser = argparse.ArgumentParser()

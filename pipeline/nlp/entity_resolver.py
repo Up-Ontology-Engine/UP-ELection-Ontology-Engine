@@ -5,7 +5,9 @@ Used as Stage 5b of the NLP pipeline (after LLM extraction).
 Resolves candidate names and party mentions to canonical IDs in
 candidate_master / party, so every PulseEvent references a real graph node.
 """
+
 from __future__ import annotations
+
 import logging
 import os
 from typing import Optional
@@ -32,18 +34,37 @@ _CANDIDATE_ALIASES: dict[str, str] = {
 }
 
 _PARTY_CANONICAL: dict[str, str] = {
-    "bjp": "BJP", "भाजपा": "BJP", "lotus": "BJP", "double engine": "BJP",
-    "sp": "SP", "samajwadi": "SP", "cycle": "SP", "सपा": "SP",
-    "bsp": "BSP", "elephant": "BSP", "बसपा": "BSP",
-    "inc": "INC", "congress": "INC", "कांग्रेस": "INC",
-    "aap": "AAP", "आप": "AAP",
+    "bjp": "BJP",
+    "भाजपा": "BJP",
+    "lotus": "BJP",
+    "double engine": "BJP",
+    "sp": "SP",
+    "samajwadi": "SP",
+    "cycle": "SP",
+    "सपा": "SP",
+    "bsp": "BSP",
+    "elephant": "BSP",
+    "बसपा": "BSP",
+    "inc": "INC",
+    "congress": "INC",
+    "कांग्रेस": "INC",
+    "aap": "AAP",
+    "आप": "AAP",
     "nishad": "NISHAD",
     "apna dal": "AD",
     "aimim": "AIMIM",
 }
 
 _SALUTATION_PREFIXES = (
-    "shri ", "smt ", "dr ", "sh ", "श्री ", "श्रीमती ", "डॉ ", "mr ", "mrs ",
+    "shri ",
+    "smt ",
+    "dr ",
+    "sh ",
+    "श्री ",
+    "श्रीमती ",
+    "डॉ ",
+    "mr ",
+    "mrs ",
 )
 
 
@@ -69,11 +90,14 @@ class EntityResolver:
         try:
             import sqlalchemy as sa
             from sqlalchemy import text
+
             engine = sa.create_engine(self._pg_url)
             with engine.connect() as conn:
-                rows = conn.execute(text(
-                    "SELECT candidate_id::text, name FROM candidate_master WHERE name IS NOT NULL"
-                )).fetchall()
+                rows = conn.execute(
+                    text(
+                        "SELECT candidate_id::text, name FROM candidate_master WHERE name IS NOT NULL"
+                    )
+                ).fetchall()
             for cid, name in rows:
                 key = name.lower().strip()
                 self._candidates[key] = (cid, name)
@@ -81,7 +105,7 @@ class EntityResolver:
                 stripped = key
                 for pfx in _SALUTATION_PREFIXES:
                     if stripped.startswith(pfx):
-                        stripped = stripped[len(pfx):].strip()
+                        stripped = stripped[len(pfx) :].strip()
                         self._candidates.setdefault(stripped, (cid, name))
             logger.debug("EntityResolver: %d candidate entries loaded", len(self._candidates))
         except Exception as e:
@@ -122,6 +146,7 @@ class EntityResolver:
         if self._candidates:
             try:
                 from thefuzz import process as fuzz
+
                 keys = list(self._candidates.keys())
                 match, score = fuzz.extractOne(lower, keys)
                 if score >= 75:

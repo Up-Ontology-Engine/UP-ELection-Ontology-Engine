@@ -15,6 +15,7 @@ Usage:
     logger = get_logger(__name__)
     logger.info("Processing booth", extra={"booth_id": "GKP_B001", "event": "nlp.extract"})
 """
+
 from __future__ import annotations
 
 import logging
@@ -24,13 +25,13 @@ import sys
 import uuid
 from typing import Any
 
-
 # ── Contextvars for per-request enrichment ────────────────────────────────────
 try:
     from contextvars import ContextVar
+
     _request_id_var: ContextVar[str] = ContextVar("request_id", default="")
-    _booth_id_var:   ContextVar[str] = ContextVar("booth_id",   default="")
-    _ac_id_var:      ContextVar[str] = ContextVar("ac_id",      default="")
+    _booth_id_var: ContextVar[str] = ContextVar("booth_id", default="")
+    _ac_id_var: ContextVar[str] = ContextVar("ac_id", default="")
     _CONTEXTVARS_OK = True
 except ImportError:
     _CONTEXTVARS_OK = False
@@ -58,11 +59,13 @@ def get_request_id() -> str:
 
 # ── JSON Formatter ────────────────────────────────────────────────────────────
 
+
 class JsonFormatter(logging.Formatter):
     """
     Emits each log record as a single-line JSON object.
     Fields: timestamp, level, logger, message, + any extras.
     """
+
     _SERVICE = os.environ.get("SERVICE_NAME", "api")
 
     def format(self, record: logging.LogRecord) -> str:
@@ -70,11 +73,11 @@ class JsonFormatter(logging.Formatter):
         import traceback
 
         base: dict[str, Any] = {
-            "ts":      self.formatTime(record, "%Y-%m-%dT%H:%M:%S"),
-            "level":   record.levelname,
-            "logger":  record.name,
+            "ts": self.formatTime(record, "%Y-%m-%dT%H:%M:%S"),
+            "level": record.levelname,
+            "logger": record.name,
             "service": self._SERVICE,
-            "msg":     record.getMessage(),
+            "msg": record.getMessage(),
         }
 
         # Request context enrichment
@@ -88,10 +91,27 @@ class JsonFormatter(logging.Formatter):
 
         # Extra fields attached via logger.info("msg", extra={...})
         skip = {
-            "name", "msg", "args", "levelname", "levelno", "pathname",
-            "filename", "module", "exc_info", "exc_text", "stack_info",
-            "lineno", "funcName", "created", "msecs", "relativeCreated",
-            "thread", "threadName", "processName", "process", "message",
+            "name",
+            "msg",
+            "args",
+            "levelname",
+            "levelno",
+            "pathname",
+            "filename",
+            "module",
+            "exc_info",
+            "exc_text",
+            "stack_info",
+            "lineno",
+            "funcName",
+            "created",
+            "msecs",
+            "relativeCreated",
+            "thread",
+            "threadName",
+            "processName",
+            "process",
+            "message",
             "taskName",
         }
         for k, v in record.__dict__.items():
@@ -106,13 +126,14 @@ class JsonFormatter(logging.Formatter):
 
 # ── Human-readable formatter (dev) ────────────────────────────────────────────
 
+
 class DevFormatter(logging.Formatter):
     _COLORS = {
-        "DEBUG":    "\033[36m",    # cyan
-        "INFO":     "\033[32m",    # green
-        "WARNING":  "\033[33m",    # yellow
-        "ERROR":    "\033[31m",    # red
-        "CRITICAL": "\033[35m",    # magenta
+        "DEBUG": "\033[36m",  # cyan
+        "INFO": "\033[32m",  # green
+        "WARNING": "\033[33m",  # yellow
+        "ERROR": "\033[31m",  # red
+        "CRITICAL": "\033[35m",  # magenta
     }
     _RESET = "\033[0m"
 
@@ -129,6 +150,7 @@ class DevFormatter(logging.Formatter):
 
 
 # ── Main configure function ───────────────────────────────────────────────────
+
 
 def configure_logging(
     level: str | None = None,

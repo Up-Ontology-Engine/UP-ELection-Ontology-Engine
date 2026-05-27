@@ -1,4 +1,4 @@
-﻿"""
+"""
 ETL: News articles CSV → news_articles table (pre-NLP staging)
 
 Source:
@@ -14,6 +14,7 @@ What happens here:
 
 Run: python -m etl.transform_news
 """
+
 from __future__ import annotations
 
 import hashlib
@@ -33,28 +34,28 @@ DATA_DIR = Path(__file__).parents[1] / "data" / "data"
 CSV_PATH = DATA_DIR / "Convert to xcel sheet" / "results-20260508043736 (3).csv"
 
 DOMAIN_TO_SOURCE: dict[str, str] = {
-    "bhaskar.com":                       "dainik_bhaskar",
-    "navbharattimes.indiatimes.com":      "navbharat_times",
-    "timesofindia.indiatimes.com":        "times_of_india",
-    "aninews.in":                         "ani",
-    "indianexpress.com":                  "indian_express",
-    "khaskhabar.com":                     "khas_khabar",
-    "palpalindia.com":                    "palpal_india",
-    "jagran.com":                         "jagran",
-    "amarujala.com":                      "amar_ujala",
-    "livehindustan.com":                  "live_hindustan",
-    "ndtv.com":                           "ndtv",
-    "thehindu.com":                       "the_hindu",
+    "bhaskar.com": "dainik_bhaskar",
+    "navbharattimes.indiatimes.com": "navbharat_times",
+    "timesofindia.indiatimes.com": "times_of_india",
+    "aninews.in": "ani",
+    "indianexpress.com": "indian_express",
+    "khaskhabar.com": "khas_khabar",
+    "palpalindia.com": "palpal_india",
+    "jagran.com": "jagran",
+    "amarujala.com": "amar_ujala",
+    "livehindustan.com": "live_hindustan",
+    "ndtv.com": "ndtv",
+    "thehindu.com": "the_hindu",
 }
 
 DEFAULT_SOURCE_WEIGHT: dict[str, float] = {
-    "jagran":         0.8,
-    "amar_ujala":     0.8,
-    "navbharat_times":0.75,
+    "jagran": 0.8,
+    "amar_ujala": 0.8,
+    "navbharat_times": 0.75,
     "times_of_india": 0.75,
     "dainik_bhaskar": 0.7,
-    "ndtv":           0.75,
-    "ani":            0.7,
+    "ndtv": 0.75,
+    "ani": 0.7,
 }
 
 
@@ -78,20 +79,20 @@ def load_news_articles(engine: sa.Engine) -> int:
     df.columns = [c.strip() for c in df.columns]
 
     # Normalise
-    df["URL"]   = df["URL"].fillna("").str.strip()
+    df["URL"] = df["URL"].fillna("").str.strip()
     df["Title"] = df["Title"].fillna("").str.strip()
-    df["Date"]  = pd.to_datetime(df["Date"], errors="coerce")
+    df["Date"] = pd.to_datetime(df["Date"], errors="coerce")
     df = df[df["URL"].str.startswith("http") & (df["Title"].str.len() > 5)]
 
     inserted = 0
     with engine.connect() as conn:
         for _, row in df.iterrows():
-            url         = row["URL"]
-            title       = row["Title"]
-            source      = _domain_to_source(url)
-            published   = row["Date"] if pd.notna(row["Date"]) else None
-            content_hash= hashlib.sha256((url + title).encode()).hexdigest()[:64]
-            weight      = DEFAULT_SOURCE_WEIGHT.get(source, 0.6)
+            url = row["URL"]
+            title = row["Title"]
+            source = _domain_to_source(url)
+            published = row["Date"] if pd.notna(row["Date"]) else None
+            content_hash = hashlib.sha256((url + title).encode()).hexdigest()[:64]
+            weight = DEFAULT_SOURCE_WEIGHT.get(source, 0.6)
 
             try:
                 conn.execute(
@@ -105,10 +106,10 @@ def load_news_articles(engine: sa.Engine) -> int:
                         ON CONFLICT (url) DO NOTHING
                     """),
                     {
-                        "source":       source,
-                        "headline":     title,
-                        "body_raw":     title,  # body = title until full scrape enriches it
-                        "url":          url,
+                        "source": source,
+                        "headline": title,
+                        "body_raw": title,  # body = title until full scrape enriches it
+                        "url": url,
                         "published_at": published,
                         "content_hash": content_hash,
                     },
@@ -119,7 +120,9 @@ def load_news_articles(engine: sa.Engine) -> int:
 
         conn.commit()
 
-    logger.info("Inserted %d news articles into news_articles (from %d CSV rows)", inserted, len(df))
+    logger.info(
+        "Inserted %d news articles into news_articles (from %d CSV rows)", inserted, len(df)
+    )
     return inserted
 
 

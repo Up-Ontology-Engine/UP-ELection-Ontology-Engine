@@ -37,6 +37,7 @@ LOAD_WINDOW_DAYS = 3650  # 10 years — loads all historical data on first run
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
+
 def _neo4j_dt(dt: datetime) -> str:
     """Format datetime for Neo4j datetime() literal."""
     return dt.strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -44,12 +45,14 @@ def _neo4j_dt(dt: datetime) -> str:
 
 # ── DataQuality nodes ─────────────────────────────────────────────────────────
 
+
 def load_data_quality(pg_engine: Engine, neo4j_session: Session) -> int:
     cutoff = datetime.now(timezone.utc) - timedelta(days=LOAD_WINDOW_DAYS)
 
     with pg_engine.connect() as conn:
-        rows = conn.execute(
-            text("""
+        rows = (
+            conn.execute(
+                text("""
                 SELECT booth_id, computed_at, window_days,
                        total_events, unique_sources,
                        overall_quality_score, quality_label, quality_reasons,
@@ -58,8 +61,11 @@ def load_data_quality(pg_engine: Engine, neo4j_session: Session) -> int:
                 WHERE computed_at >= :cutoff
                 ORDER BY computed_at DESC
             """),
-            {"cutoff": cutoff},
-        ).mappings().fetchall()
+                {"cutoff": cutoff},
+            )
+            .mappings()
+            .fetchall()
+        )
 
     for r in rows:
         reasons = r["quality_reasons"]
@@ -86,17 +92,17 @@ def load_data_quality(pg_engine: Engine, neo4j_session: Session) -> int:
             MERGE (entity)-[:HAS_QUALITY]->(dq)
             """,
             {
-                "booth_id":             r["booth_id"],
-                "computed_at":          _neo4j_dt(r["computed_at"]),
-                "window_days":          r["window_days"],
-                "total_events":         r["total_events"],
-                "unique_sources":       r["unique_sources"],
+                "booth_id": r["booth_id"],
+                "computed_at": _neo4j_dt(r["computed_at"]),
+                "window_days": r["window_days"],
+                "total_events": r["total_events"],
+                "unique_sources": r["unique_sources"],
                 "overall_quality_score": float(r["overall_quality_score"] or 0),
-                "quality_label":        r["quality_label"],
-                "quality_reasons":      reasons,
+                "quality_label": r["quality_label"],
+                "quality_reasons": reasons,
                 "source_diversity_score": float(r["source_diversity_score"] or 0),
-                "avg_geo_confidence":   float(r["avg_geo_confidence"] or 0),
-                "avg_nlp_confidence":   float(r["avg_nlp_confidence"] or 0),
+                "avg_geo_confidence": float(r["avg_geo_confidence"] or 0),
+                "avg_nlp_confidence": float(r["avg_nlp_confidence"] or 0),
             },
         )
 
@@ -106,12 +112,14 @@ def load_data_quality(pg_engine: Engine, neo4j_session: Session) -> int:
 
 # ── Narrative nodes ───────────────────────────────────────────────────────────
 
+
 def load_narratives(pg_engine: Engine, neo4j_session: Session) -> int:
     cutoff = datetime.now(timezone.utc) - timedelta(days=LOAD_WINDOW_DAYS)
 
     with pg_engine.connect() as conn:
-        rows = conn.execute(
-            text("""
+        rows = (
+            conn.execute(
+                text("""
                 SELECT booth_id, computed_at, window_days,
                        narrative_type, strength, description,
                        top_issues, top_entities, evidence_count, confidence
@@ -119,14 +127,25 @@ def load_narratives(pg_engine: Engine, neo4j_session: Session) -> int:
                 WHERE computed_at >= :cutoff
                 ORDER BY computed_at DESC
             """),
-            {"cutoff": cutoff},
-        ).mappings().fetchall()
+                {"cutoff": cutoff},
+            )
+            .mappings()
+            .fetchall()
+        )
 
     for r in rows:
-        top_issues   = r["top_issues"]   if isinstance(r["top_issues"],   list) else json.loads(r["top_issues"]   or "[]")
-        top_entities = r["top_entities"] if isinstance(r["top_entities"], list) else json.loads(r["top_entities"] or "[]")
+        top_issues = (
+            r["top_issues"]
+            if isinstance(r["top_issues"], list)
+            else json.loads(r["top_issues"] or "[]")
+        )
+        top_entities = (
+            r["top_entities"]
+            if isinstance(r["top_entities"], list)
+            else json.loads(r["top_entities"] or "[]")
+        )
         # Neo4j can't store dicts — serialize to JSON strings
-        top_issues_str   = json.dumps(top_issues,   ensure_ascii=False)
+        top_issues_str = json.dumps(top_issues, ensure_ascii=False)
         top_entities_str = json.dumps(top_entities, ensure_ascii=False)
 
         neo4j_session.run(
@@ -148,16 +167,16 @@ def load_narratives(pg_engine: Engine, neo4j_session: Session) -> int:
             MERGE (b)-[:HAS_NARRATIVE]->(n)
             """,
             {
-                "booth_id":       r["booth_id"],
-                "computed_at":    _neo4j_dt(r["computed_at"]),
-                "window_days":    r["window_days"],
+                "booth_id": r["booth_id"],
+                "computed_at": _neo4j_dt(r["computed_at"]),
+                "window_days": r["window_days"],
                 "narrative_type": r["narrative_type"],
-                "strength":       float(r["strength"] or 0),
-                "description":    r["description"] or "",
-                "top_issues":     top_issues_str,
-                "top_entities":   top_entities_str,
+                "strength": float(r["strength"] or 0),
+                "description": r["description"] or "",
+                "top_issues": top_issues_str,
+                "top_entities": top_entities_str,
                 "evidence_count": r["evidence_count"],
-                "confidence":     float(r["confidence"] or 0),
+                "confidence": float(r["confidence"] or 0),
             },
         )
 
@@ -177,10 +196,10 @@ def load_narratives(pg_engine: Engine, neo4j_session: Session) -> int:
                 MERGE (n)-[:ABOUT_ISSUE]->(i)
                 """,
                 {
-                    "booth_id":       r["booth_id"],
+                    "booth_id": r["booth_id"],
                     "narrative_type": r["narrative_type"],
-                    "computed_at":    _neo4j_dt(r["computed_at"]),
-                    "issue_code":     issue_code,
+                    "computed_at": _neo4j_dt(r["computed_at"]),
+                    "issue_code": issue_code,
                 },
             )
 
@@ -204,10 +223,10 @@ def load_narratives(pg_engine: Engine, neo4j_session: Session) -> int:
                 )
                 """,
                 {
-                    "booth_id":       r["booth_id"],
+                    "booth_id": r["booth_id"],
                     "narrative_type": r["narrative_type"],
-                    "computed_at":    _neo4j_dt(r["computed_at"]),
-                    "entity":         entity,
+                    "computed_at": _neo4j_dt(r["computed_at"]),
+                    "entity": entity,
                 },
             )
 
@@ -217,12 +236,14 @@ def load_narratives(pg_engine: Engine, neo4j_session: Session) -> int:
 
 # ── SchemeGap nodes ───────────────────────────────────────────────────────────
 
+
 def load_scheme_gaps(pg_engine: Engine, neo4j_session: Session) -> int:
     cutoff = datetime.now(timezone.utc) - timedelta(days=LOAD_WINDOW_DAYS)
 
     with pg_engine.connect() as conn:
-        rows = conn.execute(
-            text("""
+        rows = (
+            conn.execute(
+                text("""
                 SELECT booth_id, panchayat_id, scheme_name, issue_tag, computed_at,
                        beneficiary_count, completion_status,
                        positive_events, negative_events, total_events, avg_sentiment,
@@ -231,8 +252,11 @@ def load_scheme_gaps(pg_engine: Engine, neo4j_session: Session) -> int:
                 WHERE computed_at >= :cutoff
                 ORDER BY computed_at DESC
             """),
-            {"cutoff": cutoff},
-        ).mappings().fetchall()
+                {"cutoff": cutoff},
+            )
+            .mappings()
+            .fetchall()
+        )
 
     for r in rows:
         neo4j_session.run(
@@ -261,20 +285,20 @@ def load_scheme_gaps(pg_engine: Engine, neo4j_session: Session) -> int:
             MERGE (sg)-[:FOR_SCHEME]->(sc)
             """,
             {
-                "booth_id":          r["booth_id"],
-                "computed_at":       _neo4j_dt(r["computed_at"]),
-                "panchayat_id":      r["panchayat_id"],
-                "scheme_name":       r["scheme_name"],
-                "issue_tag":         r["issue_tag"] or "",
+                "booth_id": r["booth_id"],
+                "computed_at": _neo4j_dt(r["computed_at"]),
+                "panchayat_id": r["panchayat_id"],
+                "scheme_name": r["scheme_name"],
+                "issue_tag": r["issue_tag"] or "",
                 "beneficiary_count": r["beneficiary_count"] or 0,
                 "completion_status": r["completion_status"] or "",
-                "positive_events":   r["positive_events"] or 0,
-                "negative_events":   r["negative_events"] or 0,
-                "total_events":      r["total_events"] or 0,
-                "avg_sentiment":     float(r["avg_sentiment"] or 0),
-                "gap_type":          r["gap_type"] or "",
-                "gap_label":         r["gap_label"] or "",
-                "priority":          r["priority"] or "LOW",
+                "positive_events": r["positive_events"] or 0,
+                "negative_events": r["negative_events"] or 0,
+                "total_events": r["total_events"] or 0,
+                "avg_sentiment": float(r["avg_sentiment"] or 0),
+                "gap_type": r["gap_type"] or "",
+                "gap_label": r["gap_label"] or "",
+                "priority": r["priority"] or "LOW",
             },
         )
 
@@ -291,10 +315,10 @@ def load_scheme_gaps(pg_engine: Engine, neo4j_session: Session) -> int:
                 MERGE (sg)-[:TAGGED_ISSUE]->(i)
                 """,
                 {
-                    "booth_id":    r["booth_id"],
+                    "booth_id": r["booth_id"],
                     "scheme_name": r["scheme_name"],
                     "computed_at": _neo4j_dt(r["computed_at"]),
-                    "issue_tag":   r["issue_tag"],
+                    "issue_tag": r["issue_tag"],
                 },
             )
 
@@ -304,12 +328,14 @@ def load_scheme_gaps(pg_engine: Engine, neo4j_session: Session) -> int:
 
 # ── ContradictionFlag nodes ───────────────────────────────────────────────────
 
+
 def load_contradiction_flags(pg_engine: Engine, neo4j_session: Session) -> int:
     cutoff = datetime.now(timezone.utc) - timedelta(days=LOAD_WINDOW_DAYS)
 
     with pg_engine.connect() as conn:
-        rows = conn.execute(
-            text("""
+        rows = (
+            conn.execute(
+                text("""
                 SELECT booth_id, entity, issue, computed_at, window_days,
                        source_a, source_b,
                        polarity_a, polarity_b, delta,
@@ -319,8 +345,11 @@ def load_contradiction_flags(pg_engine: Engine, neo4j_session: Session) -> int:
                 WHERE computed_at >= :cutoff
                 ORDER BY computed_at DESC
             """),
-            {"cutoff": cutoff},
-        ).mappings().fetchall()
+                {"cutoff": cutoff},
+            )
+            .mappings()
+            .fetchall()
+        )
 
     for r in rows:
         neo4j_session.run(
@@ -355,20 +384,20 @@ def load_contradiction_flags(pg_engine: Engine, neo4j_session: Session) -> int:
             )
             """,
             {
-                "booth_id":          r["booth_id"],
-                "entity":            r["entity"],
-                "issue":             r["issue"] or "",
-                "computed_at":       _neo4j_dt(r["computed_at"]),
-                "window_days":       r["window_days"] or 7,
-                "source_a":          r["source_a"],
-                "source_b":          r["source_b"],
-                "polarity_a":        float(r["polarity_a"] or 0),
-                "polarity_b":        float(r["polarity_b"] or 0),
-                "delta":             float(r["delta"] or 0),
-                "events_a":          r["events_a"] or 0,
-                "events_b":          r["events_b"] or 0,
+                "booth_id": r["booth_id"],
+                "entity": r["entity"],
+                "issue": r["issue"] or "",
+                "computed_at": _neo4j_dt(r["computed_at"]),
+                "window_days": r["window_days"] or 7,
+                "source_a": r["source_a"],
+                "source_b": r["source_b"],
+                "polarity_a": float(r["polarity_a"] or 0),
+                "polarity_b": float(r["polarity_b"] or 0),
+                "delta": float(r["delta"] or 0),
+                "events_a": r["events_a"] or 0,
+                "events_b": r["events_b"] or 0,
                 "consistency_score": float(r["consistency_score"] or 0),
-                "flag_label":        r["flag_label"] or "",
+                "flag_label": r["flag_label"] or "",
             },
         )
 
@@ -378,11 +407,12 @@ def load_contradiction_flags(pg_engine: Engine, neo4j_session: Session) -> int:
 
 # ── Orchestrator ──────────────────────────────────────────────────────────────
 
+
 def load_all(pg_engine: Engine, neo4j_session: Session) -> dict[str, int]:
     counts = {
-        "data_quality":        load_data_quality(pg_engine, neo4j_session),
-        "narratives":          load_narratives(pg_engine, neo4j_session),
-        "scheme_gaps":         load_scheme_gaps(pg_engine, neo4j_session),
+        "data_quality": load_data_quality(pg_engine, neo4j_session),
+        "narratives": load_narratives(pg_engine, neo4j_session),
+        "scheme_gaps": load_scheme_gaps(pg_engine, neo4j_session),
         "contradiction_flags": load_contradiction_flags(pg_engine, neo4j_session),
     }
     logger.info("Intelligence layer loaded: %s", counts)
@@ -390,9 +420,12 @@ def load_all(pg_engine: Engine, neo4j_session: Session) -> dict[str, int]:
 
 
 if __name__ == "__main__":
-    from dotenv import load_dotenv; load_dotenv()
-    from backend.db import get_pg_engine, get_neo4j_session
-    pg  = get_pg_engine()
+    from dotenv import load_dotenv
+
+    load_dotenv()
+    from backend.db import get_neo4j_session, get_pg_engine
+
+    pg = get_pg_engine()
     with get_neo4j_session() as session:
         counts = load_all(pg, session)
     print("Loaded:", counts)

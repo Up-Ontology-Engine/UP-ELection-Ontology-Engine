@@ -27,6 +27,7 @@ Run:
   python -m ingestion.ddp_electoral_roll --pdf "path/to/roll.pdf" --ac 322
   python -m ingestion.ddp_electoral_roll --dry-run   (OCR + extract, no DB write)
 """
+
 from __future__ import annotations
 
 import argparse
@@ -64,12 +65,12 @@ def extract_records_from_pdf(pdf_path: Path, out_dir: Path) -> list:
     Returns list of ElectoralRollRecord objects with part_no, gender, age fields.
     """
     from digital_democracy_pipeline.detector import detect_upload
-    from digital_democracy_pipeline.normalizers import normalize_mediaset_pages
-    from digital_democracy_pipeline.sarvam import SarvamDocumentIntelligenceExtractor
     from digital_democracy_pipeline.electoral_roll import (
         LocalGoogleTranslator,
         build_electoral_outputs,
     )
+    from digital_democracy_pipeline.normalizers import normalize_mediaset_pages
+    from digital_democracy_pipeline.sarvam import SarvamDocumentIntelligenceExtractor
 
     api_key = os.environ.get("SARVAM_API_KEY")
     if not api_key:
@@ -102,8 +103,9 @@ def extract_records_from_pdf(pdf_path: Path, out_dir: Path) -> list:
         translator=translator,
     )
 
-    logger.info("Extracted %d ElectoralRollRecord objects from %s",
-                len(english_records), pdf_path.name)
+    logger.info(
+        "Extracted %d ElectoralRollRecord objects from %s", len(english_records), pdf_path.name
+    )
     return english_records
 
 
@@ -112,21 +114,28 @@ def aggregate_by_booth(records: list, ac_no: int) -> dict[str, dict]:
     Group ElectoralRollRecord objects by part_no → per-booth demographic counts.
     Returns {booth_id: {male_voters, female_voters, other_voters, total_voters, age_*}}
     """
-    booths: dict[str, dict] = defaultdict(lambda: {
-        "male_voters": 0, "female_voters": 0,
-        "other_voters": 0, "total_voters": 0,
-        "age_18_25": 0, "age_26_40": 0, "age_40_60": 0, "age_60_plus": 0,
-    })
+    booths: dict[str, dict] = defaultdict(
+        lambda: {
+            "male_voters": 0,
+            "female_voters": 0,
+            "other_voters": 0,
+            "total_voters": 0,
+            "age_18_25": 0,
+            "age_26_40": 0,
+            "age_40_60": 0,
+            "age_60_plus": 0,
+        }
+    )
 
     skipped = 0
     for rec in records:
         part_raw = str(rec.part_no or "").strip()
-        digits   = re.sub(r"[^\d]", "", part_raw)
+        digits = re.sub(r"[^\d]", "", part_raw)
         if not digits:
             skipped += 1
             continue
 
-        part_no  = int(digits)
+        part_no = int(digits)
         booth_id = f"GKP_{ac_no}_{part_no:03d}"
         b = booths[booth_id]
 
@@ -155,32 +164,39 @@ def aggregate_by_booth(records: list, ac_no: int) -> dict[str, dict]:
     if skipped:
         logger.warning("%d records had no parseable part_no — skipped", skipped)
 
-    logger.info("Aggregated %d unique booths from %d valid records (AC %d)",
-                len(booths), len(records) - skipped, ac_no)
+    logger.info(
+        "Aggregated %d unique booths from %d valid records (AC %d)",
+        len(booths),
+        len(records) - skipped,
+        ac_no,
+    )
     return dict(booths)
 
 
 def load_booths_to_postgres(booth_data: dict[str, dict], ac_no: int, engine: sa.Engine) -> int:
     """Upsert booth_master with voter demographics from PDF extraction using batch operations."""
-    ac_id   = f"GKP_{ac_no}"
+    ac_id = f"GKP_{ac_no}"
     bind_params = []
     for booth_id, d in booth_data.items():
         part_no = int(booth_id.split("_")[-1])
-        bind_params.append({
-            "booth_id": booth_id,
-            "ac_id": ac_id,
-            "part_no": part_no,
-            "male": d["male_voters"],
-            "female": d["female_voters"],
-            "other": d["other_voters"],
-            "total": d["total_voters"],
-        })
+        bind_params.append(
+            {
+                "booth_id": booth_id,
+                "ac_id": ac_id,
+                "part_no": part_no,
+                "male": d["male_voters"],
+                "female": d["female_voters"],
+                "other": d["other_voters"],
+                "total": d["total_voters"],
+            }
+        )
 
     if not bind_params:
         return 0
 
     with engine.connect() as conn:
-        conn.execute(text("""
+        conn.execute(
+            text("""
             INSERT INTO booth_master
                 (booth_id, ac_id, booth_number,
                  male_voters, female_voters, other_voters, total_voters)
@@ -193,23 +209,34 @@ def load_booths_to_postgres(booth_data: dict[str, dict], ac_no: int, engine: sa.
                 other_voters  = EXCLUDED.other_voters,
                 total_voters  = EXCLUDED.total_voters,
                 updated_at    = NOW()
-        """), bind_params)
+        """),
+            bind_params,
+        )
         conn.commit()
 
-    logger.info("Upserted %d booths into booth_master (AC %d) via batch upsert", len(bind_params), ac_no)
+    logger.info(
+        "Upserted %d booths into booth_master (AC %d) via batch upsert", len(bind_params), ac_no
+    )
     return len(bind_params)
 
 
-def process_pdf(pdf_path: Path, ac_no: int, engine: sa.Engine | None = None, dry_run: bool = False) -> dict[str, dict]:
-    run_dir  = RUNS_DIR / pdf_path.stem
-    records  = extract_records_from_pdf(pdf_path, run_dir)
-    booths   = aggregate_by_booth(records, ac_no)
+def process_pdf(
+    pdf_path: Path, ac_no: int, engine: sa.Engine | None = None, dry_run: bool = False
+) -> dict[str, dict]:
+    run_dir = RUNS_DIR / pdf_path.stem
+    records = extract_records_from_pdf(pdf_path, run_dir)
+    booths = aggregate_by_booth(records, ac_no)
 
     if dry_run:
         logger.info("[DRY RUN] %d booths — sample:", len(booths))
         for bid, d in list(booths.items())[:5]:
-            logger.info("  %s  male=%d  female=%d  total=%d",
-                        bid, d["male_voters"], d["female_voters"], d["total_voters"])
+            logger.info(
+                "  %s  male=%d  female=%d  total=%d",
+                bid,
+                d["male_voters"],
+                d["female_voters"],
+                d["total_voters"],
+            )
     elif engine:
         load_booths_to_postgres(booths, ac_no, engine)
 
@@ -217,7 +244,7 @@ def process_pdf(pdf_path: Path, ac_no: int, engine: sa.Engine | None = None, dry
 
 
 def run(pdf_paths: list[tuple[Path, int]] | None = None, dry_run: bool = False):
-    engine  = None if dry_run else sa.create_engine(os.environ["POSTGRES_URL"])
+    engine = None if dry_run else sa.create_engine(os.environ["POSTGRES_URL"])
     targets = pdf_paths or [(p, ac) for p, ac in ELECTORAL_ROLL_PDFS if p.exists()]
 
     if not targets:
@@ -225,16 +252,18 @@ def run(pdf_paths: list[tuple[Path, int]] | None = None, dry_run: bool = False):
         return {}
 
     import concurrent.futures
+
     all_booths: dict[str, dict] = {}
-    
+
     # Process PDFs in parallel since OCR extraction makes network-bound HTTP requests
     max_workers = min(len(targets), 4)
     logger.info("Processing %d PDFs in parallel (max_workers=%d)", len(targets), max_workers)
-    
+
     with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
         futures = {
             executor.submit(process_pdf, pdf_path, ac_no, engine, dry_run): (pdf_path, ac_no)
-            for pdf_path, ac_no in targets if pdf_path.exists()
+            for pdf_path, ac_no in targets
+            if pdf_path.exists()
         }
         for future in concurrent.futures.as_completed(futures):
             pdf_path, ac_no = futures[future]
@@ -251,14 +280,14 @@ def run(pdf_paths: list[tuple[Path, int]] | None = None, dry_run: bool = False):
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     p = argparse.ArgumentParser(description="Process electoral roll PDFs via Sarvam OCR")
-    p.add_argument("--pdf",     default=None, help="Path to single PDF (overrides defaults)")
-    p.add_argument("--ac",      type=int, default=None, help="AC number (e.g. 322)")
+    p.add_argument("--pdf", default=None, help="Path to single PDF (overrides defaults)")
+    p.add_argument("--ac", type=int, default=None, help="AC number (e.g. 322)")
     p.add_argument("--dry-run", action="store_true", help="OCR + extract, no DB write")
     args = p.parse_args()
 
     if args.pdf:
         pdf = Path(args.pdf)
-        ac  = args.ac or _ac_from_filename(pdf)
+        ac = args.ac or _ac_from_filename(pdf)
         run([(pdf, ac)], dry_run=args.dry_run)
     else:
         run(dry_run=args.dry_run)

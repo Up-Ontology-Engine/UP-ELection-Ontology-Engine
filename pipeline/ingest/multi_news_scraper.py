@@ -14,6 +14,7 @@ Usage:
     python -m ingestion.multi_news_scraper --classify   # scrape + classify
     python -m ingestion.multi_news_scraper --dry-run    # print sample only
 """
+
 from __future__ import annotations
 
 import gzip
@@ -21,11 +22,8 @@ import hashlib
 import json
 import logging
 import re
-import subprocess
-import sys
 import time
 import urllib.error
-import urllib.request
 from datetime import datetime, timezone
 from html import unescape
 from pathlib import Path
@@ -35,8 +33,8 @@ logger = logging.getLogger(__name__)
 
 # ── directory setup ───────────────────────────────────────────────────────────
 _REPO = Path(__file__).resolve().parents[1]
-NEWS_RAW_DIR    = _REPO / "data" / "Digital_Dataset" / "newspapers" / "raw"
-NEWS_PROC_DIR   = _REPO / "data" / "Digital_Dataset" / "newspapers" / "processed"
+NEWS_RAW_DIR = _REPO / "data" / "Digital_Dataset" / "newspapers" / "raw"
+NEWS_PROC_DIR = _REPO / "data" / "Digital_Dataset" / "newspapers" / "processed"
 NEWS_BY_SRC_DIR = _REPO / "data" / "Digital_Dataset" / "newspapers" / "by_source"
 for _d in (NEWS_RAW_DIR, NEWS_PROC_DIR, NEWS_BY_SRC_DIR):
     _d.mkdir(parents=True, exist_ok=True)
@@ -45,128 +43,128 @@ for _d in (NEWS_RAW_DIR, NEWS_PROC_DIR, NEWS_BY_SRC_DIR):
 SOURCES: list[dict] = [
     # ── Direct Gorakhpur RSS feeds ────────────────────────────────────────────
     {
-        "id":          "amarujala_gorakhpur",
-        "display":     "Amar Ujala — Gorakhpur",
-        "type":        "rss",
-        "url":         "https://www.amarujala.com/rss/gorakhpur.xml",
-        "language":    "hi",
-        "bias_score":  0.1,
+        "id": "amarujala_gorakhpur",
+        "display": "Amar Ujala — Gorakhpur",
+        "type": "rss",
+        "url": "https://www.amarujala.com/rss/gorakhpur.xml",
+        "language": "hi",
+        "bias_score": 0.1,
         "credibility": 0.8,
     },
     {
-        "id":          "news18_gorakhpur",
-        "display":     "News18 UP — Gorakhpur",
-        "type":        "rss",
-        "url":         "https://hindi.news18.com/commonfeeds/v1/hin/rss/uttarpradesh/gorakhpur.xml",
-        "language":    "hi",
-        "bias_score":  0.2,
+        "id": "news18_gorakhpur",
+        "display": "News18 UP — Gorakhpur",
+        "type": "rss",
+        "url": "https://hindi.news18.com/commonfeeds/v1/hin/rss/uttarpradesh/gorakhpur.xml",
+        "language": "hi",
+        "bias_score": 0.2,
         "credibility": 0.75,
     },
     {
-        "id":          "prabhatkhabar_gorakhpur",
-        "display":     "Prabhat Khabar — Gorakhpur",
-        "type":        "rss",
-        "url":         "https://www.prabhatkhabar.com/state/uttar-pradesh/gorakhpur/feed",
-        "language":    "hi",
-        "bias_score":  0.15,
+        "id": "prabhatkhabar_gorakhpur",
+        "display": "Prabhat Khabar — Gorakhpur",
+        "type": "rss",
+        "url": "https://www.prabhatkhabar.com/state/uttar-pradesh/gorakhpur/feed",
+        "language": "hi",
+        "bias_score": 0.15,
         "credibility": 0.72,
     },
     # ── HTML / __NEXT_DATA__ sources ──────────────────────────────────────────
     {
-        "id":          "jagran_gorakhpur",
-        "display":     "Dainik Jagran — Gorakhpur",
-        "type":        "next_json",
-        "url":         "https://www.jagran.com/uttar-pradesh/gorakhpur",
-        "language":    "hi",
-        "bias_score":  0.15,
+        "id": "jagran_gorakhpur",
+        "display": "Dainik Jagran — Gorakhpur",
+        "type": "next_json",
+        "url": "https://www.jagran.com/uttar-pradesh/gorakhpur",
+        "language": "hi",
+        "bias_score": 0.15,
         "credibility": 0.8,
         "article_key": "ARTICLE_LISTING_DATA",
         "title_field": "headline",
-        "body_field":  "summary",
-        "date_field":  "modDate",
+        "body_field": "summary",
+        "date_field": "modDate",
         "url_template": "https://www.jagran.com/{category}/{subcategory}-gorakhpur-{webTitleUrl}-{id}.html",
     },
     {
-        "id":          "livehindustan_gorakhpur",
-        "display":     "Live Hindustan — Gorakhpur",
-        "type":        "next_json",
-        "url":         "https://www.livehindustan.com/uttar-pradesh/gorakhpur",
-        "language":    "hi",
-        "bias_score":  0.1,
+        "id": "livehindustan_gorakhpur",
+        "display": "Live Hindustan — Gorakhpur",
+        "type": "next_json",
+        "url": "https://www.livehindustan.com/uttar-pradesh/gorakhpur",
+        "language": "hi",
+        "bias_score": 0.1,
         "credibility": 0.78,
         "article_key": None,  # deep search
         "title_field": "headline",
-        "body_field":  "quickReadSummary",
-        "date_field":  "firstPublishedDate",
+        "body_field": "quickReadSummary",
+        "date_field": "firstPublishedDate",
     },
     # ── HTML scrape ───────────────────────────────────────────────────────────
     {
-        "id":          "patrika_gorakhpur",
-        "display":     "Patrika — Gorakhpur",
-        "type":        "html",
-        "url":         "https://www.patrika.com/gorakhpur-news",
-        "language":    "hi",
-        "bias_score":  0.1,
+        "id": "patrika_gorakhpur",
+        "display": "Patrika — Gorakhpur",
+        "type": "html",
+        "url": "https://www.patrika.com/gorakhpur-news",
+        "language": "hi",
+        "bias_score": 0.1,
         "credibility": 0.7,
     },
     # ── Google News aggregated (multiple queries) ─────────────────────────────
     {
-        "id":          "google_news_general",
-        "display":     "Google News — Gorakhpur (general)",
-        "type":        "rss",
-        "url":         "https://news.google.com/rss/search?q=gorakhpur+news&hl=hi&gl=IN&ceid=IN:hi",
-        "language":    "hi",
-        "bias_score":  0.0,
+        "id": "google_news_general",
+        "display": "Google News — Gorakhpur (general)",
+        "type": "rss",
+        "url": "https://news.google.com/rss/search?q=gorakhpur+news&hl=hi&gl=IN&ceid=IN:hi",
+        "language": "hi",
+        "bias_score": 0.0,
         "credibility": 0.9,
         "is_aggregator": True,
     },
     {
-        "id":          "google_news_election",
-        "display":     "Google News — Gorakhpur Election",
-        "type":        "rss",
-        "url":         "https://news.google.com/rss/search?q=gorakhpur+election+vidhansabha&hl=hi&gl=IN&ceid=IN:hi",
-        "language":    "hi",
-        "bias_score":  0.0,
+        "id": "google_news_election",
+        "display": "Google News — Gorakhpur Election",
+        "type": "rss",
+        "url": "https://news.google.com/rss/search?q=gorakhpur+election+vidhansabha&hl=hi&gl=IN&ceid=IN:hi",
+        "language": "hi",
+        "bias_score": 0.0,
         "credibility": 0.9,
         "is_aggregator": True,
     },
     {
-        "id":          "google_news_bjp_sp",
-        "display":     "Google News — Gorakhpur BJP/SP",
-        "type":        "rss",
-        "url":         "https://news.google.com/rss/search?q=gorakhpur+BJP+SP+samajwadi&hl=hi&gl=IN&ceid=IN:hi",
-        "language":    "hi",
-        "bias_score":  0.0,
+        "id": "google_news_bjp_sp",
+        "display": "Google News — Gorakhpur BJP/SP",
+        "type": "rss",
+        "url": "https://news.google.com/rss/search?q=gorakhpur+BJP+SP+samajwadi&hl=hi&gl=IN&ceid=IN:hi",
+        "language": "hi",
+        "bias_score": 0.0,
         "credibility": 0.9,
         "is_aggregator": True,
     },
     {
-        "id":          "google_news_development",
-        "display":     "Google News — Gorakhpur Development",
-        "type":        "rss",
-        "url":         "https://news.google.com/rss/search?q=gorakhpur+vikas+yojana&hl=hi&gl=IN&ceid=IN:hi",
-        "language":    "hi",
-        "bias_score":  0.0,
+        "id": "google_news_development",
+        "display": "Google News — Gorakhpur Development",
+        "type": "rss",
+        "url": "https://news.google.com/rss/search?q=gorakhpur+vikas+yojana&hl=hi&gl=IN&ceid=IN:hi",
+        "language": "hi",
+        "bias_score": 0.0,
         "credibility": 0.9,
         "is_aggregator": True,
     },
     {
-        "id":          "google_news_politics",
-        "display":     "Google News — Gorakhpur Politics",
-        "type":        "rss",
-        "url":         "https://news.google.com/rss/search?q=gorakhpur+chunav+rajneeti&hl=hi&gl=IN&ceid=IN:hi",
-        "language":    "hi",
-        "bias_score":  0.0,
+        "id": "google_news_politics",
+        "display": "Google News — Gorakhpur Politics",
+        "type": "rss",
+        "url": "https://news.google.com/rss/search?q=gorakhpur+chunav+rajneeti&hl=hi&gl=IN&ceid=IN:hi",
+        "language": "hi",
+        "bias_score": 0.0,
         "credibility": 0.9,
         "is_aggregator": True,
     },
     {
-        "id":          "google_news_hindi",
-        "display":     "Google News — गोरखपुर समाचार (Hindi query)",
-        "type":        "rss",
-        "url":         "https://news.google.com/rss/search?q=%E0%A4%97%E0%A5%8B%E0%A4%B0%E0%A4%96%E0%A4%AA%E0%A5%81%E0%A4%B0+%E0%A4%B8%E0%A4%AE%E0%A4%BE%E0%A4%9A%E0%A4%BE%E0%A4%B0&hl=hi&gl=IN&ceid=IN:hi",
-        "language":    "hi",
-        "bias_score":  0.0,
+        "id": "google_news_hindi",
+        "display": "Google News — गोरखपुर समाचार (Hindi query)",
+        "type": "rss",
+        "url": "https://news.google.com/rss/search?q=%E0%A4%97%E0%A5%8B%E0%A4%B0%E0%A4%96%E0%A4%AA%E0%A5%81%E0%A4%B0+%E0%A4%B8%E0%A4%AE%E0%A4%BE%E0%A4%9A%E0%A4%BE%E0%A4%B0&hl=hi&gl=IN&ceid=IN:hi",
+        "language": "hi",
+        "bias_score": 0.0,
         "credibility": 0.9,
         "is_aggregator": True,
     },
@@ -178,6 +176,7 @@ SOURCES: list[dict] = [
 # browser headers, jitter delays, and automatic 429/5xx retry.
 try:
     from ingestion.scraper_stealth import StealthSession as _StealthSession
+
     _SESSION = _StealthSession(base_delay=1.5, jitter=0.8, max_retries=3)
     logger.info("[scraper] StealthSession loaded — UA rotation enabled.")
 except ImportError:
@@ -193,8 +192,7 @@ def _fetch_text(url: str, timeout: int = 15) -> str:
             return result
 
     # Plain urllib fallback
-    import urllib.error
-    import gzip
+
     _FALLBACK_HEADERS = {
         "User-Agent": (
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -238,16 +236,17 @@ def _parse_rss(xml_text: str, source: dict) -> list[dict]:
     articles: list[dict] = []
 
     for raw in items_raw:
+
         def _tag(name: str) -> str:
             m = re.search(rf"<{name}[^>]*>(.*?)</{name}>", raw, re.S)
             return _clean(m.group(1)) if m else ""
 
-        title       = _tag("title")
-        link        = _tag("link") or _tag("guid")
+        title = _tag("title")
+        link = _tag("link") or _tag("guid")
         description = _tag("description")
-        pub_date    = _tag("pubDate")
-        author      = _tag("dc:creator") or _tag("author")
-        category    = _tag("category")
+        pub_date = _tag("pubDate")
+        author = _tag("dc:creator") or _tag("author")
+        category = _tag("category")
 
         # Google News source attribution
         src_m = re.search(r'<source[^>]+url="([^"]+)"[^>]*>(.*?)</source>', raw, re.S)
@@ -258,23 +257,25 @@ def _parse_rss(xml_text: str, source: dict) -> list[dict]:
         if not link.startswith("http"):
             continue
 
-        articles.append({
-            "source_id":    source["id"],
-            "source_name":  publisher,
-            "headline":     title,
-            "body_raw":     description,
-            "url":          link,
-            "published_at": pub_date,
-            "author":       author,
-            "category":     category,
-            "language":     source["language"],
-            "district_hint":"Gorakhpur",
-            "ac_hint":       "Gorakhpur Urban",
-            "credibility":  source["credibility"],
-            "bias_score":   source["bias_score"],
-            "content_hash": _content_hash(title, link),
-            "scraped_at":   datetime.now(timezone.utc).isoformat(),
-        })
+        articles.append(
+            {
+                "source_id": source["id"],
+                "source_name": publisher,
+                "headline": title,
+                "body_raw": description,
+                "url": link,
+                "published_at": pub_date,
+                "author": author,
+                "category": category,
+                "language": source["language"],
+                "district_hint": "Gorakhpur",
+                "ac_hint": "Gorakhpur Urban",
+                "credibility": source["credibility"],
+                "bias_score": source["bias_score"],
+                "content_hash": _content_hash(title, link),
+                "scraped_at": datetime.now(timezone.utc).isoformat(),
+            }
+        )
 
     return articles
 
@@ -306,8 +307,7 @@ def _find_articles_in_json(obj: Any, depth: int = 0) -> list[dict]:
 
 def _parse_next_json(html_text: str, source: dict) -> list[dict]:
     m = re.search(
-        r'<script id="__NEXT_DATA__" type="application/json">(.*?)</script>',
-        html_text, re.S
+        r'<script id="__NEXT_DATA__" type="application/json">(.*?)</script>', html_text, re.S
     )
     if not m:
         logger.warning(f"[{source['id']}] No __NEXT_DATA__ found")
@@ -338,10 +338,10 @@ def _parse_next_json(html_text: str, source: dict) -> list[dict]:
         # Build URL for Jagran
         url = ""
         if source["id"] == "jagran_gorakhpur":
-            slug  = art.get("webTitleUrl", "")
-            aid   = art.get("id", "")
-            cat   = art.get("category", "news")
-            subcat= art.get("subcategory", "state")
+            slug = art.get("webTitleUrl", "")
+            aid = art.get("id", "")
+            cat = art.get("category", "news")
+            subcat = art.get("subcategory", "state")
             if slug and aid:
                 url = f"https://www.jagran.com/{cat}/{subcat}-gorakhpur-{slug}-{aid}.html"
 
@@ -357,7 +357,7 @@ def _parse_next_json(html_text: str, source: dict) -> list[dict]:
             url = source["url"]
 
         body = art.get("summary") or art.get("quickReadSummary") or art.get("description", "")
-        pub  = art.get("firstPublishedDate") or art.get("modDate") or art.get("lastModifiedDate", "")
+        pub = art.get("firstPublishedDate") or art.get("modDate") or art.get("lastModifiedDate", "")
         city = art.get("city", "gorakhpur")
 
         # Only include Gorakhpur-tagged or Gorakhpur-mentioning articles
@@ -365,23 +365,25 @@ def _parse_next_json(html_text: str, source: dict) -> list[dict]:
         if "gorakhpur" not in combined and "गोरखपुर" not in combined:
             continue
 
-        articles.append({
-            "source_id":    source["id"],
-            "source_name":  source["display"],
-            "headline":     headline,
-            "body_raw":     _clean(str(body)) if body else "",
-            "url":          url,
-            "published_at": pub,
-            "author":       "",
-            "category":     art.get("category", ""),
-            "language":     source["language"],
-            "district_hint":"Gorakhpur",
-            "ac_hint":       "Gorakhpur Urban",
-            "credibility":  source["credibility"],
-            "bias_score":   source["bias_score"],
-            "content_hash": _content_hash(headline, url),
-            "scraped_at":   datetime.now(timezone.utc).isoformat(),
-        })
+        articles.append(
+            {
+                "source_id": source["id"],
+                "source_name": source["display"],
+                "headline": headline,
+                "body_raw": _clean(str(body)) if body else "",
+                "url": url,
+                "published_at": pub,
+                "author": "",
+                "category": art.get("category", ""),
+                "language": source["language"],
+                "district_hint": "Gorakhpur",
+                "ac_hint": "Gorakhpur Urban",
+                "credibility": source["credibility"],
+                "bias_score": source["bias_score"],
+                "content_hash": _content_hash(headline, url),
+                "scraped_at": datetime.now(timezone.utc).isoformat(),
+            }
+        )
 
     return articles
 
@@ -393,11 +395,11 @@ def _parse_html(html_text: str, source: dict) -> list[dict]:
     # Strategy 1: h2/h3 tags with sibling links
     card_pattern = re.compile(
         r'<a[^>]+href="(https?://www\.patrika\.com/[^"]{15,200})"[^>]*>'
-        r'[\s\S]{0,50}?<h[23][^>]*>([\s\S]{10,200}?)</h[23]>',
-        re.S
+        r"[\s\S]{0,50}?<h[23][^>]*>([\s\S]{10,200}?)</h[23]>",
+        re.S,
     )
     for m in card_pattern.finditer(html_text):
-        link  = m.group(1)
+        link = m.group(1)
         title = _clean(m.group(2))
         if not title or len(title) < 8:
             continue
@@ -424,21 +426,21 @@ def _parse_html(html_text: str, source: dict) -> list[dict]:
 
 def _make_article(source: dict, headline: str, body: str, url: str, pub: str) -> dict:
     return {
-        "source_id":    source["id"],
-        "source_name":  source["display"],
-        "headline":     headline,
-        "body_raw":     body,
-        "url":          url,
+        "source_id": source["id"],
+        "source_name": source["display"],
+        "headline": headline,
+        "body_raw": body,
+        "url": url,
         "published_at": pub,
-        "author":       "",
-        "category":     "",
-        "language":     source["language"],
-        "district_hint":"Gorakhpur",
-        "ac_hint":       "Gorakhpur Urban",
-        "credibility":  source["credibility"],
-        "bias_score":   source["bias_score"],
+        "author": "",
+        "category": "",
+        "language": source["language"],
+        "district_hint": "Gorakhpur",
+        "ac_hint": "Gorakhpur Urban",
+        "credibility": source["credibility"],
+        "bias_score": source["bias_score"],
         "content_hash": _content_hash(headline, url),
-        "scraped_at":   datetime.now(timezone.utc).isoformat(),
+        "scraped_at": datetime.now(timezone.utc).isoformat(),
     }
 
 
@@ -496,9 +498,10 @@ def save_by_source(articles: list[dict]) -> None:
         out.write_text(
             json.dumps(
                 {"source_id": src_id, "total": len(merged), "articles": merged},
-                ensure_ascii=False, indent=2
+                ensure_ascii=False,
+                indent=2,
             ),
-            encoding="utf-8"
+            encoding="utf-8",
         )
         logger.info(f"  by_source/{src_id}.json → {len(merged)} articles")
 
@@ -516,14 +519,15 @@ def save_raw_combined(articles: list[dict]) -> Path:
     out_path.write_text(
         json.dumps(
             {
-                "scraped_at":  datetime.now(timezone.utc).isoformat(),
-                "total":       len(merged),
+                "scraped_at": datetime.now(timezone.utc).isoformat(),
+                "total": len(merged),
                 "sources_run": list({a["source_id"] for a in articles}),
-                "articles":    merged,
+                "articles": merged,
             },
-            ensure_ascii=False, indent=2
+            ensure_ascii=False,
+            indent=2,
         ),
-        encoding="utf-8"
+        encoding="utf-8",
     )
     logger.info(f"Combined raw: {out_path} ({len(merged)} articles)")
     return out_path
@@ -531,19 +535,21 @@ def save_raw_combined(articles: list[dict]) -> Path:
 
 def classify_and_save(articles: list[dict]) -> Path:
     from ingestion.classifier import classify_articles
+
     classified = classify_articles(articles, use_zeroshot=False)
     today = datetime.now(timezone.utc).strftime("%Y%m%d")
     out_path = NEWS_PROC_DIR / f"articles_classified_{today}.json"
     out_path.write_text(
         json.dumps(
             {
-                "classified_at":       datetime.now(timezone.utc).isoformat(),
-                "total":               len(classified),
+                "classified_at": datetime.now(timezone.utc).isoformat(),
+                "total": len(classified),
                 "classified_articles": classified,
             },
-            ensure_ascii=False, indent=2
+            ensure_ascii=False,
+            indent=2,
         ),
-        encoding="utf-8"
+        encoding="utf-8",
     )
     logger.info(f"Classified: {out_path} ({len(classified)} articles)")
     return out_path
@@ -573,17 +579,19 @@ def run(
     if incremental and not dry_run:
         try:
             from ingestion.ingestion_tracker import (
-                filter_new_articles, update_watermark, init_ingestion_track_table
+                filter_new_articles,
+                init_ingestion_track_table,
+                update_watermark,
             )
+
             init_ingestion_track_table()
             _tracker = (filter_new_articles, update_watermark)
         except Exception as exc:
-            logger.warning("[scraper] Incremental tracker unavailable (%s); doing full scrape.", exc)
+            logger.warning(
+                "[scraper] Incremental tracker unavailable (%s); doing full scrape.", exc
+            )
 
-    active_sources = [
-        s for s in SOURCES
-        if (sources is None or s["id"] in sources)
-    ]
+    active_sources = [s for s in SOURCES if (sources is None or s["id"] in sources)]
 
     all_articles: list[dict] = []
     source_max_dts: dict[str, Any] = {}
@@ -637,18 +645,22 @@ def run(
 # ── entry point ───────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     import argparse
+
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s [%(levelname)s] %(name)s %(message)s",
         handlers=[logging.StreamHandler()],
     )
     parser = argparse.ArgumentParser(description="Gorakhpur multi-source news scraper")
-    parser.add_argument("--dry-run",        action="store_true", help="Scrape but do not save")
-    parser.add_argument("--classify",       action="store_true", help="Classify after scraping")
-    parser.add_argument("--sources",        nargs="+", help="Source IDs to run (default: all)")
-    parser.add_argument("--delay",          type=float, default=1.5, help="Seconds between sources")
-    parser.add_argument("--no-incremental", action="store_true",
-                        help="Disable incremental mode and re-ingest all articles")
+    parser.add_argument("--dry-run", action="store_true", help="Scrape but do not save")
+    parser.add_argument("--classify", action="store_true", help="Classify after scraping")
+    parser.add_argument("--sources", nargs="+", help="Source IDs to run (default: all)")
+    parser.add_argument("--delay", type=float, default=1.5, help="Seconds between sources")
+    parser.add_argument(
+        "--no-incremental",
+        action="store_true",
+        help="Disable incremental mode and re-ingest all articles",
+    )
     args = parser.parse_args()
 
     articles = run(
@@ -666,5 +678,3 @@ if __name__ == "__main__":
         print("\nBreakdown by source:")
         for src, cnt in sorted(src_counts.items(), key=lambda x: -x[1])[:15]:
             print(f"  {cnt:4d}  {src}")
-
-

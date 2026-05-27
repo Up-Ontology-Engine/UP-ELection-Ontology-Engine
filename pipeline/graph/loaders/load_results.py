@@ -12,19 +12,20 @@ Booth-level Form-20 data (if available) creates Booth-level result edges.
 
 Run: python -m graph.loaders.load_results
 """
+
 from __future__ import annotations
 
 import logging
 import re
 from collections import defaultdict
 
-from neo4j import Session
 import sqlalchemy as sa
-from sqlalchemy import text
 from etl.constants import normalise_party
+from neo4j import Session
+from sqlalchemy import text
 
-_INVALID_PARTY   = re.compile(r"^(\d+\.?\d*|nan|none|n/a|n\.a\.?)$", re.I)
-_SYMBOL_ONLY     = re.compile(r"^[^A-Za-z0-9]+$")
+_INVALID_PARTY = re.compile(r"^(\d+\.?\d*|nan|none|n/a|n\.a\.?)$", re.I)
+_SYMBOL_ONLY = re.compile(r"^[^A-Za-z0-9]+$")
 
 
 def _clean_party(raw: str) -> str | None:
@@ -45,6 +46,7 @@ def _clean_party(raw: str) -> str | None:
     # Accept the raw value for real minor parties (cap at 30 chars)
     return raw[:30]
 
+
 logger = logging.getLogger(__name__)
 
 
@@ -55,7 +57,9 @@ def load_ac_results(pg_engine: sa.Engine, session: Session) -> int:
     load_candidates.load_election_results() — this function only adds WON_SEAT.
     """
     with pg_engine.connect() as conn:
-        rows = conn.execute(text("""
+        rows = (
+            conn.execute(
+                text("""
             SELECT
                 cph.candidate_id,
                 cph.election_year,
@@ -68,7 +72,11 @@ def load_ac_results(pg_engine: sa.Engine, session: Session) -> int:
             JOIN candidate_master cm ON cm.candidate_id = cph.candidate_id
             WHERE cph.votes_received IS NOT NULL
             ORDER BY cph.election_year, cph.votes_received DESC
-        """)).mappings().fetchall()
+        """)
+            )
+            .mappings()
+            .fetchall()
+        )
 
     if not rows:
         logger.warning("No AC-level election results found in candidate_party_history for GKP_322")
@@ -83,27 +91,34 @@ def load_ac_results(pg_engine: sa.Engine, session: Session) -> int:
             ac_totals[(r["ac_id"], r["election_year"])] = r["valid_votes_total"]
 
     for (ac_id, year), total in ac_totals.items():
-        session.run("""
+        session.run(
+            """
             MATCH (ac:AssemblyConstituency {ac_id: $ac_id})
             SET ac += $props
-        """, {
-            "ac_id": ac_id,
-            "props": {f"total_votes_{year}": total},
-        })
+        """,
+            {
+                "ac_id": ac_id,
+                "props": {f"total_votes_{year}": total},
+            },
+        )
 
     # WON_SEAT edges for winners only
     winners = [r for r in row_dicts if r.get("winner_flag")]
     if winners:
-        session.run("""
+        session.run(
+            """
             UNWIND $rows AS r
             MATCH (c:Candidate {candidate_id: r.candidate_id})
             MATCH (ac:AssemblyConstituency {ac_id: r.ac_id})
             MERGE (c)-[:WON_SEAT {election_year: r.election_year}]->(ac)
-        """, {"rows": winners})
+        """,
+            {"rows": winners},
+        )
 
     logger.info(
         "Loaded AC results for GKP_322: %d rows, %d WON_SEAT edges",
-        len(row_dicts), len(winners),
+        len(row_dicts),
+        len(winners),
     )
     return len(row_dicts)
 
@@ -114,7 +129,9 @@ def load_booth_results(pg_engine: sa.Engine, session: Session) -> int:
     Creates Booth-level VOTED edges showing per-booth party tallies.
     """
     with pg_engine.connect() as conn:
-        rows = conn.execute(text("""
+        rows = (
+            conn.execute(
+                text("""
             SELECT
                 br.booth_id,
                 br.election_year,
@@ -128,7 +145,11 @@ def load_booth_results(pg_engine: sa.Engine, session: Session) -> int:
             WHERE bm.ac_id = 'GKP_322'
               AND br.booth_id NOT LIKE '%_TOTAL'
             ORDER BY br.booth_id, br.votes DESC
-        """)).mappings().fetchall()
+        """)
+            )
+            .mappings()
+            .fetchall()
+        )
 
     if not rows:
         logger.info("No booth-level Form-20 results yet — skipping booth result edges")
@@ -152,8 +173,9 @@ def load_booth_results(pg_engine: sa.Engine, session: Session) -> int:
     loaded = 0
     BATCH = 500
     for i in range(0, len(clean), BATCH):
-        batch = clean[i:i + BATCH]
-        session.run("""
+        batch = clean[i : i + BATCH]
+        session.run(
+            """
             UNWIND $rows AS r
             MATCH (b:Booth {booth_id: r.booth_id})
             MERGE (p:Party {party_id: r.party})
@@ -162,7 +184,9 @@ def load_booth_results(pg_engine: sa.Engine, session: Session) -> int:
             SET rv.votes      = r.votes,
                 rv.vote_share = r.vote_share,
                 rv.winner     = r.winner_flag
-        """, {"rows": batch})
+        """,
+            {"rows": batch},
+        )
         loaded += len(batch)
 
     logger.info("Loaded %d booth-level result edges", loaded)
@@ -171,7 +195,7 @@ def load_booth_results(pg_engine: sa.Engine, session: Session) -> int:
 
 def load_all(pg_engine: sa.Engine, session: Session) -> dict[str, int]:
     return {
-        "ac_results":    load_ac_results(pg_engine, session),
+        "ac_results": load_ac_results(pg_engine, session),
         "booth_results": load_booth_results(pg_engine, session),
     }
 
@@ -179,8 +203,10 @@ def load_all(pg_engine: sa.Engine, session: Session) -> dict[str, int]:
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     from dotenv import load_dotenv
+
     load_dotenv()
-    from backend.db import get_pg_engine, get_neo4j_session
+    from backend.db import get_neo4j_session, get_pg_engine
+
     pg = get_pg_engine()
     with get_neo4j_session() as s:
         load_all(pg, s)
