@@ -1,24 +1,18 @@
 -- =============================================================================
--- Migration 012: Composite indexes on pulse_events + pulse_events_raw
+-- Migration 012: Composite indexes on pulse_events_raw
 --   and candidate deduplication (fixes #11 and #3 from bottleneck audit)
 -- =============================================================================
 
 -- ─────────────────────────────────────────────────────────────────────────────
--- PART A: Composite indexes for pulse_events_raw / pulse_events
+-- PART A: Composite indexes for tables unaffected by pulse_events partitioning
 -- Queries on these tables always filter by (ac_id/mapped_ac_id, booth_id, event_type)
+-- NOTE: pulse_events indexes must be created after 013_partition_pulse_events.sql,
+-- because migration 013 recreates pulse_events as a partitioned table.
 -- ─────────────────────────────────────────────────────────────────────────────
 
 -- pulse_events_raw: main lookup path — by source_type and processing state
 CREATE INDEX IF NOT EXISTS idx_per_source_type_processed
     ON pulse_events_raw (source_type, processed, created_at DESC);
-
--- pulse_events (mapped/scored): used by AC-level aggregation queries
-CREATE INDEX IF NOT EXISTS idx_pe_mapped_ac_issue
-    ON pulse_events (mapped_ac_id, final_issue)
-    WHERE final_issue IS NOT NULL;
-
-CREATE INDEX IF NOT EXISTS idx_pe_mapped_ac_ts
-    ON pulse_events (mapped_ac_id, created_at DESC);
 
 -- booth_metrics: the LATERAL join in get_booths_for_ac hits this repeatedly
 CREATE INDEX IF NOT EXISTS idx_booth_metrics_booth_window
