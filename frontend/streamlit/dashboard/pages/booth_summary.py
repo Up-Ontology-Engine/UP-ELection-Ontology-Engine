@@ -11,25 +11,31 @@ Renders:
   🧠 Key insight
   📌 Recommendation
 """
+
 from __future__ import annotations
+
+import plotly.graph_objects as go
 import requests
 import streamlit as st
-import plotly.graph_objects as go
-
 
 POLARITY_EMOJI = {1: "✅", -1: "❌", 0: "➖"}
 POLARITY_COLOR = {1: "#2ecc71", -1: "#e74c3c", 0: "#95a5a6"}
-CONFIDENCE_COLOR = {"HIGH": "🟢", "MEDIUM": "🟡", "LOW": "🟠", "INSUFFICIENT": "🔴", "UNKNOWN": "⚪"}
+CONFIDENCE_COLOR = {
+    "HIGH": "🟢",
+    "MEDIUM": "🟡",
+    "LOW": "🟠",
+    "INSUFFICIENT": "🔴",
+    "UNKNOWN": "⚪",
+}
 
 
 @st.cache_data(ttl=120, show_spinner=False)
 def _fetch_summary(booth_id: str, days: int, api_url: str) -> dict | None:
     try:
-        r = requests.get(f"{api_url}/booth/{booth_id}/summary",
-                         params={"days": days}, timeout=15)
+        r = requests.get(f"{api_url}/booth/{booth_id}/summary", params={"days": days}, timeout=15)
         r.raise_for_status()
         return r.json()
-    except Exception as e:
+    except Exception:
         return None
 
 
@@ -49,7 +55,7 @@ def render(booth_id: str, window_days: int, api_url: str):
 
     if not data:
         st.error("Could not load booth data. Is the API running?")
-        st.code(f"Start: uvicorn api.main:app --reload")
+        st.code("Start: uvicorn api.main:app --reload")
         return
 
     # ── Header ────────────────────────────────────────────────────────────────
@@ -61,7 +67,7 @@ def render(booth_id: str, window_days: int, api_url: str):
     st.caption(f"📍 {booth_name}")
 
     voters = data.get("total_voters", 0)
-    male   = data.get("male_voters", 0)
+    male = data.get("male_voters", 0)
     female = data.get("female_voters", 0)
     col1, col2, col3 = st.columns(3)
     col1.metric("Total Voters", f"{voters:,}")
@@ -92,8 +98,7 @@ def render(booth_id: str, window_days: int, api_url: str):
 
     with c5:
         _render_candidate_insights(
-            data.get("digital_pulse", {}).get("pulse_detail", []),
-            booth_id, api_url
+            data.get("digital_pulse", {}).get("pulse_detail", []), booth_id, api_url
         )
 
     st.divider()
@@ -131,11 +136,12 @@ def render(booth_id: str, window_days: int, api_url: str):
 
 # ── Sub-renderers ─────────────────────────────────────────────────────────────
 
+
 def _render_historical(hist: dict):
     st.markdown("### 🗳️ Historical Results")
-    wins  = hist.get("bjp_won_count", 0)
+    wins = hist.get("bjp_won_count", 0)
     shares = hist.get("bjp_vote_shares", [])
-    trend  = hist.get("trend", "unknown")
+    trend = hist.get("trend", "unknown")
 
     if not shares:
         st.caption("No historical data available")
@@ -155,20 +161,31 @@ def _render_historical(hist: dict):
 
     # Mini chart if multiple years
     full = hist.get("full_history", [])
-    bjp_hist = [(h["election_year"], h["vote_share"])
-                for h in full if h["party"] in ("BJP","भाजपा") and h["vote_share"]]
+    bjp_hist = [
+        (h["election_year"], h["vote_share"])
+        for h in full
+        if h["party"] in ("BJP", "भाजपा") and h["vote_share"]
+    ]
     if len(bjp_hist) >= 2:
         years, vs = zip(*bjp_hist)
-        fig = go.Figure(go.Scatter(
-            x=list(years), y=list(vs), mode="lines+markers+text",
-            text=[f"{v:.0f}%" for v in vs], textposition="top center",
-            line=dict(color="#FF6B35", width=2),
-            marker=dict(size=8, color="#FF6B35"),
-        ))
+        fig = go.Figure(
+            go.Scatter(
+                x=list(years),
+                y=list(vs),
+                mode="lines+markers+text",
+                text=[f"{v:.0f}%" for v in vs],
+                textposition="top center",
+                line=dict(color="#FF6B35", width=2),
+                marker=dict(size=8, color="#FF6B35"),
+            )
+        )
         fig.update_layout(
-            height=150, margin=dict(l=0, r=0, t=10, b=20),
-            xaxis=dict(showgrid=False), yaxis=dict(showgrid=True, range=[0, 100]),
-            plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)",
+            height=150,
+            margin=dict(l=0, r=0, t=10, b=20),
+            xaxis=dict(showgrid=False),
+            yaxis=dict(showgrid=True, range=[0, 100]),
+            plot_bgcolor="rgba(0,0,0,0)",
+            paper_bgcolor="rgba(0,0,0,0)",
         )
         st.plotly_chart(fig, use_container_width=True)
 
@@ -176,11 +193,17 @@ def _render_historical(hist: dict):
 def _render_digital_lean(pulse: dict):
     st.markdown("### 📊 Current Digital Lean")
     lean_label = pulse.get("lean_label") or "Insufficient data"
-    bjp   = pulse.get("bjp_pulse", 0) or 0
-    opp   = pulse.get("opp_pulse", 0) or 0
-    lean  = pulse.get("digital_lean", 0) or 0
+    bjp = pulse.get("bjp_pulse", 0) or 0
+    opp = pulse.get("opp_pulse", 0) or 0
+    lean = pulse.get("digital_lean", 0) or 0
 
-    color = "#FF6B35" if "BJP" in str(lean_label) else "#3498db" if "Opp" in str(lean_label) else "#95a5a6"
+    color = (
+        "#FF6B35"
+        if "BJP" in str(lean_label)
+        else "#3498db"
+        if "Opp" in str(lean_label)
+        else "#95a5a6"
+    )
     st.markdown(
         f"""<div style="background:{color}22;border-left:4px solid {color};
         padding:12px;border-radius:6px;font-size:1.2em;font-weight:bold;">
@@ -190,14 +213,28 @@ def _render_digital_lean(pulse: dict):
 
     if bjp != 0 or opp != 0:
         fig = go.Figure()
-        fig.add_bar(name="BJP", x=["BJP"], y=[round(bjp, 3)],
-                    marker_color="#FF6B35", text=[f"{bjp:+.2f}"], textposition="auto")
-        fig.add_bar(name="Opposition", x=["Opposition"], y=[round(opp, 3)],
-                    marker_color="#3498db", text=[f"{opp:+.2f}"], textposition="auto")
+        fig.add_bar(
+            name="BJP",
+            x=["BJP"],
+            y=[round(bjp, 3)],
+            marker_color="#FF6B35",
+            text=[f"{bjp:+.2f}"],
+            textposition="auto",
+        )
+        fig.add_bar(
+            name="Opposition",
+            x=["Opposition"],
+            y=[round(opp, 3)],
+            marker_color="#3498db",
+            text=[f"{opp:+.2f}"],
+            textposition="auto",
+        )
         fig.update_layout(
-            height=180, margin=dict(l=0, r=0, t=10, b=20),
+            height=180,
+            margin=dict(l=0, r=0, t=10, b=20),
             yaxis=dict(range=[-1, 1], zeroline=True, zerolinecolor="#666"),
-            plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
+            paper_bgcolor="rgba(0,0,0,0)",
             showlegend=False,
         )
         st.plotly_chart(fig, use_container_width=True)
@@ -208,8 +245,8 @@ def _render_digital_lean(pulse: dict):
 
 def _render_confidence(conf: dict):
     st.markdown("### ⚠️ Confidence")
-    label  = conf.get("label", "UNKNOWN")
-    score  = conf.get("score") or 0
+    label = conf.get("label", "UNKNOWN")
+    score = conf.get("score") or 0
     events = conf.get("event_count", 0)
 
     icon = CONFIDENCE_COLOR.get(label, "⚪")
@@ -235,10 +272,10 @@ def _render_top_issues(issues: list[dict], momentum: dict):
         return
 
     for i, issue in enumerate(issues[:5], 1):
-        code    = issue.get("issue", "")
-        count   = issue.get("mention_count", 0)
+        code = issue.get("issue", "")
+        count = issue.get("mention_count", 0)
         polarity = issue.get("avg_polarity", 0)
-        mom     = momentum.get(code)
+        mom = momentum.get(code)
 
         icon = POLARITY_EMOJI.get(1 if polarity > 0.1 else (-1 if polarity < -0.1 else 0), "➖")
         mom_text = ""
@@ -270,7 +307,7 @@ def _render_candidate_insights(pulse_detail: list, booth_id: str, api_url: str):
     bjp_pulse = party_pulse.get("BJP") or party_pulse.get("Yogi Adityanath")
     if bjp_pulse:
         score = bjp_pulse.get("pulse_score", 0) or 0
-        icon  = "📈" if score > 0 else "📉" if score < 0 else "➡️"
+        icon = "📈" if score > 0 else "📉" if score < 0 else "➡️"
         st.markdown(f"**BJP** {icon} `{score:+.3f}`")
 
         # Try to get issue-level breakdown
@@ -278,8 +315,16 @@ def _render_candidate_insights(pulse_detail: list, booth_id: str, api_url: str):
             r = requests.get(f"{api_url}/booth/{booth_id}/issues", timeout=5)
             if r.ok:
                 all_issues = r.json().get("issues", [])
-                pos_issues = [i["issue"].replace("_"," ") for i in all_issues if (i.get("avg_polarity") or 0) > 0]
-                neg_issues = [i["issue"].replace("_"," ") for i in all_issues if (i.get("avg_polarity") or 0) < -0.1]
+                pos_issues = [
+                    i["issue"].replace("_", " ")
+                    for i in all_issues
+                    if (i.get("avg_polarity") or 0) > 0
+                ]
+                neg_issues = [
+                    i["issue"].replace("_", " ")
+                    for i in all_issues
+                    if (i.get("avg_polarity") or 0) < -0.1
+                ]
                 if pos_issues:
                     st.markdown(f"&nbsp;&nbsp;✅ Positive: {', '.join(pos_issues[:2])}")
                 if neg_issues:
@@ -297,7 +342,7 @@ def _render_candidate_insights(pulse_detail: list, booth_id: str, api_url: str):
         for ent in opp_entities[:2]:
             p = party_pulse[ent]
             score = p.get("pulse_score", 0) or 0
-            icon  = "📈" if score > 0 else "📉" if score < 0 else "➡️"
+            icon = "📈" if score > 0 else "📉" if score < 0 else "➡️"
             st.markdown(f"**{ent}** {icon} `{score:+.3f}`")
     else:
         st.caption("No opposition pulse data")
@@ -306,15 +351,20 @@ def _render_candidate_insights(pulse_detail: list, booth_id: str, api_url: str):
 def _render_data_quality(quality: dict | None):
     if not quality:
         return
-    label   = quality.get("quality_label", "UNKNOWN")
-    score   = quality.get("overall_quality_score") or 0
+    label = quality.get("quality_label", "UNKNOWN")
+    score = quality.get("overall_quality_score") or 0
     reasons = quality.get("quality_reasons") or []
-    events  = quality.get("total_events", 0)
+    events = quality.get("total_events", 0)
     sources = quality.get("unique_sources", 0)
 
     icon = CONFIDENCE_COLOR.get(label, "⚪")
-    color_map = {"HIGH": "#2ecc71", "MEDIUM": "#f39c12", "LOW": "#e67e22",
-                 "INSUFFICIENT": "#e74c3c", "UNKNOWN": "#95a5a6"}
+    color_map = {
+        "HIGH": "#2ecc71",
+        "MEDIUM": "#f39c12",
+        "LOW": "#e67e22",
+        "INSUFFICIENT": "#e74c3c",
+        "UNKNOWN": "#95a5a6",
+    }
     color = color_map.get(label, "#95a5a6")
 
     cols = st.columns([2, 3])
@@ -339,16 +389,14 @@ def _render_data_quality(quality: dict | None):
 
         # Source composition mini-bar
         src_data = {
-            "YouTube":    quality.get("youtube_pct", 0),
-            "News":       quality.get("news_pct", 0),
-            "Survey":     quality.get("survey_pct", 0),
+            "YouTube": quality.get("youtube_pct", 0),
+            "News": quality.get("news_pct", 0),
+            "Survey": quality.get("survey_pct", 0),
             "Field Note": quality.get("field_note_pct", 0),
         }
         total = sum(src_data.values())
         if total > 0:
-            parts = " | ".join(
-                f"{k}: {v:.0f}%" for k, v in src_data.items() if v > 0
-            )
+            parts = " | ".join(f"{k}: {v:.0f}%" for k, v in src_data.items() if v > 0)
             st.caption(f"Sources — {parts}")
 
 
@@ -359,31 +407,31 @@ def _render_narratives(narratives: list):
         return
 
     NARRATIVE_ICON = {
-        "development_positive":   "🏗️",
-        "anti_incumbency":        "📣",
-        "corruption_narrative":   "🔍",
-        "price_rise_narrative":   "💸",
+        "development_positive": "🏗️",
+        "anti_incumbency": "📣",
+        "corruption_narrative": "🔍",
+        "price_rise_narrative": "💸",
         "women_safety_narrative": "🛡️",
-        "employment_crisis":      "💼",
-        "scheme_success":         "✅",
-        "swing_possible":         "⚖️",
+        "employment_crisis": "💼",
+        "scheme_success": "✅",
+        "swing_possible": "⚖️",
     }
     NARRATIVE_COLOR = {
         "development_positive": "#2ecc71",
-        "anti_incumbency":      "#e74c3c",
+        "anti_incumbency": "#e74c3c",
         "corruption_narrative": "#e67e22",
         "price_rise_narrative": "#f39c12",
-        "swing_possible":       "#9b59b6",
+        "swing_possible": "#9b59b6",
     }
 
     for n in narratives[:4]:
-        ntype  = n.get("narrative_type", "")
+        ntype = n.get("narrative_type", "")
         strength = n.get("strength", 0)
-        desc   = n.get("description", "")
-        icon   = NARRATIVE_ICON.get(ntype, "🔹")
-        color  = NARRATIVE_COLOR.get(ntype, "#3498db")
-        label  = ntype.replace("_", " ").title()
-        bar_w  = int(min(strength, 1.0) * 100)
+        desc = n.get("description", "")
+        icon = NARRATIVE_ICON.get(ntype, "🔹")
+        color = NARRATIVE_COLOR.get(ntype, "#3498db")
+        label = ntype.replace("_", " ").title()
+        bar_w = int(min(strength, 1.0) * 100)
 
         st.markdown(
             f"""<div style="background:{color}11;border-left:3px solid {color};
@@ -412,17 +460,19 @@ def _render_contradictions(contradictions: list):
     swing = [c for c in contradictions if c.get("flag_label") == "SWING_INDICATOR"]
 
     if mixed:
-        st.warning(f"⚠️ **{len(mixed)} MIXED SIGNAL{'S' if len(mixed) > 1 else ''}** — sources disagree strongly")
+        st.warning(
+            f"⚠️ **{len(mixed)} MIXED SIGNAL{'S' if len(mixed) > 1 else ''}** — sources disagree strongly"
+        )
 
     show = (mixed + swing)[:5]
     for c in show:
-        entity  = c.get("entity", "")
-        src_a   = c.get("source_a", "")
-        src_b   = c.get("source_b", "")
-        pol_a   = c.get("polarity_a") or 0
-        pol_b   = c.get("polarity_b") or 0
-        delta   = c.get("delta") or 0
-        label   = c.get("flag_label", "")
+        entity = c.get("entity", "")
+        src_a = c.get("source_a", "")
+        src_b = c.get("source_b", "")
+        pol_a = c.get("polarity_a") or 0
+        pol_b = c.get("polarity_b") or 0
+        delta = c.get("delta") or 0
+        label = c.get("flag_label", "")
 
         label_color = "#e74c3c" if label == "MIXED_SIGNALS" else "#f39c12"
         st.markdown(
@@ -443,33 +493,34 @@ def _render_scheme_analysis(scheme_gaps: list):
         return
 
     GAP_COLOR = {
-        "execution_gap":   "#e74c3c",
-        "reach_gap":       "#e67e22",
-        "awareness_gap":   "#f39c12",
+        "execution_gap": "#e74c3c",
+        "reach_gap": "#e67e22",
+        "awareness_gap": "#f39c12",
         "performing_well": "#2ecc71",
-        "in_progress":     "#3498db",
-        "no_data":         "#95a5a6",
+        "in_progress": "#3498db",
+        "no_data": "#95a5a6",
     }
     GAP_ICON = {
-        "execution_gap":   "⚠️",
-        "reach_gap":       "📍",
-        "awareness_gap":   "💬",
+        "execution_gap": "⚠️",
+        "reach_gap": "📍",
+        "awareness_gap": "💬",
         "performing_well": "✅",
-        "in_progress":     "🔄",
-        "no_data":         "❓",
+        "in_progress": "🔄",
+        "no_data": "❓",
     }
 
     for scheme in scheme_gaps[:5]:
-        name      = scheme.get("scheme_name", "")
-        gap_type  = scheme.get("gap_type") or "no_data"
+        name = scheme.get("scheme_name", "")
+        gap_type = scheme.get("gap_type") or "no_data"
         gap_label = scheme.get("gap_label", "")
-        priority  = scheme.get("priority", "LOW")
-        bcount    = scheme.get("beneficiary_count") or 0
+        priority = scheme.get("priority", "LOW")
+        bcount = scheme.get("beneficiary_count") or 0
 
-        color  = GAP_COLOR.get(gap_type, "#95a5a6")
-        icon   = GAP_ICON.get(gap_type, "❓")
-        pri_badge = ("🔴 HIGH" if priority == "HIGH"
-                     else "🟡 MEDIUM" if priority == "MEDIUM" else "🟢 LOW")
+        color = GAP_COLOR.get(gap_type, "#95a5a6")
+        icon = GAP_ICON.get(gap_type, "❓")
+        pri_badge = (
+            "🔴 HIGH" if priority == "HIGH" else "🟡 MEDIUM" if priority == "MEDIUM" else "🟢 LOW"
+        )
 
         st.markdown(
             f"""<div style="background:{color}11;border-left:3px solid {color};
@@ -506,11 +557,11 @@ def _render_comments(comments: list):
 
     for c in comments[:8]:
         polarity = c.get("polarity", 0)
-        entity   = c.get("entity", "")
-        issue    = (c.get("issue") or "").replace("_", " ")
-        conf     = c.get("confidence", 0) or 0
-        source   = c.get("source", "")
-        text     = c.get("text_raw", "")[:250]
+        entity = c.get("entity", "")
+        issue = (c.get("issue") or "").replace("_", " ")
+        conf = c.get("confidence", 0) or 0
+        source = c.get("source", "")
+        text = c.get("text_raw", "")[:250]
 
         border = POLARITY_COLOR.get(polarity, "#95a5a6")
         pol_icon = POLARITY_EMOJI.get(polarity, "➖")

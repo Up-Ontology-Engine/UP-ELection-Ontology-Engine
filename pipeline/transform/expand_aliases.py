@@ -11,6 +11,7 @@ the NLP geo-resolver can assign booth_ids to location mentions.
 Run AFTER Form-20 data is loaded:
     python -m etl.expand_aliases
 """
+
 from __future__ import annotations
 
 import json
@@ -35,9 +36,16 @@ def _to_key_variants(name: str) -> list[str]:
 
     # Drop common suffixes
     for suffix in (
-        " Primary School", " Junior High School", " Inter College",
-        " Government School", " Govt School", " Govt.", "Praathmik Vidyalaya",
-        " Parts", r"\(Part[s]?\s*\d+.*\)", r"\(Parts.*\)"
+        " Primary School",
+        " Junior High School",
+        " Inter College",
+        " Government School",
+        " Govt School",
+        " Govt.",
+        "Praathmik Vidyalaya",
+        " Parts",
+        r"\(Part[s]?\s*\d+.*\)",
+        r"\(Parts.*\)",
     ):
         trimmed = re.sub(suffix, "", clean, flags=re.IGNORECASE).strip()
         if trimmed and trimmed not in variants:
@@ -61,14 +69,21 @@ def expand_aliases(engine: sa.Engine) -> int:
     localities: dict = data.get("localities", {})
 
     with engine.connect() as conn:
-        rows = conn.execute(text("""
+        rows = (
+            conn.execute(
+                text("""
             SELECT booth_id, polling_station_name, locality_hint
             FROM booth_master
             WHERE ac_id = :ac_id
               AND booth_id NOT LIKE '%_TOTAL'
               AND polling_station_name IS NOT NULL
             ORDER BY booth_number
-        """), {"ac_id": AC_ID}).mappings().fetchall()
+        """),
+                {"ac_id": AC_ID},
+            )
+            .mappings()
+            .fetchall()
+        )
 
     added = 0
     for row in rows:

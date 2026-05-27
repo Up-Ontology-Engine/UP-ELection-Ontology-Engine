@@ -24,6 +24,7 @@ Run:
     python -m etl.compute_booth_election_metrics
     python -m etl.compute_booth_election_metrics --dry-run
 """
+
 from __future__ import annotations
 
 import argparse
@@ -39,14 +40,15 @@ load_dotenv()
 logger = logging.getLogger(__name__)
 
 PILOT_AC = "GKP_322"
-YEAR     = 2022
+YEAR = 2022
 
 # Parties whose votes are summed for the lean computation.
-BJP_PARTY  = "BJP"
+BJP_PARTY = "BJP"
 OPP_PARTIES = {"SP", "BSP", "INC", "AAP"}
 # All named parties included in total valid votes (denominator).
-VALID_PARTIES = {BJP_PARTY} | OPP_PARTIES | {"NOTA", "C.P.I", "IND", "S.D.BSP",
-                                               "P.S.P Lohiya", "R.P.I.", "AAP"}
+VALID_PARTIES = (
+    {BJP_PARTY} | OPP_PARTIES | {"NOTA", "C.P.I", "IND", "S.D.BSP", "P.S.P Lohiya", "R.P.I.", "AAP"}
+)
 
 
 def _run(engine: sa.Engine, dry_run: bool = False) -> dict:
@@ -81,19 +83,26 @@ def _run(engine: sa.Engine, dry_run: bool = False) -> dict:
             counts["turnout_updated"] = result.rowcount
     else:
         with engine.connect() as conn:
-            row = conn.execute(text("""
+            row = conn.execute(
+                text("""
                 SELECT COUNT(*)
                 FROM   turnout_stats ts
                 JOIN   booth_master bm ON bm.booth_id = ts.booth_id
                 WHERE  bm.total_voters > 0
-            """)).scalar()
+            """)
+            ).scalar()
             counts["turnout_updated"] = int(row or 0)
-    logger.info("turnout_percent: %d rows %s",
-                counts["turnout_updated"], "(would update)" if dry_run else "updated")
+    logger.info(
+        "turnout_percent: %d rows %s",
+        counts["turnout_updated"],
+        "(would update)" if dry_run else "updated",
+    )
 
     # ── Step 2: Aggregate booth_results → per-booth metrics ──────────────────
     with engine.connect() as conn:
-        rows = conn.execute(text("""
+        rows = (
+            conn.execute(
+                text("""
             SELECT
                 br.booth_id,
                 bm.total_voters,
@@ -122,23 +131,28 @@ def _run(engine: sa.Engine, dry_run: bool = False) -> dict:
               AND  br.election_year  = :yr
             GROUP  BY br.booth_id, bm.total_voters
             ORDER  BY br.booth_id
-        """), {
-            "ac":    PILOT_AC,
-            "yr":    YEAR,
-            "bjp":   BJP_PARTY,
-            "valid": list(VALID_PARTIES),
-        }).mappings().fetchall()
+        """),
+                {
+                    "ac": PILOT_AC,
+                    "yr": YEAR,
+                    "bjp": BJP_PARTY,
+                    "valid": list(VALID_PARTIES),
+                },
+            )
+            .mappings()
+            .fetchall()
+        )
 
     logger.info("Loaded %d booths from booth_results", len(rows))
 
     records = []
     for r in rows:
-        bjp   = float(r["bjp_votes"]  or 0)
-        sp    = float(r["sp_votes"]   or 0)
-        bsp   = float(r["bsp_votes"]  or 0)
-        inc   = float(r["inc_votes"]  or 0)
-        aap   = float(r["aap_votes"]  or 0)
-        opp   = sp + bsp + inc + aap
+        bjp = float(r["bjp_votes"] or 0)
+        sp = float(r["sp_votes"] or 0)
+        bsp = float(r["bsp_votes"] or 0)
+        inc = float(r["inc_votes"] or 0)
+        aap = float(r["aap_votes"] or 0)
+        opp = sp + bsp + inc + aap
         total = float(r["total_valid_votes"] or 0)
 
         if total == 0:
@@ -146,7 +160,7 @@ def _run(engine: sa.Engine, dry_run: bool = False) -> dict:
 
         bjp_share = round(bjp / total, 4)
         opp_share = round(opp / total, 4)
-        lean      = round(bjp_share - opp_share, 4)   # positive = BJP leaning
+        lean = round(bjp_share - opp_share, 4)  # positive = BJP leaning
 
         if lean > 0.25:
             lean_label = "Strong BJP"
@@ -167,32 +181,38 @@ def _run(engine: sa.Engine, dry_run: bool = False) -> dict:
         # Confidence: actual election data → HIGH if total_valid ≥ 100 votes
         confidence = "HIGH" if total >= 100 else "MEDIUM"
 
-        records.append({
-            "booth_id":         r["booth_id"],
-            "window_start":     datetime(YEAR, 1, 1, tzinfo=timezone.utc),
-            "window_end":       datetime(YEAR, 12, 31, tzinfo=timezone.utc),
-            "bjp_pulse_score":  bjp_share,
-            "opp_pulse_score":  top_opp_share,
-            "digital_lean":     lean,
-            "digital_lean_label": lean_label,
-            "top_issue":        None,         # no issue signal at booth level yet
-            "issue_breakdown":  None,
-            "issue_momentum":   None,
-            "confidence_label": confidence,
-            "event_count":      1,            # one election event
-            "data_confidence":  round(min(total / 500.0, 1.0), 3),
-            "last_computed_at":  now,
-        })
+        records.append(
+            {
+                "booth_id": r["booth_id"],
+                "window_start": datetime(YEAR, 1, 1, tzinfo=timezone.utc),
+                "window_end": datetime(YEAR, 12, 31, tzinfo=timezone.utc),
+                "bjp_pulse_score": bjp_share,
+                "opp_pulse_score": top_opp_share,
+                "digital_lean": lean,
+                "digital_lean_label": lean_label,
+                "top_issue": None,  # no issue signal at booth level yet
+                "issue_breakdown": None,
+                "issue_momentum": None,
+                "confidence_label": confidence,
+                "event_count": 1,  # one election event
+                "data_confidence": round(min(total / 500.0, 1.0), 3),
+                "last_computed_at": now,
+            }
+        )
 
     logger.info("Computed metrics for %d booths", len(records))
 
     if dry_run:
         logger.info("[dry-run] First 3 records:")
         for rec in records[:3]:
-            logger.info("  %s  BJP=%.3f  OPP=%.3f  lean=%.3f  (%s)",
-                        rec["booth_id"], rec["bjp_pulse_score"],
-                        rec["opp_pulse_score"], rec["digital_lean"],
-                        rec["lean_label"] if "lean_label" in rec else rec["digital_lean_label"])
+            logger.info(
+                "  %s  BJP=%.3f  OPP=%.3f  lean=%.3f  (%s)",
+                rec["booth_id"],
+                rec["bjp_pulse_score"],
+                rec["opp_pulse_score"],
+                rec["digital_lean"],
+                rec["lean_label"] if "lean_label" in rec else rec["digital_lean_label"],
+            )
         counts["booth_metrics_upserted"] = len(records)
         return counts
 

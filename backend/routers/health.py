@@ -21,8 +21,9 @@ async def health():
         async with engine.connect() as conn:
             await conn.execute(sa.text("SELECT 1"))
         postgres_ok = True
-    except Exception as e:
+    except Exception:
         import traceback
+
         print("Healthcheck Postgres error:")
         traceback.print_exc()
 

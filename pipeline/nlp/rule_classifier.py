@@ -1,9 +1,14 @@
 """Rule-based fallback classifier using the political lexicon."""
+
 from __future__ import annotations
-import json, os, re
-from .schemas import ExtractionResult, SentimentStatement, EntityType, IssueType
+
+import json
+import os
+
+from .schemas import EntityType, ExtractionResult, IssueType, SentimentStatement
 
 # ── Lexicon (loaded from JSON, with hardcoded defaults) ──────────────────────
+
 
 def _load_lexicon() -> dict:
     path = os.environ.get("LEXICON_PATH", "data/seeds/political_lexicon.json")
@@ -16,34 +21,83 @@ def _load_lexicon() -> dict:
 
 _DEFAULT_LEXICON = {
     "party_aliases": {
-        "BJP": ["bjp","भाजपा","भारतीय जनता","कमल","lotus","sarkar","सरकार",
-                "yogi","योगी","modi","मोदी","double engine","डबल इंजन"],
-        "SP":  ["sp","समाजवादी","सपा","cycle","साइकिल","akhilesh","अखिलेश",
-                "netaji","नेताजी","mulayam","मुलायम"],
-        "BSP": ["bsp","बसपा","बहुजन","elephant","हाथी","mayawati","मायावती","behan ji"],
-        "Congress": ["congress","कांग्रेस","inc","rahul","राहुल","priyanka"],
+        "BJP": [
+            "bjp",
+            "भाजपा",
+            "भारतीय जनता",
+            "कमल",
+            "lotus",
+            "sarkar",
+            "सरकार",
+            "yogi",
+            "योगी",
+            "modi",
+            "मोदी",
+            "double engine",
+            "डबल इंजन",
+        ],
+        "SP": [
+            "sp",
+            "समाजवादी",
+            "सपा",
+            "cycle",
+            "साइकिल",
+            "akhilesh",
+            "अखिलेश",
+            "netaji",
+            "नेताजी",
+            "mulayam",
+            "मुलायम",
+        ],
+        "BSP": ["bsp", "बसपा", "बहुजन", "elephant", "हाथी", "mayawati", "मायावती", "behan ji"],
+        "Congress": ["congress", "कांग्रेस", "inc", "rahul", "राहुल", "priyanka"],
     },
     "issue_terms": {
-        "water":       ["पानी","water","नल","handpump","हैंडपंप","पेयजल","drinking water"],
-        "roads":       ["सड़क","road","गड्ढे","pothole","खराब सड़क"],
-        "electricity": ["बिजली","bijli","light","load shedding","लोड शेडिंग","कटौती"],
-        "jobs":        ["बेरोजगारी","नौकरी","रोजगार","job","unemployment","rojgar"],
-        "price_rise":  ["महंगाई","inflation","महंगा","gas","petrol","दाम","price"],
-        "farmer":      ["किसान","kisan","farmer","खेती","फसल","crop"],
-        "sugarcane":   ["गन्ना","sugarcane","ganna","चीनी मिल","sugar mill","भुगतान"],
-        "women_safety":["महिला","woman","rape","safety","बेटी","सुरक्षा"],
-        "health":      ["hospital","अस्पताल","doctor","डॉक्टर","स्वास्थ्य"],
-        "education":   ["school","स्कूल","college","शिक्षा","teacher","शिक्षक"],
-        "corruption":  ["भ्रष्टाचार","corruption","घोटाला","scam","रिश्वत"],
-        "law_order":   ["कानून व्यवस्था","crime","अपराध","police"],
+        "water": ["पानी", "water", "नल", "handpump", "हैंडपंप", "पेयजल", "drinking water"],
+        "roads": ["सड़क", "road", "गड्ढे", "pothole", "खराब सड़क"],
+        "electricity": ["बिजली", "bijli", "light", "load shedding", "लोड शेडिंग", "कटौती"],
+        "jobs": ["बेरोजगारी", "नौकरी", "रोजगार", "job", "unemployment", "rojgar"],
+        "price_rise": ["महंगाई", "inflation", "महंगा", "gas", "petrol", "दाम", "price"],
+        "farmer": ["किसान", "kisan", "farmer", "खेती", "फसल", "crop"],
+        "sugarcane": ["गन्ना", "sugarcane", "ganna", "चीनी मिल", "sugar mill", "भुगतान"],
+        "women_safety": ["महिला", "woman", "rape", "safety", "बेटी", "सुरक्षा"],
+        "health": ["hospital", "अस्पताल", "doctor", "डॉक्टर", "स्वास्थ्य"],
+        "education": ["school", "स्कूल", "college", "शिक्षा", "teacher", "शिक्षक"],
+        "corruption": ["भ्रष्टाचार", "corruption", "घोटाला", "scam", "रिश्वत"],
+        "law_order": ["कानून व्यवस्था", "crime", "अपराध", "police"],
     },
     "positive_terms": [
-        "अच्छा","बढ़िया","शानदार","विकास","तरक्की","खुश","धन्यवाद",
-        "great","best","achha","badiya","development","improve",
+        "अच्छा",
+        "बढ़िया",
+        "शानदार",
+        "विकास",
+        "तरक्की",
+        "खुश",
+        "धन्यवाद",
+        "great",
+        "best",
+        "achha",
+        "badiya",
+        "development",
+        "improve",
     ],
     "negative_terms": [
-        "बुरा","खराब","बेकार","झूठ","धोखा","नाराज","परेशान","fail",
-        "fraud","liar","jhuth","dhoka","निराश","बर्बाद","भ्रष्ट","गुंडा",
+        "बुरा",
+        "खराब",
+        "बेकार",
+        "झूठ",
+        "धोखा",
+        "नाराज",
+        "परेशान",
+        "fail",
+        "fraud",
+        "liar",
+        "jhuth",
+        "dhoka",
+        "निराश",
+        "बर्बाद",
+        "भ्रष्ट",
+        "गुंडा",
     ],
 }
 

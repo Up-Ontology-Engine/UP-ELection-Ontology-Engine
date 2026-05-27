@@ -7,6 +7,7 @@ never appear in source files.
 Auto-generates migration scripts by comparing SQLAlchemy metadata
 against the live database schema.
 """
+
 from __future__ import annotations
 
 import os
@@ -18,7 +19,7 @@ from alembic import context
 from dotenv import load_dotenv
 
 # ── Path setup ────────────────────────────────────────────────────────────────
-_ROOT = Path(__file__).resolve().parents[3]   # project root
+_ROOT = Path(__file__).resolve().parents[3]  # project root
 sys.path.insert(0, str(_ROOT))
 
 load_dotenv(_ROOT / ".env")
@@ -38,7 +39,8 @@ if config.config_file_name is not None:
 # ── Import all table metadata for autogenerate ────────────────────────────────
 # Import your SQLAlchemy Base here so Alembic can compare against DB schema.
 try:
-    from backend.db import Base as _Base   # noqa: F401
+    from backend.db import Base as _Base  # noqa: F401
+
     target_metadata = _Base.metadata
 except ImportError:
     # Graceful degradation if models not yet defined
@@ -46,6 +48,7 @@ except ImportError:
 
 
 # ── Run migrations ─────────────────────────────────────────────────────────────
+
 
 def run_migrations_offline() -> None:
     """Run migrations without a DB connection (generates SQL scripts)."""

@@ -7,11 +7,12 @@ Query names match the API endpoint they serve where applicable.
 
 from __future__ import annotations
 
-from typing import Any, Optional
+from typing import Optional
+
 from neo4j import Session
 
-
 # ── Structure ─────────────────────────────────────────────────────────────────
+
 
 def get_booths_for_ac(session: Session, ac_id: str) -> list[dict]:
     result = session.run(
@@ -50,6 +51,7 @@ def get_booth_base(session: Session, booth_id: str) -> Optional[dict]:
 
 # ── Pulse / Sentiment ─────────────────────────────────────────────────────────
 
+
 def get_booth_pulse(
     session: Session,
     booth_id: str,
@@ -81,18 +83,18 @@ def get_booth_pulse(
     bjp_events = opp_events = 0
     for r in result:
         if r["camp"] == "bjp":
-            bjp_score  = r["weighted_avg"] or 0
+            bjp_score = r["weighted_avg"] or 0
             bjp_events = r["events"]
         elif r["camp"] == "opp":
-            opp_score  = r["weighted_avg"] or 0
+            opp_score = r["weighted_avg"] or 0
             opp_events = r["events"]
 
     return {
-        "bjp_pulse":    round(bjp_score, 3),
-        "opp_pulse":    round(opp_score, 3),
+        "bjp_pulse": round(bjp_score, 3),
+        "opp_pulse": round(opp_score, 3),
         "digital_lean": round(bjp_score - opp_score, 3),
-        "bjp_events":   bjp_events,
-        "opp_events":   opp_events,
+        "bjp_events": bjp_events,
+        "opp_events": opp_events,
         "total_events": bjp_events + opp_events,
     }
 
@@ -146,6 +148,7 @@ def get_booth_recent_comments(
 
 # ── Historical ────────────────────────────────────────────────────────────────
 
+
 def get_booth_history(session: Session, booth_id: str) -> list[dict]:
     result = session.run(
         """
@@ -168,6 +171,7 @@ def get_booth_history(session: Session, booth_id: str) -> list[dict]:
 
 
 # ── Candidates ────────────────────────────────────────────────────────────────
+
 
 def get_ac_candidates(session: Session, ac_id: str) -> list[dict]:
     result = session.run(
@@ -210,6 +214,7 @@ def get_candidate_issue_sentiment(
 
 
 # ── Intelligence layer ────────────────────────────────────────────────────────
+
 
 def get_booth_quality(session: Session, booth_id: str) -> Optional[dict]:
     """Most recent DataQuality node for this booth."""
@@ -317,6 +322,7 @@ def get_booth_scheme_gaps(
 
 
 # ── AC overview ───────────────────────────────────────────────────────────────
+
 
 def get_ac_booth_summary_table(session: Session, ac_id: str) -> list[dict]:
     """

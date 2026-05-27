@@ -1,4 +1,4 @@
-﻿"""
+"""
 ETL: eGramSwaraj Scheme Data → scheme_activity + panchayat_master enrichment
 
 Sources:
@@ -16,6 +16,7 @@ IMPORTANT: pip install xlrd==1.2.0 required for .xls format
 
 Run: python -m etl.transform_schemes
 """
+
 from __future__ import annotations
 
 import logging
@@ -41,8 +42,10 @@ def _parse_voucher_count(cell: str) -> dict[str, int]:
         result["gp_count"] = int(m.group(1))
     rv = re.search(r"RV-(\d+)", cell)
     pv = re.search(r"PV-(\d+)", cell)
-    if rv: result["rv_count"] = int(rv.group(1))
-    if pv: result["pv_count"] = int(pv.group(1))
+    if rv:
+        result["rv_count"] = int(rv.group(1))
+    if pv:
+        result["pv_count"] = int(pv.group(1))
     return result
 
 
@@ -72,10 +75,10 @@ def load_block_wise_summary(engine: sa.Engine) -> int:
                 if "gorakhpur" not in district.lower():
                     continue
 
-                block_name  = str(sh.cell_value(row_idx, 1)).strip()
+                block_name = str(sh.cell_value(row_idx, 1)).strip()
                 voucher_raw = str(sh.cell_value(row_idx, 3)).strip()
 
-                parsed       = _parse_voucher_count(voucher_raw)
+                parsed = _parse_voucher_count(voucher_raw)
                 panchayat_id = f"{block_name.upper().replace(' ', '_')}_BLOCK_AGGREGATE"
 
                 # Ensure FK target exists before inserting scheme_activity
@@ -99,16 +102,16 @@ def load_block_wise_summary(engine: sa.Engine) -> int:
                              :activity_desc, :beneficiary_count, :status, :financial_year)
                     """),
                     {
-                        "panchayat_id":    panchayat_id,
-                        "scheme_name":     "eGramSwaraj Panchayat Activity",
-                        "issue_tag":       "governance",
-                        "activity_desc":   (
+                        "panchayat_id": panchayat_id,
+                        "scheme_name": "eGramSwaraj Panchayat Activity",
+                        "issue_tag": "governance",
+                        "activity_desc": (
                             f"Block {block_name}: {parsed['gp_count']} GPs, "
                             f"RV={parsed['rv_count']}, PV={parsed['pv_count']}"
                         ),
                         "beneficiary_count": parsed["gp_count"],
-                        "status":          "completed",
-                        "financial_year":  fy,
+                        "status": "completed",
+                        "financial_year": fy,
                     },
                 )
                 total += 1
@@ -167,17 +170,17 @@ def load_district_expenditure(engine: sa.Engine) -> int:
                              :activity_desc, :beneficiary_count, :status, :financial_year)
                     """),
                     {
-                        "panchayat_id":    "GKP_DISTRICT_AGGREGATE",
-                        "scheme_name":     "District Panchayat Expenditure",
-                        "issue_tag":       "governance",
-                        "activity_desc":   (
+                        "panchayat_id": "GKP_DISTRICT_AGGREGATE",
+                        "scheme_name": "District Panchayat Expenditure",
+                        "issue_tag": "governance",
+                        "activity_desc": (
                             f"Gorakhpur FY{fy}: "
                             f"BP Receipts=₹{bp_receipts/1e7:.1f}Cr, "
                             f"VP Payments=₹{vp_payments/1e7:.1f}Cr"
                         ),
                         "beneficiary_count": 0,
-                        "status":          "completed",
-                        "financial_year":  fy,
+                        "status": "completed",
+                        "financial_year": fy,
                     },
                 )
                 total += 1

@@ -17,9 +17,9 @@ Run:
 import json
 import logging
 import re
+from datetime import datetime
 from pathlib import Path
 from typing import Any
-from datetime import datetime
 
 logger = logging.getLogger(__name__)
 
@@ -34,7 +34,7 @@ def parse_asset_value(value_str: str) -> dict[str, str]:
         return {"raw": "—", "parsed": "Not Disclosed"}
 
     # Extract amount and unit
-    match = re.search(r'₹?([\d.]+)\s*([LlCcRr]+)?', str(value_str).strip())
+    match = re.search(r"₹?([\d.]+)\s*([LlCcRr]+)?", str(value_str).strip())
     if not match:
         return {"raw": value_str, "parsed": value_str}
 
@@ -71,8 +71,7 @@ def extract_candidate_profile(candidate_data: dict[str, Any]) -> dict[str, Any]:
     # ── Constituency Data ─────────────────────────────────────────────
     ac_name = candidate_data.get("ac_name", "—")
     demographics = (
-        f"Constituency {ac_name} · "
-        f"Election {candidate_data.get('election_year', '—')}"
+        f"Constituency {ac_name} · " f"Election {candidate_data.get('election_year', '—')}"
     )
     past_seats = "—"  # Would need historical data
 
@@ -82,8 +81,10 @@ def extract_candidate_profile(candidate_data: dict[str, Any]) -> dict[str, Any]:
     join_date = "—"  # Would need historical party data
 
     # ── Electoral Record ──────────────────────────────────────────────
-    won = bool((affidavit or {}).get("is_winner")) or \
-          "winner" in (candidate_data.get("party_raw") or "").lower()
+    won = (
+        bool((affidavit or {}).get("is_winner"))
+        or "winner" in (candidate_data.get("party_raw") or "").lower()
+    )
     election_status = "Won" if won else "Contested"
     election_record = f"{candidate_data.get('election_year', '—')} · {ac_name} · {election_status}"
     votes = list_summary.get("votes_polled") or "—"
@@ -117,7 +118,8 @@ def extract_candidate_profile(candidate_data: dict[str, Any]) -> dict[str, Any]:
     criminal_detail = affidavit.get("criminal_case_details_json") or []
     legal_summary = (
         f"{criminal_cases} criminal case(s) declared"
-        if criminal_cases > 0 else "No criminal cases declared"
+        if criminal_cases > 0
+        else "No criminal cases declared"
     )
 
     # ── Public Presence ───────────────────────────────────────────────
@@ -205,10 +207,7 @@ def enrich_from_myneta_json(myneta_json_path: Path) -> dict[str, Any]:
 
     for candidate in candidates:
         profile = extract_candidate_profile(candidate)
-        key = (
-            f"{profile['name'].upper().replace(' ', '_')}_"
-            f"{profile['election_year']}"
-        )
+        key = f"{profile['name'].upper().replace(' ', '_')}_" f"{profile['election_year']}"
         enriched[key] = profile
 
     return enriched
@@ -216,8 +215,11 @@ def enrich_from_myneta_json(myneta_json_path: Path) -> dict[str, Any]:
 
 def run(myneta_dir: Path = MYNETA_DIR) -> dict[str, Any]:
     """Extract and enrich all candidate profiles from MyNeta JSON files."""
-    files = sorted(p for p in myneta_dir.glob("myneta_*.json")
-                   if p.name not in ("manifest.json", "myneta_graph.json"))
+    files = sorted(
+        p
+        for p in myneta_dir.glob("myneta_*.json")
+        if p.name not in ("manifest.json", "myneta_graph.json")
+    )
 
     if not files:
         raise FileNotFoundError(
@@ -236,10 +238,7 @@ def run(myneta_dir: Path = MYNETA_DIR) -> dict[str, Any]:
 
     # Write output
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT_FILE.write_text(
-        json.dumps(all_enriched, ensure_ascii=False, indent=2),
-        encoding="utf-8"
-    )
+    OUTPUT_FILE.write_text(json.dumps(all_enriched, ensure_ascii=False, indent=2), encoding="utf-8")
     logger.info(f"Wrote {len(all_enriched)} enriched profiles → {OUTPUT_FILE}")
 
     return {

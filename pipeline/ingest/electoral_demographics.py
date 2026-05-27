@@ -19,6 +19,7 @@ For full booth-level data:
 
 Run: python -m ingestion.electoral_demographics
 """
+
 from __future__ import annotations
 
 import logging
@@ -44,8 +45,14 @@ DATA_DIR = Path(__file__).parents[1] / "data" / "data"
 NVSP_STATE_CODE = "S24"
 
 TARGET_ACS = {
-    320: "GKP_320", 321: "GKP_321", 322: "GKP_322", 323: "GKP_323",
-    324: "GKP_324", 325: "GKP_325", 326: "GKP_326", 327: "GKP_327",
+    320: "GKP_320",
+    321: "GKP_321",
+    322: "GKP_322",
+    323: "GKP_323",
+    324: "GKP_324",
+    325: "GKP_325",
+    326: "GKP_326",
+    327: "GKP_327",
     328: "GKP_328",
 }
 
@@ -58,6 +65,7 @@ HEADERS = {
 
 
 # ── Step 1: Aggregate from local XLSX files ───────────────────────────────────
+
 
 def aggregate_from_local_xlsx() -> dict[str, dict]:
     """
@@ -93,33 +101,36 @@ def aggregate_from_local_xlsx() -> dict[str, dict]:
 
     df = pd.concat(frames, ignore_index=True)
     df.columns = [c.strip() for c in df.columns]
-    df["Age"]    = pd.to_numeric(df.get("Age", 0), errors="coerce")
+    df["Age"] = pd.to_numeric(df.get("Age", 0), errors="coerce")
     df["Gender"] = df.get("Gender", "").astype(str).str.strip().str.upper()
 
     # Part No is empty → treat all as GKP_322 aggregate
     agg = {
         "GKP_322": {
-            "total_voters":   len(df),
-            "male_voters":    int((df["Gender"] == "MALE").sum()),
-            "female_voters":  int((df["Gender"] == "FEMALE").sum()),
-            "other_voters":   int((~df["Gender"].isin(["MALE", "FEMALE"])).sum()),
-            "age_18_25":      int(((df["Age"] >= 18) & (df["Age"] <= 25)).sum()),
-            "age_26_40":      int(((df["Age"] >= 26) & (df["Age"] <= 40)).sum()),
-            "age_40_60":      int(((df["Age"] > 40) & (df["Age"] <= 60)).sum()),
-            "age_60_plus":    int((df["Age"] > 60).sum()),
-            "source":         "local_xlsx",
-            "note":           "Part No missing — these are AC-level aggregates only",
+            "total_voters": len(df),
+            "male_voters": int((df["Gender"] == "MALE").sum()),
+            "female_voters": int((df["Gender"] == "FEMALE").sum()),
+            "other_voters": int((~df["Gender"].isin(["MALE", "FEMALE"])).sum()),
+            "age_18_25": int(((df["Age"] >= 18) & (df["Age"] <= 25)).sum()),
+            "age_26_40": int(((df["Age"] >= 26) & (df["Age"] <= 40)).sum()),
+            "age_40_60": int(((df["Age"] > 40) & (df["Age"] <= 60)).sum()),
+            "age_60_plus": int((df["Age"] > 60).sum()),
+            "source": "local_xlsx",
+            "note": "Part No missing — these are AC-level aggregates only",
         }
     }
 
-    logger.info("Local XLSX: AC GKP_322 — %d total voters (male=%d, female=%d)",
-                agg["GKP_322"]["total_voters"],
-                agg["GKP_322"]["male_voters"],
-                agg["GKP_322"]["female_voters"])
+    logger.info(
+        "Local XLSX: AC GKP_322 — %d total voters (male=%d, female=%d)",
+        agg["GKP_322"]["total_voters"],
+        agg["GKP_322"]["male_voters"],
+        agg["GKP_322"]["female_voters"],
+    )
     return agg
 
 
 # ── Step 2: Scrape NVSP for AC-level voter stats ─────────────────────────────
+
 
 def scrape_nvsp_voter_stats(ac_no: int) -> dict | None:
     """
@@ -127,22 +138,22 @@ def scrape_nvsp_voter_stats(ac_no: int) -> dict | None:
     Returns {total, male, female, third_gender} or None if unavailable.
     """
     # NVSP voter data API (public)
-    url = f"https://www.nvsp.in/forms/forms/searchepicdata"
+    url = "https://www.nvsp.in/forms/forms/searchepicdata"
     try:
         params = {
-            "stateCode":           NVSP_STATE_CODE,
-            "assemblyCode":        str(ac_no),
-            "type":                "summary",
+            "stateCode": NVSP_STATE_CODE,
+            "assemblyCode": str(ac_no),
+            "type": "summary",
         }
         resp = requests.get(url, params=params, headers=HEADERS, timeout=15)
         if resp.status_code == 200 and resp.text.strip().startswith("{"):
             data = resp.json()
             return {
-                "total_voters":  data.get("totalVoters", 0),
-                "male_voters":   data.get("maleVoters", 0),
+                "total_voters": data.get("totalVoters", 0),
+                "male_voters": data.get("maleVoters", 0),
                 "female_voters": data.get("femaleVoters", 0),
-                "other_voters":  data.get("thirdGenderVoters", 0),
-                "source":        "nvsp",
+                "other_voters": data.get("thirdGenderVoters", 0),
+                "source": "nvsp",
             }
     except Exception as e:
         logger.debug("NVSP failed for AC %d: %s", ac_no, e)
@@ -154,6 +165,7 @@ def scrape_nvsp_voter_stats(ac_no: int) -> dict | None:
         resp.raise_for_status()
         # Parse the voter count table
         from bs4 import BeautifulSoup
+
         soup = BeautifulSoup(resp.text, "html.parser")
         stats = {}
         for row in soup.find_all("tr"):
@@ -178,9 +190,11 @@ def scrape_nvsp_voter_stats(ac_no: int) -> dict | None:
 
 # ── Step 3: Load to Postgres ──────────────────────────────────────────────────
 
+
 def ensure_ac_demographics_table(engine: sa.Engine) -> None:
     with engine.connect() as conn:
-        conn.execute(text("""
+        conn.execute(
+            text("""
             CREATE TABLE IF NOT EXISTS ac_demographics (
                 ac_id           VARCHAR(30) PRIMARY KEY REFERENCES ac_master(ac_id),
                 total_voters    INTEGER DEFAULT 0,
@@ -195,7 +209,8 @@ def ensure_ac_demographics_table(engine: sa.Engine) -> None:
                 last_updated    TIMESTAMPTZ DEFAULT NOW(),
                 notes           TEXT
             )
-        """))
+        """)
+        )
         conn.commit()
 
 
@@ -204,7 +219,8 @@ def load_demographics(stats: dict[str, dict], engine: sa.Engine) -> int:
     count = 0
     with engine.connect() as conn:
         for ac_id, d in stats.items():
-            conn.execute(text("""
+            conn.execute(
+                text("""
                 INSERT INTO ac_demographics
                     (ac_id, total_voters, male_voters, female_voters, other_voters,
                      age_18_25, age_26_40, age_40_60, age_60_plus, data_source, notes)
@@ -222,19 +238,21 @@ def load_demographics(stats: dict[str, dict], engine: sa.Engine) -> int:
                     age_60_plus   = EXCLUDED.age_60_plus,
                     data_source   = EXCLUDED.data_source,
                     last_updated  = NOW()
-            """), {
-                "ac_id":  ac_id,
-                "total":  d.get("total_voters", 0),
-                "male":   d.get("male_voters", 0),
-                "female": d.get("female_voters", 0),
-                "other":  d.get("other_voters", 0),
-                "a18":    d.get("age_18_25", 0),
-                "a26":    d.get("age_26_40", 0),
-                "a40":    d.get("age_40_60", 0),
-                "a60":    d.get("age_60_plus", 0),
-                "src":    d.get("source", "unknown"),
-                "notes":  d.get("note", ""),
-            })
+            """),
+                {
+                    "ac_id": ac_id,
+                    "total": d.get("total_voters", 0),
+                    "male": d.get("male_voters", 0),
+                    "female": d.get("female_voters", 0),
+                    "other": d.get("other_voters", 0),
+                    "a18": d.get("age_18_25", 0),
+                    "a26": d.get("age_26_40", 0),
+                    "a40": d.get("age_40_60", 0),
+                    "a60": d.get("age_60_plus", 0),
+                    "src": d.get("source", "unknown"),
+                    "notes": d.get("note", ""),
+                },
+            )
             count += 1
         conn.commit()
     return count
@@ -257,8 +275,10 @@ def run():
         else:
             logger.warning("No voter stats for AC %d (%s) — will show zeros", ac_no, ac_id)
             stats[ac_id] = {
-                "total_voters": 0, "male_voters": 0,
-                "female_voters": 0, "other_voters": 0,
+                "total_voters": 0,
+                "male_voters": 0,
+                "female_voters": 0,
+                "other_voters": 0,
                 "source": "unavailable",
             }
 
@@ -267,9 +287,11 @@ def run():
 
     # Print summary
     with engine.connect() as conn:
-        rows = conn.execute(text(
-            "SELECT ac_id, total_voters, male_voters, female_voters, data_source FROM ac_demographics ORDER BY ac_id"
-        )).fetchall()
+        rows = conn.execute(
+            text(
+                "SELECT ac_id, total_voters, male_voters, female_voters, data_source FROM ac_demographics ORDER BY ac_id"
+            )
+        ).fetchall()
     for r in rows:
         logger.info("  %s: total=%d male=%d female=%d [%s]", *r)
 

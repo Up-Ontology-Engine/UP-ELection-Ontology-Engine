@@ -17,11 +17,11 @@ Usage:
     python -m ingestion.schema_drift_detector
     python -m ingestion.schema_drift_detector --ac 322 --year 2022
 """
+
 from __future__ import annotations
 
 import json
 import logging
-import re
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -31,45 +31,60 @@ from pydantic import BaseModel, ValidationError
 
 logger = logging.getLogger(__name__)
 
-_ROOT   = Path(__file__).resolve().parents[1]
+_ROOT = Path(__file__).resolve().parents[1]
 _REPORT = _ROOT / "data" / "raw" / "drift_reports"
 _REPORT.mkdir(parents=True, exist_ok=True)
 
 # ── Expected schema signatures ────────────────────────────────────────────────
 
 # Column header keywords that must appear in the MyNeta candidate list table.
-REQUIRED_LIST_HEADERS = frozenset([
-    "candidate", "party", "criminal", "assets", "education",
-])
+REQUIRED_LIST_HEADERS = frozenset(
+    [
+        "candidate",
+        "party",
+        "criminal",
+        "assets",
+        "education",
+    ]
+)
 
 # h3 section headings that must appear on a MyNeta affidavit detail page.
-REQUIRED_AFFIDAVIT_SECTIONS = frozenset([
-    "movable asset",
-    "immovable asset",
-    "liabilit",     # prefix match — "Liabilities" or "Liability"
-])
+REQUIRED_AFFIDAVIT_SECTIONS = frozenset(
+    [
+        "movable asset",
+        "immovable asset",
+        "liabilit",  # prefix match — "Liabilities" or "Liability"
+    ]
+)
 
 # ECI booth result page expected table structure (at least these columns).
-REQUIRED_ECI_RESULT_COLUMNS = frozenset([
-    "booth", "candidate", "party", "votes",
-])
+REQUIRED_ECI_RESULT_COLUMNS = frozenset(
+    [
+        "booth",
+        "candidate",
+        "party",
+        "votes",
+    ]
+)
 
 
 # ── Pydantic validator for parsed candidate rows ──────────────────────────────
 
+
 class ParsedCandidateRow(BaseModel):
     """Validate a single row from the MyNeta constituency list scrape."""
-    name:             str
-    party_raw:        Optional[str] = None
-    education:        Optional[str] = None
-    age:              Optional[int] = None
-    criminal_cases:   int = 0
-    total_assets:     int = 0
-    liabilities:      int = 0
+
+    name: str
+    party_raw: Optional[str] = None
+    education: Optional[str] = None
+    age: Optional[int] = None
+    criminal_cases: int = 0
+    total_assets: int = 0
+    liabilities: int = 0
     source_candidate_id: Optional[int] = None
 
     class Config:
-        extra = "allow"   # forward-compat: extra fields don't error
+        extra = "allow"  # forward-compat: extra fields don't error
 
 
 def validate_candidate_rows(rows: list[dict]) -> tuple[list[dict], list[dict]]:
@@ -91,6 +106,7 @@ def validate_candidate_rows(rows: list[dict]) -> tuple[list[dict], list[dict]]:
 
 # ── DOM structure checks ──────────────────────────────────────────────────────
 
+
 def _check_list_page(html: str, source_url: str) -> dict:
     """Verify MyNeta candidate list page has expected headers and table."""
     issues = []
@@ -111,8 +127,8 @@ def _check_list_page(html: str, source_url: str) -> dict:
 
     return {
         "check": "list_page",
-        "url":   source_url,
-        "ok":    len(issues) == 0,
+        "url": source_url,
+        "ok": len(issues) == 0,
         "issues": issues,
     }
 
@@ -131,11 +147,11 @@ def _check_affidavit_page(html: str, candidate_id: int, source_url: str) -> dict
         issues.append("Fewer than 2 tables found — affidavit structure may have changed")
 
     return {
-        "check":        "affidavit_page",
+        "check": "affidavit_page",
         "candidate_id": candidate_id,
-        "url":          source_url,
-        "ok":           len(issues) == 0,
-        "issues":       issues,
+        "url": source_url,
+        "ok": len(issues) == 0,
+        "issues": issues,
     }
 
 
@@ -152,9 +168,9 @@ def _check_eci_result_page(html: str, source_url: str) -> dict:
         issues.append("No <table> on ECI result page — DOM may have changed to JS-rendered")
 
     return {
-        "check":  "eci_result_page",
-        "url":    source_url,
-        "ok":     len(issues) == 0,
+        "check": "eci_result_page",
+        "url": source_url,
+        "ok": len(issues) == 0,
         "issues": issues,
     }
 
@@ -173,12 +189,14 @@ _HEADERS = {
 def _fetch(url: str, timeout: int = 20) -> str | None:
     try:
         import urllib.request
+
         req = urllib.request.Request(url, headers=_HEADERS)
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             raw = resp.read()
         # Decompress if gzip
         if raw[:2] == b"\x1f\x8b":
             import gzip
+
             raw = gzip.decompress(raw)
         return raw.decode("utf-8", errors="replace")
     except Exception as exc:
@@ -187,6 +205,7 @@ def _fetch(url: str, timeout: int = 20) -> str | None:
 
 
 # ── Orchestrator ──────────────────────────────────────────────────────────────
+
 
 def run_drift_check(
     ac_no: int = 322,
@@ -215,7 +234,9 @@ def run_drift_check(
             drift_detected = True
             logger.error("[drift] LIST PAGE DRIFT: %s", r["issues"])
     else:
-        results.append({"check": "list_page", "url": list_url, "ok": False, "issues": ["fetch_failed"]})
+        results.append(
+            {"check": "list_page", "url": list_url, "ok": False, "issues": ["fetch_failed"]}
+        )
         drift_detected = True
     time.sleep(1.0)
 
@@ -245,11 +266,11 @@ def run_drift_check(
     # ECI drift is non-critical since results are static
 
     report = {
-        "checked_at":     datetime.now(timezone.utc).isoformat(),
-        "ac_no":          ac_no,
-        "election_year":  election_year,
+        "checked_at": datetime.now(timezone.utc).isoformat(),
+        "ac_no": ac_no,
+        "election_year": election_year,
         "drift_detected": drift_detected,
-        "checks":         results,
+        "checks": results,
     }
 
     # Save report
@@ -261,7 +282,9 @@ def run_drift_check(
     if drift_detected:
         logger.critical(
             "[drift] SCHEMA DRIFT DETECTED for AC %d/%d — check %s for details",
-            ac_no, election_year, report_path,
+            ac_no,
+            election_year,
+            report_path,
         )
 
     return report
@@ -269,10 +292,11 @@ def run_drift_check(
 
 if __name__ == "__main__":
     import argparse
+
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 
     parser = argparse.ArgumentParser(description="ECI/MyNeta schema drift detector")
-    parser.add_argument("--ac",   type=int, default=322,  help="AC number (default 322)")
+    parser.add_argument("--ac", type=int, default=322, help="AC number (default 322)")
     parser.add_argument("--year", type=int, default=2022, help="Election year (default 2022)")
     args = parser.parse_args()
 

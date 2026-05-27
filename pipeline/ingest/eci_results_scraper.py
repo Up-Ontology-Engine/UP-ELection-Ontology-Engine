@@ -17,6 +17,7 @@ NOTE: This gets AC-level results (not booth-level Form-20).
 
 Run: python -m ingestion.eci_results_scraper
 """
+
 from __future__ import annotations
 
 import io
@@ -24,14 +25,15 @@ import logging
 import os
 import re
 import time
+
 import sqlalchemy as sa
 from sqlalchemy import text
 
 logger = logging.getLogger(__name__)
 
 try:
-    import requests
     import pandas as pd
+    import requests
 except ImportError:
     raise ImportError("Run: pip install requests pandas openpyxl")
 
@@ -44,8 +46,14 @@ HEADERS = {
 
 # Target ACs — Gorakhpur district, UP Assembly 2022
 TARGET_ACS = {
-    320: "GKP_320", 321: "GKP_321", 322: "GKP_322", 323: "GKP_323",
-    324: "GKP_324", 325: "GKP_325", 326: "GKP_326", 327: "GKP_327",
+    320: "GKP_320",
+    321: "GKP_321",
+    322: "GKP_322",
+    323: "GKP_323",
+    324: "GKP_324",
+    325: "GKP_325",
+    326: "GKP_326",
+    327: "GKP_327",
     328: "GKP_328",
 }
 
@@ -59,11 +67,17 @@ ECI_UP_2022_RESULTS_XLS = (
 CEOUP_RESULTS_BASE = "https://ceouttarpradesh.nic.in/MIS/ElectionResult.aspx"
 
 PARTY_NORM = {
-    "BHARATIYA JANATA PARTY": "BJP", "BJP": "BJP",
-    "SAMAJWADI PARTY": "SP",         "SP": "SP",
-    "BAHUJAN SAMAJ PARTY": "BSP",    "BSP": "BSP",
-    "INDIAN NATIONAL CONGRESS": "INC","INC": "INC", "CONGRESS": "INC",
-    "NONE OF THE ABOVE": "NOTA",     "NOTA": "NOTA",
+    "BHARATIYA JANATA PARTY": "BJP",
+    "BJP": "BJP",
+    "SAMAJWADI PARTY": "SP",
+    "SP": "SP",
+    "BAHUJAN SAMAJ PARTY": "BSP",
+    "BSP": "BSP",
+    "INDIAN NATIONAL CONGRESS": "INC",
+    "INC": "INC",
+    "CONGRESS": "INC",
+    "NONE OF THE ABOVE": "NOTA",
+    "NOTA": "NOTA",
     "INDEPENDENT": "IND",
 }
 
@@ -131,12 +145,14 @@ def scrape_ceoup_results(ac_no: int) -> list[dict]:
             votes = int(re.sub(r"\D", "", cells[3] or "0") or 0)
         except ValueError:
             votes = 0
-        results.append({
-            "candidate": cells[1] if len(cells) > 1 else "",
-            "party":     _norm_party(cells[2] if len(cells) > 2 else ""),
-            "votes":     votes,
-            "winner":    "winner" in row.get("class", []) or "★" in " ".join(cells),
-        })
+        results.append(
+            {
+                "candidate": cells[1] if len(cells) > 1 else "",
+                "party": _norm_party(cells[2] if len(cells) > 2 else ""),
+                "votes": votes,
+                "winner": "winner" in row.get("class", []) or "★" in " ".join(cells),
+            }
+        )
 
     logger.info("CEO UP AC %d: %d result rows", ac_no, len(results))
     return results
@@ -157,53 +173,72 @@ def load_results_to_postgres(
 
     with engine.connect() as conn:
         # Ensure AC-level virtual booth exists (booth_number=0 means aggregate)
-        conn.execute(text("""
+        conn.execute(
+            text("""
             INSERT INTO booth_master (booth_id, ac_id, booth_number, polling_station_name)
             VALUES (:bid, :ac_id, 0, 'AC Total Aggregate')
             ON CONFLICT (booth_id) DO NOTHING
-        """), {"bid": f"{ac_id}_TOTAL", "ac_id": ac_id})
+        """),
+            {"bid": f"{ac_id}_TOTAL", "ac_id": ac_id},
+        )
 
         for r in results:
-            cid   = _slugify(r["candidate"], election_year)
+            cid = _slugify(r["candidate"], election_year)
             party = r["party"]
             votes = r["votes"]
             share = round(votes / total_votes * 100, 2) if total_votes else 0.0
             is_winner = r.get("winner", False) or votes == winner_votes
 
             # Upsert candidate
-            conn.execute(text("""
+            conn.execute(
+                text("""
                 INSERT INTO candidate_master (candidate_id, name, party, ac_id, election_year)
                 VALUES (:cid, :name, :party, :ac_id, :year)
                 ON CONFLICT (candidate_id) DO UPDATE SET party = EXCLUDED.party
-            """), {"cid": cid, "name": r["candidate"], "party": party,
-                   "ac_id": ac_id, "year": election_year})
+            """),
+                {
+                    "cid": cid,
+                    "name": r["candidate"],
+                    "party": party,
+                    "ac_id": ac_id,
+                    "year": election_year,
+                },
+            )
 
             # AC-level result stored with booth_id = ac_id (constituency aggregate)
-            conn.execute(text("""
+            conn.execute(
+                text("""
                 INSERT INTO booth_results
                     (booth_id, election_year, party, candidate_id, votes, vote_share, winner_flag)
                 VALUES (:booth_id, :year, :party, :cid, :votes, :share, :winner)
                 ON CONFLICT DO NOTHING
-            """), {
-                "booth_id": f"{ac_id}_TOTAL",  # AC aggregate placeholder
-                "year":     election_year,
-                "party":    party,
-                "cid":      cid,
-                "votes":    votes,
-                "share":    share,
-                "winner":   is_winner,
-            })
+            """),
+                {
+                    "booth_id": f"{ac_id}_TOTAL",  # AC aggregate placeholder
+                    "year": election_year,
+                    "party": party,
+                    "cid": cid,
+                    "votes": votes,
+                    "share": share,
+                    "winner": is_winner,
+                },
+            )
 
         # Turnout
-        conn.execute(text("""
+        conn.execute(
+            text("""
             INSERT INTO turnout_stats (booth_id, election_year, total_votes, turnout_percent)
             VALUES (:bid, :year, :total, NULL)
             ON CONFLICT DO NOTHING
-        """), {"bid": f"{ac_id}_TOTAL", "year": election_year, "total": total_votes})
+        """),
+            {"bid": f"{ac_id}_TOTAL", "year": election_year, "total": total_votes},
+        )
 
         conn.commit()
 
-    logger.info("AC %d: loaded %d candidate results (total votes: %d)", ac_no, len(results), total_votes)
+    logger.info(
+        "AC %d: loaded %d candidate results (total votes: %d)", ac_no, len(results), total_votes
+    )
     return len(results)
 
 
@@ -226,6 +261,7 @@ def run(ac_filter: int | None = None):
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     import argparse
+
     p = argparse.ArgumentParser()
     p.add_argument("--ac", type=int, default=None)
     args = p.parse_args()

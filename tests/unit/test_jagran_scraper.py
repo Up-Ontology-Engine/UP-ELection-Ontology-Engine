@@ -2,15 +2,18 @@
 Unit tests for the Jagran Gorakhpur news scraper.
 Uses a static HTML fixture so no network calls are made.
 """
+
 from __future__ import annotations
+
 import hashlib
-from unittest.mock import patch, MagicMock
+from unittest.mock import MagicMock, patch
+
 from bs4 import BeautifulSoup
 
 from pipeline.ingest.news_scraper import (
-    scrape_source,
-    _absolute_url,
     SOURCES,
+    _absolute_url,
+    scrape_source,
 )
 
 # ---------------------------------------------------------------------------
@@ -53,6 +56,7 @@ ARTICLE_BODY_HTML = """
 # Helpers
 # ---------------------------------------------------------------------------
 
+
 def _fake_get(url: str) -> BeautifulSoup | None:
     if "gorakhpur-city.html" in url:
         return BeautifulSoup(JAGRAN_LISTING_HTML, "html.parser")
@@ -62,6 +66,7 @@ def _fake_get(url: str) -> BeautifulSoup | None:
 # ---------------------------------------------------------------------------
 # Tests
 # ---------------------------------------------------------------------------
+
 
 def test_absolute_url_relative():
     assert _absolute_url("/foo/bar.html", "jagran") == "https://www.jagran.com/foo/bar.html"
@@ -82,8 +87,10 @@ def test_jagran_source_config():
 def test_scrape_source_yields_articles():
     jagran = next(s for s in SOURCES if s["name"] == "jagran")
 
-    with patch("ingestion.news_scraper._get", side_effect=_fake_get), \
-         patch("ingestion.news_scraper._extract_body", return_value="sample body text"):
+    with (
+        patch("ingestion.news_scraper._get", side_effect=_fake_get),
+        patch("ingestion.news_scraper._extract_body", return_value="sample body text"),
+    ):
         articles = list(scrape_source(jagran))
 
     assert len(articles) == 2, "Should yield 2 valid cards (malformed card skipped)"
@@ -92,8 +99,10 @@ def test_scrape_source_yields_articles():
 def test_scraped_article_fields():
     jagran = next(s for s in SOURCES if s["name"] == "jagran")
 
-    with patch("ingestion.news_scraper._get", side_effect=_fake_get), \
-         patch("ingestion.news_scraper._extract_body", return_value="sample body text"):
+    with (
+        patch("ingestion.news_scraper._get", side_effect=_fake_get),
+        patch("ingestion.news_scraper._extract_body", return_value="sample body text"),
+    ):
         articles = list(scrape_source(jagran))
 
     a = articles[0]
@@ -108,10 +117,7 @@ def test_scraped_article_fields():
 def test_content_hash_uniqueness():
     """Two different articles must produce different hashes."""
     bodies = [("headline A", "body A"), ("headline B", "body B")]
-    hashes = {
-        hashlib.sha256(f"{h} {b}".encode()).hexdigest()
-        for h, b in bodies
-    }
+    hashes = {hashlib.sha256(f"{h} {b}".encode()).hexdigest() for h, b in bodies}
     assert len(hashes) == 2
 
 
@@ -129,9 +135,17 @@ def test_duplicate_run_does_not_double_insert():
     execute_result.rowcount = 0
     conn.execute.return_value = execute_result
 
-    articles = [{"source": "jagran", "headline": "Test", "body_raw": "body",
-                 "url": "https://example.com/1", "published_at": None,
-                 "district_hint": "Gorakhpur", "ac_hint": "Gorakhpur Urban"}]
+    articles = [
+        {
+            "source": "jagran",
+            "headline": "Test",
+            "body_raw": "body",
+            "url": "https://example.com/1",
+            "published_at": None,
+            "district_hint": "Gorakhpur",
+            "ac_hint": "Gorakhpur Urban",
+        }
+    ]
 
     n = load_to_postgres(articles, engine)
     assert n == 0, "Duplicate insert should report 0 new rows"

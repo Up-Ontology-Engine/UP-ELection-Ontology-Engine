@@ -15,12 +15,13 @@ can show how booth sentiment evolved over weeks/months.
 Run:
     python -m graph.migrations.add_temporal_sentiment [--dry-run]
 """
+
 from __future__ import annotations
 
 import argparse
 import logging
 import sys
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta
 from pathlib import Path
 
 logger = logging.getLogger(__name__)
@@ -75,7 +76,7 @@ def _run_migration(session, dry_run: bool) -> dict:
     if not dry_run:
         for stmt, name in [
             (_SNAPSHOT_CONSTRAINT, "snapshot_constraint"),
-            (_SNAPSHOT_INDEX,      "snapshot_index"),
+            (_SNAPSHOT_INDEX, "snapshot_index"),
             (_NARRATIVE_EDGE_INDEX, "narrative_edge_index"),
         ]:
             try:
@@ -92,7 +93,9 @@ def _run_migration(session, dry_run: bool) -> dict:
         logger.info("[temporal] Backfilled valid_from on %d HAS_NARRATIVE edges.", updated)
         results["edges_backfilled"] = updated
     else:
-        logger.info("[temporal] dry_run=True — would run: snapshot_constraint, snapshot_index, backfill")
+        logger.info(
+            "[temporal] dry_run=True — would run: snapshot_constraint, snapshot_index, backfill"
+        )
         results["dry_run"] = True
 
     return results
@@ -109,14 +112,17 @@ def ingest_sentiment_snapshots(
 
     Returns count of snapshots created.
     """
-    from sqlalchemy import text
-    from datetime import timezone as tz
     import hashlib
+    from datetime import timezone as tz
+
+    from sqlalchemy import text
 
     cutoff = datetime.now(tz.utc) - timedelta(days=window_days)
 
     with pg_engine.connect() as conn:
-        rows = conn.execute(text("""
+        rows = (
+            conn.execute(
+                text("""
             SELECT
                 mapped_booth_id                        AS booth_id,
                 issue,
@@ -132,7 +138,12 @@ def ingest_sentiment_snapshots(
             GROUP BY mapped_booth_id, issue, entity,
                      DATE_TRUNC('day', created_at), election_year
             ORDER BY snapshot_at DESC
-        """), {"cutoff": cutoff}).mappings().fetchall()
+        """),
+                {"cutoff": cutoff},
+            )
+            .mappings()
+            .fetchall()
+        )
 
     count = 0
     for r in rows:
@@ -159,14 +170,14 @@ def ingest_sentiment_snapshots(
             MERGE (b)-[:HAS_SENTIMENT_SNAPSHOT]->(ss)
             """,
             {
-                "booth_id":     r["booth_id"],
-                "snap_id":      snap_id,
-                "issue":        r["issue"] or "other",
-                "entity":       r["entity"] or "",
-                "snapshot_at":  snap_at_str,
+                "booth_id": r["booth_id"],
+                "snap_id": snap_id,
+                "issue": r["issue"] or "other",
+                "entity": r["entity"] or "",
+                "snapshot_at": snap_at_str,
                 "election_year": int(r["election_year"] or 2022),
-                "polarity":     float(r["polarity"] or 0),
-                "confidence":   float(r["confidence"] or 0),
+                "polarity": float(r["polarity"] or 0),
+                "confidence": float(r["confidence"] or 0),
                 "source_count": int(r["source_count"] or 0),
             },
         )
@@ -192,17 +203,22 @@ def ingest_sentiment_snapshots(
 
 if __name__ == "__main__":
     from dotenv import load_dotenv
+
     load_dotenv()
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
 
     parser = argparse.ArgumentParser(description="Add temporal sentiment properties to Neo4j")
-    parser.add_argument("--dry-run", action="store_true", help="Show what would be done without writing")
+    parser.add_argument(
+        "--dry-run", action="store_true", help="Show what would be done without writing"
+    )
     args = parser.parse_args()
 
     from backend.db import get_neo4j_session
+
     with get_neo4j_session() as session:
         result = _run_migration(session, dry_run=args.dry_run)
 
     import json
+
     print("\n=== Temporal Sentiment Migration Results ===")
     print(json.dumps(result, indent=2, default=str))

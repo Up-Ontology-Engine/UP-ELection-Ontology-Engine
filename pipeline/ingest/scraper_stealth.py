@@ -10,6 +10,7 @@ Usage:
 
     jitter_sleep(base=1.5, jitter=0.8)   # sleeps 1.5 ± 0.8 s
 """
+
 from __future__ import annotations
 
 import logging
@@ -59,8 +60,8 @@ _REFERERS: list[str] = [
     "https://www.google.co.in/",
     "https://www.google.com/",
     "https://news.google.com/",
-    "",   # no referer (direct navigation)
-    "",   # weighted blank — direct is common
+    "",  # no referer (direct navigation)
+    "",  # weighted blank — direct is common
 ]
 
 
@@ -83,20 +84,24 @@ def _build_headers(extra: Optional[dict] = None) -> dict:
     is_mobile = "Mobile" in ua
 
     headers: dict[str, str] = {
-        "User-Agent":      ua,
+        "User-Agent": ua,
         "Accept-Language": _random_lang(),
         "Accept-Encoding": "gzip, deflate, br",
-        "Cache-Control":   "no-cache",
-        "Pragma":          "no-cache",
-        "DNT":             "1",
+        "Cache-Control": "no-cache",
+        "Pragma": "no-cache",
+        "DNT": "1",
         "Upgrade-Insecure-Requests": "1",
     }
 
     if is_firefox:
-        headers["Accept"] = "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"
+        headers["Accept"] = (
+            "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"
+        )
         headers["Connection"] = "keep-alive"
     else:
-        headers["Accept"] = "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8"
+        headers["Accept"] = (
+            "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8"
+        )
         headers["sec-ch-ua"] = '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"'
         headers["sec-ch-ua-mobile"] = "?1" if is_mobile else "?0"
         headers["sec-ch-ua-platform"] = '"Android"' if is_mobile else '"Windows"'
@@ -117,6 +122,7 @@ def _build_headers(extra: Optional[dict] = None) -> dict:
 
 # ── Jitter sleep ──────────────────────────────────────────────────────────────
 
+
 def jitter_sleep(base: float = 1.5, jitter: float = 0.8) -> None:
     """Sleep for base ± jitter seconds (uniform distribution)."""
     sleep_time = max(0.1, base + random.uniform(-jitter, jitter))
@@ -124,6 +130,7 @@ def jitter_sleep(base: float = 1.5, jitter: float = 0.8) -> None:
 
 
 # ── StealthSession ────────────────────────────────────────────────────────────
+
 
 class StealthSession:
     """
@@ -143,8 +150,8 @@ class StealthSession:
         max_retries: int = 3,
         backoff_base: float = 2.0,
     ):
-        self.base_delay  = base_delay
-        self.jitter      = jitter
+        self.base_delay = base_delay
+        self.jitter = jitter
         self.max_retries = max_retries
         self.backoff_base = backoff_base
         self._last_fetch: float = 0.0
@@ -152,8 +159,8 @@ class StealthSession:
     def _polite_wait(self) -> None:
         """Enforce minimum delay since last request."""
         elapsed = time.time() - self._last_fetch
-        target  = self.base_delay + random.uniform(-self.jitter, self.jitter)
-        wait    = max(0, target - elapsed)
+        target = self.base_delay + random.uniform(-self.jitter, self.jitter)
+        wait = max(0, target - elapsed)
         if wait > 0:
             time.sleep(wait)
 
@@ -165,7 +172,7 @@ class StealthSession:
             if proxies:
                 proxy = random.choice(proxies)
                 logger.debug("[stealth] Using proxy: %s", proxy)
-                return urllib.request.ProxyHandler({'http': proxy, 'https': proxy})
+                return urllib.request.ProxyHandler({"http": proxy, "https": proxy})
         return urllib.request.ProxyHandler({})
 
     def get(
@@ -178,7 +185,7 @@ class StealthSession:
         Fetch URL with stealth headers.  Returns decoded HTML or None on failure.
         Retries on 429 / 5xx with exponential backoff.
         """
-        import os
+
         self._polite_wait()
         headers = _build_headers(extra_headers)
 
@@ -186,13 +193,16 @@ class StealthSession:
             try:
                 req = urllib.request.Request(url, headers=headers)
                 proxy_handler = self._get_proxy_handler()
-                opener = urllib.request.build_opener(proxy_handler, urllib.request.HTTPRedirectHandler())
+                opener = urllib.request.build_opener(
+                    proxy_handler, urllib.request.HTTPRedirectHandler()
+                )
                 with opener.open(req, timeout=timeout) as resp:
                     raw = resp.read()
 
                 # Decompress gzip
                 if raw[:2] == b"\x1f\x8b":
                     import gzip as _gzip
+
                     raw = _gzip.decompress(raw)
 
                 self._last_fetch = time.time()
@@ -209,7 +219,11 @@ class StealthSession:
                     wait = self.backoff_base ** (attempt + 1) + random.uniform(0, 2)
                     logger.warning(
                         "[stealth] HTTP %d for %s — retrying in %.1fs (attempt %d/%d)",
-                        exc.code, url, wait, attempt + 1, self.max_retries,
+                        exc.code,
+                        url,
+                        wait,
+                        attempt + 1,
+                        self.max_retries,
                     )
                     time.sleep(wait)
                     # Rotate UA on retry

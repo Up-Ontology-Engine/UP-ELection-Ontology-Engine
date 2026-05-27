@@ -18,6 +18,7 @@ Run:
     python -m ingestion.grievance_scraper              # live scrape
     python -m ingestion.grievance_scraper --csv FILE   # parse downloaded CSV
 """
+
 from __future__ import annotations
 
 import argparse
@@ -34,36 +35,36 @@ from sqlalchemy import text
 logger = logging.getLogger(__name__)
 
 DISTRICT = "Gorakhpur"
-AC_NAME  = "Gorakhpur Urban"
+AC_NAME = "Gorakhpur Urban"
 
 # Known grievance categories → issue tags matching our IssueType enum
 CATEGORY_TO_ISSUE: dict[str, str] = {
-    "पेयजल":          "water",
-    "पानी":            "water",
-    "water":           "water",
-    "सड़क":            "roads",
-    "road":            "roads",
-    "बिजली":           "electricity",
-    "electricity":     "electricity",
-    "रोजगार":          "jobs",
-    "employment":      "jobs",
-    "कानून व्यवस्था":  "law_order",
-    "crime":           "law_order",
-    "महिला सुरक्षा":   "women_safety",
-    "women":           "women_safety",
-    "स्वास्थ्य":       "health",
-    "hospital":        "health",
-    "शिक्षा":          "education",
-    "school":          "education",
-    "भ्रष्टाचार":      "corruption",
-    "corruption":      "corruption",
-    "किसान":           "farmer",
-    "farmer":          "farmer",
-    "महंगाई":          "price_rise",
-    "inflation":       "price_rise",
-    "आवास":            "housing",
-    "housing":         "housing",
-    "pmay":            "housing",
+    "पेयजल": "water",
+    "पानी": "water",
+    "water": "water",
+    "सड़क": "roads",
+    "road": "roads",
+    "बिजली": "electricity",
+    "electricity": "electricity",
+    "रोजगार": "jobs",
+    "employment": "jobs",
+    "कानून व्यवस्था": "law_order",
+    "crime": "law_order",
+    "महिला सुरक्षा": "women_safety",
+    "women": "women_safety",
+    "स्वास्थ्य": "health",
+    "hospital": "health",
+    "शिक्षा": "education",
+    "school": "education",
+    "भ्रष्टाचार": "corruption",
+    "corruption": "corruption",
+    "किसान": "farmer",
+    "farmer": "farmer",
+    "महंगाई": "price_rise",
+    "inflation": "price_rise",
+    "आवास": "housing",
+    "housing": "housing",
+    "pmay": "housing",
 }
 
 
@@ -81,6 +82,7 @@ def _content_hash(text_raw: str) -> str:
 
 # ── Live scraper (portal may change — verify URL before running) ───────────────
 
+
 def scrape_live(engine: sa.Engine, max_pages: int = 20) -> int:
     """
     Attempt to fetch grievances from Jansunwai public search.
@@ -94,7 +96,7 @@ def scrape_live(engine: sa.Engine, max_pages: int = 20) -> int:
         raise ImportError("pip install requests beautifulsoup4")
 
     BASE_URL = "https://jansunwai.up.nic.in/CMHELPLINE/GrievanceSearch"
-    headers  = {
+    headers = {
         "User-Agent": "Mozilla/5.0 (research bot — public data only)",
         "Referer": BASE_URL,
     }
@@ -103,12 +105,17 @@ def scrape_live(engine: sa.Engine, max_pages: int = 20) -> int:
     inserted = 0
     for page in range(1, max_pages + 1):
         try:
-            resp = session.post(BASE_URL, data={
-                "district":    DISTRICT,
-                "ac_name":     AC_NAME,
-                "page":        page,
-                "status":      "all",
-            }, headers=headers, timeout=20)
+            resp = session.post(
+                BASE_URL,
+                data={
+                    "district": DISTRICT,
+                    "ac_name": AC_NAME,
+                    "page": page,
+                    "status": "all",
+                },
+                headers=headers,
+                timeout=20,
+            )
             resp.raise_for_status()
         except Exception as e:
             logger.warning("Page %d fetch failed: %s", page, e)
@@ -126,12 +133,12 @@ def scrape_live(engine: sa.Engine, max_pages: int = 20) -> int:
                 continue
 
             complaint_no = cells[0]
-            category     = cells[1] if len(cells) > 1 else ""
-            status       = cells[2] if len(cells) > 2 else ""
-            date_str     = cells[3] if len(cells) > 3 else ""
-            detail       = cells[4] if len(cells) > 4 else category
+            category = cells[1] if len(cells) > 1 else ""
+            status = cells[2] if len(cells) > 2 else ""
+            date_str = cells[3] if len(cells) > 3 else ""
+            detail = cells[4] if len(cells) > 4 else category
 
-            issue    = _issue_from_category(category)
+            issue = _issue_from_category(category)
             text_raw = f"[{category}] {detail} (Status: {status}, Date: {date_str})"
 
             n = _insert_grievance(engine, complaint_no, text_raw, issue, date_str)
@@ -145,6 +152,7 @@ def scrape_live(engine: sa.Engine, max_pages: int = 20) -> int:
 
 # ── CSV fallback ──────────────────────────────────────────────────────────────
 
+
 def load_from_csv(csv_path: Path, engine: sa.Engine) -> int:
     """
     Parse a manually downloaded Jansunwai CSV export.
@@ -156,21 +164,17 @@ def load_from_csv(csv_path: Path, engine: sa.Engine) -> int:
     with open(csv_path, encoding="utf-8-sig", newline="") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            complaint_no = (
-                row.get("Complaint No") or row.get("Registration No") or ""
-            ).strip()
+            complaint_no = (row.get("Complaint No") or row.get("Registration No") or "").strip()
             category = (
-                row.get("Category") or row.get("Grievance Type") or
-                row.get("श्रेणी") or ""
+                row.get("Category") or row.get("Grievance Type") or row.get("श्रेणी") or ""
             ).strip()
-            status   = (row.get("Status") or row.get("स्थिति") or "").strip()
+            status = (row.get("Status") or row.get("स्थिति") or "").strip()
             date_str = (row.get("Date") or row.get("दिनांक") or "").strip()
-            detail   = (
-                row.get("Description") or row.get("Detail") or
-                row.get("विवरण") or category
+            detail = (
+                row.get("Description") or row.get("Detail") or row.get("विवरण") or category
             ).strip()
 
-            issue    = _issue_from_category(category)
+            issue = _issue_from_category(category)
             text_raw = f"[{category}] {detail} (Status: {status}, Date: {date_str})"
 
             inserted += _insert_grievance(engine, complaint_no, text_raw, issue, date_str)
@@ -181,6 +185,7 @@ def load_from_csv(csv_path: Path, engine: sa.Engine) -> int:
 
 # ── Shared DB insert ──────────────────────────────────────────────────────────
 
+
 def _insert_grievance(
     engine: sa.Engine,
     source_id: str,
@@ -190,17 +195,21 @@ def _insert_grievance(
 ) -> int:
     source_id = source_id or _content_hash(text_raw)
     with engine.connect() as conn:
-        result = conn.execute(text("""
+        result = conn.execute(
+            text("""
             INSERT INTO pulse_events_raw (source_type, source_id, text_raw)
             VALUES ('grievance', :sid, :txt)
             ON CONFLICT DO NOTHING
             RETURNING id
-        """), {"sid": source_id, "txt": text_raw})
+        """),
+            {"sid": source_id, "txt": text_raw},
+        )
         conn.commit()
         return result.rowcount
 
 
 # ── CLI ───────────────────────────────────────────────────────────────────────
+
 
 def run(csv_path: Path | None = None) -> None:
     engine = sa.create_engine(os.environ["POSTGRES_URL"])
@@ -220,7 +229,8 @@ def run(csv_path: Path | None = None) -> None:
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     parser = argparse.ArgumentParser(description="Ingest UP Jansunwai grievance data")
-    parser.add_argument("--csv", type=Path, default=None,
-                        help="Path to manually downloaded Jansunwai CSV export")
+    parser.add_argument(
+        "--csv", type=Path, default=None, help="Path to manually downloaded Jansunwai CSV export"
+    )
     args = parser.parse_args()
     run(args.csv)

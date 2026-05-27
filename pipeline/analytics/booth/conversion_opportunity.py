@@ -16,6 +16,7 @@ Computes 4 scores per booth from existing tables (no new data sources needed):
 
 Run: python -m analytics.conversion_opportunity
 """
+
 from __future__ import annotations
 
 import logging
@@ -31,10 +32,10 @@ load_dotenv()
 logger = logging.getLogger(__name__)
 
 # Score weights for the composite
-_W_PERSUASION   = 0.35
-_W_BENEFICIARY  = 0.25
-_W_TURNOUT      = 0.20
-_W_SERVICE_RISK = 0.20   # service risk is inverse — high risk = low opportunity
+_W_PERSUASION = 0.35
+_W_BENEFICIARY = 0.25
+_W_TURNOUT = 0.20
+_W_SERVICE_RISK = 0.20  # service risk is inverse — high risk = low opportunity
 
 
 def _clamp(v: float) -> float:
@@ -57,9 +58,9 @@ def _compute_scores(
     # Small margin → more persuadable. Digital divergence between sources → swing indicator.
     if last_margin is not None and total_voters and total_voters > 0:
         margin_pct = abs(last_margin) / total_voters
-        margin_score = _clamp(1.0 - margin_pct * 4)   # 25%+ margin → 0
+        margin_score = _clamp(1.0 - margin_pct * 4)  # 25%+ margin → 0
     else:
-        margin_score = 0.3   # unknown → neutral
+        margin_score = 0.3  # unknown → neutral
 
     lean_divergence = abs((bjp_pulse or 0) - (opp_pulse or 0))
     divergence_score = _clamp(1.0 - lean_divergence * 2)  # high divergence → contested
@@ -69,7 +70,7 @@ def _compute_scores(
     # ── Beneficiary density ───────────────────────────────────────────────────
     if total_voters and total_voters > 0:
         raw_density = total_beneficiaries / total_voters
-        beneficiary_density = _clamp(raw_density * 2)   # 50% coverage → score 1.0
+        beneficiary_density = _clamp(raw_density * 2)  # 50% coverage → score 1.0
     else:
         beneficiary_density = 0.0
 
@@ -77,12 +78,12 @@ def _compute_scores(
     # Low historical turnout + BJP-leaning (or neutral) booth = mobilization opportunity
     if booth_turnout is not None and ac_avg_turnout > 0:
         turnout_gap = max(0, ac_avg_turnout - booth_turnout)
-        turnout_score = _clamp(turnout_gap / 30.0)   # 30-point gap → score 1.0
+        turnout_score = _clamp(turnout_gap / 30.0)  # 30-point gap → score 1.0
     else:
         turnout_score = 0.2
 
     # Only applies if booth is not strongly opposition-leaning
-    is_hostile = (digital_lean is not None and digital_lean < -0.3)
+    is_hostile = digital_lean is not None and digital_lean < -0.3
     turnout_mobilization = 0.0 if is_hostile else turnout_score
 
     # ── Service risk ──────────────────────────────────────────────────────────
@@ -91,26 +92,26 @@ def _compute_scores(
 
     # ── Composite ─────────────────────────────────────────────────────────────
     overall = _clamp(
-        _W_PERSUASION   * persuasion_room
-        + _W_BENEFICIARY  * beneficiary_density
-        + _W_TURNOUT      * turnout_mobilization
-        + _W_SERVICE_RISK * (1.0 - service_risk)   # invert: low risk → better
+        _W_PERSUASION * persuasion_room
+        + _W_BENEFICIARY * beneficiary_density
+        + _W_TURNOUT * turnout_mobilization
+        + _W_SERVICE_RISK * (1.0 - service_risk)  # invert: low risk → better
     )
 
     return {
-        "persuasion_room_score":       round(persuasion_room, 3),
-        "beneficiary_density_score":   round(beneficiary_density, 3),
-        "turnout_mobilization_score":  round(turnout_mobilization, 3),
-        "service_risk_score":          round(service_risk, 3),
-        "overall_conversion_score":    round(overall, 3),
+        "persuasion_room_score": round(persuasion_room, 3),
+        "beneficiary_density_score": round(beneficiary_density, 3),
+        "turnout_mobilization_score": round(turnout_mobilization, 3),
+        "service_risk_score": round(service_risk, 3),
+        "overall_conversion_score": round(overall, 3),
     }
 
 
 def _recommend(scores: dict, digital_lean: float | None) -> tuple[str, str]:
-    prs  = scores["persuasion_room_score"]
-    bds  = scores["beneficiary_density_score"]
-    tms  = scores["turnout_mobilization_score"]
-    srs  = scores["service_risk_score"]
+    prs = scores["persuasion_room_score"]
+    bds = scores["beneficiary_density_score"]
+    tms = scores["turnout_mobilization_score"]
+    srs = scores["service_risk_score"]
 
     if srs > 0.6:
         return (
@@ -147,15 +148,19 @@ def run_all_booths(engine: sa.Engine) -> int:
 
     with engine.connect() as conn:
         # AC-average turnout for relative scoring
-        ac_avg_row = conn.execute(text("""
+        ac_avg_row = conn.execute(
+            text("""
             SELECT COALESCE(AVG(ts.turnout_percent), 60.0) AS ac_avg_turnout
             FROM turnout_stats ts
             WHERE ts.election_year = (SELECT MAX(election_year) FROM turnout_stats)
-        """)).fetchone()
+        """)
+        ).fetchone()
         ac_avg_turnout = float(ac_avg_row[0]) if ac_avg_row else 60.0
 
         # Per-booth input data
-        rows = conn.execute(text("""
+        rows = (
+            conn.execute(
+                text("""
             SELECT
                 b.booth_id,
                 b.total_voters,
@@ -218,26 +223,31 @@ def run_all_booths(engine: sa.Engine) -> int:
                 ORDER BY window_start DESC LIMIT 1
             ) bm ON TRUE
             WHERE b.booth_id NOT LIKE '%_TOTAL'
-        """)).mappings().fetchall()
+        """)
+            )
+            .mappings()
+            .fetchall()
+        )
 
     upserted = 0
     with engine.begin() as conn:
         for r in rows:
             scores = _compute_scores(
-                total_voters        = int(r["total_voters"] or 0),
-                last_margin         = r["last_margin"],
-                digital_lean        = r["digital_lean"],
-                bjp_pulse           = r["bjp_pulse_score"],
-                opp_pulse           = r["opp_pulse_score"],
-                total_beneficiaries = int(r["total_beneficiaries"] or 0),
-                ac_avg_turnout      = ac_avg_turnout,
-                booth_turnout       = r["booth_turnout"],
-                execution_gap_count = int(r["execution_gap_count"] or 0),
-                total_negative_events = int(r["total_negative_events"] or 0),
+                total_voters=int(r["total_voters"] or 0),
+                last_margin=r["last_margin"],
+                digital_lean=r["digital_lean"],
+                bjp_pulse=r["bjp_pulse_score"],
+                opp_pulse=r["opp_pulse_score"],
+                total_beneficiaries=int(r["total_beneficiaries"] or 0),
+                ac_avg_turnout=ac_avg_turnout,
+                booth_turnout=r["booth_turnout"],
+                execution_gap_count=int(r["execution_gap_count"] or 0),
+                total_negative_events=int(r["total_negative_events"] or 0),
             )
             action, reason = _recommend(scores, r["digital_lean"])
 
-            conn.execute(text("""
+            conn.execute(
+                text("""
                 INSERT INTO conversion_opportunity (
                     booth_id, persuasion_room_score, beneficiary_density_score,
                     turnout_mobilization_score, service_risk_score,
@@ -258,9 +268,15 @@ def run_all_booths(engine: sa.Engine) -> int:
                     recommended_action         = EXCLUDED.recommended_action,
                     action_reason              = EXCLUDED.action_reason,
                     computed_at                = EXCLUDED.computed_at
-            """), {**scores, "booth_id": r["booth_id"],
-                   "recommended_action": action, "action_reason": reason,
-                   "computed_at": now})
+            """),
+                {
+                    **scores,
+                    "booth_id": r["booth_id"],
+                    "recommended_action": action,
+                    "action_reason": reason,
+                    "computed_at": now,
+                },
+            )
             upserted += 1
 
     logger.info("Conversion opportunity computed for %d booths", upserted)

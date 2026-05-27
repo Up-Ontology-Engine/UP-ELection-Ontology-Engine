@@ -7,6 +7,7 @@ pulse_events and recomputes booth_metrics.
 
 Run: python -m etl.process_youtube_signals
 """
+
 from __future__ import annotations
 
 import hashlib
@@ -25,48 +26,94 @@ logger = logging.getLogger(__name__)
 # ── Entity keywords ────────────────────────────────────────────────────────────
 _ENTITIES: dict[str, tuple[str, list[str]]] = {
     # (entity_type, [keyword variants])
-    "BJP":              ("party",     ["bjp", "भाजपा", "भारतीय जनता", "yogi", "योगी", "मोदी", "modi", "भाजप"]),
-    "SP":               ("party",     ["samajwadi", "सपा", "समाजवादी", "akhilesh", "अखिलेश", "sp "]),
-    "BSP":              ("party",     ["bahujan", "बसपा", "mayawati", "मायावती", "bsp"]),
-    "INC":              ("party",     ["congress", "कांग्रेस", "inc ", "rahul", "राहुल"]),
-    "Yogi Adityanath":  ("candidate", ["yogi", "योगी", "adityanath", "आदित्यनाथ", "cm yogi", "मुख्यमंत्री"]),
-    "Akhilesh Yadav":   ("candidate", ["akhilesh", "अखिलेश", "akhilesh yadav"]),
-    "Mayawati":         ("candidate", ["mayawati", "मायावती", "behan ji", "बहनजी"]),
+    "BJP": ("party", ["bjp", "भाजपा", "भारतीय जनता", "yogi", "योगी", "मोदी", "modi", "भाजप"]),
+    "SP": ("party", ["samajwadi", "सपा", "समाजवादी", "akhilesh", "अखिलेश", "sp "]),
+    "BSP": ("party", ["bahujan", "बसपा", "mayawati", "मायावती", "bsp"]),
+    "INC": ("party", ["congress", "कांग्रेस", "inc ", "rahul", "राहुल"]),
+    "Yogi Adityanath": (
+        "candidate",
+        ["yogi", "योगी", "adityanath", "आदित्यनाथ", "cm yogi", "मुख्यमंत्री"],
+    ),
+    "Akhilesh Yadav": ("candidate", ["akhilesh", "अखिलेश", "akhilesh yadav"]),
+    "Mayawati": ("candidate", ["mayawati", "मायावती", "behan ji", "बहनजी"]),
 }
 
 # ── Issue keywords ─────────────────────────────────────────────────────────────
 _ISSUES: dict[str, list[str]] = {
-    "water":        ["water", "पानी", "jal", "जल", "drinking water", "pipeline", "नल", "नल जल", "jjm"],
-    "roads":        ["road", "सड़क", "highway", "अधोसंरचना", "pothole", "bridge", "पुल", "sadak"],
-    "electricity":  ["bijli", "बिजली", "electricity", "power cut", "light", "generator"],
-    "jobs":         ["job", "rojgar", "रोजगार", "unemployment", "berozgari", "बेरोजगारी", "employment"],
-    "farmer":       ["kisan", "किसान", "farmer", "sugarcane", "crop", "fasal", "msp"],
-    "health":       ["hospital", "health", "स्वास्थ्य", "aiims", "doctor", "medicine", "covid"],
-    "education":    ["school", "education", "शिक्षा", "teacher", "result", "exam"],
-    "corruption":   ["corruption", "भ्रष्टाचार", "scam", "घोटाला", "bribe", "fraud"],
-    "price_rise":   ["mehangai", "महंगाई", "inflation", "price rise", "costly", "petrol", "gas"],
-    "housing":      ["pmay", "awas", "आवास", "housing", "ghar", "घर"],
+    "water": ["water", "पानी", "jal", "जल", "drinking water", "pipeline", "नल", "नल जल", "jjm"],
+    "roads": ["road", "सड़क", "highway", "अधोसंरचना", "pothole", "bridge", "पुल", "sadak"],
+    "electricity": ["bijli", "बिजली", "electricity", "power cut", "light", "generator"],
+    "jobs": ["job", "rojgar", "रोजगार", "unemployment", "berozgari", "बेरोजगारी", "employment"],
+    "farmer": ["kisan", "किसान", "farmer", "sugarcane", "crop", "fasal", "msp"],
+    "health": ["hospital", "health", "स्वास्थ्य", "aiims", "doctor", "medicine", "covid"],
+    "education": ["school", "education", "शिक्षा", "teacher", "result", "exam"],
+    "corruption": ["corruption", "भ्रष्टाचार", "scam", "घोटाला", "bribe", "fraud"],
+    "price_rise": ["mehangai", "महंगाई", "inflation", "price rise", "costly", "petrol", "gas"],
+    "housing": ["pmay", "awas", "आवास", "housing", "ghar", "घर"],
     "women_safety": ["women", "महिला", "safety", "suraksha", "crime against women"],
-    "law_order":    ["law and order", "crime", "police", "अपराध", "gangster"],
+    "law_order": ["law and order", "crime", "police", "अपराध", "gangster"],
 }
 
 # ── Positive / negative signal words ──────────────────────────────────────────
 _POSITIVE = [
-    "victory", "win", "जीत", "development", "विकास", "progress", "achievement",
-    "success", "जीता", "rally", "support", "समर्थन", "popular", "लोकप्रिय",
-    "good", "positive", "celebration", "उत्सव", "promise", "वादा", "deliver",
-    "inauguration", "उद्घाटन", "launch", "शुभारंभ",
+    "victory",
+    "win",
+    "जीत",
+    "development",
+    "विकास",
+    "progress",
+    "achievement",
+    "success",
+    "जीता",
+    "rally",
+    "support",
+    "समर्थन",
+    "popular",
+    "लोकप्रिय",
+    "good",
+    "positive",
+    "celebration",
+    "उत्सव",
+    "promise",
+    "वादा",
+    "deliver",
+    "inauguration",
+    "उद्घाटन",
+    "launch",
+    "शुभारंभ",
 ]
 _NEGATIVE = [
-    "protest", "विरोध", "anger", "गुस्सा", "problem", "समस्या", "crisis",
-    "failure", "विफलता", "corruption", "भ्रष्टाचार", "loss", "नुकसान",
-    "disappointed", "निराश", "issue", "मुद्दा", "fight", "demand", "मांग",
-    "opposition", "oppose", "scam", "घोटाला", "strike", "हड़ताल",
+    "protest",
+    "विरोध",
+    "anger",
+    "गुस्सा",
+    "problem",
+    "समस्या",
+    "crisis",
+    "failure",
+    "विफलता",
+    "corruption",
+    "भ्रष्टाचार",
+    "loss",
+    "नुकसान",
+    "disappointed",
+    "निराश",
+    "issue",
+    "मुद्दा",
+    "fight",
+    "demand",
+    "मांग",
+    "opposition",
+    "oppose",
+    "scam",
+    "घोटाला",
+    "strike",
+    "हड़ताल",
 ]
 
 # Default: map all Gorakhpur videos to GKP_322 (Urban) at AC level
-_DEFAULT_AC   = "GKP_322"
-_DEFAULT_GEO  = "ac"
+_DEFAULT_AC = "GKP_322"
+_DEFAULT_GEO = "ac"
 
 
 def _normalise(text: str) -> str:
@@ -116,30 +163,36 @@ def run() -> int:
 
     with engine.connect() as conn:
         # Read all YouTube videos
-        rows = conn.execute(text("""
+        rows = (
+            conn.execute(
+                text("""
             SELECT v.video_id, v.title, v.description, v.view_count,
                    v.query_source, v.created_at
             FROM yt_videos v
             WHERE v.title IS NOT NULL AND v.title != ''
             ORDER BY v.view_count DESC NULLS LAST
-        """)).mappings().fetchall()
+        """)
+            )
+            .mappings()
+            .fetchall()
+        )
 
     logger.info("Processing %d YouTube video titles for signals", len(rows))
 
     inserted = 0
-    skipped  = 0
+    skipped = 0
 
     with engine.connect() as conn:
         for r in rows:
-            video_id    = r["video_id"]
-            title       = r["title"] or ""
+            video_id = r["video_id"]
+            title = r["title"] or ""
             description = (r["description"] or "")[:200]
-            full_text   = f"{title} {description}"
-            views       = int(r["view_count"] or 0)
+            full_text = f"{title} {description}"
+            views = int(r["view_count"] or 0)
 
             entity, entity_type = _detect_entity(full_text)
-            issue               = _detect_issue(full_text)
-            polarity, conf      = _detect_polarity(full_text)
+            issue = _detect_issue(full_text)
+            polarity, conf = _detect_polarity(full_text)
 
             # Boost confidence for high-view videos
             if views > 50_000:
@@ -158,7 +211,8 @@ def run() -> int:
             sid = _source_id(video_id, title)
 
             try:
-                conn.execute(text("""
+                conn.execute(
+                    text("""
                     INSERT INTO pulse_events (
                         source_type, source_id, text_raw,
                         language_detected, extraction_method,
@@ -177,17 +231,19 @@ def run() -> int:
                         :sw, NOW()
                     )
                     ON CONFLICT DO NOTHING
-                """), {
-                    "sid":     sid,
-                    "text":    title[:500],
-                    "entity":  entity,
-                    "etype":   entity_type,
-                    "issue":   issue,
-                    "polarity":polarity,
-                    "conf":    conf,
-                    "ac_id":   _DEFAULT_AC,
-                    "sw":      source_weight,
-                })
+                """),
+                    {
+                        "sid": sid,
+                        "text": title[:500],
+                        "entity": entity,
+                        "etype": entity_type,
+                        "issue": issue,
+                        "polarity": polarity,
+                        "conf": conf,
+                        "ac_id": _DEFAULT_AC,
+                        "sw": source_weight,
+                    },
+                )
                 inserted += 1
             except Exception as e:
                 logger.debug("Skip %s: %s", video_id, e)
@@ -210,7 +266,9 @@ def _compute_ac_metrics(engine: sa.Engine, ac_id: str) -> None:
 
     with engine.connect() as conn:
         # Entity-level pulse scores
-        rows = conn.execute(text("""
+        rows = (
+            conn.execute(
+                text("""
             SELECT entity,
                    ROUND((SUM(final_polarity * final_confidence * source_weight) /
                           NULLIF(SUM(final_confidence * source_weight), 0))::numeric, 3) AS pulse_score,
@@ -219,35 +277,56 @@ def _compute_ac_metrics(engine: sa.Engine, ac_id: str) -> None:
             WHERE mapped_ac_id = :ac_id
               AND entity IS NOT NULL
             GROUP BY entity
-        """), {"ac_id": ac_id}).mappings().fetchall()
+        """),
+                {"ac_id": ac_id},
+            )
+            .mappings()
+            .fetchall()
+        )
 
-        entity_scores = {r["entity"]: (float(r["pulse_score"] or 0), int(r["event_count"]))
-                         for r in rows}
+        entity_scores = {
+            r["entity"]: (float(r["pulse_score"] or 0), int(r["event_count"])) for r in rows
+        }
 
         bjp_score = entity_scores.get("BJP", (0, 0))[0]
-        sp_score  = entity_scores.get("SP", (0, 0))[0]
+        sp_score = entity_scores.get("SP", (0, 0))[0]
         bsp_score = entity_scores.get("BSP", (0, 0))[0]
         opp_score = max(sp_score, bsp_score)
-        lean      = bjp_score - opp_score
+        lean = bjp_score - opp_score
 
         # Issue breakdown
-        issue_rows = conn.execute(text("""
+        issue_rows = (
+            conn.execute(
+                text("""
             SELECT final_issue AS issue, COUNT(*) AS cnt
             FROM pulse_events
             WHERE mapped_ac_id = :ac_id AND final_issue IS NOT NULL
             GROUP BY final_issue ORDER BY cnt DESC
-        """), {"ac_id": ac_id}).mappings().fetchall()
+        """),
+                {"ac_id": ac_id},
+            )
+            .mappings()
+            .fetchall()
+        )
 
         issue_breakdown = {r["issue"]: int(r["cnt"]) for r in issue_rows}
         top_issue = issue_rows[0]["issue"] if issue_rows else None
         total_events = sum(issue_breakdown.values())
 
         lean_label = (
-            "Lean BJP"        if lean > 0.15 else
-            "Slightly BJP"    if lean > 0.05 else
-            "Lean Opposition" if lean < -0.15 else
-            "Slightly Opp"    if lean < -0.05 else
-            "Contested"
+            "Lean BJP"
+            if lean > 0.15
+            else (
+                "Slightly BJP"
+                if lean > 0.05
+                else (
+                    "Lean Opposition"
+                    if lean < -0.15
+                    else "Slightly Opp"
+                    if lean < -0.05
+                    else "Contested"
+                )
+            )
         )
 
         confidence = min(total_events / 200, 1.0)
@@ -257,7 +336,8 @@ def _compute_ac_metrics(engine: sa.Engine, ac_id: str) -> None:
 
         # Update ALL booths in the AC with the AC-level aggregated signal
         # (individual booth mapping requires comments scraped per booth)
-        conn.execute(text("""
+        conn.execute(
+            text("""
             INSERT INTO booth_metrics
                 (booth_id, window_start, window_end,
                  bjp_pulse_score, opp_pulse_score, digital_lean, digital_lean_label,
@@ -283,24 +363,31 @@ def _compute_ac_metrics(engine: sa.Engine, ac_id: str) -> None:
                 data_confidence   = EXCLUDED.data_confidence,
                 confidence_label  = EXCLUDED.confidence_label,
                 last_computed_at  = EXCLUDED.last_computed_at
-        """), {
-            "ac_id":      ac_id,
-            "bjp":        bjp_score,
-            "opp":        opp_score,
-            "lean":       lean,
-            "lean_label": lean_label,
-            "top_issue":  top_issue,
-            "breakdown":  json.dumps(issue_breakdown),
-            "events":     total_events,
-            "conf_val":   confidence,
-            "conf_label": conf_label,
-            "now":        now,
-        })
+        """),
+            {
+                "ac_id": ac_id,
+                "bjp": bjp_score,
+                "opp": opp_score,
+                "lean": lean,
+                "lean_label": lean_label,
+                "top_issue": top_issue,
+                "breakdown": json.dumps(issue_breakdown),
+                "events": total_events,
+                "conf_val": confidence,
+                "conf_label": conf_label,
+                "now": now,
+            },
+        )
         conn.commit()
 
     logger.info(
         "AC %s — BJP: %+.3f | Opp: %+.3f | Lean: %s | Events: %d | Top issue: %s",
-        ac_id, bjp_score, opp_score, lean_label, total_events, top_issue
+        ac_id,
+        bjp_score,
+        opp_score,
+        lean_label,
+        total_events,
+        top_issue,
     )
 
     # ── AC-level strategic summary ─────────────────────────────────────────────
@@ -326,7 +413,7 @@ def _print_strategic_summary(
         f"\n  Party Pulse Scores (from {sum(v[1] for v in entity_scores.values())} YouTube signals):",
     ]
     for entity, (score, count) in sorted(entity_scores.items(), key=lambda x: -x[1][1]):
-        bar  = bar_char * max(1, int(abs(score) * 20))
+        bar = bar_char * max(1, int(abs(score) * 20))
         sign = "+" if score >= 0 else ""
         lines.append(f"    {entity:<25} {sign}{score:.3f}  {bar}  ({count} mentions)")
 
@@ -338,20 +425,30 @@ def _print_strategic_summary(
 
     lines.append("\n  Recommended Actions:")
     if lean_label in ("Lean BJP", "Slightly BJP"):
-        lines.append("    [+] BJP ahead on digital. Consolidate base + address top negative issues.")
+        lines.append(
+            "    [+] BJP ahead on digital. Consolidate base + address top negative issues."
+        )
     elif lean_label in ("Lean Opposition", "Slightly Opp"):
         lines.append("    [!] Opposition gaining. Urgently address voter concerns + visibility.")
     else:
-        lines.append("    [~] Contested. Swing vote is critical -- focus on undecided booth pockets.")
+        lines.append(
+            "    [~] Contested. Swing vote is critical -- focus on undecided booth pockets."
+        )
 
     if top5:
         top_issue = top5[0][0].replace("_", " ")
-        lines.append(f"    [*] Top campaign priority: {top_issue.upper()} -- dominant in YouTube discourse.")
+        lines.append(
+            f"    [*] Top campaign priority: {top_issue.upper()} -- dominant in YouTube discourse."
+        )
 
     if "corruption" in issue_breakdown:
-        lines.append(f"    [!] Anti-corruption narrative present ({issue_breakdown['corruption']} mentions) -- address proactively.")
+        lines.append(
+            f"    [!] Anti-corruption narrative present ({issue_breakdown['corruption']} mentions) -- address proactively."
+        )
     if "price_rise" in issue_breakdown:
-        lines.append(f"    [$] Price rise ({issue_breakdown['price_rise']} mentions) -- economic relief messaging needed.")
+        lines.append(
+            f"    [$] Price rise ({issue_breakdown['price_rise']} mentions) -- economic relief messaging needed."
+        )
 
     lines.append("\n" + sep + "\n")
 

@@ -1,4 +1,4 @@
-﻿"""
+"""
 ETL: Candidates & Parties
 
 Sources:
@@ -13,6 +13,7 @@ Connector keys produced:
 
 Run: python -m etl.transform_candidates
 """
+
 from __future__ import annotations
 
 import json
@@ -22,8 +23,8 @@ import re
 from pathlib import Path
 
 import sqlalchemy as sa
-from sqlalchemy import text
 from etl.constants import normalise_party as _normalise_party
+from sqlalchemy import text
 
 logger = logging.getLogger(__name__)
 
@@ -31,9 +32,9 @@ DATA_DIR = Path(__file__).parents[1] / "data" / "data"
 
 ELECTION_MAP = {
     "UP Assembly Election - Jan-March 2022": "UP_ASM_2022",
-    "UP Assembly Election 2022":             "UP_ASM_2022",
-    "General Election 2024 (Lok Sabha)":     "LS_2024",
-    "General Election 2024":                 "LS_2024",
+    "UP Assembly Election 2022": "UP_ASM_2022",
+    "General Election 2024 (Lok Sabha)": "LS_2024",
+    "General Election 2024": "LS_2024",
 }
 
 
@@ -55,31 +56,33 @@ def _read_affidavit_json() -> list[dict]:
 
     rows: list[dict] = []
     sections = [
-        ("gorakhpur_urban_2022_assembly",  "GKP_322"),
-        ("gorakhpur_rural_2022_assembly",  "GKP_323"),
-        ("gorakhpur_2024_lok_sabha",       "GKP_LS64"),
+        ("gorakhpur_urban_2022_assembly", "GKP_322"),
+        ("gorakhpur_rural_2022_assembly", "GKP_323"),
+        ("gorakhpur_2024_lok_sabha", "GKP_LS64"),
     ]
     for key, ac_id in sections:
         section = data.get(key, {})
         election_str = section.get("election", "")
-        year         = _parse_election_year(election_str)
-        election_id  = ELECTION_MAP.get(election_str, f"UNKNOWN_{year}")
+        year = _parse_election_year(election_str)
+        election_id = ELECTION_MAP.get(election_str, f"UNKNOWN_{year}")
 
         for cand in section.get("key_candidates", []):
-            name     = cand.get("name", "").strip()
+            name = cand.get("name", "").strip()
             party_id = _normalise_party(cand.get("party", ""))
-            rows.append({
-                "candidate_id": _make_candidate_id(name, year),
-                "name":         name,
-                "party":        party_id,
-                "ac_id":        ac_id,
-                "election_year":year,
-                "election_id":  election_id,
-                "status":       cand.get("status", "Unknown"),
-                "designation":  None,
-                "is_incumbent": False,
-                "is_primary_opp": False,
-            })
+            rows.append(
+                {
+                    "candidate_id": _make_candidate_id(name, year),
+                    "name": name,
+                    "party": party_id,
+                    "ac_id": ac_id,
+                    "election_year": year,
+                    "election_id": election_id,
+                    "status": cand.get("status", "Unknown"),
+                    "designation": None,
+                    "is_incumbent": False,
+                    "is_primary_opp": False,
+                }
+            )
     return rows
 
 
@@ -95,7 +98,7 @@ def _enrich_from_neva(rows: list[dict]) -> list[dict]:
     mla_map: dict[str, str] = {}
     for key in ["gorakhpur_urban_mla", "gorakhpur_rural_mla"]:
         entry = neva.get(key, {})
-        name  = entry.get("name", "").replace("Shri ", "").replace("Smt. ", "").strip()
+        name = entry.get("name", "").replace("Shri ", "").replace("Smt. ", "").strip()
         if name:
             mla_map[name.upper()] = entry.get("designation", "MLA")
 
@@ -104,7 +107,7 @@ def _enrich_from_neva(rows: list[dict]) -> list[dict]:
         # Partial name match
         matched = next((v for k, v in mla_map.items() if k in upper or upper in k), None)
         if matched:
-            row["designation"]  = matched
+            row["designation"] = matched
             row["is_incumbent"] = True
 
     return rows
@@ -143,7 +146,8 @@ def compute_net_worth(engine: sa.Engine) -> int:
     Returns number of rows updated.
     """
     with engine.connect() as conn:
-        result = conn.execute(text("""
+        result = conn.execute(
+            text("""
             UPDATE candidate_master cm
             SET net_worth_rs = ca.total_assets - ca.total_liabilities
             FROM candidate_affidavits ca
@@ -151,7 +155,8 @@ def compute_net_worth(engine: sa.Engine) -> int:
               AND ca.total_assets IS NOT NULL
               AND ca.total_liabilities IS NOT NULL
               AND cm.net_worth_rs IS NULL
-        """))
+        """)
+        )
         conn.commit()
     updated = result.rowcount
     logger.info("compute_net_worth: updated %d rows", updated)
@@ -172,8 +177,11 @@ def merge_affidavit_detail(engine: sa.Engine, rows: list[dict]) -> int:
         return 0
 
     jsonb_fields = (
-        "movable_assets_json", "immovable_assets_json", "liabilities_json",
-        "criminal_case_details_json", "itr_income_json",
+        "movable_assets_json",
+        "immovable_assets_json",
+        "liabilities_json",
+        "criminal_case_details_json",
+        "itr_income_json",
     )
     count = 0
     with engine.connect() as conn:
@@ -187,16 +195,19 @@ def merge_affidavit_detail(engine: sa.Engine, rows: list[dict]) -> int:
                 v = row.get(f)
                 params[f] = json.dumps(v, ensure_ascii=False) if v is not None else None
 
-            params.update({
-                "movable_assets_rs":    row.get("movable_assets_rs"),
-                "immovable_assets_rs":  row.get("immovable_assets_rs"),
-                "source_affidavit_url": row.get("source_affidavit_url"),
-                "html_snapshot_path":   row.get("html_snapshot_path"),
-                "parse_status":         row.get("parse_status", "scraped"),
-                "parse_error":          row.get("parse_error"),
-            })
+            params.update(
+                {
+                    "movable_assets_rs": row.get("movable_assets_rs"),
+                    "immovable_assets_rs": row.get("immovable_assets_rs"),
+                    "source_affidavit_url": row.get("source_affidavit_url"),
+                    "html_snapshot_path": row.get("html_snapshot_path"),
+                    "parse_status": row.get("parse_status", "scraped"),
+                    "parse_error": row.get("parse_error"),
+                }
+            )
 
-            conn.execute(text("""
+            conn.execute(
+                text("""
                 UPDATE candidate_affidavits SET
                     movable_assets_rs          = COALESCE(:movable_assets_rs,    movable_assets_rs),
                     immovable_assets_rs        = COALESCE(:immovable_assets_rs,  immovable_assets_rs),
@@ -212,7 +223,9 @@ def merge_affidavit_detail(engine: sa.Engine, rows: list[dict]) -> int:
                     parse_error                = :parse_error,
                     scraped_at                 = NOW()
                 WHERE candidate_id = :cid
-            """), params)
+            """),
+                params,
+            )
             count += 1
 
         conn.commit()
@@ -224,19 +237,24 @@ def merge_affidavit_detail(engine: sa.Engine, rows: list[dict]) -> int:
 
 def validate(engine: sa.Engine) -> None:
     with engine.connect() as conn:
-        total     = conn.execute(text("SELECT COUNT(*) FROM candidate_master")).scalar()
-        by_party  = conn.execute(text(
-            "SELECT party, COUNT(*) FROM candidate_master GROUP BY party ORDER BY COUNT(*) DESC"
-        )).fetchall()
-        enriched  = conn.execute(text(
-            "SELECT COUNT(*) FROM candidate_affidavits WHERE parse_status = 'scraped'"
-        )).scalar()
-        with_results = conn.execute(text(
-            "SELECT COUNT(*) FROM candidate_party_history WHERE is_winner IS NOT NULL"
-        )).scalar()
+        total = conn.execute(text("SELECT COUNT(*) FROM candidate_master")).scalar()
+        by_party = conn.execute(
+            text(
+                "SELECT party, COUNT(*) FROM candidate_master GROUP BY party ORDER BY COUNT(*) DESC"
+            )
+        ).fetchall()
+        enriched = conn.execute(
+            text("SELECT COUNT(*) FROM candidate_affidavits WHERE parse_status = 'scraped'")
+        ).scalar()
+        with_results = conn.execute(
+            text("SELECT COUNT(*) FROM candidate_party_history WHERE is_winner IS NOT NULL")
+        ).scalar()
     logger.info(
         "[VALIDATE] %d candidates | %d affidavits enriched | %d result rows | by party: %s",
-        total, enriched, with_results, {r[0]: r[1] for r in by_party},
+        total,
+        enriched,
+        with_results,
+        {r[0]: r[1] for r in by_party},
     )
 
 

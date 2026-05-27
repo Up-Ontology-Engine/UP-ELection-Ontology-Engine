@@ -20,10 +20,10 @@ Usage:
 Environment:
     NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD must be set.
 """
+
 from __future__ import annotations
 
 import logging
-import os
 import sys
 from pathlib import Path
 
@@ -40,28 +40,27 @@ _GRAPH_NAME = "booth_influence_graph"
 
 # Node labels and relationship types to include in the projection
 _NODE_LABELS = ["Booth", "AssemblyConstituency", "Issue", "Party", "Candidate"]
-_REL_TYPES   = [
-    "HAS_BOOTH", "MENTIONS_ISSUE", "REPRESENTS", "CONTESTED_IN", "HAS_NARRATIVE"
-]
+_REL_TYPES = ["HAS_BOOTH", "MENTIONS_ISSUE", "REPRESENTS", "CONTESTED_IN", "HAS_NARRATIVE"]
 
 # PageRank configuration
 _PAGERANK_CONFIG = {
-    "maxIterations":      20,
-    "dampingFactor":      0.85,
-    "tolerance":          1.0e-7,
-    "writeProperty":      "influence_score",  # written back to Booth nodes
+    "maxIterations": 20,
+    "dampingFactor": 0.85,
+    "tolerance": 1.0e-7,
+    "writeProperty": "influence_score",  # written back to Booth nodes
 }
 
 # Louvain configuration
 _LOUVAIN_CONFIG = {
-    "maxIterations":      10,
-    "tolerance":          0.0001,
+    "maxIterations": 10,
+    "tolerance": 0.0001,
     "includeIntermediateCommunities": False,
-    "writeProperty":      "community_id",     # written back to Booth nodes
+    "writeProperty": "community_id",  # written back to Booth nodes
 }
 
 
 # ── GDS wrapper functions ────────────────────────────────────────────────────
+
 
 def _drop_graph_if_exists(session) -> None:
     """Drop the named graph projection if it already exists in the GDS catalogue."""
@@ -105,7 +104,9 @@ def _project_graph(session) -> dict:
         raise RuntimeError("gds.graph.project returned no result.")
     logger.info(
         "[gds] Graph projected: %s nodes=%d, rels=%d",
-        result["graphName"], result["nodeCount"], result["relationshipCount"],
+        result["graphName"],
+        result["nodeCount"],
+        result["relationshipCount"],
     )
     return dict(result)
 
@@ -194,7 +195,8 @@ def _normalise_scores(session) -> int:
         SET b.influence_score_norm = round((b.influence_score - $mn) / $span, 4)
         RETURN count(b) AS updated
         """,
-        mn=mn, span=span,
+        mn=mn,
+        span=span,
     ).single()
     updated = int(result["updated"]) if result else 0
     logger.info("[gds] Normalised influence scores on %d Booth nodes.", updated)
@@ -202,6 +204,7 @@ def _normalise_scores(session) -> int:
 
 
 # ── Top-level entry point ─────────────────────────────────────────────────────
+
 
 def run_influence_analysis(dry_run: bool = False) -> dict:
     """
@@ -242,13 +245,13 @@ def run_influence_analysis(dry_run: bool = False) -> dict:
 
         if not dry_run:
             results["pagerank_stats"] = _run_pagerank(session)
-            results["louvain_stats"]  = _run_louvain(session)
-            results["normalised"]     = _normalise_scores(session)
+            results["louvain_stats"] = _run_louvain(session)
+            results["normalised"] = _normalise_scores(session)
         else:
             logger.info("[gds] dry_run=True — skipping write steps.")
             results["pagerank_stats"] = "skipped (dry_run)"
-            results["louvain_stats"]  = "skipped (dry_run)"
-            results["normalised"]     = 0
+            results["louvain_stats"] = "skipped (dry_run)"
+            results["normalised"] = 0
 
         # Always release the in-memory projection
         try:
@@ -264,7 +267,9 @@ def run_influence_analysis(dry_run: bool = False) -> dict:
 
 if __name__ == "__main__":
     import argparse
+
     from dotenv import load_dotenv
+
     load_dotenv()
     logging.basicConfig(
         level=logging.INFO,
@@ -274,11 +279,15 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Run GDS PageRank + Louvain booth influence scoring"
     )
-    parser.add_argument("--dry-run", action="store_true",
-                        help="Project graph and report stats without writing properties")
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Project graph and report stats without writing properties",
+    )
     args = parser.parse_args()
 
     import json
+
     out = run_influence_analysis(dry_run=args.dry_run)
     print("\n=== GDS Influence Analysis Results ===")
     print(json.dumps(out, indent=2, default=str))
