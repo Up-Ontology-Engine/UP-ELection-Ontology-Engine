@@ -16,7 +16,7 @@ services:
       - ./pipeline/db/migrations:/docker-entrypoint-initdb.d:ro
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
-      interval: 5s
+      interval: 30s
       timeout: 5s
       retries: 5
     deploy:
@@ -29,9 +29,9 @@ services:
     image: edoburu/pgbouncer:latest
     container_name: gorakhpur_pgbouncer
     environment:
-      - DATABASE_URL=postgres://postgres:postgres@postgres:5432/gorakhpur_db
-      - DB_USER=postgres
-      - DB_PASSWORD=postgres
+      - DATABASE_URL=postgres://up_election_app_user:app_password@postgres:5432/gorakhpur_db
+      - DB_USER=up_election_app_user
+      - DB_PASSWORD=app_password
       - DB_HOST=postgres
       - DB_PORT=5432
       - DB_NAME=gorakhpur_db
@@ -55,8 +55,8 @@ services:
       postgres:
         condition: service_healthy
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -h localhost -p 6432 -U postgres"]
-      interval: 5s
+      test: ["CMD-SHELL", "pg_isready -h localhost -p 6432 -U up_election_app_user"]
+      interval: 30s
       timeout: 5s
       retries: 5
 
@@ -118,8 +118,8 @@ services:
     env_file:
       - .env
     environment:
-      - DATABASE_URL=postgresql://postgres:postgres@pgbouncer:6432/gorakhpur_db
-      - POSTGRES_URL=postgresql://postgres:postgres@pgbouncer:6432/gorakhpur_db
+      - DATABASE_URL=postgresql://up_election_app_user:app_password@pgbouncer:6432/gorakhpur_db
+      - POSTGRES_URL=postgresql://up_election_app_user:app_password@pgbouncer:6432/gorakhpur_db
       - NEO4J_URI=bolt://neo4j:7687
       - REDIS_URL=redis://redis:6379/0
     depends_on:
@@ -208,8 +208,8 @@ services:
     env_file:
       - .env
     environment:
-      - DATABASE_URL=postgresql://postgres:postgres@pgbouncer:6432/gorakhpur_db
-      - POSTGRES_URL=postgresql://postgres:postgres@pgbouncer:6432/gorakhpur_db
+      - DATABASE_URL=postgresql://up_election_app_user:app_password@pgbouncer:6432/gorakhpur_db
+      - POSTGRES_URL=postgresql://up_election_app_user:app_password@pgbouncer:6432/gorakhpur_db
       - NEO4J_URI=bolt://neo4j:7687
       - REDIS_URL=redis://redis:6379/0
     depends_on:
@@ -235,8 +235,8 @@ services:
     env_file:
       - .env
     environment:
-      - DATABASE_URL=postgresql://postgres:postgres@pgbouncer:6432/gorakhpur_db
-      - POSTGRES_URL=postgresql://postgres:postgres@pgbouncer:6432/gorakhpur_db
+      - DATABASE_URL=postgresql://up_election_app_user:app_password@pgbouncer:6432/gorakhpur_db
+      - POSTGRES_URL=postgresql://up_election_app_user:app_password@pgbouncer:6432/gorakhpur_db
       - NEO4J_URI=bolt://neo4j:7687
       - REDIS_URL=redis://redis:6379/0
     depends_on:
@@ -282,6 +282,36 @@ services:
       - GF_USERS_ALLOW_SIGN_UP=false
     depends_on:
       - prometheus
+
+  ingestion-watcher:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.backend
+    container_name: gorakhpur_watcher
+    user: "10001:10001"
+    command: python -m pipeline.ingest.watcher
+    env_file:
+      - .env
+    environment:
+      - DATABASE_URL=postgresql://up_election_app_user:app_password@pgbouncer:6432/gorakhpur_db
+      - POSTGRES_URL=postgresql://up_election_app_user:app_password@pgbouncer:6432/gorakhpur_db
+      - NEO4J_URI=bolt://neo4j:7687
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      pgbouncer:
+        condition: service_healthy
+      neo4j:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ./data:/app/data
+      - ./pipeline:/app/pipeline
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
 
 volumes:
   postgres_data:

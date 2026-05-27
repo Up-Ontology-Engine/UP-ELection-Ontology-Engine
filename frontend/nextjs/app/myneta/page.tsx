@@ -1,30 +1,15 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import type { GraphNode, GraphEdge } from "@/lib/api";
+import { GraphNode, GraphEdge, api, Candidate, AcRow } from "@/lib/api";
 import { useTheme } from "@/components/ThemeProvider";
 import GraphCanvas from "../graph/GraphCanvas";
-import CandidateDialogue, { type CandidateProfile } from "./CandidateDialogue";
-import completeCandidateDataRaw from "./complete_candidate_data.json";
+import CandidateDialogue from "./CandidateDialogue";
 import {
   ScrollText, Network, Award, AlertTriangle, GraduationCap,
   Wallet, Landmark, Users, ExternalLink, X, Search,
 } from "lucide-react";
 import { hexToRgba } from "@/lib/colors";
-
-const completeCandidateData = completeCandidateDataRaw as Record<string, CandidateProfile>;
-
-interface MyNetaGraph {
-  nodes: GraphNode[];
-  edges: GraphEdge[];
-  stats: {
-    total_nodes: number;
-    total_edges: number;
-    node_types: Record<string, number>;
-    candidates: number;
-    constituencies: number;
-  };
-}
 
 const NODE_COLORS: Record<string, string> = {
   Election:       "#f59e0b",
@@ -56,67 +41,103 @@ function fmtRs(n: number | null | undefined): string {
 
 export default function MyNetaPage() {
   const { theme } = useTheme();
-  const [graph, setGraph] = useState<MyNetaGraph | null>(null);
+  const [acId, setAcId] = useState("258"); // Default AC for demonstration
+  const [acs, setAcs] = useState<AcRow[]>([]);
+  const [candidates, setCandidates] = useState<Candidate[]>([]);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [page, setPage] = useState(0);
+  const [hasMore, setHasMore] = useState(false);
+  const limit = 100;
+  
   const [selected, setSelected] = useState<GraphNode | null>(null);
   const [dossier, setDossier] = useState<GraphNode | null>(null);
   const [canvasKey, setCanvasKey] = useState(0);
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    fetch("/myneta_graph.json", { cache: "no-store" })
-      .then((r) => { if (!r.ok) throw new Error(String(r.status)); return r.json(); })
-      .then((g: MyNetaGraph) => { setGraph(g); setCanvasKey((k) => k + 1); })
-      .catch(() => setError("Could not load the MyNeta graph. Run `python -m analytics.myneta_graph` to (re)build it."));
+    api.acs().then((res) => setAcs(res.acs)).catch(() => {});
   }, []);
 
-  // Graph view: only political parties and their candidates, linked by REPRESENTS.
-  const visibleNodes = useMemo(
-    () => (graph?.nodes ?? []).filter((n) => n.type === "Party" || n.type === "Candidate"),
-    [graph],
-  );
-  const visibleEdges = useMemo(
-    () => (graph?.edges ?? []).filter((e) => e.type === "REPRESENTS"),
-    [graph],
-  );
+  useEffect(() => {
+    let active = true;
+    api.candidates(acId, limit, page * limit)
+      .then((res) => {
+        if (!active) return;
+        setCandidates(res.candidates);
+        setHasMore(res.candidates.length === limit);
+        setCanvasKey((k) => k + 1);
+        setError("");
+      })
+      .catch((err) => {
+        if (active) setError(err.message || "Failed to load candidates");
+      })
+      .finally(() => {
+        if (active) setLoading(false);
+      });
+    return () => { active = false; };
+  }, [acId, page]);
+
+  // Dynamically build graph elements from live API Candidate data
+  const { graph, partyDist, topAssets, criminalFlagged } = useMemo(() => {
+    const nodes: GraphNode[] = [];
+    const edges: GraphEdge[] = [];
+    const pCount: Record<string, number> = {};
+    const cFlagged: Candidate[] = [];
+    const parties = new Set<string>();
+
+    candidates.forEach((c) => {
+      const party = c.party || "IND";
+      pCount[party] = (pCount[party] || 0) + 1;
+      parties.add(party);
+
+      if (c.criminal_cases && c.criminal_cases > 0) {
+        cFlagged.push(c);
+      }
+
+      nodes.push({
+        id: c.candidate_id,
+        label: c.name,
+        type: "Candidate",
+        properties: { ...(c as unknown as Record<string, unknown>), ac_name: acId, election_year: c.election_year || 2022 }
+      });
+
+      edges.push({
+        source: `party_${party}`,
+        target: c.candidate_id,
+        type: "REPRESENTS"
+      });
+    });
+
+    parties.forEach((p) => {
+      nodes.push({
+        id: `party_${p}`,
+        label: p,
+        type: "Party",
+        properties: { name: p, weight: pCount[p] }
+      });
+    });
+
+    return {
+      graph: { nodes, edges },
+      partyDist: Object.entries(pCount).sort((a, b) => b[1] - a[1]),
+      topAssets: [...candidates].sort((a, b) => (b.net_worth_rs || 0) - (a.net_worth_rs || 0)).slice(0, 6),
+      criminalFlagged: cFlagged,
+    };
+  }, [candidates, acId]);
 
   const onSelect = (n: GraphNode) => (n.type === "Candidate" ? setDossier(n) : setSelected(n));
 
-  const candidates = useMemo(
-    () => (graph?.nodes ?? []).filter((n) => n.type === "Candidate"),
-    [graph],
-  );
-
   const filteredCandidates = useMemo(() => {
-    if (!search.trim()) return candidates;
+    const candNodes = graph.nodes.filter(n => n.type === "Candidate");
+    if (!search.trim()) return candNodes;
     const q = search.toLowerCase();
-    return candidates.filter((c) =>
+    return candNodes.filter((c) =>
       (c.properties.name as string ?? "").toLowerCase().includes(q) ||
       (c.properties.party as string ?? "").toLowerCase().includes(q) ||
       (c.properties.ac_name as string ?? "").toLowerCase().includes(q)
     );
-  }, [candidates, search]);
-
-  const partyDist = useMemo(() => {
-    const m: Record<string, number> = {};
-    candidates.forEach((c) => {
-      const p = (c.properties.party as string) ?? "IND";
-      m[p] = (m[p] ?? 0) + 1;
-    });
-    return Object.entries(m).sort((a, b) => b[1] - a[1]);
-  }, [candidates]);
-
-  const topAssets = useMemo(
-    () => [...candidates]
-      .sort((a, b) => ((b.properties.assets_rs as number) ?? 0) - ((a.properties.assets_rs as number) ?? 0))
-      .slice(0, 6),
-    [candidates],
-  );
-
-  const criminalFlagged = useMemo(
-    () => candidates.filter((c) => ((c.properties.criminal_cases as number) ?? 0) > 0),
-    [candidates],
-  );
+  }, [graph.nodes, search]);
 
   const S = {
     base: "var(--bg-base)", surface: "var(--bg-surface)", card: "var(--bg-card)",
@@ -129,7 +150,6 @@ export default function MyNetaPage() {
 
   return (
     <div className="flex" style={{ height: "calc(100vh - 56px)", background: S.base }}>
-
       {/* ── Left panel ── */}
       <div className="w-80 shrink-0 flex flex-col overflow-y-auto"
         style={{ borderRight: `1px solid ${S.border}` }}>
@@ -142,9 +162,30 @@ export default function MyNetaPage() {
             </div>
             <h1 className="text-sm font-bold" style={{ color: S.t1 }}>My Neta Report Card</h1>
           </div>
-          <p className="text-xs" style={{ color: S.t3 }}>
-            Candidate knowledge graph from MyNeta affidavits
+          <p className="text-xs mb-3" style={{ color: S.t3 }}>
+            Live candidate profiles mapped from Postgres
           </p>
+          <div className="flex flex-col gap-1.5">
+            <label className="text-[10px] uppercase font-bold tracking-wider" style={{ color: S.t4 }}>Select Constituency</label>
+            <select
+              value={acId}
+              onChange={(e) => {
+                setAcId(e.target.value);
+                setPage(0); // Reset page on AC change
+                setLoading(true);
+              }}
+              className="w-full text-xs px-2.5 py-2 outline-none rounded-lg cursor-pointer"
+              style={{ background: S.surface, border: `1px solid ${S.border}`, color: S.t1 }}
+            >
+              {acs.length === 0 && <option value={acId}>Loading ACs...</option>}
+              {acs.map((ac) => (
+                <option key={ac.ac_id} value={ac.ac_id}>
+                  {ac.ac_name} ({ac.ac_id})
+                </option>
+              ))}
+              <option value="bankipur" disabled>Bankipur, Bihar (Coming Soon)</option>
+            </select>
+          </div>
         </div>
 
         {/* Search bar */}
@@ -154,7 +195,7 @@ export default function MyNetaPage() {
             <Search size={12} style={{ color: S.t4, flexShrink: 0 }} />
             <input
               type="text"
-              placeholder="Search candidate, party, constituency…"
+              placeholder="Search candidate, party…"
               value={search}
               onChange={(e) => { setSearch(e.target.value); setSelected(null); }}
               className="flex-1 bg-transparent outline-none text-xs"
@@ -219,9 +260,9 @@ export default function MyNetaPage() {
             {/* Overview stats */}
             <div className="grid grid-cols-2 gap-2">
               {[
-                { label: "Candidates", val: graph?.stats.candidates ?? 0, color: NODE_COLORS.Candidate, icon: Award },
-                { label: "Constituencies", val: graph?.stats.constituencies ?? 0, color: NODE_COLORS.Constituency, icon: Network },
-                { label: "Parties", val: graph?.stats.node_types?.Party ?? 0, color: NODE_COLORS.Party, icon: Users },
+                { label: "Candidates", val: candidates.length, color: NODE_COLORS.Candidate, icon: Award },
+                { label: "Constituencies", val: 1, color: NODE_COLORS.Constituency, icon: Network },
+                { label: "Parties", val: partyDist.length, color: NODE_COLORS.Party, icon: Users },
                 { label: "Criminal-flagged", val: criminalFlagged.length, color: NODE_COLORS.CriminalRecord, icon: AlertTriangle },
               ].map(({ label, val, color, icon: Icon }) => (
                 <div key={label} className="rounded-lg p-3" style={{ background: S.surface, border: `1px solid ${S.border}` }}>
@@ -253,21 +294,40 @@ export default function MyNetaPage() {
               </div>
             </div>
 
+            {/* Pagination Controls */}
+            <div className="flex items-center justify-between pt-2">
+              <button 
+                onClick={() => { setPage(p => Math.max(0, p - 1)); setLoading(true); }}
+                disabled={page === 0}
+                className="text-xs px-3 py-1.5 rounded disabled:opacity-50"
+                style={{ background: S.surface, border: `1px solid ${S.border}`, color: S.t2 }}>
+                Previous
+              </button>
+              <span className="text-xs" style={{ color: S.t3 }}>Page {page + 1}</span>
+              <button 
+                onClick={() => { setPage(p => p + 1); setLoading(true); }}
+                disabled={!hasMore}
+                className="text-xs px-3 py-1.5 rounded disabled:opacity-50"
+                style={{ background: S.surface, border: `1px solid ${S.border}`, color: S.t2 }}>
+                Next
+              </button>
+            </div>
+            
             {/* Top by assets */}
             <div>
               <p className="label mb-2" style={{ color: S.t4 }}>Wealthiest Candidates</p>
               <div className="space-y-1">
                 {topAssets.map((c) => (
-                  <button key={c.id} onClick={() => setDossier(c)}
+                  <button key={c.candidate_id} onClick={() => setDossier(graph.nodes.find(n => n.id === c.candidate_id) || null)}
                     className="w-full text-left px-2.5 py-2 rounded-md flex items-center gap-2 transition-all"
                     style={{ background: S.surface, border: `1px solid ${S.border}` }}
                     onMouseEnter={(e) => (e.currentTarget.style.background = S.hover)}
                     onMouseLeave={(e) => (e.currentTarget.style.background = S.surface)}>
                     <div className="w-1.5 h-1.5 rounded-full shrink-0"
-                      style={{ background: PARTY_COLORS[(c.properties.party as string)] ?? "#64748b" }} />
-                    <span className="flex-1 text-xs truncate" style={{ color: S.t2 }}>{c.properties.name as string}</span>
+                      style={{ background: PARTY_COLORS[c.party] ?? "#64748b" }} />
+                    <span className="flex-1 text-xs truncate" style={{ color: S.t2 }}>{c.name}</span>
                     <span className="mono text-xs shrink-0 tabular-nums" style={{ color: NODE_COLORS.AssetTier }}>
-                      {fmtRs(c.properties.assets_rs as number)}
+                      {fmtRs(c.net_worth_rs)}
                     </span>
                   </button>
                 ))}
@@ -306,11 +366,11 @@ export default function MyNetaPage() {
           </div>
         </div>
 
-        {graph ? (
+        {!loading && graph.nodes.length > 0 ? (
           <GraphCanvas
             key={canvasKey}
-            nodes={visibleNodes}
-            edges={visibleEdges}
+            nodes={graph.nodes}
+            edges={graph.edges}
             nodeColors={NODE_COLORS}
             selectedId={selected?.id}
             theme={theme}
@@ -319,20 +379,16 @@ export default function MyNetaPage() {
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center" style={{ color: "var(--text-4)" }}>
             <ScrollText size={28} className="mb-2" />
-            <p className="text-xs">{error || "Loading MyNeta knowledge graph…"}</p>
+            <p className="text-xs">{error || (loading ? "Loading live candidate data…" : "No candidates found.")}</p>
           </div>
         )}
       </div>
 
-      {/* ── Candidate dialogue (complete data, no dashes) ── */}
+      {/* ── Candidate dialogue ── */}
       {dossier && (
         <CandidateDialogue
           electionYear={Number(dossier.properties.election_year || new Date().getFullYear())}
-          candidateData={
-            completeCandidateData[
-              `${dossier.properties.candidate_id}_${dossier.properties.election_year}` as keyof typeof completeCandidateData
-            ]
-          }
+          candidateData={dossier.properties as unknown as Candidate}
           onClose={() => setDossier(null)}
         />
       )}
@@ -369,14 +425,14 @@ function NodeDetail({ node, onClose, S }: {
               <p className="font-bold text-sm truncate" style={{ color: S.t1 }}>{p.name as string}</p>
               <p className="text-xs" style={{ color: S.t3 }}>{p.ac_name as string} · {p.election_year as number}</p>
             </div>
-            {p.winner ? <Award size={14} style={{ color: S.saffron, marginLeft: "auto" }} /> : null}
+            {p.is_winner ? <Award size={14} style={{ color: S.saffron, marginLeft: "auto" }} /> : null}
           </div>
         </div>
 
         <div className="grid grid-cols-2 gap-2">
           {[
-            { label: "Total Assets", val: fmtRs(p.assets_rs as number), color: NODE_COLORS.AssetTier },
-            { label: "Liabilities", val: fmtRs(p.liabilities_rs as number), color: "#ef4444" },
+            { label: "Total Assets", val: fmtRs(p.net_worth_rs as number), color: NODE_COLORS.AssetTier },
+            { label: "Liabilities", val: (p.total_liabilities as string) || "—", color: "#ef4444" },
             { label: "Criminal Cases", val: String(criminal), color: criminal > 0 ? "#dc2626" : S.t2 },
             { label: "Age", val: p.age != null ? String(p.age) : "—", color: S.t2 },
           ].map(({ label, val, color: c }) => (
@@ -390,21 +446,19 @@ function NodeDetail({ node, onClose, S }: {
         <div className="rounded-md px-3 py-2.5" style={{ background: S.surface, border: `1px solid ${S.border}` }}>
           <p className="text-xs mb-1" style={{ color: S.t4, fontSize: 10 }}>EDUCATION</p>
           <p className="text-xs" style={{ color: S.t2 }}>{(p.education as string) || "Not stated"}</p>
-          {p.profession ? (
+          {p.self_profession ? (
             <>
               <p className="text-xs mt-2 mb-1" style={{ color: S.t4, fontSize: 10 }}>PROFESSION</p>
-              <p className="text-xs" style={{ color: S.t2 }}>{p.profession as string}</p>
+              <p className="text-xs" style={{ color: S.t2 }}>{p.self_profession as string}</p>
             </>
           ) : null}
         </div>
 
-        {p.detail_url ? (
-          <a href={p.detail_url as string} target="_blank" rel="noopener noreferrer"
-            className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-md text-xs transition-all"
-            style={{ background: "rgba(249,115,22,0.1)", border: "1px solid rgba(249,115,22,0.25)", color: S.saffron }}>
-            <ExternalLink size={11} /> View MyNeta affidavit
-          </a>
-        ) : null}
+        {!!p.history_json && (
+          <div className="mt-4 pt-3 border-t text-xs text-slate-500 overflow-x-hidden">
+             See detailed dossier for rich history and financials.
+          </div>
+        )}
       </div>
     );
   }

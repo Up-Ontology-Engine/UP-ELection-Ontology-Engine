@@ -1,8 +1,10 @@
 """Bhashini translation with IndicTrans2 and LLM fallback."""
-import os
-import requests
+
 import logging
-from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
+import os
+
+import requests
+from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_exponential
 
 logger = logging.getLogger(__name__)
 
@@ -13,7 +15,7 @@ PIPELINE_URL = "https://dhruva-api.bhashini.gov.in/services/inference/pipeline"
     stop=stop_after_attempt(3),
     wait=wait_exponential(multiplier=1, min=2, max=10),
     retry=retry_if_exception_type((requests.RequestException, IOError)),
-    reraise=True
+    reraise=True,
 )
 def _bhashini_call(text: str, src: str, tgt: str = "hi") -> str:
     headers = {
@@ -22,8 +24,12 @@ def _bhashini_call(text: str, src: str, tgt: str = "hi") -> str:
         "Content-Type": "application/json",
     }
     payload = {
-        "pipelineTasks": [{"taskType": "translation",
-                           "config": {"language": {"sourceLanguage": src, "targetLanguage": tgt}}}],
+        "pipelineTasks": [
+            {
+                "taskType": "translation",
+                "config": {"language": {"sourceLanguage": src, "targetLanguage": tgt}},
+            }
+        ],
         "inputData": {"input": [{"source": text}], "audio": []},
     }
     r = requests.post(PIPELINE_URL, json=payload, headers=headers, timeout=15)
@@ -32,6 +38,7 @@ def _bhashini_call(text: str, src: str, tgt: str = "hi") -> str:
 
 
 import time
+
 
 class CircuitBreaker:
     def __init__(self, failure_threshold: int = 3, recovery_time: int = 60):
@@ -81,18 +88,18 @@ def _bhashini(text: str, src: str, tgt: str = "hi") -> tuple[str, str]:
         return text, "failed"
 
 
-
 def _indictrans2(text: str, src: str) -> tuple[str, str]:
     try:
         from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+
         model_id = "ai4bharat/indictrans2-indic-indic-dist-200M"
         tok = AutoTokenizer.from_pretrained(model_id, trust_remote_code=True)
         mdl = AutoModelForSeq2SeqLM.from_pretrained(model_id, trust_remote_code=True)
         src_lang = "bho_Deva" if src == "bho" else "hin_Deva"
         inputs = tok(text, return_tensors="pt", src_lang=src_lang)
-        out = mdl.generate(**inputs,
-                           forced_bos_token_id=tok.lang_code_to_id["hin_Deva"],
-                           max_length=512)
+        out = mdl.generate(
+            **inputs, forced_bos_token_id=tok.lang_code_to_id["hin_Deva"], max_length=512
+        )
         return tok.decode(out[0], skip_special_tokens=True), "indictrans2"
     except Exception as e:
         logger.debug(f"IndicTrans2 fallback not available/failed: {e}")
@@ -105,19 +112,16 @@ def _translate_via_llm(text: str, src: str, tgt: str = "hi") -> tuple[str, str]:
     if sarvam_key:
         try:
             url = "https://api.sarvam.ai/v1/chat/completions"
-            headers = {
-                "Authorization": f"Bearer {sarvam_key}",
-                "Content-Type": "application/json"
-            }
+            headers = {"Authorization": f"Bearer {sarvam_key}", "Content-Type": "application/json"}
             prompt = f"Translate the following text from ISO 639-1 language code '{src}' to '{tgt}' (Hindi). Output ONLY the translated text, do not add any explanation or preamble.\n\nText: {text}"
             payload = {
                 "model": os.environ.get("SARVAM_REASONING_MODEL", "sarvam-m"),
                 "messages": [
                     {"role": "system", "content": "You are a precise translator."},
-                    {"role": "user", "content": prompt}
+                    {"role": "user", "content": prompt},
                 ],
                 "temperature": 0.0,
-                "max_tokens": 1024
+                "max_tokens": 1024,
             }
             r = requests.post(url, json=payload, headers=headers, timeout=10)
             r.raise_for_status()
@@ -133,6 +137,7 @@ def _translate_via_llm(text: str, src: str, tgt: str = "hi") -> tuple[str, str]:
         try:
             from google import genai
             from google.genai import types
+
             client = genai.Client(api_key=gemini_key)
             prompt = f"Translate the following text from language '{src}' to '{tgt}' (Hindi). Output ONLY the translated text, do not add any explanation or preamble.\n\nText: {text}"
             resp = client.models.generate_content(
@@ -160,12 +165,12 @@ def normalize_text(text: str, detected_lang: str) -> tuple[str, str]:
     translated, method = _bhashini(text, src=detected_lang)
     if method == "bhashini":
         return translated, method
-    
+
     # Fallback 1: Local IndicTrans2
     translated_it2, method_it2 = _indictrans2(text, src=detected_lang)
     if method_it2 == "indictrans2":
         return translated_it2, method_it2
-        
+
     # Fallback 2: LLM fallback (Sarvam / Gemini)
     translated_llm, method_llm = _translate_via_llm(text, src=detected_lang)
     if method_llm != "failed":

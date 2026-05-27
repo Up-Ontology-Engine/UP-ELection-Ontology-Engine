@@ -21,13 +21,13 @@ Key MLAs for Gorakhpur:
 
 Run: python -m ingestion.mla_works
 """
+
 from __future__ import annotations
 
 import logging
 import os
 import re
 import time
-from pathlib import Path
 
 import sqlalchemy as sa
 from sqlalchemy import text
@@ -49,18 +49,19 @@ HEADERS = {
 
 # UP Vidhan Sabha 18th assembly (2022-2027)
 VIDHAN_SABHA_BASE = "https://vidhan-sabha.up.gov.in"
-NEVA_BASE         = "https://neva.gov.in"
+NEVA_BASE = "https://neva.gov.in"
 
 # Known Gorakhpur MLAs (from neva_gorakhpur_mla_data.json)
 GORAKHPUR_MLAS = [
-    {"ac_id": "GKP_322", "name": "Yogi Adityanath",    "ac_no": 322},
-    {"ac_id": "GKP_323", "name": "Bipin Singh",         "ac_no": 323},
+    {"ac_id": "GKP_322", "name": "Yogi Adityanath", "ac_no": 322},
+    {"ac_id": "GKP_323", "name": "Bipin Singh", "ac_no": 323},
 ]
 
 
 def ensure_mla_work_table(engine: sa.Engine) -> None:
     with engine.connect() as conn:
-        conn.execute(text("""
+        conn.execute(
+            text("""
             CREATE TABLE IF NOT EXISTS mla_work (
                 id              UUID        PRIMARY KEY DEFAULT gen_random_uuid(),
                 candidate_id    VARCHAR(40),
@@ -73,18 +74,19 @@ def ensure_mla_work_table(engine: sa.Engine) -> None:
                 source_url      TEXT,
                 created_at      TIMESTAMPTZ DEFAULT NOW()
             )
-        """))
+        """)
+        )
         # Add work columns to candidate_master if not exist
         for col in [
             ("questions_count", "INTEGER DEFAULT 0"),
-            ("bills_count",     "INTEGER DEFAULT 0"),
-            ("attendance_pct",  "FLOAT DEFAULT 0"),
+            ("bills_count", "INTEGER DEFAULT 0"),
+            ("attendance_pct", "FLOAT DEFAULT 0"),
             ("dev_works_count", "INTEGER DEFAULT 0"),
         ]:
             try:
-                conn.execute(text(
-                    f"ALTER TABLE candidate_master ADD COLUMN IF NOT EXISTS {col[0]} {col[1]}"
-                ))
+                conn.execute(
+                    text(f"ALTER TABLE candidate_master ADD COLUMN IF NOT EXISTS {col[0]} {col[1]}")
+                )
             except Exception:
                 pass
         conn.commit()
@@ -103,7 +105,8 @@ def scrape_vidhan_sabha_mla(mla_name: str, ac_no: int) -> dict:
         resp = requests.post(
             search_url,
             data={"name": mla_name, "constituency": str(ac_no)},
-            headers=HEADERS, timeout=20
+            headers=HEADERS,
+            timeout=20,
         )
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, "html.parser")
@@ -133,11 +136,13 @@ def scrape_vidhan_sabha_mla(mla_name: str, ac_no: int) -> dict:
             for row in soup.find_all("tr"):
                 cells = [td.get_text(strip=True) for td in row.find_all("td")]
                 if len(cells) >= 2:
-                    result["work_items"].append({
-                        "type":  "work",
-                        "title": cells[0][:100],
-                        "desc":  cells[1][:300] if len(cells) > 1 else "",
-                    })
+                    result["work_items"].append(
+                        {
+                            "type": "work",
+                            "title": cells[0][:100],
+                            "desc": cells[1][:300] if len(cells) > 1 else "",
+                        }
+                    )
     except Exception as e:
         logger.debug("NeVA scrape failed for %s: %s", mla_name, e)
 
@@ -151,36 +156,46 @@ def load_mla_work(mla: dict, work: dict, engine: sa.Engine) -> None:
     with engine.connect() as conn:
         # Insert work items
         for item in work.get("questions", []):
-            conn.execute(text("""
+            conn.execute(
+                text("""
                 INSERT INTO mla_work (candidate_id, ac_id, work_type, title, session_year)
                 VALUES (:cid, :ac, 'question', :title, '2022-2027')
                 ON CONFLICT DO NOTHING
-            """), {"cid": cid, "ac": ac_id, "title": item[:200]})
+            """),
+                {"cid": cid, "ac": ac_id, "title": item[:200]},
+            )
 
         for item in work.get("work_items", []):
-            conn.execute(text("""
+            conn.execute(
+                text("""
                 INSERT INTO mla_work
                     (candidate_id, ac_id, work_type, title, description, session_year)
                 VALUES (:cid, :ac, :wtype, :title, :desc, '2022-2027')
                 ON CONFLICT DO NOTHING
-            """), {
-                "cid":   cid, "ac": ac_id,
-                "wtype": item.get("type", "development"),
-                "title": item.get("title", "")[:200],
-                "desc":  item.get("desc", "")[:500],
-            })
+            """),
+                {
+                    "cid": cid,
+                    "ac": ac_id,
+                    "wtype": item.get("type", "development"),
+                    "title": item.get("title", "")[:200],
+                    "desc": item.get("desc", "")[:500],
+                },
+            )
 
         # Update candidate_master summary
-        conn.execute(text("""
+        conn.execute(
+            text("""
             UPDATE candidate_master SET
                 questions_count = :qcount,
                 attendance_pct  = :att
             WHERE candidate_id = :cid
-        """), {
-            "cid":    cid,
-            "qcount": len(work.get("questions", [])),
-            "att":    work.get("attendance_pct", 0),
-        })
+        """),
+            {
+                "cid": cid,
+                "qcount": len(work.get("questions", [])),
+                "att": work.get("attendance_pct", 0),
+            },
+        )
 
         conn.commit()
 
@@ -193,29 +208,63 @@ def build_static_work_profile(engine: sa.Engine) -> None:
     """
     cid = "YOGI_ADITYANATH_2022"
     known_works = [
-        {"type": "development", "title": "Gorakhpur AIIMS established", "desc": "Medical college and AIIMS inaugurated in Gorakhpur during CM tenure"},
-        {"type": "development", "title": "Gorakhpur Fertilizer Plant revived", "desc": "Hindustan Urvarak & Rasayan Limited plant restarted after decades"},
-        {"type": "development", "title": "Gorakhpur Industrial Corridor", "desc": "Industrial corridor development for employment generation"},
-        {"type": "development", "title": "UP Expressway connectivity", "desc": "Purvanchal Expressway operational, connecting Gorakhpur to Lucknow"},
-        {"type": "development", "title": "Gorakhpur Link Expressway", "desc": "Link Expressway connecting Gorakhpur to Purvanchal Expressway"},
-        {"type": "scheme",      "title": "PMAY beneficiaries in Gorakhpur", "desc": "PM Awas Yojana housing scheme implementation in constituency"},
-        {"type": "scheme",      "title": "Jal Jeevan Mission", "desc": "Tap water connections to rural households in Gorakhpur"},
+        {
+            "type": "development",
+            "title": "Gorakhpur AIIMS established",
+            "desc": "Medical college and AIIMS inaugurated in Gorakhpur during CM tenure",
+        },
+        {
+            "type": "development",
+            "title": "Gorakhpur Fertilizer Plant revived",
+            "desc": "Hindustan Urvarak & Rasayan Limited plant restarted after decades",
+        },
+        {
+            "type": "development",
+            "title": "Gorakhpur Industrial Corridor",
+            "desc": "Industrial corridor development for employment generation",
+        },
+        {
+            "type": "development",
+            "title": "UP Expressway connectivity",
+            "desc": "Purvanchal Expressway operational, connecting Gorakhpur to Lucknow",
+        },
+        {
+            "type": "development",
+            "title": "Gorakhpur Link Expressway",
+            "desc": "Link Expressway connecting Gorakhpur to Purvanchal Expressway",
+        },
+        {
+            "type": "scheme",
+            "title": "PMAY beneficiaries in Gorakhpur",
+            "desc": "PM Awas Yojana housing scheme implementation in constituency",
+        },
+        {
+            "type": "scheme",
+            "title": "Jal Jeevan Mission",
+            "desc": "Tap water connections to rural households in Gorakhpur",
+        },
     ]
 
     with engine.connect() as conn:
         for w in known_works:
-            conn.execute(text("""
+            conn.execute(
+                text("""
                 INSERT INTO mla_work
                     (candidate_id, ac_id, work_type, title, description, session_year)
                 VALUES (:cid, 'GKP_322', :wtype, :title, :desc, '2022-2027')
                 ON CONFLICT DO NOTHING
-            """), {"cid": cid, "wtype": w["type"], "title": w["title"], "desc": w["desc"]})
+            """),
+                {"cid": cid, "wtype": w["type"], "title": w["title"], "desc": w["desc"]},
+            )
 
-        conn.execute(text("""
+        conn.execute(
+            text("""
             UPDATE candidate_master
             SET dev_works_count = :n
             WHERE candidate_id = :cid
-        """), {"cid": cid, "n": len(known_works)})
+        """),
+            {"cid": cid, "n": len(known_works)},
+        )
         conn.commit()
 
     logger.info("Loaded %d static work items for Yogi Adityanath", len(known_works))

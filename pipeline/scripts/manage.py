@@ -19,6 +19,7 @@ Usage:
   python manage.py etl list
   python manage.py etl run <script>
 """
+
 from __future__ import annotations
 
 import argparse
@@ -30,30 +31,62 @@ import time
 from pathlib import Path
 
 # ── Bootstrap: load .env before any project imports ──────────────────────────
-_REPO_ROOT = Path(__file__).parent
+_REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(_REPO_ROOT))
 
 try:
     from dotenv import load_dotenv
+
     load_dotenv(_REPO_ROOT / ".env")
 except ImportError:
     pass  # python-dotenv not installed; env must be set externally
 
+try:
+    import pipeline.compat
+
+    pipeline.compat.register()
+except ImportError:
+    pass
+
+
 # ── ANSI colour helpers ───────────────────────────────────────────────────────
 _NO_COLOR = not sys.stdout.isatty() or os.environ.get("NO_COLOR")
+
 
 def _c(code: str, text: str) -> str:
     if _NO_COLOR:
         return text
     return f"\033[{code}m{text}\033[0m"
 
-def green(s: str)  -> str: return _c("32", s)
-def red(s: str)    -> str: return _c("31", s)
-def yellow(s: str) -> str: return _c("33", s)
-def blue(s: str)   -> str: return _c("34", s)
-def cyan(s: str)   -> str: return _c("36", s)
-def bold(s: str)   -> str: return _c("1",  s)
-def dim(s: str)    -> str: return _c("2",  s)
+
+def green(s: str) -> str:
+    return _c("32", s)
+
+
+def red(s: str) -> str:
+    return _c("31", s)
+
+
+def yellow(s: str) -> str:
+    return _c("33", s)
+
+
+def blue(s: str) -> str:
+    return _c("34", s)
+
+
+def cyan(s: str) -> str:
+    return _c("36", s)
+
+
+def bold(s: str) -> str:
+    return _c("1", s)
+
+
+def dim(s: str) -> str:
+    return _c("2", s)
+
+
 def _safe_char(utf8_char: str, ascii_char: str) -> str:
     try:
         utf8_char.encode(sys.stdout.encoding or "ascii")
@@ -61,19 +94,33 @@ def _safe_char(utf8_char: str, ascii_char: str) -> str:
     except Exception:
         return ascii_char
 
-def ok(s: str)     -> str: return f"  {green(_safe_char('✓', '+'))} {s}"
-def fail(s: str)   -> str: return f"  {red(_safe_char('✗', 'x'))} {s}"
-def warn(s: str)   -> str: return f"  {yellow('!')} {s}"
-def info(s: str)   -> str: return f"  {blue(_safe_char('·', '-'))} {s}"
+
+def ok(s: str) -> str:
+    return f"  {green(_safe_char('✓', '+'))} {s}"
+
+
+def fail(s: str) -> str:
+    return f"  {red(_safe_char('✗', 'x'))} {s}"
+
+
+def warn(s: str) -> str:
+    return f"  {yellow('!')} {s}"
+
+
+def info(s: str) -> str:
+    return f"  {blue(_safe_char('·', '-'))} {s}"
+
 
 def _hr(char: str | None = None, width: int = 60) -> str:
     c = char if char is not None else _safe_char("─", "-")
     return dim(c * width)
 
+
 def _section(title: str) -> None:
     print()
     print(bold(cyan(f"{_safe_char('▸', '>')} {title}")))
     print(_hr())
+
 
 def _table(rows: list[tuple[str, str]], width: int = 32) -> None:
     for key, val in rows:
@@ -82,12 +129,16 @@ def _table(rows: list[tuple[str, str]], width: int = 32) -> None:
 
 # ── Shared DB helpers (lazy imports so CLI loads fast) ───────────────────────
 
+
 def _pg_engine():
     from backend.db import get_pg_engine
+
     return get_pg_engine()
+
 
 def _neo4j_session():
     from backend.db import get_neo4j_session
+
     return get_neo4j_session()
 
 
@@ -98,6 +149,7 @@ def _neo4j_session():
 
 # ── status ────────────────────────────────────────────────────────────────────
 
+
 def cmd_status(args: argparse.Namespace) -> None:
     """Health check: PostgreSQL + Neo4j connectivity and row/node counts."""
     print(bold("\n  UP-EOM System Status"))
@@ -105,18 +157,19 @@ def cmd_status(args: argparse.Namespace) -> None:
 
     _section("PostgreSQL")
     pg_tables = [
-        ("ac_master",             "Assembly Constituencies"),
-        ("booth_master",          "Polling Booths"),
-        ("booth_metrics",         "Booth Pulse Metrics"),
-        ("booth_results",         "Booth Election Results"),
-        ("turnout_stats",         "Turnout Stats"),
-        ("candidate_master",      "Candidates"),
-        ("ac_demographics",       "AC Demographics"),
-        ("pulse_events_raw",      "Pulse Events (raw)"),
-        ("yt_videos",             "YouTube Videos"),
+        ("ac_master", "Assembly Constituencies"),
+        ("booth_master", "Polling Booths"),
+        ("booth_metrics", "Booth Pulse Metrics"),
+        ("booth_results", "Booth Election Results"),
+        ("turnout_stats", "Turnout Stats"),
+        ("candidate_master", "Candidates"),
+        ("ac_demographics", "AC Demographics"),
+        ("pulse_events_raw", "Pulse Events (raw)"),
+        ("yt_videos", "YouTube Videos"),
     ]
     try:
         from sqlalchemy import text
+
         engine = _pg_engine()
         with engine.connect() as conn:
             print(ok(f"Connected  {dim(os.environ.get('POSTGRES_URL', '').split('@')[-1])}"))
@@ -154,6 +207,7 @@ def cmd_status(args: argparse.Namespace) -> None:
     _section("Redis Cache")
     try:
         from backend.db import get_redis_client
+
         r = get_redis_client()
         if r:
             pong = r.ping()
@@ -174,8 +228,12 @@ def cmd_status(args: argparse.Namespace) -> None:
 
     _section("Environment")
     env_vars = [
-        "POSTGRES_URL", "NEO4J_URI", "NEO4J_USER",
-        "SARVAM_API_KEY", "GOOGLE_API_KEY", "PILOT_AC_ID",
+        "POSTGRES_URL",
+        "NEO4J_URI",
+        "NEO4J_USER",
+        "SARVAM_API_KEY",
+        "GOOGLE_API_KEY",
+        "PILOT_AC_ID",
     ]
     for var in env_vars:
         val = os.environ.get(var)
@@ -188,6 +246,7 @@ def cmd_status(args: argparse.Namespace) -> None:
 
 
 # ── graph apply-constraints ──────────────────────────────────────────────────
+
 
 def cmd_graph_apply_constraints(args: argparse.Namespace) -> None:
     """Apply Neo4j schema constraints and indexes from constraints.cypher."""
@@ -243,6 +302,7 @@ def _parse_cypher_file(path: Path) -> list[str]:
 
 # ── graph load ───────────────────────────────────────────────────────────────
 
+
 def cmd_graph_load(args: argparse.Namespace) -> None:
     """Run the full ETL → PostgreSQL → Neo4j pipeline."""
     stage = args.stage
@@ -255,17 +315,21 @@ def cmd_graph_load(args: argparse.Namespace) -> None:
     t0 = time.monotonic()
     try:
         from flows.graph.flow_load_graph import run
+
         run(stage=stage)
         elapsed = time.monotonic() - t0
         print(ok(f"Pipeline complete in {elapsed:.1f}s"))
     except Exception as e:
         print(fail(f"Pipeline failed: {e}"))
-        import traceback; traceback.print_exc()
+        import traceback
+
+        traceback.print_exc()
         sys.exit(1)
     print()
 
 
 # ── graph stats ──────────────────────────────────────────────────────────────
+
 
 def cmd_graph_stats(args: argparse.Namespace) -> None:
     """Show Neo4j node and relationship counts."""
@@ -273,10 +337,12 @@ def cmd_graph_stats(args: argparse.Namespace) -> None:
     try:
         with _neo4j_session() as s:
             _section("Nodes by Label")
-            rows = list(s.run(
-                "MATCH (n) WITH labels(n)[0] AS lbl, count(n) AS cnt "
-                "WHERE lbl IS NOT NULL RETURN lbl, cnt ORDER BY cnt DESC"
-            ))
+            rows = list(
+                s.run(
+                    "MATCH (n) WITH labels(n)[0] AS lbl, count(n) AS cnt "
+                    "WHERE lbl IS NOT NULL RETURN lbl, cnt ORDER BY cnt DESC"
+                )
+            )
             if not rows:
                 print(warn("No nodes found — is the graph loaded?"))
             for rec in rows:
@@ -292,12 +358,14 @@ def cmd_graph_stats(args: argparse.Namespace) -> None:
             _section("Summary")
             total_n = sum(r["cnt"] for r in rows)
             total_e = s.run("MATCH ()-[r]->() RETURN count(r) AS c").single()["c"]
-            constr  = len(list(s.run("SHOW CONSTRAINTS YIELD name")))
-            _table([
-                ("Total nodes",       green(f"{total_n:,}")),
-                ("Total edges",       cyan(f"{total_e:,}")),
-                ("Active constraints", green(str(constr))),
-            ])
+            constr = len(list(s.run("SHOW CONSTRAINTS YIELD name")))
+            _table(
+                [
+                    ("Total nodes", green(f"{total_n:,}")),
+                    ("Total edges", cyan(f"{total_e:,}")),
+                    ("Active constraints", green(str(constr))),
+                ]
+            )
     except Exception as e:
         print(fail(f"Neo4j connection failed: {e}"))
         sys.exit(1)
@@ -306,11 +374,13 @@ def cmd_graph_stats(args: argparse.Namespace) -> None:
 
 # ── graph validate ───────────────────────────────────────────────────────────
 
+
 def cmd_graph_validate(args: argparse.Namespace) -> None:
     """Run graph integrity validation checks."""
     print(bold("\n  Graph Validation"))
     try:
         from graph.validators.validate_graph import run as validate
+
         validate()
     except ImportError:
         print(warn("graph.validators.validate_graph not found — running built-in checks"))
@@ -357,6 +427,7 @@ def _builtin_graph_validate() -> None:
 
 # ── ingest ───────────────────────────────────────────────────────────────────
 
+
 def cmd_ingest(args: argparse.Namespace) -> None:
     """Run data ingestion pipelines."""
     target = args.target
@@ -386,20 +457,25 @@ def cmd_ingest(args: argparse.Namespace) -> None:
             print(ok(f"Done in {elapsed:.1f}s"))
         except Exception as e:
             print(fail(f"Failed: {e}"))
-            import traceback; traceback.print_exc()
+            import traceback
+
+            traceback.print_exc()
     print()
 
 
 def _ingest_form20(args: argparse.Namespace) -> None:
     from etl.ingesters import run_ingest_political_data as run
+
     run()
 
 
 def _ingest_youtube(args: argparse.Namespace) -> None:
     from etl.ingesters import run_ingest_youtube_videos as run
+
     run()
     try:
         from etl.ingesters import run_stage_youtube_to_pulse as stage_run
+
         stage_run()
         print(info("YouTube → Pulse events staged"))
     except Exception as e:
@@ -408,15 +484,18 @@ def _ingest_youtube(args: argparse.Namespace) -> None:
 
 def _ingest_political(args: argparse.Namespace) -> None:
     from etl.ingesters import run_ingest_political_data as run
+
     run()
 
 
 def _ingest_metrics(args: argparse.Namespace) -> None:
     from etl.transforms import compute_metrics
+
     compute_metrics()
 
 
 # ── ontology validate ────────────────────────────────────────────────────────
+
 
 def cmd_ontology_validate(args: argparse.Namespace) -> None:
     """Validate ontology: check IDs, constraints, and schema consistency."""
@@ -441,34 +520,52 @@ def cmd_ontology_validate(args: argparse.Namespace) -> None:
         engine = _pg_engine()
         with engine.connect() as conn:
             # Booth ID format: GKP_322_NNN
-            bad_booths = conn.execute(text(
-                "SELECT COUNT(*) FROM booth_master WHERE booth_id NOT SIMILAR TO 'GKP_[0-9]+_[0-9]+'"
-            )).scalar()
-            chk("Booth IDs match GKP_<ac>_<num> pattern", bad_booths == 0,
-                f"{bad_booths} non-conforming" if bad_booths else "all match")
+            bad_booths = conn.execute(
+                text(
+                    "SELECT COUNT(*) FROM booth_master WHERE booth_id NOT SIMILAR TO 'GKP_[0-9]+_[0-9]+'"
+                )
+            ).scalar()
+            chk(
+                "Booth IDs match GKP_<ac>_<num> pattern",
+                bad_booths == 0,
+                f"{bad_booths} non-conforming" if bad_booths else "all match",
+            )
 
             # AC ID format
-            bad_acs = conn.execute(text(
-                "SELECT COUNT(*) FROM ac_master WHERE ac_id NOT SIMILAR TO 'GKP_[0-9]+'"
-            )).scalar()
-            chk("AC IDs match GKP_<num> pattern", bad_acs == 0,
-                f"{bad_acs} non-conforming" if bad_acs else "all match")
+            bad_acs = conn.execute(
+                text("SELECT COUNT(*) FROM ac_master WHERE ac_id NOT SIMILAR TO 'GKP_[0-9]+'")
+            ).scalar()
+            chk(
+                "AC IDs match GKP_<num> pattern",
+                bad_acs == 0,
+                f"{bad_acs} non-conforming" if bad_acs else "all match",
+            )
 
             # Candidate ID
-            bad_cands = conn.execute(text(
-                "SELECT COUNT(*) FROM candidate_master "
-                "WHERE candidate_id NOT SIMILAR TO 'GKP_CAN_[0-9]+_[0-9]+'"
-            )).scalar()
-            chk("Candidate IDs match GKP_CAN_<year>_<seq>", bad_cands == 0,
-                f"{bad_cands} non-conforming" if bad_cands else "all match")
+            bad_cands = conn.execute(
+                text(
+                    "SELECT COUNT(*) FROM candidate_master "
+                    "WHERE candidate_id NOT SIMILAR TO 'GKP_CAN_[0-9]+_[0-9]+'"
+                )
+            ).scalar()
+            chk(
+                "Candidate IDs match GKP_CAN_<year>_<seq>",
+                bad_cands == 0,
+                f"{bad_cands} non-conforming" if bad_cands else "all match",
+            )
 
             # Orphan booth_metrics (no matching booth_master)
-            orphans = conn.execute(text(
-                "SELECT COUNT(*) FROM booth_metrics bm "
-                "WHERE NOT EXISTS (SELECT 1 FROM booth_master WHERE booth_id = bm.booth_id)"
-            )).scalar()
-            chk("booth_metrics has no orphan records", orphans == 0,
-                f"{orphans} orphan records" if orphans else "clean")
+            orphans = conn.execute(
+                text(
+                    "SELECT COUNT(*) FROM booth_metrics bm "
+                    "WHERE NOT EXISTS (SELECT 1 FROM booth_master WHERE booth_id = bm.booth_id)"
+                )
+            ).scalar()
+            chk(
+                "booth_metrics has no orphan records",
+                orphans == 0,
+                f"{orphans} orphan records" if orphans else "clean",
+            )
     except Exception as e:
         print(fail(f"PostgreSQL check failed: {e}"))
 
@@ -477,20 +574,26 @@ def cmd_ontology_validate(args: argparse.Namespace) -> None:
         with _neo4j_session() as s:
             constr_rows = list(s.run("SHOW CONSTRAINTS YIELD name, labelsOrTypes, properties"))
             constr_set = {
-                (r["labelsOrTypes"][0] if r["labelsOrTypes"] else "", r["properties"][0] if r["properties"] else "")
+                (
+                    r["labelsOrTypes"][0] if r["labelsOrTypes"] else "",
+                    r["properties"][0] if r["properties"] else "",
+                )
                 for r in constr_rows
             }
             required = [
                 ("AssemblyConstituency", "ac_id"),
-                ("Booth",               "booth_id"),
-                ("Candidate",           "candidate_id"),
-                ("Party",               "party_id"),
-                ("Issue",               "code"),
+                ("Booth", "booth_id"),
+                ("Candidate", "candidate_id"),
+                ("Party", "party_id"),
+                ("Issue", "code"),
             ]
             for label, prop in required:
                 found = (label, prop) in constr_set
-                chk(f"UNIQUE {label}({prop})", found,
-                    "active" if found else "MISSING — run: manage.py graph apply-constraints")
+                chk(
+                    f"UNIQUE {label}({prop})",
+                    found,
+                    "active" if found else "MISSING — run: manage.py graph apply-constraints",
+                )
 
             # Orphan detection
             orphan_pe = s.run(
@@ -498,8 +601,11 @@ def cmd_ontology_validate(args: argparse.Namespace) -> None:
                 "AND NOT EXISTS { MATCH (b:Booth {booth_id: pe.mapped_booth_id}) } "
                 "RETURN count(pe) AS c"
             ).single()["c"]
-            chk("PulseEvents reference valid booths", orphan_pe == 0,
-                f"{orphan_pe} dangling" if orphan_pe else "all valid")
+            chk(
+                "PulseEvents reference valid booths",
+                orphan_pe == 0,
+                f"{orphan_pe} dangling" if orphan_pe else "all valid",
+            )
     except Exception as e:
         print(fail(f"Neo4j check failed: {e}"))
 
@@ -513,6 +619,7 @@ def cmd_ontology_validate(args: argparse.Namespace) -> None:
 
 
 # ── ontology export ──────────────────────────────────────────────────────────
+
 
 def cmd_ontology_export(args: argparse.Namespace) -> None:
     """Export live ontology schema (entities, relationships, counts) as JSON."""
@@ -536,24 +643,35 @@ def cmd_ontology_export(args: argparse.Namespace) -> None:
             ):
                 schema["neo4j_counts"][rec["lbl"]] = rec["cnt"]
             for rec in s.run("SHOW CONSTRAINTS YIELD name, type, labelsOrTypes, properties"):
-                schema["constraints"].append({
-                    "name": rec["name"],
-                    "type": rec["type"],
-                    "labels": list(rec["labelsOrTypes"]),
-                    "properties": list(rec["properties"]),
-                    "active": True,
-                })
+                schema["constraints"].append(
+                    {
+                        "name": rec["name"],
+                        "type": rec["type"],
+                        "labels": list(rec["labelsOrTypes"]),
+                        "properties": list(rec["properties"]),
+                        "active": True,
+                    }
+                )
         print(ok("Neo4j data collected"))
     except Exception as e:
         print(warn(f"Neo4j unavailable: {e}"))
 
     try:
         from sqlalchemy import text
+
         engine = _pg_engine()
         with engine.connect() as conn:
-            for tbl in ["ac_master","booth_master","booth_metrics","booth_results",
-                        "turnout_stats","candidate_master","ac_demographics",
-                        "pulse_events_raw","yt_videos"]:
+            for tbl in [
+                "ac_master",
+                "booth_master",
+                "booth_metrics",
+                "booth_results",
+                "turnout_stats",
+                "candidate_master",
+                "ac_demographics",
+                "pulse_events_raw",
+                "yt_videos",
+            ]:
                 try:
                     n = conn.execute(text(f"SELECT COUNT(*) FROM {tbl}")).scalar()
                     schema["postgresql_tables"][tbl] = n
@@ -565,27 +683,27 @@ def cmd_ontology_export(args: argparse.Namespace) -> None:
 
     # Static ontology definitions
     schema["entities"] = [
-        {"name": "State",              "id_field": "state_id",   "example": "UP"},
-        {"name": "District",           "id_field": "district_id","example": "GKP"},
-        {"name": "AssemblyConstituency","id_field": "ac_id",     "example": "GKP_322"},
-        {"name": "Booth",              "id_field": "booth_id",   "example": "GKP_322_001"},
-        {"name": "Candidate",          "id_field": "candidate_id","example": "GKP_CAN_2022_001"},
-        {"name": "Party",              "id_field": "party_id",   "example": "BJP"},
-        {"name": "Issue",              "id_field": "code",       "example": "water"},
-        {"name": "Scheme",             "id_field": "name",       "example": "PM_UJJWALA"},
-        {"name": "PulseEvent",         "id_field": "event_id",   "example": "PE_YT_abc123"},
-        {"name": "YouTubeVideo",       "id_field": "video_id",   "example": "dQw4w9WgXcQ"},
-        {"name": "Channel",            "id_field": "channel_id", "example": "UCxxx"},
+        {"name": "State", "id_field": "state_id", "example": "UP"},
+        {"name": "District", "id_field": "district_id", "example": "GKP"},
+        {"name": "AssemblyConstituency", "id_field": "ac_id", "example": "GKP_322"},
+        {"name": "Booth", "id_field": "booth_id", "example": "GKP_322_001"},
+        {"name": "Candidate", "id_field": "candidate_id", "example": "GKP_CAN_2022_001"},
+        {"name": "Party", "id_field": "party_id", "example": "BJP"},
+        {"name": "Issue", "id_field": "code", "example": "water"},
+        {"name": "Scheme", "id_field": "name", "example": "PM_UJJWALA"},
+        {"name": "PulseEvent", "id_field": "event_id", "example": "PE_YT_abc123"},
+        {"name": "YouTubeVideo", "id_field": "video_id", "example": "dQw4w9WgXcQ"},
+        {"name": "Channel", "id_field": "channel_id", "example": "UCxxx"},
     ]
     schema["relationships"] = [
-        {"from": "State",             "to": "District",              "type": "HAS_DISTRICT"},
-        {"from": "District",          "to": "AssemblyConstituency",  "type": "HAS_AC"},
-        {"from": "AssemblyConstituency","to": "Booth",               "type": "HAS_BOOTH"},
-        {"from": "Candidate",         "to": "Party",                 "type": "REPRESENTS"},
-        {"from": "Candidate",         "to": "AssemblyConstituency",  "type": "CONTESTED_IN"},
-        {"from": "PulseEvent",        "to": "Issue",                 "type": "ABOUT_ISSUE"},
-        {"from": "YouTubeVideo",      "to": "AssemblyConstituency",  "type": "ABOUT_AC"},
-        {"from": "YouTubeVideo",      "to": "Channel",               "type": "FROM_CHANNEL"},
+        {"from": "State", "to": "District", "type": "HAS_DISTRICT"},
+        {"from": "District", "to": "AssemblyConstituency", "type": "HAS_AC"},
+        {"from": "AssemblyConstituency", "to": "Booth", "type": "HAS_BOOTH"},
+        {"from": "Candidate", "to": "Party", "type": "REPRESENTS"},
+        {"from": "Candidate", "to": "AssemblyConstituency", "type": "CONTESTED_IN"},
+        {"from": "PulseEvent", "to": "Issue", "type": "ABOUT_ISSUE"},
+        {"from": "YouTubeVideo", "to": "AssemblyConstituency", "type": "ABOUT_AC"},
+        {"from": "YouTubeVideo", "to": "Channel", "type": "FROM_CHANNEL"},
     ]
 
     out_path = Path(args.out) if args.out else _REPO_ROOT / "ontology_export.json"
@@ -596,15 +714,20 @@ def cmd_ontology_export(args: argparse.Namespace) -> None:
 
 # ── api start ────────────────────────────────────────────────────────────────
 
+
 def cmd_api_start(args: argparse.Namespace) -> None:
     """Start the FastAPI backend server with uvicorn."""
     port = args.port
     reload_flag = ["--reload"] if args.reload else []
     cmd = [
-        sys.executable, "-m", "uvicorn",
+        sys.executable,
+        "-m",
+        "uvicorn",
         "api.main:app",
-        "--host", "0.0.0.0",
-        "--port", str(port),
+        "--host",
+        "0.0.0.0",
+        "--port",
+        str(port),
         *reload_flag,
     ]
     print(bold(f"\n  Starting API server on http://0.0.0.0:{port}"))
@@ -624,20 +747,21 @@ def cmd_api_start(args: argparse.Namespace) -> None:
 # ── etl list / run ───────────────────────────────────────────────────────────
 
 _ETL_SCRIPTS = {
-    "form20":         ("etl.ingest_political_data",  "run"),
-    "youtube":        ("etl.ingest_youtube_videos",  "run"),
-    "metrics":        ("etl.compute_booth_metrics",  "compute_metrics"),
-    "youtube-pulse":  ("etl.stage_youtube_to_pulse", "run"),
-    "news-pulse":     ("etl.stage_news_to_pulse",    "run"),
-    "geography":      ("etl.transform_geography",    "run"),
-    "candidates":     ("etl.transform_candidates",   "run"),
-    "schemes":        ("etl.transform_schemes",      "run"),
-    "panchayats":     ("etl.transform_panchayats",   "run"),
-    "census":         ("etl.transform_census",       "run"),
-    "seed-cands":     ("etl.seed_known_candidates",  "run"),
-    "ls2024":         ("etl.seed_ls2024_results",    "run"),
-    "expand-aliases": ("etl.expand_aliases",         "run"),
+    "form20": ("etl.ingest_political_data", "run"),
+    "youtube": ("etl.ingest_youtube_videos", "run"),
+    "metrics": ("etl.compute_booth_metrics", "compute_metrics"),
+    "youtube-pulse": ("etl.stage_youtube_to_pulse", "run"),
+    "news-pulse": ("etl.stage_news_to_pulse", "run"),
+    "geography": ("etl.transform_geography", "run"),
+    "candidates": ("etl.transform_candidates", "run"),
+    "schemes": ("etl.transform_schemes", "run"),
+    "panchayats": ("etl.transform_panchayats", "run"),
+    "census": ("etl.transform_census", "run"),
+    "seed-cands": ("etl.seed_known_candidates", "run"),
+    "ls2024": ("etl.seed_ls2024_results", "run"),
+    "expand-aliases": ("etl.expand_aliases", "run"),
 }
+
 
 def cmd_etl_list(args: argparse.Namespace) -> None:
     """List all available ETL scripts."""
@@ -653,7 +777,7 @@ def cmd_etl_run(args: argparse.Namespace) -> None:
     name = args.script
     if name not in _ETL_SCRIPTS:
         print(fail(f"Unknown ETL script: {name!r}"))
-        print(info(f"Run 'python manage.py etl list' to see available scripts."))
+        print(info("Run 'python manage.py etl list' to see available scripts."))
         sys.exit(1)
 
     module_name, fn_name = _ETL_SCRIPTS[name]
@@ -661,8 +785,9 @@ def cmd_etl_run(args: argparse.Namespace) -> None:
     t0 = time.monotonic()
     try:
         import importlib
+
         mod = importlib.import_module(module_name)
-        fn  = getattr(mod, fn_name)
+        fn = getattr(mod, fn_name)
         fn()
         elapsed = time.monotonic() - t0
         print(ok(f"Completed in {elapsed:.1f}s"))
@@ -674,7 +799,9 @@ def cmd_etl_run(args: argparse.Namespace) -> None:
         sys.exit(1)
     except Exception as e:
         print(fail(f"ETL failed: {e}"))
-        import traceback; traceback.print_exc()
+        import traceback
+
+        traceback.print_exc()
         sys.exit(1)
     print()
 
@@ -682,6 +809,7 @@ def cmd_etl_run(args: argparse.Namespace) -> None:
 # ═══════════════════════════════════════════════════════════════════════════════
 # ARGUMENT PARSER
 # ═══════════════════════════════════════════════════════════════════════════════
+
 
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
@@ -716,7 +844,7 @@ def build_parser() -> argparse.ArgumentParser:
     gl.add_argument("--stage", choices=["all", "etl", "neo4j"], default="all")
     gl.add_argument("--dry-run", action="store_true", help="Show what would run, don't execute")
 
-    gsub.add_parser("stats",    help="Show node/relationship counts")
+    gsub.add_parser("stats", help="Show node/relationship counts")
     gsub.add_parser("validate", help="Run graph integrity checks")
 
     # ingest
@@ -734,7 +862,9 @@ def build_parser() -> argparse.ArgumentParser:
     osub.required = True
     osub.add_parser("validate", help="Validate IDs and constraints")
     oe = osub.add_parser("export", help="Export ontology schema as JSON")
-    oe.add_argument("--out", default=None, metavar="FILE", help="Output file (default: ontology_export.json)")
+    oe.add_argument(
+        "--out", default=None, metavar="FILE", help="Output file (default: ontology_export.json)"
+    )
 
     # api
     api_p = sub.add_parser("api", help="Start the FastAPI backend")
@@ -750,7 +880,13 @@ def build_parser() -> argparse.ArgumentParser:
     csub.required = True
     cs = csub.add_parser("seed", help="Seed demo beneficiary data for testing")
     cs.add_argument("--ac", default="GKP_URBAN", metavar="AC_ID", help="AC ID (default: GKP_URBAN)")
-    cs.add_argument("--per-booth", type=int, default=18, metavar="N", help="Beneficiaries per booth (default: 18)")
+    cs.add_argument(
+        "--per-booth",
+        type=int,
+        default=18,
+        metavar="N",
+        help="Beneficiaries per booth (default: 18)",
+    )
     csub.add_parser("stats", help="Show beneficiary + conversion stats")
 
     # etl
@@ -769,12 +905,12 @@ def main() -> None:
     args = parser.parse_args()
 
     dispatch = {
-        "status":     cmd_status,
-        "graph":      _dispatch_graph,
-        "ingest":     cmd_ingest,
-        "ontology":   _dispatch_ontology,
-        "api":        _dispatch_api,
-        "etl":        _dispatch_etl,
+        "status": cmd_status,
+        "graph": _dispatch_graph,
+        "ingest": cmd_ingest,
+        "ontology": _dispatch_ontology,
+        "api": _dispatch_api,
+        "etl": _dispatch_etl,
         "conversion": _dispatch_conversion,
     }
 
@@ -788,16 +924,16 @@ def main() -> None:
 def _dispatch_graph(args: argparse.Namespace) -> None:
     {
         "apply-constraints": cmd_graph_apply_constraints,
-        "load":              cmd_graph_load,
-        "stats":             cmd_graph_stats,
-        "validate":          cmd_graph_validate,
+        "load": cmd_graph_load,
+        "stats": cmd_graph_stats,
+        "validate": cmd_graph_validate,
     }[args.graph_cmd](args)
 
 
 def _dispatch_ontology(args: argparse.Namespace) -> None:
     {
         "validate": cmd_ontology_validate,
-        "export":   cmd_ontology_export,
+        "export": cmd_ontology_export,
     }[args.ont_cmd](args)
 
 
@@ -814,8 +950,9 @@ def _dispatch_conversion(args: argparse.Namespace) -> None:
 
 
 def cmd_conversion_seed(args: argparse.Namespace) -> None:
-    from backend.queries import init_beneficiary_tables, seed_demo_beneficiaries, _rac
-    print(info(f"Initialising beneficiary tables…"))
+    from backend.queries import _rac, init_beneficiary_tables, seed_demo_beneficiaries
+
+    print(info("Initialising beneficiary tables…"))
     init_beneficiary_tables()
     ac = args.ac
     n = args.per_booth
@@ -825,7 +962,8 @@ def cmd_conversion_seed(args: argparse.Namespace) -> None:
 
 
 def cmd_conversion_stats(args: argparse.Namespace) -> None:
-    from backend.queries import get_conversion_stats, get_conversion_overview, _rac
+    from backend.queries import _rac, get_conversion_stats
+
     ac = getattr(args, "ac", "GKP_URBAN")
     stats = get_conversion_stats(_rac(ac))
     if not stats["total_beneficiaries"]:
@@ -835,7 +973,9 @@ def cmd_conversion_stats(args: argparse.Namespace) -> None:
     print(f"  Total Beneficiaries : {green(str(stats['total_beneficiaries']))}")
     print(f"  Conversion Targets  : {yellow(str(stats['total_targets']))} (non-BJP)")
     print(f"  Confirmed Supporters: {cyan(str(stats['total_supporters']))}")
-    print(f"  Contacted           : {green(str(stats['total_contacted']))} ({stats['contact_rate_pct']}%)")
+    print(
+        f"  Contacted           : {green(str(stats['total_contacted']))} ({stats['contact_rate_pct']}%)"
+    )
     print(f"  Target Contact Rate : {green(str(stats['target_contact_pct']) + '%')}")
     print(f"  Booths With Data    : {stats['booths_with_data']}")
     if stats["top_schemes"]:

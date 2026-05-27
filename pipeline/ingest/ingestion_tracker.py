@@ -14,10 +14,10 @@ Usage in a scraper:
                 if _parse_dt(a["published_at"]) > wm]  # filter old
     update_watermark("jagran_gorakhpur", max_dt)    # advance cursor
 """
+
 from __future__ import annotations
 
 import logging
-import os
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -46,8 +46,9 @@ CREATE TABLE IF NOT EXISTS ingestion_track (
 
 def init_ingestion_track_table() -> None:
     """Create the ingestion_track table if it doesn't exist."""
-    from backend.db import get_pg_engine
     import sqlalchemy as sa
+
+    from backend.db import get_pg_engine
 
     try:
         engine = get_pg_engine()
@@ -60,21 +61,21 @@ def init_ingestion_track_table() -> None:
 
 # ── Read watermark ────────────────────────────────────────────────────────────
 
+
 def get_watermark(source_id: str) -> Optional[datetime]:
     """
     Return the timestamp of the most recently ingested article for *source_id*,
     or None if this source has never been tracked (= full scrape needed).
     """
-    from backend.db import get_pg_engine
     import sqlalchemy as sa
+
+    from backend.db import get_pg_engine
 
     try:
         engine = get_pg_engine()
         with engine.connect() as conn:
             row = conn.execute(
-                sa.text(
-                    "SELECT last_article_at FROM ingestion_track WHERE source_id = :sid"
-                ),
+                sa.text("SELECT last_article_at FROM ingestion_track WHERE source_id = :sid"),
                 {"sid": source_id},
             ).fetchone()
         if row and row[0]:
@@ -89,6 +90,7 @@ def get_watermark(source_id: str) -> Optional[datetime]:
 
 
 # ── Update watermark ──────────────────────────────────────────────────────────
+
 
 def update_watermark(
     source_id: str,
@@ -105,8 +107,9 @@ def update_watermark(
         ingested_count:    Number of new articles ingested this run.
         notes:             Optional free-text note (e.g. error details).
     """
-    from backend.db import get_pg_engine
     import sqlalchemy as sa
+
+    from backend.db import get_pg_engine
 
     try:
         engine = get_pg_engine()
@@ -122,21 +125,24 @@ def update_watermark(
                         notes            = EXCLUDED.notes
                 """),
                 {
-                    "sid":   source_id,
-                    "lat":   latest_article_at,
-                    "cnt":   ingested_count,
+                    "sid": source_id,
+                    "lat": latest_article_at,
+                    "cnt": ingested_count,
                     "notes": notes,
                 },
             )
         logger.info(
             "[ingestion_tracker] %s → watermark=%s (+%d articles)",
-            source_id, latest_article_at, ingested_count,
+            source_id,
+            latest_article_at,
+            ingested_count,
         )
     except Exception as exc:
         logger.error("[ingestion_tracker] update_watermark failed for %s: %s", source_id, exc)
 
 
 # ── Article datetime parser ───────────────────────────────────────────────────
+
 
 def parse_article_dt(raw: str | None) -> Optional[datetime]:
     """
@@ -145,8 +151,8 @@ def parse_article_dt(raw: str | None) -> Optional[datetime]:
     """
     if not raw:
         return None
-    from email.utils import parsedate_to_datetime
     from datetime import timezone as tz
+    from email.utils import parsedate_to_datetime
 
     # Try RFC 2822 (RSS pubDate)
     try:
@@ -165,7 +171,7 @@ def parse_article_dt(raw: str | None) -> Optional[datetime]:
         "%Y-%m-%d",
     ):
         try:
-            dt = datetime.strptime(raw[:len(fmt)], fmt)
+            dt = datetime.strptime(raw[: len(fmt)], fmt)
             if dt.tzinfo is None:
                 dt = dt.replace(tzinfo=tz.utc)
             return dt
@@ -183,6 +189,7 @@ def parse_article_dt(raw: str | None) -> Optional[datetime]:
 
 
 # ── Convenience: filter articles newer than watermark ────────────────────────
+
 
 def filter_new_articles(
     source_id: str,
@@ -218,7 +225,9 @@ def filter_new_articles(
     if skipped:
         logger.info(
             "[ingestion_tracker] %s: skipped %d already-ingested articles (watermark=%s)",
-            source_id, skipped, watermark,
+            source_id,
+            skipped,
+            watermark,
         )
 
     return new_articles, max_dt
@@ -226,17 +235,21 @@ def filter_new_articles(
 
 if __name__ == "__main__":
     """Quick smoke-test: initialise table and print all watermarks."""
-    import json
     from dotenv import load_dotenv
+
     load_dotenv()
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     init_ingestion_track_table()
-    from backend.db import get_pg_engine
     import sqlalchemy as sa
+
+    from backend.db import get_pg_engine
+
     engine = get_pg_engine()
     with engine.connect() as conn:
         rows = conn.execute(
-            sa.text("SELECT source_id, last_article_at, total_ingested FROM ingestion_track ORDER BY source_id")
+            sa.text(
+                "SELECT source_id, last_article_at, total_ingested FROM ingestion_track ORDER BY source_id"
+            )
         ).fetchall()
     if rows:
         print("\n=== Ingestion Watermarks ===")

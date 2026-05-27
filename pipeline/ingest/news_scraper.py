@@ -2,22 +2,30 @@
 Scrape local Hindi news from Jagran and Amar Ujala — Gorakhpur section.
 Usage: python -m ingestion.news_scraper [--validate] [--dry-run] [--json]
 """
+
 from __future__ import annotations
-import json, os, time, random, hashlib, logging
+
+import hashlib
+import json
+import logging
+import os
+import random
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterator
+
 import requests
-from bs4 import BeautifulSoup
 import sqlalchemy as sa
-from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
+from bs4 import BeautifulSoup
+from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_exponential
 
 logger = logging.getLogger(__name__)
 
 _REPO = Path(__file__).resolve().parents[1]
-NEWS_RAW_DIR      = _REPO / "data" / "Digital_Dataset" / "newspapers" / "raw"
-NEWS_PROC_DIR     = _REPO / "data" / "Digital_Dataset" / "newspapers" / "processed"
-NEWS_BY_SRC_DIR   = _REPO / "data" / "Digital_Dataset" / "newspapers" / "by_source"
+NEWS_RAW_DIR = _REPO / "data" / "Digital_Dataset" / "newspapers" / "raw"
+NEWS_PROC_DIR = _REPO / "data" / "Digital_Dataset" / "newspapers" / "processed"
+NEWS_BY_SRC_DIR = _REPO / "data" / "Digital_Dataset" / "newspapers" / "by_source"
 
 for _d in (NEWS_RAW_DIR, NEWS_PROC_DIR, NEWS_BY_SRC_DIR):
     _d.mkdir(parents=True, exist_ok=True)
@@ -78,6 +86,7 @@ def _extract_body(url: str) -> str:
     """Try newspaper3k first, fallback to BeautifulSoup."""
     try:
         from newspaper import Article
+
         art = Article(url, language="hi")
         art.download()
         art.parse()
@@ -108,14 +117,14 @@ def scrape_source(source: dict) -> Iterator[dict]:
 
     for card in soup.select(source["article_selector"])[:30]:
         title_el = card.select_one(source["title_selector"])
-        link_el  = card.select_one(source["link_selector"])
-        date_el  = card.select_one(source["date_selector"])
+        link_el = card.select_one(source["link_selector"])
+        date_el = card.select_one(source["date_selector"])
 
         if not title_el or not link_el:
             continue
 
         title = title_el.get_text(strip=True)
-        href  = _absolute_url(link_el.get("href", ""), source["name"])
+        href = _absolute_url(link_el.get("href", ""), source["name"])
 
         body = _extract_body(href)
         yield {
@@ -136,18 +145,26 @@ def load_to_postgres(articles: list[dict], engine: sa.Engine) -> int:
             content = f"{a['headline']} {a['body_raw']}"
             h = hashlib.sha256(content.encode()).hexdigest()
             try:
-                result = conn.execute(sa.text("""
+                result = conn.execute(
+                    sa.text("""
                     INSERT INTO news_articles
                       (source, headline, body_raw, url, published_at,
                        district_hint, ac_hint, content_hash)
                     VALUES
                       (:src, :hl, :body, :url, :pub, :dist, :ac, :hash)
                     ON CONFLICT (url) DO NOTHING
-                """), {
-                    "src": a["source"], "hl": a["headline"], "body": a["body_raw"],
-                    "url": a["url"], "pub": a.get("published_at"), "hash": h,
-                    "dist": a.get("district_hint"), "ac": a.get("ac_hint"),
-                })
+                """),
+                    {
+                        "src": a["source"],
+                        "hl": a["headline"],
+                        "body": a["body_raw"],
+                        "url": a["url"],
+                        "pub": a.get("published_at"),
+                        "hash": h,
+                        "dist": a.get("district_hint"),
+                        "ac": a.get("ac_hint"),
+                    },
+                )
                 loaded += result.rowcount
             except Exception as e:
                 logger.debug(f"Skip article: {e}")
@@ -164,47 +181,54 @@ def validate_scrape(engine: sa.Engine, source: str = "jagran") -> dict:
     results: dict = {}
     with engine.connect() as conn:
         # 1. Total row count
-        row = conn.execute(sa.text(
-            "SELECT COUNT(*) FROM news_articles WHERE source = :src"
-        ), {"src": source}).fetchone()
+        row = conn.execute(
+            sa.text("SELECT COUNT(*) FROM news_articles WHERE source = :src"), {"src": source}
+        ).fetchone()
         total = row[0] if row else 0
         results["total_rows"] = total
 
         # 2. Rows with empty headline or body
-        row = conn.execute(sa.text("""
+        row = conn.execute(
+            sa.text("""
             SELECT COUNT(*) FROM news_articles
             WHERE source = :src
               AND (headline IS NULL OR headline = ''
                    OR body_raw IS NULL OR body_raw = '')
-        """), {"src": source}).fetchone()
+        """),
+            {"src": source},
+        ).fetchone()
         empty_count = row[0] if row else 0
         results["empty_content_count"] = empty_count
-        results["content_ok"] = (empty_count == 0)
+        results["content_ok"] = empty_count == 0
 
         # 3. URL uniqueness (should always be 0 if constraint holds)
-        row = conn.execute(sa.text("""
+        row = conn.execute(
+            sa.text("""
             SELECT COUNT(*) FROM (
                 SELECT url FROM news_articles
                 WHERE source = :src
                 GROUP BY url HAVING COUNT(*) > 1
             ) dupes
-        """), {"src": source}).fetchone()
+        """),
+            {"src": source},
+        ).fetchone()
         dup_urls = row[0] if row else 0
         results["duplicate_urls"] = dup_urls
-        results["no_duplicates"] = (dup_urls == 0)
+        results["no_duplicates"] = dup_urls == 0
 
         # 4. Date parse consistency — fraction with parseable published_at
-        row = conn.execute(sa.text("""
+        row = conn.execute(
+            sa.text("""
             SELECT COUNT(*) FROM news_articles
             WHERE source = :src AND published_at IS NOT NULL
-        """), {"src": source}).fetchone()
+        """),
+            {"src": source},
+        ).fetchone()
         dated = row[0] if row else 0
         results["rows_with_date"] = dated
         results["date_coverage_pct"] = round(100 * dated / total, 1) if total else 0
 
-    results["all_checks_passed"] = (
-        results["content_ok"] and results["no_duplicates"] and total > 0
-    )
+    results["all_checks_passed"] = results["content_ok"] and results["no_duplicates"] and total > 0
     return results
 
 
@@ -223,8 +247,8 @@ def save_articles_json(articles: list[dict]) -> Path:
         json.dump(
             {
                 "scraped_at": datetime.now(timezone.utc).isoformat(),
-                "total":      len(merged),
-                "articles":   merged,
+                "total": len(merged),
+                "articles": merged,
             },
             f,
             ensure_ascii=False,
@@ -237,14 +261,15 @@ def save_articles_json(articles: list[dict]) -> Path:
 def classify_and_save_json(articles: list[dict]) -> Path:
     """Classify articles and write to newspapers/processed/articles_classified_YYYYMMDD.json."""
     from ingestion.classifier import classify_articles
+
     classified = classify_articles(articles, use_zeroshot=False)
     today = datetime.now(timezone.utc).strftime("%Y%m%d")
     out_path = NEWS_PROC_DIR / f"articles_classified_{today}.json"
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(
             {
-                "classified_at":       datetime.now(timezone.utc).isoformat(),
-                "total":               len(classified),
+                "classified_at": datetime.now(timezone.utc).isoformat(),
+                "total": len(classified),
                 "classified_articles": classified,
             },
             f,
@@ -255,23 +280,32 @@ def classify_and_save_json(articles: list[dict]) -> Path:
     return out_path
 
 
-def run(dry_run: bool = False, validate_only: bool = False,
-        save_json: bool = False, classify: bool = False):
+def run(
+    dry_run: bool = False,
+    validate_only: bool = False,
+    save_json: bool = False,
+    classify: bool = False,
+):
     redis_url = os.environ.get("REDIS_URL")
     lock_acquired = False
     redis_client = None
     if redis_url and not dry_run and not validate_only:
         try:
             import redis
+
             redis_client = redis.from_url(redis_url, socket_connect_timeout=2)
             if redis_client.set("lock:news_scraper", "locked", ex=3600, nx=True):
                 lock_acquired = True
                 logger.info("Acquired Redis distributed lock 'lock:news_scraper'")
             else:
-                logger.warning("Scraper lock 'lock:news_scraper' already active. Another instance is running. Exiting.")
+                logger.warning(
+                    "Scraper lock 'lock:news_scraper' already active. Another instance is running. Exiting."
+                )
                 return
         except Exception as exc:
-            logger.warning(f"Failed to connect to Redis for distributed locking: {exc}. Proceeding without lock...")
+            logger.warning(
+                f"Failed to connect to Redis for distributed locking: {exc}. Proceeding without lock..."
+            )
 
     try:
         pg_url = os.environ.get("POSTGRES_URL", "")
@@ -330,13 +364,21 @@ def run(dry_run: bool = False, validate_only: bool = False,
 
 if __name__ == "__main__":
     import argparse
+
     logging.basicConfig(level=logging.INFO)
     parser = argparse.ArgumentParser(description="Gorakhpur news scraper")
-    parser.add_argument("--dry-run",  action="store_true", help="Scrape but do not write")
+    parser.add_argument("--dry-run", action="store_true", help="Scrape but do not write")
     parser.add_argument("--validate", action="store_true", help="Run post-scrape validation only")
-    parser.add_argument("--json",     action="store_true", help="Save raw articles to newspapers/raw/")
-    parser.add_argument("--classify", action="store_true",
-                        help="Classify articles and save to newspapers/processed/")
+    parser.add_argument("--json", action="store_true", help="Save raw articles to newspapers/raw/")
+    parser.add_argument(
+        "--classify",
+        action="store_true",
+        help="Classify articles and save to newspapers/processed/",
+    )
     args = parser.parse_args()
-    run(dry_run=args.dry_run, validate_only=args.validate,
-        save_json=args.json, classify=args.classify)
+    run(
+        dry_run=args.dry_run,
+        validate_only=args.validate,
+        save_json=args.json,
+        classify=args.classify,
+    )

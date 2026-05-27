@@ -24,32 +24,28 @@ Run:
   python -m ingestion.eci_booth_results               # attempt auto-scrape
   python -m ingestion.eci_booth_results --pdf FILE    # parse local PDF
 """
+
 from __future__ import annotations
 
 import argparse
 import logging
 import os
 import re
-import time
 from pathlib import Path
 
 import sqlalchemy as sa
-from sqlalchemy import text
 from etl.constants import normalise_party as _normalise_party
+from sqlalchemy import text
 
 logger = logging.getLogger(__name__)
 
 # Gorakhpur Urban AC 322 pilot scope
 AC_NUMBER = 322
-AC_ID     = "GKP_322"
+AC_ID = "GKP_322"
 
 # CEO UP Form-20 URL pattern (verify this is still valid before running)
-FORM20_URL_2022 = (
-    "https://ceouttarpradesh.nic.in/FORM20/{ac_number}/form20_{ac_number}.pdf"
-)
-FORM20_URL_2024_LS = (
-    "https://ceouttarpradesh.nic.in/LokSabha2024/Form20/Form20_{ls_number}.pdf"
-)
+FORM20_URL_2022 = "https://ceouttarpradesh.nic.in/FORM20/{ac_number}/form20_{ac_number}.pdf"
+FORM20_URL_2024_LS = "https://ceouttarpradesh.nic.in/LokSabha2024/Form20/Form20_{ls_number}.pdf"
 
 
 def _make_booth_id(part_no: int) -> str:
@@ -57,6 +53,7 @@ def _make_booth_id(part_no: int) -> str:
 
 
 # ── PDF Parser ────────────────────────────────────────────────────────────────
+
 
 def parse_form20_pdf(pdf_path: Path) -> list[dict]:
     """
@@ -116,19 +113,22 @@ def parse_form20_pdf(pdf_path: Path) -> list[dict]:
                                 except ValueError:
                                     continue
                                 if votes > 0:
-                                    rows.append({
-                                        "booth_id":     booth_id,
-                                        "election_year":2022,
-                                        "party":        party,
-                                        "votes":        votes,
-                                        "winner_flag":  False,
-                                    })
+                                    rows.append(
+                                        {
+                                            "booth_id": booth_id,
+                                            "election_year": 2022,
+                                            "party": party,
+                                            "votes": votes,
+                                            "winner_flag": False,
+                                        }
+                                    )
 
     logger.info("Parsed %d vote rows from %s", len(rows), pdf_path.name)
     return rows
 
 
 # ── Auto-scrape ───────────────────────────────────────────────────────────────
+
 
 def attempt_auto_download(save_path: Path) -> bool:
     """
@@ -164,12 +164,14 @@ def attempt_auto_download(save_path: Path) -> bool:
 
 # ── Postgres Loader ───────────────────────────────────────────────────────────
 
+
 def load_booth_results(rows: list[dict], engine: sa.Engine) -> int:
     if not rows:
         return 0
 
     # Mark winners (max votes per booth)
     from collections import defaultdict
+
     max_votes: dict[str, int] = defaultdict(int)
     for r in rows:
         max_votes[r["booth_id"]] = max(max_votes[r["booth_id"]], r["votes"])
@@ -178,13 +180,16 @@ def load_booth_results(rows: list[dict], engine: sa.Engine) -> int:
 
     with engine.connect() as conn:
         for r in rows:
-            conn.execute(text("""
+            conn.execute(
+                text("""
                 INSERT INTO booth_results
                     (booth_id, election_year, party, votes, winner_flag)
                 VALUES
                     (:booth_id, :election_year, :party, :votes, :winner_flag)
                 ON CONFLICT DO NOTHING
-            """), r)
+            """),
+                r,
+            )
         conn.commit()
 
     logger.info("Inserted %d booth_results rows", len(rows))
@@ -192,6 +197,7 @@ def load_booth_results(rows: list[dict], engine: sa.Engine) -> int:
 
 
 # ── CLI ───────────────────────────────────────────────────────────────────────
+
 
 def run(pdf_path: Path | None = None):
     engine = sa.create_engine(os.environ["POSTGRES_URL"])
@@ -224,7 +230,8 @@ def run(pdf_path: Path | None = None):
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     parser = argparse.ArgumentParser(description="Ingest ECI Form-20 booth vote data")
-    parser.add_argument("--pdf", type=Path, default=None,
-                        help="Path to manually downloaded Form-20 PDF")
+    parser.add_argument(
+        "--pdf", type=Path, default=None, help="Path to manually downloaded Form-20 PDF"
+    )
     args = parser.parse_args()
     run(args.pdf)

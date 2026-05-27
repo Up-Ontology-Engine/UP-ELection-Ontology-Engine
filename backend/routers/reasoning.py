@@ -1,10 +1,18 @@
 from __future__ import annotations
-from typing import Optional, Literal
+
+from typing import Literal, Optional
+
 from fastapi import APIRouter, HTTPException, Query
 from pydantic import BaseModel, Field
+
 from ..queries import (
-    create_session, get_sessions, get_session,
-    get_session_messages, add_message, update_session_title, delete_session
+    add_message,
+    create_session,
+    delete_session,
+    get_session,
+    get_session_messages,
+    get_sessions,
+    update_session_title,
 )
 from ..reasoning import reasoning_query
 from ..validation import InputValidationRoute

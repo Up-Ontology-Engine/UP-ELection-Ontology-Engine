@@ -17,6 +17,7 @@ Rules enforced:
 Run:
     python -m analytics.geo_resolver_batch [--dry-run]
 """
+
 from __future__ import annotations
 
 import argparse
@@ -33,10 +34,10 @@ load_dotenv()
 
 logger = logging.getLogger(__name__)
 
-ALIAS_FILE       = Path(__file__).parents[1] / "data" / "seeds" / "gorakhpur_aliases.json"
-BOOTH_THRESHOLD  = 0.75   # minimum geo_confidence to assign mapped_booth_id
-PILOT_AC_ID      = "GKP_322"
-BATCH_SIZE       = 500
+ALIAS_FILE = Path(__file__).parents[2] / "data" / "seeds" / "gorakhpur_aliases.json"
+BOOTH_THRESHOLD = 0.75  # minimum geo_confidence to assign mapped_booth_id
+PILOT_AC_ID = "GKP_322"
+BATCH_SIZE = 500
 
 
 def _load_aliases() -> dict:
@@ -70,7 +71,7 @@ def _resolve(location_text: str, aliases: dict, keys: list[str]):
 
     match, score = fuzz.extractOne(txt, keys)
     geo_conf = round(score / 100.0, 3)
-    entry    = aliases[match]
+    entry = aliases[match]
 
     if entry["type"] == "booth" and geo_conf >= BOOTH_THRESHOLD:
         return entry["id"], PILOT_AC_ID, "booth", geo_conf, "fuzzy_alias"
@@ -84,18 +85,24 @@ def _resolve(location_text: str, aliases: dict, keys: list[str]):
 
 def run(engine: sa.Engine, dry_run: bool = False) -> dict:
     aliases = _load_aliases()
-    keys    = list(aliases.keys())
+    keys = list(aliases.keys())
 
     # Fetch events that have a location_text but no booth mapping
     with engine.connect() as conn:
-        rows = conn.execute(text("""
+        rows = (
+            conn.execute(
+                text("""
             SELECT id::text AS event_id, location_text
             FROM pulse_events
             WHERE location_text IS NOT NULL
               AND location_text != ''
               AND mapped_booth_id IS NULL
             ORDER BY created_at
-        """)).mappings().fetchall()
+        """)
+            )
+            .mappings()
+            .fetchall()
+        )
 
     if not rows:
         logger.info("No events with unresolved location_text — nothing to do.")
@@ -104,20 +111,22 @@ def run(engine: sa.Engine, dry_run: bool = False) -> dict:
     logger.info("Geo-resolving %d events with location_text", len(rows))
 
     updates: list[dict] = []
-    counts  = {"booth_assigned": 0, "ac_level": 0}
+    counts = {"booth_assigned": 0, "ac_level": 0}
 
     for r in rows:
         booth_id, ac_id, geo_level, geo_conf, geo_method = _resolve(
             r["location_text"], aliases, keys
         )
-        updates.append({
-            "event_id":       r["event_id"],
-            "mapped_booth_id": booth_id,
-            "mapped_ac_id":   ac_id,
-            "geo_level":      geo_level,
-            "geo_confidence": geo_conf,
-            "geo_method":     geo_method,
-        })
+        updates.append(
+            {
+                "event_id": r["event_id"],
+                "mapped_booth_id": booth_id,
+                "mapped_ac_id": ac_id,
+                "geo_level": geo_level,
+                "geo_confidence": geo_conf,
+                "geo_method": geo_method,
+            }
+        )
         if booth_id:
             counts["booth_assigned"] += 1
         else:
@@ -126,8 +135,13 @@ def run(engine: sa.Engine, dry_run: bool = False) -> dict:
     if dry_run:
         logger.info("[dry-run] Would update %d events: %s", len(updates), counts)
         for u in updates[:10]:
-            logger.info("  %s → booth=%s  conf=%.2f  method=%s",
-                        u["event_id"][:8], u["mapped_booth_id"], u["geo_confidence"], u["geo_method"])
+            logger.info(
+                "  %s → booth=%s  conf=%.2f  method=%s",
+                u["event_id"][:8],
+                u["mapped_booth_id"],
+                u["geo_confidence"],
+                u["geo_method"],
+            )
         return {"scanned": len(rows), **counts, "dry_run": True}
 
     # Bulk update in batches
@@ -143,13 +157,15 @@ def run(engine: sa.Engine, dry_run: bool = False) -> dict:
     updated = 0
     with engine.begin() as conn:
         for start in range(0, len(updates), BATCH_SIZE):
-            batch = updates[start:start + BATCH_SIZE]
+            batch = updates[start : start + BATCH_SIZE]
             conn.execute(stmt, batch)
             updated += len(batch)
 
     logger.info(
         "Geo-resolution done: %d events updated — %d booth-assigned, %d AC-level",
-        updated, counts["booth_assigned"], counts["ac_level"],
+        updated,
+        counts["booth_assigned"],
+        counts["ac_level"],
     )
     return {"scanned": len(rows), "updated": updated, **counts}
 

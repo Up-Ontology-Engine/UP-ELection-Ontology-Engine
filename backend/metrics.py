@@ -23,23 +23,31 @@ Usage in main.py:
 Or standalone:
     python -m api.metrics   # starts a simple HTTP server on :9090
 """
+
 from __future__ import annotations
 
-import time
 import os
+import time
 from typing import Callable
 
 # ── Prometheus client — optional dependency ───────────────────────────────────
 try:
     from prometheus_client import (
-        Counter, Histogram, Gauge, CollectorRegistry,
-        generate_latest, CONTENT_TYPE_LATEST, REGISTRY
+        CONTENT_TYPE_LATEST,
+        REGISTRY,
+        CollectorRegistry,
+        Counter,
+        Gauge,
+        Histogram,
+        generate_latest,
     )
+
     _PROM_AVAILABLE = True
 except ImportError:
     _PROM_AVAILABLE = False
 
 import logging
+
 logger = logging.getLogger(__name__)
 
 
@@ -81,7 +89,7 @@ if _PROM_AVAILABLE:
     NLP_TOTAL = Counter(
         "nlp_extraction_total",
         "LLM NLP extraction calls",
-        ["status"],   # success | error | skipped
+        ["status"],  # success | error | skipped
     )
 
     SCRAPER_ARTICLES = Counter(
@@ -97,6 +105,7 @@ if _PROM_AVAILABLE:
 
 
 # ── Instrumentation helpers ───────────────────────────────────────────────────
+
 
 def record_request(method: str, endpoint: str, status: int, latency: float) -> None:
     """Record a completed API request. Call from middleware."""
@@ -138,6 +147,7 @@ def update_db_pool_gauge(checked_out: int) -> None:
 
 # ── FastAPI middleware integration ─────────────────────────────────────────────
 
+
 def setup_metrics(app) -> None:
     """
     Attach Prometheus metrics middleware to a FastAPI app.
@@ -162,6 +172,7 @@ def setup_metrics(app) -> None:
             path = request.url.path
             # Replace UUIDs and booth/AC IDs with placeholders
             import re
+
             path = re.sub(r"/[A-Z]{2,6}_[0-9]{3,4}", "/{ac_id}", path)
             path = re.sub(r"/[A-Z]{2,6}_B[0-9]{3,4}", "/{booth_id}", path)
             path = re.sub(r"/\d+", "/{id}", path)
@@ -185,9 +196,11 @@ async def metrics_endpoint(request=None, response=None):
     """
     if not _PROM_AVAILABLE:
         from starlette.responses import PlainTextResponse
+
         return PlainTextResponse("# prometheus_client not installed\n", status_code=503)
 
     from starlette.responses import Response as StarletteResponse
+
     data = generate_latest(REGISTRY)
     return StarletteResponse(content=data, media_type=CONTENT_TYPE_LATEST)
 
@@ -200,7 +213,6 @@ if __name__ == "__main__":
         raise SystemExit(1)
 
     import http.server
-    import threading
 
     PORT = int(os.environ.get("METRICS_PORT", "9090"))
 
@@ -215,7 +227,9 @@ if __name__ == "__main__":
             else:
                 self.send_response(404)
                 self.end_headers()
-        def log_message(self, *args): pass  # suppress HTTP logs
+
+        def log_message(self, *args):
+            pass  # suppress HTTP logs
 
     server = http.server.HTTPServer(("0.0.0.0", PORT), MetricsHandler)
     print(f"[metrics] Serving on http://0.0.0.0:{PORT}/metrics")

@@ -26,9 +26,9 @@ Scheme → Issue tag mapping:
 
 Run: python -m ingestion.egramswaraj_schemes
 """
+
 from __future__ import annotations
 
-import json
 import logging
 import os
 import re
@@ -47,35 +47,35 @@ except ImportError:
     raise ImportError("Run: pip install requests beautifulsoup4")
 
 # eGramSwaraj state/district codes
-STATE_CODE    = "9"    # Uttar Pradesh
+STATE_CODE = "9"  # Uttar Pradesh
 DISTRICT_CODE = "188"  # Gorakhpur
-DISTRICT_ID   = "GKP"
+DISTRICT_ID = "GKP"
 
 # Scheme name → issue tag
 SCHEME_TO_ISSUE: dict[str, str] = {
-    "jal jeevan":        "water",
-    "jjm":               "water",
-    "har ghar jal":      "water",
-    "pmay":              "housing",
+    "jal jeevan": "water",
+    "jjm": "water",
+    "har ghar jal": "water",
+    "pmay": "housing",
     "pradhan mantri awas": "housing",
-    "mgnrega":           "jobs",
-    "mahatma gandhi":    "jobs",
-    "nrega":             "jobs",
-    "pmgsy":             "roads",
+    "mgnrega": "jobs",
+    "mahatma gandhi": "jobs",
+    "nrega": "jobs",
+    "pmgsy": "roads",
     "pradhan mantri gram sadak": "roads",
-    "ujjwala":           "electricity",
-    "pm ujjwala":        "electricity",
-    "saubhagya":         "electricity",
-    "swachh bharat":     "sanitation",
-    "odf":               "sanitation",
-    "mdm":               "education",
-    "mid day meal":      "education",
-    "pm kisan":          "farmer",
-    "kisan":             "farmer",
-    "pension":           "welfare",
-    "ayushman":          "health",
-    "pmjay":             "health",
-    "insurance":         "welfare",
+    "ujjwala": "electricity",
+    "pm ujjwala": "electricity",
+    "saubhagya": "electricity",
+    "swachh bharat": "sanitation",
+    "odf": "sanitation",
+    "mdm": "education",
+    "mid day meal": "education",
+    "pm kisan": "farmer",
+    "kisan": "farmer",
+    "pension": "welfare",
+    "ayushman": "health",
+    "pmjay": "health",
+    "insurance": "welfare",
 }
 
 BASE_URL = "https://egramswaraj.gov.in"
@@ -89,7 +89,7 @@ HEADERS = {
     "Referer": BASE_URL,
 }
 
-SEEDS_DIR = Path(__file__).parents[1] / "data" / "seeds"
+SEEDS_DIR = Path(__file__).parents[2] / "data" / "seeds"
 
 
 def _issue_tag(scheme_name: str) -> str:
@@ -111,6 +111,7 @@ def _parse_amount(text: str) -> int:
 def _make_panchayat_id(block: str, gp: str) -> str:
     def slug(s: str) -> str:
         return re.sub(r"[^A-Z0-9]+", "_", s.strip().upper()).strip("_")
+
     return f"{slug(block)}_{slug(gp)}"
 
 
@@ -123,18 +124,19 @@ def scrape_gp_list(block_code: str, block_name: str) -> list[dict]:
             "blockCode": block_code,
         }
         resp = requests.get(
-            f"{BASE_URL}/getGramPanchayatList.do",
-            params=params, headers=HEADERS, timeout=20
+            f"{BASE_URL}/getGramPanchayatList.do", params=params, headers=HEADERS, timeout=20
         )
         resp.raise_for_status()
         data = resp.json()
         gps = []
         for item in data if isinstance(data, list) else data.get("data", []):
-            gps.append({
-                "gp_code": str(item.get("gpCode") or item.get("code", "")),
-                "gp_name": str(item.get("gpName") or item.get("name", "")),
-                "block_name": block_name,
-            })
+            gps.append(
+                {
+                    "gp_code": str(item.get("gpCode") or item.get("code", "")),
+                    "gp_name": str(item.get("gpName") or item.get("name", "")),
+                    "block_name": block_name,
+                }
+            )
         logger.info("Block %s: %d GPs", block_name, len(gps))
         return gps
     except Exception as e:
@@ -146,10 +148,10 @@ def scrape_gp_schemes(gp_code: str, gp_name: str, block_name: str) -> list[dict]
     """Get scheme activity for one GP."""
     try:
         params = {
-            "stateCode":    STATE_CODE,
+            "stateCode": STATE_CODE,
             "districtCode": DISTRICT_CODE,
-            "gpCode":       gp_code,
-            "finYear":      "2024-2025",
+            "gpCode": gp_code,
+            "finYear": "2024-2025",
         }
         resp = requests.get(PLAN_REPORT_URL, params=params, headers=HEADERS, timeout=20)
         resp.raise_for_status()
@@ -172,19 +174,25 @@ def scrape_gp_schemes(gp_code: str, gp_name: str, block_name: str) -> list[dict]
             if not scheme_name or scheme_name.lower() in ("s.no", "sr.no", "#"):
                 continue
 
-            rows_data.append({
-                "panchayat_id":    panchayat_id,
-                "gp_name":         gp_name,
-                "block_name":      block_name,
-                "scheme_name":     scheme_name,
-                "issue_tag":       _issue_tag(scheme_name),
-                "activity_desc":   _safe_col(cells, headers, "activity") or "",
-                "beneficiary_count": int(re.sub(r"\D", "", _safe_col(cells, headers, "beneficiar") or "0") or 0),
-                "sanctioned_amount": _parse_amount(_safe_col(cells, headers, "sanction") or "0"),
-                "expenditure":     _parse_amount(_safe_col(cells, headers, "expenditure") or "0"),
-                "status":          _safe_col(cells, headers, "status") or "completed",
-                "financial_year":  "2024-2025",
-            })
+            rows_data.append(
+                {
+                    "panchayat_id": panchayat_id,
+                    "gp_name": gp_name,
+                    "block_name": block_name,
+                    "scheme_name": scheme_name,
+                    "issue_tag": _issue_tag(scheme_name),
+                    "activity_desc": _safe_col(cells, headers, "activity") or "",
+                    "beneficiary_count": int(
+                        re.sub(r"\D", "", _safe_col(cells, headers, "beneficiar") or "0") or 0
+                    ),
+                    "sanctioned_amount": _parse_amount(
+                        _safe_col(cells, headers, "sanction") or "0"
+                    ),
+                    "expenditure": _parse_amount(_safe_col(cells, headers, "expenditure") or "0"),
+                    "status": _safe_col(cells, headers, "status") or "completed",
+                    "financial_year": "2024-2025",
+                }
+            )
 
         return rows_data
     except Exception as e:
@@ -204,17 +212,18 @@ def scrape_blocks() -> list[dict]:
     try:
         params = {"stateCode": STATE_CODE, "districtCode": DISTRICT_CODE}
         resp = requests.get(
-            f"{BASE_URL}/getBlockList.do",
-            params=params, headers=HEADERS, timeout=20
+            f"{BASE_URL}/getBlockList.do", params=params, headers=HEADERS, timeout=20
         )
         resp.raise_for_status()
         data = resp.json()
         blocks = []
         for item in data if isinstance(data, list) else data.get("data", []):
-            blocks.append({
-                "block_code": str(item.get("blockCode") or item.get("code", "")),
-                "block_name": str(item.get("blockName") or item.get("name", "")),
-            })
+            blocks.append(
+                {
+                    "block_code": str(item.get("blockCode") or item.get("code", "")),
+                    "block_name": str(item.get("blockName") or item.get("name", "")),
+                }
+            )
         logger.info("District Gorakhpur: %d blocks", len(blocks))
         return blocks
     except Exception as e:
@@ -251,14 +260,18 @@ def load_to_postgres(rows: list[dict], engine: sa.Engine) -> int:
     with engine.connect() as conn:
         # Ensure panchayat exists before inserting scheme_activity
         for r in rows:
-            conn.execute(text("""
+            conn.execute(
+                text("""
                 INSERT INTO panchayat_master (panchayat_id, gp_name, block_name, district_id)
                 VALUES (:pid, :gp, :block, 'GKP')
                 ON CONFLICT (panchayat_id) DO UPDATE SET gp_name = EXCLUDED.gp_name
-            """), {"pid": r["panchayat_id"], "gp": r["gp_name"], "block": r["block_name"]})
+            """),
+                {"pid": r["panchayat_id"], "gp": r["gp_name"], "block": r["block_name"]},
+            )
 
         for r in rows:
-            conn.execute(text("""
+            conn.execute(
+                text("""
                 INSERT INTO scheme_activity
                     (panchayat_id, scheme_name, issue_tag, activity_desc,
                      beneficiary_count, status, financial_year)
@@ -266,15 +279,17 @@ def load_to_postgres(rows: list[dict], engine: sa.Engine) -> int:
                     (:pid, :scheme, :issue, :desc,
                      :bcount, :status, :fy)
                 ON CONFLICT DO NOTHING
-            """), {
-                "pid":    r["panchayat_id"],
-                "scheme": r["scheme_name"],
-                "issue":  r["issue_tag"],
-                "desc":   r.get("activity_desc", ""),
-                "bcount": r.get("beneficiary_count", 0),
-                "status": r.get("status", "completed"),
-                "fy":     r.get("financial_year", "2024-2025"),
-            })
+            """),
+                {
+                    "pid": r["panchayat_id"],
+                    "scheme": r["scheme_name"],
+                    "issue": r["issue_tag"],
+                    "desc": r.get("activity_desc", ""),
+                    "bcount": r.get("beneficiary_count", 0),
+                    "status": r.get("status", "completed"),
+                    "fy": r.get("financial_year", "2024-2025"),
+                },
+            )
 
         conn.commit()
     return len(rows)
@@ -312,6 +327,7 @@ def run(block_filter: str | None = None, max_gps: int = 50):
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     import argparse
+
     p = argparse.ArgumentParser()
     p.add_argument("--block", default=None, help="Scrape only this block name")
     p.add_argument("--max-gps", type=int, default=50, help="Max GPs per block")

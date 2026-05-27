@@ -2,14 +2,12 @@
 
 from __future__ import annotations
 
-import functools
 from datetime import datetime, timezone
 
 from sqlalchemy import text
 
 from .cache import cached
 from .db import get_neo4j_session, get_pg_engine
-
 
 # Logical → physical AC-ID aliases (frontend uses logical, DBs use physical)
 _PG_AC_ALIASES: dict[str, str] = {
@@ -21,6 +19,21 @@ _PG_AC_ALIASES: dict[str, str] = {
 def _rac(ac_id: str) -> str:
     """Resolve a logical AC-ID to its physical DB counterpart."""
     return _PG_AC_ALIASES.get(ac_id, ac_id)
+
+
+def get_all_acs() -> list[dict]:
+    """Return a list of all Assembly Constituencies from ac_master."""
+    with get_pg_engine().connect() as conn:
+        rows = (
+            conn.execute(
+                text(
+                    "SELECT ac_id, ac_name, ac_type, district_name FROM ac_master ORDER BY ac_name"
+                )
+            )
+            .mappings()
+            .fetchall()
+        )
+    return [dict(r) for r in rows]
 
 
 # ── Booth geo data (lat/lon + pulse scores) ───────────────────────────────────
@@ -57,7 +70,7 @@ def get_booth_geo(ac_id: str) -> list[dict]:
 
 
 # ── Booth list for AC ─────────────────────────────────────────────────────────
-@functools.lru_cache(maxsize=32)
+@cached("cache:booth_list:{ac_id}", ttl=60)
 def get_booths_for_ac(ac_id: str) -> list[dict]:
     resolved = _rac(ac_id)
     with get_pg_engine().connect() as conn:
@@ -255,7 +268,7 @@ def get_booth_comments(booth_id: str, limit: int = 10, source: str | None = None
 
 
 # ── Candidates ────────────────────────────────────────────────────────────────
-def get_ac_candidates(ac_id: str) -> list[dict]:
+def get_ac_candidates(ac_id: str, limit: int = 100, offset: int = 0) -> list[dict]:
     """
     Returns enriched candidate list for an AC, joining across:
       candidate_master        — identity, profession, net_worth_rs   (007)
@@ -369,8 +382,9 @@ def get_ac_candidates(ac_id: str) -> list[dict]:
                 cph.rank ASC NULLS LAST,
                 cm.is_incumbent DESC,
                 cm.party
+            LIMIT :limit OFFSET :offset
         """),
-                {"ac_id": ac_id},
+                {"ac_id": ac_id, "limit": limit, "offset": offset},
             )
             .mappings()
             .fetchall()
@@ -1609,6 +1623,7 @@ def get_ac_intel_summary(ac_id: str) -> dict:
                     )
         except Exception as exc:
             import logging
+
             logging.getLogger(__name__).warning("Neo4j intel summary failed: %s", exc)
         return _issues, _videos, _candidates, _yt_count
 

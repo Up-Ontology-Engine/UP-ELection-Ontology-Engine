@@ -11,10 +11,12 @@ Checks performed:
 - Orphan PulseEvent nodes (no AT_BOOTH relationship)
 - Booth nodes not attached to any AC
 """
+
 from __future__ import annotations
 
-from backend.db import get_neo4j_session
 from neo4j import exceptions as neo4j_exceptions
+
+from backend.db import get_neo4j_session
 
 LABEL_KEY_MAP: dict[str, tuple[str, ...]] = {
     "State": ("state_id",),
@@ -29,26 +31,20 @@ LABEL_KEY_MAP: dict[str, tuple[str, ...]] = {
 # Set of allowable labels — used to prevent unexpected values from reaching Cypher.
 _ALLOWED_LABELS: frozenset[str] = frozenset(LABEL_KEY_MAP.keys())
 # Set of allowable property names — used to guard the duplicate-ID queries.
-_ALLOWED_PROPS: frozenset[str] = frozenset(
-    p for keys in LABEL_KEY_MAP.values() for p in keys
-)
+_ALLOWED_PROPS: frozenset[str] = frozenset(p for keys in LABEL_KEY_MAP.values() for p in keys)
 
 
 def _validate_label(label: str) -> str:
     """Raise ValueError if label is not in the known whitelist."""
     if label not in _ALLOWED_LABELS:
-        raise ValueError(
-            f"Unknown graph label '{label}'. Allowed: {sorted(_ALLOWED_LABELS)}"
-        )
+        raise ValueError(f"Unknown graph label '{label}'. Allowed: {sorted(_ALLOWED_LABELS)}")
     return label
 
 
 def _validate_prop(prop: str) -> str:
     """Raise ValueError if property key is not in the known whitelist."""
     if prop not in _ALLOWED_PROPS:
-        raise ValueError(
-            f"Unknown property '{prop}'. Allowed: {sorted(_ALLOWED_PROPS)}"
-        )
+        raise ValueError(f"Unknown property '{prop}'. Allowed: {sorted(_ALLOWED_PROPS)}")
     return prop
 
 
@@ -63,7 +59,7 @@ def _count_nodes(session, label: str) -> int:
 def _find_duplicate_ids(session, label: str, prop: str) -> list[tuple[str, int]]:
     """Find duplicate primary-ID values for a node type. Both label and prop are whitelisted."""
     label = _validate_label(label)
-    prop  = _validate_prop(prop)
+    prop = _validate_prop(prop)
     # Label and property are both validated from a controlled whitelist above.
     q = (
         f"MATCH (n:{label}) WHERE n.{prop} IS NOT NULL "  # noqa: S608
@@ -144,9 +140,7 @@ if __name__ == "__main__":
         pretty_print(r)
     except RuntimeError as e:
         print("Error:", e)
-        print(
-            "Ensure environment variables are set: NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD"
-        )
+        print("Ensure environment variables are set: NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD")
         print("Example:")
         print(
             "NEO4J_URI='neo4j://localhost:7687' NEO4J_USER='neo4j' NEO4J_PASSWORD='yourpw' python -m graph.validators.validate_graph"

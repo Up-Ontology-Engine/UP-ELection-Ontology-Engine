@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 Convert UP Election PoolBoothData PDFs to structured JSON in English.
 
@@ -8,24 +8,23 @@ Pipeline: PyMuPDF → 3-column image crops → Tesseract OCR → regex parse →
 Output: data/processed/pool_booth/<stem>.json
 """
 
-import os
-import re
 import json
-import time
 import logging
-from pathlib import Path
+import re
+import time
 from concurrent.futures import ProcessPoolExecutor, as_completed
+from pathlib import Path
 
 import fitz
 import pytesseract
 from PIL import Image
 
-pytesseract.pytesseract.tesseract_cmd = '/opt/homebrew/bin/tesseract'
+pytesseract.pytesseract.tesseract_cmd = "/opt/homebrew/bin/tesseract"
 
-BASE_DIR = Path(__file__).resolve().parents[1]
-INPUT_DIR = BASE_DIR / 'data' / 'PoolBoothData'
-OUTPUT_DIR = BASE_DIR / 'data' / 'PoolBoothData_JSON'
-LOG_FILE = BASE_DIR / 'scripts' / 'pdf_to_json.log'
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+INPUT_DIR = BASE_DIR / "data" / "PoolBoothData"
+OUTPUT_DIR = BASE_DIR / "data" / "PoolBoothData_JSON"
+LOG_FILE = BASE_DIR / "scripts" / "pdf_to_json.log"
 
 DPI_FULL = 200
 DPI_PREVIEW = 120  # for quick photo-page detection + part number
@@ -33,9 +32,9 @@ DPI_PREVIEW = 120  # for quick photo-page detection + part number
 # ── logging ─────────────────────────────────────────────────────────────────
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s [%(levelname)s] %(message)s',
+    format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=[
-        logging.FileHandler(LOG_FILE, encoding='utf-8'),
+        logging.FileHandler(LOG_FILE, encoding="utf-8"),
         logging.StreamHandler(),
     ],
 )
@@ -43,27 +42,27 @@ log = logging.getLogger(__name__)
 
 # ── Translation helpers ──────────────────────────────────────────────────────
 
-GENDER_MAP = {'पुरुष': 'Male', 'महिला': 'Female'}
+GENDER_MAP = {"पुरुष": "Male", "महिला": "Female"}
 
 RESERVATION_MAP = {
-    'सामान्य': 'General',
-    'अनुसूचित जाति': 'Scheduled Caste',
-    'अनुसूचित जनजाति': 'Scheduled Tribe',
-    'अन्य पिछड़ा वर्ग': 'Other Backward Class',
+    "सामान्य": "General",
+    "अनुसूचित जाति": "Scheduled Caste",
+    "अनुसूचित जनजाति": "Scheduled Tribe",
+    "अन्य पिछड़ा वर्ग": "Other Backward Class",
 }
 
 KNOWN_PLACES = {
-    'गोरखपुर': 'Gorakhpur',
-    'गोरखपुर शहर': 'Gorakhpur City',
-    'उत्तर प्रदेश': 'Uttar Pradesh',
-    'गोरखपुर ग्रामीण': 'Gorakhpur Rural',
+    "गोरखपुर": "Gorakhpur",
+    "गोरखपुर शहर": "Gorakhpur City",
+    "उत्तर प्रदेश": "Uttar Pradesh",
+    "गोरखपुर ग्रामीण": "Gorakhpur Rural",
 }
 
 
 # OCR artifacts that appear at the end of names when card labels bleed in
 # (e.g. transliterated "नाम" → "Na", "पिता" → "Pi", etc.)
 _NAME_LABEL_ARTIFACT_RE = re.compile(
-    r'\s+(?:Na|Naa|Pi|Pii|Rpa|Rp|Ha|Pita|Pati|Neem|Makan)\s*$',
+    r"\s+(?:Na|Naa|Pi|Pii|Rpa|Rp|Ha|Pita|Pati|Neem|Makan)\s*$",
     re.IGNORECASE,
 )
 
@@ -76,35 +75,36 @@ def transliterate_name(text: str) -> str:
     # If already mostly ASCII, keep as-is
     if sum(1 for c in text if ord(c) < 128) / max(len(text), 1) > 0.75:
         # Still strip label artifacts that are already in ASCII form
-        return _NAME_LABEL_ARTIFACT_RE.sub('', text).strip()
+        return _NAME_LABEL_ARTIFACT_RE.sub("", text).strip()
     try:
         from indic_transliteration import sanscript
+
         roman = sanscript.transliterate(text, sanscript.DEVANAGARI, sanscript.OPTITRANS)
         # Normalize doubled vowels created by OPTITRANS long-vowel encoding
-        roman = re.sub(r'aa', 'a', roman)
-        roman = re.sub(r'ii', 'i', roman)
-        roman = re.sub(r'uu', 'u', roman)
+        roman = re.sub(r"aa", "a", roman)
+        roman = re.sub(r"ii", "i", roman)
+        roman = re.sub(r"uu", "u", roman)
         roman = roman.strip()
-        roman = _NAME_LABEL_ARTIFACT_RE.sub('', roman).strip()
-        return ' '.join(w.capitalize() for w in roman.split()) if roman else text
+        roman = _NAME_LABEL_ARTIFACT_RE.sub("", roman).strip()
+        return " ".join(w.capitalize() for w in roman.split()) if roman else text
     except Exception:
         return text
 
 
 # Persistent translation cache shared across all PDFs
-_PLACE_CACHE_FILE = BASE_DIR / 'scripts' / 'translation_cache.json'
+_PLACE_CACHE_FILE = BASE_DIR / "scripts" / "translation_cache.json"
 _place_cache: dict = {}
 
 
 def _load_place_cache() -> None:
     global _place_cache
     if _PLACE_CACHE_FILE.exists():
-        with open(_PLACE_CACHE_FILE, encoding='utf-8') as f:
+        with open(_PLACE_CACHE_FILE, encoding="utf-8") as f:
             _place_cache = json.load(f)
 
 
 def _save_place_cache() -> None:
-    with open(_PLACE_CACHE_FILE, 'w', encoding='utf-8') as f:
+    with open(_PLACE_CACHE_FILE, "w", encoding="utf-8") as f:
         json.dump(_place_cache, f, ensure_ascii=False, indent=2)
 
 
@@ -126,9 +126,12 @@ def translate_place(text: str) -> str:
     result = transliterate_name(text)  # default: fast local transliteration
     try:
         import concurrent.futures as _cf
+
         def _call_api():
             from deep_translator import GoogleTranslator
-            return GoogleTranslator(source='hi', target='en').translate(text)
+
+            return GoogleTranslator(source="hi", target="en").translate(text)
+
         with _cf.ThreadPoolExecutor(max_workers=1) as ex:
             future = ex.submit(_call_api)
             try:
@@ -147,13 +150,14 @@ def translate_place(text: str) -> str:
 
 # ── OCR helpers ──────────────────────────────────────────────────────────────
 
+
 def render_page_image(page, dpi: int) -> Image.Image:
     pix = page.get_pixmap(dpi=dpi)
-    return Image.frombytes('RGB', [pix.width, pix.height], pix.samples)
+    return Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
 
 
 def ocr_image(img: Image.Image) -> str:
-    return pytesseract.image_to_string(img, lang='hin+eng', config='--psm 6')
+    return pytesseract.image_to_string(img, lang="hin+eng", config="--psm 6")
 
 
 def ocr_columns(img: Image.Image) -> tuple[str, str, str]:
@@ -171,33 +175,36 @@ def ocr_columns(img: Image.Image) -> tuple[str, str, str]:
 
 def is_photo_page(text: str) -> bool:
     """Return True if the page is a map/photo page with no voter data."""
-    return not (VOTER_ID_RE.search(text) and 'नाम' in text and 'आयु' in text)
+    return not (VOTER_ID_RE.search(text) and "नाम" in text and "आयु" in text)
 
 
 # ── Voter record patterns ────────────────────────────────────────────────────
 
 # Voter IDs: 2-4 letters + 6-9 digits (OCR may produce lowercase)
-VOTER_ID_RE = re.compile(r'\b([A-Za-z]{2,4}\d{6,9})\b')
+VOTER_ID_RE = re.compile(r"\b([A-Za-z]{2,4}\d{6,9})\b")
 
-NAME_RE = re.compile(r'नाम\s*[:।]\s*(.+?)(?=\n|पिता|पति|मकान|आयु|लिंग|$)')
-FATHER_RE = re.compile(r'पिता का नाम\s*[:।]\s*(.+?)(?=\n|मकान|आयु|लिंग|$)')
-HUSBAND_RE = re.compile(r'पति का नाम\s*[:।]\s*(.+?)(?=\n|मकान|आयु|लिंग|$)')
+NAME_RE = re.compile(r"नाम\s*[:।]\s*(.+?)(?=\n|पिता|पति|मकान|आयु|लिंग|$)")
+FATHER_RE = re.compile(r"पिता का नाम\s*[:।]\s*(.+?)(?=\n|मकान|आयु|लिंग|$)")
+HUSBAND_RE = re.compile(r"पति का नाम\s*[:।]\s*(.+?)(?=\n|मकान|आयु|लिंग|$)")
 HOUSE_RE = re.compile(
-    r'मकान संख्या\s*[:।]\s*([^\n]+?)(?:\s*(?:फोटो|उपलब्ध|है|a\b|धर\b|om\b|\[|]|-{2})|\n|$)'
+    r"मकान संख्या\s*[:।]\s*([^\n]+?)(?:\s*(?:फोटो|उपलब्ध|है|a\b|धर\b|om\b|\[|]|-{2})|\n|$)"
 )
-AGE_RE = re.compile(r'आयु\s*[:।]?\s*(\d{1,3})')
-GENDER_RE = re.compile(r'लिंग\s*[:।]\s*(पुरुष|महिला)')
+AGE_RE = re.compile(r"आयु\s*[:।]?\s*(\d{1,3})")
+GENDER_RE = re.compile(r"लिंग\s*[:।]\s*(पुरुष|महिला)")
 
 # Header patterns
-PART_RE = re.compile(r'भाग संख्या[\s:]+(\d+)')
-SECTION_RE = re.compile(r'अनुभाग संख्या और नाम\s*:\s*(\d+)-(.+?)(?:\n|$)')
-ASSEMBLY_RE = re.compile(r'(\d{2,3})\s*-\s*([ऀ-ॿa-zA-Z ]+?)\s*(?:\(|भाग)')
-PARLIA_RE = re.compile(
-    r'संसदीय.+?:\s*(\d+)\s*-\s*([ऀ-ॿa-zA-Z ]+?)(?:\(|$|\n)'
+PART_RE = re.compile(r"भाग संख्या[\s:]+(\d+)")
+SECTION_RE = re.compile(r"अनुभाग संख्या और नाम\s*:\s*(\d+)-(.+?)(?:\n|$)")
+ASSEMBLY_RE = re.compile(r"(\d{2,3})\s*-\s*([ऀ-ॿa-zA-Z ]+?)\s*(?:\(|भाग)")
+PARLIA_RE = re.compile(r"संसदीय.+?:\s*(\d+)\s*-\s*([ऀ-ॿa-zA-Z ]+?)(?:\(|$|\n)")
+PUB_DATE_RE = re.compile(r"प्रकाशन की तिथि\s*[:।]\s*([\d\-/]+)")
+REVISION_RE = re.compile(r"पुनरीक्षण का प्रकार\s*[:।]\s*(.+?)(?:\n|$)")
+RESERVATION_RE = re.compile(r"\((सामान्य|अनुसूचित जाति|अनुसूचित जनजाति|अन्य पिछड़ा वर्ग)\)")
+
+POLLING_STATION_RE = re.compile(
+    r"मतदान\s+(?:केन्द्र|स्थल)[^\n]*?(?:नाम|विवरण)[\s:।]*\n?\s*(?:(?:\d+[-—\s]*)*)(.+?)(?:\n|$)"
 )
-PUB_DATE_RE = re.compile(r'प्रकाशन की तिथि\s*[:।]\s*([\d\-/]+)')
-REVISION_RE = re.compile(r'पुनरीक्षण का प्रकार\s*[:।]\s*(.+?)(?:\n|$)')
-RESERVATION_RE = re.compile(r'\((सामान्य|अनुसूचित जाति|अनुसूचित जनजाति|अन्य पिछड़ा वर्ग)\)')
+ADDRESS_RE = re.compile(r"(?:मतदान|पता)[^\n]*?(?:पता|भवन|पूर्ण)[\s:।]*\n?\s*(.+?)(?:\n|$)")
 
 
 def normalize_voter_id(raw: str) -> str:
@@ -205,24 +212,23 @@ def normalize_voter_id(raw: str) -> str:
     return raw.upper()
 
 
-OCR_NOISE_RE = re.compile(
-    r'\b(a|om|धर|T|M|J|La|PP|है।|हि|हु|फ़|[|]+)\b|\[.*?\]'
-)
+OCR_NOISE_RE = re.compile(r"\b(a|om|धर|T|M|J|La|PP|है।|हि|हु|फ़|[|]+)\b|\[.*?\]")
 # Trailing noise in house numbers (+-०, —, धर, etc.)
-HOUSE_TRAIL_RE = re.compile(r'[\s\+\-\–\—\|०।]+$')
+HOUSE_TRAIL_RE = re.compile(r"[\s\+\-\–\—\|०।]+$")
 
 
 def clean(s: str) -> str:
-    s = OCR_NOISE_RE.sub(' ', s)
-    return re.sub(r'\s+', ' ', s).strip()
+    s = OCR_NOISE_RE.sub(" ", s)
+    return re.sub(r"\s+", " ", s).strip()
 
 
 def clean_house(s: str) -> str:
-    s = HOUSE_TRAIL_RE.sub('', s.strip())
-    return re.sub(r'\s+', ' ', s).strip()
+    s = HOUSE_TRAIL_RE.sub("", s.strip())
+    return re.sub(r"\s+", " ", s).strip()
 
 
 # ── Parse a single voter column text ─────────────────────────────────────────
+
 
 def parse_column(col_text: str, part_num: int, section_info: dict) -> list[dict]:
     """Extract voter records from one column's OCR text."""
@@ -232,7 +238,7 @@ def parse_column(col_text: str, part_num: int, section_info: dict) -> list[dict]
     i = 1  # parts[0] is pre-ID text, then alternates ID / body
     while i < len(parts):
         raw_id = parts[i]
-        body = parts[i + 1] if i + 1 < len(parts) else ''
+        body = parts[i + 1] if i + 1 < len(parts) else ""
         i += 2
 
         voter_id = normalize_voter_id(raw_id)
@@ -245,26 +251,26 @@ def parse_column(col_text: str, part_num: int, section_info: dict) -> list[dict]
         gender_m = GENDER_RE.search(body)
 
         voter: dict = {
-            'voter_id': voter_id,
-            'part_number': part_num,
+            "voter_id": voter_id,
+            "part_number": part_num,
         }
         voter.update(section_info)
 
         if name_m:
-            voter['name'] = transliterate_name(clean(name_m.group(1)))
+            voter["name"] = transliterate_name(clean(name_m.group(1)))
         if father_m:
-            voter['relation_type'] = 'Father'
-            voter['relation_name'] = transliterate_name(clean(father_m.group(1)))
+            voter["relation_type"] = "Father"
+            voter["relation_name"] = transliterate_name(clean(father_m.group(1)))
         elif husband_m:
-            voter['relation_type'] = 'Husband'
-            voter['relation_name'] = transliterate_name(clean(husband_m.group(1)))
+            voter["relation_type"] = "Husband"
+            voter["relation_name"] = transliterate_name(clean(husband_m.group(1)))
         if house_m:
-            voter['house_number'] = clean_house(house_m.group(1))
+            voter["house_number"] = clean_house(house_m.group(1))
         if age_m:
-            voter['age'] = int(age_m.group(1))
+            voter["age"] = int(age_m.group(1))
         if gender_m:
-            voter['gender'] = GENDER_MAP.get(gender_m.group(1), gender_m.group(1))
-        voter['photo_available'] = 'फोटो उपलब्ध है' in body
+            voter["gender"] = GENDER_MAP.get(gender_m.group(1), gender_m.group(1))
+        voter["photo_available"] = "फोटो उपलब्ध है" in body
 
         records.append(voter)
 
@@ -273,13 +279,14 @@ def parse_column(col_text: str, part_num: int, section_info: dict) -> list[dict]
 
 # ── Parse header (page 0) ─────────────────────────────────────────────────────
 
+
 def parse_header(text: str) -> dict:
-    meta = {'state': 'Uttar Pradesh', 'year': 2026}
+    meta = {"state": "Uttar Pradesh", "year": 2026}
 
     # Part number (from "भाग संख्या : : 7" in the header)
     pm = PART_RE.search(text)
     if pm:
-        meta['part_number'] = int(pm.group(1))
+        meta["part_number"] = int(pm.group(1))
 
     # Assembly constituency
     asm = ASSEMBLY_RE.search(text)
@@ -287,51 +294,68 @@ def parse_header(text: str) -> dict:
         num = int(asm.group(1))
         name_hi = asm.group(2).strip()
         name_en = KNOWN_PLACES.get(name_hi) or translate_place(name_hi)
-        res_m = RESERVATION_RE.search(text[max(0, asm.start()-5):asm.start()+150])
-        meta['assembly_constituency'] = {
-            'number': num,
-            'name': name_en,
-            'reservation': RESERVATION_MAP.get(res_m.group(1), 'General') if res_m else 'General',
+        res_m = RESERVATION_RE.search(text[max(0, asm.start() - 5) : asm.start() + 150])
+        meta["assembly_constituency"] = {
+            "number": num,
+            "name": name_en,
+            "reservation": RESERVATION_MAP.get(res_m.group(1), "General") if res_m else "General",
         }
 
     # Parliamentary constituency
     par = PARLIA_RE.search(text)
     if par:
         name_hi = par.group(2).strip()
-        meta['parliamentary_constituency'] = {
-            'number': int(par.group(1)),
-            'name': KNOWN_PLACES.get(name_hi) or translate_place(name_hi),
+        meta["parliamentary_constituency"] = {
+            "number": int(par.group(1)),
+            "name": KNOWN_PLACES.get(name_hi) or translate_place(name_hi),
         }
 
     # Publication date
     pub = PUB_DATE_RE.search(text)
     if pub:
-        meta['publication_date'] = pub.group(1).strip()
+        meta["publication_date"] = pub.group(1).strip()
 
     # Revision type
     rev = REVISION_RE.search(text)
     if rev:
-        meta['revision_type'] = translate_place(rev.group(1).strip())
+        meta["revision_type"] = translate_place(rev.group(1).strip())
+
+    # Polling station name
+    ps = POLLING_STATION_RE.search(text)
+    if ps:
+        hi_name = ps.group(1).strip()
+        meta["polling_station_name"] = translate_place(hi_name)
+    else:
+        meta["polling_station_name"] = "Unknown Polling Station"
+
+    # Address
+    addr = ADDRESS_RE.search(text)
+    if addr:
+        hi_addr = addr.group(1).strip()
+        meta["address"] = translate_place(hi_addr)
+    else:
+        meta["address"] = "Unknown Address"
 
     return meta
 
 
 # ── Process one PDF ───────────────────────────────────────────────────────────
 
+
 def process_pdf(pdf_path: Path) -> dict:
-    log.info(f'Processing {pdf_path.name}')
+    log.info(f"Processing {pdf_path.name}")
     t_start = time.time()
     doc = fitz.open(str(pdf_path))
     total_pages = len(doc)
 
     metadata: dict = {
-        'source_file': pdf_path.name,
-        'total_pages': total_pages,
-        'state': 'Uttar Pradesh',
-        'year': 2026,
+        "source_file": pdf_path.name,
+        "total_pages": total_pages,
+        "state": "Uttar Pradesh",
+        "year": 2026,
     }
     records: list[dict] = []
-    current_part = 0      # will be set from header page
+    current_part = 0  # will be set from header page
     current_section: dict = {}
 
     for pnum in range(total_pages):
@@ -347,7 +371,7 @@ def process_pdf(pdf_path: Path) -> dict:
                 meta = parse_header(full_text)
                 metadata.update(meta)
                 # Use part number from header for all subsequent pages
-                current_part = meta.get('part_number', 0)
+                current_part = meta.get("part_number", 0)
                 continue
 
             # Skip photo/map pages
@@ -368,8 +392,8 @@ def process_pdf(pdf_path: Path) -> dict:
                     if sec_num > 50:
                         sec_num = 1
                     current_section = {
-                        'section_number': sec_num,
-                        'section_name': translate_place(sec_name_hi),
+                        "section_number": sec_num,
+                        "section_name": translate_place(sec_name_hi),
                     }
                     break
 
@@ -379,54 +403,57 @@ def process_pdf(pdf_path: Path) -> dict:
                 records.extend(voters)
 
             if (pnum + 1) % 10 == 0:
-                log.info(f'  {pdf_path.name}: page {pnum+1}/{total_pages}, '
-                         f'{len(records)} voters so far')
+                log.info(
+                    f"  {pdf_path.name}: page {pnum+1}/{total_pages}, "
+                    f"{len(records)} voters so far"
+                )
 
         except Exception as exc:
-            log.warning(f'  {pdf_path.name} page {pnum+1} error: {exc}')
+            log.warning(f"  {pdf_path.name} page {pnum+1} error: {exc}")
 
     elapsed = time.time() - t_start
-    log.info(f'Done {pdf_path.name}: {len(records)} voters in {elapsed:.0f}s')
+    log.info(f"Done {pdf_path.name}: {len(records)} voters in {elapsed:.0f}s")
 
     return {
-        'metadata': metadata,
-        'total_voter_records': len(records),
-        'voter_records': records,
+        "metadata": metadata,
+        "total_voter_records": len(records),
+        "voter_records": records,
     }
 
 
 # ── Main ─────────────────────────────────────────────────────────────────────
 
+
 def process_and_save(pdf_path: Path) -> str:
     """Worker: process one PDF and save JSON. Safe for multiprocessing."""
     # Each worker re-initialises pytesseract (needed after fork)
-    pytesseract.pytesseract.tesseract_cmd = '/opt/homebrew/bin/tesseract'
-    out_path = OUTPUT_DIR / (pdf_path.stem + '.json')
+    pytesseract.pytesseract.tesseract_cmd = "/opt/homebrew/bin/tesseract"
+    out_path = OUTPUT_DIR / (pdf_path.stem + ".json")
     if out_path.exists():
-        return f'SKIP {pdf_path.name}'
+        return f"SKIP {pdf_path.name}"
     try:
         result = process_pdf(pdf_path)
-        with open(out_path, 'w', encoding='utf-8') as f:
+        with open(out_path, "w", encoding="utf-8") as f:
             json.dump(result, f, ensure_ascii=False, indent=2)
         return f'OK {pdf_path.name} ({result["total_voter_records"]} voters)'
     except Exception as exc:
-        return f'FAIL {pdf_path.name}: {exc}'
+        return f"FAIL {pdf_path.name}: {exc}"
 
 
 def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     _load_place_cache()  # load persisted translations from previous runs
-    pdf_files = sorted(INPUT_DIR.glob('*.pdf'))
-    pending = [p for p in pdf_files if not (OUTPUT_DIR / (p.stem + '.json')).exists()]
-    log.info(f'Found {len(pdf_files)} PDFs, {len(pending)} need processing')
+    pdf_files = sorted(INPUT_DIR.glob("*.pdf"))
+    pending = [p for p in pdf_files if not (OUTPUT_DIR / (p.stem + ".json")).exists()]
+    log.info(f"Found {len(pdf_files)} PDFs, {len(pending)} need processing")
 
     max_workers = 3  # 3 parallel PDFs; tesseract is already multi-threaded
     with ProcessPoolExecutor(max_workers=max_workers) as pool:
         futures = {pool.submit(process_and_save, p): p for p in pending}
         for i, fut in enumerate(as_completed(futures), 1):
             msg = fut.result()
-            log.info(f'[{i}/{len(pending)}] {msg}')
+            log.info(f"[{i}/{len(pending)}] {msg}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -1,9 +1,10 @@
 """
 Shared war-room theme helpers: CSS injection, HTML card builders, plotly defaults.
 """
-from __future__ import annotations
-import streamlit as st
 
+from __future__ import annotations
+
+import streamlit as st
 
 # ── CSS ───────────────────────────────────────────────────────────────────────
 
@@ -87,6 +88,7 @@ def inject_css() -> None:
 
 # ── HTML helpers ──────────────────────────────────────────────────────────────
 
+
 def section(title: str, icon: str = "") -> None:
     prefix = f"{icon}&nbsp;" if icon else ""
     st.markdown(f'<div class="wr-section">{prefix}{title}</div>', unsafe_allow_html=True)
@@ -106,8 +108,7 @@ def badge(text: str, level: str = "medium") -> str:
 
 def metric_html(label: str, value: str, delta: str = "", delta_color: str = "#8b949e") -> str:
     delta_html = (
-        f'<div class="wr-metric-delta" style="color:{delta_color}">{delta}</div>'
-        if delta else ""
+        f'<div class="wr-metric-delta" style="color:{delta_color}">{delta}</div>' if delta else ""
     )
     return f"""
     <div>
@@ -150,13 +151,13 @@ PLOTLY_LAYOUT = dict(
 )
 
 PALETTE = {
-    "bjp":        "#FF6B35",
-    "sp":         "#3498db",
-    "bsp":        "#9b59b6",
-    "inc":        "#2ecc71",
-    "others":     "#95a5a6",
-    "high_risk":  "#e74c3c",
-    "medium_risk":"#f39c12",
-    "low_risk":   "#2ecc71",
-    "neutral":    "#8b949e",
+    "bjp": "#FF6B35",
+    "sp": "#3498db",
+    "bsp": "#9b59b6",
+    "inc": "#2ecc71",
+    "others": "#95a5a6",
+    "high_risk": "#e74c3c",
+    "medium_risk": "#f39c12",
+    "low_risk": "#2ecc71",
+    "neutral": "#8b949e",
 }

@@ -18,6 +18,7 @@ Usage:
     with IdempotentLoader(engine) as loader:
         loader.upsert("booth_master", rows, conflict_key="booth_id")
 """
+
 from __future__ import annotations
 
 import logging
@@ -26,10 +27,9 @@ from contextlib import contextmanager
 from functools import wraps
 from typing import Any, Callable, Generator, Sequence
 
-import sqlalchemy as sa
 from sqlalchemy import text
 from sqlalchemy.engine import Engine
-from sqlalchemy.exc import OperationalError, InterfaceError
+from sqlalchemy.exc import InterfaceError, OperationalError
 
 logger = logging.getLogger(__name__)
 
@@ -39,10 +39,17 @@ _TRANSIENT = (OperationalError, InterfaceError)
 
 def _is_transient(exc: Exception) -> bool:
     msg = str(exc).lower()
-    return any(kw in msg for kw in (
-        "could not connect", "connection refused", "ssl connection",
-        "deadlock", "lock timeout", "server closed",
-    ))
+    return any(
+        kw in msg
+        for kw in (
+            "could not connect",
+            "connection refused",
+            "ssl connection",
+            "deadlock",
+            "lock timeout",
+            "server closed",
+        )
+    )
 
 
 @contextmanager
@@ -61,13 +68,18 @@ def atomic(engine: Engine, retries: int = 3, backoff: float = 2.0) -> Generator:
         try:
             with conn.begin():
                 yield conn
-            return   # commit succeeded
+            return  # commit succeeded
         except _TRANSIENT as exc:
             conn.rollback()
             if attempt < retries and _is_transient(exc):
-                wait = backoff ** attempt
-                logger.warning("[etl] Transient DB error (attempt %d/%d), retrying in %.1fs: %s",
-                               attempt, retries, wait, exc)
+                wait = backoff**attempt
+                logger.warning(
+                    "[etl] Transient DB error (attempt %d/%d), retrying in %.1fs: %s",
+                    attempt,
+                    retries,
+                    wait,
+                    exc,
+                )
                 time.sleep(wait)
                 continue
             logger.error("[etl] DB error after %d attempts: %s", attempt, exc)
@@ -96,6 +108,7 @@ def transactional_batch(
         def _insert_events(conn, rows):
             conn.execute(text("INSERT INTO pulse_events ..."), rows)
     """
+
     def decorator(fn: Callable) -> Callable:
         @wraps(fn)
         def wrapper(rows: Sequence[dict], **kwargs) -> int:
@@ -105,11 +118,18 @@ def transactional_batch(
                 with atomic(engine, retries=retries) as conn:
                     fn(conn, batch, **kwargs)
                 total += len(batch)
-                logger.debug("[etl] %s: committed batch %d-%d (%d rows)",
-                             fn.__name__, i, i + len(batch), len(batch))
+                logger.debug(
+                    "[etl] %s: committed batch %d-%d (%d rows)",
+                    fn.__name__,
+                    i,
+                    i + len(batch),
+                    len(batch),
+                )
             logger.info("[etl] %s: total %d rows committed", fn.__name__, total)
             return total
+
         return wrapper
+
     return decorator
 
 
@@ -129,8 +149,9 @@ class IdempotentLoader:
                 update_cols=["name", "total_voters", "updated_at"],
             )
     """
+
     def __init__(self, engine: Engine, retries: int = 3):
-        self._engine  = engine
+        self._engine = engine
         self._retries = retries
         self._conn: Any = None
 
@@ -147,7 +168,7 @@ class IdempotentLoader:
             self._conn.rollback()
             logger.error("[etl] IdempotentLoader: rolled back due to %s", exc_val)
         self._conn.close()
-        return False   # re-raise exceptions
+        return False  # re-raise exceptions
 
     def upsert(
         self,

@@ -1,4 +1,4 @@
-﻿"""
+"""
 ETL: Aggregate Form-20 booth-level votes → constituency-level candidate results
 
 Reads parsed Form-20 JSON files (data/processed/form20_json/) and sums per-candidate votes
@@ -22,6 +22,7 @@ Run:
   python -m etl.aggregate_form20_results --ac GKP_322 --year 2022
   python -m etl.aggregate_form20_results --ac GKP_322 --year 2019
 """
+
 from __future__ import annotations
 
 import json
@@ -37,7 +38,7 @@ from sqlalchemy import text
 
 logger = logging.getLogger(__name__)
 
-DATA_DIR = Path(__file__).parents[1] / "data" / "Form20_JSON"
+DATA_DIR = Path(__file__).parents[2] / "data" / "Form20_JSON"
 
 # Manual overrides: (ac_id, OCR_name_upper, election_year) → canonical candidate_id
 # Use when the OCR name is too different from any candidate_master entry for fuzzy matching to work.
@@ -56,21 +57,21 @@ FORM20_FILE_MAP: dict[tuple[str, int], list[str]] = {
 
 # Party name normalisation (raw Form-20 text → canonical)
 _PARTY_MAP: dict[str, str] = {
-    "B.J.P":           "BJP",
-    "B.J.P.":          "BJP",
-    "BJP":             "BJP",
+    "B.J.P": "BJP",
+    "B.J.P.": "BJP",
+    "BJP": "BJP",
     "SAMAJWADI PARTY": "SP",
-    "SAMAJWADI":       "SP",
+    "SAMAJWADI": "SP",
     "BAHUJAN SAMAJ PARTY": "BSP",
-    "B.S.P.":          "BSP",
-    "BSP":             "BSP",
+    "B.S.P.": "BSP",
+    "BSP": "BSP",
     "INDIAN NATIONAL CONGRESS": "INC",
     "AAM AADAMI PARTY": "AAP",
-    "AAM AADAMI":      "AAP",
+    "AAM AADAMI": "AAP",
     "AAZAD SAMAJ PARTY (KASHI RAM)": "ASP(KR)",
     "AAZAD SAMAJ PARTY": "ASP(KR)",
-    "INDEPENDENT":     "IND",
-    "INDPENDENT":      "IND",
+    "INDEPENDENT": "IND",
+    "INDPENDENT": "IND",
 }
 
 _SKIP_NAMES = {"nota", "none of the above", "total votes", "total votes   se-cured"}
@@ -124,9 +125,9 @@ def aggregate_candidate_results(
                 if key not in vote_acc:
                     vote_acc[key] = {
                         "candidate_name": name,
-                        "party_raw":      party,
-                        "party":          _norm_party(party),
-                        "total_votes":    0,
+                        "party_raw": party,
+                        "party": _norm_party(party),
+                        "total_votes": 0,
                     }
                 vote_acc[key]["total_votes"] += int(votes)
 
@@ -153,31 +154,37 @@ def aggregate_candidate_results(
         else:
             pos_label = "other"
 
-        results.append({
-            "candidate_id":           _slugify(row["candidate_name"], election_year),
-            "candidate_name":         row["candidate_name"],
-            "party_id":               row["party"],
-            "election_year":          election_year,
-            "constituency":           ac_id,
-            "votes_received":         votes,
-            "vote_share":             round(votes / valid_votes_total * 100, 4) if valid_votes_total else 0,
-            "result":                 "won" if is_winner else "lost",
-            "margin":                 victory_margin if is_winner else None,
-            "rank":                   rank,
-            "is_winner":              is_winner,
-            "result_position_label":  pos_label,
-            "vote_gap_vs_winner":     None if is_winner else (winner_votes - votes),
-            "victory_margin_votes":   victory_margin if is_winner else None,
-            "valid_votes_total":      valid_votes_total,
-            "results_source":         "form20",
-            "source_results_url":     str(json_path),
-        })
+        results.append(
+            {
+                "candidate_id": _slugify(row["candidate_name"], election_year),
+                "candidate_name": row["candidate_name"],
+                "party_id": row["party"],
+                "election_year": election_year,
+                "constituency": ac_id,
+                "votes_received": votes,
+                "vote_share": round(votes / valid_votes_total * 100, 4) if valid_votes_total else 0,
+                "result": "won" if is_winner else "lost",
+                "margin": victory_margin if is_winner else None,
+                "rank": rank,
+                "is_winner": is_winner,
+                "result_position_label": pos_label,
+                "vote_gap_vs_winner": None if is_winner else (winner_votes - votes),
+                "victory_margin_votes": victory_margin if is_winner else None,
+                "valid_votes_total": valid_votes_total,
+                "results_source": "form20",
+                "source_results_url": str(json_path),
+            }
+        )
 
     logger.info(
         "%s %d: %d candidates | winner %s (%d votes, %.1f%%) | margin %d",
-        ac_id, election_year, len(results),
-        results[0]["candidate_name"], winner_votes,
-        results[0]["vote_share"], victory_margin,
+        ac_id,
+        election_year,
+        len(results),
+        results[0]["candidate_name"],
+        winner_votes,
+        results[0]["vote_share"],
+        victory_margin,
     )
     return results
 
@@ -201,15 +208,20 @@ def reconcile_candidate_ids(
     Unmatched rows keep their OCR-derived IDs so they still land in the DB.
     """
     with engine.connect() as conn:
-        master_rows = conn.execute(text("""
+        master_rows = conn.execute(
+            text("""
             SELECT cm.candidate_id, cm.name, ca.parse_status
             FROM candidate_master cm
             LEFT JOIN candidate_affidavits ca ON ca.candidate_id = cm.candidate_id
             WHERE cm.ac_id = :ac_id AND cm.election_year = :year
-        """), {"ac_id": ac_id, "year": election_year}).fetchall()
+        """),
+            {"ac_id": ac_id, "year": election_year},
+        ).fetchall()
 
     if not master_rows:
-        logger.warning("No candidate_master rows for %s/%d — skipping reconciliation", ac_id, election_year)
+        logger.warning(
+            "No candidate_master rows for %s/%d — skipping reconciliation", ac_id, election_year
+        )
         return results
 
     # Build multi-value lookup: upper_name → list of (candidate_id, display_name, parse_status)
@@ -234,7 +246,9 @@ def reconcile_candidate_ids(
         override_key = (ac_id, ocr_upper, election_year)
         if override_key in CANDIDATE_ID_OVERRIDES:
             row["candidate_id"] = CANDIDATE_ID_OVERRIDES[override_key]
-            logger.info("Override applied: OCR '%s' → %s", row["candidate_name"], row["candidate_id"])
+            logger.info(
+                "Override applied: OCR '%s' → %s", row["candidate_name"], row["candidate_id"]
+            )
             continue
 
         if ocr_upper in name_to_candidates:
@@ -253,13 +267,19 @@ def reconcile_candidate_ids(
             canonical_id, display_name = _best_entry(name_to_candidates[best_name])
             logger.info(
                 "Fuzzy match (%.2f): OCR '%s' → master '%s' (%s)",
-                best_score, row["candidate_name"], display_name, canonical_id,
+                best_score,
+                row["candidate_name"],
+                display_name,
+                canonical_id,
             )
             row["candidate_id"] = canonical_id
         else:
             logger.warning(
                 "No match for OCR name '%s' (best='%s' %.2f) — keeping id %s",
-                row["candidate_name"], best_name, best_score, row["candidate_id"],
+                row["candidate_name"],
+                best_name,
+                best_score,
+                row["candidate_id"],
             )
 
     return results
@@ -276,7 +296,8 @@ def upsert_results(results: list[dict], engine: sa.Engine) -> int:
 
     with engine.connect() as conn:
         for row in results:
-            conn.execute(text("""
+            conn.execute(
+                text("""
                 INSERT INTO candidate_party_history (
                     candidate_id, candidate_name, party_id,
                     election_year, constituency,
@@ -306,7 +327,9 @@ def upsert_results(results: list[dict], engine: sa.Engine) -> int:
                     valid_votes_total     = EXCLUDED.valid_votes_total,
                     results_source        = EXCLUDED.results_source,
                     source_results_url    = EXCLUDED.source_results_url
-            """), row)
+            """),
+                row,
+            )
         conn.commit()
 
     logger.info("Upserted %d result rows", len(results))
@@ -320,7 +343,8 @@ def run(ac_id: str = "GKP_322", election_year: int = 2022) -> int:
         logger.error(
             "No Form-20 file mapping for (%s, %d). "
             "Add an entry to FORM20_FILE_MAP or pass --json directly.",
-            ac_id, election_year,
+            ac_id,
+            election_year,
         )
         return 0
 
@@ -345,8 +369,10 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     import argparse
 
-    p = argparse.ArgumentParser(description="Aggregate Form-20 results into candidate_party_history")
-    p.add_argument("--ac",   default="GKP_322", help="Canonical ac_id (e.g. GKP_322)")
+    p = argparse.ArgumentParser(
+        description="Aggregate Form-20 results into candidate_party_history"
+    )
+    p.add_argument("--ac", default="GKP_322", help="Canonical ac_id (e.g. GKP_322)")
     p.add_argument("--year", type=int, default=2022, help="Election year")
     p.add_argument("--json", default=None, help="Override: direct path to Form-20 JSON file")
     args = p.parse_args()

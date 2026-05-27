@@ -19,6 +19,7 @@ Run:
   python -m ingestion.ddp_affidavits --pdf data/data/Affidavit-1778167961.pdf
   python -m ingestion.ddp_affidavits --dry-run
 """
+
 from __future__ import annotations
 
 import argparse
@@ -32,18 +33,34 @@ from sqlalchemy import text
 
 logger = logging.getLogger(__name__)
 
-DATA_DIR = Path(__file__).parents[1] / "data" / "data"
+DATA_DIR = Path(__file__).parents[2] / "data" / "data"
 
 AFFIDAVIT_PDFS = sorted(DATA_DIR.glob("Affidavit-*.pdf"))
 
 _DIGITS_RE = re.compile(r"\d+")
-_RS_RE     = re.compile(r"(?:Rs\.?|INR|₹)\s*([\d,]+(?:\.\d+)?)", re.IGNORECASE)
+_RS_RE = re.compile(r"(?:Rs\.?|INR|₹)\s*([\d,]+(?:\.\d+)?)", re.IGNORECASE)
 
 EDUCATION_KEYWORDS = [
-    "doctorate", "phd", "post graduate", "post-graduate",
-    "b.tech", "m.tech", "b.e", "m.e",
-    "graduate", "b.a", "b.sc", "b.com", "m.a", "m.sc", "m.com",
-    "diploma", "12th", "10th", "literate", "illiterate",
+    "doctorate",
+    "phd",
+    "post graduate",
+    "post-graduate",
+    "b.tech",
+    "m.tech",
+    "b.e",
+    "m.e",
+    "graduate",
+    "b.a",
+    "b.sc",
+    "b.com",
+    "m.a",
+    "m.sc",
+    "m.com",
+    "diploma",
+    "12th",
+    "10th",
+    "literate",
+    "illiterate",
 ]
 
 
@@ -70,20 +87,18 @@ def ocr_pdf(pdf_path: Path) -> str:
     api_key = os.environ.get("SARVAM_API_KEY")
     if not api_key:
         raise EnvironmentError(
-            "SARVAM_API_KEY not set.\n"
-            "Get a key at https://dashboard.sarvam.ai"
+            "SARVAM_API_KEY not set.\n" "Get a key at https://dashboard.sarvam.ai"
         )
 
     extractor = SarvamDocumentIntelligenceExtractor(
         api_key=api_key,
-        language="en-IN",   # affidavits are mostly English
+        language="en-IN",  # affidavits are mostly English
         output_format="md",
     )
     pages = extractor.extract_pages(pdf_path)
     pages.sort(key=lambda p: p.get("page_number", 0))
     full_text = "\n\n".join(
-        str(p.get("text") or p.get("markdown") or p.get("content") or "")
-        for p in pages
+        str(p.get("text") or p.get("markdown") or p.get("content") or "") for p in pages
     )
     logger.info("OCR'd %s: %d pages, %d chars", pdf_path.name, len(pages), len(full_text))
     return full_text
@@ -97,9 +112,14 @@ def extract_fields(full_text: str) -> dict:
     """
     lines = [ln.strip() for ln in full_text.splitlines() if ln.strip()]
     result: dict = {
-        "name": "", "criminal_cases": 0, "serious_cases": 0,
-        "total_assets": 0, "total_liabilities": 0,
-        "education": "", "profession": "", "age": None,
+        "name": "",
+        "criminal_cases": 0,
+        "serious_cases": 0,
+        "total_assets": 0,
+        "total_liabilities": 0,
+        "education": "",
+        "profession": "",
+        "age": None,
     }
 
     for i, ln in enumerate(lines):
@@ -169,14 +189,21 @@ def match_candidate(name: str, engine: sa.Engine) -> str | None:
     if not name:
         return None
     with engine.connect() as conn:
-        row = conn.execute(text("""
+        row = (
+            conn.execute(
+                text("""
             SELECT candidate_id, name,
                    similarity(LOWER(name), LOWER(:name)) AS sim
             FROM candidate_master
             WHERE similarity(LOWER(name), LOWER(:name)) > 0.3
             ORDER BY sim DESC
             LIMIT 1
-        """), {"name": name[:200]}).mappings().fetchone()
+        """),
+                {"name": name[:200]},
+            )
+            .mappings()
+            .fetchone()
+        )
     if row:
         logger.info("Matched '%s' → '%s' (sim=%.2f)", name[:60], row["name"], row["sim"])
         return str(row["candidate_id"])
@@ -184,9 +211,12 @@ def match_candidate(name: str, engine: sa.Engine) -> str | None:
     return None
 
 
-def upsert_affidavit(candidate_id: str, fields: dict, pdf_path: Path, engine: sa.Engine, year: int = 2022) -> None:
+def upsert_affidavit(
+    candidate_id: str, fields: dict, pdf_path: Path, engine: sa.Engine, year: int = 2022
+) -> None:
     with engine.connect() as conn:
-        conn.execute(text("""
+        conn.execute(
+            text("""
             INSERT INTO candidate_affidavits
                 (candidate_id, election_year, criminal_cases, serious_cases,
                  total_assets, total_liabilities, education, profession, age, pdf_url)
@@ -194,29 +224,33 @@ def upsert_affidavit(candidate_id: str, fields: dict, pdf_path: Path, engine: sa
                 (:cid, :year, :criminal, :serious,
                  :assets, :liab, :edu, :prof, :age, :pdf)
             ON CONFLICT DO NOTHING
-        """), {
-            "cid":      candidate_id,
-            "year":     year,
-            "criminal": fields.get("criminal_cases", 0),
-            "serious":  fields.get("serious_cases", 0),
-            "assets":   fields.get("total_assets", 0),
-            "liab":     fields.get("total_liabilities", 0),
-            "edu":      fields.get("education", ""),
-            "prof":     fields.get("profession", ""),
-            "age":      fields.get("age"),
-            "pdf":      str(pdf_path),
-        })
+        """),
+            {
+                "cid": candidate_id,
+                "year": year,
+                "criminal": fields.get("criminal_cases", 0),
+                "serious": fields.get("serious_cases", 0),
+                "assets": fields.get("total_assets", 0),
+                "liab": fields.get("total_liabilities", 0),
+                "edu": fields.get("education", ""),
+                "prof": fields.get("profession", ""),
+                "age": fields.get("age"),
+                "pdf": str(pdf_path),
+            },
+        )
         conn.commit()
 
 
 def process_pdf(pdf_path: Path, engine: sa.Engine | None, dry_run: bool = False) -> dict:
     full_text = ocr_pdf(pdf_path)
-    fields    = extract_fields(full_text)
-    logger.info("Extracted fields from %s: assets=₹%d criminal=%d edu='%s'",
-                pdf_path.name,
-                fields.get("total_assets", 0),
-                fields.get("criminal_cases", 0),
-                fields.get("education", ""))
+    fields = extract_fields(full_text)
+    logger.info(
+        "Extracted fields from %s: assets=₹%d criminal=%d edu='%s'",
+        pdf_path.name,
+        fields.get("total_assets", 0),
+        fields.get("criminal_cases", 0),
+        fields.get("education", ""),
+    )
 
     if dry_run:
         logger.info("[DRY RUN] Detected name: '%s'", fields.get("name"))
@@ -236,7 +270,7 @@ def process_pdf(pdf_path: Path, engine: sa.Engine | None, dry_run: bool = False)
 
 
 def run(pdf_paths: list[Path] | None = None, dry_run: bool = False) -> None:
-    engine  = None if dry_run else sa.create_engine(os.environ["POSTGRES_URL"])
+    engine = None if dry_run else sa.create_engine(os.environ["POSTGRES_URL"])
     targets = pdf_paths or AFFIDAVIT_PDFS
 
     if not targets:
@@ -257,7 +291,7 @@ def run(pdf_paths: list[Path] | None = None, dry_run: bool = False) -> None:
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     p = argparse.ArgumentParser(description="OCR + extract candidate affidavit PDFs")
-    p.add_argument("--pdf",     default=None, help="Path to single affidavit PDF")
+    p.add_argument("--pdf", default=None, help="Path to single affidavit PDF")
     p.add_argument("--dry-run", action="store_true", help="OCR + extract only, no DB write")
     args = p.parse_args()
 

@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 Convert all Excel files in 'data/raw/form20/' to JSON.
 Output: data/processed/form20_json/{filename}.json
@@ -13,17 +13,18 @@ import json
 import re
 from pathlib import Path
 
-import xlrd
 import openpyxl
+import xlrd
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-INPUT_DIR = BASE_DIR / 'data' / 'Form 20 Gorakhpur Data'
-OUTPUT_DIR = BASE_DIR / 'data' / 'Form20_JSON'
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+INPUT_DIR = BASE_DIR / "data" / "Form 20 Gorakhpur Data"
+OUTPUT_DIR = BASE_DIR / "data" / "Form20_JSON"
 
 
 # ---------------------------------------------------------------------------
 # Utilities
 # ---------------------------------------------------------------------------
+
 
 def _safe(v):
     """Normalise a cell value to a Python primitive."""
@@ -33,7 +34,7 @@ def _safe(v):
         return int(v) if v == int(v) else v
     if isinstance(v, str):
         s = v.strip()
-        return None if s in ('', '_', '-', '--') else s
+        return None if s in ("", "_", "-", "--") else s
     return v
 
 
@@ -42,8 +43,7 @@ def _read_xls(path: Path):
     wb = xlrd.open_workbook(str(path))
     result = {}
     for sh in wb.sheets():
-        result[sh.name] = [[_safe(v) for v in sh.row_values(r)]
-                           for r in range(sh.nrows)]
+        result[sh.name] = [[_safe(v) for v in sh.row_values(r)] for r in range(sh.nrows)]
     return result
 
 
@@ -53,8 +53,7 @@ def _read_xlsx(path: Path):
     result = {}
     for name in wb.sheetnames:
         ws = wb[name]
-        result[name] = [[_safe(v) for v in row]
-                        for row in ws.iter_rows(values_only=True)]
+        result[name] = [[_safe(v) for v in row] for row in ws.iter_rows(values_only=True)]
     return result
 
 
@@ -69,7 +68,7 @@ def _find_col_num_row(rows):
 
 def _is_total_row(row):
     first = next((v for v in row if v is not None), None)
-    if isinstance(first, str) and 'total' in first.lower():
+    if isinstance(first, str) and "total" in first.lower():
         return True
     return False
 
@@ -78,22 +77,23 @@ def _header_text(header_rows):
     """Return a dict of metadata strings extracted from header rows."""
     meta = {}
     for row in header_rows:
-        line = ' '.join(str(v) for v in row if v is not None).strip()
+        line = " ".join(str(v) for v in row if v is not None).strip()
         if not line:
             continue
         ll = line.lower()
-        if 'district' in ll:
-            meta.setdefault('district', line)
-        if 'constituency' in ll or 'assembly' in ll or 'ac no' in ll or 'vidhan sabha' in ll:
-            meta.setdefault('constituency_info', line)
-        if 'election' in ll or 'general' in ll or 'nirvachan' in ll:
-            meta.setdefault('election', line)
+        if "district" in ll:
+            meta.setdefault("district", line)
+        if "constituency" in ll or "assembly" in ll or "ac no" in ll or "vidhan sabha" in ll:
+            meta.setdefault("constituency_info", line)
+        if "election" in ll or "general" in ll or "nirvachan" in ll:
+            meta.setdefault("election", line)
     return meta
 
 
 # ---------------------------------------------------------------------------
 # Candidate-column extraction
 # ---------------------------------------------------------------------------
+
 
 def _extract_candidates(header_rows, ncols):
     """
@@ -107,7 +107,7 @@ def _extract_candidates(header_rows, ncols):
     for row in header_rows:
         for j, v in enumerate(row):
             if v and isinstance(v, str):
-                if 'tendered' in v.lower():
+                if "tendered" in v.lower():
                     first_cand_col = j + 1
                     break
         if first_cand_col is not None:
@@ -117,7 +117,7 @@ def _extract_candidates(header_rows, ncols):
         # Fallback: look for EPIC
         for row in header_rows:
             for j, v in enumerate(row):
-                if v and isinstance(v, str) and 'epic' in v.lower():
+                if v and isinstance(v, str) and "epic" in v.lower():
                     first_cand_col = j + 1
                     break
             if first_cand_col is not None:
@@ -135,9 +135,9 @@ def _extract_candidates(header_rows, ncols):
             continue
         first_val = vals_after[0]
         if isinstance(first_val, str):
-            if re.search(r'S\.?No\.?|Sl\.', first_val, re.I):
+            if re.search(r"S\.?No\.?|Sl\.", first_val, re.I):
                 party_row = row
-            elif first_val not in ('Votes Secured', 'Votes'):
+            elif first_val not in ("Votes Secured", "Votes"):
                 name_row = row
 
     candidates = []
@@ -155,7 +155,7 @@ def _extract_candidates(header_rows, ncols):
         if name is None and party is None and serial > 30:
             break
 
-        candidates.append({'serial': serial, 'name': name, 'party': party, '_col': col})
+        candidates.append({"serial": serial, "name": name, "party": party, "_col": col})
         col += 3
         serial += 1
 
@@ -166,6 +166,7 @@ def _extract_candidates(header_rows, ncols):
 # Sheet parser
 # ---------------------------------------------------------------------------
 
+
 def _parse_sheet(sheet_name, rows):
     if not rows:
         return None
@@ -173,14 +174,14 @@ def _parse_sheet(sheet_name, rows):
     col_num_idx = _find_col_num_row(rows)
     if col_num_idx is None:
         return {
-            'sheet': sheet_name,
-            'note': 'No column-number row found — likely Hindi-encoded or non-standard format',
-            'row_count': len(rows),
-            'sample': [r for r in rows[:6] if any(v is not None for v in r)]
+            "sheet": sheet_name,
+            "note": "No column-number row found — likely Hindi-encoded or non-standard format",
+            "row_count": len(rows),
+            "sample": [r for r in rows[:6] if any(v is not None for v in r)],
         }
 
     header_rows = rows[:col_num_idx]
-    data_rows = rows[col_num_idx + 1:]
+    data_rows = rows[col_num_idx + 1 :]
     ncols = max((len(r) for r in rows), default=0)
 
     metadata = _header_text(header_rows)
@@ -188,7 +189,7 @@ def _parse_sheet(sheet_name, rows):
 
     # Detect "Other" gender turnout column by scanning header rows cols 5-8
     has_other = any(
-        isinstance(row[j], str) and 'other' in row[j].lower()
+        isinstance(row[j], str) and "other" in row[j].lower()
         for row in header_rows
         for j in range(5, min(9, len(row)))
     )
@@ -210,40 +211,40 @@ def _parse_sheet(sheet_name, rows):
         # Skip non-data rows (e.g. sub-header repeats)
         if ac_no is None and ps_no is None:
             continue
-        if isinstance(ps_no, str) and not ps_no.replace('.', '').isdigit():
-            if ps_no.lower() in ('no.', 'name'):
+        if isinstance(ps_no, str) and not ps_no.replace(".", "").isdigit():
+            if ps_no.lower() in ("no.", "name"):
                 continue
 
         if has_other:
             rec = {
-                'ac_number': ac_no,
-                'polling_station_number': ps_no,
-                'polling_station_name': ps_name,
-                'total_electors': g(3),
-                'turnout_male': g(4),
-                'turnout_female': g(5),
-                'turnout_other': g(6),
-                'turnout_total': g(7),
-                'epic_voters': g(8),
-                'tendered_votes': g(9),
+                "ac_number": ac_no,
+                "polling_station_number": ps_no,
+                "polling_station_name": ps_name,
+                "total_electors": g(3),
+                "turnout_male": g(4),
+                "turnout_female": g(5),
+                "turnout_other": g(6),
+                "turnout_total": g(7),
+                "epic_voters": g(8),
+                "tendered_votes": g(9),
             }
         else:
             rec = {
-                'ac_number': ac_no,
-                'polling_station_number': ps_no,
-                'polling_station_name': ps_name,
-                'total_electors': g(3),
-                'turnout_male': g(4),
-                'turnout_female': g(5),
-                'turnout_total': g(6),
-                'epic_voters': g(7),
-                'tendered_votes': g(8) if first_cand_col > 8 else None,
+                "ac_number": ac_no,
+                "polling_station_number": ps_no,
+                "polling_station_name": ps_name,
+                "total_electors": g(3),
+                "turnout_male": g(4),
+                "turnout_female": g(5),
+                "turnout_total": g(6),
+                "epic_voters": g(7),
+                "tendered_votes": g(8) if first_cand_col > 8 else None,
             }
 
         # Candidate votes
         votes = []
         for cand in candidates:
-            c = cand['_col']
+            c = cand["_col"]
             raw_votes = g(c + 2)
             if isinstance(raw_votes, str):
                 try:
@@ -251,22 +252,22 @@ def _parse_sheet(sheet_name, rows):
                 except (ValueError, TypeError):
                     raw_votes = None
 
-            entry = {'serial': cand['serial'], 'votes': raw_votes}
-            if cand['name']:
-                entry['candidate_name'] = cand['name']
-            if cand['party']:
-                entry['party'] = cand['party']
+            entry = {"serial": cand["serial"], "votes": raw_votes}
+            if cand["name"]:
+                entry["candidate_name"] = cand["name"]
+            if cand["party"]:
+                entry["party"] = cand["party"]
             votes.append(entry)
 
-        rec['candidate_votes'] = votes
+        rec["candidate_votes"] = votes
         polling_stations.append(rec)
 
     return {
-        'sheet': sheet_name,
-        'metadata': metadata,
-        'candidate_count': len(candidates),
-        'polling_station_count': len(polling_stations),
-        'polling_stations': polling_stations,
+        "sheet": sheet_name,
+        "metadata": metadata,
+        "candidate_count": len(candidates),
+        "polling_station_count": len(polling_stations),
+        "polling_stations": polling_stations,
     }
 
 
@@ -274,8 +275,9 @@ def _parse_sheet(sheet_name, rows):
 # Main
 # ---------------------------------------------------------------------------
 
+
 def convert(path: Path):
-    if path.suffix.lower() == '.xlsx':
+    if path.suffix.lower() == ".xlsx":
         sheets_data = _read_xlsx(path)
     else:
         sheets_data = _read_xls(path)
@@ -287,37 +289,37 @@ def convert(path: Path):
             parsed_sheets.append(result)
 
     out = {
-        'source_file': path.name,
-        'sheets': parsed_sheets,
+        "source_file": path.name,
+        "sheets": parsed_sheets,
     }
 
-    out_path = OUTPUT_DIR / (path.stem + '.json')
-    with open(out_path, 'w', encoding='utf-8') as f:
+    out_path = OUTPUT_DIR / (path.stem + ".json")
+    with open(out_path, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=2)
 
-    total_ps = sum(s.get('polling_station_count', 0) for s in parsed_sheets)
-    return f'OK {path.name} → {total_ps} polling station records'
+    total_ps = sum(s.get("polling_station_count", 0) for s in parsed_sheets)
+    return f"OK {path.name} → {total_ps} polling station records"
 
 
 def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    files = sorted(INPUT_DIR.glob('*.xls')) + sorted(INPUT_DIR.glob('*.xlsx'))
+    files = sorted(INPUT_DIR.glob("*.xls")) + sorted(INPUT_DIR.glob("*.xlsx"))
     # Skip the zip
-    files = [f for f in files if f.suffix.lower() in ('.xls', '.xlsx')]
+    files = [f for f in files if f.suffix.lower() in (".xls", ".xlsx")]
 
-    print(f'Found {len(files)} Excel files to convert')
+    print(f"Found {len(files)} Excel files to convert")
     ok = fail = 0
     for f in files:
         try:
             msg = convert(f)
-            print(f'  {msg}')
+            print(f"  {msg}")
             ok += 1
         except Exception as e:
-            print(f'  FAIL {f.name}: {e}')
+            print(f"  FAIL {f.name}: {e}")
             fail += 1
 
-    print(f'\nDone. {ok} converted, {fail} failed.')
+    print(f"\nDone. {ok} converted, {fail} failed.")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

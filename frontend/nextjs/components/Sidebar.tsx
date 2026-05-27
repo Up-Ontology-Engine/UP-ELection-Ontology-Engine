@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -41,6 +42,8 @@ export default function Sidebar() {
   const isActive = (href: string) =>
     href === "/dashboard" ? path === "/dashboard" : path === href || path.startsWith(href + "/");
 
+  const [acOpen, setAcOpen] = useState(false);
+
   return (
     <aside className="fixed top-0 left-0 h-full w-56 flex flex-col z-50 select-none"
       style={{ background: "var(--bg-base)", borderRight: "1px solid var(--border)" }}>
@@ -63,19 +66,42 @@ export default function Sidebar() {
         </div>
 
         {/* AC Selector */}
-        <button className="w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs transition-all"
-          style={{ background: "var(--bg-surface)", border: "1px solid var(--border)" }}
-          onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--border-bright)")}
-          onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--border)")}>
-          <div className="flex items-center gap-2">
-            <Shield size={12} style={{ color: "var(--saffron)" }} />
-            <div className="text-left leading-none">
-              <span className="font-semibold block" style={{ color: "var(--text-1)", fontSize: 12 }}>Gorakhpur Urban</span>
-              <span className="block mt-1" style={{ color: "var(--text-4)", fontSize: 9.5 }}>Assembly Constituency 322</span>
+        <div className="relative">
+          <button 
+            onClick={() => setAcOpen(!acOpen)}
+            className="w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs transition-all"
+            style={{ background: "var(--bg-surface)", border: "1px solid var(--border)" }}
+            onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--border-bright)")}
+            onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--border)")}>
+            <div className="flex items-center gap-2">
+              <Shield size={12} style={{ color: "var(--saffron)" }} />
+              <div className="text-left leading-none">
+                <span className="font-semibold block" style={{ color: "var(--text-1)", fontSize: 12 }}>Gorakhpur Urban</span>
+                <span className="block mt-1" style={{ color: "var(--text-4)", fontSize: 9.5 }}>Assembly Constituency 322</span>
+              </div>
             </div>
-          </div>
-          <ChevronDown size={11} style={{ color: "var(--text-4)" }} />
-        </button>
+            <ChevronDown size={11} style={{ color: "var(--text-4)", transform: acOpen ? "rotate(180deg)" : "none", transition: "transform 0.2s" }} />
+          </button>
+
+          {acOpen && (
+            <div className="absolute top-full left-0 right-0 mt-1 rounded-xl overflow-hidden shadow-xl"
+              style={{ background: "var(--bg-surface)", border: "1px solid var(--border)", zIndex: 100 }}>
+              <button className="w-full text-left px-3 py-2.5 text-xs transition-colors"
+                style={{ borderBottom: "1px solid var(--border)" }}
+                onClick={() => setAcOpen(false)}
+                onMouseEnter={(e) => (e.currentTarget.style.background = "var(--bg-hover)")}
+                onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}>
+                <span className="font-semibold block" style={{ color: "var(--text-1)", fontSize: 12 }}>Gorakhpur Urban</span>
+                <span className="block mt-0.5" style={{ color: "var(--text-4)", fontSize: 9.5 }}>AC 322</span>
+              </button>
+              <button className="w-full text-left px-3 py-2.5 text-xs transition-colors opacity-60 cursor-not-allowed"
+                disabled>
+                <span className="font-semibold block" style={{ color: "var(--text-1)", fontSize: 12 }}>Bankipur, Bihar</span>
+                <span className="block mt-0.5" style={{ color: "var(--saffron)", fontSize: 9.5 }}>Coming Soon</span>
+              </button>
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Navigation */}

@@ -73,10 +73,11 @@ async function del<T>(path: string): Promise<T> {
 
 export const api = {
   health: () => get<{ status: string; ac: string }>("/health"),
+  acs: () => getLive<AcsResponse>("/acs"),
 
   // AC-level — booth/candidate/scheme lists are near-static: 60s revalidate
   booths: (acId: string) => getStatic<BoothsResponse>(`/ac/${acId}/booths`),
-  candidates: (acId: string) => getStatic<{ ac_id: string; candidates: Candidate[] }>(`/ac/${acId}/candidates`),
+  candidates: (acId: string, limit = 100, offset = 0) => getStatic<{ ac_id: string; candidates: Candidate[] }>(`/ac/${acId}/candidates?limit=${limit}&offset=${offset}`),
   schemes: (acId: string) => getLive<{ ac_id: string; schemes: SchemeGap[] }>(`/ac/${acId}/schemes`),
   narratives: (acId: string) => getLive<{ ac_id: string; narratives: Narrative[] }>(`/ac/${acId}/narratives`),
   events: (acId: string, limit = 50) => getLive<{ ac_id: string; events: PoliticalEvent[] }>(`/ac/${acId}/events?limit=${limit}`),
@@ -157,6 +158,17 @@ export const api = {
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
+export interface AcRow {
+  ac_id: string;
+  ac_name: string;
+  ac_type: string;
+  district_name: string;
+}
+
+export interface AcsResponse {
+  acs: AcRow[];
+}
+
 export interface BoothRow {
   booth_id: string;
   booth_number: number;
@@ -233,9 +245,23 @@ export interface Candidate {
   name: string;
   party: string;
   election_year: number;
-  votes: number | null;
-  vote_share: number | null;
-  winner_flag: boolean;
+  is_incumbent?: boolean;
+  is_primary_opp?: boolean;
+  net_worth_rs?: number;
+  self_profession?: string;
+  criminal_cases?: number;
+  serious_cases?: number;
+  total_assets?: string;
+  total_liabilities?: string;
+  education?: string;
+  age?: number;
+  total_votes?: number;
+  vote_share_pct?: number;
+  rank?: number;
+  is_winner?: boolean;
+  sentiment_score?: number;
+  mention_count?: number;
+  history_json?: Record<string, unknown>;
 }
 
 export interface GeoRow {
@@ -264,6 +290,7 @@ export interface BoothSummary {
   booth_id: string;
   booth_number: number | null;
   name: string | null;
+  address: string | null;
   ac_name: string;
   total_voters: number | null;
   male_voters: number | null;

@@ -95,4 +95,3 @@ app.include_router(ac.router)
 app.include_router(booths.router)
 app.include_router(graph.router)
 app.include_router(reasoning.router)
-

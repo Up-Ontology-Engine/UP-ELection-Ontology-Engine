@@ -42,11 +42,11 @@ function getHeatColor(b: PlottedBooth, layer: Props["layer"]): string {
 
   if (layer === "bjp_lean") {
     const lbl = b.digital_lean_label?.toUpperCase() ?? "";
-    if (lbl === "STRONG_BJP") return "#f97316";
-    if (lbl === "LEAN_BJP")   return "#fb923c";
-    if (lbl === "NEUTRAL")    return "#64748b";
-    if (lbl === "LEAN_OPP")   return "#60a5fa";
-    if (lbl === "STRONG_OPP") return "#3b82f6";
+    if (lbl === "STRONG_BJP" || lbl === "STRONG BJP") return "#f97316";
+    if (lbl === "LEAN_BJP" || lbl === "LEAN BJP")   return "#fb923c";
+    if (lbl === "NEUTRAL" || lbl === "CONTESTED")    return "#64748b";
+    if (lbl === "LEAN_OPP" || lbl === "LEAN OPP")   return "#60a5fa";
+    if (lbl === "STRONG_OPP" || lbl === "STRONG OPP") return "#3b82f6";
     // fallback to pulse score
     const s = b.bjp_pulse_score;
     if (s == null) return "#475569";

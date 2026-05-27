@@ -12,9 +12,9 @@ from sqlalchemy.engine import Engine
 
 logger = logging.getLogger(__name__)
 
-MIXED_SIGNALS_DELTA    = 0.6
-SWING_INDICATOR_DELTA  = 0.35
-MIN_EVENTS_PER_SOURCE  = 3
+MIXED_SIGNALS_DELTA = 0.6
+SWING_INDICATOR_DELTA = 0.35
+MIN_EVENTS_PER_SOURCE = 3
 
 
 def detect_contradictions_for_booth(
@@ -28,8 +28,9 @@ def detect_contradictions_for_booth(
     cutoff = computed_at - timedelta(days=window_days)
 
     with engine.connect() as conn:
-        rows = conn.execute(
-            text("""
+        rows = (
+            conn.execute(
+                text("""
                 SELECT
                     entity,
                     final_issue         AS issue,
@@ -46,13 +47,24 @@ def detect_contradictions_for_booth(
                 GROUP BY entity, final_issue, source_type
                 HAVING COUNT(*) >= :min_events
             """),
-            {"booth_id": booth_id, "cutoff": cutoff, "now": computed_at, "min_events": MIN_EVENTS_PER_SOURCE},
-        ).mappings().fetchall()
+                {
+                    "booth_id": booth_id,
+                    "cutoff": cutoff,
+                    "now": computed_at,
+                    "min_events": MIN_EVENTS_PER_SOURCE,
+                },
+            )
+            .mappings()
+            .fetchall()
+        )
 
     grouped: dict[tuple, dict[str, tuple]] = {}
     for r in rows:
         key = (r["entity"], r["issue"])
-        grouped.setdefault(key, {})[r["source_type"]] = (float(r["avg_polarity"]), int(r["event_count"]))
+        grouped.setdefault(key, {})[r["source_type"]] = (
+            float(r["avg_polarity"]),
+            int(r["event_count"]),
+        )
 
     flags = []
     for (entity, issue), source_stats in grouped.items():
@@ -72,22 +84,24 @@ def detect_contradictions_for_booth(
             else:
                 flag_label = "MINOR_DIVERGENCE"
             consistency_score = round(1 - (delta / 2), 3)
-            flags.append({
-                "booth_id": booth_id,
-                "entity": entity,
-                "issue": issue,
-                "computed_at": computed_at,
-                "window_days": window_days,
-                "source_a": src_a,
-                "source_b": src_b,
-                "polarity_a": round(pol_a, 3),
-                "polarity_b": round(pol_b, 3),
-                "delta": round(delta, 3),
-                "events_a": cnt_a,
-                "events_b": cnt_b,
-                "consistency_score": consistency_score,
-                "flag_label": flag_label,
-            })
+            flags.append(
+                {
+                    "booth_id": booth_id,
+                    "entity": entity,
+                    "issue": issue,
+                    "computed_at": computed_at,
+                    "window_days": window_days,
+                    "source_a": src_a,
+                    "source_b": src_b,
+                    "polarity_a": round(pol_a, 3),
+                    "polarity_b": round(pol_b, 3),
+                    "delta": round(delta, 3),
+                    "events_a": cnt_a,
+                    "events_b": cnt_b,
+                    "consistency_score": consistency_score,
+                    "flag_label": flag_label,
+                }
+            )
 
     return sorted(flags, key=lambda x: -x["delta"])
 
@@ -121,7 +135,9 @@ def upsert_contradiction_rows(engine: Engine, rows: list[dict]) -> None:
                         events_b          = EXCLUDED.events_b,
                         consistency_score = EXCLUDED.consistency_score,
                         flag_label        = EXCLUDED.flag_label
-                """), row)
+                """),
+                row,
+            )
 
 
 def update_booth_metrics_consistency(engine: Engine, booth_id: str, computed_at: datetime) -> None:
@@ -134,7 +150,9 @@ def update_booth_metrics_consistency(engine: Engine, booth_id: str, computed_at:
                 FROM contradiction_flags
                 WHERE booth_id = :booth_id
                   AND computed_at = :computed_at
-            """), {"booth_id": booth_id, "computed_at": computed_at}).fetchone()
+            """),
+            {"booth_id": booth_id, "computed_at": computed_at},
+        ).fetchone()
 
         if result and result[0] is not None:
             conn.execute(
@@ -144,12 +162,25 @@ def update_booth_metrics_consistency(engine: Engine, booth_id: str, computed_at:
                         signal_consistency_score = :score,
                         has_contradiction        = :has_contra
                     WHERE booth_id = :booth_id
-                """), {"booth_id": booth_id, "score": float(result[0]), "has_contra": (result[1] or 0) > 0})
+                """),
+                {
+                    "booth_id": booth_id,
+                    "score": float(result[0]),
+                    "has_contra": (result[1] or 0) > 0,
+                },
+            )
 
 
 def run_all_booths(engine: Engine, window_days: int = 7) -> int:
     with engine.connect() as conn:
-        booth_ids = [r[0] for r in conn.execute(text("SELECT DISTINCT mapped_booth_id FROM pulse_events WHERE mapped_booth_id IS NOT NULL")).fetchall()]
+        booth_ids = [
+            r[0]
+            for r in conn.execute(
+                text(
+                    "SELECT DISTINCT mapped_booth_id FROM pulse_events WHERE mapped_booth_id IS NOT NULL"
+                )
+            ).fetchall()
+        ]
 
     computed_at = datetime.now(timezone.utc)
     for booth_id in booth_ids:

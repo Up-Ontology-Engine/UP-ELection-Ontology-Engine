@@ -12,6 +12,7 @@ Issue 2 — booth_results.party has garbage values ('1.0', '2.0', numeric IND se
 
 Run: python -m etl.fix_booth_names_and_results
 """
+
 from __future__ import annotations
 
 import glob
@@ -28,31 +29,32 @@ from sqlalchemy import text
 load_dotenv()
 logger = logging.getLogger(__name__)
 
-DATA_DIR    = Path(__file__).parents[1] / "data"
+DATA_DIR = Path(__file__).resolve().parents[2] / "data"
 FORM20_JSON = DATA_DIR / "Form20_JSON" / "AC322.json"
-POOL_DIR    = DATA_DIR / "PoolBoothData_JSON"
+POOL_DIR = DATA_DIR / "PoolBoothData_JSON"
 
 # Party name → canonical abbreviation
 _PARTY_MAP: dict[str, str | None] = {
-    "B.J.P":                        "BJP",
-    "B.S.P.":                       "BSP",
-    "Samajwadi Party":               "SP",
-    "Indian National Congress":      "INC",
-    "Aam Aadami Party":              "AAP",
-    "None Of The Above":             "NOTA",
-    "Indpendent":                    "IND",
-    "Independent":                   "IND",
+    "B.J.P": "BJP",
+    "B.S.P.": "BSP",
+    "Samajwadi Party": "SP",
+    "Indian National Congress": "INC",
+    "Aam Aadami Party": "AAP",
+    "None Of The Above": "NOTA",
+    "Indpendent": "IND",
+    "Independent": "IND",
     "Aazad Samaj Party (Kashi Ram)": "AZSP",
-    "Anarakshit Samaj Party":        "ANARAKSHIT",
-    "Bharatiya Jan Jagriti Party":   "BJJP",
-    "Janta Rakshak Party":           "JRP",
-    "Party Affiliation":             None,   # skip placeholder rows
+    "Anarakshit Samaj Party": "ANARAKSHIT",
+    "Bharatiya Jan Jagriti Party": "BJJP",
+    "Janta Rakshak Party": "JRP",
+    "Party Affiliation": None,  # skip placeholder rows
 }
 
 AC_NAME = "Gorakhpur Urban"
 
 
 # ── Booth name map from PoolBoothData ─────────────────────────────────────────
+
 
 def _build_name_map() -> dict[int, str]:
     """part_number → dominant English section_name from PoolBoothData JSON."""
@@ -80,19 +82,21 @@ def _build_name_map() -> dict[int, str]:
 
 # ── Fix 1: polling_station_name ───────────────────────────────────────────────
 
+
 def fix_booth_names(engine: sa.Engine, name_map: dict[int, str]) -> int:
     with engine.connect() as conn:
-        rows = conn.execute(text(
-            "SELECT booth_id, booth_number FROM booth_master WHERE ac_id = 'GKP_322'"
-        )).fetchall()
+        rows = conn.execute(
+            text("SELECT booth_id, booth_number FROM booth_master WHERE ac_id = 'GKP_322'")
+        ).fetchall()
 
     updated = 0
     with engine.begin() as conn:
         for booth_id, booth_number in rows:
             english_name = name_map.get(booth_number, f"Polling Station {booth_number} - {AC_NAME}")
-            conn.execute(text(
-                "UPDATE booth_master SET polling_station_name = :name WHERE booth_id = :bid"
-            ), {"name": english_name, "bid": booth_id})
+            conn.execute(
+                text("UPDATE booth_master SET polling_station_name = :name WHERE booth_id = :bid"),
+                {"name": english_name, "bid": booth_id},
+            )
             updated += 1
 
     logger.info("Updated polling_station_name for %d booths", updated)
@@ -101,6 +105,7 @@ def fix_booth_names(engine: sa.Engine, name_map: dict[int, str]) -> int:
 
 # ── Fix 2: booth_results from AC322.json ──────────────────────────────────────
 
+
 def fix_booth_results(engine: sa.Engine) -> dict[str, int]:
     if not FORM20_JSON.exists():
         logger.error("AC322.json not found at %s", FORM20_JSON)
@@ -108,6 +113,30 @@ def fix_booth_results(engine: sa.Engine) -> dict[str, int]:
 
     data = json.loads(FORM20_JSON.read_text(encoding="utf-8"))
     polling_stations = data["sheets"][0]["polling_stations"]
+
+    # Pre-insert any missing booths as placeholders so we don't violate the FK constraint
+    unique_booths = {}
+    for ps in polling_stations:
+        booth_number = ps.get("polling_station_number")
+        if not booth_number:
+            continue
+        try:
+            b_num = int(booth_number)
+            booth_id = f"GKP_322_{b_num:03d}"
+            unique_booths[booth_id] = b_num
+        except Exception:
+            continue
+
+    with engine.begin() as conn:
+        for bid, bnum in unique_booths.items():
+            conn.execute(
+                text("""
+                    INSERT INTO booth_master (booth_id, ac_id, booth_number, polling_station_name)
+                    VALUES (:bid, 'GKP_322', :bnum, :name)
+                    ON CONFLICT (booth_id) DO NOTHING
+                """),
+                {"bid": bid, "bnum": bnum, "name": f"Polling Station {bnum} - {AC_NAME}"},
+            )
 
     rows_to_insert: list[dict] = []
     skipped = 0
@@ -123,7 +152,8 @@ def fix_booth_results(engine: sa.Engine) -> dict[str, int]:
 
         # Determine winner (max votes)
         valid_cvs = [
-            cv for cv in ps.get("candidate_votes", [])
+            cv
+            for cv in ps.get("candidate_votes", [])
             if _PARTY_MAP.get(cv.get("party", ""), cv.get("party", "")) is not None
             and cv.get("votes") is not None
         ]
@@ -138,56 +168,66 @@ def fix_booth_results(engine: sa.Engine) -> dict[str, int]:
 
             votes = cv.get("votes") or 0
             vote_share = round(votes / total_votes * 100, 4) if total_votes > 0 else None
-            is_winner = (votes == max_votes and max_votes > 0)
+            is_winner = votes == max_votes and max_votes > 0
 
-            rows_to_insert.append({
-                "booth_id":      booth_id,
-                "election_year": 2022,
-                "party":         canonical,
-                "candidate_name": cv.get("candidate_name", ""),
-                "votes":         votes,
-                "vote_share":    vote_share,
-                "winner_flag":   is_winner,
-            })
+            rows_to_insert.append(
+                {
+                    "booth_id": booth_id,
+                    "election_year": 2022,
+                    "party": canonical,
+                    "candidate_name": cv.get("candidate_name", ""),
+                    "votes": votes,
+                    "vote_share": vote_share,
+                    "winner_flag": is_winner,
+                }
+            )
 
     # Delete existing 2022 GKP_322 results then re-insert clean ones
     with engine.begin() as conn:
-        r = conn.execute(text(
-            "DELETE FROM booth_results WHERE election_year = 2022 "
-            "AND booth_id LIKE 'GKP_322_%'"
-        ))
+        r = conn.execute(
+            text(
+                "DELETE FROM booth_results WHERE election_year = 2022 "
+                "AND booth_id LIKE 'GKP_322_%'"
+            )
+        )
         deleted = r.rowcount
 
         if rows_to_insert:
-            conn.execute(text("""
+            conn.execute(
+                text("""
                 INSERT INTO booth_results
                     (booth_id, election_year, party, votes, vote_share, winner_flag)
                 VALUES
                     (:booth_id, :election_year, :party, :votes, :vote_share, :winner_flag)
-            """), rows_to_insert)
+            """),
+                rows_to_insert,
+            )
 
     logger.info(
         "booth_results: deleted %d stale rows, inserted %d clean rows, skipped %d",
-        deleted, len(rows_to_insert), skipped,
+        deleted,
+        len(rows_to_insert),
+        skipped,
     )
     return {"deleted": deleted, "inserted": len(rows_to_insert), "skipped": skipped}
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
+
 def run(engine: sa.Engine) -> dict:
     name_map = _build_name_map()
     logger.info("Built name map for %d booths from PoolBoothData", len(name_map))
 
     names_updated = fix_booth_names(engine, name_map)
-    results       = fix_booth_results(engine)
+    results = fix_booth_results(engine)
 
     return {
         "booth_names_updated": names_updated,
-        "pool_data_names":     len(name_map),
-        "results_deleted":     results["deleted"],
-        "results_inserted":    results["inserted"],
-        "results_skipped":     results["skipped"],
+        "pool_data_names": len(name_map),
+        "results_deleted": results["deleted"],
+        "results_inserted": results["inserted"],
+        "results_skipped": results["skipped"],
     }
 
 

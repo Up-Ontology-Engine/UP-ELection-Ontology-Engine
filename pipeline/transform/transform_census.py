@@ -1,4 +1,4 @@
-﻿"""
+"""
 ETL: PCA Census → village-level demographics → booth enrichment
 
 Source:
@@ -20,6 +20,7 @@ Note: Village → booth mapping requires gorakhpur_aliases.json to be populated.
 
 Run: python -m etl.transform_census
 """
+
 from __future__ import annotations
 
 import json
@@ -32,29 +33,29 @@ from sqlalchemy import text
 
 logger = logging.getLogger(__name__)
 
-DATA_DIR  = Path(__file__).parents[1] / "data" / "data"
-SEEDS_DIR = Path(__file__).parents[1] / "data" / "seeds"
+DATA_DIR = Path(__file__).resolve().parents[2] / "data" / "data"
+SEEDS_DIR = Path(__file__).resolve().parents[2] / "data" / "seeds"
 
 
 # Subset of 96 columns we care about (mapped to our output names)
 COLUMN_MAP = {
-    "Name":                              "village_name",
-    "Level":                             "level",
-    "District_Name":                     "district_name",
-    "No of Households":                  "household_count",
-    "Total Population Person":           "total_population",
-    "Total Population Male":             "male_pop",
-    "Total Population Female":           "female_pop",
+    "Name": "village_name",
+    "Level": "level",
+    "District_Name": "district_name",
+    "No of Households": "household_count",
+    "Total Population Person": "total_population",
+    "Total Population Male": "male_pop",
+    "Total Population Female": "female_pop",
     "Population in the age group 0-6 Person": "pop_0_6",
-    "Scheduled Castes population Person":"sc_population",
-    "Scheduled Tribes population Person":"st_population",
-    "Literates Population Person":       "literate_count",
-    "Illiterate Persons":                "illiterate_count",
-    "Total Worker Population Person":    "total_workers",
+    "Scheduled Castes population Person": "sc_population",
+    "Scheduled Tribes population Person": "st_population",
+    "Literates Population Person": "literate_count",
+    "Illiterate Persons": "illiterate_count",
+    "Total Worker Population Person": "total_workers",
     "Main Cultivator Population Person": "main_cultivators",
     "Main Agricultural Labourers Population Person": "agri_labourers",
     "Main Other Workers Population Person": "other_workers",
-    "Non Working Population Person":     "non_workers",
+    "Non Working Population Person": "non_workers",
 }
 
 
@@ -73,7 +74,7 @@ def _load_aliases() -> dict[str, str]:
     reverse: dict[str, str] = {}
     localities = data.get("localities", {})
     for booth_id, aliases in localities.items():
-        if booth_id.startswith("_"):   # skip comment keys
+        if booth_id.startswith("_"):  # skip comment keys
             continue
         if isinstance(aliases, list):
             for alias in aliases:
@@ -103,12 +104,12 @@ def load_census_to_booth(engine: sa.Engine) -> tuple[int, int]:
     headers = [str(sh.cell_value(0, c)).strip() for c in range(sh.ncols)]
     col_idx = {h: i for i, h in enumerate(headers)}
 
-    aliases       = _load_aliases()
-    unmatched     = []
+    aliases = _load_aliases()
+    unmatched = []
     booth_agg: dict[str, dict] = {}  # booth_id → aggregated values
 
     for row_idx in range(1, sh.nrows):
-        level    = str(sh.cell_value(row_idx, col_idx.get("Level", -1))).strip()
+        level = str(sh.cell_value(row_idx, col_idx.get("Level", -1))).strip()
         district = str(sh.cell_value(row_idx, col_idx.get("District_Name", -1))).strip()
 
         if level != "VILLAGE" or "Gorakhpur" not in district:
@@ -128,7 +129,9 @@ def load_census_to_booth(engine: sa.Engine) -> tuple[int, int]:
 
         if booth_id:
             if booth_id not in booth_agg:
-                booth_agg[booth_id] = {k: 0.0 for k in row_data if k not in ("village_name", "level", "district_name")}
+                booth_agg[booth_id] = {
+                    k: 0.0 for k in row_data if k not in ("village_name", "level", "district_name")
+                }
                 booth_agg[booth_id]["village_count"] = 0
             for k, v in row_data.items():
                 if k in booth_agg[booth_id]:
@@ -149,18 +152,20 @@ def load_census_to_booth(engine: sa.Engine) -> tuple[int, int]:
     with engine.connect() as conn:
         # Ensure extra columns exist (safe to run multiple times)
         for col_def in [
-            ("census_total_pop",    "INTEGER DEFAULT 0"),
-            ("census_sc_pop",       "INTEGER DEFAULT 0"),
-            ("census_st_pop",       "INTEGER DEFAULT 0"),
+            ("census_total_pop", "INTEGER DEFAULT 0"),
+            ("census_sc_pop", "INTEGER DEFAULT 0"),
+            ("census_st_pop", "INTEGER DEFAULT 0"),
             ("census_literate_pct", "FLOAT   DEFAULT 0"),
-            ("census_workers_pct",  "FLOAT   DEFAULT 0"),
-            ("census_hh_count",     "INTEGER DEFAULT 0"),
-            ("census_village_count","INTEGER DEFAULT 0"),
+            ("census_workers_pct", "FLOAT   DEFAULT 0"),
+            ("census_hh_count", "INTEGER DEFAULT 0"),
+            ("census_village_count", "INTEGER DEFAULT 0"),
         ]:
             try:
-                conn.execute(text(
-                    f"ALTER TABLE booth_master ADD COLUMN IF NOT EXISTS {col_def[0]} {col_def[1]}"
-                ))
+                conn.execute(
+                    text(
+                        f"ALTER TABLE booth_master ADD COLUMN IF NOT EXISTS {col_def[0]} {col_def[1]}"
+                    )
+                )
             except Exception:
                 pass  # column already exists
         conn.commit()
@@ -168,7 +173,7 @@ def load_census_to_booth(engine: sa.Engine) -> tuple[int, int]:
         for booth_id, agg in booth_agg.items():
             total_pop = agg.get("total_population", 1) or 1
             literate_pct = round(agg.get("literate_count", 0) / total_pop * 100, 1)
-            workers_pct  = round(agg.get("total_workers",   0) / total_pop * 100, 1)
+            workers_pct = round(agg.get("total_workers", 0) / total_pop * 100, 1)
             conn.execute(
                 text("""
                     UPDATE booth_master SET
@@ -182,28 +187,33 @@ def load_census_to_booth(engine: sa.Engine) -> tuple[int, int]:
                     WHERE booth_id = :booth_id
                 """),
                 {
-                    "booth_id":      booth_id,
-                    "total_pop":     int(agg.get("total_population", 0)),
-                    "sc_pop":        int(agg.get("sc_population", 0)),
-                    "st_pop":        int(agg.get("st_population", 0)),
-                    "literate_pct":  literate_pct,
-                    "workers_pct":   workers_pct,
-                    "hh_count":      int(agg.get("household_count", 0)),
+                    "booth_id": booth_id,
+                    "total_pop": int(agg.get("total_population", 0)),
+                    "sc_pop": int(agg.get("sc_population", 0)),
+                    "st_pop": int(agg.get("st_population", 0)),
+                    "literate_pct": literate_pct,
+                    "workers_pct": workers_pct,
+                    "hh_count": int(agg.get("household_count", 0)),
                     "village_count": int(agg.get("village_count", 0)),
                 },
             )
             matched += 1
         conn.commit()
 
-    logger.info("Updated %d booths with census data | %d villages unmatched", matched, len(unmatched))
+    logger.info(
+        "Updated %d booths with census data | %d villages unmatched", matched, len(unmatched)
+    )
     return matched, len(unmatched)
 
 
 def run():
     engine = sa.create_engine(os.environ["POSTGRES_URL"])
     matched, unmatched = load_census_to_booth(engine)
-    logger.info("Census ETL complete: %d matched, %d unmatched → check data/seeds/unmatched_villages.json",
-                matched, unmatched)
+    logger.info(
+        "Census ETL complete: %d matched, %d unmatched → check data/seeds/unmatched_villages.json",
+        matched,
+        unmatched,
+    )
 
 
 if __name__ == "__main__":

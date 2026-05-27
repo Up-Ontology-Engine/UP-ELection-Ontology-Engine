@@ -23,6 +23,7 @@ Run:
     python -m ingestion.myneta_export_json --ls 520
     python -m ingestion.myneta_export_json --ac 322 --pass list --pass detail
 """
+
 from __future__ import annotations
 
 import argparse
@@ -45,7 +46,7 @@ from ingestion.myneta_candidates import (
 
 logger = logging.getLogger(__name__)
 
-OUT_DIR = Path(__file__).parents[1] / "data" / "Myneta"
+OUT_DIR = Path(__file__).parents[2] / "data" / "Myneta"
 
 
 def _now_iso() -> str:
@@ -61,7 +62,9 @@ def export_constituency(
     passes: list[str],
 ) -> dict[str, Any]:
     """Scrape one constituency across the requested passes and return a JSON-ready dict."""
-    logger.info("Scraping %s %s (%s, constituency_id=%d)", ac_id, election_year, ac_name, constituency_id)
+    logger.info(
+        "Scraping %s %s (%s, constituency_id=%d)", ac_id, election_year, ac_name, constituency_id
+    )
     candidates = scrape_constituency_list(constituency_id, election_folder)
 
     records: list[dict[str, Any]] = []
@@ -109,7 +112,9 @@ def export_constituency(
     }
 
 
-def _targets(ac: int | None, ls: int | None, year: int | None) -> list[tuple[str, str, str, int, int]]:
+def _targets(
+    ac: int | None, ls: int | None, year: int | None
+) -> list[tuple[str, str, str, int, int]]:
     """Resolve (ac_id, ac_name, election_folder, constituency_id, year) tuples to scrape.
 
     Only constituencies with a verified (non-None) constituency_id are included.
@@ -126,7 +131,9 @@ def _targets(ac: int | None, ls: int | None, year: int | None) -> list[tuple[str
         return out
 
     if ac is not None:
-        keys = [(ac, year)] if year is not None else [k for k in ASSEMBLY_CONSTITUENCIES if k[0] == ac]
+        keys = (
+            [(ac, year)] if year is not None else [k for k in ASSEMBLY_CONSTITUENCIES if k[0] == ac]
+        )
         for key in keys:
             if key not in ASSEMBLY_CONSTITUENCIES:
                 raise ValueError(f"AC {key} not in ASSEMBLY_CONSTITUENCIES")
@@ -168,14 +175,16 @@ def run(
         path = out_dir / fname
         path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
         logger.info("Wrote %d candidates → %s", data["candidate_count"], path)
-        manifest_files.append({
-            "file": fname,
-            "ac_id": ac_id,
-            "ac_name": name,
-            "election_year": yr,
-            "constituency_id": cid,
-            "candidate_count": data["candidate_count"],
-        })
+        manifest_files.append(
+            {
+                "file": fname,
+                "ac_id": ac_id,
+                "ac_name": name,
+                "election_year": yr,
+                "constituency_id": cid,
+                "candidate_count": data["candidate_count"],
+            }
+        )
 
     manifest = {
         "source": "myneta",
@@ -184,9 +193,15 @@ def run(
         "constituencies": manifest_files,
         "total_candidates": sum(f["candidate_count"] for f in manifest_files),
     }
-    (out_dir / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
-    logger.info("Manifest written → %s (%d files, %d candidates)",
-                out_dir / "manifest.json", len(manifest_files), manifest["total_candidates"])
+    (out_dir / "manifest.json").write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    logger.info(
+        "Manifest written → %s (%d files, %d candidates)",
+        out_dir / "manifest.json",
+        len(manifest_files),
+        manifest["total_candidates"],
+    )
     return manifest
 
 
@@ -196,9 +211,13 @@ if __name__ == "__main__":
     p.add_argument("--ac", type=int, default=None, help="Vidhan Sabha AC number (e.g. 322)")
     p.add_argument("--ls", type=int, default=None, help="Lok Sabha constituency_id (e.g. 520)")
     p.add_argument("--year", type=int, default=None, help="Election year filter for --ac")
-    p.add_argument("--pass", dest="passes", action="append",
-                   choices=["list", "detail", "expense"],
-                   help="Which pass(es) to run (default: all three)")
+    p.add_argument(
+        "--pass",
+        dest="passes",
+        action="append",
+        choices=["list", "detail", "expense"],
+        help="Which pass(es) to run (default: all three)",
+    )
     p.add_argument("--out", type=Path, default=OUT_DIR, help="Output folder (default: data/Myneta)")
     args = p.parse_args()
     run(ac=args.ac, ls=args.ls, year=args.year, passes=args.passes, out_dir=args.out)

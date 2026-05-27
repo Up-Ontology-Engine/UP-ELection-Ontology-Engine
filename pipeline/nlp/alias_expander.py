@@ -33,7 +33,7 @@ from thefuzz import process as fuzz_process
 
 logger = logging.getLogger(__name__)
 
-ALIAS_FILE = Path(__file__).parent.parent / "data" / "seeds" / "gorakhpur_aliases.json"
+ALIAS_FILE = Path(__file__).parent.parent.parent / "data" / "seeds" / "gorakhpur_aliases.json"
 
 # Accept a fuzzy match as "same location" only above this score
 LEARN_THRESHOLD = 80
@@ -60,9 +60,7 @@ class AliasExpander:
 
     # ── Public API ────────────────────────────────────────────────────────
 
-    def propose_new_aliases(
-        self, unmatched: list[str]
-    ) -> list[dict]:
+    def propose_new_aliases(self, unmatched: list[str]) -> list[dict]:
         """
         For each unmatched mention, attempt to map it to an existing canonical key.
 
@@ -83,7 +81,13 @@ class AliasExpander:
 
             if not canonicals:
                 proposals.append(
-                    {"mention": mention, "canonical": None, "booth_id": None, "score": 0, "action": "unresolvable"}
+                    {
+                        "mention": mention,
+                        "canonical": None,
+                        "booth_id": None,
+                        "score": 0,
+                        "action": "unresolvable",
+                    }
                 )
                 continue
 
@@ -98,11 +102,11 @@ class AliasExpander:
 
             proposals.append(
                 {
-                    "mention":   mention,
+                    "mention": mention,
                     "canonical": best_match,
-                    "booth_id":  self.alias_map[best_match]["id"] if best_match else None,
-                    "score":     score,
-                    "action":    action,
+                    "booth_id": self.alias_map[best_match]["id"] if best_match else None,
+                    "score": score,
+                    "action": action,
                 }
             )
 
@@ -121,7 +125,7 @@ class AliasExpander:
                 continue
             canonical_entry = self.alias_map.get(p["canonical"], {})
             self.alias_map[p["mention"]] = {
-                "id":   canonical_entry.get("id"),
+                "id": canonical_entry.get("id"),
                 "type": canonical_entry.get("type", "booth"),
                 "auto_learned": True,
             }
@@ -176,27 +180,32 @@ class AliasExpander:
 
 # ── CLI entry point ───────────────────────────────────────────────────────────
 
+
 def _print_report(proposals: list[dict]) -> None:
     print(f"\n{'Mention':<35} {'Canonical':<35} {'Score':>5}  Action")
     print("-" * 90)
     for p in sorted(proposals, key=lambda x: -x["score"]):
-        mention   = (p["mention"] or "")[:34]
+        mention = (p["mention"] or "")[:34]
         canonical = (p["canonical"] or "")[:34]
         print(f"{mention:<35} {canonical:<35} {p['score']:>5}  {p['action']}")
 
 
 if __name__ == "__main__":
     import argparse
+
     from backend.db import get_pg_engine
 
-    parser = argparse.ArgumentParser(description="Expand geo-alias map from unresolved DB mentions.")
+    parser = argparse.ArgumentParser(
+        description="Expand geo-alias map from unresolved DB mentions."
+    )
     parser.add_argument("--report", action="store_true", help="Print proposals without saving")
     args = parser.parse_args()
 
     expander = AliasExpander()
-    engine   = get_pg_engine()
+    engine = get_pg_engine()
 
     from sqlalchemy import text
+
     with engine.connect() as conn:
         rows = conn.execute(
             text("""

@@ -13,27 +13,47 @@ Work types:
 
 Run: python -m graph.loaders.load_mla_works
 """
+
 from __future__ import annotations
 
 import logging
 
-from neo4j import Session
 import sqlalchemy as sa
+from neo4j import Session
 from sqlalchemy import text
 
 logger = logging.getLogger(__name__)
 
 # Map keywords in work title/description → issue codes
 WORK_ISSUE_MAP = {
-    "water": "water", "jal": "water", "jeevan": "water",
-    "road": "roads", "expressway": "roads", "sadak": "roads",
-    "electricity": "electricity", "bijli": "electricity", "power": "electricity",
-    "job": "jobs", "employ": "jobs", "rozgar": "jobs", "mgnrega": "jobs",
-    "health": "health", "hospital": "health", "aiims": "health", "medical": "health",
-    "education": "education", "school": "education", "college": "education",
-    "housing": "housing", "awas": "housing", "pmay": "housing",
-    "farmer": "farmer", "kisan": "farmer", "fertilizer": "farmer",
-    "sanitation": "governance", "swachh": "governance",
+    "water": "water",
+    "jal": "water",
+    "jeevan": "water",
+    "road": "roads",
+    "expressway": "roads",
+    "sadak": "roads",
+    "electricity": "electricity",
+    "bijli": "electricity",
+    "power": "electricity",
+    "job": "jobs",
+    "employ": "jobs",
+    "rozgar": "jobs",
+    "mgnrega": "jobs",
+    "health": "health",
+    "hospital": "health",
+    "aiims": "health",
+    "medical": "health",
+    "education": "education",
+    "school": "education",
+    "college": "education",
+    "housing": "housing",
+    "awas": "housing",
+    "pmay": "housing",
+    "farmer": "farmer",
+    "kisan": "farmer",
+    "fertilizer": "farmer",
+    "sanitation": "governance",
+    "swachh": "governance",
     "corruption": "corruption",
     "women": "women_safety",
 }
@@ -49,7 +69,9 @@ def _infer_issue(title: str, desc: str) -> str:
 
 def load_mla_work_nodes(pg_engine: sa.Engine, session: Session) -> int:
     with pg_engine.connect() as conn:
-        rows = conn.execute(text("""
+        rows = (
+            conn.execute(
+                text("""
             SELECT
                 mw.id::TEXT        AS work_id,
                 mw.candidate_id,
@@ -63,7 +85,11 @@ def load_mla_work_nodes(pg_engine: sa.Engine, session: Session) -> int:
             FROM mla_work mw
             LEFT JOIN candidate_master cm ON cm.candidate_id = mw.candidate_id
             ORDER BY mw.ac_id, mw.work_type
-        """)).mappings().fetchall()
+        """)
+            )
+            .mappings()
+            .fetchall()
+        )
 
     if not rows:
         logger.info("No MLA work records in mla_work table yet")
@@ -79,8 +105,9 @@ def load_mla_work_nodes(pg_engine: sa.Engine, session: Session) -> int:
     loaded = 0
     BATCH = 200
     for i in range(0, len(row_dicts), BATCH):
-        batch = row_dicts[i:i + BATCH]
-        session.run("""
+        batch = row_dicts[i : i + BATCH]
+        session.run(
+            """
             UNWIND $rows AS r
             MERGE (c:Candidate {candidate_id: r.candidate_id})
             SET c.name = r.candidate_name
@@ -97,7 +124,9 @@ def load_mla_work_nodes(pg_engine: sa.Engine, session: Session) -> int:
             WITH w, r
             MATCH (i:Issue {code: r.issue_code})
             MERGE (w)-[:ADDRESSES]->(i)
-        """, {"rows": batch})
+        """,
+            {"rows": batch},
+        )
         loaded += len(batch)
 
     logger.info("Loaded %d WorkItem nodes + DID_WORK + ADDRESSES edges", loaded)
@@ -110,24 +139,33 @@ def load_candidate_work_summary(pg_engine: sa.Engine, session: Session) -> int:
     dev_works_count, attendance_pct.
     """
     with pg_engine.connect() as conn:
-        rows = conn.execute(text("""
+        rows = (
+            conn.execute(
+                text("""
             SELECT candidate_id, name, questions_count, bills_count,
                    dev_works_count, attendance_pct
             FROM candidate_master
             WHERE questions_count > 0 OR bills_count > 0 OR dev_works_count > 0
-        """)).mappings().fetchall()
+        """)
+            )
+            .mappings()
+            .fetchall()
+        )
 
     if not rows:
         return 0
 
-    session.run("""
+    session.run(
+        """
         UNWIND $rows AS r
         MERGE (c:Candidate {candidate_id: r.candidate_id})
         SET c.questions_count = r.questions_count,
             c.bills_count     = r.bills_count,
             c.dev_works_count = r.dev_works_count,
             c.attendance_pct  = r.attendance_pct
-    """, {"rows": [dict(r) for r in rows]})
+    """,
+        {"rows": [dict(r) for r in rows]},
+    )
 
     logger.info("Updated work summary on %d Candidate nodes", len(rows))
     return len(rows)
@@ -136,13 +174,14 @@ def load_candidate_work_summary(pg_engine: sa.Engine, session: Session) -> int:
 def load_all(pg_engine: sa.Engine, session: Session) -> dict[str, int]:
     return {
         "work_items": load_mla_work_nodes(pg_engine, session),
-        "summaries":  load_candidate_work_summary(pg_engine, session),
+        "summaries": load_candidate_work_summary(pg_engine, session),
     }
 
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
-    from backend.db import get_pg_engine, get_neo4j_session
+    from backend.db import get_neo4j_session, get_pg_engine
+
     pg = get_pg_engine()
     with get_neo4j_session() as s:
         load_all(pg, s)

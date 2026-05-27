@@ -28,6 +28,7 @@ Run:
   python -m ingestion.myneta_candidates --ac 322 --pass expense
   python -m ingestion.myneta_candidates --ac 322   # runs all three passes
 """
+
 from __future__ import annotations
 
 import json
@@ -65,14 +66,14 @@ BASE_URL = "https://www.myneta.info"
 ASSEMBLY_CONSTITUENCIES: dict[tuple[int, int], tuple[str, str, str, int | None]] = {
     # ── 2022 Vidhan Sabha ──────────────────────────────────────────────────────
     (322, 2022): ("GKP_322", "Gorakhpur Urban", "uttarpradesh2022", 186),
-    (320, 2022): ("GKP_320", "Campierganj",     "uttarpradesh2022", None),
-    (321, 2022): ("GKP_321", "Pipraich",        "uttarpradesh2022", None),
+    (320, 2022): ("GKP_320", "Campierganj", "uttarpradesh2022", None),
+    (321, 2022): ("GKP_321", "Pipraich", "uttarpradesh2022", None),
     (323, 2022): ("GKP_323", "Gorakhpur Rural", "uttarpradesh2022", None),
-    (324, 2022): ("GKP_324", "Sahajanwa",       "uttarpradesh2022", None),
-    (325, 2022): ("GKP_325", "Khajani",         "uttarpradesh2022", None),
-    (326, 2022): ("GKP_326", "Chauri-Chaura",   "uttarpradesh2022", None),
-    (327, 2022): ("GKP_327", "Bansgaon",        "uttarpradesh2022", None),
-    (328, 2022): ("GKP_328", "Chillupar",       "uttarpradesh2022", None),
+    (324, 2022): ("GKP_324", "Sahajanwa", "uttarpradesh2022", None),
+    (325, 2022): ("GKP_325", "Khajani", "uttarpradesh2022", None),
+    (326, 2022): ("GKP_326", "Chauri-Chaura", "uttarpradesh2022", None),
+    (327, 2022): ("GKP_327", "Bansgaon", "uttarpradesh2022", None),
+    (328, 2022): ("GKP_328", "Chillupar", "uttarpradesh2022", None),
     # ── 2017 Vidhan Sabha — constituency_id confirmed 2026-05-21 ──────────────
     (322, 2017): ("GKP_322", "Gorakhpur Urban", "uttarpradesh2017", 362),
 }
@@ -82,15 +83,20 @@ LOK_SABHA: dict[int, tuple[str, str, str, int | None]] = {
 }
 
 # Raw snapshot storage for debugging failed parses
-HTML_SNAPSHOT_DIR = Path(__file__).parents[1] / "data" / "raw" / "myneta_html"
+HTML_SNAPSHOT_DIR = Path(__file__).parents[2] / "data" / "raw" / "myneta_html"
 
 EDUCATION_RANK = {
-    "10th pass": 1, "12th pass": 2, "graduate": 3,
-    "post graduate": 4, "doctorate": 5, "literate": 0,
+    "10th pass": 1,
+    "12th pass": 2,
+    "graduate": 3,
+    "post graduate": 4,
+    "doctorate": 5,
+    "literate": 0,
 }
 
 
 # ── Helpers ────────────────────────────────────────────────────────────────────
+
 
 def _parse_amount(raw: str) -> int:
     """Parse MyNeta amount strings to int.
@@ -148,6 +154,7 @@ def _get(url: str, delay: float = 0.5) -> requests.Response | None:
 
 # ── Pass 1: constituency list ──────────────────────────────────────────────────
 
+
 def scrape_constituency_list(constituency_id: int, election_folder: str) -> list[dict]:
     """
     Scrape the candidate roster for one constituency.
@@ -196,35 +203,38 @@ def scrape_constituency_list(constituency_id: int, election_folder: str) -> list
 
         # Strip winner/loser annotations MyNeta appends to the name cell.
         # Handles both "(Winner)" with parens and "Winner" concatenated directly.
-        raw_name  = _safe_get(row_data, headers, "candidate")
-        name      = re.sub(r"[\s(]*winner[\s)]*$", "", raw_name, flags=re.IGNORECASE).strip()
-        party     = _safe_get(row_data, headers, "party")
+        raw_name = _safe_get(row_data, headers, "candidate")
+        name = re.sub(r"[\s(]*winner[\s)]*$", "", raw_name, flags=re.IGNORECASE).strip()
+        party = _safe_get(row_data, headers, "party")
         education = _safe_get(row_data, headers, "education")
-        age_str   = _safe_get(row_data, headers, "age")
-        criminal  = _safe_get(row_data, headers, "criminal")
-        assets    = _safe_get(row_data, headers, "total assets")
-        liab      = _safe_get(row_data, headers, "liabilities")
+        age_str = _safe_get(row_data, headers, "age")
+        criminal = _safe_get(row_data, headers, "criminal")
+        assets = _safe_get(row_data, headers, "total assets")
+        liab = _safe_get(row_data, headers, "liabilities")
 
         if not name:
             continue
 
-        candidates.append({
-            "name":               name,
-            "party_raw":          party,
-            "education":          education,
-            "age":                int(re.sub(r"\D", "", age_str or "0") or 0) or None,
-            "criminal_cases":     int(re.sub(r"\D", "", criminal or "0") or 0),
-            "total_assets":       _parse_amount(assets),
-            "liabilities":        _parse_amount(liab),
-            "detail_url":         detail_url,
-            "source_candidate_id": source_cand_id,
-        })
+        candidates.append(
+            {
+                "name": name,
+                "party_raw": party,
+                "education": education,
+                "age": int(re.sub(r"\D", "", age_str or "0") or 0) or None,
+                "criminal_cases": int(re.sub(r"\D", "", criminal or "0") or 0),
+                "total_assets": _parse_amount(assets),
+                "liabilities": _parse_amount(liab),
+                "detail_url": detail_url,
+                "source_candidate_id": source_cand_id,
+            }
+        )
 
     logger.info("constituency_id=%d: found %d candidates", constituency_id, len(candidates))
     return candidates
 
 
 # ── Pass 2: affidavit detail ───────────────────────────────────────────────────
+
 
 def _section_table(soup, heading_pattern: str):
     """Return the first <table> following a <h3> that matches heading_pattern."""
@@ -251,7 +261,7 @@ def _parse_asset_table(section_soup) -> list[dict]:
         # Header rows have 8 cells — the item check below skips them.
         if len(cells) < 3:
             continue
-        item   = cells[1].get_text(" ", strip=True)
+        item = cells[1].get_text(" ", strip=True)
         label0 = cells[0].get_text(" ", strip=True).lower()
         if not item or item.lower() in ("description", "sr no", "s.no"):
             continue
@@ -266,7 +276,7 @@ def _parse_asset_table(section_soup) -> list[dict]:
 
         # cells[-1] is the row total (present on all 9-cell data rows)
         total_rs = _parse_amount(cells[-1].get_text(" ", strip=True))
-        self_rs  = _parse_amount(cells[2].get_text(" ", strip=True)) if len(cells) > 2 else 0
+        self_rs = _parse_amount(cells[2].get_text(" ", strip=True)) if len(cells) > 2 else 0
         items.append({"item": item, "total_rs": total_rs, "self_rs": self_rs})
     return items
 
@@ -309,11 +319,13 @@ def _parse_itr_table(itr_tbl) -> list[dict]:
             continue
         packed = cells[3].get_text(" ", strip=True).replace("\xa0", " ")
         for m in re.finditer(r"(20\d{2}\s*[-–]\s*\d{2,4})\s*\*\*\s*Rs\s*([\d,]+)", packed):
-            rows_out.append({
-                "relation":        relation,
-                "year":            re.sub(r"\s+", "", m.group(1)),
-                "total_income_rs": _parse_amount(m.group(2)),
-            })
+            rows_out.append(
+                {
+                    "relation": relation,
+                    "year": re.sub(r"\s+", "", m.group(1)),
+                    "total_income_rs": _parse_amount(m.group(2)),
+                }
+            )
     return rows_out
 
 
@@ -331,7 +343,11 @@ def scrape_affidavit_detail(candidate_id: int, election_folder: str) -> dict:
     url = f"{BASE_URL}/{election_folder}/candidate.php?candidate_id={candidate_id}"
     resp = _get(url, delay=0.8)
     if resp is None:
-        return {"parse_status": "failed", "parse_error": "network error", "source_affidavit_url": url}
+        return {
+            "parse_status": "failed",
+            "parse_error": "network error",
+            "source_affidavit_url": url,
+        }
 
     html = resp.text
     snapshot_path = _save_html_snapshot(html, election_folder, candidate_id, "affidavit")
@@ -339,9 +355,9 @@ def scrape_affidavit_detail(candidate_id: int, election_folder: str) -> dict:
 
     result: dict = {
         "source_affidavit_url": url,
-        "html_snapshot_path":   snapshot_path,
-        "parse_status":         "scraped",
-        "parse_error":          None,
+        "html_snapshot_path": snapshot_path,
+        "parse_status": "scraped",
+        "parse_error": None,
     }
 
     # Walk all label-value table rows
@@ -384,11 +400,12 @@ def scrape_affidavit_detail(candidate_id: int, election_folder: str) -> dict:
                     cells = row.find_all("td")
                     if len(cells) >= 2:
                         label = cells[0].get_text(" ", strip=True).lower()
-                        val   = cells[1].get_text(" ", strip=True)
+                        val = cells[1].get_text(" ", strip=True)
                         if label in ("s.no", "serial no", "no.", ""):
                             continue
                         if not cases or any(
-                            kw in label for kw in ("what", "section", "ipc", "court", "case no", "offence")
+                            kw in label
+                            for kw in ("what", "section", "ipc", "court", "case no", "offence")
                         ):
                             if not cases or "section" in label or "what" in label:
                                 cases.append({})
@@ -398,22 +415,24 @@ def scrape_affidavit_detail(candidate_id: int, election_folder: str) -> dict:
                 result["criminal_case_details_json"] = cases
 
     # Asset sections — find tables via h3 headings (h3.find_next("table"))
-    movable_tbl   = _section_table(soup, r"movable asset")
+    movable_tbl = _section_table(soup, r"movable asset")
     immovable_tbl = _section_table(soup, r"immovable asset")
-    liab_tbl      = _section_table(soup, r"liabilit")
+    liab_tbl = _section_table(soup, r"liabilit")
 
-    movable_items   = _parse_asset_table(movable_tbl)       if movable_tbl   else []
-    immovable_items = _parse_asset_table(immovable_tbl)     if immovable_tbl else []
-    liab_items      = _parse_liabilities_table(liab_tbl)   if liab_tbl      else []
+    movable_items = _parse_asset_table(movable_tbl) if movable_tbl else []
+    immovable_items = _parse_asset_table(immovable_tbl) if immovable_tbl else []
+    liab_items = _parse_liabilities_table(liab_tbl) if liab_tbl else []
 
     if movable_items:
         result["movable_assets_json"] = movable_items
-        result["movable_assets_rs"]   = sum(i["total_rs"] for i in movable_items
-                                            if "total" not in i["item"].lower())
+        result["movable_assets_rs"] = sum(
+            i["total_rs"] for i in movable_items if "total" not in i["item"].lower()
+        )
     if immovable_items:
         result["immovable_assets_json"] = immovable_items
-        result["immovable_assets_rs"]   = sum(i["total_rs"] for i in immovable_items
-                                              if "total" not in i["item"].lower())
+        result["immovable_assets_rs"] = sum(
+            i["total_rs"] for i in immovable_items if "total" not in i["item"].lower()
+        )
     if liab_items:
         result["liabilities_json"] = liab_items
 
@@ -429,6 +448,7 @@ def scrape_affidavit_detail(candidate_id: int, election_folder: str) -> dict:
 
 # ── Pass 3: expense affidavit (optional) ──────────────────────────────────────
 
+
 def scrape_expense_page(candidate_id: int, election_folder: str) -> dict:
     """
     Scrape campaign expenditure page.
@@ -437,8 +457,11 @@ def scrape_expense_page(candidate_id: int, election_folder: str) -> dict:
     url = f"{BASE_URL}/{election_folder}/expense.php?candidate_id={candidate_id}"
     resp = _get(url, delay=0.5)
     if resp is None:
-        return {"expense_scrape_status": "failed", "parse_error": "network error",
-                "source_expense_url": url}
+        return {
+            "expense_scrape_status": "failed",
+            "parse_error": "network error",
+            "source_expense_url": url,
+        }
 
     html = resp.text
     soup = BeautifulSoup(html, "html.parser")
@@ -449,9 +472,9 @@ def scrape_expense_page(candidate_id: int, election_folder: str) -> dict:
         return {"expense_scrape_status": "not_available", "source_expense_url": url}
 
     result: dict = {
-        "source_expense_url":  url,
+        "source_expense_url": url,
         "expense_scrape_status": "scraped",
-        "parse_error":         None,
+        "parse_error": None,
     }
 
     breakdown: list[dict] = []
@@ -472,7 +495,9 @@ def scrape_expense_page(candidate_id: int, election_folder: str) -> dict:
         elif "donation" in key or "loan" in key or "gift" in key or "contribution" in key:
             result["external_funds_rs"] = _parse_amount(val)
         elif val and _parse_amount(val) > 0:
-            breakdown.append({"category": cells[0].get_text(strip=True), "amount_rs": _parse_amount(val)})
+            breakdown.append(
+                {"category": cells[0].get_text(strip=True), "amount_rs": _parse_amount(val)}
+            )
 
     if breakdown:
         result["expense_breakdown_json"] = breakdown
@@ -487,6 +512,7 @@ def scrape_expense_page(candidate_id: int, election_folder: str) -> dict:
 
 # ── DB loaders ─────────────────────────────────────────────────────────────────
 
+
 def load_to_postgres(
     cands: list[dict],
     ac_id: str,
@@ -496,10 +522,11 @@ def load_to_postgres(
     """Upsert list-page candidates into candidate_master + candidate_affidavits."""
     with engine.connect() as conn:
         for c in cands:
-            cid   = _slugify(c["name"], election_year)
+            cid = _slugify(c["name"], election_year)
             party = _normalise_party(c.get("party_raw", ""))
 
-            conn.execute(text("""
+            conn.execute(
+                text("""
                 INSERT INTO candidate_master
                     (candidate_id, name, party, ac_id, election_year,
                      source_candidate_id, source_system, election_slug)
@@ -509,17 +536,24 @@ def load_to_postgres(
                     party              = EXCLUDED.party,
                     source_candidate_id = COALESCE(EXCLUDED.source_candidate_id,
                                                    candidate_master.source_candidate_id)
-            """), {
-                "cid":    cid,
-                "name":   c["name"],
-                "party":  party,
-                "ac_id":  ac_id,
-                "year":   election_year,
-                "src_id": str(c.get("source_candidate_id") or ""),
-                "slug":   f"UP_LS_{election_year}" if election_year >= 2024 and ac_id.startswith("GKP_LS") else f"UP_VSA_{election_year}",
-            })
+            """),
+                {
+                    "cid": cid,
+                    "name": c["name"],
+                    "party": party,
+                    "ac_id": ac_id,
+                    "year": election_year,
+                    "src_id": str(c.get("source_candidate_id") or ""),
+                    "slug": (
+                        f"UP_LS_{election_year}"
+                        if election_year >= 2024 and ac_id.startswith("GKP_LS")
+                        else f"UP_VSA_{election_year}"
+                    ),
+                },
+            )
 
-            conn.execute(text("""
+            conn.execute(
+                text("""
                 INSERT INTO candidate_affidavits
                     (candidate_id, election_year, criminal_cases, serious_cases,
                      total_assets, total_liabilities, education, profession, age, pdf_url,
@@ -528,18 +562,20 @@ def load_to_postgres(
                         :assets, :liab, :edu, :prof, :age, :pdf,
                         'list_only')
                 ON CONFLICT DO NOTHING
-            """), {
-                "cid":      cid,
-                "year":     election_year,
-                "criminal": c.get("criminal_cases", 0),
-                "serious":  c.get("serious_cases", 0),
-                "assets":   c.get("total_assets", 0),
-                "liab":     c.get("liabilities", 0),
-                "edu":      c.get("education", ""),
-                "prof":     c.get("profession", ""),
-                "age":      c.get("age"),
-                "pdf":      c.get("pdf_url", ""),
-            })
+            """),
+                {
+                    "cid": cid,
+                    "year": election_year,
+                    "criminal": c.get("criminal_cases", 0),
+                    "serious": c.get("serious_cases", 0),
+                    "assets": c.get("total_assets", 0),
+                    "liab": c.get("liabilities", 0),
+                    "edu": c.get("education", ""),
+                    "prof": c.get("profession", ""),
+                    "age": c.get("age"),
+                    "pdf": c.get("pdf_url", ""),
+                },
+            )
         conn.commit()
     return len(cands)
 
@@ -550,38 +586,49 @@ def load_affidavit_detail(candidate_id: str, detail: dict, engine: sa.Engine) ->
         return
 
     # Push profession/enrollment back to candidate_master
-    master_updates = {k: detail.get(k) for k in
-                      ("self_profession", "spouse_name", "spouse_profession",
-                       "voter_enrolled_ac_name")
-                      if detail.get(k)}
+    master_updates = {
+        k: detail.get(k)
+        for k in ("self_profession", "spouse_name", "spouse_profession", "voter_enrolled_ac_name")
+        if detail.get(k)
+    }
     if master_updates:
         sets = ", ".join(f"{k} = :{k}" for k in master_updates)
         master_updates["cid"] = candidate_id
         with engine.connect() as conn:
-            conn.execute(text(f"UPDATE candidate_master SET {sets} WHERE candidate_id = :cid"),
-                         master_updates)
+            conn.execute(
+                text(f"UPDATE candidate_master SET {sets} WHERE candidate_id = :cid"),
+                master_updates,
+            )
             conn.commit()
 
     # Serialise JSONB fields
-    jsonb_fields = ("movable_assets_json", "immovable_assets_json", "liabilities_json",
-                    "criminal_case_details_json", "itr_income_json")
+    jsonb_fields = (
+        "movable_assets_json",
+        "immovable_assets_json",
+        "liabilities_json",
+        "criminal_case_details_json",
+        "itr_income_json",
+    )
     params: dict = {"cid": candidate_id}
     for f in jsonb_fields:
         v = detail.get(f)
         params[f] = json.dumps(v, ensure_ascii=False) if v is not None else None
 
-    params.update({
-        "movable_assets_rs":    detail.get("movable_assets_rs"),
-        "immovable_assets_rs":  detail.get("immovable_assets_rs"),
-        "total_assets_detail":  detail.get("total_assets_detail"),
-        "source_affidavit_url": detail.get("source_affidavit_url"),
-        "html_snapshot_path":   detail.get("html_snapshot_path"),
-        "parse_status":         detail.get("parse_status", "scraped"),
-        "parse_error":          detail.get("parse_error"),
-    })
+    params.update(
+        {
+            "movable_assets_rs": detail.get("movable_assets_rs"),
+            "immovable_assets_rs": detail.get("immovable_assets_rs"),
+            "total_assets_detail": detail.get("total_assets_detail"),
+            "source_affidavit_url": detail.get("source_affidavit_url"),
+            "html_snapshot_path": detail.get("html_snapshot_path"),
+            "parse_status": detail.get("parse_status", "scraped"),
+            "parse_error": detail.get("parse_error"),
+        }
+    )
 
     with engine.connect() as conn:
-        conn.execute(text("""
+        conn.execute(
+            text("""
             UPDATE candidate_affidavits SET
                 movable_assets_rs          = COALESCE(:movable_assets_rs, movable_assets_rs),
                 immovable_assets_rs        = COALESCE(:immovable_assets_rs, immovable_assets_rs),
@@ -597,33 +644,37 @@ def load_affidavit_detail(candidate_id: str, detail: dict, engine: sa.Engine) ->
                 parse_error                = :parse_error,
                 scraped_at                 = NOW()
             WHERE candidate_id = :cid
-        """), params)
+        """),
+            params,
+        )
         conn.commit()
 
 
-def load_expense_detail(candidate_id: str, election_year: int, expense: dict,
-                        engine: sa.Engine) -> None:
+def load_expense_detail(
+    candidate_id: str, election_year: int, expense: dict, engine: sa.Engine
+) -> None:
     """Upsert expense affidavit data into candidate_expense_detail."""
     if not expense:
         return
 
     breakdown = expense.get("expense_breakdown_json")
     params = {
-        "cid":        candidate_id,
-        "year":       election_year,
-        "total":      expense.get("total_election_expense_rs"),
-        "own":        expense.get("own_funds_rs"),
-        "party":      expense.get("party_funds_rs"),
-        "external":   expense.get("external_funds_rs"),
-        "breakdown":  json.dumps(breakdown, ensure_ascii=False) if breakdown else None,
-        "quality":    expense.get("expense_data_quality"),
-        "status":     expense.get("expense_scrape_status", "scraped"),
-        "url":        expense.get("source_expense_url"),
-        "error":      expense.get("parse_error"),
+        "cid": candidate_id,
+        "year": election_year,
+        "total": expense.get("total_election_expense_rs"),
+        "own": expense.get("own_funds_rs"),
+        "party": expense.get("party_funds_rs"),
+        "external": expense.get("external_funds_rs"),
+        "breakdown": json.dumps(breakdown, ensure_ascii=False) if breakdown else None,
+        "quality": expense.get("expense_data_quality"),
+        "status": expense.get("expense_scrape_status", "scraped"),
+        "url": expense.get("source_expense_url"),
+        "error": expense.get("parse_error"),
     }
 
     with engine.connect() as conn:
-        conn.execute(text("""
+        conn.execute(
+            text("""
             INSERT INTO candidate_expense_detail
                 (candidate_id, election_year,
                  total_election_expense_rs, own_funds_rs, party_funds_rs, external_funds_rs,
@@ -650,26 +701,36 @@ def load_expense_detail(candidate_id: str, election_year: int, expense: dict,
                 expense_scrape_status     = EXCLUDED.expense_scrape_status,
                 expense_scraped_at        = NOW(),
                 parse_error               = EXCLUDED.parse_error
-        """), params)
+        """),
+            params,
+        )
         conn.commit()
 
 
 # ── Generic pass helpers (shared by VS and LS orchestrators) ──────────────────
 
-def _run_list_pass(ac_id: str, election_folder: str, constituency_id: int,
-                   election_year: int, engine: sa.Engine) -> int:
+
+def _run_list_pass(
+    ac_id: str, election_folder: str, constituency_id: int, election_year: int, engine: sa.Engine
+) -> int:
     cands = scrape_constituency_list(constituency_id, election_folder)
     return load_to_postgres(cands, ac_id, election_year, engine)
 
 
-def _run_detail_pass(ac_id: str, election_folder: str, engine: sa.Engine,
-                     force_rescrape: bool = False) -> int:
+def _run_detail_pass(
+    ac_id: str, election_folder: str, engine: sa.Engine, force_rescrape: bool = False
+) -> int:
     """Enrich affidavits for all candidates whose parse_status is pending/list_only."""
-    status_filter = "TRUE" if force_rescrape else \
-        "(ca.parse_status IS NULL OR ca.parse_status IN ('pending', 'list_only'))"
+    status_filter = (
+        "TRUE"
+        if force_rescrape
+        else "(ca.parse_status IS NULL OR ca.parse_status IN ('pending', 'list_only'))"
+    )
 
     with engine.connect() as conn:
-        rows = conn.execute(text(f"""
+        rows = (
+            conn.execute(
+                text(f"""
             SELECT cm.candidate_id, cm.source_candidate_id
             FROM candidate_master cm
             LEFT JOIN candidate_affidavits ca USING (candidate_id)
@@ -677,7 +738,12 @@ def _run_detail_pass(ac_id: str, election_folder: str, engine: sa.Engine,
               AND {status_filter}
               AND cm.source_candidate_id IS NOT NULL
               AND cm.source_candidate_id != ''
-        """), {"ac_id": ac_id}).mappings().fetchall()
+        """),
+                {"ac_id": ac_id},
+            )
+            .mappings()
+            .fetchall()
+        )
 
     logger.info("Detail pass: %d candidates to enrich for %s", len(rows), ac_id)
     count = 0
@@ -692,10 +758,13 @@ def _run_detail_pass(ac_id: str, election_folder: str, engine: sa.Engine,
     return count
 
 
-def _run_expense_pass(ac_id: str, election_folder: str, election_year: int,
-                      engine: sa.Engine) -> int:
+def _run_expense_pass(
+    ac_id: str, election_folder: str, election_year: int, engine: sa.Engine
+) -> int:
     with engine.connect() as conn:
-        rows = conn.execute(text("""
+        rows = (
+            conn.execute(
+                text("""
             SELECT cm.candidate_id, cm.source_candidate_id
             FROM candidate_master cm
             LEFT JOIN candidate_expense_detail ced
@@ -705,7 +774,12 @@ def _run_expense_pass(ac_id: str, election_folder: str, election_year: int,
               AND cm.source_candidate_id IS NOT NULL
               AND cm.source_candidate_id != ''
               AND (ced.candidate_id IS NULL OR ced.expense_scrape_status = 'pending')
-        """), {"ac_id": ac_id, "year": election_year}).mappings().fetchall()
+        """),
+                {"ac_id": ac_id, "year": election_year},
+            )
+            .mappings()
+            .fetchall()
+        )
 
     logger.info("Expense pass: %d candidates for %s %d", len(rows), ac_id, election_year)
     count = 0
@@ -725,6 +799,7 @@ def _run_expense_pass(ac_id: str, election_folder: str, election_year: int,
 
 # ── VS orchestrators ───────────────────────────────────────────────────────────
 
+
 def run_list_pass(ac_no: int, engine: sa.Engine, year: int = 2022) -> int:
     key = (ac_no, year)
     if key not in ASSEMBLY_CONSTITUENCIES:
@@ -733,12 +808,15 @@ def run_list_pass(ac_no: int, engine: sa.Engine, year: int = 2022) -> int:
     if constituency_id is None:
         logger.warning("AC %d/%d (%s): constituency_id not verified — skip", ac_no, year, ac_name)
         return 0
-    logger.info("VS list pass: AC %d/%d %s (constituency_id=%d)", ac_no, year, ac_name, constituency_id)
+    logger.info(
+        "VS list pass: AC %d/%d %s (constituency_id=%d)", ac_no, year, ac_name, constituency_id
+    )
     return _run_list_pass(ac_id, election_folder, constituency_id, year, engine)
 
 
-def run_detail_pass(ac_no: int, engine: sa.Engine, year: int = 2022,
-                    force_rescrape: bool = False) -> int:
+def run_detail_pass(
+    ac_no: int, engine: sa.Engine, year: int = 2022, force_rescrape: bool = False
+) -> int:
     key = (ac_no, year)
     if key not in ASSEMBLY_CONSTITUENCIES:
         raise ValueError(f"AC ({ac_no}, {year}) not in ASSEMBLY_CONSTITUENCIES")
@@ -755,6 +833,7 @@ def run_expense_pass(ac_no: int, engine: sa.Engine, year: int = 2022) -> int:
 
 
 # ── LS orchestrators ───────────────────────────────────────────────────────────
+
 
 def _ls_year(election_folder: str) -> int:
     m = re.search(r"20\d{2}", election_folder)
@@ -773,7 +852,9 @@ def run_ls_list_pass(ls_no: int, engine: sa.Engine) -> int:
     if constituency_id is None:
         raise ValueError(f"constituency_id not set for LS entry {ls_no}")
     election_year = _ls_year(election_folder)
-    logger.info("LS list pass: %s (constituency_id=%d, year=%d)", name, constituency_id, election_year)
+    logger.info(
+        "LS list pass: %s (constituency_id=%d, year=%d)", name, constituency_id, election_year
+    )
     return _run_list_pass(ac_id, election_folder, constituency_id, election_year, engine)
 
 
@@ -795,9 +876,14 @@ def run_ls_expense_pass(ls_no: int, engine: sa.Engine) -> int:
 
 # ── CLI entry point ────────────────────────────────────────────────────────────
 
-def run(ac_no: int = 322, passes: list[str] | None = None,
-        election_year: int = 2022, ls_no: int | None = None,
-        force_rescrape: bool = False):
+
+def run(
+    ac_no: int = 322,
+    passes: list[str] | None = None,
+    election_year: int = 2022,
+    ls_no: int | None = None,
+    force_rescrape: bool = False,
+):
     passes = passes or ["list", "detail", "expense"]
     engine = sa.create_engine(os.environ["POSTGRES_URL"])
 
@@ -832,17 +918,33 @@ if __name__ == "__main__":
     import argparse
 
     p = argparse.ArgumentParser(description="MyNeta scraper — list / detail / expense passes")
-    p.add_argument("--ac",   type=int, default=322,
-                   help="Vidhan Sabha AC number (default: 322)")
-    p.add_argument("--ls",   type=int, default=None,
-                   help="Lok Sabha constituency_id from LOK_SABHA map (e.g. 520 for Gorakhpur 2024)")
-    p.add_argument("--pass", dest="passes", action="append",
-                   choices=["list", "detail", "expense"],
-                   help="Which pass(es) to run (default: all three)")
-    p.add_argument("--year", type=int, default=2022,
-                   help="Election year for expense pass (default: 2022)")
-    p.add_argument("--force-rescrape", action="store_true",
-                   help="Re-scrape detail pages even for already-scraped candidates")
+    p.add_argument("--ac", type=int, default=322, help="Vidhan Sabha AC number (default: 322)")
+    p.add_argument(
+        "--ls",
+        type=int,
+        default=None,
+        help="Lok Sabha constituency_id from LOK_SABHA map (e.g. 520 for Gorakhpur 2024)",
+    )
+    p.add_argument(
+        "--pass",
+        dest="passes",
+        action="append",
+        choices=["list", "detail", "expense"],
+        help="Which pass(es) to run (default: all three)",
+    )
+    p.add_argument(
+        "--year", type=int, default=2022, help="Election year for expense pass (default: 2022)"
+    )
+    p.add_argument(
+        "--force-rescrape",
+        action="store_true",
+        help="Re-scrape detail pages even for already-scraped candidates",
+    )
     args = p.parse_args()
-    run(ac_no=args.ac, passes=args.passes, election_year=args.year,
-        ls_no=args.ls, force_rescrape=args.force_rescrape)
+    run(
+        ac_no=args.ac,
+        passes=args.passes,
+        election_year=args.year,
+        ls_no=args.ls,
+        force_rescrape=args.force_rescrape,
+    )

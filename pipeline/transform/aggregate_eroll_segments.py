@@ -1,4 +1,4 @@
-﻿"""
+"""
 ETL: Aggregate electoral roll (PoolBoothData) into privacy-safe booth-level
      demographic segments.
 
@@ -17,6 +17,7 @@ Loads into: booth_demographic_segments table
 
 Run: python -m etl.aggregate_eroll_segments
 """
+
 from __future__ import annotations
 
 import glob
@@ -32,7 +33,7 @@ from sqlalchemy import text
 load_dotenv()
 logger = logging.getLogger(__name__)
 
-DATA_DIR = Path(__file__).parents[1] / "data" / "PoolBoothData_JSON"
+DATA_DIR = Path(__file__).parents[2] / "data" / "PoolBoothData_JSON"
 
 
 def _build_booth_id(ac_number: int, part_number: int) -> str:
@@ -108,7 +109,8 @@ def run():
 
             for segment_type, count in counts.items():
                 pct = round(count / total, 4) if total > 0 else None
-                conn.execute(text("""
+                conn.execute(
+                    text("""
                     INSERT INTO booth_demographic_segments
                         (booth_id, segment_type, count, pct_of_voters)
                     VALUES (:booth_id, :seg, :count, :pct)
@@ -116,12 +118,14 @@ def run():
                         count         = EXCLUDED.count,
                         pct_of_voters = EXCLUDED.pct_of_voters,
                         computed_at   = NOW()
-                """), {
-                    "booth_id": booth_id,
-                    "seg":      segment_type,
-                    "count":    count,
-                    "pct":      pct,
-                })
+                """),
+                    {
+                        "booth_id": booth_id,
+                        "seg": segment_type,
+                        "count": count,
+                        "pct": pct,
+                    },
+                )
 
             loaded += 1
             logger.info("Loaded segments for %s (voters=%d)", booth_id, len(voter_records))

@@ -1,23 +1,46 @@
 from __future__ import annotations
-import os
+
 from fastapi import APIRouter, HTTPException, Query
+
 from ..queries import (
-    _rac, get_conversion_overview, get_conversion_stats,
-    get_ac_candidates, get_ac_schemes, get_ac_narratives,
-    get_ac_events, get_ac_quality, get_ac_recommendations,
-    get_booth_geo, get_ac_intel_summary, get_ac_booth_election_rows,
-    get_ac_election_results, get_ac_demographics_summary,
-    get_ac_demographic_segments, get_heatmap_coverage,
-    get_twin_snapshot, get_graph_coverage, get_ac_level_pulse,
-    get_ac_level_issues
+    _rac,
+    get_ac_booth_election_rows,
+    get_ac_candidates,
+    get_ac_demographic_segments,
+    get_ac_demographics_summary,
+    get_ac_election_results,
+    get_ac_events,
+    get_ac_intel_summary,
+    get_ac_level_issues,
+    get_ac_level_pulse,
+    get_ac_narratives,
+    get_ac_quality,
+    get_ac_recommendations,
+    get_ac_schemes,
+    get_all_acs,
+    get_booth_geo,
+    get_conversion_overview,
+    get_conversion_stats,
+    get_graph_coverage,
+    get_heatmap_coverage,
+    get_twin_snapshot,
+)
+from ..schemas import (
+    BoothGeoResponse,
+    CandidateResponse,
+    ConversionOverviewResponse,
+    IntelSummaryResponse,
+    SchemeResponse,
 )
 from ..validation import InputValidationRoute
-from ..schemas import (
-    CandidateResponse, SchemeResponse, ConversionOverviewResponse,
-    BoothGeoResponse, IntelSummaryResponse
-)
 
 router = APIRouter(route_class=InputValidationRoute)
+
+
+@router.get("/acs")
+def list_acs():
+    """List all available Assembly Constituencies."""
+    return {"acs": get_all_acs()}
 
 
 @router.get("/ac/{ac_id}/conversion-overview", response_model=ConversionOverviewResponse)
@@ -34,8 +57,11 @@ def conversion_stats(ac_id: str):
 
 
 @router.get("/ac/{ac_id}/candidates", response_model=CandidateResponse)
-def ac_candidates(ac_id: str):
-    return {"ac_id": ac_id, "candidates": get_ac_candidates(_rac(ac_id))}
+def ac_candidates(ac_id: str, limit: int = Query(100, ge=1, le=500), offset: int = Query(0, ge=0)):
+    return {
+        "ac_id": ac_id,
+        "candidates": get_ac_candidates(_rac(ac_id), limit=limit, offset=offset),
+    }
 
 
 @router.get("/ac/{ac_id}/schemes", response_model=SchemeResponse)
@@ -141,19 +167,19 @@ def ac_intel(ac_id: str, days: int = Query(365, ge=1, le=3650)):
     """
     Honest AC-level pulse intelligence derived from pulse_events.
     """
-    pulse  = get_ac_level_pulse(_rac(ac_id), days=days)
+    pulse = get_ac_level_pulse(_rac(ac_id), days=days)
     issues = get_ac_level_issues(_rac(ac_id), days=days)
     return {
-        "ac_id":             ac_id,
+        "ac_id": ac_id,
         "attribution_level": pulse["attribution_level"],
-        "window_days":       days,
-        "total_events":      pulse["total_events"],
-        "polarity_events":   pulse["polarity_events"],
-        "booth_attributed":  pulse["booth_attributed"],
+        "window_days": days,
+        "total_events": pulse["total_events"],
+        "polarity_events": pulse["polarity_events"],
+        "booth_attributed": pulse["booth_attributed"],
         "avg_geo_confidence": pulse["avg_geo_confidence"],
-        "bjp_pulse":         pulse["bjp_pulse"],
-        "opp_pulse":         pulse["opp_pulse"],
-        "lean":              pulse["lean"],
-        "top_issues":        issues,
-        "warning":           pulse["warning"],
+        "bjp_pulse": pulse["bjp_pulse"],
+        "opp_pulse": pulse["opp_pulse"],
+        "lean": pulse["lean"],
+        "top_issues": issues,
+        "warning": pulse["warning"],
     }
