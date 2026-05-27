@@ -77,7 +77,6 @@ export default function MyNetaPage() {
       });
     return () => { active = false; };
   }, [acId, page]);
-
   // Dynamically build graph elements from live API Candidate data
   const { graph, partyDist, topAssets, criminalFlagged } = useMemo(() => {
     const nodes: GraphNode[] = [];

@@ -371,15 +371,8 @@ Signal source weights: survey=1.0 · field_note=0.9 · youtube=0.6 · news=0.4
 | AI Reasoning | Sarvam-30b (primary) → Gemini (fallback) |
 | Web Search | DuckDuckGo HTML + Wikipedia API + Claude web search (candidate enrichment) |
 | API | FastAPI + Uvicorn |
-<<<<<<< HEAD
 | Frontend | Next.js 14 (App Router), Recharts, React-Leaflet, Lucide |
 | Legacy Dashboard | Streamlit (standalone, `frontend/streamlit/`) |
-=======
-| Frontend | Next.js 14 (App Router), Recharts, Vanilla Leaflet, Lucide Icons |
-| Map | Leaflet.js (vanilla, not react-leaflet — SSR-safe via Next.js `dynamic()`) |
-| Knowledge Graph UI | D3.js force simulation on HTML5 Canvas |
-| Legacy Dashboard | Streamlit (standalone, `dashboard/`) |
->>>>>>> origin/main
 
 ---
 
@@ -407,13 +400,8 @@ docker-compose up -d
 ### 3. Initialize databases
 
 ```bash
-<<<<<<< HEAD
 # Run migrations using Alembic
 alembic upgrade head
-=======
-psql $POSTGRES_URL -f db/migrations/001_initial.sql
-psql $POSTGRES_URL -f db/migrations/002_quality_narratives.sql
->>>>>>> origin/main
 
 # Seed initial issues
 psql $POSTGRES_URL -f data/seeds/seed_issues.sql
@@ -426,25 +414,11 @@ cat pipeline/graph/constraints_v2.cypher | cypher-shell -u neo4j -p $NEO4J_PASSW
 ### 4. Ingest real data (order matters)
 
 ```bash
-<<<<<<< HEAD
 python -m pipeline.ingest.eci_booths
 python -m pipeline.ingest.myneta_candidates
 python -m pipeline.ingest.eci_booth_results
 python -m pipeline.ingest.youtube_comments
 python -m pipeline.ingest.news_scraper
-=======
-# Step 1 — Voter roll → booth_master (179 booths, 1,14,326 voters)
-python -m ingestion.ingest_poolboothdata
-
-# Step 2 — Demographics, data quality, ac_metrics, panchayat mapping
-python -m ingestion.ingest_all_features
-
-# Step 3 — Form-20 real election results → booth_metrics lean labels
-python -m ingestion.ingest_form20_lean
-
-# Step 4 — MyNeta affidavit profiles → Myneta/ JSON files
-python -m ingestion.myneta_export_json
->>>>>>> origin/main
 ```
 
 ### 5. Build analytics & graph
