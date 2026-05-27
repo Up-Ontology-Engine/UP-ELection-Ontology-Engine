@@ -40,6 +40,15 @@ services:
       - DEFAULT_POOL_SIZE=20
       - MIN_POOL_SIZE=5
       - RESERVE_POOL_SIZE=5
+      - AUTH_TYPE=scram-sha-256
+      # Optimizations for high-throughput transaction pooling
+      - SERVER_IDLE_TIMEOUT=120
+      - SERVER_LIFETIME=1800
+      - CLIENT_IDLE_TIMEOUT=120
+      # 15s timeout prevents slow queries from holding PgBouncer slots during spikes
+      - QUERY_TIMEOUT=15
+      # SERVER_RESET_QUERY omitted: DEALLOCATE ALL is redundant when prepared_statement_cache_size=0
+      - LISTEN_PORT=6432
     ports:
       - "6432:6432"
     depends_on:
@@ -58,8 +67,9 @@ services:
       NEO4J_AUTH: neo4j/gorakhpur_neo4j_pass
       NEO4J_PLUGINS: '["apoc"]'
       NEO4J_dbms_security_procedures_unrestricted: apoc.*
+      # Heap: 512m initial → 1g max; page cache 512m → fits within 2G container limit
       NEO4J_server_memory_heap_initial__size: 512m
-      NEO4J_server_memory_heap_max__size: 1g
+      NEO4J_server_memory_heap_max__size: 1024m
       NEO4J_server_memory_pagecache_size: 512m
     ports:
       - "7474:7474"   # HTTP browser
@@ -119,6 +129,8 @@ services:
         condition: service_healthy
       redis:
         condition: service_healthy
+    volumes:
+      - ./backend:/app/backend
     deploy:
       resources:
         limits:
@@ -171,8 +183,8 @@ services:
 
   nginx:
     build:
-      context: .
-      dockerfile: docker/Dockerfile.nginx
+      context: ./docker
+      dockerfile: Dockerfile.nginx
     container_name: gorakhpur_nginx
     ports:
       - "80:80"
