@@ -1,0 +1,2305 @@
+{
+  "ac_id": "GKP_321",
+  "ac_name": "Pipraich",
+  "election_year": 2022,
+  "election_folder": "uttarpradesh2022",
+  "constituency_id": 185,
+  "source": "myneta",
+  "passes": [
+    "list",
+    "detail",
+    "expense"
+  ],
+  "scraped_at": "2026-05-29T11:09:57.572104+00:00",
+  "candidate_count": 14,
+  "candidates": [
+    {
+      "candidate_id": "MAHENDRA_PAL_SINGH_2022",
+      "name": "Mahendra Pal Singh",
+      "party": "BJP",
+      "party_raw": "BJP",
+      "ac_id": "GKP_321",
+      "ac_name": "Pipraich",
+      "election_year": 2022,
+      "source_candidate_id": 3643,
+      "detail_url": "candidate.php?candidate_id=3643",
+      "list_summary": {
+        "education": "Graduate",
+        "age": 58,
+        "criminal_cases": 0,
+        "total_assets": 0,
+        "liabilities": 0
+      },
+      "affidavit_detail": {
+        "source_affidavit_url": "https://www.myneta.info/uttarpradesh2022/candidate.php?candidate_id=3643",
+        "html_snapshot_path": "/Users/aryansingh/Documents/UP-ELection-Ontology-Engine/data/raw/myneta_html/uttarpradesh2022/3643_affidavit.html",
+        "parse_status": "scraped",
+        "parse_error": null,
+        "itr_income_json": [
+          {
+            "relation": "self",
+            "year": "2020-2021",
+            "total_income_rs": 2300660
+          },
+          {
+            "relation": "self",
+            "year": "2019-2020",
+            "total_income_rs": 1924470
+          },
+          {
+            "relation": "self",
+            "year": "2018-2019",
+            "total_income_rs": 2254085
+          },
+          {
+            "relation": "self",
+            "year": "2017-2018",
+            "total_income_rs": 1895415
+          },
+          {
+            "relation": "self",
+            "year": "2016-2017",
+            "total_income_rs": 1895804
+          },
+          {
+            "relation": "spouse",
+            "year": "2020-2021",
+            "total_income_rs": 2220080
+          },
+          {
+            "relation": "spouse",
+            "year": "2019-2020",
+            "total_income_rs": 1823820
+          },
+          {
+            "relation": "spouse",
+            "year": "2018-2019",
+            "total_income_rs": 1540922
+          },
+          {
+            "relation": "spouse",
+            "year": "2017-2018",
+            "total_income_rs": 1358622
+          },
+          {
+            "relation": "spouse",
+            "year": "2016-2017",
+            "total_income_rs": 1213530
+          },
+          {
+            "relation": "huf",
+            "year": "2020-2021",
+            "total_income_rs": 505577
+          },
+          {
+            "relation": "huf",
+            "year": "2019-2020",
+            "total_income_rs": 459000
+          },
+          {
+            "relation": "huf",
+            "year": "2018-2019",
+            "total_income_rs": 311291
+          },
+          {
+            "relation": "huf",
+            "year": "2017-2018",
+            "total_income_rs": 287355
+          },
+          {
+            "relation": "huf",
+            "year": "2016-2017",
+            "total_income_rs": 283379
+          }
+        ],
+        "criminal_case_details_json": [],
+        "movable_assets_json": [
+          {
+            "item": "Cash",
+            "total_rs": 180000,
+            "self_rs": 100000
+          },
+          {
+            "item": "Deposits in Banks, Financial Institutions and Non-Banking Financial Companies",
+            "total_rs": 1434523,
+            "self_rs": 0
+          },
+          {
+            "item": "Bonds, Debentures and Shares in companies",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "(a) NSS, Postal Savings etc",
+            "total_rs": 200000,
+            "self_rs": 0
+          },
+          {
+            "item": "LIC Policy No 29494xxxxx 46,04,210 46 Lacs+ LIC Policy No 29332xxxxx 26,816 26 Thou+ LIC Policy No 29201xxxxx 8,78,544 8 Lacs+ SBI Life IH580013802 4,00,000 4 Lacs+",
+            "total_rs": 6376130,
+            "self_rs": 0
+          },
+          {
+            "item": "Personal loans/advance given",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Motor Vehicles (details of make, etc.)",
+            "total_rs": 1321000,
+            "self_rs": 0
+          },
+          {
+            "item": "Jewellery (give details weight value)",
+            "total_rs": 65000,
+            "self_rs": 4
+          },
+          {
+            "item": "Other assets, such as values of claims / interests",
+            "total_rs": 50000,
+            "self_rs": 0
+          }
+        ],
+        "movable_assets_rs": 9626653,
+        "immovable_assets_json": [
+          {
+            "item": "Agricultural Land",
+            "total_rs": 80377220,
+            "self_rs": 0
+          },
+          {
+            "item": "Non Agricultural Land",
+            "total_rs": 54140539,
+            "self_rs": 0
+          },
+          {
+            "item": "Commercial Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Residential Buildings",
+            "total_rs": 7488000,
+            "self_rs": 0
+          },
+          {
+            "item": "Others",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "immovable_assets_rs": 142005759,
+        "liabilities_json": [
+          {
+            "item": "Assets:",
+            "total_rs": 151632412
+          },
+          {
+            "item": "Liabilities:",
+            "total_rs": 13759390
+          }
+        ],
+        "total_assets_detail": 151632412
+      },
+      "expense": {
+        "source_expense_url": "https://www.myneta.info/uttarpradesh2022/expense.php?candidate_id=3643",
+        "expense_scrape_status": "scraped",
+        "parse_error": null,
+        "total_election_expense_rs": 0,
+        "expense_breakdown_json": [
+          {
+            "category": "1",
+            "amount_rs": 6
+          },
+          {
+            "category": "iv.Vehicles used and POL expenditure on such vehicles.",
+            "amount_rs": 8032008
+          },
+          {
+            "category": "Calculated Column Total",
+            "amount_rs": 8032008
+          },
+          {
+            "category": "i",
+            "amount_rs": 4552604
+          },
+          {
+            "category": "ii",
+            "amount_rs": 150000015
+          },
+          {
+            "category": "iii",
+            "amount_rs": 195526019
+          }
+        ],
+        "expense_data_quality": "Affidavit Data Quality Information"
+      }
+    },
+    {
+      "candidate_id": "AMOD_KUMAR_BHATT_2022",
+      "name": "Amod Kumar Bhatt",
+      "party": "BHARATIYA APNA SAMAJ",
+      "party_raw": "Bharatiya Apna Samaj Party",
+      "ac_id": "GKP_321",
+      "ac_name": "Pipraich",
+      "election_year": 2022,
+      "source_candidate_id": 3640,
+      "detail_url": "candidate.php?candidate_id=3640",
+      "list_summary": {
+        "education": "Graduate Professional",
+        "age": 41,
+        "criminal_cases": 0,
+        "total_assets": 330000,
+        "liabilities": 0
+      },
+      "affidavit_detail": {
+        "source_affidavit_url": "https://www.myneta.info/uttarpradesh2022/candidate.php?candidate_id=3640",
+        "html_snapshot_path": "/Users/aryansingh/Documents/UP-ELection-Ontology-Engine/data/raw/myneta_html/uttarpradesh2022/3640_affidavit.html",
+        "parse_status": "scraped",
+        "parse_error": null,
+        "criminal_case_details_json": [],
+        "movable_assets_json": [
+          {
+            "item": "Cash",
+            "total_rs": 50000,
+            "self_rs": 50000
+          },
+          {
+            "item": "Deposits in Banks, Financial Institutions and Non-Banking Financial Companies",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Bonds, Debentures and Shares in companies",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "(a) NSS, Postal Savings etc",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Nil",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Personal loans/advance given",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Motor Vehicles (details of make, etc.)",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Jewellery (give details weight value)",
+            "total_rs": 80000,
+            "self_rs": 1
+          },
+          {
+            "item": "Other assets, such as values of claims / interests",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "movable_assets_rs": 130000,
+        "immovable_assets_json": [
+          {
+            "item": "Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Non Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Commercial Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Residential Buildings",
+            "total_rs": 200000,
+            "self_rs": 0
+          },
+          {
+            "item": "Others",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "immovable_assets_rs": 200000,
+        "liabilities_json": [
+          {
+            "item": "Assets:",
+            "total_rs": 330000
+          },
+          {
+            "item": "Liabilities:",
+            "total_rs": 0
+          }
+        ],
+        "total_assets_detail": 330000
+      },
+      "expense": {
+        "source_expense_url": "https://www.myneta.info/uttarpradesh2022/expense.php?candidate_id=3640",
+        "expense_scrape_status": "scraped",
+        "parse_error": null,
+        "total_election_expense_rs": 0,
+        "expense_data_quality": "Affidavit Data Quality Information"
+      }
+    },
+    {
+      "candidate_id": "AMRENDRA_NISHAD_2022",
+      "name": "Amrendra Nishad",
+      "party": "SP",
+      "party_raw": "SP",
+      "ac_id": "GKP_321",
+      "ac_name": "Pipraich",
+      "election_year": 2022,
+      "source_candidate_id": 3646,
+      "detail_url": "candidate.php?candidate_id=3646",
+      "list_summary": {
+        "education": "Post Graduate",
+        "age": 32,
+        "criminal_cases": 7,
+        "total_assets": 19519428,
+        "liabilities": 85000
+      },
+      "affidavit_detail": {
+        "source_affidavit_url": "https://www.myneta.info/uttarpradesh2022/candidate.php?candidate_id=3646",
+        "html_snapshot_path": "/Users/aryansingh/Documents/UP-ELection-Ontology-Engine/data/raw/myneta_html/uttarpradesh2022/3646_affidavit.html",
+        "parse_status": "scraped",
+        "parse_error": null,
+        "itr_income_json": [
+          {
+            "relation": "self",
+            "year": "2020-2021",
+            "total_income_rs": 492680
+          },
+          {
+            "relation": "self",
+            "year": "2019-2020",
+            "total_income_rs": 491740
+          },
+          {
+            "relation": "self",
+            "year": "2018-2019",
+            "total_income_rs": 439304
+          },
+          {
+            "relation": "self",
+            "year": "2017-2018",
+            "total_income_rs": 0
+          },
+          {
+            "relation": "self",
+            "year": "2016-2017",
+            "total_income_rs": 414120
+          }
+        ],
+        "criminal_case_details_json": [
+          {
+            "raw_text": "Number of Criminal Cases: 7"
+          }
+        ],
+        "movable_assets_json": [
+          {
+            "item": "Cash",
+            "total_rs": 200000,
+            "self_rs": 140000
+          },
+          {
+            "item": "Deposits in Banks, Financial Institutions and Non-Banking Financial Companies",
+            "total_rs": 57428,
+            "self_rs": 0
+          },
+          {
+            "item": "Bonds, Debentures and Shares in companies",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "(a) NSS, Postal Savings etc",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "LIC 10,00,000 10 Lacs+",
+            "total_rs": 1000000,
+            "self_rs": 0
+          },
+          {
+            "item": "Personal loans/advance given",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Motor Vehicles (details of make, etc.)",
+            "total_rs": 565000,
+            "self_rs": 0
+          },
+          {
+            "item": "Jewellery (give details weight value)",
+            "total_rs": 1895000,
+            "self_rs": 100
+          },
+          {
+            "item": "Other assets, such as values of claims / interests",
+            "total_rs": 10000,
+            "self_rs": 0
+          }
+        ],
+        "movable_assets_rs": 3727428,
+        "immovable_assets_json": [
+          {
+            "item": "Agricultural Land",
+            "total_rs": 8400000,
+            "self_rs": 0
+          },
+          {
+            "item": "Non Agricultural Land",
+            "total_rs": 2500000,
+            "self_rs": 0
+          },
+          {
+            "item": "Commercial Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Residential Buildings",
+            "total_rs": 5200000,
+            "self_rs": 0
+          },
+          {
+            "item": "Others",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "immovable_assets_rs": 16100000,
+        "liabilities_json": [
+          {
+            "item": "Assets:",
+            "total_rs": 19519428
+          },
+          {
+            "item": "Liabilities:",
+            "total_rs": 85000
+          }
+        ],
+        "total_assets_detail": 19827428
+      },
+      "expense": {
+        "source_expense_url": "https://www.myneta.info/uttarpradesh2022/expense.php?candidate_id=3646",
+        "expense_scrape_status": "scraped",
+        "parse_error": null,
+        "total_election_expense_rs": 0,
+        "expense_data_quality": "Affidavit Data Quality Information"
+      }
+    },
+    {
+      "candidate_id": "ARUN_KUMAR_2022",
+      "name": "Arun Kumar",
+      "party": "IND",
+      "party_raw": "IND",
+      "ac_id": "GKP_321",
+      "ac_name": "Pipraich",
+      "election_year": 2022,
+      "source_candidate_id": 3647,
+      "detail_url": "candidate.php?candidate_id=3647",
+      "list_summary": {
+        "education": "10th Pass",
+        "age": 43,
+        "criminal_cases": 1,
+        "total_assets": 0,
+        "liabilities": 0
+      },
+      "affidavit_detail": {
+        "source_affidavit_url": "https://www.myneta.info/uttarpradesh2022/candidate.php?candidate_id=3647",
+        "html_snapshot_path": "/Users/aryansingh/Documents/UP-ELection-Ontology-Engine/data/raw/myneta_html/uttarpradesh2022/3647_affidavit.html",
+        "parse_status": "scraped",
+        "parse_error": null,
+        "criminal_case_details_json": [
+          {
+            "raw_text": "Number of Criminal Cases: 1"
+          }
+        ],
+        "movable_assets_json": [
+          {
+            "item": "Cash",
+            "total_rs": 25000,
+            "self_rs": 20000
+          },
+          {
+            "item": "Deposits in Banks, Financial Institutions and Non-Banking Financial Companies",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Bonds, Debentures and Shares in companies",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "(a) NSS, Postal Savings etc",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Nil",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Personal loans/advance given",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Motor Vehicles (details of make, etc.)",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Jewellery (give details weight value)",
+            "total_rs": 20000,
+            "self_rs": 0
+          },
+          {
+            "item": "Other assets, such as values of claims / interests",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "movable_assets_rs": 45000,
+        "immovable_assets_json": [
+          {
+            "item": "Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Non Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Commercial Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Residential Buildings",
+            "total_rs": 700000,
+            "self_rs": 0
+          },
+          {
+            "item": "Others",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "immovable_assets_rs": 700000,
+        "liabilities_json": [
+          {
+            "item": "Assets:",
+            "total_rs": 745000
+          },
+          {
+            "item": "Liabilities:",
+            "total_rs": 0
+          }
+        ],
+        "total_assets_detail": 745000
+      },
+      "expense": {
+        "source_expense_url": "https://www.myneta.info/uttarpradesh2022/expense.php?candidate_id=3647",
+        "expense_scrape_status": "scraped",
+        "parse_error": null,
+        "total_election_expense_rs": 0,
+        "expense_breakdown_json": [
+          {
+            "category": "1",
+            "amount_rs": 6
+          },
+          {
+            "category": "ii.Campaign materials,like handbills,posters,videoaudio cassettes,loudspeakers etc.",
+            "amount_rs": 36503
+          },
+          {
+            "category": "vii.Other misc expenses.",
+            "amount_rs": 1015010
+          },
+          {
+            "category": "Calculated Column Total",
+            "amount_rs": 1380013
+          },
+          {
+            "category": "i",
+            "amount_rs": 1400014
+          },
+          {
+            "category": "iii",
+            "amount_rs": 1400014
+          }
+        ],
+        "expense_data_quality": "Affidavit Data Quality Information"
+      }
+    },
+    {
+      "candidate_id": "AVINASH_PRATAP_PRAJAPATI_2022",
+      "name": "Avinash Pratap Prajapati",
+      "party": "LOKPRIYA SAMAJ PARTY",
+      "party_raw": "Lokpriya Samaj Party",
+      "ac_id": "GKP_321",
+      "ac_name": "Pipraich",
+      "election_year": 2022,
+      "source_candidate_id": 3641,
+      "detail_url": "candidate.php?candidate_id=3641",
+      "list_summary": {
+        "education": "Graduate Professional",
+        "age": 38,
+        "criminal_cases": 0,
+        "total_assets": 2754964,
+        "liabilities": 0
+      },
+      "affidavit_detail": {
+        "source_affidavit_url": "https://www.myneta.info/uttarpradesh2022/candidate.php?candidate_id=3641",
+        "html_snapshot_path": "/Users/aryansingh/Documents/UP-ELection-Ontology-Engine/data/raw/myneta_html/uttarpradesh2022/3641_affidavit.html",
+        "parse_status": "scraped",
+        "parse_error": null,
+        "itr_income_json": [
+          {
+            "relation": "spouse",
+            "year": "2021-2022",
+            "total_income_rs": 413050
+          },
+          {
+            "relation": "spouse",
+            "year": "2020-2021",
+            "total_income_rs": 358180
+          },
+          {
+            "relation": "spouse",
+            "year": "2019-2020",
+            "total_income_rs": 344430
+          },
+          {
+            "relation": "spouse",
+            "year": "2018-2019",
+            "total_income_rs": 367090
+          }
+        ],
+        "criminal_case_details_json": [],
+        "movable_assets_json": [
+          {
+            "item": "Cash",
+            "total_rs": 65000,
+            "self_rs": 45000
+          },
+          {
+            "item": "Deposits in Banks, Financial Institutions and Non-Banking Financial Companies",
+            "total_rs": 697964,
+            "self_rs": 0
+          },
+          {
+            "item": "Bonds, Debentures and Shares in companies",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "(a) NSS, Postal Savings etc",
+            "total_rs": 100000,
+            "self_rs": 0
+          },
+          {
+            "item": "LIC Policy No 24676xxxxx 2,00,000 2 Lacs+ LIC Policy No 29305xxxxx 50,000 50 Thou+ ICICI Life Ins Policy No 1891xxxxx 5,00,000 5 Lacs+",
+            "total_rs": 950000,
+            "self_rs": 0
+          },
+          {
+            "item": "Personal loans/advance given",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Motor Vehicles (details of make, etc.)",
+            "total_rs": 63000,
+            "self_rs": 0
+          },
+          {
+            "item": "Jewellery (give details weight value)",
+            "total_rs": 379000,
+            "self_rs": 5
+          },
+          {
+            "item": "Other assets, such as values of claims / interests",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "movable_assets_rs": 2254964,
+        "immovable_assets_json": [
+          {
+            "item": "Agricultural Land",
+            "total_rs": 500000,
+            "self_rs": 0
+          },
+          {
+            "item": "Non Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Commercial Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Residential Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Others",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "immovable_assets_rs": 500000,
+        "liabilities_json": [
+          {
+            "item": "Assets:",
+            "total_rs": 2754964
+          },
+          {
+            "item": "Liabilities:",
+            "total_rs": 0
+          }
+        ],
+        "total_assets_detail": 2754964
+      },
+      "expense": {
+        "source_expense_url": "https://www.myneta.info/uttarpradesh2022/expense.php?candidate_id=3641",
+        "expense_scrape_status": "scraped",
+        "parse_error": null,
+        "total_election_expense_rs": 0,
+        "expense_breakdown_json": [
+          {
+            "category": "1",
+            "amount_rs": 6
+          },
+          {
+            "category": "i",
+            "amount_rs": 5000050
+          },
+          {
+            "category": "iii",
+            "amount_rs": 7710077
+          },
+          {
+            "category": "iii",
+            "amount_rs": 1271001
+          }
+        ],
+        "expense_data_quality": "Affidavit Data Quality Information"
+      }
+    },
+    {
+      "candidate_id": "AZAD_ALI_2022",
+      "name": "Azad Ali",
+      "party": "IND",
+      "party_raw": "IND",
+      "ac_id": "GKP_321",
+      "ac_name": "Pipraich",
+      "election_year": 2022,
+      "source_candidate_id": 3648,
+      "detail_url": "candidate.php?candidate_id=3648",
+      "list_summary": {
+        "education": "8th Pass",
+        "age": 37,
+        "criminal_cases": 0,
+        "total_assets": 1016193,
+        "liabilities": 0
+      },
+      "affidavit_detail": {
+        "source_affidavit_url": "https://www.myneta.info/uttarpradesh2022/candidate.php?candidate_id=3648",
+        "html_snapshot_path": "/Users/aryansingh/Documents/UP-ELection-Ontology-Engine/data/raw/myneta_html/uttarpradesh2022/3648_affidavit.html",
+        "parse_status": "scraped",
+        "parse_error": null,
+        "itr_income_json": [
+          {
+            "relation": "self",
+            "year": "2019-2020",
+            "total_income_rs": 294760
+          },
+          {
+            "relation": "self",
+            "year": "2018-2019",
+            "total_income_rs": 886410
+          },
+          {
+            "relation": "self",
+            "year": "2017-2018",
+            "total_income_rs": 786476
+          }
+        ],
+        "criminal_case_details_json": [],
+        "movable_assets_json": [
+          {
+            "item": "Cash",
+            "total_rs": 95000,
+            "self_rs": 80000
+          },
+          {
+            "item": "Deposits in Banks, Financial Institutions and Non-Banking Financial Companies",
+            "total_rs": 464001,
+            "self_rs": 0
+          },
+          {
+            "item": "Bonds, Debentures and Shares in companies",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "(a) NSS, Postal Savings etc",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "LIC No 20852xxxxx 2,89,192 2 Lacs+",
+            "total_rs": 289192,
+            "self_rs": 0
+          },
+          {
+            "item": "Personal loans/advance given",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Motor Vehicles (details of make, etc.)",
+            "total_rs": 50000,
+            "self_rs": 0
+          },
+          {
+            "item": "Jewellery (give details weight value)",
+            "total_rs": 118000,
+            "self_rs": 14
+          },
+          {
+            "item": "Other assets, such as values of claims / interests",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "movable_assets_rs": 1016193,
+        "immovable_assets_json": [
+          {
+            "item": "Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Non Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Commercial Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Residential Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Others",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "immovable_assets_rs": 0,
+        "liabilities_json": [
+          {
+            "item": "Assets:",
+            "total_rs": 1016193
+          },
+          {
+            "item": "Liabilities:",
+            "total_rs": 0
+          }
+        ],
+        "total_assets_detail": 1016193
+      },
+      "expense": {
+        "source_expense_url": "https://www.myneta.info/uttarpradesh2022/expense.php?candidate_id=3648",
+        "expense_scrape_status": "scraped",
+        "parse_error": null,
+        "total_election_expense_rs": 0,
+        "expense_breakdown_json": [
+          {
+            "category": "1",
+            "amount_rs": 6
+          },
+          {
+            "category": "i",
+            "amount_rs": 5932559
+          },
+          {
+            "category": "iii",
+            "amount_rs": 5932559
+          }
+        ],
+        "expense_data_quality": "Affidavit Data Quality Information"
+      }
+    },
+    {
+      "candidate_id": "DEEPAK_KUMAR_AGARWAL_2022",
+      "name": "Deepak Kumar Agarwal",
+      "party": "SP",
+      "party_raw": "BSP",
+      "ac_id": "GKP_321",
+      "ac_name": "Pipraich",
+      "election_year": 2022,
+      "source_candidate_id": 3644,
+      "detail_url": "candidate.php?candidate_id=3644",
+      "list_summary": {
+        "education": "10th Pass",
+        "age": 51,
+        "criminal_cases": 4,
+        "total_assets": 0,
+        "liabilities": 0
+      },
+      "affidavit_detail": {
+        "source_affidavit_url": "https://www.myneta.info/uttarpradesh2022/candidate.php?candidate_id=3644",
+        "html_snapshot_path": "/Users/aryansingh/Documents/UP-ELection-Ontology-Engine/data/raw/myneta_html/uttarpradesh2022/3644_affidavit.html",
+        "parse_status": "scraped",
+        "parse_error": null,
+        "itr_income_json": [
+          {
+            "relation": "self",
+            "year": "2020-2021",
+            "total_income_rs": 1750000
+          },
+          {
+            "relation": "self",
+            "year": "2019-2020",
+            "total_income_rs": 2482892
+          },
+          {
+            "relation": "self",
+            "year": "2018-2019",
+            "total_income_rs": 4458335
+          },
+          {
+            "relation": "self",
+            "year": "2017-2018",
+            "total_income_rs": 1665546
+          },
+          {
+            "relation": "self",
+            "year": "2016-2017",
+            "total_income_rs": 1164947
+          },
+          {
+            "relation": "spouse",
+            "year": "2020-2021",
+            "total_income_rs": 1903523
+          },
+          {
+            "relation": "spouse",
+            "year": "2019-2020",
+            "total_income_rs": 1876294
+          },
+          {
+            "relation": "spouse",
+            "year": "2018-2019",
+            "total_income_rs": 1997199
+          },
+          {
+            "relation": "spouse",
+            "year": "2017-2018",
+            "total_income_rs": 1240903
+          },
+          {
+            "relation": "spouse",
+            "year": "2016-2017",
+            "total_income_rs": 988043
+          },
+          {
+            "relation": "huf",
+            "year": "2020-2021",
+            "total_income_rs": 792655
+          },
+          {
+            "relation": "huf",
+            "year": "2019-2020",
+            "total_income_rs": 863986
+          },
+          {
+            "relation": "huf",
+            "year": "2018-2019",
+            "total_income_rs": 759008
+          },
+          {
+            "relation": "huf",
+            "year": "2017-2018",
+            "total_income_rs": 979296
+          },
+          {
+            "relation": "huf",
+            "year": "2016-2017",
+            "total_income_rs": 893473
+          }
+        ],
+        "criminal_case_details_json": [
+          {
+            "raw_text": "Number of Criminal Cases: 4"
+          }
+        ],
+        "movable_assets_json": [
+          {
+            "item": "Cash",
+            "total_rs": 588181,
+            "self_rs": 46281
+          },
+          {
+            "item": "Deposits in Banks, Financial Institutions and Non-Banking Financial Companies",
+            "total_rs": 6157521,
+            "self_rs": 0
+          },
+          {
+            "item": "Bonds, Debentures and Shares in companies",
+            "total_rs": 98935386,
+            "self_rs": 0
+          },
+          {
+            "item": "(a) NSS, Postal Savings etc",
+            "total_rs": 42985000,
+            "self_rs": 0
+          },
+          {
+            "item": "Nil",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Personal loans/advance given",
+            "total_rs": 25839214,
+            "self_rs": 0
+          },
+          {
+            "item": "Motor Vehicles (details of make, etc.)",
+            "total_rs": 550000,
+            "self_rs": 0
+          },
+          {
+            "item": "Jewellery (give details weight value)",
+            "total_rs": 10114700,
+            "self_rs": 424651
+          },
+          {
+            "item": "Other assets, such as values of claims / interests",
+            "total_rs": 100000,
+            "self_rs": 0
+          }
+        ],
+        "movable_assets_rs": 185270002,
+        "immovable_assets_json": [
+          {
+            "item": "Agricultural Land",
+            "total_rs": 3000000,
+            "self_rs": 0
+          },
+          {
+            "item": "Non Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Commercial Buildings",
+            "total_rs": 227625600,
+            "self_rs": 0
+          },
+          {
+            "item": "Residential Buildings",
+            "total_rs": 80154364,
+            "self_rs": 0
+          },
+          {
+            "item": "Others",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "immovable_assets_rs": 310779964,
+        "liabilities_json": [
+          {
+            "item": "Assets:",
+            "total_rs": 444535233
+          },
+          {
+            "item": "Liabilities:",
+            "total_rs": 34569505
+          }
+        ],
+        "total_assets_detail": 496049966
+      },
+      "expense": {
+        "source_expense_url": "https://www.myneta.info/uttarpradesh2022/expense.php?candidate_id=3644",
+        "expense_scrape_status": "scraped",
+        "parse_error": null,
+        "total_election_expense_rs": 0,
+        "expense_breakdown_json": [
+          {
+            "category": "1",
+            "amount_rs": 6
+          },
+          {
+            "category": "i b .Expenditure in public meeting rally, procession etc. with the Star Campaigner(s) (ie:other than those for general party propaganda) (Enclose as per Schedule-2)",
+            "amount_rs": 4386043
+          },
+          {
+            "category": "ii.Campaign materials,like handbills,posters,videoaudio cassettes,loudspeakers etc.",
+            "amount_rs": 9650096
+          },
+          {
+            "category": "iv.Vehicles used and POL expenditure on such vehicles.",
+            "amount_rs": 6491006
+          },
+          {
+            "category": "v.Expenses on campaign workers.",
+            "amount_rs": 32403
+          },
+          {
+            "category": "vi.Expenses incurred on publishing of declaration regarding criminal cases.",
+            "amount_rs": 4530045
+          },
+          {
+            "category": "vii.Other misc expenses.",
+            "amount_rs": 9416394
+          },
+          {
+            "category": "Calculated Column Total",
+            "amount_rs": 9321639
+          },
+          {
+            "category": "i",
+            "amount_rs": 4156004
+          },
+          {
+            "category": "iii",
+            "amount_rs": 5166005
+          },
+          {
+            "category": "iii",
+            "amount_rs": 9322009
+          }
+        ],
+        "expense_data_quality": "Affidavit Data Quality Information"
+      }
+    },
+    {
+      "candidate_id": "DHIRENDRA_PRATAP_JAISWAL_2022",
+      "name": "Dhirendra Pratap Jaiswal",
+      "party": "AAP",
+      "party_raw": "AAP",
+      "ac_id": "GKP_321",
+      "ac_name": "Pipraich",
+      "election_year": 2022,
+      "source_candidate_id": 3639,
+      "detail_url": "candidate.php?candidate_id=3639",
+      "list_summary": {
+        "education": "12th Pass",
+        "age": 27,
+        "criminal_cases": 0,
+        "total_assets": 1280703,
+        "liabilities": 0
+      },
+      "affidavit_detail": {
+        "source_affidavit_url": "https://www.myneta.info/uttarpradesh2022/candidate.php?candidate_id=3639",
+        "html_snapshot_path": "/Users/aryansingh/Documents/UP-ELection-Ontology-Engine/data/raw/myneta_html/uttarpradesh2022/3639_affidavit.html",
+        "parse_status": "scraped",
+        "parse_error": null,
+        "itr_income_json": [
+          {
+            "relation": "self",
+            "year": "2020-2021",
+            "total_income_rs": 165000
+          },
+          {
+            "relation": "self",
+            "year": "2019-2020",
+            "total_income_rs": 181500
+          },
+          {
+            "relation": "self",
+            "year": "2018-2019",
+            "total_income_rs": 324420
+          }
+        ],
+        "criminal_case_details_json": [],
+        "movable_assets_json": [
+          {
+            "item": "Cash",
+            "total_rs": 30000,
+            "self_rs": 30000
+          },
+          {
+            "item": "Deposits in Banks, Financial Institutions and Non-Banking Financial Companies",
+            "total_rs": 2703,
+            "self_rs": 0
+          },
+          {
+            "item": "Bonds, Debentures and Shares in companies",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "(a) NSS, Postal Savings etc",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "LIC Policy No 29846xxxxx 10,00,000 10 Lacs+",
+            "total_rs": 1000000,
+            "self_rs": 0
+          },
+          {
+            "item": "Personal loans/advance given",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Motor Vehicles (details of make, etc.)",
+            "total_rs": 238000,
+            "self_rs": 0
+          },
+          {
+            "item": "Jewellery (give details weight value)",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Other assets, such as values of claims / interests",
+            "total_rs": 10000,
+            "self_rs": 0
+          }
+        ],
+        "movable_assets_rs": 1280703,
+        "immovable_assets_json": [
+          {
+            "item": "Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Non Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Commercial Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Residential Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Others",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "immovable_assets_rs": 0,
+        "liabilities_json": [
+          {
+            "item": "Assets:",
+            "total_rs": 1280703
+          },
+          {
+            "item": "Liabilities:",
+            "total_rs": 0
+          }
+        ],
+        "total_assets_detail": 1280703
+      },
+      "expense": {
+        "source_expense_url": "https://www.myneta.info/uttarpradesh2022/expense.php?candidate_id=3639",
+        "expense_scrape_status": "scraped",
+        "parse_error": null,
+        "total_election_expense_rs": 0,
+        "expense_breakdown_json": [
+          {
+            "category": "1",
+            "amount_rs": 6
+          },
+          {
+            "category": "iv.Vehicles used and POL expenditure on such vehicles.",
+            "amount_rs": 6750067
+          },
+          {
+            "category": "Calculated Column Total",
+            "amount_rs": 6750067
+          },
+          {
+            "category": "i",
+            "amount_rs": 8650086
+          },
+          {
+            "category": "iii",
+            "amount_rs": 8650086
+          }
+        ],
+        "expense_data_quality": "Affidavit Data Quality Information"
+      }
+    },
+    {
+      "candidate_id": "DR_ASHISH_KUMAR_SINGH_2022",
+      "name": "Dr. Ashish Kumar Singh",
+      "party": "CPI",
+      "party_raw": "CPI",
+      "ac_id": "GKP_321",
+      "ac_name": "Pipraich",
+      "election_year": 2022,
+      "source_candidate_id": 3645,
+      "detail_url": "candidate.php?candidate_id=3645",
+      "list_summary": {
+        "education": "Graduate Professional",
+        "age": 43,
+        "criminal_cases": 0,
+        "total_assets": 13157938,
+        "liabilities": 48500
+      },
+      "affidavit_detail": {
+        "source_affidavit_url": "https://www.myneta.info/uttarpradesh2022/candidate.php?candidate_id=3645",
+        "html_snapshot_path": "/Users/aryansingh/Documents/UP-ELection-Ontology-Engine/data/raw/myneta_html/uttarpradesh2022/3645_affidavit.html",
+        "parse_status": "scraped",
+        "parse_error": null,
+        "criminal_case_details_json": [],
+        "movable_assets_json": [
+          {
+            "item": "Cash",
+            "total_rs": 15000,
+            "self_rs": 15000
+          },
+          {
+            "item": "Deposits in Banks, Financial Institutions and Non-Banking Financial Companies",
+            "total_rs": 1310,
+            "self_rs": 0
+          },
+          {
+            "item": "Bonds, Debentures and Shares in companies",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "(a) NSS, Postal Savings etc",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "LIC Policy No 29724xxxxx 1,00,000 1 Lacs+",
+            "total_rs": 225000,
+            "self_rs": 0
+          },
+          {
+            "item": "Personal loans/advance given",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Motor Vehicles (details of make, etc.)",
+            "total_rs": 380378,
+            "self_rs": 0
+          },
+          {
+            "item": "Jewellery (give details weight value)",
+            "total_rs": 280500,
+            "self_rs": 10
+          },
+          {
+            "item": "Other assets, such as values of claims / interests",
+            "total_rs": 37000,
+            "self_rs": 0
+          }
+        ],
+        "movable_assets_rs": 939188,
+        "immovable_assets_json": [
+          {
+            "item": "Agricultural Land",
+            "total_rs": 12000000,
+            "self_rs": 0
+          },
+          {
+            "item": "Non Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Commercial Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Residential Buildings",
+            "total_rs": 218750,
+            "self_rs": 0
+          },
+          {
+            "item": "Others",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "immovable_assets_rs": 12218750,
+        "liabilities_json": [
+          {
+            "item": "Assets:",
+            "total_rs": 13157938
+          },
+          {
+            "item": "Liabilities:",
+            "total_rs": 48500
+          }
+        ],
+        "total_assets_detail": 13157938
+      },
+      "expense": {
+        "source_expense_url": "https://www.myneta.info/uttarpradesh2022/expense.php?candidate_id=3645",
+        "expense_scrape_status": "scraped",
+        "parse_error": null,
+        "total_election_expense_rs": 0,
+        "expense_breakdown_json": [
+          {
+            "category": "1",
+            "amount_rs": 6
+          },
+          {
+            "category": "i",
+            "amount_rs": 7470074
+          },
+          {
+            "category": "iii",
+            "amount_rs": 1510615
+          },
+          {
+            "category": "iii",
+            "amount_rs": 8980689
+          }
+        ],
+        "expense_data_quality": "Affidavit Data Quality Information"
+      }
+    },
+    {
+      "candidate_id": "NARENDRA_NATH_MAURYA_2022",
+      "name": "Narendra Nath Maurya",
+      "party": "IND",
+      "party_raw": "IND",
+      "ac_id": "GKP_321",
+      "ac_name": "Pipraich",
+      "election_year": 2022,
+      "source_candidate_id": 3649,
+      "detail_url": "candidate.php?candidate_id=3649",
+      "list_summary": {
+        "education": "Literate",
+        "age": 46,
+        "criminal_cases": 0,
+        "total_assets": 9916897,
+        "liabilities": 0
+      },
+      "affidavit_detail": {
+        "source_affidavit_url": "https://www.myneta.info/uttarpradesh2022/candidate.php?candidate_id=3649",
+        "html_snapshot_path": "/Users/aryansingh/Documents/UP-ELection-Ontology-Engine/data/raw/myneta_html/uttarpradesh2022/3649_affidavit.html",
+        "parse_status": "scraped",
+        "parse_error": null,
+        "itr_income_json": [
+          {
+            "relation": "self",
+            "year": "2020-2021",
+            "total_income_rs": 325730
+          }
+        ],
+        "criminal_case_details_json": [],
+        "movable_assets_json": [
+          {
+            "item": "Cash",
+            "total_rs": 36000,
+            "self_rs": 22000
+          },
+          {
+            "item": "Deposits in Banks, Financial Institutions and Non-Banking Financial Companies",
+            "total_rs": 170897,
+            "self_rs": 0
+          },
+          {
+            "item": "Bonds, Debentures and Shares in companies",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "(a) NSS, Postal Savings etc",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Nil",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Personal loans/advance given",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Motor Vehicles (details of make, etc.)",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Jewellery (give details weight value)",
+            "total_rs": 1860000,
+            "self_rs": 150
+          },
+          {
+            "item": "Other assets, such as values of claims / interests",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "movable_assets_rs": 2066897,
+        "immovable_assets_json": [
+          {
+            "item": "Agricultural Land",
+            "total_rs": 1500000,
+            "self_rs": 0
+          },
+          {
+            "item": "Non Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Commercial Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Residential Buildings",
+            "total_rs": 6350000,
+            "self_rs": 0
+          },
+          {
+            "item": "Others",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "immovable_assets_rs": 7850000,
+        "liabilities_json": [
+          {
+            "item": "Assets:",
+            "total_rs": 9916897
+          },
+          {
+            "item": "Liabilities:",
+            "total_rs": 0
+          }
+        ],
+        "total_assets_detail": 9916897
+      },
+      "expense": {
+        "source_expense_url": "https://www.myneta.info/uttarpradesh2022/expense.php?candidate_id=3649",
+        "expense_scrape_status": "scraped",
+        "parse_error": null,
+        "total_election_expense_rs": 0,
+        "expense_breakdown_json": [
+          {
+            "category": "1",
+            "amount_rs": 6
+          },
+          {
+            "category": "iv.Vehicles used and POL expenditure on such vehicles.",
+            "amount_rs": 99009
+          },
+          {
+            "category": "vii.Other misc expenses.",
+            "amount_rs": 1578615
+          },
+          {
+            "category": "Calculated Column Total",
+            "amount_rs": 2568625
+          },
+          {
+            "category": "i",
+            "amount_rs": 2500025
+          },
+          {
+            "category": "iii",
+            "amount_rs": 1000010
+          },
+          {
+            "category": "iii",
+            "amount_rs": 3500035
+          }
+        ],
+        "expense_data_quality": "Affidavit Data Quality Information"
+      }
+    },
+    {
+      "candidate_id": "NAZIM_2022",
+      "name": "Nazim",
+      "party": "JAN ADHIKAR PARTY",
+      "party_raw": "Jan Adhikar Party",
+      "ac_id": "GKP_321",
+      "ac_name": "Pipraich",
+      "election_year": 2022,
+      "source_candidate_id": 3638,
+      "detail_url": "candidate.php?candidate_id=3638",
+      "list_summary": {
+        "education": "10th Pass",
+        "age": 69,
+        "criminal_cases": 0,
+        "total_assets": 8829222,
+        "liabilities": 0
+      },
+      "affidavit_detail": {
+        "source_affidavit_url": "https://www.myneta.info/uttarpradesh2022/candidate.php?candidate_id=3638",
+        "html_snapshot_path": "/Users/aryansingh/Documents/UP-ELection-Ontology-Engine/data/raw/myneta_html/uttarpradesh2022/3638_affidavit.html",
+        "parse_status": "scraped",
+        "parse_error": null,
+        "itr_income_json": [
+          {
+            "relation": "self",
+            "year": "2021-2022",
+            "total_income_rs": 156450
+          },
+          {
+            "relation": "self",
+            "year": "2020-2021",
+            "total_income_rs": 260790
+          },
+          {
+            "relation": "self",
+            "year": "2019-2020",
+            "total_income_rs": 230000
+          },
+          {
+            "relation": "self",
+            "year": "2018-2019",
+            "total_income_rs": 522803
+          },
+          {
+            "relation": "self",
+            "year": "2017-2018",
+            "total_income_rs": 670530
+          }
+        ],
+        "criminal_case_details_json": [],
+        "movable_assets_json": [
+          {
+            "item": "Cash",
+            "total_rs": 25000,
+            "self_rs": 20000
+          },
+          {
+            "item": "Deposits in Banks, Financial Institutions and Non-Banking Financial Companies",
+            "total_rs": 31222,
+            "self_rs": 27652
+          },
+          {
+            "item": "Bonds, Debentures and Shares in companies",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "(a) NSS, Postal Savings etc",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "LIC Policy No 29267xxxxx 18,00,000 18 Lacs+",
+            "total_rs": 2000000,
+            "self_rs": 0
+          },
+          {
+            "item": "Personal loans/advance given",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Motor Vehicles (details of make, etc.)",
+            "total_rs": 45000,
+            "self_rs": 0
+          },
+          {
+            "item": "Jewellery (give details weight value)",
+            "total_rs": 100000,
+            "self_rs": 0
+          },
+          {
+            "item": "Other assets, such as values of claims / interests",
+            "total_rs": 123000,
+            "self_rs": 0
+          }
+        ],
+        "movable_assets_rs": 2324222,
+        "immovable_assets_json": [
+          {
+            "item": "Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Non Agricultural Land",
+            "total_rs": 1200000,
+            "self_rs": 0
+          },
+          {
+            "item": "Commercial Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Residential Buildings",
+            "total_rs": 5000000,
+            "self_rs": 0
+          },
+          {
+            "item": "Others",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "immovable_assets_rs": 6200000,
+        "liabilities_json": [
+          {
+            "item": "Assets:",
+            "total_rs": 8829222
+          },
+          {
+            "item": "Liabilities:",
+            "total_rs": 0
+          }
+        ],
+        "total_assets_detail": 8524222
+      },
+      "expense": {
+        "source_expense_url": "https://www.myneta.info/uttarpradesh2022/expense.php?candidate_id=3638",
+        "expense_scrape_status": "scraped",
+        "parse_error": null,
+        "total_election_expense_rs": 0,
+        "expense_breakdown_json": [
+          {
+            "category": "1",
+            "amount_rs": 6
+          },
+          {
+            "category": "i",
+            "amount_rs": 1000010
+          },
+          {
+            "category": "iii",
+            "amount_rs": 2290002
+          },
+          {
+            "category": "iii",
+            "amount_rs": 2390002
+          }
+        ],
+        "expense_data_quality": "Affidavit Data Quality Information"
+      }
+    },
+    {
+      "candidate_id": "SUBHASH_CHANDRA_GUPTA_2022",
+      "name": "Subhash Chandra Gupta",
+      "party": "IND",
+      "party_raw": "IND",
+      "ac_id": "GKP_321",
+      "ac_name": "Pipraich",
+      "election_year": 2022,
+      "source_candidate_id": 3650,
+      "detail_url": "candidate.php?candidate_id=3650",
+      "list_summary": {
+        "education": "10th Pass",
+        "age": 45,
+        "criminal_cases": 1,
+        "total_assets": 0,
+        "liabilities": 0
+      },
+      "affidavit_detail": {
+        "source_affidavit_url": "https://www.myneta.info/uttarpradesh2022/candidate.php?candidate_id=3650",
+        "html_snapshot_path": "/Users/aryansingh/Documents/UP-ELection-Ontology-Engine/data/raw/myneta_html/uttarpradesh2022/3650_affidavit.html",
+        "parse_status": "scraped",
+        "parse_error": null,
+        "criminal_case_details_json": [
+          {
+            "raw_text": "Number of Criminal Cases: 1"
+          }
+        ],
+        "movable_assets_json": [
+          {
+            "item": "Cash",
+            "total_rs": 20000,
+            "self_rs": 16000
+          },
+          {
+            "item": "Deposits in Banks, Financial Institutions and Non-Banking Financial Companies",
+            "total_rs": 2000,
+            "self_rs": 2000
+          },
+          {
+            "item": "Bonds, Debentures and Shares in companies",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "(a) NSS, Postal Savings etc",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Nil",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Personal loans/advance given",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Motor Vehicles (details of make, etc.)",
+            "total_rs": 90000,
+            "self_rs": 0
+          },
+          {
+            "item": "Jewellery (give details weight value)",
+            "total_rs": 75000,
+            "self_rs": 0
+          },
+          {
+            "item": "Other assets, such as values of claims / interests",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "movable_assets_rs": 187000,
+        "immovable_assets_json": [
+          {
+            "item": "Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Non Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Commercial Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Residential Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Others",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "immovable_assets_rs": 0,
+        "liabilities_json": [
+          {
+            "item": "Assets:",
+            "total_rs": 187000
+          },
+          {
+            "item": "Liabilities:",
+            "total_rs": 0
+          }
+        ],
+        "total_assets_detail": 187000
+      },
+      "expense": {
+        "source_expense_url": "https://www.myneta.info/uttarpradesh2022/expense.php?candidate_id=3650",
+        "expense_scrape_status": "scraped",
+        "parse_error": null,
+        "total_election_expense_rs": 0,
+        "expense_breakdown_json": [
+          {
+            "category": "1",
+            "amount_rs": 6
+          },
+          {
+            "category": "vii.Other misc expenses.",
+            "amount_rs": 1719017
+          },
+          {
+            "category": "Calculated Column Total",
+            "amount_rs": 1719017
+          },
+          {
+            "category": "i",
+            "amount_rs": 2000020
+          },
+          {
+            "category": "iii",
+            "amount_rs": 2000020
+          }
+        ],
+        "expense_data_quality": "Affidavit Data Quality Information"
+      }
+    },
+    {
+      "candidate_id": "SUMAN_CHAUHAN_2022",
+      "name": "Suman Chauhan",
+      "party": "INC",
+      "party_raw": "INC",
+      "ac_id": "GKP_321",
+      "ac_name": "Pipraich",
+      "election_year": 2022,
+      "source_candidate_id": 3642,
+      "detail_url": "candidate.php?candidate_id=3642",
+      "list_summary": {
+        "education": "12th Pass",
+        "age": 45,
+        "criminal_cases": 0,
+        "total_assets": 23745973,
+        "liabilities": 0
+      },
+      "affidavit_detail": {
+        "source_affidavit_url": "https://www.myneta.info/uttarpradesh2022/candidate.php?candidate_id=3642",
+        "html_snapshot_path": "/Users/aryansingh/Documents/UP-ELection-Ontology-Engine/data/raw/myneta_html/uttarpradesh2022/3642_affidavit.html",
+        "parse_status": "scraped",
+        "parse_error": null,
+        "itr_income_json": [
+          {
+            "relation": "spouse",
+            "year": "2021-2022",
+            "total_income_rs": 494480
+          },
+          {
+            "relation": "spouse",
+            "year": "2020-2021",
+            "total_income_rs": 492040
+          },
+          {
+            "relation": "spouse",
+            "year": "2019-2020",
+            "total_income_rs": 622947
+          },
+          {
+            "relation": "spouse",
+            "year": "2018-2019",
+            "total_income_rs": 587709
+          },
+          {
+            "relation": "spouse",
+            "year": "2017-2018",
+            "total_income_rs": 515566
+          }
+        ],
+        "criminal_case_details_json": [],
+        "movable_assets_json": [
+          {
+            "item": "Cash",
+            "total_rs": 110000,
+            "self_rs": 70000
+          },
+          {
+            "item": "Deposits in Banks, Financial Institutions and Non-Banking Financial Companies",
+            "total_rs": 235973,
+            "self_rs": 0
+          },
+          {
+            "item": "Bonds, Debentures and Shares in companies",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "(a) NSS, Postal Savings etc",
+            "total_rs": 3200000,
+            "self_rs": 0
+          },
+          {
+            "item": "LIC 70,000 70 Thou+",
+            "total_rs": 3220000,
+            "self_rs": 0
+          },
+          {
+            "item": "Personal loans/advance given",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Motor Vehicles (details of make, etc.)",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Jewellery (give details weight value)",
+            "total_rs": 480000,
+            "self_rs": 70
+          },
+          {
+            "item": "Other assets, such as values of claims / interests",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "movable_assets_rs": 7245973,
+        "immovable_assets_json": [
+          {
+            "item": "Agricultural Land",
+            "total_rs": 4500000,
+            "self_rs": 0
+          },
+          {
+            "item": "Non Agricultural Land",
+            "total_rs": 5000000,
+            "self_rs": 0
+          },
+          {
+            "item": "Commercial Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Residential Buildings",
+            "total_rs": 7000000,
+            "self_rs": 0
+          },
+          {
+            "item": "Others",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "immovable_assets_rs": 16500000,
+        "liabilities_json": [
+          {
+            "item": "Assets:",
+            "total_rs": 23745973
+          },
+          {
+            "item": "Liabilities:",
+            "total_rs": 0
+          }
+        ],
+        "total_assets_detail": 23745973
+      },
+      "expense": {
+        "source_expense_url": "https://www.myneta.info/uttarpradesh2022/expense.php?candidate_id=3642",
+        "expense_scrape_status": "scraped",
+        "parse_error": null,
+        "total_election_expense_rs": 0,
+        "expense_breakdown_json": [
+          {
+            "category": "1",
+            "amount_rs": 6
+          },
+          {
+            "category": "i a . Expenses in public meeting, rally,procession etc. (ie:other than the ones with Star Campaigners of the Political party (Enclose as per Schedule-1)",
+            "amount_rs": 3700037
+          },
+          {
+            "category": "ii.Campaign materials,like handbills,posters,videoaudio cassettes,loudspeakers etc.",
+            "amount_rs": 1140701
+          },
+          {
+            "category": "iv.Vehicles used and POL expenditure on such vehicles.",
+            "amount_rs": 4239004
+          },
+          {
+            "category": "v.Expenses on campaign workers.",
+            "amount_rs": 3750003
+          },
+          {
+            "category": "vii.Other misc expenses.",
+            "amount_rs": 2250452
+          },
+          {
+            "category": "Calculated Column Total",
+            "amount_rs": 117501511
+          },
+          {
+            "category": "i",
+            "amount_rs": 1120001
+          },
+          {
+            "category": "ii",
+            "amount_rs": 100000010
+          },
+          {
+            "category": "iii",
+            "amount_rs": 6552465
+          },
+          {
+            "category": "iii",
+            "amount_rs": 117752411
+          }
+        ],
+        "expense_data_quality": "Affidavit Data Quality Information"
+      }
+    },
+    {
+      "candidate_id": "VIJAY_KUMAR_BHARTI_2022",
+      "name": "Vijay Kumar Bharti",
+      "party": "RASHTRAVADI VIKAS PA",
+      "party_raw": "Rashtravadi Vikas Party",
+      "ac_id": "GKP_321",
+      "ac_name": "Pipraich",
+      "election_year": 2022,
+      "source_candidate_id": 3637,
+      "detail_url": "candidate.php?candidate_id=3637",
+      "list_summary": {
+        "education": "5th Pass",
+        "age": 35,
+        "criminal_cases": 0,
+        "total_assets": 611263,
+        "liabilities": 0
+      },
+      "affidavit_detail": {
+        "source_affidavit_url": "https://www.myneta.info/uttarpradesh2022/candidate.php?candidate_id=3637",
+        "html_snapshot_path": "/Users/aryansingh/Documents/UP-ELection-Ontology-Engine/data/raw/myneta_html/uttarpradesh2022/3637_affidavit.html",
+        "parse_status": "scraped",
+        "parse_error": null,
+        "criminal_case_details_json": [],
+        "movable_assets_json": [
+          {
+            "item": "Cash",
+            "total_rs": 9000,
+            "self_rs": 9000
+          },
+          {
+            "item": "Deposits in Banks, Financial Institutions and Non-Banking Financial Companies",
+            "total_rs": 763,
+            "self_rs": 263
+          },
+          {
+            "item": "Bonds, Debentures and Shares in companies",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "(a) NSS, Postal Savings etc",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Nil",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Personal loans/advance given",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Motor Vehicles (details of make, etc.)",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Jewellery (give details weight value)",
+            "total_rs": 1500,
+            "self_rs": 0
+          },
+          {
+            "item": "Other assets, such as values of claims / interests",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "movable_assets_rs": 11263,
+        "immovable_assets_json": [
+          {
+            "item": "Agricultural Land",
+            "total_rs": 500000,
+            "self_rs": 53
+          },
+          {
+            "item": "Non Agricultural Land",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Commercial Buildings",
+            "total_rs": 0,
+            "self_rs": 0
+          },
+          {
+            "item": "Residential Buildings",
+            "total_rs": 100000,
+            "self_rs": 0
+          },
+          {
+            "item": "Others",
+            "total_rs": 0,
+            "self_rs": 0
+          }
+        ],
+        "immovable_assets_rs": 600000,
+        "liabilities_json": [
+          {
+            "item": "Assets:",
+            "total_rs": 611263
+          },
+          {
+            "item": "Liabilities:",
+            "total_rs": 0
+          }
+        ],
+        "total_assets_detail": 611263
+      },
+      "expense": {
+        "source_expense_url": "https://www.myneta.info/uttarpradesh2022/expense.php?candidate_id=3637",
+        "expense_scrape_status": "scraped",
+        "parse_error": null,
+        "total_election_expense_rs": 0,
+        "expense_breakdown_json": [
+          {
+            "category": "1",
+            "amount_rs": 6
+          },
+          {
+            "category": "vii.Other misc expenses.",
+            "amount_rs": 50005
+          },
+          {
+            "category": "Calculated Column Total",
+            "amount_rs": 50005
+          },
+          {
+            "category": "i",
+            "amount_rs": 50005
+          },
+          {
+            "category": "iii",
+            "amount_rs": 50005
+          }
+        ],
+        "expense_data_quality": "Affidavit Data Quality Information"
+      }
+    }
+  ]
+}

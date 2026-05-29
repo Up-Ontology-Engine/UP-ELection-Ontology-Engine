@@ -41,7 +41,7 @@ function fmtRs(n: number | null | undefined): string {
 
 export default function MyNetaPage() {
   const { theme } = useTheme();
-  const [acId, setAcId] = useState("258"); // Default AC for demonstration
+  const [acId, setAcId] = useState("GKP_322");
   const [acs, setAcs] = useState<AcRow[]>([]);
   const [candidates, setCandidates] = useState<Candidate[]>([]);
   const [loading, setLoading] = useState(true);
