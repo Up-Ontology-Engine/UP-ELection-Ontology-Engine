@@ -1,0 +1,114 @@
+{
+  "1": {
+    "candidate_name": "ADITYANATH",
+    "party": "BJP",
+    "votes": 165499,
+    "position": 1,
+    "winner": true,
+    "candidate_surname": "ADITYANATH"
+  },
+  "2": {
+    "candidate_name": "AJAI SHANKER SRIVASTAVA",
+    "party": "ANARAKSHIT SAMAJ PARTY",
+    "votes": 468,
+    "position": 9,
+    "winner": false,
+    "candidate_surname": "SRIVASTAVA"
+  },
+  "3": {
+    "candidate_name": "CHANDRA SHEKHAR",
+    "party": "ASPKR",
+    "votes": 7640,
+    "position": 4,
+    "winner": false,
+    "candidate_surname": "SHEKHAR"
+  },
+  "4": {
+    "candidate_name": "DR.  CHETNA PANDEY",
+    "party": "INC",
+    "votes": 2880,
+    "position": 5,
+    "winner": false,
+    "candidate_surname": "PANDEY"
+  },
+  "5": {
+    "candidate_name": "JASKARAN RAJ",
+    "party": "JANTA RAKSHAK PARTY",
+    "votes": 233,
+    "position": 10,
+    "winner": false,
+    "candidate_surname": "RAJ"
+  },
+  "6": {
+    "candidate_name": "KHWAJA SHAMSUDDIN",
+    "party": "BSP",
+    "votes": 8023,
+    "position": 3,
+    "winner": false,
+    "candidate_surname": "SHAMSUDDIN"
+  },
+  "7": {
+    "candidate_name": "NOTA",
+    "party": "NOTA",
+    "votes": 1194,
+    "position": 6,
+    "winner": false,
+    "candidate_surname": "NOTA"
+  },
+  "8": {
+    "candidate_name": "QAZI MOHD. RASHID",
+    "party": "IND",
+    "votes": 159,
+    "position": 13,
+    "winner": false,
+    "candidate_surname": "RASHID"
+  },
+  "9": {
+    "candidate_name": "RAM DAVAN MAURYA",
+    "party": "RIGHT TO RECALL PARTY",
+    "votes": 490,
+    "position": 8,
+    "winner": false,
+    "candidate_surname": "MAURYA"
+  },
+  "10": {
+    "candidate_name": "SANT DHARAMVEER CHOTIWALA",
+    "party": "IND",
+    "votes": 207,
+    "position": 11,
+    "winner": false,
+    "candidate_surname": "CHOTIWALA"
+  },
+  "11": {
+    "candidate_name": "SUBHAWATI UPENDRA DUTT SHUKLA",
+    "party": "SP",
+    "votes": 62109,
+    "position": 2,
+    "winner": false,
+    "candidate_surname": "SHUKLA"
+  },
+  "12": {
+    "candidate_name": "SURAJ KUMAR YADAV",
+    "party": "IND",
+    "votes": 187,
+    "position": 12,
+    "winner": false,
+    "candidate_surname": "YADAV"
+  },
+  "13": {
+    "candidate_name": "VIJAY KUMAR SRIVASTAVA",
+    "party": "AAAP",
+    "votes": 853,
+    "position": 7,
+    "winner": false,
+    "candidate_surname": "SRIVASTAVA"
+  },
+  "14": {
+    "candidate_name": "YUVRAJ SHARMA",
+    "party": "BHARATIYA JAN JAGRITI PARTY",
+    "votes": 125,
+    "position": 14,
+    "winner": false,
+    "candidate_surname": "SHARMA"
+  }
+}

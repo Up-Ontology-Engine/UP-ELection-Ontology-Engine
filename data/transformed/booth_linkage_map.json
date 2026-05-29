@@ -1,0 +1,4712 @@
+[
+  {
+    "ac_number": 322,
+    "part_number": 1,
+    "ps_number": 1,
+    "voter_roll_count": NaN,
+    "form20_electors": 877,
+    "form20_turnout": 535,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 2,
+    "ps_number": 2,
+    "voter_roll_count": 1472.0,
+    "form20_electors": 946,
+    "form20_turnout": 475,
+    "delta_pct": 0.556,
+    "match_status": "MISMATCH"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 3,
+    "ps_number": 3,
+    "voter_roll_count": 1882.0,
+    "form20_electors": 725,
+    "form20_turnout": 460,
+    "delta_pct": 1.5959,
+    "match_status": "MISMATCH"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 4,
+    "ps_number": 4,
+    "voter_roll_count": 2074.0,
+    "form20_electors": 926,
+    "form20_turnout": 596,
+    "delta_pct": 1.2397,
+    "match_status": "MISMATCH"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 5,
+    "ps_number": 5,
+    "voter_roll_count": 1870.0,
+    "form20_electors": 808,
+    "form20_turnout": 662,
+    "delta_pct": 1.3144,
+    "match_status": "MISMATCH"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 6,
+    "ps_number": 6,
+    "voter_roll_count": 2110.0,
+    "form20_electors": 1153,
+    "form20_turnout": 784,
+    "delta_pct": 0.83,
+    "match_status": "MISMATCH"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 7,
+    "ps_number": 7,
+    "voter_roll_count": 2228.0,
+    "form20_electors": 1007,
+    "form20_turnout": 696,
+    "delta_pct": 1.2125,
+    "match_status": "MISMATCH"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 8,
+    "ps_number": 8,
+    "voter_roll_count": 2213.0,
+    "form20_electors": 1066,
+    "form20_turnout": 568,
+    "delta_pct": 1.076,
+    "match_status": "MISMATCH"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 9,
+    "ps_number": 9,
+    "voter_roll_count": 1573.0,
+    "form20_electors": 1074,
+    "form20_turnout": 540,
+    "delta_pct": 0.4646,
+    "match_status": "MISMATCH"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 10,
+    "ps_number": 10,
+    "voter_roll_count": 766.0,
+    "form20_electors": 1080,
+    "form20_turnout": 523,
+    "delta_pct": 0.2907,
+    "match_status": "SUSPECT"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 11,
+    "ps_number": 11,
+    "voter_roll_count": NaN,
+    "form20_electors": 1084,
+    "form20_turnout": 490,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 12,
+    "ps_number": 12,
+    "voter_roll_count": NaN,
+    "form20_electors": 988,
+    "form20_turnout": 516,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 13,
+    "ps_number": 13,
+    "voter_roll_count": NaN,
+    "form20_electors": 1160,
+    "form20_turnout": 569,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 14,
+    "ps_number": 14,
+    "voter_roll_count": NaN,
+    "form20_electors": 970,
+    "form20_turnout": 448,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 15,
+    "ps_number": 15,
+    "voter_roll_count": NaN,
+    "form20_electors": 1101,
+    "form20_turnout": 516,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 16,
+    "ps_number": 16,
+    "voter_roll_count": NaN,
+    "form20_electors": 1190,
+    "form20_turnout": 691,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 17,
+    "ps_number": 17,
+    "voter_roll_count": NaN,
+    "form20_electors": 861,
+    "form20_turnout": 511,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 18,
+    "ps_number": 18,
+    "voter_roll_count": NaN,
+    "form20_electors": 546,
+    "form20_turnout": 410,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 19,
+    "ps_number": 19,
+    "voter_roll_count": NaN,
+    "form20_electors": 927,
+    "form20_turnout": 621,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 20,
+    "ps_number": 20,
+    "voter_roll_count": 578.0,
+    "form20_electors": 743,
+    "form20_turnout": 540,
+    "delta_pct": 0.2221,
+    "match_status": "SUSPECT"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 21,
+    "ps_number": 21,
+    "voter_roll_count": NaN,
+    "form20_electors": 820,
+    "form20_turnout": 620,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 22,
+    "ps_number": 22,
+    "voter_roll_count": NaN,
+    "form20_electors": 744,
+    "form20_turnout": 495,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 23,
+    "ps_number": 23,
+    "voter_roll_count": NaN,
+    "form20_electors": 1162,
+    "form20_turnout": 784,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 24,
+    "ps_number": 24,
+    "voter_roll_count": 1144.0,
+    "form20_electors": 746,
+    "form20_turnout": 325,
+    "delta_pct": 0.5335,
+    "match_status": "MISMATCH"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 25,
+    "ps_number": 25,
+    "voter_roll_count": 679.0,
+    "form20_electors": 563,
+    "form20_turnout": 240,
+    "delta_pct": 0.206,
+    "match_status": "SUSPECT"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 26,
+    "ps_number": 26,
+    "voter_roll_count": 698.0,
+    "form20_electors": 738,
+    "form20_turnout": 480,
+    "delta_pct": 0.0542,
+    "match_status": "MATCHED"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 27,
+    "ps_number": 27,
+    "voter_roll_count": 666.0,
+    "form20_electors": 1183,
+    "form20_turnout": 802,
+    "delta_pct": 0.437,
+    "match_status": "MISMATCH"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 28,
+    "ps_number": 28,
+    "voter_roll_count": 805.0,
+    "form20_electors": 1136,
+    "form20_turnout": 757,
+    "delta_pct": 0.2914,
+    "match_status": "SUSPECT"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 29,
+    "ps_number": 29,
+    "voter_roll_count": 942.0,
+    "form20_electors": 1070,
+    "form20_turnout": 660,
+    "delta_pct": 0.1196,
+    "match_status": "MATCHED"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 30,
+    "ps_number": 30,
+    "voter_roll_count": 840.0,
+    "form20_electors": 939,
+    "form20_turnout": 616,
+    "delta_pct": 0.1054,
+    "match_status": "MATCHED"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 31,
+    "ps_number": 31,
+    "voter_roll_count": NaN,
+    "form20_electors": 1141,
+    "form20_turnout": 755,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 32,
+    "ps_number": 32,
+    "voter_roll_count": 776.0,
+    "form20_electors": 853,
+    "form20_turnout": 492,
+    "delta_pct": 0.0903,
+    "match_status": "MATCHED"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 33,
+    "ps_number": 33,
+    "voter_roll_count": 696.0,
+    "form20_electors": 1019,
+    "form20_turnout": 575,
+    "delta_pct": 0.317,
+    "match_status": "SUSPECT"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 34,
+    "ps_number": 34,
+    "voter_roll_count": 836.0,
+    "form20_electors": 1216,
+    "form20_turnout": 890,
+    "delta_pct": 0.3125,
+    "match_status": "SUSPECT"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 35,
+    "ps_number": 35,
+    "voter_roll_count": 881.0,
+    "form20_electors": 834,
+    "form20_turnout": 515,
+    "delta_pct": 0.0564,
+    "match_status": "MATCHED"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 36,
+    "ps_number": 36,
+    "voter_roll_count": 760.0,
+    "form20_electors": 826,
+    "form20_turnout": 463,
+    "delta_pct": 0.0799,
+    "match_status": "MATCHED"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 37,
+    "ps_number": 37,
+    "voter_roll_count": 923.0,
+    "form20_electors": 1080,
+    "form20_turnout": 596,
+    "delta_pct": 0.1454,
+    "match_status": "MATCHED"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 38,
+    "ps_number": 38,
+    "voter_roll_count": 882.0,
+    "form20_electors": 1185,
+    "form20_turnout": 617,
+    "delta_pct": 0.2557,
+    "match_status": "SUSPECT"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 39,
+    "ps_number": 39,
+    "voter_roll_count": 826.0,
+    "form20_electors": 1044,
+    "form20_turnout": 528,
+    "delta_pct": 0.2088,
+    "match_status": "SUSPECT"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 40,
+    "ps_number": 40,
+    "voter_roll_count": 774.0,
+    "form20_electors": 1150,
+    "form20_turnout": 692,
+    "delta_pct": 0.327,
+    "match_status": "SUSPECT"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 41,
+    "ps_number": 41,
+    "voter_roll_count": NaN,
+    "form20_electors": 1066,
+    "form20_turnout": 636,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 42,
+    "ps_number": 42,
+    "voter_roll_count": 676.0,
+    "form20_electors": 773,
+    "form20_turnout": 424,
+    "delta_pct": 0.1255,
+    "match_status": "MATCHED"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 43,
+    "ps_number": 43,
+    "voter_roll_count": 550.0,
+    "form20_electors": 814,
+    "form20_turnout": 604,
+    "delta_pct": 0.3243,
+    "match_status": "SUSPECT"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 44,
+    "ps_number": 44,
+    "voter_roll_count": 1464.0,
+    "form20_electors": 658,
+    "form20_turnout": 415,
+    "delta_pct": 1.2249,
+    "match_status": "MISMATCH"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 45,
+    "ps_number": 45,
+    "voter_roll_count": 600.0,
+    "form20_electors": 1131,
+    "form20_turnout": 817,
+    "delta_pct": 0.4695,
+    "match_status": "MISMATCH"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 46,
+    "ps_number": 46,
+    "voter_roll_count": 552.0,
+    "form20_electors": 802,
+    "form20_turnout": 528,
+    "delta_pct": 0.3117,
+    "match_status": "SUSPECT"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 47,
+    "ps_number": 47,
+    "voter_roll_count": 656.0,
+    "form20_electors": 744,
+    "form20_turnout": 497,
+    "delta_pct": 0.1183,
+    "match_status": "MATCHED"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 48,
+    "ps_number": 48,
+    "voter_roll_count": 825.0,
+    "form20_electors": 1162,
+    "form20_turnout": 681,
+    "delta_pct": 0.29,
+    "match_status": "SUSPECT"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 49,
+    "ps_number": 49,
+    "voter_roll_count": 403.0,
+    "form20_electors": 1053,
+    "form20_turnout": 587,
+    "delta_pct": 0.6173,
+    "match_status": "MISMATCH"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 50,
+    "ps_number": 50,
+    "voter_roll_count": 723.0,
+    "form20_electors": 1088,
+    "form20_turnout": 635,
+    "delta_pct": 0.3355,
+    "match_status": "SUSPECT"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 51,
+    "ps_number": 51,
+    "voter_roll_count": NaN,
+    "form20_electors": 518,
+    "form20_turnout": 217,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 52,
+    "ps_number": 52,
+    "voter_roll_count": 695.0,
+    "form20_electors": 976,
+    "form20_turnout": 478,
+    "delta_pct": 0.2879,
+    "match_status": "SUSPECT"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 53,
+    "ps_number": 53,
+    "voter_roll_count": 620.0,
+    "form20_electors": 984,
+    "form20_turnout": 594,
+    "delta_pct": 0.3699,
+    "match_status": "SUSPECT"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 54,
+    "ps_number": 54,
+    "voter_roll_count": 670.0,
+    "form20_electors": 838,
+    "form20_turnout": 642,
+    "delta_pct": 0.2005,
+    "match_status": "SUSPECT"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 55,
+    "ps_number": 55,
+    "voter_roll_count": 583.0,
+    "form20_electors": 1169,
+    "form20_turnout": 878,
+    "delta_pct": 0.5013,
+    "match_status": "MISMATCH"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 56,
+    "ps_number": 56,
+    "voter_roll_count": 744.0,
+    "form20_electors": 870,
+    "form20_turnout": 526,
+    "delta_pct": 0.1448,
+    "match_status": "MATCHED"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 57,
+    "ps_number": 57,
+    "voter_roll_count": 832.0,
+    "form20_electors": 1026,
+    "form20_turnout": 623,
+    "delta_pct": 0.1891,
+    "match_status": "MATCHED"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 58,
+    "ps_number": 58,
+    "voter_roll_count": 713.0,
+    "form20_electors": 1107,
+    "form20_turnout": 674,
+    "delta_pct": 0.3559,
+    "match_status": "SUSPECT"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 59,
+    "ps_number": 59,
+    "voter_roll_count": 646.0,
+    "form20_electors": 1219,
+    "form20_turnout": 709,
+    "delta_pct": 0.4701,
+    "match_status": "MISMATCH"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 60,
+    "ps_number": 60,
+    "voter_roll_count": 825.0,
+    "form20_electors": 1162,
+    "form20_turnout": 655,
+    "delta_pct": 0.29,
+    "match_status": "SUSPECT"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 61,
+    "ps_number": 61,
+    "voter_roll_count": NaN,
+    "form20_electors": 1195,
+    "form20_turnout": 637,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 62,
+    "ps_number": 62,
+    "voter_roll_count": 797.0,
+    "form20_electors": 1160,
+    "form20_turnout": 618,
+    "delta_pct": 0.3129,
+    "match_status": "SUSPECT"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 63,
+    "ps_number": 63,
+    "voter_roll_count": 680.0,
+    "form20_electors": 1077,
+    "form20_turnout": 606,
+    "delta_pct": 0.3686,
+    "match_status": "SUSPECT"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 64,
+    "ps_number": 64,
+    "voter_roll_count": 682.0,
+    "form20_electors": 1200,
+    "form20_turnout": 635,
+    "delta_pct": 0.4317,
+    "match_status": "MISMATCH"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 65,
+    "ps_number": 65,
+    "voter_roll_count": 486.0,
+    "form20_electors": 1163,
+    "form20_turnout": 599,
+    "delta_pct": 0.5821,
+    "match_status": "MISMATCH"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 66,
+    "ps_number": 66,
+    "voter_roll_count": 723.0,
+    "form20_electors": 1171,
+    "form20_turnout": 662,
+    "delta_pct": 0.3826,
+    "match_status": "SUSPECT"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 67,
+    "ps_number": 67,
+    "voter_roll_count": 734.0,
+    "form20_electors": 1175,
+    "form20_turnout": 585,
+    "delta_pct": 0.3753,
+    "match_status": "SUSPECT"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 68,
+    "ps_number": 68,
+    "voter_roll_count": NaN,
+    "form20_electors": 1156,
+    "form20_turnout": 612,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 69,
+    "ps_number": 69,
+    "voter_roll_count": 704.0,
+    "form20_electors": 1229,
+    "form20_turnout": 622,
+    "delta_pct": 0.4272,
+    "match_status": "MISMATCH"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 70,
+    "ps_number": 70,
+    "voter_roll_count": 655.0,
+    "form20_electors": 1227,
+    "form20_turnout": 676,
+    "delta_pct": 0.4662,
+    "match_status": "MISMATCH"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 71,
+    "ps_number": 71,
+    "voter_roll_count": NaN,
+    "form20_electors": 1214,
+    "form20_turnout": 665,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 72,
+    "ps_number": 72,
+    "voter_roll_count": NaN,
+    "form20_electors": 1230,
+    "form20_turnout": 636,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 73,
+    "ps_number": 73,
+    "voter_roll_count": 645.0,
+    "form20_electors": 1166,
+    "form20_turnout": 597,
+    "delta_pct": 0.4468,
+    "match_status": "MISMATCH"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 74,
+    "ps_number": 74,
+    "voter_roll_count": 562.0,
+    "form20_electors": 1209,
+    "form20_turnout": 588,
+    "delta_pct": 0.5352,
+    "match_status": "MISMATCH"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 75,
+    "ps_number": 75,
+    "voter_roll_count": NaN,
+    "form20_electors": 1189,
+    "form20_turnout": 588,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 76,
+    "ps_number": 76,
+    "voter_roll_count": 550.0,
+    "form20_electors": 981,
+    "form20_turnout": 575,
+    "delta_pct": 0.4393,
+    "match_status": "MISMATCH"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 77,
+    "ps_number": 77,
+    "voter_roll_count": NaN,
+    "form20_electors": 1218,
+    "form20_turnout": 645,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 78,
+    "ps_number": 78,
+    "voter_roll_count": 794.0,
+    "form20_electors": 994,
+    "form20_turnout": 516,
+    "delta_pct": 0.2012,
+    "match_status": "SUSPECT"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 79,
+    "ps_number": 79,
+    "voter_roll_count": 898.0,
+    "form20_electors": 1138,
+    "form20_turnout": 630,
+    "delta_pct": 0.2109,
+    "match_status": "SUSPECT"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 80,
+    "ps_number": 80,
+    "voter_roll_count": NaN,
+    "form20_electors": 1246,
+    "form20_turnout": 677,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 81,
+    "ps_number": 81,
+    "voter_roll_count": NaN,
+    "form20_electors": 1185,
+    "form20_turnout": 703,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 82,
+    "ps_number": 82,
+    "voter_roll_count": 833.0,
+    "form20_electors": 963,
+    "form20_turnout": 513,
+    "delta_pct": 0.135,
+    "match_status": "MATCHED"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 83,
+    "ps_number": 83,
+    "voter_roll_count": 470.0,
+    "form20_electors": 943,
+    "form20_turnout": 559,
+    "delta_pct": 0.5016,
+    "match_status": "MISMATCH"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 84,
+    "ps_number": 84,
+    "voter_roll_count": NaN,
+    "form20_electors": 1070,
+    "form20_turnout": 604,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 85,
+    "ps_number": 85,
+    "voter_roll_count": NaN,
+    "form20_electors": 1190,
+    "form20_turnout": 701,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 86,
+    "ps_number": 86,
+    "voter_roll_count": NaN,
+    "form20_electors": 1182,
+    "form20_turnout": 669,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 87,
+    "ps_number": 87,
+    "voter_roll_count": 758.0,
+    "form20_electors": 1220,
+    "form20_turnout": 722,
+    "delta_pct": 0.3787,
+    "match_status": "SUSPECT"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 88,
+    "ps_number": 88,
+    "voter_roll_count": NaN,
+    "form20_electors": 1108,
+    "form20_turnout": 660,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 89,
+    "ps_number": 89,
+    "voter_roll_count": NaN,
+    "form20_electors": 858,
+    "form20_turnout": 468,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 90,
+    "ps_number": 90,
+    "voter_roll_count": 737.0,
+    "form20_electors": 1091,
+    "form20_turnout": 595,
+    "delta_pct": 0.3245,
+    "match_status": "SUSPECT"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 91,
+    "ps_number": 91,
+    "voter_roll_count": NaN,
+    "form20_electors": 1072,
+    "form20_turnout": 611,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 92,
+    "ps_number": 92,
+    "voter_roll_count": NaN,
+    "form20_electors": 1165,
+    "form20_turnout": 662,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 93,
+    "ps_number": 93,
+    "voter_roll_count": NaN,
+    "form20_electors": 1061,
+    "form20_turnout": 641,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 94,
+    "ps_number": 94,
+    "voter_roll_count": NaN,
+    "form20_electors": 1127,
+    "form20_turnout": 591,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 95,
+    "ps_number": 95,
+    "voter_roll_count": NaN,
+    "form20_electors": 1142,
+    "form20_turnout": 600,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 96,
+    "ps_number": 96,
+    "voter_roll_count": NaN,
+    "form20_electors": 1166,
+    "form20_turnout": 523,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 97,
+    "ps_number": 97,
+    "voter_roll_count": NaN,
+    "form20_electors": 1189,
+    "form20_turnout": 622,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 98,
+    "ps_number": 98,
+    "voter_roll_count": NaN,
+    "form20_electors": 971,
+    "form20_turnout": 459,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 99,
+    "ps_number": 99,
+    "voter_roll_count": NaN,
+    "form20_electors": 939,
+    "form20_turnout": 578,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 100,
+    "ps_number": 100,
+    "voter_roll_count": NaN,
+    "form20_electors": 1045,
+    "form20_turnout": 499,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 101,
+    "ps_number": 101,
+    "voter_roll_count": NaN,
+    "form20_electors": 982,
+    "form20_turnout": 452,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 102,
+    "ps_number": 102,
+    "voter_roll_count": NaN,
+    "form20_electors": 968,
+    "form20_turnout": 411,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 103,
+    "ps_number": 103,
+    "voter_roll_count": NaN,
+    "form20_electors": 1057,
+    "form20_turnout": 504,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 104,
+    "ps_number": 104,
+    "voter_roll_count": NaN,
+    "form20_electors": 1159,
+    "form20_turnout": 570,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 105,
+    "ps_number": 105,
+    "voter_roll_count": NaN,
+    "form20_electors": 1063,
+    "form20_turnout": 512,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 106,
+    "ps_number": 106,
+    "voter_roll_count": NaN,
+    "form20_electors": 1169,
+    "form20_turnout": 698,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 107,
+    "ps_number": 107,
+    "voter_roll_count": NaN,
+    "form20_electors": 1110,
+    "form20_turnout": 667,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 108,
+    "ps_number": 108,
+    "voter_roll_count": NaN,
+    "form20_electors": 915,
+    "form20_turnout": 477,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 109,
+    "ps_number": 109,
+    "voter_roll_count": NaN,
+    "form20_electors": 779,
+    "form20_turnout": 376,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 110,
+    "ps_number": 110,
+    "voter_roll_count": NaN,
+    "form20_electors": 1142,
+    "form20_turnout": 538,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 111,
+    "ps_number": 111,
+    "voter_roll_count": NaN,
+    "form20_electors": 1249,
+    "form20_turnout": 677,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 112,
+    "ps_number": 112,
+    "voter_roll_count": NaN,
+    "form20_electors": 825,
+    "form20_turnout": 446,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 113,
+    "ps_number": 113,
+    "voter_roll_count": NaN,
+    "form20_electors": 1081,
+    "form20_turnout": 472,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 114,
+    "ps_number": 114,
+    "voter_roll_count": NaN,
+    "form20_electors": 881,
+    "form20_turnout": 477,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 115,
+    "ps_number": 115,
+    "voter_roll_count": NaN,
+    "form20_electors": 957,
+    "form20_turnout": 477,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 116,
+    "ps_number": 116,
+    "voter_roll_count": NaN,
+    "form20_electors": 965,
+    "form20_turnout": 425,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 117,
+    "ps_number": 117,
+    "voter_roll_count": NaN,
+    "form20_electors": 917,
+    "form20_turnout": 423,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 118,
+    "ps_number": 118,
+    "voter_roll_count": NaN,
+    "form20_electors": 830,
+    "form20_turnout": 508,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 119,
+    "ps_number": 119,
+    "voter_roll_count": NaN,
+    "form20_electors": 1140,
+    "form20_turnout": 637,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 120,
+    "ps_number": 120,
+    "voter_roll_count": NaN,
+    "form20_electors": 952,
+    "form20_turnout": 533,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 121,
+    "ps_number": 121,
+    "voter_roll_count": NaN,
+    "form20_electors": 1084,
+    "form20_turnout": 524,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 122,
+    "ps_number": 122,
+    "voter_roll_count": NaN,
+    "form20_electors": 846,
+    "form20_turnout": 491,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 123,
+    "ps_number": 123,
+    "voter_roll_count": NaN,
+    "form20_electors": 907,
+    "form20_turnout": 470,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 124,
+    "ps_number": 124,
+    "voter_roll_count": NaN,
+    "form20_electors": 1104,
+    "form20_turnout": 664,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 125,
+    "ps_number": 125,
+    "voter_roll_count": NaN,
+    "form20_electors": 870,
+    "form20_turnout": 509,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 126,
+    "ps_number": 126,
+    "voter_roll_count": NaN,
+    "form20_electors": 723,
+    "form20_turnout": 416,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 127,
+    "ps_number": 127,
+    "voter_roll_count": NaN,
+    "form20_electors": 519,
+    "form20_turnout": 308,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 128,
+    "ps_number": 128,
+    "voter_roll_count": NaN,
+    "form20_electors": 612,
+    "form20_turnout": 313,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 129,
+    "ps_number": 129,
+    "voter_roll_count": NaN,
+    "form20_electors": 979,
+    "form20_turnout": 487,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 130,
+    "ps_number": 130,
+    "voter_roll_count": NaN,
+    "form20_electors": 667,
+    "form20_turnout": 401,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 131,
+    "ps_number": 131,
+    "voter_roll_count": NaN,
+    "form20_electors": 881,
+    "form20_turnout": 428,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 132,
+    "ps_number": 132,
+    "voter_roll_count": NaN,
+    "form20_electors": 719,
+    "form20_turnout": 418,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 133,
+    "ps_number": 133,
+    "voter_roll_count": NaN,
+    "form20_electors": 569,
+    "form20_turnout": 273,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 134,
+    "ps_number": 134,
+    "voter_roll_count": NaN,
+    "form20_electors": 1231,
+    "form20_turnout": 708,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 135,
+    "ps_number": 135,
+    "voter_roll_count": NaN,
+    "form20_electors": 1023,
+    "form20_turnout": 552,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 136,
+    "ps_number": 136,
+    "voter_roll_count": NaN,
+    "form20_electors": 558,
+    "form20_turnout": 227,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 137,
+    "ps_number": 137,
+    "voter_roll_count": NaN,
+    "form20_electors": 423,
+    "form20_turnout": 179,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 138,
+    "ps_number": 138,
+    "voter_roll_count": NaN,
+    "form20_electors": 746,
+    "form20_turnout": 234,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 139,
+    "ps_number": 139,
+    "voter_roll_count": NaN,
+    "form20_electors": 667,
+    "form20_turnout": 285,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 140,
+    "ps_number": 140,
+    "voter_roll_count": NaN,
+    "form20_electors": 353,
+    "form20_turnout": 148,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 141,
+    "ps_number": 141,
+    "voter_roll_count": NaN,
+    "form20_electors": 373,
+    "form20_turnout": 260,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 142,
+    "ps_number": 142,
+    "voter_roll_count": NaN,
+    "form20_electors": 489,
+    "form20_turnout": 234,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 143,
+    "ps_number": 143,
+    "voter_roll_count": NaN,
+    "form20_electors": 640,
+    "form20_turnout": 249,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 144,
+    "ps_number": 144,
+    "voter_roll_count": NaN,
+    "form20_electors": 495,
+    "form20_turnout": 203,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 145,
+    "ps_number": 145,
+    "voter_roll_count": NaN,
+    "form20_electors": 547,
+    "form20_turnout": 233,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 146,
+    "ps_number": 146,
+    "voter_roll_count": NaN,
+    "form20_electors": 832,
+    "form20_turnout": 225,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 147,
+    "ps_number": 147,
+    "voter_roll_count": NaN,
+    "form20_electors": 983,
+    "form20_turnout": 584,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 148,
+    "ps_number": 148,
+    "voter_roll_count": NaN,
+    "form20_electors": 1013,
+    "form20_turnout": 592,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 149,
+    "ps_number": 149,
+    "voter_roll_count": NaN,
+    "form20_electors": 1106,
+    "form20_turnout": 627,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 150,
+    "ps_number": 150,
+    "voter_roll_count": NaN,
+    "form20_electors": 1114,
+    "form20_turnout": 586,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 151,
+    "ps_number": 151,
+    "voter_roll_count": NaN,
+    "form20_electors": 1115,
+    "form20_turnout": 674,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 152,
+    "ps_number": 152,
+    "voter_roll_count": NaN,
+    "form20_electors": 1116,
+    "form20_turnout": 587,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 153,
+    "ps_number": 153,
+    "voter_roll_count": NaN,
+    "form20_electors": 759,
+    "form20_turnout": 378,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 154,
+    "ps_number": 154,
+    "voter_roll_count": NaN,
+    "form20_electors": 901,
+    "form20_turnout": 401,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 155,
+    "ps_number": 155,
+    "voter_roll_count": NaN,
+    "form20_electors": 1139,
+    "form20_turnout": 636,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 156,
+    "ps_number": 156,
+    "voter_roll_count": NaN,
+    "form20_electors": 668,
+    "form20_turnout": 316,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 157,
+    "ps_number": 157,
+    "voter_roll_count": NaN,
+    "form20_electors": 872,
+    "form20_turnout": 542,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 158,
+    "ps_number": 158,
+    "voter_roll_count": NaN,
+    "form20_electors": 916,
+    "form20_turnout": 442,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 159,
+    "ps_number": 159,
+    "voter_roll_count": NaN,
+    "form20_electors": 1035,
+    "form20_turnout": 547,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 160,
+    "ps_number": 160,
+    "voter_roll_count": NaN,
+    "form20_electors": 1156,
+    "form20_turnout": 647,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 161,
+    "ps_number": 161,
+    "voter_roll_count": NaN,
+    "form20_electors": 1104,
+    "form20_turnout": 511,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 162,
+    "ps_number": 162,
+    "voter_roll_count": NaN,
+    "form20_electors": 1154,
+    "form20_turnout": 585,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 163,
+    "ps_number": 163,
+    "voter_roll_count": NaN,
+    "form20_electors": 1177,
+    "form20_turnout": 621,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 164,
+    "ps_number": 164,
+    "voter_roll_count": NaN,
+    "form20_electors": 1107,
+    "form20_turnout": 586,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 165,
+    "ps_number": 165,
+    "voter_roll_count": NaN,
+    "form20_electors": 1006,
+    "form20_turnout": 535,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 166,
+    "ps_number": 166,
+    "voter_roll_count": NaN,
+    "form20_electors": 1101,
+    "form20_turnout": 521,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 167,
+    "ps_number": 167,
+    "voter_roll_count": NaN,
+    "form20_electors": 1085,
+    "form20_turnout": 574,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 168,
+    "ps_number": 168,
+    "voter_roll_count": NaN,
+    "form20_electors": 1182,
+    "form20_turnout": 720,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 169,
+    "ps_number": 169,
+    "voter_roll_count": NaN,
+    "form20_electors": 977,
+    "form20_turnout": 571,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 170,
+    "ps_number": 170,
+    "voter_roll_count": NaN,
+    "form20_electors": 1129,
+    "form20_turnout": 508,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 171,
+    "ps_number": 171,
+    "voter_roll_count": NaN,
+    "form20_electors": 1177,
+    "form20_turnout": 632,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 172,
+    "ps_number": 172,
+    "voter_roll_count": NaN,
+    "form20_electors": 1131,
+    "form20_turnout": 603,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 173,
+    "ps_number": 173,
+    "voter_roll_count": NaN,
+    "form20_electors": 1216,
+    "form20_turnout": 723,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 174,
+    "ps_number": 174,
+    "voter_roll_count": NaN,
+    "form20_electors": 1210,
+    "form20_turnout": 610,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 175,
+    "ps_number": 175,
+    "voter_roll_count": NaN,
+    "form20_electors": 1142,
+    "form20_turnout": 555,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 176,
+    "ps_number": 176,
+    "voter_roll_count": NaN,
+    "form20_electors": 1177,
+    "form20_turnout": 572,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 177,
+    "ps_number": 177,
+    "voter_roll_count": NaN,
+    "form20_electors": 1028,
+    "form20_turnout": 565,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 178,
+    "ps_number": 178,
+    "voter_roll_count": NaN,
+    "form20_electors": 1131,
+    "form20_turnout": 510,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 179,
+    "ps_number": 179,
+    "voter_roll_count": NaN,
+    "form20_electors": 1155,
+    "form20_turnout": 602,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 180,
+    "ps_number": 180,
+    "voter_roll_count": NaN,
+    "form20_electors": 1186,
+    "form20_turnout": 613,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 181,
+    "ps_number": 181,
+    "voter_roll_count": NaN,
+    "form20_electors": 1190,
+    "form20_turnout": 632,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 182,
+    "ps_number": 182,
+    "voter_roll_count": NaN,
+    "form20_electors": 1103,
+    "form20_turnout": 521,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 183,
+    "ps_number": 183,
+    "voter_roll_count": NaN,
+    "form20_electors": 1108,
+    "form20_turnout": 434,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 184,
+    "ps_number": 184,
+    "voter_roll_count": NaN,
+    "form20_electors": 1155,
+    "form20_turnout": 564,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 185,
+    "ps_number": 185,
+    "voter_roll_count": NaN,
+    "form20_electors": 994,
+    "form20_turnout": 464,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 186,
+    "ps_number": 186,
+    "voter_roll_count": NaN,
+    "form20_electors": 826,
+    "form20_turnout": 476,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 187,
+    "ps_number": 187,
+    "voter_roll_count": NaN,
+    "form20_electors": 599,
+    "form20_turnout": 269,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 188,
+    "ps_number": 188,
+    "voter_roll_count": NaN,
+    "form20_electors": 1199,
+    "form20_turnout": 690,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 189,
+    "ps_number": 189,
+    "voter_roll_count": NaN,
+    "form20_electors": 1027,
+    "form20_turnout": 608,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 190,
+    "ps_number": 190,
+    "voter_roll_count": NaN,
+    "form20_electors": 1153,
+    "form20_turnout": 643,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 191,
+    "ps_number": 191,
+    "voter_roll_count": NaN,
+    "form20_electors": 1011,
+    "form20_turnout": 484,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 192,
+    "ps_number": 192,
+    "voter_roll_count": NaN,
+    "form20_electors": 874,
+    "form20_turnout": 504,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 193,
+    "ps_number": 193,
+    "voter_roll_count": NaN,
+    "form20_electors": 733,
+    "form20_turnout": 326,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 194,
+    "ps_number": 194,
+    "voter_roll_count": NaN,
+    "form20_electors": 1195,
+    "form20_turnout": 717,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 195,
+    "ps_number": 195,
+    "voter_roll_count": NaN,
+    "form20_electors": 1137,
+    "form20_turnout": 573,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 196,
+    "ps_number": 196,
+    "voter_roll_count": NaN,
+    "form20_electors": 1131,
+    "form20_turnout": 627,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 197,
+    "ps_number": 197,
+    "voter_roll_count": NaN,
+    "form20_electors": 1150,
+    "form20_turnout": 625,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 198,
+    "ps_number": 198,
+    "voter_roll_count": NaN,
+    "form20_electors": 1063,
+    "form20_turnout": 510,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 199,
+    "ps_number": 199,
+    "voter_roll_count": NaN,
+    "form20_electors": 1133,
+    "form20_turnout": 610,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 200,
+    "ps_number": 200,
+    "voter_roll_count": NaN,
+    "form20_electors": 1164,
+    "form20_turnout": 670,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 201,
+    "ps_number": 201,
+    "voter_roll_count": NaN,
+    "form20_electors": 1068,
+    "form20_turnout": 573,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 202,
+    "ps_number": 202,
+    "voter_roll_count": NaN,
+    "form20_electors": 1144,
+    "form20_turnout": 666,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 203,
+    "ps_number": 203,
+    "voter_roll_count": NaN,
+    "form20_electors": 1083,
+    "form20_turnout": 531,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 204,
+    "ps_number": 204,
+    "voter_roll_count": NaN,
+    "form20_electors": 1139,
+    "form20_turnout": 628,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 205,
+    "ps_number": 205,
+    "voter_roll_count": NaN,
+    "form20_electors": 1092,
+    "form20_turnout": 571,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 206,
+    "ps_number": 206,
+    "voter_roll_count": NaN,
+    "form20_electors": 1123,
+    "form20_turnout": 656,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 207,
+    "ps_number": 207,
+    "voter_roll_count": NaN,
+    "form20_electors": 1190,
+    "form20_turnout": 641,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 208,
+    "ps_number": 208,
+    "voter_roll_count": NaN,
+    "form20_electors": 1193,
+    "form20_turnout": 538,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 209,
+    "ps_number": 209,
+    "voter_roll_count": NaN,
+    "form20_electors": 1170,
+    "form20_turnout": 514,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 210,
+    "ps_number": 210,
+    "voter_roll_count": NaN,
+    "form20_electors": 1182,
+    "form20_turnout": 569,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 211,
+    "ps_number": 211,
+    "voter_roll_count": NaN,
+    "form20_electors": 1139,
+    "form20_turnout": 646,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 212,
+    "ps_number": 212,
+    "voter_roll_count": NaN,
+    "form20_electors": 1152,
+    "form20_turnout": 578,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 213,
+    "ps_number": 213,
+    "voter_roll_count": NaN,
+    "form20_electors": 1176,
+    "form20_turnout": 523,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 214,
+    "ps_number": 214,
+    "voter_roll_count": NaN,
+    "form20_electors": 1099,
+    "form20_turnout": 532,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 215,
+    "ps_number": 215,
+    "voter_roll_count": NaN,
+    "form20_electors": 1216,
+    "form20_turnout": 629,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 216,
+    "ps_number": 216,
+    "voter_roll_count": NaN,
+    "form20_electors": 977,
+    "form20_turnout": 487,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 217,
+    "ps_number": 217,
+    "voter_roll_count": NaN,
+    "form20_electors": 1166,
+    "form20_turnout": 588,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 218,
+    "ps_number": 218,
+    "voter_roll_count": NaN,
+    "form20_electors": 1144,
+    "form20_turnout": 564,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 219,
+    "ps_number": 219,
+    "voter_roll_count": NaN,
+    "form20_electors": 1127,
+    "form20_turnout": 610,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 220,
+    "ps_number": 220,
+    "voter_roll_count": NaN,
+    "form20_electors": 1136,
+    "form20_turnout": 511,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 221,
+    "ps_number": 221,
+    "voter_roll_count": NaN,
+    "form20_electors": 1145,
+    "form20_turnout": 497,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 222,
+    "ps_number": 222,
+    "voter_roll_count": NaN,
+    "form20_electors": 1216,
+    "form20_turnout": 596,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 223,
+    "ps_number": 223,
+    "voter_roll_count": NaN,
+    "form20_electors": 1218,
+    "form20_turnout": 547,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 224,
+    "ps_number": 224,
+    "voter_roll_count": NaN,
+    "form20_electors": 1134,
+    "form20_turnout": 638,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 225,
+    "ps_number": 225,
+    "voter_roll_count": NaN,
+    "form20_electors": 1247,
+    "form20_turnout": 572,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 226,
+    "ps_number": 226,
+    "voter_roll_count": NaN,
+    "form20_electors": 1156,
+    "form20_turnout": 467,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 227,
+    "ps_number": 227,
+    "voter_roll_count": NaN,
+    "form20_electors": 1126,
+    "form20_turnout": 540,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 228,
+    "ps_number": 228,
+    "voter_roll_count": NaN,
+    "form20_electors": 1208,
+    "form20_turnout": 704,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 229,
+    "ps_number": 229,
+    "voter_roll_count": NaN,
+    "form20_electors": 1190,
+    "form20_turnout": 658,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 230,
+    "ps_number": 230,
+    "voter_roll_count": NaN,
+    "form20_electors": 1126,
+    "form20_turnout": 722,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 231,
+    "ps_number": 231,
+    "voter_roll_count": NaN,
+    "form20_electors": 1101,
+    "form20_turnout": 598,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 232,
+    "ps_number": 232,
+    "voter_roll_count": NaN,
+    "form20_electors": 1153,
+    "form20_turnout": 694,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 233,
+    "ps_number": 233,
+    "voter_roll_count": NaN,
+    "form20_electors": 834,
+    "form20_turnout": 505,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 234,
+    "ps_number": 234,
+    "voter_roll_count": NaN,
+    "form20_electors": 914,
+    "form20_turnout": 442,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 235,
+    "ps_number": 235,
+    "voter_roll_count": NaN,
+    "form20_electors": 811,
+    "form20_turnout": 399,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 236,
+    "ps_number": 236,
+    "voter_roll_count": NaN,
+    "form20_electors": 1163,
+    "form20_turnout": 579,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 237,
+    "ps_number": 237,
+    "voter_roll_count": NaN,
+    "form20_electors": 876,
+    "form20_turnout": 427,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 238,
+    "ps_number": 238,
+    "voter_roll_count": NaN,
+    "form20_electors": 996,
+    "form20_turnout": 381,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 239,
+    "ps_number": 239,
+    "voter_roll_count": NaN,
+    "form20_electors": 1068,
+    "form20_turnout": 588,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 240,
+    "ps_number": 240,
+    "voter_roll_count": NaN,
+    "form20_electors": 1115,
+    "form20_turnout": 552,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 241,
+    "ps_number": 241,
+    "voter_roll_count": NaN,
+    "form20_electors": 1176,
+    "form20_turnout": 543,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 242,
+    "ps_number": 242,
+    "voter_roll_count": NaN,
+    "form20_electors": 1065,
+    "form20_turnout": 570,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 243,
+    "ps_number": 243,
+    "voter_roll_count": NaN,
+    "form20_electors": 810,
+    "form20_turnout": 537,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 244,
+    "ps_number": 244,
+    "voter_roll_count": NaN,
+    "form20_electors": 1048,
+    "form20_turnout": 702,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 245,
+    "ps_number": 245,
+    "voter_roll_count": NaN,
+    "form20_electors": 1026,
+    "form20_turnout": 602,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 246,
+    "ps_number": 246,
+    "voter_roll_count": NaN,
+    "form20_electors": 980,
+    "form20_turnout": 571,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 247,
+    "ps_number": 247,
+    "voter_roll_count": NaN,
+    "form20_electors": 958,
+    "form20_turnout": 579,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 248,
+    "ps_number": 248,
+    "voter_roll_count": NaN,
+    "form20_electors": 787,
+    "form20_turnout": 413,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 249,
+    "ps_number": 249,
+    "voter_roll_count": NaN,
+    "form20_electors": 834,
+    "form20_turnout": 447,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 250,
+    "ps_number": 250,
+    "voter_roll_count": NaN,
+    "form20_electors": 660,
+    "form20_turnout": 336,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 251,
+    "ps_number": 251,
+    "voter_roll_count": NaN,
+    "form20_electors": 782,
+    "form20_turnout": 467,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 252,
+    "ps_number": 252,
+    "voter_roll_count": NaN,
+    "form20_electors": 887,
+    "form20_turnout": 509,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 253,
+    "ps_number": 253,
+    "voter_roll_count": NaN,
+    "form20_electors": 1137,
+    "form20_turnout": 658,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 254,
+    "ps_number": 254,
+    "voter_roll_count": NaN,
+    "form20_electors": 1133,
+    "form20_turnout": 709,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 255,
+    "ps_number": 255,
+    "voter_roll_count": NaN,
+    "form20_electors": 854,
+    "form20_turnout": 423,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 256,
+    "ps_number": 256,
+    "voter_roll_count": NaN,
+    "form20_electors": 974,
+    "form20_turnout": 473,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 257,
+    "ps_number": 257,
+    "voter_roll_count": NaN,
+    "form20_electors": 1119,
+    "form20_turnout": 678,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 258,
+    "ps_number": 258,
+    "voter_roll_count": NaN,
+    "form20_electors": 1141,
+    "form20_turnout": 635,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 259,
+    "ps_number": 259,
+    "voter_roll_count": NaN,
+    "form20_electors": 1104,
+    "form20_turnout": 521,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 260,
+    "ps_number": 260,
+    "voter_roll_count": NaN,
+    "form20_electors": 1169,
+    "form20_turnout": 621,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 261,
+    "ps_number": 261,
+    "voter_roll_count": NaN,
+    "form20_electors": 1076,
+    "form20_turnout": 585,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 262,
+    "ps_number": 262,
+    "voter_roll_count": NaN,
+    "form20_electors": 1108,
+    "form20_turnout": 608,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 263,
+    "ps_number": 263,
+    "voter_roll_count": NaN,
+    "form20_electors": 1043,
+    "form20_turnout": 528,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 264,
+    "ps_number": 264,
+    "voter_roll_count": NaN,
+    "form20_electors": 998,
+    "form20_turnout": 573,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 265,
+    "ps_number": 265,
+    "voter_roll_count": NaN,
+    "form20_electors": 1204,
+    "form20_turnout": 648,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 266,
+    "ps_number": 266,
+    "voter_roll_count": NaN,
+    "form20_electors": 956,
+    "form20_turnout": 525,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 267,
+    "ps_number": 267,
+    "voter_roll_count": NaN,
+    "form20_electors": 1016,
+    "form20_turnout": 456,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 268,
+    "ps_number": 268,
+    "voter_roll_count": NaN,
+    "form20_electors": 960,
+    "form20_turnout": 512,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 269,
+    "ps_number": 269,
+    "voter_roll_count": NaN,
+    "form20_electors": 946,
+    "form20_turnout": 498,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 270,
+    "ps_number": 270,
+    "voter_roll_count": NaN,
+    "form20_electors": 1091,
+    "form20_turnout": 565,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 271,
+    "ps_number": 271,
+    "voter_roll_count": NaN,
+    "form20_electors": 602,
+    "form20_turnout": 282,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 272,
+    "ps_number": 272,
+    "voter_roll_count": NaN,
+    "form20_electors": 726,
+    "form20_turnout": 471,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 273,
+    "ps_number": 273,
+    "voter_roll_count": NaN,
+    "form20_electors": 1150,
+    "form20_turnout": 613,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 274,
+    "ps_number": 274,
+    "voter_roll_count": NaN,
+    "form20_electors": 791,
+    "form20_turnout": 363,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 275,
+    "ps_number": 275,
+    "voter_roll_count": NaN,
+    "form20_electors": 1207,
+    "form20_turnout": 641,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 276,
+    "ps_number": 276,
+    "voter_roll_count": NaN,
+    "form20_electors": 766,
+    "form20_turnout": 429,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 277,
+    "ps_number": 277,
+    "voter_roll_count": NaN,
+    "form20_electors": 992,
+    "form20_turnout": 495,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 278,
+    "ps_number": 278,
+    "voter_roll_count": NaN,
+    "form20_electors": 957,
+    "form20_turnout": 486,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 279,
+    "ps_number": 279,
+    "voter_roll_count": NaN,
+    "form20_electors": 557,
+    "form20_turnout": 287,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 280,
+    "ps_number": 280,
+    "voter_roll_count": NaN,
+    "form20_electors": 779,
+    "form20_turnout": 448,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 281,
+    "ps_number": 281,
+    "voter_roll_count": NaN,
+    "form20_electors": 862,
+    "form20_turnout": 521,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 282,
+    "ps_number": 282,
+    "voter_roll_count": NaN,
+    "form20_electors": 903,
+    "form20_turnout": 555,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 283,
+    "ps_number": 283,
+    "voter_roll_count": NaN,
+    "form20_electors": 892,
+    "form20_turnout": 477,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 284,
+    "ps_number": 284,
+    "voter_roll_count": NaN,
+    "form20_electors": 1093,
+    "form20_turnout": 626,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 285,
+    "ps_number": 285,
+    "voter_roll_count": NaN,
+    "form20_electors": 1015,
+    "form20_turnout": 609,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 286,
+    "ps_number": 286,
+    "voter_roll_count": NaN,
+    "form20_electors": 810,
+    "form20_turnout": 459,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 287,
+    "ps_number": 287,
+    "voter_roll_count": NaN,
+    "form20_electors": 826,
+    "form20_turnout": 426,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 288,
+    "ps_number": 288,
+    "voter_roll_count": NaN,
+    "form20_electors": 756,
+    "form20_turnout": 416,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 289,
+    "ps_number": 289,
+    "voter_roll_count": NaN,
+    "form20_electors": 594,
+    "form20_turnout": 346,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 290,
+    "ps_number": 290,
+    "voter_roll_count": NaN,
+    "form20_electors": 834,
+    "form20_turnout": 465,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 291,
+    "ps_number": 291,
+    "voter_roll_count": NaN,
+    "form20_electors": 1019,
+    "form20_turnout": 436,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 292,
+    "ps_number": 292,
+    "voter_roll_count": NaN,
+    "form20_electors": 718,
+    "form20_turnout": 350,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 293,
+    "ps_number": 293,
+    "voter_roll_count": NaN,
+    "form20_electors": 781,
+    "form20_turnout": 454,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 294,
+    "ps_number": 294,
+    "voter_roll_count": NaN,
+    "form20_electors": 528,
+    "form20_turnout": 236,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 295,
+    "ps_number": 295,
+    "voter_roll_count": NaN,
+    "form20_electors": 1065,
+    "form20_turnout": 615,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 296,
+    "ps_number": 296,
+    "voter_roll_count": NaN,
+    "form20_electors": 766,
+    "form20_turnout": 407,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 297,
+    "ps_number": 297,
+    "voter_roll_count": NaN,
+    "form20_electors": 635,
+    "form20_turnout": 476,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 298,
+    "ps_number": 298,
+    "voter_roll_count": NaN,
+    "form20_electors": 1015,
+    "form20_turnout": 514,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 299,
+    "ps_number": 299,
+    "voter_roll_count": NaN,
+    "form20_electors": 499,
+    "form20_turnout": 306,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 300,
+    "ps_number": 300,
+    "voter_roll_count": NaN,
+    "form20_electors": 909,
+    "form20_turnout": 658,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 301,
+    "ps_number": 301,
+    "voter_roll_count": NaN,
+    "form20_electors": 860,
+    "form20_turnout": 343,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 302,
+    "ps_number": 302,
+    "voter_roll_count": NaN,
+    "form20_electors": 1045,
+    "form20_turnout": 580,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 303,
+    "ps_number": 303,
+    "voter_roll_count": NaN,
+    "form20_electors": 1122,
+    "form20_turnout": 599,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 304,
+    "ps_number": 304,
+    "voter_roll_count": NaN,
+    "form20_electors": 761,
+    "form20_turnout": 431,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 305,
+    "ps_number": 305,
+    "voter_roll_count": NaN,
+    "form20_electors": 617,
+    "form20_turnout": 422,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 306,
+    "ps_number": 306,
+    "voter_roll_count": NaN,
+    "form20_electors": 571,
+    "form20_turnout": 330,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 307,
+    "ps_number": 307,
+    "voter_roll_count": NaN,
+    "form20_electors": 959,
+    "form20_turnout": 666,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 308,
+    "ps_number": 308,
+    "voter_roll_count": NaN,
+    "form20_electors": 617,
+    "form20_turnout": 405,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 309,
+    "ps_number": 309,
+    "voter_roll_count": NaN,
+    "form20_electors": 734,
+    "form20_turnout": 429,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 310,
+    "ps_number": 310,
+    "voter_roll_count": NaN,
+    "form20_electors": 908,
+    "form20_turnout": 475,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 311,
+    "ps_number": 311,
+    "voter_roll_count": NaN,
+    "form20_electors": 1088,
+    "form20_turnout": 655,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 312,
+    "ps_number": 312,
+    "voter_roll_count": NaN,
+    "form20_electors": 1127,
+    "form20_turnout": 649,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 313,
+    "ps_number": 313,
+    "voter_roll_count": NaN,
+    "form20_electors": 875,
+    "form20_turnout": 554,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 314,
+    "ps_number": 314,
+    "voter_roll_count": NaN,
+    "form20_electors": 744,
+    "form20_turnout": 429,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 315,
+    "ps_number": 315,
+    "voter_roll_count": NaN,
+    "form20_electors": 879,
+    "form20_turnout": 424,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 316,
+    "ps_number": 316,
+    "voter_roll_count": NaN,
+    "form20_electors": 571,
+    "form20_turnout": 313,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 317,
+    "ps_number": 317,
+    "voter_roll_count": NaN,
+    "form20_electors": 819,
+    "form20_turnout": 503,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 318,
+    "ps_number": 318,
+    "voter_roll_count": NaN,
+    "form20_electors": 920,
+    "form20_turnout": 574,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 319,
+    "ps_number": 319,
+    "voter_roll_count": NaN,
+    "form20_electors": 820,
+    "form20_turnout": 418,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 320,
+    "ps_number": 320,
+    "voter_roll_count": NaN,
+    "form20_electors": 776,
+    "form20_turnout": 440,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 321,
+    "ps_number": 321,
+    "voter_roll_count": NaN,
+    "form20_electors": 1038,
+    "form20_turnout": 518,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 322,
+    "ps_number": 322,
+    "voter_roll_count": NaN,
+    "form20_electors": 1051,
+    "form20_turnout": 599,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 323,
+    "ps_number": 323,
+    "voter_roll_count": NaN,
+    "form20_electors": 1031,
+    "form20_turnout": 599,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 324,
+    "ps_number": 324,
+    "voter_roll_count": NaN,
+    "form20_electors": 875,
+    "form20_turnout": 499,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 325,
+    "ps_number": 325,
+    "voter_roll_count": NaN,
+    "form20_electors": 818,
+    "form20_turnout": 486,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 326,
+    "ps_number": 326,
+    "voter_roll_count": NaN,
+    "form20_electors": 1145,
+    "form20_turnout": 734,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 327,
+    "ps_number": 327,
+    "voter_roll_count": NaN,
+    "form20_electors": 1225,
+    "form20_turnout": 737,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 328,
+    "ps_number": 328,
+    "voter_roll_count": NaN,
+    "form20_electors": 1135,
+    "form20_turnout": 688,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 329,
+    "ps_number": 329,
+    "voter_roll_count": NaN,
+    "form20_electors": 726,
+    "form20_turnout": 459,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 330,
+    "ps_number": 330,
+    "voter_roll_count": NaN,
+    "form20_electors": 968,
+    "form20_turnout": 577,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 331,
+    "ps_number": 331,
+    "voter_roll_count": NaN,
+    "form20_electors": 1058,
+    "form20_turnout": 582,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 332,
+    "ps_number": 332,
+    "voter_roll_count": NaN,
+    "form20_electors": 736,
+    "form20_turnout": 357,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 333,
+    "ps_number": 333,
+    "voter_roll_count": NaN,
+    "form20_electors": 1153,
+    "form20_turnout": 504,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 334,
+    "ps_number": 334,
+    "voter_roll_count": NaN,
+    "form20_electors": 1148,
+    "form20_turnout": 595,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 335,
+    "ps_number": 335,
+    "voter_roll_count": NaN,
+    "form20_electors": 1146,
+    "form20_turnout": 561,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 336,
+    "ps_number": 336,
+    "voter_roll_count": NaN,
+    "form20_electors": 1156,
+    "form20_turnout": 617,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 337,
+    "ps_number": 337,
+    "voter_roll_count": NaN,
+    "form20_electors": 1060,
+    "form20_turnout": 506,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 338,
+    "ps_number": 338,
+    "voter_roll_count": NaN,
+    "form20_electors": 1098,
+    "form20_turnout": 524,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 339,
+    "ps_number": 339,
+    "voter_roll_count": NaN,
+    "form20_electors": 956,
+    "form20_turnout": 358,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 340,
+    "ps_number": 340,
+    "voter_roll_count": NaN,
+    "form20_electors": 790,
+    "form20_turnout": 405,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 341,
+    "ps_number": 341,
+    "voter_roll_count": NaN,
+    "form20_electors": 803,
+    "form20_turnout": 502,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 342,
+    "ps_number": 342,
+    "voter_roll_count": NaN,
+    "form20_electors": 788,
+    "form20_turnout": 407,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 343,
+    "ps_number": 343,
+    "voter_roll_count": NaN,
+    "form20_electors": 755,
+    "form20_turnout": 304,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 344,
+    "ps_number": 344,
+    "voter_roll_count": NaN,
+    "form20_electors": 719,
+    "form20_turnout": 423,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 345,
+    "ps_number": 345,
+    "voter_roll_count": NaN,
+    "form20_electors": 919,
+    "form20_turnout": 315,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 346,
+    "ps_number": 346,
+    "voter_roll_count": NaN,
+    "form20_electors": 909,
+    "form20_turnout": 394,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 347,
+    "ps_number": 347,
+    "voter_roll_count": NaN,
+    "form20_electors": 914,
+    "form20_turnout": 541,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 348,
+    "ps_number": 348,
+    "voter_roll_count": NaN,
+    "form20_electors": 930,
+    "form20_turnout": 477,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 349,
+    "ps_number": 349,
+    "voter_roll_count": NaN,
+    "form20_electors": 968,
+    "form20_turnout": 498,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 350,
+    "ps_number": 350,
+    "voter_roll_count": NaN,
+    "form20_electors": 841,
+    "form20_turnout": 379,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 351,
+    "ps_number": 351,
+    "voter_roll_count": NaN,
+    "form20_electors": 808,
+    "form20_turnout": 410,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 352,
+    "ps_number": 352,
+    "voter_roll_count": NaN,
+    "form20_electors": 956,
+    "form20_turnout": 626,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 353,
+    "ps_number": 353,
+    "voter_roll_count": NaN,
+    "form20_electors": 836,
+    "form20_turnout": 490,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 354,
+    "ps_number": 354,
+    "voter_roll_count": NaN,
+    "form20_electors": 905,
+    "form20_turnout": 477,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 355,
+    "ps_number": 355,
+    "voter_roll_count": NaN,
+    "form20_electors": 1077,
+    "form20_turnout": 531,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 356,
+    "ps_number": 356,
+    "voter_roll_count": NaN,
+    "form20_electors": 1093,
+    "form20_turnout": 486,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 357,
+    "ps_number": 357,
+    "voter_roll_count": NaN,
+    "form20_electors": 1087,
+    "form20_turnout": 557,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 358,
+    "ps_number": 358,
+    "voter_roll_count": NaN,
+    "form20_electors": 1140,
+    "form20_turnout": 600,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 359,
+    "ps_number": 359,
+    "voter_roll_count": NaN,
+    "form20_electors": 974,
+    "form20_turnout": 449,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 360,
+    "ps_number": 360,
+    "voter_roll_count": NaN,
+    "form20_electors": 1186,
+    "form20_turnout": 680,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 361,
+    "ps_number": 361,
+    "voter_roll_count": NaN,
+    "form20_electors": 1165,
+    "form20_turnout": 675,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 362,
+    "ps_number": 362,
+    "voter_roll_count": NaN,
+    "form20_electors": 1122,
+    "form20_turnout": 618,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 363,
+    "ps_number": 363,
+    "voter_roll_count": NaN,
+    "form20_electors": 1063,
+    "form20_turnout": 577,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 364,
+    "ps_number": 364,
+    "voter_roll_count": NaN,
+    "form20_electors": 1063,
+    "form20_turnout": 645,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 365,
+    "ps_number": 365,
+    "voter_roll_count": NaN,
+    "form20_electors": 977,
+    "form20_turnout": 471,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 366,
+    "ps_number": 366,
+    "voter_roll_count": NaN,
+    "form20_electors": 1072,
+    "form20_turnout": 535,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 367,
+    "ps_number": 367,
+    "voter_roll_count": NaN,
+    "form20_electors": 1000,
+    "form20_turnout": 468,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 368,
+    "ps_number": 368,
+    "voter_roll_count": NaN,
+    "form20_electors": 1195,
+    "form20_turnout": 616,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 369,
+    "ps_number": 369,
+    "voter_roll_count": NaN,
+    "form20_electors": 1136,
+    "form20_turnout": 578,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 370,
+    "ps_number": 370,
+    "voter_roll_count": NaN,
+    "form20_electors": 1039,
+    "form20_turnout": 399,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 371,
+    "ps_number": 371,
+    "voter_roll_count": NaN,
+    "form20_electors": 1111,
+    "form20_turnout": 549,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 372,
+    "ps_number": 372,
+    "voter_roll_count": NaN,
+    "form20_electors": 1139,
+    "form20_turnout": 597,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 373,
+    "ps_number": 373,
+    "voter_roll_count": NaN,
+    "form20_electors": 884,
+    "form20_turnout": 433,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 374,
+    "ps_number": 374,
+    "voter_roll_count": NaN,
+    "form20_electors": 937,
+    "form20_turnout": 510,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 375,
+    "ps_number": 375,
+    "voter_roll_count": NaN,
+    "form20_electors": 942,
+    "form20_turnout": 451,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 376,
+    "ps_number": 376,
+    "voter_roll_count": NaN,
+    "form20_electors": 866,
+    "form20_turnout": 447,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 377,
+    "ps_number": 377,
+    "voter_roll_count": NaN,
+    "form20_electors": 733,
+    "form20_turnout": 388,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 378,
+    "ps_number": 378,
+    "voter_roll_count": NaN,
+    "form20_electors": 709,
+    "form20_turnout": 351,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 379,
+    "ps_number": 379,
+    "voter_roll_count": NaN,
+    "form20_electors": 598,
+    "form20_turnout": 343,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 380,
+    "ps_number": 380,
+    "voter_roll_count": NaN,
+    "form20_electors": 698,
+    "form20_turnout": 307,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 381,
+    "ps_number": 381,
+    "voter_roll_count": NaN,
+    "form20_electors": 1052,
+    "form20_turnout": 507,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 382,
+    "ps_number": 382,
+    "voter_roll_count": NaN,
+    "form20_electors": 971,
+    "form20_turnout": 436,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 383,
+    "ps_number": 383,
+    "voter_roll_count": NaN,
+    "form20_electors": 983,
+    "form20_turnout": 372,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 384,
+    "ps_number": 384,
+    "voter_roll_count": NaN,
+    "form20_electors": 837,
+    "form20_turnout": 256,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 385,
+    "ps_number": 385,
+    "voter_roll_count": NaN,
+    "form20_electors": 954,
+    "form20_turnout": 303,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 386,
+    "ps_number": 386,
+    "voter_roll_count": NaN,
+    "form20_electors": 787,
+    "form20_turnout": 236,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 387,
+    "ps_number": 387,
+    "voter_roll_count": NaN,
+    "form20_electors": 767,
+    "form20_turnout": 201,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 388,
+    "ps_number": 388,
+    "voter_roll_count": NaN,
+    "form20_electors": 994,
+    "form20_turnout": 411,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 389,
+    "ps_number": 389,
+    "voter_roll_count": NaN,
+    "form20_electors": 948,
+    "form20_turnout": 268,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 390,
+    "ps_number": 390,
+    "voter_roll_count": NaN,
+    "form20_electors": 929,
+    "form20_turnout": 291,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 391,
+    "ps_number": 391,
+    "voter_roll_count": NaN,
+    "form20_electors": 696,
+    "form20_turnout": 236,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 392,
+    "ps_number": 392,
+    "voter_roll_count": NaN,
+    "form20_electors": 612,
+    "form20_turnout": 273,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 393,
+    "ps_number": 393,
+    "voter_roll_count": NaN,
+    "form20_electors": 958,
+    "form20_turnout": 300,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 394,
+    "ps_number": 394,
+    "voter_roll_count": NaN,
+    "form20_electors": 1036,
+    "form20_turnout": 533,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 395,
+    "ps_number": 395,
+    "voter_roll_count": NaN,
+    "form20_electors": 532,
+    "form20_turnout": 277,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 396,
+    "ps_number": 396,
+    "voter_roll_count": NaN,
+    "form20_electors": 1020,
+    "form20_turnout": 452,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 397,
+    "ps_number": 397,
+    "voter_roll_count": NaN,
+    "form20_electors": 970,
+    "form20_turnout": 471,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 398,
+    "ps_number": 398,
+    "voter_roll_count": NaN,
+    "form20_electors": 732,
+    "form20_turnout": 356,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 399,
+    "ps_number": 399,
+    "voter_roll_count": NaN,
+    "form20_electors": 1040,
+    "form20_turnout": 524,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 400,
+    "ps_number": 400,
+    "voter_roll_count": NaN,
+    "form20_electors": 1075,
+    "form20_turnout": 547,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 401,
+    "ps_number": 401,
+    "voter_roll_count": NaN,
+    "form20_electors": 1103,
+    "form20_turnout": 483,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 402,
+    "ps_number": 402,
+    "voter_roll_count": NaN,
+    "form20_electors": 1119,
+    "form20_turnout": 531,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 403,
+    "ps_number": 403,
+    "voter_roll_count": NaN,
+    "form20_electors": 827,
+    "form20_turnout": 343,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 404,
+    "ps_number": 404,
+    "voter_roll_count": NaN,
+    "form20_electors": 1074,
+    "form20_turnout": 531,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 405,
+    "ps_number": 405,
+    "voter_roll_count": NaN,
+    "form20_electors": 1108,
+    "form20_turnout": 467,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 406,
+    "ps_number": 406,
+    "voter_roll_count": NaN,
+    "form20_electors": 895,
+    "form20_turnout": 472,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 407,
+    "ps_number": 407,
+    "voter_roll_count": NaN,
+    "form20_electors": 821,
+    "form20_turnout": 383,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 408,
+    "ps_number": 408,
+    "voter_roll_count": NaN,
+    "form20_electors": 1214,
+    "form20_turnout": 708,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 409,
+    "ps_number": 409,
+    "voter_roll_count": NaN,
+    "form20_electors": 1110,
+    "form20_turnout": 589,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 410,
+    "ps_number": 410,
+    "voter_roll_count": NaN,
+    "form20_electors": 1154,
+    "form20_turnout": 590,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 411,
+    "ps_number": 411,
+    "voter_roll_count": NaN,
+    "form20_electors": 1037,
+    "form20_turnout": 541,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 412,
+    "ps_number": 412,
+    "voter_roll_count": NaN,
+    "form20_electors": 978,
+    "form20_turnout": 449,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 413,
+    "ps_number": 413,
+    "voter_roll_count": NaN,
+    "form20_electors": 925,
+    "form20_turnout": 422,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 414,
+    "ps_number": 414,
+    "voter_roll_count": NaN,
+    "form20_electors": 910,
+    "form20_turnout": 554,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 415,
+    "ps_number": 415,
+    "voter_roll_count": NaN,
+    "form20_electors": 964,
+    "form20_turnout": 403,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 416,
+    "ps_number": 416,
+    "voter_roll_count": NaN,
+    "form20_electors": 1191,
+    "form20_turnout": 563,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 417,
+    "ps_number": 417,
+    "voter_roll_count": NaN,
+    "form20_electors": 1119,
+    "form20_turnout": 536,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 418,
+    "ps_number": 418,
+    "voter_roll_count": NaN,
+    "form20_electors": 1109,
+    "form20_turnout": 590,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 419,
+    "ps_number": 419,
+    "voter_roll_count": NaN,
+    "form20_electors": 1172,
+    "form20_turnout": 763,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 420,
+    "ps_number": 420,
+    "voter_roll_count": NaN,
+    "form20_electors": 1190,
+    "form20_turnout": 551,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 421,
+    "ps_number": 421,
+    "voter_roll_count": NaN,
+    "form20_electors": 1202,
+    "form20_turnout": 628,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 422,
+    "ps_number": 422,
+    "voter_roll_count": NaN,
+    "form20_electors": 1168,
+    "form20_turnout": 531,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 423,
+    "ps_number": 423,
+    "voter_roll_count": NaN,
+    "form20_electors": 1162,
+    "form20_turnout": 585,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 424,
+    "ps_number": 424,
+    "voter_roll_count": NaN,
+    "form20_electors": 1175,
+    "form20_turnout": 590,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 425,
+    "ps_number": 425,
+    "voter_roll_count": NaN,
+    "form20_electors": 973,
+    "form20_turnout": 507,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 426,
+    "ps_number": 426,
+    "voter_roll_count": NaN,
+    "form20_electors": 1103,
+    "form20_turnout": 610,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 427,
+    "ps_number": 427,
+    "voter_roll_count": NaN,
+    "form20_electors": 1105,
+    "form20_turnout": 528,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 428,
+    "ps_number": 428,
+    "voter_roll_count": NaN,
+    "form20_electors": 1098,
+    "form20_turnout": 534,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 429,
+    "ps_number": 429,
+    "voter_roll_count": NaN,
+    "form20_electors": 936,
+    "form20_turnout": 563,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 430,
+    "ps_number": 430,
+    "voter_roll_count": NaN,
+    "form20_electors": 1146,
+    "form20_turnout": 563,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 431,
+    "ps_number": 431,
+    "voter_roll_count": NaN,
+    "form20_electors": 987,
+    "form20_turnout": 532,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 432,
+    "ps_number": 432,
+    "voter_roll_count": NaN,
+    "form20_electors": 884,
+    "form20_turnout": 394,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 433,
+    "ps_number": 433,
+    "voter_roll_count": NaN,
+    "form20_electors": 860,
+    "form20_turnout": 425,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 434,
+    "ps_number": 434,
+    "voter_roll_count": NaN,
+    "form20_electors": 793,
+    "form20_turnout": 448,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 435,
+    "ps_number": 435,
+    "voter_roll_count": NaN,
+    "form20_electors": 1136,
+    "form20_turnout": 544,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 436,
+    "ps_number": 436,
+    "voter_roll_count": NaN,
+    "form20_electors": 663,
+    "form20_turnout": 357,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 437,
+    "ps_number": 437,
+    "voter_roll_count": NaN,
+    "form20_electors": 1086,
+    "form20_turnout": 741,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 438,
+    "ps_number": 438,
+    "voter_roll_count": NaN,
+    "form20_electors": 1027,
+    "form20_turnout": 668,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 439,
+    "ps_number": 439,
+    "voter_roll_count": NaN,
+    "form20_electors": 970,
+    "form20_turnout": 619,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 440,
+    "ps_number": 440,
+    "voter_roll_count": NaN,
+    "form20_electors": 499,
+    "form20_turnout": 309,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 441,
+    "ps_number": 441,
+    "voter_roll_count": NaN,
+    "form20_electors": 1210,
+    "form20_turnout": 544,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 442,
+    "ps_number": 442,
+    "voter_roll_count": NaN,
+    "form20_electors": 1129,
+    "form20_turnout": 664,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 443,
+    "ps_number": 443,
+    "voter_roll_count": NaN,
+    "form20_electors": 936,
+    "form20_turnout": 441,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 444,
+    "ps_number": 444,
+    "voter_roll_count": NaN,
+    "form20_electors": 896,
+    "form20_turnout": 393,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 445,
+    "ps_number": 445,
+    "voter_roll_count": NaN,
+    "form20_electors": 1178,
+    "form20_turnout": 507,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 446,
+    "ps_number": 446,
+    "voter_roll_count": NaN,
+    "form20_electors": 1045,
+    "form20_turnout": 537,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 447,
+    "ps_number": 447,
+    "voter_roll_count": NaN,
+    "form20_electors": 1129,
+    "form20_turnout": 722,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 448,
+    "ps_number": 448,
+    "voter_roll_count": NaN,
+    "form20_electors": 1175,
+    "form20_turnout": 551,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 449,
+    "ps_number": 449,
+    "voter_roll_count": NaN,
+    "form20_electors": 1168,
+    "form20_turnout": 727,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 450,
+    "ps_number": 450,
+    "voter_roll_count": NaN,
+    "form20_electors": 1104,
+    "form20_turnout": 654,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 451,
+    "ps_number": 451,
+    "voter_roll_count": NaN,
+    "form20_electors": 1011,
+    "form20_turnout": 591,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 452,
+    "ps_number": 452,
+    "voter_roll_count": NaN,
+    "form20_electors": 1094,
+    "form20_turnout": 690,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 453,
+    "ps_number": 453,
+    "voter_roll_count": NaN,
+    "form20_electors": 926,
+    "form20_turnout": 494,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 454,
+    "ps_number": 454,
+    "voter_roll_count": NaN,
+    "form20_electors": 1004,
+    "form20_turnout": 590,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 455,
+    "ps_number": 455,
+    "voter_roll_count": NaN,
+    "form20_electors": 1102,
+    "form20_turnout": 589,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 456,
+    "ps_number": 456,
+    "voter_roll_count": NaN,
+    "form20_electors": 979,
+    "form20_turnout": 625,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 457,
+    "ps_number": 457,
+    "voter_roll_count": NaN,
+    "form20_electors": 820,
+    "form20_turnout": 437,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 458,
+    "ps_number": 458,
+    "voter_roll_count": NaN,
+    "form20_electors": 783,
+    "form20_turnout": 431,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 459,
+    "ps_number": 459,
+    "voter_roll_count": NaN,
+    "form20_electors": 1086,
+    "form20_turnout": 678,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 460,
+    "ps_number": 460,
+    "voter_roll_count": NaN,
+    "form20_electors": 1092,
+    "form20_turnout": 541,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 461,
+    "ps_number": 461,
+    "voter_roll_count": NaN,
+    "form20_electors": 1188,
+    "form20_turnout": 600,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 462,
+    "ps_number": 462,
+    "voter_roll_count": NaN,
+    "form20_electors": 1244,
+    "form20_turnout": 606,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 463,
+    "ps_number": 463,
+    "voter_roll_count": NaN,
+    "form20_electors": 877,
+    "form20_turnout": 421,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 464,
+    "ps_number": 464,
+    "voter_roll_count": NaN,
+    "form20_electors": 919,
+    "form20_turnout": 452,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 465,
+    "ps_number": 465,
+    "voter_roll_count": NaN,
+    "form20_electors": 662,
+    "form20_turnout": 339,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 466,
+    "ps_number": 466,
+    "voter_roll_count": NaN,
+    "form20_electors": 748,
+    "form20_turnout": 434,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 467,
+    "ps_number": 467,
+    "voter_roll_count": NaN,
+    "form20_electors": 1204,
+    "form20_turnout": 550,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 468,
+    "ps_number": 468,
+    "voter_roll_count": NaN,
+    "form20_electors": 1000,
+    "form20_turnout": 699,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 469,
+    "ps_number": 469,
+    "voter_roll_count": NaN,
+    "form20_electors": 619,
+    "form20_turnout": 379,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 470,
+    "ps_number": 470,
+    "voter_roll_count": NaN,
+    "form20_electors": 1056,
+    "form20_turnout": 507,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  },
+  {
+    "ac_number": 322,
+    "part_number": 471,
+    "ps_number": 471,
+    "voter_roll_count": NaN,
+    "form20_electors": 591,
+    "form20_turnout": 277,
+    "delta_pct": NaN,
+    "match_status": "NO_VOTER_ROLL"
+  }
+]
