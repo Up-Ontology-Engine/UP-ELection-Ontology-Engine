@@ -66,14 +66,14 @@ BASE_URL = "https://www.myneta.info"
 ASSEMBLY_CONSTITUENCIES: dict[tuple[int, int], tuple[str, str, str, int | None]] = {
     # ── 2022 Vidhan Sabha ──────────────────────────────────────────────────────
     (322, 2022): ("GKP_322", "Gorakhpur Urban", "uttarpradesh2022", 186),
-    (320, 2022): ("GKP_320", "Campierganj", "uttarpradesh2022", None),
-    (321, 2022): ("GKP_321", "Pipraich", "uttarpradesh2022", None),
-    (323, 2022): ("GKP_323", "Gorakhpur Rural", "uttarpradesh2022", None),
-    (324, 2022): ("GKP_324", "Sahajanwa", "uttarpradesh2022", None),
-    (325, 2022): ("GKP_325", "Khajani", "uttarpradesh2022", None),
-    (326, 2022): ("GKP_326", "Chauri-Chaura", "uttarpradesh2022", None),
-    (327, 2022): ("GKP_327", "Bansgaon", "uttarpradesh2022", None),
-    (328, 2022): ("GKP_328", "Chillupar", "uttarpradesh2022", None),
+    (320, 2022): ("GKP_320", "Caimpiyarganj", "uttarpradesh2022", 184),
+    (321, 2022): ("GKP_321", "Pipraich",       "uttarpradesh2022", 185),
+    (323, 2022): ("GKP_323", "Gorakhpur Rural","uttarpradesh2022", 187),
+    (324, 2022): ("GKP_324", "Sahajanwa",       "uttarpradesh2022", 188),
+    (325, 2022): ("GKP_325", "Khajani",         "uttarpradesh2022", 189),
+    (326, 2022): ("GKP_326", "Chauri-Chaura",   "uttarpradesh2022", 190),
+    (327, 2022): ("GKP_327", "Bansgaon",        "uttarpradesh2022", 191),
+    (328, 2022): ("GKP_328", "Chillupar",       "uttarpradesh2022", 192),
     # ── 2017 Vidhan Sabha — constituency_id confirmed 2026-05-21 ──────────────
     (322, 2017): ("GKP_322", "Gorakhpur Urban", "uttarpradesh2017", 362),
 }
