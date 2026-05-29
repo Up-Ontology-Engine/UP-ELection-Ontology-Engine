@@ -25,41 +25,6 @@ services:
           cpus: '2.0'
           memory: 2G
 
-  pgbouncer:
-    image: edoburu/pgbouncer:latest
-    container_name: gorakhpur_pgbouncer
-    environment:
-      - DATABASE_URL=postgres://up_election_app_user:app_password@postgres:5432/gorakhpur_db
-      - DB_USER=up_election_app_user
-      - DB_PASSWORD=app_password
-      - DB_HOST=postgres
-      - DB_PORT=5432
-      - DB_NAME=gorakhpur_db
-      - POOL_MODE=transaction
-      - MAX_CLIENT_CONN=1000
-      - DEFAULT_POOL_SIZE=20
-      - MIN_POOL_SIZE=5
-      - RESERVE_POOL_SIZE=5
-      - AUTH_TYPE=scram-sha-256
-      # Optimizations for high-throughput transaction pooling
-      - SERVER_IDLE_TIMEOUT=120
-      - SERVER_LIFETIME=1800
-      - CLIENT_IDLE_TIMEOUT=120
-      # 15s timeout prevents slow queries from holding PgBouncer slots during spikes
-      - QUERY_TIMEOUT=15
-      # SERVER_RESET_QUERY omitted: DEALLOCATE ALL is redundant when prepared_statement_cache_size=0
-      - LISTEN_PORT=6432
-    ports:
-      - "6432:6432"
-    depends_on:
-      postgres:
-        condition: service_healthy
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -h localhost -p 6432 -U up_election_app_user"]
-      interval: 30s
-      timeout: 5s
-      retries: 5
-
   neo4j:
     image: neo4j:5.19-community
     container_name: gorakhpur_neo4j
@@ -112,25 +77,26 @@ services:
       context: .
       dockerfile: docker/Dockerfile.backend
     container_name: gorakhpur_backend
-    user: "10001:10001"
     ports:
       - "8000:8000"
     env_file:
       - .env
     environment:
-      - DATABASE_URL=postgresql://up_election_app_user:app_password@pgbouncer:6432/gorakhpur_db
-      - POSTGRES_URL=postgresql://up_election_app_user:app_password@pgbouncer:6432/gorakhpur_db
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/gorakhpur_db
+      - POSTGRES_URL=postgresql://postgres:postgres@postgres:5432/gorakhpur_db
       - NEO4J_URI=bolt://neo4j:7687
       - REDIS_URL=redis://redis:6379/0
+    volumes:
+      - ./data:/app/data
+      - ./pipeline:/app/pipeline
+      - ./backend:/app/backend
     depends_on:
-      pgbouncer:
+      postgres:
         condition: service_healthy
       neo4j:
         condition: service_healthy
       redis:
         condition: service_healthy
-    volumes:
-      - ./backend:/app/backend
     deploy:
       resources:
         limits:
@@ -208,12 +174,12 @@ services:
     env_file:
       - .env
     environment:
-      - DATABASE_URL=postgresql://up_election_app_user:app_password@pgbouncer:6432/gorakhpur_db
-      - POSTGRES_URL=postgresql://up_election_app_user:app_password@pgbouncer:6432/gorakhpur_db
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/gorakhpur_db
+      - POSTGRES_URL=postgresql://postgres:postgres@postgres:5432/gorakhpur_db
       - NEO4J_URI=bolt://neo4j:7687
       - REDIS_URL=redis://redis:6379/0
     depends_on:
-      pgbouncer:
+      postgres:
         condition: service_healthy
       neo4j:
         condition: service_healthy
@@ -235,12 +201,12 @@ services:
     env_file:
       - .env
     environment:
-      - DATABASE_URL=postgresql://up_election_app_user:app_password@pgbouncer:6432/gorakhpur_db
-      - POSTGRES_URL=postgresql://up_election_app_user:app_password@pgbouncer:6432/gorakhpur_db
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/gorakhpur_db
+      - POSTGRES_URL=postgresql://postgres:postgres@postgres:5432/gorakhpur_db
       - NEO4J_URI=bolt://neo4j:7687
       - REDIS_URL=redis://redis:6379/0
     depends_on:
-      pgbouncer:
+      postgres:
         condition: service_healthy
       neo4j:
         condition: service_healthy
@@ -293,12 +259,12 @@ services:
     env_file:
       - .env
     environment:
-      - DATABASE_URL=postgresql://up_election_app_user:app_password@pgbouncer:6432/gorakhpur_db
-      - POSTGRES_URL=postgresql://up_election_app_user:app_password@pgbouncer:6432/gorakhpur_db
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/gorakhpur_db
+      - POSTGRES_URL=postgresql://postgres:postgres@postgres:5432/gorakhpur_db
       - NEO4J_URI=bolt://neo4j:7687
       - REDIS_URL=redis://redis:6379/0
     depends_on:
-      pgbouncer:
+      postgres:
         condition: service_healthy
       neo4j:
         condition: service_healthy
