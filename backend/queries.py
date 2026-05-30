@@ -88,9 +88,13 @@ def get_booths_for_ac(ac_id: str) -> list[dict]:
             LEFT JOIN LATERAL (
                 SELECT * FROM booth_metrics
                 WHERE booth_id = b.booth_id
-                ORDER BY window_start DESC LIMIT 1
+                ORDER BY
+                    CASE WHEN top_issue IS NOT NULL AND top_issue != '' THEN 0 ELSE 1 END,
+                    window_start DESC
+                LIMIT 1
             ) bm ON TRUE
             WHERE b.ac_id = :ac_id
+              AND b.booth_id NOT LIKE '%_TOTAL'
             ORDER BY b.booth_number
         """),
                 {"ac_id": resolved},
@@ -1827,6 +1831,7 @@ def get_ac_demographics_summary(ac_id: str) -> dict | None:
                    CASE WHEN male_voters > 0
                         THEN ROUND(female_voters::numeric / male_voters * 1000, 0)
                         ELSE NULL END AS gender_ratio,
+                   age_18_25, age_26_40, age_40_60, age_60_plus,
                    data_source, last_updated, notes
             FROM ac_demographics
             WHERE ac_id = :ac_id

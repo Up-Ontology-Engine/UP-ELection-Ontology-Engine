@@ -65,13 +65,25 @@ function ChartCard({ title, sub, children, wide }: {
   );
 }
 
-// Custom donut centre label
-function DonutLabel({ cx, cy, label, sub, t1, t4 }: { cx: number; cy: number; label: string; sub: string; t1: string; t4: string }) {
+// Wraps a chart in a relative container and overlays a centred donut label.
+function DonutWrapper({ label, sub, t1, t4, children }: {
+  label: string; sub: string; t1: string; t4: string; children: React.ReactNode;
+}) {
   return (
-    <text x={cx} y={cy} textAnchor="middle" dominantBaseline="middle">
-      <tspan x={cx} dy="-8" fontSize={18} fontWeight={700} fill={t1}>{label}</tspan>
-      <tspan x={cx} dy="20" fontSize={11} fill={t4}>{sub}</tspan>
-    </text>
+    <div style={{ position: "relative" }}>
+      {children}
+      <div style={{
+        position: "absolute", inset: 0,
+        display: "flex", flexDirection: "column",
+        alignItems: "center", justifyContent: "center",
+        pointerEvents: "none",
+        // The legend sits below the chart area; shift up by ~30px to stay inside the donut
+        paddingBottom: 60,
+      }}>
+        <span style={{ fontSize: 18, fontWeight: 700, color: t1, lineHeight: 1 }}>{label}</span>
+        <span style={{ fontSize: 11, color: t4, marginTop: 4 }}>{sub}</span>
+      </div>
+    </div>
   );
 }
 
@@ -155,49 +167,51 @@ export default function DemographicsCharts({
 
       {/* 1 — Gender donut */}
       <ChartCard title="Gender Distribution" sub={`${femPct}% female electorate`}>
-        <ResponsiveContainer width="100%" height={240}>
-          <PieChart>
-            <Pie data={genderData} dataKey="value" nameKey="name" cx="50%" cy="50%"
-              innerRadius={68} outerRadius={95} paddingAngle={3}>
-              {genderData.map((d) => <Cell key={d.name} fill={d.color} stroke="none" />)}
-            </Pie>
-            <DonutLabel cx={200} cy={120} label={`${femPct}%`} sub="female" t1={C.t1} t4={C.t4} />
-            <Legend iconType="circle" iconSize={8}
-              wrapperStyle={{ fontSize: 12, color: C.t3, paddingTop: 12 }}
-              formatter={(val) => {
-                const item = genderData.find((d) => d.name === val);
-                return `${val} — ${item?.value.toLocaleString("en-IN")}`;
-              }}
-            />
-            <Tooltip {...TOOLTIP} formatter={(v: unknown) => [(v as number).toLocaleString("en-IN"), "Voters"]} />
-          </PieChart>
-        </ResponsiveContainer>
+        <DonutWrapper label={`${femPct}%`} sub="female" t1={C.t1} t4={C.t4}>
+          <ResponsiveContainer width="100%" height={240}>
+            <PieChart>
+              <Pie data={genderData} dataKey="value" nameKey="name" cx="50%" cy="50%"
+                innerRadius={68} outerRadius={95} paddingAngle={3}>
+                {genderData.map((d) => <Cell key={d.name} fill={d.color} stroke="none" />)}
+              </Pie>
+              <Legend iconType="circle" iconSize={8}
+                wrapperStyle={{ fontSize: 12, color: C.t3, paddingTop: 12 }}
+                formatter={(val) => {
+                  const item = genderData.find((d) => d.name === val);
+                  return `${val} — ${item?.value.toLocaleString("en-IN")}`;
+                }}
+              />
+              <Tooltip {...TOOLTIP} formatter={(v: unknown) => [(v as number).toLocaleString("en-IN"), "Voters"]} />
+            </PieChart>
+          </ResponsiveContainer>
+        </DonutWrapper>
       </ChartCard>
 
       {/* 2 — Party vote share donut */}
       <ChartCard title="2022 Party Vote Shares" sub={`BJP ${bjpShare.toFixed(1)}% · SP · BSP · Others`}>
-        <ResponsiveContainer width="100%" height={240}>
-          <PieChart>
-            <Pie data={partyData} dataKey="value" nameKey="name" cx="50%" cy="50%"
-              innerRadius={68} outerRadius={95} paddingAngle={3}>
-              {partyData.map((d) => <Cell key={d.name} fill={d.color} stroke="none" />)}
-            </Pie>
-            <DonutLabel cx={200} cy={120} label={`${bjpShare.toFixed(0)}%`} sub="BJP" t1={C.t1} t4={C.t4} />
-            <Legend iconType="circle" iconSize={8}
-              wrapperStyle={{ fontSize: 12, color: C.t3, paddingTop: 12 }}
-              formatter={(val) => {
-                const d = partyData.find((p) => p.name === val);
-                return `${val} — ${d?.value.toFixed(1)}% (${d?.booths_won ?? 0} booths)`;
-              }}
-            />
-            <Tooltip {...TOOLTIP}
-              formatter={(v: unknown, name: unknown) => {
-                const d = partyData.find((p) => p.name === name);
-                return [`${(v as number).toFixed(1)}% · ${d?.votes.toLocaleString("en-IN")} votes`, String(name)];
-              }}
-            />
-          </PieChart>
-        </ResponsiveContainer>
+        <DonutWrapper label={`${bjpShare.toFixed(0)}%`} sub="BJP" t1={C.t1} t4={C.t4}>
+          <ResponsiveContainer width="100%" height={240}>
+            <PieChart>
+              <Pie data={partyData} dataKey="value" nameKey="name" cx="50%" cy="50%"
+                innerRadius={68} outerRadius={95} paddingAngle={3}>
+                {partyData.map((d) => <Cell key={d.name} fill={d.color} stroke="none" />)}
+              </Pie>
+              <Legend iconType="circle" iconSize={8}
+                wrapperStyle={{ fontSize: 12, color: C.t3, paddingTop: 12 }}
+                formatter={(val) => {
+                  const d = partyData.find((p) => p.name === val);
+                  return `${val} — ${d?.value.toFixed(1)}% (${d?.booths_won ?? 0} booths)`;
+                }}
+              />
+              <Tooltip {...TOOLTIP}
+                formatter={(v: unknown, name: unknown) => {
+                  const d = partyData.find((p) => p.name === name);
+                  return [`${(v as number).toFixed(1)}% · ${d?.votes.toLocaleString("en-IN")} votes`, String(name)];
+                }}
+              />
+            </PieChart>
+          </ResponsiveContainer>
+        </DonutWrapper>
       </ChartCard>
 
       {/* 3 — Lean distribution radial bars */}

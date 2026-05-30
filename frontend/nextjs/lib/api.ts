@@ -457,8 +457,15 @@ export interface DemographicsSummary {
   total_voters: number;
   male_voters: number;
   female_voters: number;
-  gender_ratio: number;
-  booths_with_data: number;
+  other_voters: number | null;
+  gender_ratio: number | null;
+  age_18_25: number | null;
+  age_26_40: number | null;
+  age_40_60: number | null;
+  age_60_plus: number | null;
+  data_source: string | null;
+  last_updated: string | null;
+  notes: string | null;
 }
 
 export interface DemographicSegments {

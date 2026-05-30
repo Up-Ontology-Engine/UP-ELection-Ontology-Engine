@@ -17,21 +17,26 @@ function pct(a: number, b: number, dec = 1) {
 }
 
 export default async function DemographicsPage() {
-  const [boothsRes, electionRes, boothRowsRes] = await Promise.allSettled([
+  const [boothsRes, electionRes, boothRowsRes, demoRes, segmentsRes] = await Promise.allSettled([
     api.booths(AC_ID),
     api.electionResults(AC_ID, 2022),
     api.boothElectionRows(AC_ID, 2022),
+    api.demographics(AC_ID),
+    api.demographicSegments(AC_ID),
   ]);
 
   const booths    = boothsRes.status    === "fulfilled" ? boothsRes.value.booths     : [];
   const election  = electionRes.status  === "fulfilled" ? electionRes.value           : null;
   const boothRows = boothRowsRes.status === "fulfilled" ? boothRowsRes.value.rows     : [];
+  const demoSummary = demoRes.status    === "fulfilled" ? demoRes.value               : null;
+  const apiSegments = segmentsRes.status === "fulfilled" ? segmentsRes.value?.segments ?? [] : [];
 
-  // Aggregate voter stats
-  const totalVoters  = booths.reduce((s, b) => s + (b.total_voters  ?? 0), 0);
-  const totalMale    = booths.reduce((s, b) => s + (b.male_voters   ?? 0), 0);
-  const totalFemale  = booths.reduce((s, b) => s + (b.female_voters ?? 0), 0);
-  const genderRatio  = totalMale > 0 ? Math.round((totalFemale / totalMale) * 1000) : null;
+  // Use ac_demographics authoritative totals when available, fall back to booth aggregation
+  const totalVoters  = demoSummary?.total_voters  ?? booths.reduce((s, b) => s + (b.total_voters  ?? 0), 0);
+  const totalMale    = demoSummary?.male_voters    ?? booths.reduce((s, b) => s + (b.male_voters   ?? 0), 0);
+  const totalFemale  = demoSummary?.female_voters  ?? booths.reduce((s, b) => s + (b.female_voters ?? 0), 0);
+  const totalOther   = demoSummary?.other_voters   ?? 0;
+  const genderRatio  = demoSummary?.gender_ratio   ?? (totalMale > 0 ? Math.round((totalFemale / totalMale) * 1000) : null);
 
   const turnout    = election?.turnout;
   const turnoutPct = turnout?.turnout_pct ?? null;
@@ -78,15 +83,34 @@ export default async function DemographicsPage() {
   });
   const boothChartData = Object.values(boothMap).sort((a, b) => a.booth_number - b.booth_number);
 
-  // Segments
+  // Age breakdown from ac_demographics
+  const ageGroups = demoSummary ? [
+    { label: "18–25",  value: demoSummary.age_18_25  ?? 0, color: "#a78bfa" },
+    { label: "26–40",  value: demoSummary.age_26_40  ?? 0, color: "#3b82f6" },
+    { label: "40–60",  value: demoSummary.age_40_60  ?? 0, color: "#10b981" },
+    { label: "60+",    value: demoSummary.age_60_plus ?? 0, color: "#f59e0b" },
+  ] : [];
+
+  // Segments — merge API segments with computed booth-level ones
+  const API_SEG_META: Record<string, { label: string; color: string; desc: string }> = {
+    women_skewed_booths:        { label: "Women-Priority",   color: "#ec4899", desc: "Female voters ≥5% more than male" },
+    high_turnout_potential:     { label: "High Turnout",     color: "#3b82f6", desc: "Voter base ≥1200 registered" },
+    strong_opposition_clusters: { label: "Strong Opp.",      color: "#60a5fa", desc: "Booths marked STRONG_OPP" },
+    low_confidence_priority:    { label: "Low Confidence",   color: "#ef4444", desc: "Signal confidence: LOW" },
+  };
   const segments: { label: string; count: number; desc: string; color: string; sub: string }[] = [
-    { label: "Women-Priority", count: booths.filter((b) => b.female_voters && b.male_voters && b.female_voters > b.male_voters).length, desc: "Female voters exceed male", color: "#ec4899", sub: `of ${booths.length} booths` },
-    { label: "Strong BJP",     count: leanCounts["STRONG_BJP"] ?? 0, desc: "BJP margin > 40 pts",       color: "#f97316", sub: `of ${booths.length} booths` },
-    { label: "Lean BJP",       count: leanCounts["LEAN_BJP"]   ?? 0, desc: "BJP margin 15–40 pts",      color: "#fb923c", sub: `of ${booths.length} booths` },
-    { label: "High Confidence",count: booths.filter((b) => b.confidence_label?.toUpperCase() === "HIGH").length, desc: "Signal confidence: HIGH", color: "#10b981", sub: `of ${booths.length} booths` },
-    { label: "Avg Turnout > 60%", count: boothChartData.filter((b) => (b.turnout_pct ?? 0) > 60).length, desc: "Turnout above 60%",  color: "#3b82f6", sub: `of ${booths.length} booths` },
-    { label: "Low Turnout < 50%", count: boothChartData.filter((b) => b.turnout_pct != null && b.turnout_pct < 50).length, desc: "Turnout below 50%", color: "#ef4444", sub: `of ${booths.length} booths` },
-  ];
+    // From API segments (authoritative)
+    ...apiSegments.map((s) => {
+      const meta = API_SEG_META[s.name] ?? { label: s.name.replace(/_/g, " "), color: "#64748b", desc: s.description };
+      return { label: meta.label, count: s.booth_count, desc: meta.desc, color: meta.color, sub: `of ${booths.length} booths` };
+    }),
+    // Computed from live data
+    { label: "Strong BJP",       count: leanCounts["STRONG_BJP"] ?? 0, desc: "BJP margin > 40 pts",    color: "#f97316", sub: `of ${booths.length} booths` },
+    { label: "Lean BJP",         count: leanCounts["LEAN_BJP"]   ?? 0, desc: "BJP margin 15–40 pts",   color: "#fb923c", sub: `of ${booths.length} booths` },
+    { label: "High Confidence",  count: booths.filter((b) => b.confidence_label?.toUpperCase() === "HIGH").length, desc: "Signal confidence: HIGH", color: "#10b981", sub: `of ${booths.length} booths` },
+    { label: "Turnout > 60%",    count: boothChartData.filter((b) => (b.turnout_pct ?? 0) > 60).length, desc: "Turnout above 60%", color: "#3b82f6", sub: `of ${booths.length} booths` },
+    { label: "Turnout < 50%",    count: boothChartData.filter((b) => b.turnout_pct != null && b.turnout_pct < 50).length, desc: "Turnout below 50%", color: "#ef4444", sub: `of ${booths.length} booths` },
+  ].slice(0, 8); // cap at 8 cards
 
   return (
     <div className="p-5 min-h-screen" style={{ background: "var(--bg-base)" }}>
@@ -119,7 +143,7 @@ export default async function DemographicsPage() {
       {/* ── KPI Row ── */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
         {[
-          { label: "Registered Voters", value: fmt(totalVoters),   sub1: `${fmt(totalMale)} male`, sub2: `${fmt(totalFemale)} female`, icon: Users,      color: "#3b82f6", bar: null },
+          { label: "Registered Voters", value: fmt(totalVoters),   sub1: `${fmt(totalMale)} M · ${fmt(totalFemale)} F${totalOther > 0 ? ` · ${fmt(totalOther)} O` : ""}`, sub2: demoSummary?.data_source ? `Source: ${demoSummary.data_source}` : `${booths.length} booths aggregated`, icon: Users,      color: "#3b82f6", bar: null },
           { label: "Gender Ratio",       value: genderRatio != null ? `${genderRatio}` : "—",       sub1: "females per 1,000 males", sub2: `${pct(totalFemale, totalVoters)} female electorate`, icon: Users, color: "#ec4899", bar: genderRatio != null ? Math.min(100, (genderRatio / 1100) * 100) : null },
           { label: "2022 Turnout",        value: turnoutPct != null ? `${turnoutPct.toFixed(1)}%` : "—", sub1: turnout ? `${fmt(turnout.total_votes)} votes cast` : "—", sub2: turnout ? `of ${fmt(turnout.total_voters)} registered` : "—", icon: TrendingUp, color: "#10b981", bar: turnoutPct },
           { label: "BJP Vote Share 2022", value: bjpVoteShare != null ? `${bjpVoteShare.toFixed(1)}%` : "—", sub1: `${bjpTotal} of ${booths.length} booths BJP-leaning`, sub2: `${oppTotal} SP/BSP-leaning · ${leanCounts["NEUTRAL"] ?? 0} neutral`, icon: Shield, color: "#f97316", bar: bjpVoteShare },
@@ -164,6 +188,36 @@ export default async function DemographicsPage() {
           </div>
         ))}
       </div>
+
+      {/* ── Age Breakdown ── */}
+      {ageGroups.length > 0 && (
+        <div className="card rounded-xl p-5 mb-6">
+          <div className="flex items-center gap-2 mb-4">
+            <Users size={13} style={{ color: "#a78bfa" }} />
+            <h3 className="text-sm font-semibold" style={{ color: "var(--text-1)" }}>Age Distribution</h3>
+            <span className="text-xs ml-auto" style={{ color: "var(--text-4)" }}>
+              Source: {demoSummary?.data_source ?? "electoral roll"}
+            </span>
+          </div>
+          <div className="grid grid-cols-4 gap-4">
+            {ageGroups.map((g) => {
+              const agePct = totalVoters > 0 ? (g.value / totalVoters) * 100 : 0;
+              return (
+                <div key={g.label}>
+                  <div className="flex justify-between text-xs mb-1.5">
+                    <span className="font-medium" style={{ color: "var(--text-2)" }}>{g.label}</span>
+                    <span className="mono font-bold" style={{ color: g.color }}>{agePct.toFixed(1)}%</span>
+                  </div>
+                  <div className="h-2 rounded-full" style={{ background: "var(--border)" }}>
+                    <div className="h-2 rounded-full transition-all" style={{ width: `${agePct}%`, background: g.color }} />
+                  </div>
+                  <p className="mono text-xs mt-1" style={{ color: "var(--text-4)" }}>{fmt(g.value)}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
 
       {/* ── Charts ── */}
       <DemographicsCharts
